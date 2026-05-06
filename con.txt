@@ -1,0 +1,325 @@
+# Regular File Conversion Combinations
+
+## Image → Image
+
+| From | To                                   |
+| ---- | ------------------------------------ |
+| JPG  | PNG, WEBP, GIF, BMP, TIFF, AVIF, SVG |
+| PNG  | JPG, WEBP, GIF, BMP, TIFF, AVIF      |
+| WEBP | JPG, PNG, GIF, BMP                   |
+| GIF  | MP4, WEBP, PNG sequence              |
+| SVG  | PNG, JPG, PDF, WEBP                  |
+| BMP  | JPG, PNG, WEBP                       |
+| TIFF | JPG, PNG, PDF                        |
+| HEIC | JPG, PNG, WEBP                       |
+| RAW  | JPG, PNG, TIFF                       |
+
+---
+
+# Video → Video
+
+| From | To                       |
+| ---- | ------------------------ |
+| MP4  | MKV, AVI, MOV, WEBM, GIF |
+| MKV  | MP4, AVI, MOV            |
+| MOV  | MP4, WEBM                |
+| AVI  | MP4, MKV                 |
+| WEBM | MP4, GIF                 |
+| FLV  | MP4                      |
+| WMV  | MP4                      |
+| 3GP  | MP4                      |
+
+---
+
+# Video → Audio
+
+| From | To            |
+| ---- | ------------- |
+| MP4  | MP3, WAV, AAC |
+| MKV  | MP3, WAV      |
+| MOV  | MP3           |
+| WEBM | MP3, OGG      |
+| AVI  | MP3           |
+
+---
+
+# Audio → Audio
+
+| From | To                  |
+| ---- | ------------------- |
+| MP3  | WAV, AAC, FLAC, OGG |
+| WAV  | MP3, AAC, FLAC      |
+| AAC  | MP3, WAV            |
+| FLAC | MP3, WAV            |
+| OGG  | MP3, WAV            |
+| M4A  | MP3, WAV            |
+
+---
+
+# Document → Document
+
+| From | To                  |
+| ---- | ------------------- |
+| PDF  | DOCX, TXT, JPG, PNG |
+| DOCX | PDF, TXT, HTML      |
+| DOC  | PDF, DOCX           |
+| TXT  | PDF, DOCX           |
+| HTML | PDF, DOCX           |
+| MD   | PDF, HTML, DOCX     |
+| EPUB | PDF, MOBI           |
+| MOBI | EPUB, PDF           |
+
+---
+
+# Spreadsheet → Spreadsheet
+
+| From | To            |
+| ---- | ------------- |
+| XLSX | CSV, PDF, ODS |
+| CSV  | XLSX, JSON    |
+| ODS  | XLSX, CSV     |
+
+---
+
+# Presentation → Presentation
+
+| From | To            |
+| ---- | ------------- |
+| PPTX | PDF, JPG, PNG |
+| PPT  | PPTX, PDF     |
+| ODP  | PPTX, PDF     |
+
+---
+
+# Archive → Archive
+
+| From | To      |
+| ---- | ------- |
+| ZIP  | 7Z, TAR |
+| RAR  | ZIP, 7Z |
+| 7Z   | ZIP     |
+| TAR  | ZIP     |
+
+---
+
+# Code/Data → Data
+
+| From | To             |
+| ---- | -------------- |
+| JSON | XML, YAML, CSV |
+| XML  | JSON, YAML     |
+| YAML | JSON           |
+| CSV  | JSON, XLSX     |
+
+---
+
+# E-book → E-book
+
+| From | To        |
+| ---- | --------- |
+| EPUB | PDF, MOBI |
+| MOBI | EPUB      |
+| AZW3 | EPUB, PDF |
+
+---
+
+# Image → PDF
+
+| From | To  |
+| ---- | --- |
+| JPG  | PDF |
+| PNG  | PDF |
+| WEBP | PDF |
+| TIFF | PDF |
+
+---
+
+# PDF → Image
+
+| From | To             |
+| ---- | -------------- |
+| PDF  | JPG, PNG, WEBP |
+
+---
+
+# Audio → Video
+
+| From | To             |
+| ---- | -------------- |
+| MP3  | MP4 visualizer |
+| WAV  | MP4            |
+| FLAC | MP4            |
+
+---
+
+# Text → Speech
+
+| From | To  |
+| ---- | --- |
+| TXT  | MP3 |
+| PDF  | MP3 |
+| DOCX | MP3 |
+
+---
+
+# Speech → Text
+
+| From | To            |
+| ---- | ------------- |
+| MP3  | TXT           |
+| WAV  | TXT           |
+| MP4  | Subtitle/Text |
+
+---
+
+# 3D Formats
+
+| From | To   |
+| ---- | ---- |
+| STL  | OBJ  |
+| OBJ  | FBX  |
+| FBX  | GLTF |
+| GLTF | OBJ  |
+
+---
+
+# Common Regular User Features
+
+## Images
+
+* Resize
+* Crop
+* Compress
+* Rotate
+* Flip
+* Remove metadata
+* Watermark
+* Blur
+* AI upscale
+
+---
+
+## Video
+
+* Compress
+* Cut
+* Merge
+* Change resolution
+* Extract audio
+* Add subtitles
+* Convert FPS
+
+---
+
+## Audio
+
+* Trim
+* Merge
+* Noise reduction
+* Volume boost
+* Voice cleaner
+
+---
+
+## PDF
+
+* Merge
+* Split
+* Compress
+* Lock
+* Unlock
+* OCR
+* Sign PDF
+
+---
+
+# Advanced Combinations
+
+## AI Features
+
+* Image → Anime
+* Sketch → Realistic
+* Text → Image
+* Text → Video
+* Voice → Clone voice
+* Image → 3D model
+
+---
+
+# Browser-Based Possible
+
+## Fully Possible in Browser
+
+* Image conversion
+* PDF tools
+* Audio conversion
+* Small video conversion
+* Metadata removal
+* Compression
+
+Using:
+
+* FFmpeg.wasm
+* Tesseract.js
+* PDF-lib
+* ImageMagick WASM
+
+---
+
+# Heavy Features Better on Server
+
+* Huge video rendering
+* AI video generation
+* Large RAW processing
+* 8K video export
+* Massive batch conversion
+
+---
+
+# Best MVP Combination
+
+Start with:
+
+1. JPG ↔ PNG ↔ WEBP
+2. PDF merge/compress
+3. MP4 compress
+4. MP4 → MP3
+5. DOCX → PDF
+6. CSV ↔ XLSX
+7. ZIP extract/compress
+
+These are the highest-used tools globally.
+
+---
+
+# Extra Powerful Ideas
+
+## Universal Drag & Drop
+
+User drops any file:
+
+* Auto detect
+* Suggest supported conversions
+* One-click convert
+
+---
+
+# Smart Detection
+
+Example:
+
+* Image uploaded → suggest compress/resize
+* Video uploaded → suggest MP3 extraction
+* PDF uploaded → suggest OCR
+
+---
+
+# Offline PWA Support
+
+Your platform can work:
+
+* Without login
+* Without internet
+* Fully local
+
+That is a strong advantage over many converter platforms.

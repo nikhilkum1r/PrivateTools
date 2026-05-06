@@ -1,0 +1,86 @@
+Basic Editing Operations (Core Features)
+7
+
+These are mandatory features for any image tool:
+
+Resize → change width/height
+Crop → remove unwanted area
+Rotate → 90°, 180°, custom angle
+Flip → horizontal / vertical
+Compress / Reduce size → lower file size
+Change format → JPG ⇄ PNG ⇄ WEBP etc
+Adjust brightness / contrast
+Sharpen / blur
+⚙️ 2. Advanced Editing & Enhancement
+5
+
+These add real value and differentiation:
+
+Background removal (AI-based)
+Noise reduction (denoise)
+Color correction / grading
+Auto enhance (AI)
+Upscale / super resolution
+Watermark add/remove
+Object removal (AI inpainting)
+Face enhancement / retouching
+🧰 3. Utility / Privacy / Security Operations
+6
+
+This is very important for your privacy-first idea:
+
+Remove metadata (EXIF) → location, device info
+Add metadata (optional editing)
+Encrypt image / password protect
+Steganography (hide data inside image)
+Batch processing (multiple images)
+Client-side processing (no upload)
+Secure sharing (temporary links)
+🎨 4. Design & Creative Operations
+6
+
+Useful for creators and social users:
+
+Add text / captions
+Add shapes / stickers
+Filters (Instagram-style)
+Collage maker
+Draw / annotate
+Layer editing (basic)
+🔄 5. Format & Conversion Operations
+6
+
+Critical for cross-platform support:
+
+Convert between:
+JPG ⇄ PNG ⇄ WEBP
+AVIF ⇄ JPG
+HEIC ⇄ JPG
+PDF → Image / Image → PDF
+Thumbnail generation
+Optimize for web (lazy load, compression)
+🤖 6. AI-Powered Operations (Next-Level)
+6
+
+These will make your platform stand out:
+
+Text → Image generation
+Image → Image transformation
+Style transfer (painting, anime, etc.)
+Face swap
+Auto tagging / object detection
+OCR (text extraction from image)
+⚡ Final System View (for your product)
+
+If you want a complete powerful platform, your modules should be:
+
+Core Engine
+Resize, crop, compress
+Processing Engine
+Format conversion, optimization
+Privacy Engine
+Metadata removal, encryption
+AI Engine
+Enhancement, generation
+Creator Tools
+Text, filters, collage
