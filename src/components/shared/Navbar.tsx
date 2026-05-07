@@ -118,7 +118,7 @@ export function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-11 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
             <Image src="/android-chrome-192x192.png" alt="SafeTools" width={36} height={36} className="rounded-xl" />
@@ -141,7 +141,7 @@ export function Navbar() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="bg-transparent font-bold">Tools</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="w-[90vw] sm:w-[600px] lg:w-[850px] p-6 md:columns-2 lg:columns-3 gap-6">
+                  <ul className="w-[90vw] sm:w-[600px] lg:w-[850px] p-6 md:columns-2 lg:columns-3 gap-3">
                     {toolCategories.map((category) => (
                       <div key={category.title} className="space-y-3 break-inside-avoid mb-6">
                         <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
@@ -203,14 +203,14 @@ export function Navbar() {
               >
                 <Menu className="w-6 h-6" />
               </SheetTrigger>
-              <SheetContent side="left" className="w-[85vw] sm:w-[400px] overflow-y-auto">
-                <SheetHeader className="mb-8 text-left">
+              <SheetContent side="left" className="w-[85vw] sm:w-[300px] overflow-y-auto">
+                <SheetHeader className="mb-4 text-left">
                   <SheetTitle className="flex items-center gap-2">
                     <Image src="/android-chrome-192x192.png" alt="SafeTools" width={20} height={20} className="rounded-md" />
                     SafeTools
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-8 pb-20">
+                <div className="flex flex-col gap-4 pb-8">
                   {toolCategories.map((category) => (
                     <div key={category.title} className="space-y-4">
                       <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">

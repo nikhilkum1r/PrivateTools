@@ -485,12 +485,12 @@ export default function HomeClient() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-[200] bg-primary/20 backdrop-blur-xl flex items-center justify-center pointer-events-none"
             >
-              <div className="p-20 rounded-[4rem] border-4 border-dashed border-primary/50 flex flex-col items-center gap-8 bg-card/90">
-                <div className="w-24 h-24 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
+              <div className="p-8 rounded-3xl border-4 border-dashed border-primary/50 flex flex-col items-center gap-4 bg-card/90">
+                <div className="w-12 h-12 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
                   <Upload className="w-12 h-12 text-foreground animate-bounce" />
                 </div>
                 <div className="text-center space-y-2">
-                  <h2 className="text-4xl font-black uppercase tracking-tighter">Drop to Route</h2>
+                  <h2 className="text-2xl font-black uppercase tracking-tighter">Drop to Route</h2>
                   <p className="text-xl font-medium opacity-60">We'll find the perfect tool for your file</p>
                 </div>
               </div>
@@ -499,8 +499,8 @@ export default function HomeClient() {
         </AnimatePresence>
 
         {/* Hero Section */}
-        <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="container mx-auto px-4 pt-24 pb-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-5">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -512,13 +512,13 @@ export default function HomeClient() {
               >
 
               </motion.div>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.9]">
+              <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
                 Privacy is <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-primary animate-gradient">
                   Not a Luxury.
                 </span>
               </h1>
-              <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
+              <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
                 The world's most powerful collection of 150+ file utilities.
                 Everything happens in your browser. No accounts. No servers. No limits.
               </p>
@@ -540,7 +540,7 @@ export default function HomeClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + i * 0.08 }}
                   whileHover={{ scale: 1.04, borderColor: "var(--primary)" }}
-                  className="p-5 rounded-[1.5rem] bg-secondary/50 border border-border space-y-2 cursor-default group transition-all"
+                  className="p-5 rounded-xl bg-secondary/50 border border-border space-y-2 cursor-default group transition-all"
                 >
                   <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">
                     <s.icon className={`w-3.5 h-3.5 ${s.color}`} />
@@ -575,9 +575,9 @@ export default function HomeClient() {
         </div>
 
         {/* Tools Grid */}
-        <div className="container mx-auto px-4 pb-20 relative z-10">
+        <div className="container mx-auto px-4 pb-8 relative z-10">
           <div className="max-w-6xl mx-auto mb-10">
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-center">
+            <h2 className="text-2xl md:text-xl font-black tracking-tight text-center">
               Browse <span className="text-primary">150+ Free Tools</span> — No Account Needed
             </h2>
             <p className="text-center text-muted-foreground text-sm mt-3 max-w-xl mx-auto">
@@ -599,7 +599,7 @@ export default function HomeClient() {
                 >
                   <Link href={tool.href}>
                     <Card className={cn(
-                      "group h-full p-7 rounded-[2.5rem] bg-card border border-border hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer shadow-sm",
+                      "group h-full p-7 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer shadow-sm",
                       hoveredIndex === i && "translate-y-[-8px] shadow-2xl shadow-primary/20"
                     )}>
                       {/* Animated shine on hover */}
@@ -613,7 +613,7 @@ export default function HomeClient() {
                       <div className="relative z-10 space-y-5">
                         <div className="flex items-start justify-between">
                           <div className={cn(
-                            "w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500",
+                            "w-10 h-10 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500",
                             tool.color
                           )}>
                             <tool.icon className="w-7 h-7 text-foreground" />
@@ -652,7 +652,7 @@ export default function HomeClient() {
 
           {filteredTools.length === 0 && (
             <div className="text-center py-20 space-y-4">
-            <div className="w-20 h-20 rounded-full bg-secondary border border-dashed border-border flex items-center justify-center mx-auto">
+            <div className="w-12 h-12 rounded-full bg-secondary border border-dashed border-border flex items-center justify-center mx-auto">
               <Search className="w-8 h-8 text-muted-foreground/30" />
             </div>
               <div>
@@ -669,13 +669,13 @@ export default function HomeClient() {
         {/* FAQ Section */}
         <section className="container mx-auto px-4 pb-24 relative z-10" aria-label="Frequently Asked Questions">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-center mb-3">
+            <h2 className="text-2xl md:text-xl font-black tracking-tight text-center mb-3">
               Frequently Asked <span className="text-primary">Questions</span>
             </h2>
             <p className="text-center text-muted-foreground text-sm mb-12">
               Everything you need to know about SafeTools and how it keeps your files private.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {HOMEPAGE_SCHEMA["@graph"][2].mainEntity?.map((faq: any, i: number) => {
                 const q = faq.name;
                 const a = faq.acceptedAnswer.text;
@@ -692,24 +692,24 @@ export default function HomeClient() {
 
         {/* Smart Routing Dialog */}
         <Dialog open={isRoutingOpen} onOpenChange={setIsRoutingOpen}>
-          <DialogContent className="sm:max-w-xl bg-background border-border p-0 overflow-hidden rounded-[3rem]">
-            <div className="relative p-10 space-y-10">
-              <div className="absolute top-0 right-0 p-10 opacity-5 rotate-12 scale-150">
-                <Shield className="w-64 h-64" />
+          <DialogContent className="sm:max-w-xl bg-background border-border p-0 overflow-hidden rounded-2xl">
+            <div className="relative p-5 space-y-5">
+              <div className="absolute top-0 right-0 p-5 opacity-5 rotate-12 scale-150">
+                <Shield className="w-32 h-32" />
               </div>
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 {smartRoutingPreview ? (
-                  <div className="w-32 h-32 rounded-[2rem] border-4 border-border overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 mb-2">
+                  <div className="w-32 h-32 rounded-xl border-4 border-border overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 mb-2">
                     <img src={smartRoutingPreview} alt="Preview" className="w-full h-full object-cover" />
                   </div>
                 ) : (
-                  <div className="w-20 h-20 rounded-[2rem] bg-secondary border border-border flex items-center justify-center mb-2">
+                  <div className="w-12 h-12 rounded-xl bg-secondary border border-border flex items-center justify-center mb-2">
                     <FileQuestion className="w-10 h-10 text-primary" />
                   </div>
                 )}
                 <Badge className="bg-primary/10 text-primary border-primary/20">Smart File Routing</Badge>
-                <DialogTitle className="text-3xl font-black tracking-tight uppercase">Analyze & Process</DialogTitle>
+                <DialogTitle className="text-xl font-black tracking-tight uppercase">Analyze & Process</DialogTitle>
                 <p className="text-muted-foreground text-sm font-medium">
                   We've detected <span className="text-foreground font-bold">{smartRoutingFile?.name}</span>. <br />
                   What would you like to do with it?
@@ -721,7 +721,7 @@ export default function HomeClient() {
                   <Button
                     key={tool.href}
                     variant="outline"
-                    className="h-20 justify-start px-6 rounded-3xl border-border bg-secondary/50 hover:bg-secondary hover:border-primary/30 transition-all group"
+                    className="h-12 justify-start px-6 rounded-3xl border-border bg-secondary/50 hover:bg-secondary hover:border-primary/30 transition-all group"
                     onClick={() => {
                       // Note: In a real app, we'd pass the file to the tool's store here
                       router.push(tool.href);

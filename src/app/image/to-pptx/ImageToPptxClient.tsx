@@ -138,15 +138,15 @@ export default function ImageToPptxClient() {
 
         {files.length === 0 ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-orange-500 to-red-600 p-[1px] mx-auto animate-pulse">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 p-[1px] mx-auto animate-pulse">
                   <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Presentation className="w-10 h-10 text-orange-500" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
                     Deck <span className="text-orange-500">Builder.</span>
                   </h1>
                   <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto leading-relaxed">
@@ -158,7 +158,7 @@ export default function ImageToPptxClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*" 
                 multiple={true} 
-                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-2xl hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function ImageToPptxClient() {
           <>
             {/* Left Sidebar - Identity Engine */}
             <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -234,7 +234,7 @@ export default function ImageToPptxClient() {
 
               <div className="p-6 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-orange-600 hover:bg-orange-700 text-foreground font-black text-sm gap-2 shadow-2xl shadow-orange-500/20 active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-2xl bg-orange-600 hover:bg-orange-700 text-foreground font-black text-sm gap-2 shadow-2xl shadow-orange-500/20 active:scale-95 transition-all italic"
                   onClick={createPPTX}
                   disabled={isProcessing || files.length === 0}
                 >
@@ -247,8 +247,8 @@ export default function ImageToPptxClient() {
             {/* Center - Slide Workspace */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
               <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-[2rem] bg-orange-500/10 flex items-center justify-center border border-orange-500/20 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-orange-500/10 flex items-center justify-center border border-orange-500/20 shadow-2xl">
                     <Presentation className="w-8 h-8 text-orange-500" />
                   </div>
                   <div className="flex flex-col gap-1">
@@ -267,7 +267,7 @@ export default function ImageToPptxClient() {
                 </div>
               </header>
 
-              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-12 overflow-hidden">
+              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-5 overflow-hidden">
                 <div className="absolute inset-0 grid grid-cols-[repeat(40,minmax(0,1fr))] grid-rows-[repeat(40,minmax(0,1fr))] pointer-events-none opacity-[0.03]">
                   {Array.from({ length: 1600 }).map((_, i) => (
                     <div key={i} className="border-[0.5px] border-white" />
@@ -281,7 +281,7 @@ export default function ImageToPptxClient() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
-                        className="w-full h-full max-w-5xl bg-secondary/30 rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden p-8"
+                        className="w-full h-full max-w-5xl bg-secondary/30 rounded-2xl border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden p-8"
                      >
                         <img 
                           src={currentFile.previewUrl} 
@@ -296,7 +296,7 @@ export default function ImageToPptxClient() {
                      </motion.div>
                   ) : (
                     <div className="text-center space-y-4 opacity-20">
-                       <FileStack className="w-20 h-20 mx-auto" />
+                       <FileStack className="w-20 h-12 mx-auto" />
                        <p className="font-black uppercase tracking-widest text-sm italic">Initialize Deck Sequence</p>
                     </div>
                   )}
@@ -306,7 +306,7 @@ export default function ImageToPptxClient() {
 
             {/* Right Sidebar - Studio Matrix */}
             <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500 flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -317,7 +317,7 @@ export default function ImageToPptxClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   <div className="space-y-6">
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Deck Identity</h4>
                     <div className="space-y-4">
@@ -326,7 +326,7 @@ export default function ImageToPptxClient() {
                           <Input 
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            className="bg-secondary/50 border-border rounded-2xl h-14 font-black uppercase tracking-tighter italic text-orange-500"
+                            className="bg-secondary/50 border-border rounded-2xl h-10 font-black uppercase tracking-tighter italic text-orange-500"
                             placeholder="PROJECT_ALPHA"
                           />
                        </div>
@@ -352,7 +352,7 @@ export default function ImageToPptxClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                  <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-orange-500" />
                       <h4 className="text-xs font-black uppercase tracking-widest">WASM Guard</h4>

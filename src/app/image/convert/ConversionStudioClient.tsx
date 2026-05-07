@@ -181,7 +181,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
   const renderSettings = () => (
     <div className="flex flex-col flex-grow min-h-0">
       <ScrollArea className="flex-grow min-h-0">
-        <div className="p-8 space-y-12">
+        <div className="p-5 space-y-5">
           {/* Core Conversion Module */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -195,20 +195,17 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Target Format</Label>
               <DropdownMenu>
                 <DropdownMenuTrigger render={
-                  <Button variant="outline" className="w-full h-20 rounded-[2rem] bg-secondary/30 border-border p-4 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden shadow-2xl relative">
-                    <div className="flex items-center gap-4 w-full text-foreground">
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
-                        <HardDrive className="w-6 h-6 text-primary" />
+                  <Button variant="outline" className="w-full h-10 rounded-lg bg-secondary/30 border-border px-3 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden relative">
+                    <div className="flex items-center gap-3 w-full">
+                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+                        <HardDrive className="w-3.5 h-3.5 text-primary" />
                       </div>
-                      <div className="flex flex-col items-start text-left flex-grow">
-                        <span className="text-[8px] opacity-30 tracking-[0.3em] uppercase font-black text-foreground">Active Extension</span>
-                        <span className="text-sm font-black uppercase tracking-widest">{settings.format || "Select Format"}</span>
-                      </div>
-                      <ChevronDown className="w-5 h-5 opacity-20 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-sm font-semibold flex-grow text-left">{settings.format?.toUpperCase() || "Select Format"}</span>
+                      <ChevronDown className="w-4 h-4 text-muted-foreground/50 group-hover:text-foreground transition-colors" />
                     </div>
                   </Button>
                 } />
-                <DropdownMenuContent className="w-[min(400px,90vw)] p-0 bg-popover border-border rounded-[2.5rem] shadow-xl overflow-hidden" align="start">
+                <DropdownMenuContent className="w-[min(400px,90vw)] p-0 bg-popover border-border rounded-2xl shadow-xl overflow-hidden" align="start">
                   <div className="p-4 border-b border-border bg-secondary/30">
                     <div className="relative group">
                       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/40 group-focus-within:text-primary transition-colors" />
@@ -226,8 +223,8 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                       />
                     </div>
                   </div>
-                  <ScrollArea className="h-[450px]">
-                    <div className="p-4 space-y-8">
+                  <ScrollArea className="h-[360px]">
+                    <div className="p-4 space-y-4">
                       {Object.entries(CATEGORIZED_FORMATS).map(([cat, fmts]) => (
                         <div key={cat} className="space-y-4">
                           <div className="flex items-center gap-3 px-2">
@@ -241,10 +238,10 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                                 key={f}
                                 data-value={f.toLowerCase()}
                                 className={cn(
-                                  "format-item flex items-center justify-between px-5 py-4 rounded-2xl border transition-all active:scale-95 group",
+                                  "format-item flex items-center justify-between px-3 py-2 rounded-lg border transition-all active:scale-95",
                                   settings.format === f 
-                                    ? "bg-primary border-primary shadow-lg shadow-primary/20 text-foreground" 
-                                    : "bg-secondary/30 border-border text-muted-foreground/70 hover:bg-secondary/50 hover:border-primary/30 hover:text-foreground"
+                                    ? "bg-primary border-primary text-white" 
+                                    : "bg-secondary/30 border-border text-muted-foreground hover:bg-secondary hover:border-primary/30 hover:text-foreground"
                                 )}
                                 onClick={() => updateSettings({ format: f as any })}
                               >
@@ -263,7 +260,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
           </div>
 
           {/* Quality Module */}
-          <div className="space-y-10 pt-4 border-t border-border">
+          <div className="space-y-5 pt-4 border-t border-border">
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Encoding Fidelity</Label>
@@ -297,7 +294,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                       type="number" 
                       value={settings.targetSize} 
                       onChange={(e) => updateSettings({ targetSize: parseInt(e.target.value) || 0 })}
-                      className="bg-secondary/50 border-border rounded-xl h-12 font-mono text-center text-foreground"
+                      className="bg-secondary/50 border-border rounded-lg h-9 font-mono text-center"
                     />
                     <Badge variant="outline" className="rounded-xl shrink-0 px-4 text-muted-foreground/60">KB</Badge>
                   </motion.div>
@@ -312,11 +309,11 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
             <div className="grid grid-cols-2 gap-3 text-foreground">
               <div className="space-y-2">
                 <Label className="text-[8px] uppercase opacity-50">Width (px)</Label>
-                <Input placeholder="Auto" type="number" value={settings.maxWidth || ""} onChange={(e) => updateSettings({ maxWidth: parseInt(e.target.value) || undefined })} className="bg-secondary/50 border-border rounded-xl h-12 font-bold" />
+                <Input placeholder="Auto" type="number" value={settings.maxWidth || ""} onChange={(e) => updateSettings({ maxWidth: parseInt(e.target.value) || undefined })} className="bg-secondary/50 border-border rounded-lg h-9 font-medium" />
               </div>
               <div className="space-y-2">
                 <Label className="text-[8px] uppercase opacity-50">Height (px)</Label>
-                <Input placeholder="Auto" type="number" value={settings.maxHeight || ""} onChange={(e) => updateSettings({ maxHeight: parseInt(e.target.value) || undefined })} className="bg-secondary/50 border-border rounded-xl h-12 font-bold" />
+                <Input placeholder="Auto" type="number" value={settings.maxHeight || ""} onChange={(e) => updateSettings({ maxHeight: parseInt(e.target.value) || undefined })} className="bg-secondary/50 border-border rounded-lg h-9 font-medium" />
               </div>
             </div>
           </div>
@@ -324,7 +321,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
       </ScrollArea>
       <div className="p-5 border-t border-border bg-card">
         <Button 
-          className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all"
+          className="w-full h-10 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold text-sm gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all"
           onClick={convertAll}
           disabled={files.length === 0 || isProcessingAll}
         >
@@ -354,8 +351,8 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
 
         <div className="flex-grow flex flex-col lg:flex-row relative z-10 overflow-hidden">
           {/* Desktop Sidebar */}
-          <aside className="hidden lg:flex w-[420px] h-full max-h-full studio-sidebar shrink-0 shrink-0 flex-col relative shadow-2xl">
-            <div className="p-8 border-b border-border flex items-center justify-between">
+          <aside className="hidden lg:flex w-[280px] h-full max-h-full studio-sidebar shrink-0 flex-col relative shadow-sm">
+            <div className="px-4 py-3 border-b border-border flex items-center justify-between">
               <div className="flex flex-col gap-1">
                 <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                   <Wand2 className="w-3.5 h-3.5" /> Engine Inspector
@@ -369,15 +366,14 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
 
           {/* Workspace */}
           <section className="flex-grow flex flex-col min-w-0 bg-transparent">
-            <header className="p-4 md:p-8 flex items-center justify-between studio-header">
-              <div className="flex items-center gap-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group relative overflow-hidden">
-                  <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <FileStack className="w-6 h-6 md:w-8 md:h-8 text-foreground relative z-10" />
+            <header className="px-4 py-3 flex items-center justify-between studio-header">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-md">
+                  <FileStack className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-black text-lg md:text-2xl tracking-tighter uppercase italic">
-                    {fromFormat && toFormat ? `Convert ${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()}` : "Format Converter"}
+                  <h2 className="font-bold text-sm md:text-base tracking-tight">
+                    {fromFormat && toFormat ? `${fromFormat.toUpperCase()} → ${toFormat.toUpperCase()}` : "Format Converter"}
                   </h2>
                   <div className="flex items-center gap-3">
                     <Badge className="text-[9px] bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-3 py-0.5 rounded-full font-black uppercase tracking-widest">
@@ -392,30 +388,30 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                 <AnimatePresence>
                   {files.some(f => f.status === "completed") && (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}>
-                      <Button variant="outline" className="rounded-2xl border-primary/20 bg-primary/10 text-primary h-12 md:h-14 px-6 text-xs font-black uppercase tracking-widest gap-3 hover:bg-primary hover:text-foreground transition-all shadow-lg shadow-primary/20" onClick={downloadAll}>
-                        <DownloadCloud className="w-5 h-5" /> <span className="hidden sm:inline">Export Bundle</span>
+                      <Button variant="outline" className="rounded-lg border-primary/20 bg-primary/10 text-primary h-8 px-3 text-xs font-semibold gap-2 hover:bg-primary hover:text-white transition-all" onClick={downloadAll}>
+                        <DownloadCloud className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Export All</span>
                       </Button>
                     </motion.div>
                   )}
                 </AnimatePresence>
                 
-                <Button variant="ghost" className="rounded-2xl text-muted-foreground hover:text-foreground hover:bg-secondary/50 h-12 md:h-14 px-6 text-[10px] md:text-xs font-black uppercase tracking-widest transition-all" onClick={clearFiles}>
-                  Flush Memory
+                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" onClick={clearFiles}>
+                  Clear
                 </Button>
 
                 {/* Mobile Settings Toggle */}
                 <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
                   <SheetTrigger 
                     render={
-                      <Button variant="outline" size="icon" className="lg:hidden rounded-2xl h-12 w-12 md:h-14 md:w-14" />
+                      <Button variant="outline" size="icon" className="lg:hidden rounded-2xl h-12 w-12 md:h-10 md:w-14" />
                     }
                   >
                     <Settings2 className="w-5 h-5" />
                   </SheetTrigger>
-                  <SheetContent side="right" className="w-full sm:w-[450px] p-0 bg-card border-border rounded-l-[3rem]">
-                    <SheetHeader className="p-8 border-b border-border">
-                      <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
-                        <Wand2 className="w-6 h-6 text-primary" /> Studio Engine
+                  <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-card border-border">
+                    <SheetHeader className="px-4 py-3 border-b border-border">
+                      <SheetTitle className="flex items-center gap-2 text-sm font-semibold">
+                        <Wand2 className="w-4 h-4 text-primary" /> Settings
                       </SheetTitle>
                     </SheetHeader>
                     {renderSettings()}
@@ -426,17 +422,17 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
 
             <div className="flex-grow relative overflow-y-auto lg:overflow-hidden studio-workspace">
               <ScrollArea className="h-full">
-                <div className="p-4 md:p-12">
+                <div className="p-4 md:p-5">
                   {files.length === 0 ? (
                     <>
-                      <div className="max-w-sm mx-auto mt-20 md:mt-32 pb-20">
+                      <div className="max-w-sm mx-auto mt-8 md:mt-12 pb-8">
                         <DropZone 
                           onFilesDrop={handleFilesDrop} 
                           multiple 
                           maxSize={1024} 
                           title=" "
                           description=" "
-                          className="h-48 border-2 border-dashed border-border hover:border-primary/50 bg-secondary/30 rounded-[3rem] transition-all" 
+                          className="h-48 border-2 border-dashed border-border hover:border-primary/50 bg-secondary/30 rounded-2xl transition-all" 
                         />
                       </div>
 
@@ -446,16 +442,16 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="mt-32 space-y-20 text-left"
+                          className="mt-12 space-y-4 text-left"
                         >
                           <div className="space-y-6">
-                            <h3 className="text-4xl font-black uppercase tracking-tighter italic">Expert Conversion: <span className="text-primary">{fromFormat.toUpperCase()}</span> to <span className="text-blue-500">{toFormat.toUpperCase()}</span></h3>
+                            <h3 className="text-2xl font-black uppercase tracking-tighter italic">Expert Conversion: <span className="text-primary">{fromFormat.toUpperCase()}</span> to <span className="text-blue-500">{toFormat.toUpperCase()}</span></h3>
                             <p className="text-muted-foreground text-lg leading-relaxed font-medium">
                               Transform your digital assets with pixel-perfect precision using SafeTools' proprietary local computing engine. We maintain the highest fidelity across 200+ format pairs, ensuring that every bit of metadata and color depth is preserved—all without your data ever touching a remote server.
                             </p>
                           </div>
 
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {[
                               { 
                                 title: "Why use SafeTools?", 
@@ -478,8 +474,8 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                                 icon: HardDrive 
                               }
                             ].map((item, i) => (
-                              <div key={i} className="p-8 rounded-[2.5rem] bg-secondary/30 border border-border space-y-6 hover:bg-secondary/50 hover:border-primary/20 transition-all group shadow-xl">
-                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                              <div key={i} className="p-8 rounded-2xl bg-secondary/30 border border-border space-y-6 hover:bg-secondary/50 hover:border-primary/20 transition-all group shadow-xl">
+                                <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
                                   <item.icon className="w-7 h-7 text-primary" />
                                 </div>
                                 <h4 className="text-lg font-black uppercase tracking-tight">{item.title}</h4>
@@ -488,8 +484,8 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                             ))}
                           </div>
 
-                          <div className="space-y-8">
-                            <h3 className="text-2xl font-black uppercase tracking-tight flex items-center gap-4 italic border-l-4 border-primary pl-6">
+                          <div className="space-y-4">
+                            <h3 className="text-2xl font-black uppercase tracking-tight flex items-center gap-4 italic border-l-4 border-primary pl-4">
                               <Info className="w-6 h-6 text-primary" /> Studio Intel
                             </h3>
                             <div className="grid grid-cols-1 gap-4">
@@ -507,9 +503,9 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                           </div>
 
                           {/* SEO Link Cloud */}
-                          <div className="space-y-16 pt-20 border-t border-border">
+                          <div className="space-y-6 pt-8 border-t border-border">
                             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                              <h3 className="text-3xl font-black uppercase tracking-tighter italic flex items-center gap-4">
+                              <h3 className="text-xl font-black uppercase tracking-tighter italic flex items-center gap-4">
                                 <Globe className="w-7 h-7 text-primary" /> Global Conversion Directory
                               </h3>
                               <Badge className="bg-primary/10 text-primary border-primary/20 uppercase text-[10px] font-black px-4 py-1.5 rounded-full tracking-widest">
@@ -517,7 +513,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                               </Badge>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                               {[
                                 { 
                                   title: "Core Web Standards", 
@@ -561,12 +557,12 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                               ))}
                             </div>
 
-                            <div className="p-10 md:p-16 rounded-[4rem] bg-gradient-to-br from-primary/10 via-background to-blue-500/10 border border-border space-y-10 shadow-2xl relative overflow-hidden">
-                              <div className="absolute top-0 right-0 p-20 opacity-5 rotate-12 scale-150">
-                                 <Cpu className="w-64 h-64" />
+                            <div className="p-5 md:p-6 rounded-3xl bg-gradient-to-br from-primary/10 via-background to-blue-500/10 border border-border space-y-5 shadow-2xl relative overflow-hidden">
+                              <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12 scale-150">
+                                 <Cpu className="w-32 h-32" />
                               </div>
-                              <div className="flex items-center gap-6 relative z-10">
-                                <div className="w-16 h-16 rounded-3xl bg-card border border-border flex items-center justify-center shadow-2xl">
+                              <div className="flex items-center gap-3 relative z-10">
+                                <div className="w-11 h-11 rounded-3xl bg-card border border-border flex items-center justify-center shadow-2xl">
                                   <Cpu className="w-8 h-8 text-primary" />
                                 </div>
                                 <div>
@@ -577,13 +573,13 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                               <p className="text-sm md:text-lg text-muted-foreground/80 leading-relaxed font-medium relative z-10">
                                 Our conversion engine represents the pinnacle of modern web engineering. By leveraging high-performance **C++ and Rust** binaries compiled to **WebAssembly (WASM)**, we provide the computational power of a desktop application within a sandboxed browser environment. This eliminates the latency and security risks of cloud-based processing, enabling you to manage professional-grade media pipelines with absolute privacy and unparalleled speed.
                               </p>
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 relative z-10">
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-4 relative z-10">
                                 {[
                                   { label: "Rendering Latency", val: "< 3ms", desc: "Local CPU/GPU Execution" },
                                   { label: "Data Integrity", val: "Immutable", desc: "No Server Interaction" },
                                   { label: "Engine Runtime", val: "Isolated", desc: "Hardware Sandboxed" }
                                 ].map((stat) => (
-                                  <div key={stat.label} className="p-6 rounded-[2rem] bg-muted/40 border border-border backdrop-blur-xl">
+                                  <div key={stat.label} className="p-6 rounded-xl bg-muted/40 border border-border backdrop-blur-xl">
                                     <p className="text-[10px] uppercase font-black tracking-widest text-muted-foreground mb-2">{stat.label}</p>
                                     <p className="text-2xl font-black text-primary italic mb-1">{stat.val}</p>
                                     <p className="text-[9px] uppercase font-black tracking-widest text-muted-foreground/50">{stat.desc}</p>
@@ -596,7 +592,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                       )}
                     </>
                   ) : (
-                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6 pb-32">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-3 pb-12">
                       <AnimatePresence mode="popLayout">
                         {files.map((f, i) => (
                           <motion.div 
@@ -607,12 +603,12 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.4, delay: i * 0.05 }}
                           >
-                            <Card className={cn("p-4 md:p-6 rounded-[2rem] bg-card border border-border group relative overflow-hidden transition-all duration-500", f.status === "processing" && "border-primary/50 shadow-lg shadow-primary/20")}>
+                            <Card className={cn("p-4 md:p-6 rounded-xl bg-card border border-border group relative overflow-hidden transition-all duration-500", f.status === "processing" && "border-primary/50 shadow-lg shadow-primary/20")}>
                               {/* Selection overlay */}
                               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                               
-                              <div className="flex gap-4 md:gap-8 relative z-10">
-                                <div className="w-24 h-24 md:w-44 md:h-44 rounded-[2rem] bg-muted/60 border border-border overflow-hidden shrink-0 relative shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                              <div className="flex gap-4 md:gap-4 relative z-10">
+                                <div className="w-12 h-12 md:w-44 md:h-44 rounded-xl bg-muted/60 border border-border overflow-hidden shrink-0 relative shadow-2xl group-hover:scale-105 transition-transform duration-500">
                                   <img src={f.previewUrl} className="w-full h-full object-cover" alt="" />
                                   <AnimatePresence>
                                     {f.status === "completed" && (
@@ -675,7 +671,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                                     <Button
                                       size="lg"
                                       variant={f.status === "completed" ? "default" : "outline"}
-                                      className={cn("h-12 md:h-14 rounded-2xl text-[10px] md:text-xs px-6 md:px-10 uppercase font-black tracking-widest transition-all shadow-xl group", f.status === "completed" ? "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20" : "border-border hover:bg-primary/20 hover:border-primary/40")}
+                                      className={cn("h-12 md:h-10 rounded-2xl text-[10px] md:text-xs px-6 md:px-5 uppercase font-black tracking-widest transition-all shadow-xl group", f.status === "completed" ? "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20" : "border-border hover:bg-primary/20 hover:border-primary/40")}
                                       onClick={() => {
                                         if (f.status === "completed" && f.processedUrl) {
                                           ExportManager.downloadFromUrl(
@@ -708,8 +704,8 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                     </div>
                   )}
                   {files.length > 0 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12 max-w-xl mx-auto pb-40">
-                       <DropZone onFilesDrop={handleFilesDrop} multiple maxSize={1024} className="h-24 md:h-32 bg-secondary/30 rounded-[2.5rem] border-dashed border-border hover:bg-secondary/50 hover:border-primary/50 transition-all group" title="Batch Append to Pipeline" />
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12 max-w-xl mx-auto pb-16">
+                       <DropZone onFilesDrop={handleFilesDrop} multiple maxSize={1024} className="h-24 md:h-32 bg-secondary/30 rounded-2xl border-dashed border-border hover:bg-secondary/50 hover:border-primary/50 transition-all group" title="Batch Append to Pipeline" />
                     </motion.div>
                   )}
                 </div>
@@ -724,10 +720,10 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                 initial={{ opacity: 0, scale: 0.5, y: 50 }} 
                 animate={{ opacity: 1, scale: 1, y: 0 }} 
                 exit={{ opacity: 0, scale: 0.5, y: 50 }}
-                className="lg:hidden fixed bottom-24 right-6 z-40"
+                className="lg:hidden fixed bottom-6 right-4 z-40"
               >
                  <Button 
-                  className="w-16 h-16 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
+                  className="w-11 h-11 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
                   onClick={convertAll}
                   disabled={isProcessingAll}
                  >

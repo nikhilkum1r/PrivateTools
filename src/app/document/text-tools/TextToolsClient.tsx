@@ -86,18 +86,18 @@ export default function TextToolsClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-5xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-5xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
           <div className="text-center space-y-3">
-            <div className="w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto">
               <AlignLeft className="w-8 h-8 text-green-500" />
             </div>
-            <h1 className="text-4xl font-black tracking-tight">Text Utilities</h1>
+            <h1 className="text-2xl font-black tracking-tight">Text Utilities</h1>
             <p className="text-muted-foreground">Transform, analyze and encode text instantly in your browser.</p>
             <PrivacyBadge />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             {/* Input */}
             <div className="space-y-2">
               <div className="flex justify-between items-center">

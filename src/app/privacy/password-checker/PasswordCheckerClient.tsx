@@ -32,15 +32,15 @@ export default function PasswordCheckerClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
               <KeyRound className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h1 className="text-4xl font-black tracking-tight">Password Checker</h1>
+              <h1 className="text-2xl font-black tracking-tight">Password Checker</h1>
               <p className="text-muted-foreground mt-2">Check strength and crack time offline. Your password is never sent anywhere.</p>
             </div>
             <PrivacyBadge />
@@ -55,7 +55,7 @@ export default function PasswordCheckerClient() {
                 placeholder="Type any password to analyze…"
                 value={password}
                 onChange={(e) => handleChange(e.target.value)}
-                className="rounded-xl h-14 text-base pr-12"
+                className="rounded-xl h-10 text-base pr-12"
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck={false}

@@ -71,15 +71,15 @@ export default function ShredderClient() {
         onAccept={accept}
       />
 
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-red-500/10 flex items-center justify-center mx-auto">
               <Trash2 className="w-8 h-8 text-red-500" />
             </div>
             <div>
-              <h1 className="text-4xl font-black tracking-tight">File Shredder</h1>
+              <h1 className="text-2xl font-black tracking-tight">File Shredder</h1>
               <p className="text-muted-foreground mt-2">Overwrite file data with random bytes before disposal. In-browser only.</p>
             </div>
             <PrivacyBadge />

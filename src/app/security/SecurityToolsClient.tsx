@@ -90,12 +90,12 @@ export default function SecurityToolsClient() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-grow container mx-auto px-4 py-12">
-        <div className="max-w-3xl mx-auto space-y-12">
+      <main className="flex-grow container mx-auto px-4 py-4">
+        <div className="max-w-3xl mx-auto space-y-6">
           {/* Header */}
-          <div className="space-y-4 text-center md:text-left pb-8 border-b border-primary/10 mb-8">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight flex items-center justify-center md:justify-start gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex flex-shrink-0 items-center justify-center shadow-inner border border-primary/20">
+          <div className="space-y-4 text-center md:text-left pb-8 border-b border-primary/10 mb-4">
+            <h1 className="text-2xl md:text-xl font-black tracking-tight flex items-center justify-center md:justify-start gap-4">
+              <div className="w-11 h-11 rounded-2xl bg-primary/10 flex flex-shrink-0 items-center justify-center shadow-inner border border-primary/20">
                 <Lock className="w-8 h-8 text-primary" />
               </div>
               <span className="bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
@@ -107,7 +107,7 @@ export default function SecurityToolsClient() {
             </p>
           </div>
 
-          <Card className="p-8 shadow-xl border-primary/10 space-y-8 relative overflow-hidden">
+          <Card className="p-8 shadow-xl border-primary/10 space-y-4 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
               <Fingerprint className="w-24 h-24" />
             </div>
@@ -141,7 +141,7 @@ export default function SecurityToolsClient() {
             </div>
 
             {/* Controls */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4">
               <div className="space-y-6">
                 <div className="flex justify-between">
                   <Label className="text-base">Password Length</Label>

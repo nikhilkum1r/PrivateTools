@@ -61,7 +61,7 @@ export default function WordCounterClient() {
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-6xl">
-        <div className="space-y-12">
+        <div className="space-y-6">
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -71,7 +71,7 @@ export default function WordCounterClient() {
               <AlignLeft className="w-3.5 h-3.5" />
               Linguistic Analytics Engine
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight italic">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
               Word <span className="text-primary not-italic">Counter.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -80,10 +80,10 @@ export default function WordCounterClient() {
             <PrivacyBadge />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
             {/* Input Section */}
             <div className="lg:col-span-3 space-y-6">
-              <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-6">
+              <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-6">
                 <div className="flex justify-between items-center px-2">
                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Source Content</Label>
                    <div className="flex gap-2">
@@ -99,7 +99,7 @@ export default function WordCounterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Paste your manuscript here..."
-                  className="min-h-[500px] rounded-[2rem] bg-card border-border font-mono text-base leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20 transition-all"
+                  className="min-h-[500px] rounded-xl bg-card border-border font-mono text-base leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20 transition-all"
                 />
               </Card>
             </div>
@@ -113,7 +113,7 @@ export default function WordCounterClient() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="p-6 rounded-[2rem] bg-secondary/30 border border-border flex flex-col gap-1 group hover:border-primary/30 transition-all"
+                    className="p-6 rounded-xl bg-secondary/30 border border-border flex flex-col gap-1 group hover:border-primary/30 transition-all"
                   >
                     <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">
                       <s.icon className={cn("w-3.5 h-3.5", s.color)} />
@@ -124,7 +124,7 @@ export default function WordCounterClient() {
                 ))}
               </div>
 
-              <div className="p-8 rounded-[2.5rem] bg-primary/5 border border-primary/10 space-y-4">
+              <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10 space-y-4">
                  <h4 className="text-xs font-black uppercase tracking-widest text-primary italic">Pro Tip</h4>
                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
                     SafeTools analyzes your text in real-time. No character ever touches our infrastructure. Perfect for classified reports and creative manuscripts.
@@ -134,7 +134,7 @@ export default function WordCounterClient() {
           </div>
 
           {/* FAQ/Content Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12 border-t border-border">
              <div className="space-y-6">
                 <h3 className="text-2xl font-black italic">Advanced Text Analytics</h3>
                 <div className="space-y-4 text-muted-foreground font-medium text-sm leading-relaxed">

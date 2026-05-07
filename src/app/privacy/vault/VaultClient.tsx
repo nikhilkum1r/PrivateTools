@@ -184,12 +184,12 @@ export default function VaultClient() {
       <Navbar />
 
       <main className="flex-grow container mx-auto px-4 py-16">
-        <div className="max-w-5xl mx-auto space-y-12">
+        <div className="max-w-5xl mx-auto space-y-6">
           <div className="text-center space-y-6">
             <Badge className="bg-red-500/10 text-red-500 border-red-500/20 py-2 px-6 rounded-full uppercase tracking-[0.3em] text-[10px] font-black">
               Military-Grade Cryptography
             </Badge>
-            <h1 className="text-6xl md:text-7xl font-black tracking-tight leading-none">
+            <h1 className="text-2xl md:text-2xl font-black tracking-tight leading-none">
               Secure <span className="text-red-500">Vault.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -197,12 +197,12 @@ export default function VaultClient() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-7 space-y-8">
-              <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] relative overflow-hidden group">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+            <div className="lg:col-span-7 space-y-4">
+              <Card className="p-8 bg-secondary/30 border-border rounded-2xl relative overflow-hidden group">
                 <div className="absolute inset-0 bg-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 
-                <div className="flex gap-4 p-1 bg-muted/40 rounded-2xl mb-8 border border-border">
+                <div className="flex gap-4 p-1 bg-muted/40 rounded-2xl mb-4 border border-border">
                   <Button 
                     className={cn("flex-1 h-12 rounded-xl font-black gap-2 transition-all", mode === "encrypt" ? "bg-red-600 text-foreground" : "bg-transparent text-muted-foreground")}
                     onClick={() => { setMode("encrypt"); setResult(null); setFile(null); }}
@@ -224,9 +224,9 @@ export default function VaultClient() {
                     accept={mode === "encrypt" ? "*/*" : ".vault"}
                   />
                 ) : (
-                  <div className="space-y-8">
-                    <div className="p-8 rounded-[2rem] bg-muted/60 border border-border flex items-center gap-6 relative group/file">
-                      <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center">
+                  <div className="space-y-4">
+                    <div className="p-8 rounded-xl bg-muted/60 border border-border flex items-center gap-3 relative group/file">
+                      <div className="w-11 h-11 rounded-2xl bg-red-500/10 flex items-center justify-center">
                         <FileLock2 className="w-8 h-8 text-red-500" />
                       </div>
                       <div className="flex-grow min-w-0">
@@ -263,7 +263,7 @@ export default function VaultClient() {
                         <Input 
                           type={showPassword ? "text" : "password"} 
                           placeholder="Enter vault password..." 
-                          className="h-16 bg-secondary/50 border-border rounded-2xl px-6 font-mono text-lg focus:ring-red-500/20 focus:border-red-500/40 pr-16 text-foreground"
+                          className="h-11 bg-secondary/50 border-border rounded-2xl px-6 font-mono text-lg focus:ring-red-500/20 focus:border-red-500/40 pr-16 text-foreground"
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
                         />
@@ -297,7 +297,7 @@ export default function VaultClient() {
 
                     {!result ? (
                       <Button 
-                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-red-500/20 bg-red-600 hover:bg-red-700 text-foreground transition-all hover:scale-[1.02]"
+                        className="w-full h-11 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-red-500/20 bg-red-600 hover:bg-red-700 text-foreground transition-all hover:scale-[1.02]"
                         disabled={isProcessing || !password}
                         onClick={processFile}
                       >
@@ -306,7 +306,7 @@ export default function VaultClient() {
                       </Button>
                     ) : (
                       <Button 
-                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-emerald-500/20 bg-emerald-600 hover:bg-emerald-700 text-foreground transition-all hover:scale-[1.02]"
+                        className="w-full h-11 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-emerald-500/20 bg-emerald-600 hover:bg-emerald-700 text-foreground transition-all hover:scale-[1.02]"
                         onClick={() => {
                           const a = document.createElement("a");
                           a.href = URL.createObjectURL(result.blob);
@@ -323,8 +323,8 @@ export default function VaultClient() {
               </Card>
             </div>
 
-            <div className="lg:col-span-5 space-y-8">
-              <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] space-y-8">
+            <div className="lg:col-span-5 space-y-4">
+              <Card className="p-8 bg-secondary/30 border-border rounded-2xl space-y-4">
                 <div className="flex items-center gap-4 text-red-500">
                   <ShieldAlert className="w-6 h-6" />
                   <h3 className="text-xs font-black uppercase tracking-widest">Vault Protocol</h3>

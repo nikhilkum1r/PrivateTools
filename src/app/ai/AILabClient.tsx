@@ -30,14 +30,14 @@ export default function AILabClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-3xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-12">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-3xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-6">
           {/* Header */}
           <div className="text-center space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-bold">
               <Zap className="w-4 h-4" /> Coming Soon
             </div>
-            <h1 className="text-5xl font-black tracking-tight">AI Creative Lab</h1>
+            <h1 className="text-xl font-black tracking-tight">AI Creative Lab</h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
               Experimental AI-powered image tools — all running locally in your browser. No GPU server required.
             </p>

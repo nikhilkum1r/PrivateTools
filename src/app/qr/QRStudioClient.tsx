@@ -132,7 +132,7 @@ export default function QRStudioClient() {
 
         {/* Left Sidebar - Identity Engine */}
         <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-          <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Layers className="w-4 h-4" /> Identity Engine
@@ -150,7 +150,7 @@ export default function QRStudioClient() {
           </div>
 
           <ScrollArea className="flex-grow min-h-0">
-            <div className="p-8 space-y-10">
+            <div className="p-4 space-y-4">
               <div className="space-y-6">
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Data Protocol</h4>
                 <Tabs defaultValue="link" className="w-full">
@@ -168,7 +168,7 @@ export default function QRStudioClient() {
                         value={value} 
                         onChange={(e) => handleValueChange(e.target.value)}
                         className={cn(
-                          "bg-secondary/50 border-border rounded-2xl h-14 font-black text-primary tracking-tighter italic transition-all",
+                          "bg-secondary/50 border-border rounded-2xl h-10 font-black text-primary tracking-tighter italic transition-all",
                           !urlValid && "border-red-500/50 bg-red-500/5"
                         )}
                         placeholder="https://..."
@@ -212,7 +212,7 @@ export default function QRStudioClient() {
 
               <div className="space-y-6">
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Brand Overlay</h4>
-                <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                   <div className="flex items-center justify-between">
                     <Label className="text-[10px] font-black uppercase tracking-widest opacity-60">Center Logo</Label>
                     {logoFile && <Button variant="ghost" size="sm" className="h-6 text-[8px] uppercase text-red-400" onClick={() => setLogoFile(null)}>Remove</Button>}
@@ -233,7 +233,7 @@ export default function QRStudioClient() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+              <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                 <div className="flex items-center gap-3">
                   <Zap className="w-5 h-5 text-primary" />
                   <h4 className="text-xs font-black uppercase tracking-widest">Real-time Synthesis</h4>
@@ -247,7 +247,7 @@ export default function QRStudioClient() {
 
           <div className="p-6 border-t border-border bg-muted/40 shrink-0 flex flex-col gap-3">
             <Button 
-              className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+              className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
               onClick={() => downloadQR("png")}
             >
               <Download className="w-4 h-4" />
@@ -267,8 +267,8 @@ export default function QRStudioClient() {
         {/* Center - QR Workspace */}
         <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
           <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-9 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                 <QrCode className="w-8 h-8 text-primary" />
               </div>
               <div className="flex flex-col gap-1">
@@ -285,13 +285,13 @@ export default function QRStudioClient() {
                 </div>
               </div>
             </div>
-            <Button variant="outline" className="h-14 rounded-2xl px-8 border-border bg-secondary/50 text-foreground font-black gap-2 shadow-xl hover:bg-secondary transition-all italic" onClick={copyToClipboard}>
+            <Button variant="outline" className="h-10 rounded-2xl px-8 border-border bg-secondary/50 text-foreground font-black gap-2 shadow-xl hover:bg-secondary transition-all italic" onClick={copyToClipboard}>
               {copied ? <CheckCircle2 className="w-5 h-5 text-emerald-500" /> : <Copy className="w-5 h-5" />}
               COPY CONTENT
             </Button>
           </header>
 
-          <div className="flex-grow relative flex items-center justify-center p-8 lg:p-12 overflow-hidden">
+          <div className="flex-grow relative flex items-center justify-center p-8 lg:p-5 overflow-hidden">
             <div className="absolute inset-0 grid grid-cols-[repeat(40,minmax(0,1fr))] grid-rows-[repeat(40,minmax(0,1fr))] pointer-events-none opacity-[0.03]">
               {Array.from({ length: 1600 }).map((_, i) => (
                 <div key={i} className="border-[0.5px] border-white" />
@@ -303,7 +303,7 @@ export default function QRStudioClient() {
                animate={{ opacity: 1, scale: 1 }}
                className="relative group"
             >
-                <div ref={qrRef} className="p-12 rounded-[4rem] bg-white shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-border transition-transform group-hover:scale-[1.02] duration-700 relative">
+                <div ref={qrRef} className="p-5 rounded-3xl bg-white shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-border transition-transform group-hover:scale-[1.02] duration-700 relative">
                   <QRCodeSVG 
                     value={value} 
                     size={size} 
@@ -331,7 +331,7 @@ export default function QRStudioClient() {
 
         {/* Right Sidebar - Studio Matrix */}
         <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-          <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -342,7 +342,7 @@ export default function QRStudioClient() {
           </div>
 
           <ScrollArea className="flex-grow min-h-0">
-            <div className="p-8 space-y-10">
+            <div className="p-4 space-y-4">
               <div className="space-y-6">
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Chromatic Matrix</h4>
                 <div className="grid grid-cols-1 gap-4">
@@ -350,14 +350,14 @@ export default function QRStudioClient() {
                     <Label className="text-[9px] uppercase font-black text-muted-foreground/60 tracking-widest">Foreground</Label>
                     <div className="flex gap-3">
                       <div className="w-12 h-12 rounded-xl border border-border shadow-lg" style={{ backgroundColor: fgColor }} />
-                      <Input value={fgColor} onChange={(e) => setFgColor(e.target.value)} className="bg-secondary/50 border-border rounded-xl h-12 font-mono uppercase text-xs" />
+                      <Input value={fgColor} onChange={(e) => setFgColor(e.target.value)} className="bg-secondary/50 border-border rounded-lg h-9 font-mono uppercase text-xs" />
                     </div>
                   </div>
                   <div className="space-y-3 p-4 rounded-2xl bg-secondary/30 border border-border">
                     <Label className="text-[9px] uppercase font-black text-muted-foreground/60 tracking-widest">Background</Label>
                     <div className="flex gap-3">
                       <div className="w-12 h-12 rounded-xl border border-border shadow-lg" style={{ backgroundColor: bgColor }} />
-                      <Input value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-secondary/50 border-border rounded-xl h-12 font-mono uppercase text-xs" />
+                      <Input value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-secondary/50 border-border rounded-lg h-9 font-mono uppercase text-xs" />
                     </div>
                   </div>
 
@@ -401,7 +401,7 @@ export default function QRStudioClient() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+              <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                 <div className="flex items-center gap-3">
                   <Cpu className="w-5 h-5 text-primary" />
                   <h4 className="text-xs font-black uppercase tracking-widest">Matrix Guard</h4>

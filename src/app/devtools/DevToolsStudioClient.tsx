@@ -181,8 +181,8 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
         {/* Center - Code Workspace */}
         <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink overflow-hidden">
           <header className="p-6 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-            <div className="flex items-center gap-6">
-              <div className="w-12 h-12 rounded-[1.5rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                 <ToolIcon iconName={TOOLS.find(t => t.id === activeTool)?.iconName ?? "Code2"} className="w-6 h-6 text-primary" />
               </div>
               <div className="flex flex-col gap-1">
@@ -212,7 +212,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
           <div className="flex-grow grid grid-cols-1 lg:grid-cols-2 p-4 lg:p-6 gap-4 overflow-hidden">
             {/* Input Card */}
             <div className="flex flex-col gap-4 min-h-0">
-               <Card className="flex-grow bg-muted/40 border-border rounded-[2rem] overflow-hidden flex flex-col relative group">
+               <Card className="flex-grow bg-muted/40 border-border rounded-xl overflow-hidden flex flex-col relative group">
                   <div className="p-4 border-b border-border flex justify-between items-center bg-secondary/30">
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/50 italic">Raw Input Buffer</span>
                     <Badge variant="outline" className="text-[8px] border-border bg-secondary/50 opacity-50 uppercase tracking-widest">Source</Badge>
@@ -231,7 +231,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
 
             {/* Output Card */}
             <div className="flex flex-col gap-4 min-h-0 relative">
-               <Card className="flex-grow bg-secondary/30 border-border rounded-[2rem] overflow-hidden flex flex-col group shadow-2xl">
+               <Card className="flex-grow bg-secondary/30 border-border rounded-xl overflow-hidden flex flex-col group shadow-2xl">
                   <div className="p-4 border-b border-border flex justify-between items-center bg-secondary/50">
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary italic">Processed Output</span>
                     <Button 
@@ -271,7 +271,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
           </div>
 
           <ScrollArea className="flex-grow min-h-0">
-            <div className="p-8 space-y-10">
+            <div className="p-4 space-y-4">
               <div className="space-y-6">
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Metadata Matrix</h4>
                 <div className="grid grid-cols-1 gap-4">
@@ -292,7 +292,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
                 </div>
               </div>
 
-              <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4 relative overflow-hidden group">
+              <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4 relative overflow-hidden group">
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex items-center gap-3 relative z-10">
                   <Fingerprint className="w-5 h-5 text-primary" />

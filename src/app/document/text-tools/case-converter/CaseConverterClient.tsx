@@ -55,7 +55,7 @@ export default function CaseConverterClient() {
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
-        <div className="space-y-12">
+        <div className="space-y-6">
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -65,7 +65,7 @@ export default function CaseConverterClient() {
               <CaseSensitive className="w-3.5 h-3.5" />
               Linguistic Matrix Studio
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight italic">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
               Case <span className="text-primary not-italic">Converter.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -74,7 +74,7 @@ export default function CaseConverterClient() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
+          <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-4">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
               {[
                 { name: "UPPER", mode: "upper", icon: CaseUpper },
@@ -111,13 +111,13 @@ export default function CaseConverterClient() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter text to transform..."
-                className="min-h-[400px] rounded-[2rem] bg-card border-border font-mono text-sm leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20"
+                className="min-h-[400px] rounded-xl bg-card border-border font-mono text-sm leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20"
               />
             </div>
           </Card>
 
           {/* Guide Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
              <div className="space-y-6">
                 <h3 className="text-2xl font-black italic flex items-center gap-3">
                    <Sparkles className="w-6 h-6 text-primary" /> Case Mechanics
@@ -131,9 +131,9 @@ export default function CaseConverterClient() {
                    </ul>
                 </div>
              </div>
-             <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
+             <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col justify-center gap-3">
                 <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
+                   <div className="w-8 h-8 rounded-2xl bg-primary flex items-center justify-center">
                       <CaseSensitive className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Identity Safe</h4>

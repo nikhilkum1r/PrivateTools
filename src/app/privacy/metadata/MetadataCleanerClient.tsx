@@ -227,15 +227,15 @@ export default function MetadataCleanerClient() {
 
         {files.length === 0 ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-primary to-red-600 p-[1px] mx-auto animate-pulse">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-red-600 p-[1px] mx-auto animate-pulse">
                   <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Shield className="w-10 h-10 text-primary" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
                     Privacy <span className="text-primary">Scrubber.</span>
                   </h1>
                   <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto leading-relaxed">
@@ -247,7 +247,7 @@ export default function MetadataCleanerClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*,video/*,audio/*,.pdf" 
                 multiple={true} 
-                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-2xl hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function MetadataCleanerClient() {
           <>
             {/* Left Sidebar - Asset Matrix */}
             <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -330,7 +330,7 @@ export default function MetadataCleanerClient() {
 
               <div className="p-6 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
                   onClick={batchScrub}
                   disabled={isBatchProcessing || !files.some(f => f.status === "idle")}
                 >
@@ -343,8 +343,8 @@ export default function MetadataCleanerClient() {
             {/* Center - Preview Engine */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
               <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-9 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                     <ShieldCheck className="w-8 h-8 text-primary" />
                   </div>
                   <div className="flex flex-col gap-1">
@@ -364,7 +364,7 @@ export default function MetadataCleanerClient() {
                 {activeFile?.status === "completed" && (
                    <Button 
                      onClick={() => activeFile.resultUrl && ExportManager.downloadFromUrl(activeFile.resultUrl, `secure-${activeFile.file.name}`)}
-                     className="h-14 rounded-2xl px-8 bg-emerald-600 hover:bg-emerald-700 font-black gap-2 shadow-xl shadow-emerald-500/20 italic"
+                     className="h-10 rounded-2xl px-8 bg-emerald-600 hover:bg-emerald-700 font-black gap-2 shadow-xl shadow-emerald-500/20 italic"
                    >
                      <Download className="w-5 h-5" />
                      DOWNLOAD SECURE
@@ -372,9 +372,9 @@ export default function MetadataCleanerClient() {
                 )}
               </header>
 
-              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-12 overflow-hidden">
+              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-5 overflow-hidden">
                 {activeFile ? (
-                   <div className="w-full h-full max-w-4xl bg-secondary/30 rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden">
+                   <div className="w-full h-full max-w-4xl bg-secondary/30 rounded-2xl border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden">
                       {activeFile.file.type.startsWith("image/") ? (
                         <img 
                           src={activeFile.status === "completed" ? activeFile.resultUrl : activeFile.previewUrl} 
@@ -382,8 +382,8 @@ export default function MetadataCleanerClient() {
                           alt="Preview" 
                         />
                       ) : (
-                        <div className="flex flex-col items-center gap-6">
-                           <div className="w-24 h-24 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20">
+                        <div className="flex flex-col items-center gap-3">
+                           <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20">
                               <Lock className="w-10 h-10 text-primary" />
                            </div>
                            <p className="text-muted-foreground/60 font-black uppercase tracking-widest text-xs">Binary Stream Preview Restricted</p>
@@ -393,7 +393,7 @@ export default function MetadataCleanerClient() {
                    </div>
                 ) : (
                   <div className="text-center space-y-4 opacity-20">
-                     <Fingerprint className="w-20 h-20 mx-auto" />
+                     <Fingerprint className="w-20 h-12 mx-auto" />
                      <p className="font-black uppercase tracking-widest text-sm italic">Initialize Asset Sequence</p>
                   </div>
                 )}
@@ -402,7 +402,7 @@ export default function MetadataCleanerClient() {
 
             {/* Right Sidebar - Studio Matrix */}
             <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -413,7 +413,7 @@ export default function MetadataCleanerClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   <div className="space-y-6">
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Scrub Protocol</h4>
                     <div className="space-y-4">
@@ -447,7 +447,7 @@ export default function MetadataCleanerClient() {
                            </div>
                          ))
                        ) : (
-                         <div className="py-12 text-center space-y-4 opacity-20">
+                         <div className="py-4 text-center space-y-4 opacity-20">
                             <Eye className="w-8 h-8 mx-auto" />
                             <p className="text-[10px] font-black uppercase tracking-widest">No Markers Detected</p>
                          </div>
@@ -455,7 +455,7 @@ export default function MetadataCleanerClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                  <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">WASM Guard</h4>

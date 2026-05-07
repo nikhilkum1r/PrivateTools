@@ -298,7 +298,7 @@ export default function EditorStudioClient() {
 
   const renderSettings = () => {
     if (!currentFile) return (
-      <div className="flex-grow flex items-center justify-center p-12 text-center space-y-4">
+      <div className="flex-grow flex items-center justify-center p-5 text-center space-y-4">
         <div className="space-y-2">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/40">No Selection</p>
           <p className="text-xs text-white/10 italic">Upload an image to unlock studio controls.</p>
@@ -319,22 +319,22 @@ export default function EditorStudioClient() {
       </div>
 
       <ScrollArea className="flex-grow min-h-0">
-        <div className="p-8 space-y-10 pb-20">
+        <div className="p-8 space-y-5 pb-8">
           <TabsContent value="format" className="m-0 focus-visible:outline-none">
             <motion.div 
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-10"
+              className="space-y-5"
             >
             {/* Export Format */}
             <div className="space-y-4">
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Target Format</Label>
               <DropdownMenu>
                 <DropdownMenuTrigger render={
-                  <Button variant="outline" className="w-full h-20 rounded-[2rem] bg-secondary/30 border-border p-4 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden shadow-2xl relative">
+                  <Button variant="outline" className="w-full h-10 rounded-lg bg-secondary/30 border-border px-3 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden shadow-2xl relative">
                     <div className="flex items-center gap-4 w-full">
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                      <div className="w-8 h-8 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
                         <Zap className="w-6 h-6 text-primary" />
                       </div>
                       <div className="flex flex-col items-start text-left flex-grow">
@@ -345,7 +345,7 @@ export default function EditorStudioClient() {
                     </div>
                   </Button>
                 } />
-                <DropdownMenuContent className="w-[400px] p-0 bg-card border-border rounded-[2.5rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] overflow-hidden backdrop-blur-3xl" align="start">
+                <DropdownMenuContent className="w-[300px] p-0 bg-card border-border rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] overflow-hidden backdrop-blur-3xl" align="start">
                   <div className="p-4 border-b border-border bg-secondary/30">
                     <div className="relative group">
                       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/40 group-focus-within:text-primary transition-colors" />
@@ -363,8 +363,8 @@ export default function EditorStudioClient() {
                       />
                     </div>
                   </div>
-                  <ScrollArea className="h-[450px]">
-                    <div className="p-4 space-y-8">
+                  <ScrollArea className="h-[360px]">
+                    <div className="p-4 space-y-4">
                       {Object.entries(CATEGORIZED_FORMATS).map(([cat, fmts]) => (
                         <div key={cat} className="space-y-4">
                           <div className="flex items-center gap-3 px-2">
@@ -378,7 +378,7 @@ export default function EditorStudioClient() {
                                 key={f}
                                 data-value={f.toLowerCase()}
                                 className={cn(
-                                  "format-item flex items-center justify-between px-5 py-4 rounded-2xl border transition-all active:scale-95 group",
+                                  "format-item flex items-center justify-between px-3 py-2 rounded-lg border transition-all active:scale-95 group",
                                   settings.format === f 
                                     ? "bg-primary border-primary shadow-lg shadow-primary/20 text-foreground" 
                                     : "bg-secondary/30 border-border text-muted-foreground/70 hover:bg-secondary/50 hover:border-primary/30 hover:text-foreground"
@@ -399,7 +399,7 @@ export default function EditorStudioClient() {
             </div>
 
             {/* Quality & Size */}
-            <div className="space-y-8">
+            <div className="space-y-4">
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Render Quality</Label>
@@ -424,7 +424,7 @@ export default function EditorStudioClient() {
                   <Input 
                     type="number" 
                     placeholder="Unlimited" 
-                    className="bg-white/[0.03] border-border rounded-2xl h-14 pl-12 focus:border-primary/50 transition-all shadow-inner font-mono"
+                    className="bg-white/[0.03] border-border rounded-2xl h-10 pl-12 focus:border-primary/50 transition-all shadow-inner font-mono"
                     value={settings.targetSize || ""}
                     onChange={(e) => updateSettings({ targetSize: parseInt(e.target.value) || undefined })}
                   />
@@ -464,9 +464,9 @@ export default function EditorStudioClient() {
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-10"
+              className="space-y-5"
             >
-            <div className="p-6 rounded-[2.5rem] bg-secondary/30 border border-border space-y-8">
+            <div className="p-6 rounded-2xl bg-secondary/30 border border-border space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex flex-col gap-1">
                   <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Boundary Definition</Label>
@@ -502,7 +502,7 @@ export default function EditorStudioClient() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-3">
                   <Label className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 flex items-center gap-2">
                     <div className="w-1 h-1 rounded-full bg-primary" /> X-Origin
@@ -577,9 +577,9 @@ export default function EditorStudioClient() {
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-10"
+              className="space-y-5"
             >
-              <div className="p-8 rounded-[2.5rem] bg-emerald-500/[0.02] border border-emerald-500/10 space-y-6">
+              <div className="p-8 rounded-2xl bg-emerald-500/[0.02] border border-emerald-500/10 space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
                     <ShieldOff className="w-6 h-6 text-emerald-500" />
@@ -596,7 +596,7 @@ export default function EditorStudioClient() {
                    <Button 
                      variant="outline" 
                      className={cn(
-                       "w-full h-14 rounded-[1.25rem] text-[10px] font-black uppercase tracking-widest transition-all",
+                       "w-full h-10 rounded-[1.25rem] text-[10px] font-black uppercase tracking-widest transition-all",
                        activeTab === "privacy" ? "bg-emerald-500 text-foreground border-emerald-500" : "bg-white/[0.03] border-border hover:bg-emerald-500/10"
                      )}
                      onClick={() => setActiveTab("privacy")}
@@ -647,7 +647,7 @@ export default function EditorStudioClient() {
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-10"
+              className="space-y-5"
             >
             <div className="space-y-4">
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Chromatic Engine</Label>
@@ -669,7 +669,7 @@ export default function EditorStudioClient() {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-4">
               {[
                 { label: "Luminance", key: "brightness" },
                 { label: "Contrast Range", key: "contrast" },
@@ -698,16 +698,16 @@ export default function EditorStudioClient() {
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-10"
+              className="space-y-5"
             >
             {/* WASM Neural Lab Card */}
-            <div className="relative group overflow-hidden rounded-[2.5rem] p-[1px] bg-gradient-to-br from-primary/30 via-white/5 to-blue-500/30">
+            <div className="relative group overflow-hidden rounded-2xl p-[1px] bg-gradient-to-br from-primary/30 via-white/5 to-blue-500/30">
               <div className="absolute inset-0 bg-card rounded-[calc(2.5rem-1px)]" />
               <div className="relative p-7 space-y-6 bg-gradient-to-br from-primary/10 via-transparent to-blue-500/5 rounded-[calc(2.5rem-1px)] backdrop-blur-3xl">
                 <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/20 blur-[60px] rounded-full animate-pulse" />
                 
                 <div className="flex items-center gap-4 relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-10 h-10 rounded-2xl bg-primary/20 flex items-center justify-center border border-primary/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] group-hover:scale-110 transition-transform duration-500">
                     <Sparkles className="w-7 h-7 text-primary animate-pulse" />
                   </div>
                   <div className="flex flex-col">
@@ -724,20 +724,20 @@ export default function EditorStudioClient() {
                 </p>
                 
                 <div className="space-y-3 pt-2 relative z-10">
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && handleOCR(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && handleOCR(currentFile.file)}>
                     {isOcrLoading ? <Loader2 className="w-4 h-4 mr-3 animate-spin" /> : <ScanText className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" />} Extract Text (OCR)
                   </Button>
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && extractColors(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && extractColors(currentFile.file)}>
                     <Palette className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Design Palette
                   </Button>
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && setMetadataFile(currentFile)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && setMetadataFile(currentFile)}>
                     <Info className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Deep Metadata Inspector
                   </Button>
                 </div>
               </div>
 
               {/* Watermark Section */}
-              <div className="pt-10 border-t border-border space-y-8">
+              <div className="pt-10 border-t border-border space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col gap-1">
                     <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Signature Matrix</Label>
@@ -785,7 +785,7 @@ export default function EditorStudioClient() {
             </div>
 
             {/* Privacy Guard Card */}
-            <div className="p-7 rounded-[2.5rem] bg-emerald-500/[0.02] border border-emerald-500/10 space-y-6 relative overflow-hidden group">
+            <div className="p-7 rounded-2xl bg-emerald-500/[0.02] border border-emerald-500/10 space-y-6 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full" />
               <div className="flex items-center justify-between relative z-10">
                 <div className="flex items-center gap-3">
@@ -820,7 +820,7 @@ export default function EditorStudioClient() {
           </Button>
         </div>
         <Button 
-          className="w-full bg-primary hover:bg-primary/90 text-foreground rounded-[1.5rem] font-black h-14 gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all text-xs uppercase tracking-widest italic"
+          className="w-full bg-primary hover:bg-primary/90 text-foreground rounded-xl font-black h-10 gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all text-xs uppercase tracking-widest italic"
           onClick={handleProcess}
           disabled={isProcessing || !currentFile}
         >
@@ -831,7 +831,7 @@ export default function EditorStudioClient() {
         {files.length > 1 && (
           <Button 
             variant="ghost"
-            className="w-full text-muted-foreground/60 hover:text-foreground rounded-[1.5rem] font-black h-12 gap-3 text-[9px] uppercase tracking-[0.3em] active:scale-95 transition-all"
+            className="w-full text-muted-foreground/60 hover:text-foreground rounded-xl font-black h-12 gap-3 text-[9px] uppercase tracking-[0.3em] active:scale-95 transition-all"
             onClick={handleProcessAll}
             disabled={isProcessing}
           >
@@ -862,8 +862,8 @@ export default function EditorStudioClient() {
         </div>
 
         {/* Left Sidebar - File Queue */}
-        <aside className="hidden lg:flex w-[420px] h-full max-h-full studio-sidebar shrink-0 flex-col shrink-0 relative z-10 shadow-2xl">
-          <div className="p-8 border-b border-border flex items-center justify-between bg-black/10">
+        <aside className="hidden lg:flex w-[300px] h-full max-h-full studio-sidebar shrink-0 flex-col shrink-0 relative z-10 shadow-2xl">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Layers className="w-4 h-4" /> Identity Engine
@@ -894,14 +894,14 @@ export default function EditorStudioClient() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     onClick={() => setSelectedId(file.id)}
                     className={cn(
-                      "group p-4 rounded-[2rem] border transition-all cursor-pointer relative overflow-hidden duration-500",
+                      "group p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden duration-500",
                       selectedId === file.id 
                         ? "bg-primary/10 border-primary/30 shadow-2xl shadow-primary/20" 
                         : "bg-secondary/30 border-border hover:bg-secondary/70 hover:border-border"
                     )}
                   >
                     <div className="flex items-center gap-4 relative z-10">
-                      <div className="w-16 h-16 rounded-2xl overflow-hidden bg-muted/60 border border-border shrink-0 shadow-2xl group-hover:scale-105 transition-transform">
+                      <div className="w-11 h-11 rounded-2xl overflow-hidden bg-muted/60 border border-border shrink-0 shadow-2xl group-hover:scale-105 transition-transform">
                         <img src={file.previewUrl} className="w-full h-full object-cover" alt="" />
                       </div>
                       <div className="flex-grow min-w-0">
@@ -935,7 +935,7 @@ export default function EditorStudioClient() {
           
           <div className="p-8 border-t border-border bg-card">
             <Button 
-              className="w-full bg-white text-black hover:bg-white/90 rounded-[1.5rem] font-black h-14 gap-3 text-xs uppercase tracking-widest shadow-2xl active:scale-95 transition-all"
+              className="w-full bg-white text-black hover:bg-white/90 rounded-xl font-black h-10 gap-3 text-xs uppercase tracking-widest shadow-2xl active:scale-95 transition-all"
               onClick={() => document.getElementById('studio-upload-mobile')?.click()}
             >
               <Plus className="w-5 h-5" /> Import Assets
@@ -960,8 +960,8 @@ export default function EditorStudioClient() {
         <section className="flex-grow bg-transparent relative flex flex-col h-full overflow-y-auto overflow-x-hidden custom-scrollbar">
           {/* Workspace Header */}
           <header className="p-4 md:p-8 flex items-center justify-between studio-header relative z-20">
-            <div className="flex items-center gap-6">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group overflow-hidden relative">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group overflow-hidden relative">
                 <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Cpu className="w-6 h-6 md:w-8 md:h-8 text-foreground relative z-10" />
               </div>
@@ -978,9 +978,9 @@ export default function EditorStudioClient() {
             
             <div className="flex items-center gap-3">
               <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
-                <SheetTrigger render={<Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-14 md:w-14 shadow-xl"><Settings2 className="w-5 h-5" /></Button>} />
-                <SheetContent side="right" className="w-full sm:w-[450px] p-0 bg-card border-border rounded-l-[3rem] flex flex-col h-full">
-                  <SheetHeader className="p-8 border-b border-border">
+                <SheetTrigger render={<Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-10 md:w-14 shadow-xl"><Settings2 className="w-5 h-5" /></Button>} />
+                <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-card border-border rounded-l-xl flex flex-col h-full">
+                  <SheetHeader className="px-4 py-3 border-b border-border">
                     <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
                       <Wand2 className="w-6 h-6 text-primary" /> Studio Control
                     </SheetTitle>
@@ -993,7 +993,7 @@ export default function EditorStudioClient() {
 
           <div 
             className={cn(
-              "flex-grow relative flex items-center justify-center p-12 overflow-auto custom-scrollbar select-none",
+              "flex-grow relative flex items-center justify-center p-5 overflow-auto custom-scrollbar select-none",
               zoom > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-default"
             )}
             onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
@@ -1066,9 +1066,9 @@ export default function EditorStudioClient() {
                     </div>
                     <AnimatePresence>
                       {isProcessing && (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-muted/80 backdrop-blur-2xl flex flex-col items-center justify-center gap-6">
+                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-muted/80 backdrop-blur-2xl flex flex-col items-center justify-center gap-3">
                           <div className="relative">
-                            <Loader2 className="w-20 h-20 animate-spin text-primary opacity-20" />
+                            <Loader2 className="w-20 h-12 animate-spin text-primary opacity-20" />
                             <div className="absolute inset-0 flex items-center justify-center">
                                <Sparkles className="w-8 h-8 text-primary animate-pulse" />
                             </div>
@@ -1110,13 +1110,13 @@ export default function EditorStudioClient() {
                     animate={{ scale: isDragging ? 1.02 : 1 }}
                     className="max-w-sm w-full"
                   >
-                  <Card className={`p-8 border-dashed bg-white/[0.01] rounded-[3rem] text-center space-y-8 relative group overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 ${isDragging ? 'border-primary/60 bg-primary/5 shadow-primary/20' : 'border-border'}`}>
+                  <Card className={`p-8 border-dashed bg-white/[0.01] rounded-2xl text-center space-y-4 relative group overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 ${isDragging ? 'border-primary/60 bg-primary/5 shadow-primary/20' : 'border-border'}`}>
                     <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     <div className="relative z-10">
                       <motion.div 
                          initial={{ scale: 0.9, opacity: 0 }}
                          animate={{ scale: 1, opacity: 1 }}
-                         className="w-20 h-20 rounded-3xl bg-gradient-to-br from-primary/10 via-[#0a0a0a] to-blue-600/10 p-[1px] mx-auto mb-8 shadow-2xl relative group overflow-hidden"
+                         className="w-12 h-12 rounded-3xl bg-gradient-to-br from-primary/10 via-[#0a0a0a] to-blue-600/10 p-[1px] mx-auto mb-4 shadow-2xl relative group overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-primary/5 animate-pulse" />
                         <div className="w-full h-full rounded-[calc(1.5rem-1px)] bg-muted/40 backdrop-blur-xl flex items-center justify-center border border-border relative z-10">
@@ -1130,7 +1130,7 @@ export default function EditorStudioClient() {
                         {isDragging ? "Release to Import" : "Drop images here or click below"}
                       </p>
                       <Button 
-                        className="bg-white text-black hover:bg-white/90 rounded-[1.5rem] font-black px-10 h-14 uppercase tracking-widest text-[10px] shadow-2xl active:scale-95 transition-all w-full"
+                        className="bg-white text-black hover:bg-white/90 rounded-xl font-black px-5 h-10 uppercase tracking-widest text-[10px] shadow-2xl active:scale-95 transition-all w-full"
                         onClick={() => document.getElementById('studio-upload-mobile')?.click()}
                       >
                         Initialize Asset
@@ -1150,7 +1150,7 @@ export default function EditorStudioClient() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 50 }}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 p-3 rounded-[2.5rem] bg-card/80 backdrop-blur-3xl border border-border shadow-[0_30px_100px_-20px_rgba(0,0,0,1)] z-[100] hover:border-primary/20 max-w-[95vw] overflow-x-auto no-scrollbar group/toolbar"
+                  className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 p-3 rounded-2xl bg-card/80 backdrop-blur-3xl border border-border shadow-[0_30px_100px_-20px_rgba(0,0,0,1)] z-[100] hover:border-primary/20 max-w-[95vw] overflow-x-auto no-scrollbar group/toolbar"
                   style={{ left: 'calc(50% + 10px)' }} // Offset for center-balanced look with sidebar
                 >
                   {/* Undo/Redo Group */}
@@ -1239,7 +1239,7 @@ export default function EditorStudioClient() {
                       <Button 
                         size="lg" 
                         className={cn(
-                          "relative rounded-[1.5rem] px-8 h-10 font-black text-[10px] gap-3 shadow-2xl uppercase italic tracking-tighter group active:scale-95 transition-all duration-500",
+                          "relative rounded-xl px-8 h-10 font-black text-[10px] gap-3 shadow-2xl uppercase italic tracking-tighter group active:scale-95 transition-all duration-500",
                           currentFile?.status === "idle" 
                             ? "bg-primary hover:bg-primary/90 text-foreground shadow-primary/30" 
                             : "bg-secondary/50 border border-border text-muted-foreground/60 cursor-default"
@@ -1262,7 +1262,7 @@ export default function EditorStudioClient() {
                     <Button
                       size="lg"
                       variant="outline"
-                      className="rounded-[1.5rem] px-6 h-10 border-border bg-secondary/50 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 text-muted-foreground/80 font-black text-[10px] gap-2 uppercase italic tracking-tighter group active:scale-95 transition-all"
+                      className="rounded-xl px-6 h-10 border-border bg-secondary/50 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 text-muted-foreground/80 font-black text-[10px] gap-2 uppercase italic tracking-tighter group active:scale-95 transition-all"
                       onClick={handleDownloadSingle}
                       disabled={!currentFile?.processedUrl}
                     >
@@ -1277,8 +1277,8 @@ export default function EditorStudioClient() {
         </section>
 
         {/* Right Sidebar - Engine Inspector */}
-        <aside className="hidden lg:flex w-[420px] h-full max-h-full border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl">
-          <div className="p-8 border-b border-border flex items-center justify-between bg-black/10">
+        <aside className="hidden lg:flex w-[300px] h-full max-h-full border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -1293,12 +1293,12 @@ export default function EditorStudioClient() {
 
       {/* Modern Dialogs */}
       <Dialog open={!!ocrResult} onOpenChange={() => setOcrResult(null)}>
-        <DialogContent className="max-w-3xl bg-card border-border text-foreground rounded-[3rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
+        <DialogContent className="max-w-3xl bg-card border-border text-foreground rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
           <div className="relative h-2 w-full bg-gradient-to-r from-blue-600 via-primary to-emerald-500" />
-          <div className="p-12 space-y-10">
+          <div className="p-5 space-y-5">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-6 text-3xl font-black uppercase tracking-tighter italic">
-                <div className="w-16 h-16 rounded-[1.5rem] bg-blue-600/10 flex items-center justify-center border border-blue-600/20 shadow-[0_0_30px_rgba(37,99,235,0.2)]">
+              <DialogTitle className="flex items-center gap-3 text-xl font-black uppercase tracking-tighter italic">
+                <div className="w-11 h-11 rounded-xl bg-blue-600/10 flex items-center justify-center border border-blue-600/20 shadow-[0_0_30px_rgba(37,99,235,0.2)]">
                   <ScanText className="w-8 h-8 text-blue-500 animate-pulse" />
                 </div>
                 <div className="flex flex-col">
@@ -1309,7 +1309,7 @@ export default function EditorStudioClient() {
             </DialogHeader>
             
             <div className="relative group">
-              <ScrollArea className="h-[450px] w-full rounded-[2.5rem] border border-border bg-white/[0.01] p-10 shadow-inner group-hover:border-blue-500/30 transition-all duration-500">
+              <ScrollArea className="h-[450px] w-full rounded-2xl border border-border bg-white/[0.01] p-5 shadow-inner group-hover:border-blue-500/30 transition-all duration-500">
                 <pre className="text-sm md:text-base font-mono leading-relaxed text-muted-foreground/80 whitespace-pre-wrap selection:bg-blue-500/30">{ocrResult}</pre>
               </ScrollArea>
               <div className="absolute top-6 right-6 flex gap-2">
@@ -1318,8 +1318,8 @@ export default function EditorStudioClient() {
             </div>
 
             <div className="flex gap-4">
-              <Button variant="outline" className="flex-grow rounded-[1.5rem] border-border bg-secondary/30 hover:bg-secondary/50 hover:border-border h-16 font-black uppercase text-[10px] tracking-widest transition-all" onClick={() => setOcrResult(null)}>Dismiss Engine</Button>
-              <Button className="flex-[2] rounded-[1.5rem] bg-blue-600 hover:bg-blue-700 text-foreground font-black h-16 px-10 uppercase text-[10px] tracking-widest gap-3 shadow-2xl shadow-blue-900/30 group active:scale-95 transition-all" onClick={() => {
+              <Button variant="outline" className="flex-grow rounded-xl border-border bg-secondary/30 hover:bg-secondary/50 hover:border-border h-11 font-black uppercase text-[10px] tracking-widest transition-all" onClick={() => setOcrResult(null)}>Dismiss Engine</Button>
+              <Button className="flex-[2] rounded-xl bg-blue-600 hover:bg-blue-700 text-foreground font-black h-11 px-5 uppercase text-[10px] tracking-widest gap-3 shadow-2xl shadow-blue-900/30 group active:scale-95 transition-all" onClick={() => {
                 navigator.clipboard.writeText(ocrResult || "");
                 toast.success("Intelligence data copied");
               }}>
@@ -1331,12 +1331,12 @@ export default function EditorStudioClient() {
       </Dialog>
 
       <Dialog open={extractedColors.length > 0} onOpenChange={() => setExtractedColors([])}>
-        <DialogContent className="max-w-3xl bg-card border-border text-foreground rounded-[3rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
+        <DialogContent className="max-w-3xl bg-card border-border text-foreground rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
           <div className="relative h-2 w-full bg-gradient-to-r from-primary via-blue-500 to-emerald-500" />
-          <div className="p-12 space-y-10">
+          <div className="p-5 space-y-5">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-6 text-3xl font-black uppercase tracking-tighter italic">
-                <div className="w-16 h-16 rounded-[1.5rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)]">
+              <DialogTitle className="flex items-center gap-3 text-xl font-black uppercase tracking-tighter italic">
+                <div className="w-11 h-9 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)]">
                   <Palette className="w-8 h-8 text-primary animate-pulse" />
                 </div>
                 <div className="flex flex-col">
@@ -1345,7 +1345,7 @@ export default function EditorStudioClient() {
                 </div>
               </DialogTitle>
             </DialogHeader>
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-4 gap-3">
               {extractedColors.map((color, i) => (
                 <motion.div 
                    key={i} 
@@ -1355,7 +1355,7 @@ export default function EditorStudioClient() {
                    className="space-y-4 group"
                 >
                   <div 
-                    className="aspect-square rounded-[2rem] shadow-2xl border-4 border-border cursor-pointer hover:scale-110 active:scale-95 transition-all shadow-black/50 overflow-hidden relative" 
+                    className="aspect-square rounded-xl shadow-2xl border-4 border-border cursor-pointer hover:scale-110 active:scale-95 transition-all shadow-black/50 overflow-hidden relative" 
                     style={{ backgroundColor: color }}
                     onClick={() => {
                       navigator.clipboard.writeText(color);
@@ -1370,7 +1370,7 @@ export default function EditorStudioClient() {
                 </motion.div>
               ))}
             </div>
-            <Button className="w-full bg-white/[0.03] hover:bg-white/[0.08] border border-border rounded-2xl h-16 font-black text-xs uppercase tracking-widest gap-3 transition-all" onClick={() => {
+            <Button className="w-full bg-white/[0.03] hover:bg-white/[0.08] border border-border rounded-2xl h-11 font-black text-xs uppercase tracking-widest gap-3 transition-all" onClick={() => {
               const css = extractedColors.map((c, i) => `--studio-color-${i+1}: ${c};`).join("\n");
               navigator.clipboard.writeText(css);
               toast.success("CSS Protocol copied");
@@ -1382,12 +1382,12 @@ export default function EditorStudioClient() {
       </Dialog>
 
       <Dialog open={!!metadataFile} onOpenChange={() => setMetadataFile(null)}>
-        <DialogContent className="max-w-xl bg-card border-border text-foreground rounded-[3rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
+        <DialogContent className="max-w-xl bg-card border-border text-foreground rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
           <div className="relative h-2 w-full bg-gradient-to-r from-emerald-500 via-primary to-blue-500" />
-          <div className="p-10 space-y-8">
+          <div className="p-5 space-y-4">
             <DialogHeader>
-              <DialogTitle className="flex items-center gap-6 text-3xl font-black uppercase tracking-tighter italic">
-                <div className="w-16 h-16 rounded-[1.5rem] bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.2)]">
+              <DialogTitle className="flex items-center gap-3 text-xl font-black uppercase tracking-tighter italic">
+                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.2)]">
                   <Info className="w-8 h-8 text-emerald-500 animate-pulse" />
                 </div>
                 <div className="flex flex-col">
@@ -1429,21 +1429,21 @@ export default function EditorStudioClient() {
             className="lg:hidden fixed bottom-10 right-6 z-50 flex flex-col gap-4"
           >
              <Button 
-              className="w-14 h-14 rounded-full bg-white text-black shadow-2xl flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all shadow-black/60"
+              className="w-10 h-10 rounded-full bg-white text-black shadow-2xl flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all shadow-black/60"
               onClick={() => document.getElementById('studio-upload-mobile')?.click()}
              >
                <Plus className="w-7 h-7" />
              </Button>
              {currentFile?.processedUrl && (
                <Button 
-                className="w-14 h-14 rounded-full bg-emerald-500 shadow-[0_20px_50px_rgba(16,185,129,0.4)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
+                className="w-10 h-10 rounded-full bg-emerald-500 shadow-[0_20px_50px_rgba(16,185,129,0.4)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
                 onClick={handleDownloadSingle}
                >
                  <DownloadCloud className="w-7 h-7 text-foreground" />
                </Button>
              )}
              <Button 
-              className="w-14 h-14 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
+              className="w-10 h-10 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
               onClick={handleProcess}
               disabled={isProcessing}
              >

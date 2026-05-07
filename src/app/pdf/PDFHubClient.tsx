@@ -70,7 +70,7 @@ export default function PDFHubClient() {
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-5xl mx-auto space-y-16">
+        <div className="max-w-5xl mx-auto space-y-6">
           {/* Hero Section */}
           <div className="text-center space-y-6">
             <motion.div
@@ -84,7 +84,7 @@ export default function PDFHubClient() {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-7xl font-black tracking-tight"
+              className="text-xl md:text-2xl font-black tracking-tight"
             >
               Document <span className="text-primary italic">Powerhouse</span>
             </motion.h1>
@@ -99,7 +99,7 @@ export default function PDFHubClient() {
           </div>
 
           {/* Tools Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {docTools.map((tool, i) => (
               <motion.div
                 key={tool.title}
@@ -111,10 +111,10 @@ export default function PDFHubClient() {
               >
                 <Link href={tool.href}>
                   <Card className="h-full p-8 flex flex-col justify-between border-primary/5 hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 bg-card/50 backdrop-blur-sm relative overflow-hidden">
-                    <div className={cn("absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-5 blur-3xl -mr-16 -mt-16 group-hover:opacity-10 transition-opacity", tool.color)} />
+                    <div className={cn("absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-5 blur-3xl -mr-16 -mt-6 group-hover:opacity-10 transition-opacity", tool.color)} />
                     
                     <div className="space-y-6 relative z-10">
-                      <div className={cn("w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center text-foreground shadow-lg group-hover:scale-110 transition-transform duration-500", tool.color)}>
+                      <div className={cn("w-11 h-11 rounded-2xl bg-gradient-to-br flex items-center justify-center text-foreground shadow-lg group-hover:scale-110 transition-transform duration-500", tool.color)}>
                         <tool.icon className="w-8 h-8" />
                       </div>
                       
@@ -144,7 +144,7 @@ export default function PDFHubClient() {
           </div>
 
           {/* Feature List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
             <div className="space-y-4">
               <h4 className="text-xl font-bold flex items-center gap-2">
                 <ShieldCheck className="w-5 h-5 text-primary" />

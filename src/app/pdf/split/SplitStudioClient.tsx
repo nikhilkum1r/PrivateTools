@@ -171,13 +171,13 @@ export default function SplitStudioClient() {
 
         {!file ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-xl w-full space-y-10 text-center">
+            <div className="max-w-xl w-full space-y-5 text-center">
               <div className="space-y-5">
-                <div className="w-20 h-20 rounded-[2rem] bg-gradient-to-br from-primary/20 to-red-600/20 border border-primary/20 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(var(--primary-rgb),0.15)]">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-red-600/20 border border-primary/20 flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(var(--primary-rgb),0.15)]">
                   <Scissors className="w-9 h-9 text-primary" />
                 </div>
                 <div className="space-y-3">
-                  <h1 className="text-5xl md:text-6xl font-black tracking-tighter uppercase italic">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
                     PDF <span className="text-primary">Splitter.</span>
                   </h1>
                   <p className="text-muted-foreground/60 text-lg font-medium max-w-md mx-auto leading-relaxed">
@@ -185,7 +185,7 @@ export default function SplitStudioClient() {
                   </p>
                 </div>
               </div>
-              <DropZone onFilesDrop={handleFileDrop} accept=".pdf" multiple={false} title=" " className="h-56 border-dashed border-border bg-secondary/30 rounded-[3rem] hover:bg-secondary/70 hover:border-primary/30 transition-all" />
+              <DropZone onFilesDrop={handleFileDrop} accept=".pdf" multiple={false} title=" " className="h-56 border-dashed border-border bg-secondary/30 rounded-2xl hover:bg-secondary/70 hover:border-primary/30 transition-all" />
             </div>
           </div>
         ) : (
@@ -210,7 +210,7 @@ export default function SplitStudioClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-6 space-y-8">
+                <div className="p-6 space-y-4">
                   {/* Mode Toggle */}
                   <div className="space-y-3">
                     <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Split Mode</Label>
@@ -335,7 +335,7 @@ export default function SplitStudioClient() {
                     )}
                   </div>
 
-                  <div className="p-4 rounded-[1.5rem] bg-secondary/30 border border-border space-y-2">
+                  <div className="p-4 rounded-xl bg-secondary/30 border border-border space-y-2">
                     <div className="flex items-center gap-2">
                       <Zap className="w-4 h-4 text-primary" />
                       <h4 className="text-[10px] font-black uppercase tracking-widest">WASM Engine</h4>
@@ -358,7 +358,7 @@ export default function SplitStudioClient() {
                   </div>
                 )}
                 <Button
-                  className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
                   onClick={splitPdf}
                   disabled={isProcessing}
                 >
@@ -372,7 +372,7 @@ export default function SplitStudioClient() {
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[500px] lg:min-h-0 h-full max-h-full">
               <header className="p-5 md:p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20 gap-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-[1.5rem] bg-red-600/10 flex items-center justify-center border border-red-500/20">
+                  <div className="w-12 h-12 rounded-xl bg-red-600/10 flex items-center justify-center border border-red-500/20">
                     <FileText className="w-6 h-6 text-red-400" />
                   </div>
                   <div>
@@ -388,11 +388,11 @@ export default function SplitStudioClient() {
                 </Button>
               </header>
 
-              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-16">
-                <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.03] rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
+              <div className="flex-grow relative flex items-center justify-center p-8 lg:p-6">
+                <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.03] rounded-2xl border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
                   {file.status === "completed" ? (
                     <>
-                      <div className="w-20 h-20 rounded-[2rem] bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
                         <CheckCircle2 className="w-10 h-10 text-emerald-500" />
                       </div>
                       <div className="space-y-1 text-center">
@@ -402,7 +402,7 @@ export default function SplitStudioClient() {
                     </>
                   ) : (
                     <>
-                      <div className="w-20 h-20 rounded-[2rem] bg-red-500/10 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
                         <FileText className="w-9 h-9 text-red-400" />
                       </div>
                       <div className="space-y-1 text-center">
@@ -488,7 +488,7 @@ export default function SplitStudioClient() {
                       </>
                     ) : (
                       <div className="py-16 text-center space-y-3 opacity-20">
-                        <div className="w-14 h-14 rounded-3xl bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
+                        <div className="w-10 h-10 rounded-3xl bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
                           <Layers className="w-5 h-5" />
                         </div>
                         <p className="text-[10px] font-black uppercase tracking-widest">No results yet</p>

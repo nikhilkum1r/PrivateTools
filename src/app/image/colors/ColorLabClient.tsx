@@ -196,15 +196,15 @@ export default function ColorLabClient() {
 
         {!file ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-primary to-blue-600 p-[1px] mx-auto animate-pulse">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-blue-600 p-[1px] mx-auto animate-pulse">
                   <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Palette className="w-10 h-10 text-primary" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
                     Color <span className="text-primary">Lab.</span>
                   </h1>
                   <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto leading-relaxed">
@@ -216,7 +216,7 @@ export default function ColorLabClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*" 
                 multiple={false} 
-                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-2xl hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function ColorLabClient() {
           <>
             {/* Left Sidebar - Identity Engine */}
             <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -242,8 +242,8 @@ export default function ColorLabClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
-                   <div className="aspect-square rounded-[3rem] bg-muted/40 border border-border overflow-hidden relative group">
+                <div className="p-4 space-y-4">
+                   <div className="aspect-square rounded-2xl bg-muted/40 border border-border overflow-hidden relative group">
                       <img 
                          ref={imageRef}
                          src={preview!} 
@@ -273,7 +273,7 @@ export default function ColorLabClient() {
                       </div>
                    </div>
 
-                   <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                   <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Wand2 className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Neural Scan</h4>
@@ -287,7 +287,7 @@ export default function ColorLabClient() {
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
                   onClick={extractPalette}
                   disabled={isProcessing}
                 >
@@ -300,8 +300,8 @@ export default function ColorLabClient() {
             {/* Center - Color Workspace */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
               <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-9 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                     <Palette className="w-8 h-8 text-primary" />
                   </div>
                   <div className="flex flex-col gap-1">
@@ -333,8 +333,8 @@ export default function ColorLabClient() {
               </header>
 
               <ScrollArea className="flex-grow relative z-10 min-h-0">
-                <div className="p-8 lg:p-12 space-y-12">
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-8 lg:p-5 space-y-6">
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <AnimatePresence mode="popLayout">
                         {colors.map((c, i) => (
                           <motion.div
@@ -345,11 +345,11 @@ export default function ColorLabClient() {
                             transition={{ delay: i * 0.05 }}
                           >
                         <Card 
-                              className="group p-6 rounded-[3rem] bg-secondary/30 border border-border flex flex-col gap-5 hover:bg-secondary/70 hover:border-primary/30 transition-all cursor-pointer relative overflow-hidden"
+                              className="group p-6 rounded-2xl bg-secondary/30 border border-border flex flex-col gap-5 hover:bg-secondary/70 hover:border-primary/30 transition-all cursor-pointer relative overflow-hidden"
                               onClick={() => copyToClipboard(c.hex)}
                             >
-                               <div className="flex items-center gap-6">
-                                 <div className="w-20 h-20 md:w-24 md:h-24 rounded-[2.5rem] border-4 border-border shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-500 relative overflow-hidden" style={{ backgroundColor: c.hex }}>
+                               <div className="flex items-center gap-3">
+                                 <div className="w-12 h-12 md:w-24 md:h-24 rounded-2xl border-4 border-border shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-500 relative overflow-hidden" style={{ backgroundColor: c.hex }}>
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
                                        <Copy className={cn("w-6 h-6", c.isDark ? "text-foreground" : "text-black")} />
                                     </div>
@@ -406,7 +406,7 @@ export default function ColorLabClient() {
 
                    {colors.length === 0 && !isProcessing && (
                       <div className="py-20 text-center space-y-6 opacity-20">
-                         <div className="w-24 h-24 rounded-[3rem] bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
+                         <div className="w-12 h-12 rounded-2xl bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
                             <Pipette className="w-10 h-10" />
                          </div>
                          <p className="text-sm font-black uppercase tracking-[0.3em] italic">Select source to extract palette</p>
@@ -418,7 +418,7 @@ export default function ColorLabClient() {
 
             {/* Right Sidebar - Studio Matrix */}
             <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -429,7 +429,7 @@ export default function ColorLabClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   <div className="space-y-6">
                     <div className="flex justify-between items-center">
                       <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Sampling Precision</Label>
@@ -455,7 +455,7 @@ export default function ColorLabClient() {
                           key={mode.id}
                           variant={activeAnalysis === mode.id ? "default" : "outline"}
                           className={cn(
-                            "h-14 justify-start gap-4 rounded-2xl px-6 border-border transition-all duration-300",
+                            "h-10 justify-start gap-4 rounded-2xl px-6 border-border transition-all duration-300",
                             activeAnalysis === mode.id ? "bg-primary text-foreground shadow-lg shadow-primary/20" : "bg-white/[0.03] hover:bg-white/[0.08]"
                           )}
                           onClick={() => setActiveAnalysis(mode.id as any)}
@@ -467,7 +467,7 @@ export default function ColorLabClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                  <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Neural Guard</h4>

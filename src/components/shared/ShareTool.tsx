@@ -27,7 +27,7 @@ export function ShareTool({ title }: { title: string }) {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-8 rounded-[2rem] bg-secondary/30 border border-border relative overflow-hidden group">
+    <div className="flex flex-col gap-4 p-8 rounded-xl bg-secondary/30 border border-border relative overflow-hidden group">
       <div className="absolute top-0 right-0 p-8 opacity-5 -rotate-12 scale-150 group-hover:rotate-0 transition-transform duration-700">
         <Share2 className="w-32 h-32" />
       </div>

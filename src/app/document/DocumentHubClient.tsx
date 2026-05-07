@@ -45,15 +45,15 @@ export default function DocumentHubClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <main className="flex-grow container mx-auto px-4 py-4">
+        <div className="max-w-4xl mx-auto space-y-6">
           {/* Header */}
           <div className="text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
               <FileText className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-black tracking-tight">Document Tools</h1>
+              <h1 className="text-2xl md:text-xl font-black tracking-tight">Document Tools</h1>
               <p className="text-muted-foreground mt-3 text-lg max-w-xl mx-auto">
                 Convert, extract, and transform documents — all processed locally in your browser.
               </p>
@@ -62,7 +62,7 @@ export default function DocumentHubClient() {
           </div>
 
           {/* Tool cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {TOOLS.map((tool, i) => (
               <motion.div
                 key={tool.name}

@@ -85,7 +85,7 @@ export function DropZone({
           backgroundColor: isDragging ? "rgba(139, 92, 246, 0.05)" : "rgba(139, 92, 246, 0)",
         }}
         className={cn(
-          "relative group cursor-pointer rounded-[2.5rem] border-2 border-dashed p-12 transition-colors duration-300 ease-in-out flex flex-col items-center justify-center overflow-hidden",
+          "relative group cursor-pointer rounded-2xl border-2 border-dashed p-5 transition-colors duration-300 ease-in-out flex flex-col items-center justify-center overflow-hidden",
           isDragging ? "border-primary" : "hover:border-primary/50",
           className
         )}
@@ -97,7 +97,7 @@ export function DropZone({
               rotate: isDragging ? [0, 5, -5, 0] : 0
             }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="p-6 rounded-[2rem] bg-primary/10 text-primary border border-primary/20 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+            className="p-6 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-2xl group-hover:scale-110 transition-transform duration-500"
           >
             <Upload className="w-10 h-10" />
           </motion.div>

@@ -41,7 +41,7 @@ export function DisclaimerModal({
       }}
     >
       <DialogContent
-        className="max-w-lg rounded-[2rem] border-yellow-500/20 bg-background overflow-hidden p-0"
+        className="max-w-lg rounded-xl border-yellow-500/20 bg-background overflow-hidden p-0"
         showCloseButton={!blocking}
       >
         {/* Header stripe */}

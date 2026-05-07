@@ -85,7 +85,7 @@ export default function DataConverterClient() {
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
-        <div className="space-y-12">
+        <div className="space-y-6">
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -95,7 +95,7 @@ export default function DataConverterClient() {
               <Database className="w-3.5 h-3.5" />
               Dev Data Studio
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight italic">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
               Data <span className="text-primary not-italic">Converter.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -104,25 +104,25 @@ export default function DataConverterClient() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
+          <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-4">
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button 
                 variant={mode === "json-to-csv" ? "default" : "outline"}
-                className="h-14 rounded-2xl px-8 font-black gap-2"
+                className="h-10 rounded-2xl px-8 font-black gap-2"
                 onClick={() => { setMode("json-to-csv"); setInput(""); setOutput(""); }}
               >
                 <FileCode className="w-4 h-4" /> JSON → CSV
               </Button>
               <Button 
                 variant={mode === "csv-to-json" ? "default" : "outline"}
-                className="h-14 rounded-2xl px-8 font-black gap-2"
+                className="h-10 rounded-2xl px-8 font-black gap-2"
                 onClick={() => { setMode("csv-to-json"); setInput(""); setOutput(""); }}
               >
                 <Table className="w-4 h-4" /> CSV → JSON
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="space-y-4">
                 <div className="flex justify-between items-center px-2">
                    <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Input Matrix</Label>
@@ -134,7 +134,7 @@ export default function DataConverterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={mode === "json-to-csv" ? '[{"id": 1, "name": "Admin"}, ...]' : 'id,name\n1,Admin'}
-                  className="min-h-[400px] rounded-[2rem] bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 placeholder:text-white/10 p-6 focus-visible:ring-primary/20"
+                  className="min-h-[400px] rounded-xl bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 placeholder:text-white/10 p-6 focus-visible:ring-primary/20"
                 />
               </div>
 
@@ -155,11 +155,11 @@ export default function DataConverterClient() {
                      readOnly
                      value={output}
                      placeholder="Awaiting synthesis..."
-                     className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 placeholder:text-white/10 p-6 resize-none"
+                     className="absolute inset-0 rounded-xl bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 placeholder:text-white/10 p-6 resize-none"
                    />
                    {!output && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-5 pointer-events-none space-y-4">
-                        <ArrowLeftRight className="w-16 h-16" />
+                        <ArrowLeftRight className="w-16 h-11" />
                         <p className="font-black uppercase tracking-[0.3em] text-xs">Awaiting Matrix</p>
                      </div>
                    )}
@@ -168,7 +168,7 @@ export default function DataConverterClient() {
             </div>
 
             <Button 
-              className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
+              className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
               onClick={convertData}
             >
               <Zap className="w-5 h-5" /> EXECUTE CONVERSION
@@ -176,7 +176,7 @@ export default function DataConverterClient() {
           </Card>
 
           {/* Guide Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
              <div className="space-y-6">
                 <h3 className="text-2xl font-black italic flex items-center gap-3">
                    <Sparkles className="w-6 h-6 text-primary" /> How it Works
@@ -190,9 +190,9 @@ export default function DataConverterClient() {
                    </ul>
                 </div>
              </div>
-             <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
+             <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col justify-center gap-3">
                 <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
+                   <div className="w-8 h-8 rounded-2xl bg-primary flex items-center justify-center">
                       <Database className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Enterprise Ready</h4>

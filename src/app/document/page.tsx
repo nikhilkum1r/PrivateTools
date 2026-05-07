@@ -26,9 +26,9 @@ export default function DocumentHubPage() {
 
       {/* SEO Content Section */}
       <section className="container mx-auto px-4 py-24 border-t border-border">
-        <div className="max-w-4xl mx-auto space-y-16">
+        <div className="max-w-4xl mx-auto space-y-6">
           <div className="space-y-6">
-            <h2 className="text-3xl font-black italic">Universal Document Intelligence</h2>
+            <h2 className="text-xl font-black italic">Universal Document Intelligence</h2>
             <p className="text-muted-foreground leading-relaxed">
               SafeTools Document Studio is the world's first browser-based Office and PDF engineering suite 
               that prioritizes privacy above all else. By utilizing local WebAssembly (WASM) and high-performance 
@@ -37,7 +37,7 @@ export default function DocumentHubPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className="space-y-4">
               <h3 className="text-xl font-bold">Can I edit DOCX and PPTX files?</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

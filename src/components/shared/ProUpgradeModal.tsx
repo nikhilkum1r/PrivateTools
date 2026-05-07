@@ -51,10 +51,10 @@ export function ProUpgradeModal({ open, onClose, module, fileSize, reason }: Pro
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="max-w-md rounded-[2rem] border-primary/10 p-0 overflow-hidden">
+      <DialogContent className="max-w-md rounded-xl border-primary/10 p-0 overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-br from-violet-600/20 to-primary/10 px-8 py-8 space-y-4 text-center border-b border-primary/10">
-          <div className="w-16 h-16 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center mx-auto shadow-xl shadow-primary/30">
+          <div className="w-11 h-11 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center mx-auto shadow-xl shadow-primary/30">
             <Zap className="w-8 h-8 fill-current" />
           </div>
           <div>

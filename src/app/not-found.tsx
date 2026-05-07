@@ -38,13 +38,13 @@ export default function NotFound() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full" />
         </div>
 
-        <div className="max-w-4xl w-full space-y-12 text-center relative z-10">
+        <div className="max-w-4xl w-full space-y-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             className="space-y-6"
           >
-            <div className="w-24 h-24 rounded-[2.5rem] bg-secondary/50 border border-border flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <div className="w-12 h-12 rounded-2xl bg-secondary/50 border border-border flex items-center justify-center mx-auto mb-4 shadow-2xl">
               <FileQuestion className="w-12 h-12 text-primary animate-pulse" />
             </div>
             
@@ -52,7 +52,7 @@ export default function NotFound() {
               <Badge variant="outline" className="py-1 px-4 rounded-full border-red-500/30 bg-red-500/5 text-red-500 text-[10px] font-black uppercase tracking-[0.3em]">
                 Error 404 · Page Not Found
               </Badge>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-none">
+              <h1 className="text-2xl md:text-xl font-black tracking-tighter uppercase italic leading-none">
                 Lost in the <br /> <span className="text-primary">Matrix.</span>
               </h1>
               <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto">
@@ -70,7 +70,7 @@ export default function NotFound() {
           >
             {suggestedTools.map((tool, i) => (
               <Link key={i} href={tool.href}>
-                <Card className="p-6 bg-secondary/30 border-border hover:border-primary/30 hover:bg-secondary/50 transition-all rounded-[2rem] flex items-center gap-4 group cursor-pointer">
+                <Card className="p-6 bg-secondary/30 border-border hover:border-primary/30 hover:bg-secondary/50 transition-all rounded-xl flex items-center gap-4 group cursor-pointer">
                   <div className={`w-12 h-12 rounded-xl bg-secondary/50 flex items-center justify-center ${tool.color} group-hover:scale-110 transition-transform`}>
                     <tool.icon className="w-6 h-6" />
                   </div>
@@ -90,10 +90,10 @@ export default function NotFound() {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4 pt-8"
           >
-            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-14 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black italic gap-2")}>
+            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-10 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black italic gap-2")}>
               <Home className="w-4 h-4" /> RETURN TO SYSTEM
             </Link>
-            <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-14 px-8 rounded-2xl border-border hover:bg-secondary/50 text-foreground font-black italic gap-2")}>
+            <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-10 px-8 rounded-2xl border-border hover:bg-secondary/50 text-foreground font-black italic gap-2")}>
               <Search className="w-4 h-4" /> VIEW MANIFESTO
             </Link>
           </motion.div>

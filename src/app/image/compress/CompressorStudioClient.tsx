@@ -183,7 +183,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
   const renderSettings = () => (
     <div className="flex flex-col flex-grow min-h-0">
       <ScrollArea className="flex-grow min-h-0">
-        <div className="p-8 space-y-12">
+        <div className="p-4 space-y-4">
           {/* Strategy Module */}
           <div className="space-y-6">
              <div className="flex items-center gap-3">
@@ -197,7 +197,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
               <Button 
                 variant="outline" 
                 className={cn(
-                  "h-16 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
+                  "h-11 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
                   quality < 100 ? "bg-primary/20 border-primary/50 text-foreground shadow-lg" : "bg-secondary/30 text-muted-foreground/60"
                 )}
                 onClick={() => setQuality(75)}
@@ -208,7 +208,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
               <Button 
                 variant="outline" 
                 className={cn(
-                  "h-16 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
+                  "h-11 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
                   quality === 100 && !maxWidth ? "bg-primary/20 border-primary/50 text-foreground shadow-lg" : "bg-secondary/30 text-muted-foreground/60"
                 )}
                 onClick={() => {
@@ -222,7 +222,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
               <Button 
                 variant="outline" 
                 className={cn(
-                  "h-16 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
+                  "h-11 rounded-2xl border-border flex flex-col items-center justify-center gap-1 transition-all",
                   quality === 100 && maxWidth ? "bg-primary/20 border-primary/50 text-foreground shadow-lg" : "bg-secondary/30 text-muted-foreground/60"
                 )}
                 onClick={() => {
@@ -259,14 +259,14 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
           </div>
 
           {/* Format & Requirements */}
-          <div className="space-y-10 pt-4 border-t border-border">
+          <div className="space-y-5 pt-4 border-t border-border">
             <div className="space-y-4">
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Target Format</Label>
               <DropdownMenu>
                 <DropdownMenuTrigger render={
-                  <Button variant="outline" className="w-full h-20 rounded-[2rem] bg-secondary/30 border-border p-4 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden shadow-2xl relative text-foreground">
+                  <Button variant="outline" className="w-full h-10 rounded-lg bg-secondary/30 border-border px-3 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden shadow-2xl relative text-foreground">
                     <div className="flex items-center gap-4 w-full">
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                      <div className="w-8 h-8 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
                         <HardDrive className="w-6 h-6 text-primary" />
                       </div>
                       <div className="flex flex-col items-start text-left flex-grow">
@@ -277,7 +277,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                     </div>
                   </Button>
                 } />
-                <DropdownMenuContent className="w-[400px] p-0 bg-card border-border rounded-[2.5rem] shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] overflow-hidden backdrop-blur-3xl" align="start">
+                <DropdownMenuContent className="w-[300px] p-0 bg-card border-border rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] overflow-hidden backdrop-blur-3xl" align="start">
                   <div className="p-4 border-b border-border bg-secondary/30">
                     <div className="relative group">
                       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground/40 group-focus-within:text-primary transition-colors" />
@@ -295,8 +295,8 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                       />
                     </div>
                   </div>
-                  <ScrollArea className="h-[450px]">
-                    <div className="p-4 space-y-8">
+                  <ScrollArea className="h-[360px]">
+                    <div className="p-4 space-y-4">
                       {Object.entries(CATEGORIZED_FORMATS).map(([cat, fmts]) => (
                         <div key={cat} className="space-y-4">
                           <div className="flex items-center gap-3 px-2">
@@ -310,7 +310,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                                 key={f}
                                 data-value={f.toLowerCase()}
                                 className={cn(
-                                  "format-item flex items-center justify-between px-5 py-4 rounded-2xl border transition-all active:scale-95 group",
+                                  "format-item flex items-center justify-between px-3 py-2 rounded-lg border transition-all active:scale-95 group",
                                   outputFormat === f 
                                     ? "bg-primary border-primary shadow-lg shadow-primary/20 text-foreground" 
                                     : "bg-secondary/30 border-border text-muted-foreground/70 hover:bg-secondary/50 hover:border-primary/30 hover:text-foreground"
@@ -345,7 +345,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                       type="number" 
                       value={targetSize} 
                       onChange={(e) => setTargetSize(parseInt(e.target.value) || 0)}
-                      className="bg-secondary/50 border-border rounded-xl h-12 font-mono text-center text-foreground"
+                      className="bg-secondary/50 border-border rounded-lg h-9 font-mono text-center text-foreground"
                     />
                     <Badge variant="outline" className="rounded-xl shrink-0 px-4 text-muted-foreground/60">KB</Badge>
                   </motion.div>
@@ -380,7 +380,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                     type="number" 
                     value={maxWidth || ""} 
                     onChange={(e) => setMaxWidth(parseInt(e.target.value) || undefined)}
-                    className="bg-secondary/50 border-border rounded-xl h-12 pl-12 focus:border-primary/50 transition-all shadow-inner text-foreground font-bold"
+                    className="bg-secondary/50 border-border rounded-lg h-9 pl-10 focus:border-primary/50 transition-all shadow-inner text-foreground font-bold"
                   />
                   <Scaling className="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground/50 group-focus-within:text-primary transition-colors" />
                 </div>
@@ -391,7 +391,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
       </ScrollArea>
       <div className="p-6 border-t border-border bg-card">
         <Button 
-          className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all"
+          className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all"
           onClick={processAll}
           disabled={files.length === 0 || isProcessingAll}
         >
@@ -421,8 +421,8 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
 
         <div className="flex-grow flex flex-col lg:flex-row relative z-10 overflow-hidden">
           {/* Desktop Sidebar */}
-          <aside className="hidden lg:flex w-[420px] h-full max-h-full studio-sidebar shrink-0 shrink-0 flex-col relative shadow-2xl">
-            <div className="p-8 border-b border-border flex items-center justify-between">
+          <aside className="hidden lg:flex w-[300px] h-full max-h-full studio-sidebar shrink-0 shrink-0 flex-col relative shadow-2xl">
+            <div className="px-4 py-3 border-b border-border flex items-center justify-between">
               <div className="flex flex-col gap-1">
                 <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                   <Wand2 className="w-3.5 h-3.5" /> Compression Lab
@@ -436,9 +436,9 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
 
           {/* Workspace */}
           <section className="flex-grow flex flex-col min-w-0 bg-transparent">
-            <header className="p-4 md:p-8 flex items-center justify-between studio-header">
-              <div className="flex items-center gap-6">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group relative overflow-hidden">
+            <header className="px-4 py-3 flex items-center justify-between studio-header">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group relative overflow-hidden">
                   <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
                   <Scaling className="w-6 h-6 md:w-8 md:h-8 text-foreground relative z-10" />
                 </div>
@@ -459,14 +459,14 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                 <AnimatePresence>
                   {files.some(f => f.status === "completed") && (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}>
-                      <Button variant="outline" className="rounded-2xl border-primary/20 bg-primary/10 text-primary h-12 md:h-14 px-6 text-xs font-black uppercase tracking-widest gap-3 hover:bg-primary hover:text-foreground transition-all shadow-lg shadow-primary/20" onClick={downloadAll}>
+                      <Button variant="outline" className="rounded-2xl border-primary/20 bg-primary/10 text-primary h-12 md:h-10 px-6 text-xs font-black uppercase tracking-widest gap-3 hover:bg-primary hover:text-foreground transition-all shadow-lg shadow-primary/20" onClick={downloadAll}>
                         <DownloadCloud className="w-5 h-5" /> <span className="hidden sm:inline">Export Bundle</span>
                       </Button>
                     </motion.div>
                   )}
                 </AnimatePresence>
                 
-                <Button variant="ghost" className="rounded-2xl text-muted-foreground hover:text-foreground hover:bg-secondary/50 h-12 md:h-14 px-6 text-[10px] md:text-xs font-black uppercase tracking-widest transition-all" onClick={clearFiles}>
+                <Button variant="ghost" className="rounded-2xl text-muted-foreground hover:text-foreground hover:bg-secondary/50 h-12 md:h-10 px-6 text-[10px] md:text-xs font-black uppercase tracking-widest transition-all" onClick={clearFiles}>
                   Flush Memory
                 </Button>
 
@@ -474,13 +474,13 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                 <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
                   <SheetTrigger 
                     render={
-                      <Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-14 md:w-14" />
+                      <Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-10 md:w-14" />
                     }
                   >
                     <Settings2 className="w-5 h-5" />
                   </SheetTrigger>
-                  <SheetContent side="right" className="w-full sm:w-[450px] p-0 bg-card border-border rounded-l-[3rem]">
-                    <SheetHeader className="p-8 border-b border-border">
+                  <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-card border-border rounded-l-xl">
+                    <SheetHeader className="px-4 py-3 border-b border-border">
                       <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
                         <Wand2 className="w-6 h-6 text-primary" /> Optimizer Engine
                       </SheetTitle>
@@ -493,17 +493,17 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
 
             <div className="flex-grow relative overflow-y-auto lg:overflow-hidden studio-workspace">
               <ScrollArea className="h-full">
-                <div className="p-4 md:p-12">
+                <div className="p-4 md:p-5">
                   {files.length === 0 ? (
                     <>
-                      <div className="max-w-sm mx-auto mt-20 md:mt-32 pb-20">
+                      <div className="max-w-sm mx-auto mt-8 md:mt-12 pb-8">
                         <DropZone 
                           onFilesDrop={handleFilesDrop} 
                           multiple 
                           maxSize={1024} 
                           title=" "
                           description=" "
-                          className="h-48 border-2 border-dashed border-border hover:border-primary/50 bg-secondary/30 rounded-[3rem] transition-all" 
+                          className="h-48 border-2 border-dashed border-border hover:border-primary/50 bg-secondary/30 rounded-2xl transition-all" 
                         />
                       </div>
 
@@ -513,16 +513,16 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                           initial={{ opacity: 0, y: 30 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className="mt-32 space-y-20 text-left"
+                          className="mt-12 space-y-4 text-left"
                         >
                           <div className="space-y-6">
-                            <h3 className="text-4xl font-black uppercase tracking-tighter italic">Deep Optimization: <span className="text-primary">{defaultFormat.toUpperCase()}</span></h3>
+                            <h3 className="text-2xl font-black uppercase tracking-tighter italic">Deep Optimization: <span className="text-primary">{defaultFormat.toUpperCase()}</span></h3>
                             <p className="text-muted-foreground text-lg leading-relaxed font-medium">
                               Minimize or **increase** your digital footprint with surgical precision. Our local-first engine utilizes advanced quantization for shrinking assets by up to 90%, or high-fidelity interpolation for **Upscaling and resolution boosting**, ensuring your assets meet any size requirement.
                             </p>
                           </div>
 
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {[
                               { 
                                 title: "100% Private", 
@@ -545,8 +545,8 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                                 icon: Cpu 
                               }
                             ].map((item, i) => (
-                              <div key={i} className="p-8 rounded-[2.5rem] bg-secondary/30 border border-border space-y-6 hover:bg-secondary/50 hover:border-primary/20 transition-all group shadow-xl">
-                                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                              <div key={i} className="p-8 rounded-2xl bg-secondary/30 border border-border space-y-6 hover:bg-secondary/50 hover:border-primary/20 transition-all group shadow-xl">
+                                <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
                                   <item.icon className="w-7 h-7 text-primary" />
                                 </div>
                                 <h4 className="text-lg font-black uppercase tracking-tight">{item.title}</h4>
@@ -556,9 +556,9 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                           </div>
 
                           {/* SEO Link Cloud */}
-                          <div className="space-y-16 pt-20 border-t border-border">
+                          <div className="space-y-6 pt-8 border-t border-border">
                             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                              <h3 className="text-3xl font-black uppercase tracking-tighter italic flex items-center gap-4">
+                              <h3 className="text-xl font-black uppercase tracking-tighter italic flex items-center gap-4">
                                 <Globe className="w-7 h-7 text-primary" /> Universal Optimization Hub
                               </h3>
                               <Badge className="bg-primary/10 text-primary border-primary/20 uppercase text-[10px] font-black px-4 py-1.5 rounded-full tracking-widest">
@@ -580,12 +580,12 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                               ))}
                             </div>
 
-                            <div className="p-10 md:p-16 rounded-[4rem] bg-gradient-to-br from-primary/10 via-background to-blue-500/10 border border-border space-y-10 shadow-2xl relative overflow-hidden">
-                              <div className="absolute top-0 right-0 p-20 opacity-5 rotate-12 scale-150">
-                                 <HardDrive className="w-64 h-64" />
+                            <div className="p-5 md:p-6 rounded-3xl bg-gradient-to-br from-primary/10 via-background to-blue-500/10 border border-border space-y-5 shadow-2xl relative overflow-hidden">
+                              <div className="absolute top-0 right-0 p-8 opacity-5 rotate-12 scale-150">
+                                 <HardDrive className="w-32 h-32" />
                               </div>
-                              <div className="flex items-center gap-6 relative z-10">
-                                <div className="w-16 h-16 rounded-3xl bg-card border border-border flex items-center justify-center shadow-2xl">
+                              <div className="flex items-center gap-3 relative z-10">
+                                <div className="w-11 h-11 rounded-3xl bg-card border border-border flex items-center justify-center shadow-2xl">
                                   <Percent className="w-8 h-8 text-primary" />
                                 </div>
                                 <div>
@@ -602,7 +602,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                       )}
                     </>
                   ) : (
-                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6 pb-32">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-3 pb-12">
                       <AnimatePresence mode="popLayout">
                         {files.map((f, i) => (
                           <motion.div 
@@ -613,11 +613,11 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.4, delay: i * 0.05 }}
                           >
-                            <Card className={cn("p-4 md:p-6 rounded-[2.5rem] bg-secondary/30 border-border group relative overflow-hidden transition-all duration-500", f.status === "processing" && "border-primary/50 shadow-[0_0_50px_-10px_rgba(var(--primary-rgb),0.3)]")}>
+                            <Card className={cn("p-4 md:p-6 rounded-2xl bg-secondary/30 border-border group relative overflow-hidden transition-all duration-500", f.status === "processing" && "border-primary/50 shadow-[0_0_50px_-10px_rgba(var(--primary-rgb),0.3)]")}>
                               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                               
-                              <div className="flex gap-4 md:gap-8 relative z-10">
-                                <div className="w-24 h-24 md:w-44 md:h-44 rounded-[2rem] bg-muted/60 border border-border overflow-hidden shrink-0 relative shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                              <div className="flex gap-4 md:gap-4 relative z-10">
+                                <div className="w-12 h-12 md:w-44 md:h-44 rounded-xl bg-muted/60 border border-border overflow-hidden shrink-0 relative shadow-2xl group-hover:scale-105 transition-transform duration-500">
                                   <img src={f.previewUrl} className="w-full h-full object-cover" alt="" />
                                   <AnimatePresence>
                                     {f.status === "completed" && (
@@ -683,7 +683,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                                     <Button
                                       size="lg"
                                       variant={f.status === "completed" ? "default" : "outline"}
-                                      className={cn("h-12 md:h-14 rounded-2xl text-[10px] md:text-xs px-6 md:px-10 uppercase font-black tracking-widest transition-all shadow-xl group", f.status === "completed" ? "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20" : "border-border hover:bg-primary/20 hover:border-primary/40")}
+                                      className={cn("h-12 md:h-10 rounded-2xl text-[10px] md:text-xs px-6 md:px-5 uppercase font-black tracking-widest transition-all shadow-xl group", f.status === "completed" ? "bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20" : "border-border hover:bg-primary/20 hover:border-primary/40")}
                                       onClick={() => {
                                         if (f.status === "completed" && f.outputUrl) {
                                           const ext = outputFormat === "original" ? (f.file.name.split('.').pop() || "webp") : outputFormat;
@@ -717,8 +717,8 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                     </div>
                   )}
                   {files.length > 0 && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12 max-w-xl mx-auto pb-40">
-                       <DropZone onFilesDrop={handleFilesDrop} multiple maxSize={1024} className="h-24 md:h-32 bg-secondary/30 rounded-[2.5rem] border-dashed border-border hover:bg-secondary/50 hover:border-primary/50 transition-all group" title="Batch Append to Pipeline" />
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12 max-w-xl mx-auto pb-16">
+                       <DropZone onFilesDrop={handleFilesDrop} multiple maxSize={1024} className="h-24 md:h-32 bg-secondary/30 rounded-2xl border-dashed border-border hover:bg-secondary/50 hover:border-primary/50 transition-all group" title="Batch Append to Pipeline" />
                     </motion.div>
                   )}
                 </div>
@@ -733,10 +733,10 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                 initial={{ opacity: 0, scale: 0.5, y: 50 }} 
                 animate={{ opacity: 1, scale: 1, y: 0 }} 
                 exit={{ opacity: 0, scale: 0.5, y: 50 }}
-                className="lg:hidden fixed bottom-24 right-6 z-40"
+                className="lg:hidden fixed bottom-6 right-4 z-40"
               >
                  <Button 
-                  className="w-16 h-16 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
+                  className="w-11 h-11 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
                   onClick={processAll}
                   disabled={isProcessingAll}
                  >

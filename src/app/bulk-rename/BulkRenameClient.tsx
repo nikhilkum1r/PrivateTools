@@ -112,15 +112,15 @@ export default function BulkRenameClient() {
 
         {items.length === 0 ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-green-500 to-emerald-600 p-[1px] mx-auto animate-pulse">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 p-[1px] mx-auto animate-pulse">
                   <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Edit3 className="w-10 h-10 text-green-500" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
                     Bulk Master <br/> <span className="text-green-500">Renamer.</span>
                   </h1>
                   <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto leading-relaxed">
@@ -130,7 +130,7 @@ export default function BulkRenameClient() {
               </div>
               <DropZone 
                 onFilesDrop={handleFilesDrop} 
-                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-2xl hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function BulkRenameClient() {
           <>
             {/* Left Sidebar - Pattern Logic */}
             <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500 flex items-center gap-3">
                     <Type className="w-4 h-4" /> Identity Engine
@@ -156,7 +156,7 @@ export default function BulkRenameClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   <div className="space-y-4">
                     <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Identity Mutation</label>
                     <div className="grid grid-cols-1 gap-3">
@@ -179,7 +179,7 @@ export default function BulkRenameClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-green-500/5 border border-green-500/20 space-y-4">
+                  <div className="p-6 rounded-xl bg-green-500/5 border border-green-500/20 space-y-4">
                     <div className="flex items-center gap-3 text-green-500">
                       <Hash className="w-5 h-5" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Sequencing</h4>
@@ -193,7 +193,7 @@ export default function BulkRenameClient() {
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-16 rounded-[2rem] bg-white text-black hover:bg-white/90 font-black text-xl gap-3 shadow-2xl active:scale-95 transition-all italic"
+                  className="w-full h-11 rounded-xl bg-white text-black hover:bg-white/90 font-black text-xl gap-3 shadow-2xl active:scale-95 transition-all italic"
                   onClick={applyLogic}
                 >
                   <RefreshCw className="w-6 h-6" />
@@ -204,13 +204,13 @@ export default function BulkRenameClient() {
 
             {/* Center - Renaming Studio */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
-              <header className="p-6 md:p-10 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-                <div className="flex items-center gap-6">
-                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-[2.5rem] bg-green-600/10 flex items-center justify-center border border-green-500/20 shadow-2xl">
+              <header className="p-6 md:p-5 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-green-600/10 flex items-center justify-center border border-green-500/20 shadow-2xl">
                     <FolderOpen className="w-8 h-8 md:w-10 md:h-10 text-green-500" />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h2 className="font-black text-xl md:text-3xl tracking-tighter uppercase italic">
+                    <h2 className="font-black text-xl md:text-xl tracking-tighter uppercase italic">
                       Asset Studio
                     </h2>
                     <div className="flex items-center gap-4">
@@ -245,11 +245,11 @@ export default function BulkRenameClient() {
                          animate={{ opacity: 1, y: 0 }}
                          exit={{ opacity: 0, scale: 0.95 }}
                        >
-                         <Card className="p-6 bg-secondary/30 border-border hover:border-green-500/30 transition-all group flex items-center gap-6 rounded-[2rem]">
+                         <Card className="p-6 bg-secondary/30 border-border hover:border-green-500/30 transition-all group flex items-center gap-3 rounded-xl">
                             <div className="w-12 h-12 rounded-2xl bg-secondary/50 flex items-center justify-center shrink-0 border border-border">
                                <FileText className="w-6 h-6 text-muted-foreground/40" />
                             </div>
-                            <div className="flex-grow min-w-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div className="flex-grow min-w-0 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
                                <div className="min-w-0">
                                  <p className="text-[10px] font-black uppercase text-muted-foreground/40 mb-1 tracking-widest">Original</p>
                                  <p className="text-sm font-medium truncate opacity-40">{item.originalName}</p>
@@ -280,7 +280,7 @@ export default function BulkRenameClient() {
 
             {/* Right Sidebar - Export Telemetry */}
             <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500 flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4" /> Studio Matrix
@@ -291,7 +291,7 @@ export default function BulkRenameClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                    <div className="space-y-6">
                       <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Batch Statistics</Label>
                       <div className="grid grid-cols-2 gap-3">
@@ -308,7 +308,7 @@ export default function BulkRenameClient() {
                       </div>
                    </div>
 
-                   <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                   <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                      <div className="flex items-center gap-3 text-muted-foreground/60">
                        <Zap className="w-5 h-5 text-green-500" />
                        <h4 className="text-xs font-black uppercase tracking-widest">Local Integrity</h4>
@@ -322,7 +322,7 @@ export default function BulkRenameClient() {
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-16 rounded-[2rem] bg-green-600 hover:bg-green-700 text-foreground font-black text-xl gap-3 shadow-2xl shadow-green-500/20 group active:scale-95 transition-all italic"
+                  className="w-full h-11 rounded-xl bg-green-600 hover:bg-green-700 text-foreground font-black text-xl gap-3 shadow-2xl shadow-green-500/20 group active:scale-95 transition-all italic"
                   onClick={downloadAll}
                   disabled={items.length === 0 || isProcessing}
                 >

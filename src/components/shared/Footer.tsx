@@ -40,9 +40,9 @@ export function Footer() {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none opacity-30" />
       
       <div className="container mx-auto px-6 py-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-16 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-3 lg:gap-5">
           {/* Brand & Mission */}
-          <div className="lg:col-span-3 space-y-10">
+          <div className="lg:col-span-3 space-y-5">
             <div className="space-y-6">
               <Link href="/" className="flex items-center gap-3 group w-fit">
                 <div className="w-12 h-12 flex items-center justify-center rounded-2xl overflow-hidden group-hover:scale-110 transition-transform">
@@ -72,9 +72,9 @@ export function Footer() {
           </div>
 
           {/* Links Sections */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:col-span-3 gap-12 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:col-span-3 gap-5 lg:gap-4">
             <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-8 italic">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-4 italic">
                 Creative
               </h4>
               <ul className="space-y-4">
@@ -92,7 +92,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-8 italic">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-4 italic">
                 Media & Dev
               </h4>
               <ul className="space-y-4">
@@ -110,7 +110,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-8 italic">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-4 italic">
                 Security
               </h4>
               <ul className="space-y-4">
@@ -128,7 +128,7 @@ export function Footer() {
             </div>
 
             <div className="col-span-2 md:col-span-1">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-8 italic">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary mb-4 italic">
                 Manifesto
               </h4>
               <ul className="space-y-4">
@@ -148,14 +148,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-24 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-6">
+        <div className="border-t border-border mt-24 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
             <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40 italic">
               © {new Date().getFullYear()} SafeTools System. Sovereign &amp; Decentralized.
             </p>
           </div>
           
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">Zero-Server</span>

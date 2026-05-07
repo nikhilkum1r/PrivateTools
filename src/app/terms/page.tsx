@@ -58,14 +58,14 @@ export default function TermsOfServicePage() {
     <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-20 px-4 relative">
+      <main className="flex-grow pt-32 pb-8 px-4 relative">
         {/* Ambient Glow */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto space-y-20 relative z-10">
+        <div className="max-w-5xl mx-auto space-y-4 relative z-10">
           {/* Header */}
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function TermsOfServicePage() {
               </Badge>
             </motion.div>
             
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
+            <h1 className="text-2xl md:text-xl font-black tracking-tighter leading-none">
               Service <br/> <span className="text-purple-500 italic">Covenant.</span>
             </h1>
             
@@ -85,7 +85,7 @@ export default function TermsOfServicePage() {
           </div>
 
           {/* Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sections.map((section, i) => (
               <motion.div
                 key={section.title}
@@ -93,11 +93,11 @@ export default function TermsOfServicePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="p-10 h-full bg-secondary/30 border-border rounded-[3rem] hover:bg-secondary/50 transition-all group overflow-hidden relative">
+                <Card className="p-5 h-full bg-secondary/30 border-border rounded-2xl hover:bg-secondary/50 transition-all group overflow-hidden relative">
                    <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
                       <section.icon className="w-32 h-32" />
                    </div>
-                   <div className="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-8 shadow-inner shadow-purple-500/10">
+                   <div className="w-10 h-10 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-4 shadow-inner shadow-purple-500/10">
                      <section.icon className="w-7 h-7 text-purple-500" />
                    </div>
                    <h3 className="text-2xl font-black uppercase tracking-tight mb-4">{section.title}</h3>
@@ -110,19 +110,19 @@ export default function TermsOfServicePage() {
           </div>
 
           {/* Final Clause */}
-          <div className="p-12 md:p-20 rounded-[4rem] bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent border border-border relative overflow-hidden text-center space-y-8">
+          <div className="p-5 md:p-8 rounded-3xl bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent border border-border relative overflow-hidden text-center space-y-4">
             <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-secondary/50 border border-border text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
               <Lock className="w-3 h-3 text-purple-500" /> End-to-End Privacy
             </div>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Need a custom agreement?</h2>
+            <h2 className="text-2xl md:text-xl font-black tracking-tight">Need a custom agreement?</h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium leading-relaxed">
               For enterprise deployments or specialized security audits, our technical team is available for consultation.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-               <Button className="h-14 px-10 rounded-2xl bg-purple-600 hover:bg-purple-700 font-black gap-2">
+            <div className="flex flex-wrap justify-center gap-3">
+               <Button className="h-10 px-5 rounded-2xl bg-purple-600 hover:bg-purple-700 font-black gap-2">
                  Contact Legal <ChevronRight className="w-4 h-4" />
                </Button>
-               <Button variant="ghost" className="h-14 px-10 rounded-2xl font-black border border-border">
+               <Button variant="ghost" className="h-10 px-5 rounded-2xl font-black border border-border">
                  Archive (v3.0)
                </Button>
             </div>

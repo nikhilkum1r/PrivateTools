@@ -222,7 +222,7 @@ export default function MergeStudioClient() {
                   </Reorder.Group>
                 ) : (
                   <div className="py-16 text-center space-y-4">
-                    <div className="w-14 h-14 rounded-[2rem] bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto opacity-20">
+                    <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto opacity-20">
                       <FileText className="w-5 h-5" />
                     </div>
                     <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">No assets loaded</p>
@@ -262,7 +262,7 @@ export default function MergeStudioClient() {
         <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[700px] lg:min-h-0 h-full max-h-full">
           <header className="p-4 md:p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20 gap-4">
             <div className="flex items-center gap-5">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-red-600 via-red-500 to-primary flex items-center justify-center border border-border shadow-[0_0_40px_rgba(239,68,68,0.2)]">
+              <div className="w-12 h-12 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-red-600 via-red-500 to-primary flex items-center justify-center border border-border shadow-[0_0_40px_rgba(239,68,68,0.2)]">
                 <FileText className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
               </div>
               <div>
@@ -287,12 +287,12 @@ export default function MergeStudioClient() {
             </div>
           )}
 
-          <div className="flex-grow relative flex items-center justify-center p-8 lg:p-16">
+          <div className="flex-grow relative flex items-center justify-center p-8 lg:p-6">
             <AnimatePresence mode="wait">
               {mergedUrl ? (
-                <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full space-y-8 text-center">
-                  <div className="aspect-[3/4] w-full max-w-xs mx-auto bg-white/[0.03] rounded-[3rem] border border-emerald-500/30 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] flex flex-col items-center justify-center gap-6">
-                    <div className="w-24 h-24 rounded-[2rem] bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full space-y-4 text-center">
+                  <div className="aspect-[3/4] w-full max-w-xs mx-auto bg-white/[0.03] rounded-2xl border border-emerald-500/30 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] flex flex-col items-center justify-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
                       <CheckCircle2 className="w-12 h-12 text-emerald-500" />
                     </div>
                     <div className="space-y-1">
@@ -302,7 +302,7 @@ export default function MergeStudioClient() {
                   </div>
                   <div className="flex justify-center gap-3">
                     <Button
-                      className="h-14 px-10 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
+                      className="h-10 px-5 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
                       onClick={async () => {
                         const response = await fetch(mergedUrl);
                         const blob = await response.blob();
@@ -311,19 +311,19 @@ export default function MergeStudioClient() {
                     >
                       <DownloadCloud className="w-5 h-5" /> Download PDF
                     </Button>
-                    <Button variant="outline" className="h-14 px-8 rounded-[2rem] border-border font-bold hover:bg-secondary/50" onClick={() => { setMergedUrl(null); setFiles(prev => prev.map(f => ({ ...f, status: "idle" }))); }}>
+                    <Button variant="outline" className="h-10 px-8 rounded-xl border-border font-bold hover:bg-secondary/50" onClick={() => { setMergedUrl(null); setFiles(prev => prev.map(f => ({ ...f, status: "idle" }))); }}>
                       Edit Sequence
                     </Button>
                   </div>
                 </motion.div>
               ) : currentFile ? (
                 <motion.div key={currentFile.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full space-y-6 flex flex-col items-center">
-                  <div className="aspect-[3/4] w-full max-w-xs bg-secondary/30 rounded-[2.5rem] border border-border shadow-2xl overflow-hidden relative group">
+                  <div className="aspect-[3/4] w-full max-w-xs bg-secondary/30 rounded-2xl border border-border shadow-2xl overflow-hidden relative group">
                     {currentFile.previewUrl ? (
                       <img src={currentFile.previewUrl} className="w-full h-full object-contain" alt="" />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center gap-4 opacity-20">
-                        <FileText className="w-16 h-16" />
+                        <FileText className="w-16 h-11" />
                         <span className="text-xs font-black uppercase tracking-widest">PDF Document</span>
                         {currentFile.pageCount && <Badge className="bg-secondary text-muted-foreground/80">{currentFile.pageCount} pages</Badge>}
                       </div>
@@ -337,12 +337,12 @@ export default function MergeStudioClient() {
                   </div>
                 </motion.div>
               ) : (
-                <div className="text-center space-y-8 max-w-sm">
-                  <div className="w-28 h-28 rounded-[3rem] bg-gradient-to-br from-red-500/20 to-primary/20 border border-border flex items-center justify-center mx-auto">
+                <div className="text-center space-y-4 max-w-sm">
+                  <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-red-500/20 to-primary/20 border border-border flex items-center justify-center mx-auto">
                     <Layout className="w-12 h-12 text-muted-foreground/40" />
                   </div>
 
-                  <DropZone onFilesDrop={addFiles} accept=".pdf,image/*" multiple title=" " className="h-40 border-dashed border-border bg-secondary/30 rounded-[2rem] hover:bg-secondary/70 transition-all" />
+                  <DropZone onFilesDrop={addFiles} accept=".pdf,image/*" multiple title=" " className="h-40 border-dashed border-border bg-secondary/30 rounded-xl hover:bg-secondary/70 transition-all" />
                 </div>
               )}
             </AnimatePresence>
@@ -377,7 +377,7 @@ export default function MergeStudioClient() {
                 ))}
               </div>
 
-              <div className="p-5 rounded-[2rem] bg-secondary/30 border border-border space-y-3">
+              <div className="p-5 rounded-xl bg-secondary/30 border border-border space-y-3">
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-emerald-500" />
                   <h4 className="text-xs font-black uppercase tracking-widest">Privacy Shield</h4>
@@ -409,7 +409,7 @@ export default function MergeStudioClient() {
 
           <div className="p-5 border-t border-border bg-muted/40 shrink-0 space-y-3">
             <Button
-              className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
+              className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
               onClick={processDocuments}
               disabled={files.length === 0 || isProcessing}
             >

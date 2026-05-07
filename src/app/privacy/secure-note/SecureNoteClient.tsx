@@ -73,15 +73,15 @@ export default function SecureNoteClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-2xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-2xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
           {/* Header */}
           <div className="space-y-4 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
               <Lock className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h1 className="text-4xl font-black tracking-tight">Secure Note</h1>
+              <h1 className="text-2xl font-black tracking-tight">Secure Note</h1>
               <p className="text-muted-foreground mt-2">Encrypt and decrypt private notes locally using AES-256-GCM. Nothing is stored.</p>
             </div>
             <PrivacyBadge />

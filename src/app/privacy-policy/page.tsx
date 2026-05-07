@@ -44,13 +44,13 @@ export default function PrivacyPolicyPage() {
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <main className="flex-grow pt-32 pb-20 px-4">
-        <div className="max-w-4xl mx-auto space-y-16">
+      <main className="flex-grow pt-32 pb-8 px-4">
+        <div className="max-w-4xl mx-auto space-y-6">
           <div className="text-center space-y-6">
             <Badge className="bg-emerald-500/10 text-emerald-500 border-emerald-500/20 py-2 px-6 rounded-full uppercase tracking-[0.3em] text-[10px] font-black">
               Legal Transparency
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-none">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight leading-none">
               Privacy <span className="text-emerald-500 italic">Guaranteed.</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium">
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 gap-4">
             {sections.map((section, i) => (
               <motion.div
                 key={section.title}
@@ -66,8 +66,8 @@ export default function PrivacyPolicyPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] flex flex-col md:flex-row gap-8 items-start">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+                <Card className="p-8 bg-secondary/30 border-border rounded-2xl flex flex-col md:flex-row gap-4 items-start">
+                  <div className="w-11 h-11 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
                     <section.icon className="w-8 h-8 text-emerald-500" />
                   </div>
                   <div className="space-y-4">
@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
             ))}
           </div>
 
-          <div className="p-12 rounded-[3rem] bg-emerald-600/10 border border-emerald-500/20 text-center space-y-4">
+          <div className="p-5 rounded-2xl bg-emerald-600/10 border border-emerald-500/20 text-center space-y-4">
             <h4 className="text-xl font-black uppercase tracking-tight text-emerald-500">Security Audit</h4>
             <p className="text-sm font-medium text-emerald-500/80 italic">
               Our source code is open for inspection. We encourage security researchers to verify our local-first implementation.

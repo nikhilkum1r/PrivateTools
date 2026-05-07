@@ -59,7 +59,7 @@ export default function PrivacyHubClient() {
               <ShieldCheck className="w-4 h-4" />
               The Privacy First Standard
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight">
               Privacy is a <span className="text-primary italic">Human Right.</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -69,7 +69,7 @@ export default function PrivacyHubClient() {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {principles.map((p, i) => (
               <motion.div
                 key={p.title}
@@ -90,9 +90,9 @@ export default function PrivacyHubClient() {
           </div>
 
           {/* Tech Explanation */}
-          <div className="p-12 rounded-3xl bg-primary/5 border border-primary/10 space-y-8">
+          <div className="p-5 rounded-3xl bg-primary/5 border border-primary/10 space-y-4">
             <div className="max-w-2xl">
-              <h2 className="text-3xl font-bold mb-4">The Technical Truth</h2>
+              <h2 className="text-xl font-bold mb-4">The Technical Truth</h2>
               <p className="text-muted-foreground leading-relaxed">
                 When you use a standard online converter, your file is uploaded to a server, processed, 
                 and then stored (even if temporarily). This creates a vulnerability. 
@@ -102,7 +102,7 @@ export default function PrivacyHubClient() {
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-8 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-3">
                 <Zap className="w-6 h-6 text-primary" />
                 <span className="font-bold">Lightning Fast</span>
@@ -119,11 +119,11 @@ export default function PrivacyHubClient() {
           </div>
 
           {/* Final Call */}
-          <div className="text-center py-12">
-            <h2 className="text-4xl font-black mb-8">Ready to work securely?</h2>
+          <div className="text-center py-4">
+            <h2 className="text-2xl font-black mb-4">Ready to work securely?</h2>
             <div className="flex justify-center gap-4">
               <Link href="/">
-                <Button size="lg" className="rounded-2xl h-14 px-8 font-bold text-lg">
+                <Button size="lg" className="rounded-2xl h-10 px-8 font-bold text-lg">
                   Launch the Suite
                 </Button>
               </Link>

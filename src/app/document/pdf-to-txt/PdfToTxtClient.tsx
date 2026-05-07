@@ -65,13 +65,13 @@ export default function PdfToTxtClient() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12 max-w-2xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+      <main className="flex-grow container mx-auto px-4 py-4 max-w-2xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
           <div className="text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-orange-500/10 flex items-center justify-center mx-auto">
+            <div className="w-11 h-11 rounded-2xl bg-orange-500/10 flex items-center justify-center mx-auto">
               <FileInput className="w-8 h-8 text-orange-500" />
             </div>
-            <h1 className="text-4xl font-black tracking-tight">PDF → Text</h1>
+            <h1 className="text-2xl font-black tracking-tight">PDF → Text</h1>
             <p className="text-muted-foreground">Extract all text from PDF files with page structure preserved.</p>
             <PrivacyBadge />
           </div>

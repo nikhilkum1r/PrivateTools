@@ -214,15 +214,15 @@ export default function SteganographyClient() {
 
         {!file ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-500 to-blue-600 p-[1px] mx-auto animate-pulse">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-blue-600 p-[1px] mx-auto animate-pulse">
                   <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Fingerprint className="w-10 h-10 text-emerald-500" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">
+                  <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">
                     Secret <span className="text-emerald-500">Studio.</span>
                   </h1>
                   <p className="text-muted-foreground text-xl font-medium max-w-lg mx-auto leading-relaxed">
@@ -234,7 +234,7 @@ export default function SteganographyClient() {
                 onFilesDrop={handleFileChange} 
                 accept="image/png" 
                 multiple={false} 
-                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-2xl hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function SteganographyClient() {
           <>
             {/* Left Sidebar - Identity Engine */}
             <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-500 flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -260,8 +260,8 @@ export default function SteganographyClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
-                   <div className="aspect-square rounded-[3rem] bg-muted/40 border border-border overflow-hidden relative group">
+                <div className="p-4 space-y-4">
+                   <div className="aspect-square rounded-2xl bg-muted/40 border border-border overflow-hidden relative group">
                       <img src={preview!} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="" />
                       <div className="absolute inset-0 bg-muted/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8">
                          <Button variant="ghost" className="rounded-2xl text-red-500 hover:bg-red-500/10" onClick={() => { setFile(null); setPreview(null); setMessage(""); setExtractedMessage(null); }}>
@@ -290,7 +290,7 @@ export default function SteganographyClient() {
                       </div>
                    </div>
 
-                   <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                   <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3 text-emerald-500">
                       <Zap className="w-5 h-5" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Protocol LSB</h4>
@@ -304,7 +304,7 @@ export default function SteganographyClient() {
 
               <div className="p-6 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-foreground font-black text-sm gap-2 shadow-2xl shadow-emerald-500/20 active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-foreground font-black text-sm gap-2 shadow-2xl shadow-emerald-500/20 active:scale-95 transition-all italic"
                   onClick={activeTab === "hide" ? encodeMessage : decodeMessage}
                   disabled={isProcessing || (activeTab === "hide" && !message)}
                 >
@@ -317,8 +317,8 @@ export default function SteganographyClient() {
             {/* Center - Interaction Workspace */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
               <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-[2rem] bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 shadow-2xl">
                     <ShieldCheck className="w-8 h-8 text-emerald-500" />
                   </div>
                   <div className="flex flex-col gap-1">
@@ -338,11 +338,11 @@ export default function SteganographyClient() {
               </header>
 
               <ScrollArea className="flex-grow relative z-10 min-h-0">
-                <div className="p-8 lg:p-12">
-                   <div className="max-w-3xl mx-auto space-y-12">
+                <div className="p-8 lg:p-5">
+                   <div className="max-w-3xl mx-auto space-y-6">
                       <AnimatePresence mode="wait">
                          {activeTab === "hide" ? (
-                           <motion.div key="hide" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-8">
+                           <motion.div key="hide" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
                               <div className="space-y-4">
                                 <div className="flex justify-between items-center">
                                   <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Intelligence Payload</Label>
@@ -355,7 +355,7 @@ export default function SteganographyClient() {
                                 </div>
                                 <Textarea 
                                   placeholder="Vanish your secrets here..." 
-                                  className="min-h-[160px] bg-white/[0.03] border-border rounded-[2rem] p-6 focus:border-primary/50 transition-all font-mono text-sm leading-relaxed"
+                                  className="min-h-[160px] bg-white/[0.03] border-border rounded-xl p-6 focus:border-primary/50 transition-all font-mono text-sm leading-relaxed"
                                   value={message}
                                   onChange={(e) => setMessage(e.target.value)}
                                 />
@@ -379,15 +379,15 @@ export default function SteganographyClient() {
                               )}
                            </motion.div>
                          ) : (
-                           <motion.div key="reveal" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-8">
+                           <motion.div key="reveal" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="space-y-4">
                                {extractedMessage ? (
                                  <div className="space-y-6">
-                                    <div className="p-10 rounded-[3rem] bg-muted/80 border border-emerald-500/20 font-mono text-xl leading-relaxed text-emerald-400 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] break-all whitespace-pre-wrap">
+                                    <div className="p-5 rounded-2xl bg-muted/80 border border-emerald-500/20 font-mono text-xl leading-relaxed text-emerald-400 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] break-all whitespace-pre-wrap">
                                       {extractedMessage}
                                     </div>
                                     <Button 
                                       variant="outline" 
-                                      className="w-full h-16 rounded-2xl border-border bg-secondary/50 font-black uppercase tracking-widest gap-3"
+                                      className="w-full h-11 rounded-2xl border-border bg-secondary/50 font-black uppercase tracking-widest gap-3"
                                       onClick={() => {
                                         navigator.clipboard.writeText(extractedMessage);
                                         toast.success("Intelligence copied to secure clipboard");
@@ -397,9 +397,9 @@ export default function SteganographyClient() {
                                     </Button>
                                  </div>
                                ) : (
-                                 <div className="py-20 text-center space-y-8">
-                                    <div className="w-32 h-32 rounded-[3.5rem] bg-emerald-500/10 flex items-center justify-center mx-auto border border-emerald-500/20">
-                                       <Fingerprint className="w-16 h-16 text-emerald-500 animate-pulse" />
+                                 <div className="py-20 text-center space-y-4">
+                                    <div className="w-32 h-32 rounded-3xl bg-emerald-500/10 flex items-center justify-center mx-auto border border-emerald-500/20">
+                                       <Fingerprint className="w-16 h-11 text-emerald-500 animate-pulse" />
                                     </div>
                                     <div className="space-y-2">
                                        <h3 className="text-2xl font-black uppercase tracking-tight italic">Scan carrier for signatures</h3>
@@ -425,7 +425,7 @@ export default function SteganographyClient() {
 
             {/* Right Sidebar - Studio Matrix */}
             <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500 flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
@@ -436,7 +436,7 @@ export default function SteganographyClient() {
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   <div className="space-y-6">
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Protocol Intel</h4>
                     <div className="space-y-4">
@@ -456,7 +456,7 @@ export default function SteganographyClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
+                  <div className="p-6 rounded-xl bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-emerald-500" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Matrix Guard</h4>

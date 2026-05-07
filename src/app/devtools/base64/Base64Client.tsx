@@ -72,7 +72,7 @@ export default function Base64Client() {
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
-        <div className="space-y-12">
+        <div className="space-y-6">
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -82,7 +82,7 @@ export default function Base64Client() {
               <Binary className="w-3.5 h-3.5" />
               Binary Identity Studio
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight italic">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
               Base64 <span className="text-primary not-italic">Master.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -91,18 +91,18 @@ export default function Base64Client() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
+          <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-4">
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button 
                 variant={type === "text" ? "default" : "outline"}
-                className="h-14 rounded-2xl px-8 font-black gap-2"
+                className="h-10 rounded-2xl px-8 font-black gap-2"
                 onClick={() => { setType("text"); setInput(""); setOutput(""); }}
               >
                 <Type className="w-4 h-4" /> Text Mode
               </Button>
               <Button 
                 variant={type === "image" ? "default" : "outline"}
-                className="h-14 rounded-2xl px-8 font-black gap-2"
+                className="h-10 rounded-2xl px-8 font-black gap-2"
                 onClick={() => { setType("image"); setInput(""); setOutput(""); }}
               >
                 <ImageIcon className="w-4 h-4" /> Image Mode
@@ -110,7 +110,7 @@ export default function Base64Client() {
             </div>
 
             {type === "text" ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center px-2">
                      <div className="flex gap-4">
@@ -135,9 +135,9 @@ export default function Base64Client() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={mode === "encode" ? "Enter plain text..." : "Enter Base64 string..."}
-                    className="min-h-[300px] rounded-[2rem] bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 p-6"
+                    className="min-h-[300px] rounded-xl bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 p-6"
                   />
-                  <Button className="w-full h-14 rounded-2xl bg-primary font-black italic gap-2" onClick={processData}>
+                  <Button className="w-full h-10 rounded-2xl bg-primary font-black italic gap-2" onClick={processData}>
                      <Zap className="w-4 h-4" /> EXECUTE {mode.toUpperCase()}
                   </Button>
                 </div>
@@ -154,21 +154,21 @@ export default function Base64Client() {
                        readOnly
                        value={output}
                        placeholder="Awaiting synthesis..."
-                       className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-6 resize-none"
+                       className="absolute inset-0 rounded-xl bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-6 resize-none"
                      />
                   </div>
                 </div>
               </div>
             ) : (
-              <div className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   <DropZone onFilesDrop={handleImageDrop} accept="image/*" multiple={false} className="h-80 rounded-[3rem] border-dashed border-border bg-secondary/50" />
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                   <DropZone onFilesDrop={handleImageDrop} accept="image/*" multiple={false} className="h-80 rounded-2xl border-dashed border-border bg-secondary/50" />
                    <div className="relative group h-80">
                       <Textarea 
                         readOnly
                         value={output}
                         placeholder="Awaiting image string..."
-                        className="absolute inset-0 rounded-[3rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-8 resize-none"
+                        className="absolute inset-0 rounded-2xl bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-8 resize-none"
                       />
                       {output && (
                         <Button 
@@ -182,7 +182,7 @@ export default function Base64Client() {
                    </div>
                 </div>
                 {output && output.startsWith('data:image') && (
-                  <div className="p-8 rounded-[3rem] bg-secondary/30 border border-border flex flex-col items-center gap-6">
+                  <div className="p-8 rounded-2xl bg-secondary/30 border border-border flex flex-col items-center gap-3">
                      <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Preview Rendering</Label>
                      <div className="max-w-md w-full aspect-video rounded-2xl overflow-hidden border border-border bg-black">
                         <img src={output} className="w-full h-full object-contain" alt="Base64 Preview" />
@@ -194,7 +194,7 @@ export default function Base64Client() {
           </Card>
 
           {/* Guide Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
              <div className="space-y-6">
                 <h3 className="text-2xl font-black italic flex items-center gap-3">
                    <Sparkles className="w-6 h-6 text-primary" /> Why Base64?
@@ -208,9 +208,9 @@ export default function Base64Client() {
                    </ul>
                 </div>
              </div>
-             <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
+             <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col justify-center gap-3">
                 <div className="flex items-center gap-4">
-                   <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
+                   <div className="w-8 h-8 rounded-2xl bg-primary flex items-center justify-center">
                       <Binary className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Industrial Precision</h4>

@@ -94,8 +94,8 @@ export default function DocsMasterClient() {
             const result = await mammoth.convertToHtml({ arrayBuffer });
             if (docxRef.current) {
               docxRef.current.innerHTML = `
-                <div class="mammoth-fallback p-10 lg:p-20 bg-white text-black shadow-inner min-h-screen">
-                  <div class="mb-8 p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-800 text-[10px] font-black uppercase tracking-widest flex items-center gap-3">
+                <div class="mammoth-fallback p-5 lg:p-8 bg-white text-black shadow-inner min-h-screen">
+                  <div class="mb-4 p-4 bg-amber-50 border-l-4 border-amber-500 text-amber-800 text-[10px] font-black uppercase tracking-widest flex items-center gap-3">
                     <span class="text-xl">ℹ️</span> Smart Fallback Active: This document is rendered using a semantic parser to handle complex structures.
                   </div>
                   <div class="prose prose-sm max-w-none prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tighter">
@@ -108,8 +108,8 @@ export default function DocsMasterClient() {
           } catch (fallbackErr) {
             console.error("Secondary Engine Failure:", fallbackErr);
             if (docxRef.current) {
-              docxRef.current.innerHTML = `<div class="p-10 text-red-500 font-bold uppercase tracking-widest text-center border-2 border-dashed border-red-500/20">
-                <div class="mb-4 text-4xl">⚠️</div>
+              docxRef.current.innerHTML = `<div class="p-5 text-red-500 font-bold uppercase tracking-widest text-center border-2 border-dashed border-red-500/20">
+                <div class="mb-4 text-2xl">⚠️</div>
                 Critical Engine Failure: This document is encrypted or fundamentally corrupted.
               </div>`;
             }
@@ -132,13 +132,13 @@ export default function DocsMasterClient() {
           const arrayBuffer = await file.arrayBuffer();
           const html = convertPptx(new Uint8Array(arrayBuffer));
           if (pptxRef.current) {
-            pptxRef.current.innerHTML = `<div class="pptx-render-container w-full h-full flex flex-col items-center gap-8 py-10">${html}</div>`;
+            pptxRef.current.innerHTML = `<div class="pptx-render-container w-full h-full flex flex-col items-center gap-4 py-4">${html}</div>`;
           }
         } catch (err) {
           console.error("PPTX Render Error:", err);
           if (pptxRef.current) {
-            pptxRef.current.innerHTML = `<div class="p-10 text-red-500 font-bold uppercase tracking-widest text-center border-2 border-dashed border-red-500/20">
-              <div class="mb-4 text-4xl">⚠️</div>
+            pptxRef.current.innerHTML = `<div class="p-5 text-red-500 font-bold uppercase tracking-widest text-center border-2 border-dashed border-red-500/20">
+              <div class="mb-4 text-2xl">⚠️</div>
               Visual Engine Failure: Could not render slides. Check Raw Structure tab.
             </div>`;
           }
@@ -318,14 +318,14 @@ export default function DocsMasterClient() {
 
         {!file ? (
           <div className="flex-grow flex items-center justify-center p-8 relative z-10">
-            <div className="max-w-2xl w-full space-y-12 text-center">
+            <div className="max-w-2xl w-full space-y-6 text-center">
               <div className="space-y-6">
-                <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-emerald-500/20 to-blue-600/20 border border-emerald-500/20 flex items-center justify-center mx-auto shadow-2xl relative group">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-600/20 border border-emerald-500/20 flex items-center justify-center mx-auto shadow-2xl relative group">
                   <div className="absolute inset-0 bg-emerald-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <FileText className="w-10 h-10 text-emerald-500 relative z-10" />
                 </div>
                 <div className="space-y-4">
-                  <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">Docs <br/><span className="text-emerald-500">Master.</span></h1>
+                  <h1 className="text-2xl md:text-2xl font-black tracking-tighter uppercase italic leading-none">Docs <br/><span className="text-emerald-500">Master.</span></h1>
                   <p className="text-muted-foreground/60 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Unified secure document laboratory. Universal support for Office, PDF, and Data formats.</p>
                 </div>
               </div>
@@ -349,8 +349,8 @@ export default function DocsMasterClient() {
         ) : (
           <>
             {/* Left Sidebar - Inspector */}
-            <aside className="flex w-full lg:w-[400px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl">
-              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[300px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl">
+              <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500 flex items-center gap-3">
                     <Edit3 className="w-4 h-4" /> Doc Inspector
@@ -363,7 +363,7 @@ export default function DocsMasterClient() {
               </div>
 
               <ScrollArea className="flex-grow">
-                <div className="p-8 space-y-10">
+                <div className="p-4 space-y-4">
                   {/* Metadata Card */}
                   <div className="space-y-6">
                     <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">File Identity</Label>
@@ -384,26 +384,26 @@ export default function DocsMasterClient() {
                     <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Master Controls</Label>
                     <div className="grid gap-3">
                       {(docType === "xlsx" || docType === "csv") && (
-                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportSpreadsheet}>
+                        <Button className="w-full h-10 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportSpreadsheet}>
                           <Save className="w-4 h-4" /> Save Spreadsheet
                         </Button>
                       )}
                       {(docType === "txt" || docType === "json" || docType === "pptx") && (
-                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportText}>
+                        <Button className="w-full h-10 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportText}>
                           <Save className="w-4 h-4" /> Save Extracted Text
                         </Button>
                       )}
                       {docType === "docx" && (
                         <>
                           <Button 
-                            className={cn("w-full h-14 rounded-none font-black uppercase tracking-widest text-[10px] gap-3", isEditing ? "bg-amber-500 hover:bg-amber-400 text-black" : "bg-blue-600 hover:bg-blue-500 text-foreground")}
+                            className={cn("w-full h-10 rounded-none font-black uppercase tracking-widest text-[10px] gap-3", isEditing ? "bg-amber-500 hover:bg-amber-400 text-black" : "bg-blue-600 hover:bg-blue-500 text-foreground")}
                             onClick={() => setIsEditing(!isEditing)}
                           >
                             <Edit3 className="w-4 h-4" /> {isEditing ? "Disable Edit Mode" : "Enable Edit Mode"}
                           </Button>
                           {isEditing && (
                             <Button 
-                              className="w-full h-14 rounded-none bg-indigo-600 hover:bg-indigo-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3"
+                              className="w-full h-10 rounded-none bg-indigo-600 hover:bg-indigo-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3"
                               onClick={() => window.print()}
                             >
                               <Save className="w-4 h-4" /> Print / Save as PDF
@@ -411,10 +411,10 @@ export default function DocsMasterClient() {
                           )}
                         </>
                       )}
-                      <Button className="w-full h-14 rounded-none bg-emerald-600 hover:bg-emerald-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => ExportManager.downloadFromUrl(URL.createObjectURL(file), file.name)}>
+                      <Button className="w-full h-10 rounded-none bg-emerald-600 hover:bg-emerald-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => ExportManager.downloadFromUrl(URL.createObjectURL(file), file.name)}>
                         <DownloadCloud className="w-4 h-4" /> Export Original
                       </Button>
-                      <Button variant="outline" className="w-full h-14 rounded-none border-border hover:bg-secondary/50 text-muted-foreground/80 font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => setFile(null)}>
+                      <Button variant="outline" className="w-full h-10 rounded-none border-border hover:bg-secondary/50 text-muted-foreground/80 font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => setFile(null)}>
                         <RefreshCw className="w-4 h-4" /> Load Different
                       </Button>
                     </div>
@@ -518,8 +518,8 @@ export default function DocsMasterClient() {
 
             {/* Main Preview Area */}
             <div className="flex-grow flex flex-col bg-background relative overflow-hidden">
-               <div className="h-14 border-b border-border bg-muted/40 backdrop-blur-xl flex items-center px-8 justify-between shrink-0">
-                  <div className="flex items-center gap-8">
+               <div className="h-10 border-b border-border bg-muted/40 backdrop-blur-xl flex items-center px-8 justify-between shrink-0">
+                  <div className="flex items-center gap-4">
                      <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "preview" ? "text-emerald-500" : "text-muted-foreground/40")} onClick={() => setActiveTab("preview")}>Visual Preview</button>
                      <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "data" ? "text-emerald-500" : "text-muted-foreground/40")} onClick={() => setActiveTab("data")}>Raw Structure</button>
                   </div>
@@ -528,7 +528,7 @@ export default function DocsMasterClient() {
                   </div>
                </div>
 
-               <div className="flex-grow p-8 lg:p-12 overflow-auto custom-scrollbar flex flex-col items-center">
+               <div className="flex-grow p-8 lg:p-5 overflow-auto custom-scrollbar flex flex-col items-center">
                 {/* Document Metadata Bar */}
                 <div className="max-w-6xl w-full mb-6 grid grid-cols-2 md:grid-cols-4 gap-4 px-4 lg:px-0">
                   {[
@@ -551,8 +551,8 @@ export default function DocsMasterClient() {
 
                 <Card className={cn("w-full max-w-6xl min-h-[900px] shadow-2xl rounded-none flex flex-col overflow-hidden border-0 transition-colors duration-500", darkPreview ? "bg-[#111] text-foreground" : "bg-white text-black")}>
                      {/* Pro Preview Header */}
-                     <div className={cn("h-20 border-b flex items-center px-10 justify-between shrink-0 transition-colors duration-500", darkPreview ? "border-border bg-muted/40" : "border-gray-100 bg-gray-50/50")}>
-                        <div className="flex items-center gap-6">
+                     <div className={cn("h-12 border-b flex items-center px-5 justify-between shrink-0 transition-colors duration-500", darkPreview ? "border-border bg-muted/40" : "border-gray-100 bg-gray-50/50")}>
+                        <div className="flex items-center gap-3">
                            <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-foreground shadow-lg transition-transform hover:scale-110", darkPreview ? "bg-white text-black" : "bg-black text-foreground")}>
                               {docType === "xlsx" || docType === "csv" ? <FileSpreadsheet className="w-5 h-5" /> : 
                                docType === "docx" ? <FileText className="w-5 h-5" /> :
@@ -610,7 +610,7 @@ export default function DocsMasterClient() {
                         </div>
                      </div>
 
-                     <div className="flex-grow p-10 overflow-auto scrollbar-hide">
+                     <div className="flex-grow p-5 overflow-auto scrollbar-hide">
                         <div style={{ transform: `scale(${zoom / 100})`, transformOrigin: "top center", transition: "transform 0.2s ease-out" }} className="w-full h-full">
                            {activeTab === "preview" ? (
                               docType === "xlsx" || docType === "csv" ? (
@@ -664,9 +664,9 @@ export default function DocsMasterClient() {
                               ) : docType === "pdf" ? (
                                  <iframe src={previewContent} className={cn("w-full h-[1200px] border-0 shadow-inner transition-all", darkPreview && "invert brightness-90 contrast-110")} />
                               ) : (
-                                 <div className="space-y-8 h-full">
+                                 <div className="space-y-4 h-full">
                                     <textarea 
-                                       className={cn("w-full h-[800px] p-10 font-mono text-sm leading-relaxed border-0 focus:outline-none transition-all rounded-none resize-none", 
+                                       className={cn("w-full h-[800px] p-5 font-mono text-sm leading-relaxed border-0 focus:outline-none transition-all rounded-none resize-none", 
                                           darkPreview ? "bg-muted/40 text-emerald-400/80" : "bg-gray-50/50 text-gray-800")}
                                        value={typeof previewContent === "string" ? previewContent : JSON.stringify(previewContent, null, 2)}
                                        onChange={(e) => setPreviewContent(e.target.value)}
@@ -675,8 +675,8 @@ export default function DocsMasterClient() {
                                  </div>
                               )
                            ) : (
-                              <div className="font-mono text-[11px] p-10 bg-gray-900 text-emerald-400 rounded-none overflow-auto w-full min-h-[700px] shadow-2xl">
-                                 <div className="flex items-center gap-4 mb-8 text-muted-foreground/60 uppercase tracking-widest border-b border-border pb-4">
+                              <div className="font-mono text-[11px] p-5 bg-gray-900 text-emerald-400 rounded-none overflow-auto w-full min-h-[700px] shadow-2xl">
+                                 <div className="flex items-center gap-4 mb-4 text-muted-foreground/60 uppercase tracking-widest border-b border-border pb-4">
                                     <Database className="w-5 h-5" /> Structural Metadata Analysis
                                  </div>
                                  <pre className="leading-relaxed">{JSON.stringify(metadata, null, 3)}</pre>

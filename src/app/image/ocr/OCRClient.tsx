@@ -120,7 +120,7 @@ export default function OCRClient() {
         {/* Decorative Background */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -mr-48 -mt-48 pointer-events-none" />
         
-        <div className="space-y-12 relative z-10">
+        <div className="space-y-6 relative z-10">
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -130,7 +130,7 @@ export default function OCRClient() {
               <Sparkles className="w-3.5 h-3.5" />
               AI Visual Intelligence
             </motion.div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight italic">
+            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
               OCR <span className="text-primary not-italic">Studio.</span>
             </h1>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
@@ -139,13 +139,13 @@ export default function OCRClient() {
             <PrivacyBadge />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {/* Input Column */}
-            <div className="space-y-8">
+            <div className="space-y-4">
               {!file ? (
-                <DropZone onFilesDrop={handleDrop} accept="image/*" multiple={false} className="h-96 rounded-[3rem] border-dashed border-border bg-secondary/50" />
+                <DropZone onFilesDrop={handleDrop} accept="image/*" multiple={false} className="h-96 rounded-2xl border-dashed border-border bg-secondary/50" />
               ) : (
-                <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8 overflow-hidden relative group">
+                <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-4 overflow-hidden relative group">
                   <div className="aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-2xl relative">
                     {preview && <img src={preview} className="w-full h-full object-contain" alt="Preview" />}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -157,7 +157,7 @@ export default function OCRClient() {
                     <div className="flex flex-col gap-2">
                        <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Select Language</Label>
                        <Select value={language} onValueChange={(val) => val && setLanguage(val)}>
-                          <SelectTrigger className="h-14 rounded-2xl bg-secondary/50 border-border font-bold">
+                          <SelectTrigger className="h-10 rounded-2xl bg-secondary/50 border-border font-bold">
                              <div className="flex items-center gap-3">
                                <Languages className="w-4 h-4 text-primary" />
                                <SelectValue placeholder="Select Language" />
@@ -173,7 +173,7 @@ export default function OCRClient() {
 
                     <div className="flex gap-4">
                        <Button 
-                         className="flex-grow h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black gap-2 shadow-2xl shadow-primary/20 italic"
+                         className="flex-grow h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black gap-2 shadow-2xl shadow-primary/20 italic"
                          onClick={runOCR}
                          disabled={status === "loading" || status === "processing"}
                        >
@@ -186,7 +186,7 @@ export default function OCRClient() {
                        <Button 
                          variant="ghost" 
                          size="icon" 
-                         className="h-14 w-14 rounded-2xl border border-border text-red-500 hover:bg-red-500/10"
+                         className="h-10 w-10 rounded-2xl border border-border text-red-500 hover:bg-red-500/10"
                          onClick={() => { setFile(null); setResult(""); setStatus("idle"); }}
                        >
                          <Trash2 className="w-5 h-5" />
@@ -198,9 +198,9 @@ export default function OCRClient() {
             </div>
 
             {/* Output Column */}
-            <div className="space-y-8">
-              <Card className="h-full p-8 rounded-[3rem] bg-secondary/30 border-border flex flex-col min-h-[500px]">
-                <div className="flex items-center justify-between mb-8">
+            <div className="space-y-4">
+              <Card className="h-full p-8 rounded-2xl bg-secondary/30 border-border flex flex-col min-h-[500px]">
+                <div className="flex items-center justify-between mb-4">
                    <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                         <FileText className="w-5 h-5 text-primary" />
@@ -228,14 +228,14 @@ export default function OCRClient() {
                    />
                    {!result && status === "idle" && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-10 pointer-events-none space-y-4">
-                        <FileSearch className="w-16 h-16" />
+                        <FileSearch className="w-16 h-11" />
                         <p className="font-black uppercase tracking-[0.3em] text-xs">Awaiting Asset</p>
                      </div>
                    )}
                    {(status === "loading" || status === "processing") && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted/20 backdrop-blur-sm rounded-2xl z-10 space-y-6">
-                        <div className="w-20 h-20 rounded-3xl border border-primary/20 flex items-center justify-center relative">
-                           <Loader2 className="w-8 h-8 text-primary animate-spin" />
+                        <div className="w-12 h-12 rounded-3xl border border-primary/20 flex items-center justify-center relative">
+                           <Loader2 className="w-5 h-5 text-primary animate-spin" />
                            <div className="absolute inset-0 bg-primary/5 blur-xl rounded-full" />
                         </div>
                         <div className="text-center space-y-2">
@@ -250,14 +250,14 @@ export default function OCRClient() {
           </div>
 
           {/* Feature Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-12">
              {[
                { icon: FileSearch, title: "Neural OCR", desc: "Advanced pattern recognition engines for high-accuracy text extraction." },
                { icon: ShieldCheck, title: "100% Private", desc: "Neural weights are executed locally. No image data is ever transmitted." },
                { icon: Zap, title: "GPU Enabled", desc: "Hardware accelerated inference for lightning-fast character recognition." }
              ].map((feature, i) => (
-               <div key={i} className="p-8 rounded-[2.5rem] bg-secondary/30 border border-border space-y-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+               <div key={i} className="p-8 rounded-2xl bg-secondary/30 border border-border space-y-4">
+                  <div className="w-8 h-8 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h4 className="font-black uppercase tracking-widest text-sm">{feature.title}</h4>

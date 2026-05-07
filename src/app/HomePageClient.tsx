@@ -385,23 +385,23 @@ export default function HomePageClient() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-[200] bg-primary/20 backdrop-blur-xl flex items-center justify-center pointer-events-none"
             >
-              <div className="p-20 rounded-[4rem] border-4 border-dashed border-primary/50 flex flex-col items-center gap-8 bg-card/80 backdrop-blur-2xl shadow-2xl">
-                <div className="w-24 h-24 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
+              <div className="p-8 rounded-3xl border-4 border-dashed border-primary/50 flex flex-col items-center gap-4 bg-card/80 backdrop-blur-2xl shadow-2xl">
+                <div className="w-12 h-12 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
                   <Upload className="w-12 h-12 text-foreground animate-bounce" />
                 </div>
-                <h2 className="text-4xl font-black uppercase tracking-tighter text-foreground">Drop to Route</h2>
+                <h2 className="text-2xl font-black uppercase tracking-tighter text-foreground">Drop to Route</h2>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
 
-        <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="container mx-auto px-4 pt-24 pb-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-5">
             <div className="space-y-6">
               <Badge variant="outline" className="py-2 px-6 rounded-full border-primary/30 bg-primary/5 text-[10px] font-black uppercase tracking-[0.3em] text-primary shadow-lg shadow-primary/10">
                 Universal Engine · {tools.length} Tools Armed
               </Badge>
-              <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.9] uppercase italic">
+              <h1 className="text-2xl md:text-xl font-black tracking-tight leading-[0.9] uppercase italic">
                 Privacy is <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary animate-gradient">
                   Not a Luxury.
@@ -414,12 +414,12 @@ export default function HomePageClient() {
             </div>
 
             <div className="max-w-2xl mx-auto relative group">
-              <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative flex items-center bg-card/40 backdrop-blur-3xl border border-border rounded-[2rem] p-2 pr-4 shadow-2xl focus-within:border-primary/50 transition-all">
-                <div className="pl-6 text-primary"><Search className="w-6 h-6" /></div>
+              <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative flex items-center bg-card/40 backdrop-blur-3xl border border-border rounded-xl p-2 pr-4 shadow-2xl focus-within:border-primary/50 transition-all">
+                <div className="pl-4 text-primary"><Search className="w-6 h-6" /></div>
                 <Input 
                   placeholder="Find a tool (e.g. 'HEIC to PDF', 'OCR')..." 
-                  className="bg-transparent border-none focus-visible:ring-0 text-lg h-14 font-black uppercase italic"
+                  className="bg-transparent border-none focus-visible:ring-0 text-lg h-10 font-black uppercase italic"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -428,7 +428,7 @@ export default function HomePageClient() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {stats.map((s, i) => (
-                <div key={i} className="p-5 rounded-[1.5rem] bg-card/40 backdrop-blur-xl border border-border space-y-2 group transition-all hover:border-primary/30">
+                <div key={i} className="p-5 rounded-xl bg-card/40 backdrop-blur-xl border border-border space-y-2 group transition-all hover:border-primary/30">
                   <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">
                     <s.icon className={`w-3.5 h-3.5 ${s.color}`} /> {s.label}
                   </div>
@@ -449,15 +449,15 @@ export default function HomePageClient() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 pb-20 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto" role="list">
+        <div className="container mx-auto px-4 pb-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto" role="list">
             {filteredTools.map((tool, i) => (
               <div key={tool.title} role="listitem">
                 <Link href={tool.href} aria-label={`Open ${tool.title}: ${tool.desc}`}>
-                  <Card className="group h-full p-8 rounded-[3rem] bg-card/40 backdrop-blur-3xl border border-border hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-primary/5">
+                  <Card className="group h-full p-8 rounded-2xl bg-card/40 backdrop-blur-3xl border border-border hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-primary/5">
                     <div className="relative z-10 space-y-6">
                       <div className="flex items-start justify-between">
-                        <div className={cn("w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500", tool.color)}>
+                        <div className={cn("w-10 h-10 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500", tool.color)}>
                           <tool.icon className="w-7 h-7 text-foreground" />
                         </div>
                         <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -477,21 +477,21 @@ export default function HomePageClient() {
 
         <section className="container mx-auto px-4 py-32 border-t border-border relative z-10">
           <div className="max-w-4xl mx-auto space-y-24">
-            <div className="space-y-8 text-center">
+            <div className="space-y-4 text-center">
               <Badge className="bg-primary/10 text-primary border-primary/20 py-2 px-6 rounded-full uppercase tracking-[0.3em] text-[10px] font-black">Private Advantage</Badge>
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none uppercase italic text-foreground">Why choose <br/> <span className="text-primary">Safe Computing?</span></h2>
+              <h2 className="text-xl md:text-2xl font-black tracking-tighter leading-none uppercase italic text-foreground">Why choose <br/> <span className="text-primary">Safe Computing?</span></h2>
               <p className="text-muted-foreground text-xl font-medium max-w-2xl mx-auto leading-relaxed italic">Hardware performance meets data sovereignty. We process everything in your browser's RAM.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                {[
                  { icon: CloudOff, title: "Zero Server Uploads", desc: "Most 'online' tools upload your files. SafeTools uses WebAssembly to process files locally. No data ever leaves your machine." },
                  { icon: Zap, title: "Instant Processing", desc: "No upload/download wait times. Experience native performance right in your browser tab." },
                  { icon: Verified, title: "Verified Privacy", desc: "Open architecture. No tracking pixels, no analytics. Absolute data sovereignty by design." },
                  { icon: Award, title: "Pro Quality", desc: "High-performance engines like FFmpeg and PDF-lib running locally on your hardware." }
                ].map((item, i) => (
-                 <div key={i} className="flex gap-6 items-start group">
-                   <div className="w-14 h-14 rounded-2xl bg-secondary/50 border border-border flex items-center justify-center shrink-0 group-hover:border-primary/40 group-hover:bg-primary/5 transition-all">
+                 <div key={i} className="flex gap-3 items-start group">
+                   <div className="w-10 h-10 rounded-2xl bg-secondary/50 border border-border flex items-center justify-center shrink-0 group-hover:border-primary/40 group-hover:bg-primary/5 transition-all">
                      <item.icon className="w-6 h-6 text-primary" />
                    </div>
                    <div className="space-y-3">
@@ -502,16 +502,16 @@ export default function HomePageClient() {
                ))}
             </div>
 
-            <div className="space-y-16 pt-16 border-t border-border">
+            <div className="space-y-6 pt-6 border-t border-border">
                <div className="text-center space-y-4">
-                 <h3 className="text-4xl font-black uppercase italic tracking-tighter text-foreground">Frequently Asked <span className="text-primary">Questions.</span></h3>
+                 <h3 className="text-2xl font-black uppercase italic tracking-tighter text-foreground">Frequently Asked <span className="text-primary">Questions.</span></h3>
                </div>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     { q: "Is SafeTools really free?", a: "Yes. All our tools are free with no limits. We pass the savings of zero-server infrastructure directly to you." },
                     { q: "Do I need an account?", a: "Never. Just drop your file and go. We don't want your personal data." }
                   ].map((faq, i) => (
-                    <div key={i} className="p-10 bg-card/40 backdrop-blur-xl border border-border rounded-[2.5rem] space-y-4 shadow-sm hover:border-primary/20 transition-colors">
+                    <div key={i} className="p-5 bg-card/40 backdrop-blur-xl border border-border rounded-2xl space-y-4 shadow-sm hover:border-primary/20 transition-colors">
                        <h4 className="font-black text-lg uppercase tracking-tight flex items-center gap-3 text-foreground italic">
                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-[10px]">Q</div> {faq.q}
                        </h4>
@@ -522,7 +522,7 @@ export default function HomePageClient() {
             </div>
 
             {/* Technical Directory - Long Tail Keyword SEO */}
-            <div className="space-y-8 pt-16 border-t border-border">
+            <div className="space-y-4 pt-6 border-t border-border">
                <div className="flex items-center gap-3">
                  <List className="w-5 h-5 text-primary" />
                  <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground/60 italic">Technical Utility Directory</h3>
@@ -537,13 +537,13 @@ export default function HomePageClient() {
         </section>
 
         <Dialog open={isRoutingOpen} onOpenChange={setIsRoutingOpen}>
-          <DialogContent className="sm:max-w-xl bg-card border-border p-10 rounded-[3rem] shadow-2xl backdrop-blur-3xl">
+          <DialogContent className="sm:max-w-xl bg-card border-border p-5 rounded-2xl shadow-2xl backdrop-blur-3xl">
             <DialogHeader>
-              <DialogTitle className="text-3xl font-black tracking-tighter uppercase text-center mb-8 text-foreground italic">Smart File Routing</DialogTitle>
+              <DialogTitle className="text-xl font-black tracking-tighter uppercase text-center mb-4 text-foreground italic">Smart File Routing</DialogTitle>
             </DialogHeader>
             <div className="grid grid-cols-1 gap-4">
               {getSuggestedTools(smartRoutingFile).map((tool) => (
-                <Button key={tool.href} variant="outline" className="h-20 justify-start px-6 rounded-3xl border-border bg-secondary/30 hover:bg-secondary/50 group transition-all" onClick={() => router.push(tool.href)}>
+                <Button key={tool.href} variant="outline" className="h-12 justify-start px-6 rounded-3xl border-border bg-secondary/30 hover:bg-secondary/50 group transition-all" onClick={() => router.push(tool.href)}>
                   <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 shadow-lg group-hover:scale-105 transition-transform", tool.color)}><tool.icon className="w-6 h-6 text-foreground" /></div>
                   <div className="text-left font-black uppercase tracking-tight text-base text-foreground italic">{tool.title}</div>
                 </Button>
