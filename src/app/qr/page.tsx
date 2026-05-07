@@ -41,7 +41,7 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
 export default function QrStudioPage() {
-  const [value, setValue] = useState("https://privatetools.local");
+  const [value, setValue] = useState("https://safetools.local");
   const [fgColor, setFgColor] = useState("#8b5cf6");
   const [bgColor, setBgColor] = useState("#ffffff");
   const [size, setSize] = useState(256);

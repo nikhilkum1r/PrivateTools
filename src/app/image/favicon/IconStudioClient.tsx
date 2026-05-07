@@ -283,95 +283,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
     return new Blob([u8arr], { type: mime });
   };
 
-  const InspectorContent = () => (
-    <div className="flex flex-col h-full bg-[#0a0a0a] min-h-0">
-      <div className="px-8 py-8 border-b border-white/5 bg-black/40 backdrop-blur-xl shrink-0">
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex flex-col gap-1">
-             <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary italic">Matrix Output</h4>
-             <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Atomic Node Synthesis</p>
-          </div>
-          <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black">{results.length} NODES</Badge>
-        </div>
-        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-          <TabsList className="bg-black/40 border border-white/5 rounded-[1.5rem] w-full p-1.5 h-14">
-            {categories.map(cat => (
-              <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
-      </div>
 
-      <ScrollArea className="flex-grow min-h-0">
-        <div className="p-8 space-y-6">
-          <AnimatePresence mode="popLayout">
-            {filteredResults.map((r, i) => (
-              <motion.div
-                key={r.name}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.03 }}
-                className="group p-5 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-primary/30 hover:bg-primary/5 transition-all flex items-center gap-6 relative overflow-hidden"
-              >
-                <div className="w-20 h-20 rounded-[1.5rem] bg-black border border-white/10 flex items-center justify-center p-4 shrink-0 shadow-2xl group-hover:scale-105 transition-transform duration-500 relative">
-                  <img src={r.url} className="max-w-full max-h-full object-contain relative z-10" alt="" />
-                  <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <div className="flex-grow min-w-0">
-                  <p className="text-[11px] font-black truncate text-white uppercase tracking-wider mb-2 leading-none italic">{r.name.split('/').pop()}</p>
-                  <div className="flex items-center gap-2">
-                    <Badge variant="outline" className="text-[8px] px-2 h-4 border-white/5 bg-white/5 text-white/40 uppercase font-black">{r.size}</Badge>
-                    <div className="w-1 h-1 rounded-full bg-white/10" />
-                    <span className="text-[9px] font-black uppercase tracking-widest text-primary/60">{r.category}</span>
-                  </div>
-                </div>
-                <Button 
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => {
-                    ExportManager.downloadFile(
-                      dataURLToBlob(r.url), 
-                      r.name.split('/').pop()!
-                    );
-                  }}
-                  className="h-12 w-12 rounded-2xl opacity-0 group-hover:opacity-100 text-primary hover:bg-primary/20 transition-all active:scale-90"
-                >
-                  <Download className="w-5 h-5" />
-                </Button>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-
-          {results.length === 0 && (
-            <div className="py-40 text-center space-y-8 group">
-              <div className="w-24 h-24 rounded-[3rem] bg-white/5 border border-dashed border-white/10 mx-auto flex items-center justify-center relative overflow-hidden">
-                <Grid className="w-10 h-10 text-white/20 group-hover:rotate-90 transition-transform duration-1000" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-              </div>
-              <div className="space-y-2">
-                <p className="text-sm font-black uppercase tracking-[0.4em] text-white/20">Matrix Standby</p>
-                <p className="text-[9px] text-white/10 uppercase font-bold tracking-widest">Architect identity to populate nodes</p>
-              </div>
-            </div>
-          )}
-        </div>
-      </ScrollArea>
-      
-      <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
-        <Button 
-          className="w-full h-18 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-white font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
-          onClick={handleDownloadZip}
-          disabled={results.length === 0}
-        >
-          <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <DownloadCloud className="w-5 h-5" />
-          </div>
-          Export Studio Bundle
-        </Button>
-      </div>
-    </div>
-  );
 
   return (
     <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
@@ -536,7 +448,15 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                       <Cpu className="w-6 h-6 text-primary" /> Matrix Inspector
                     </SheetTitle>
                   </SheetHeader>
-                  <InspectorContent />
+                  <InspectorContent 
+                    results={results} 
+                    activeCategory={activeCategory} 
+                    setActiveCategory={setActiveCategory} 
+                    categories={categories} 
+                    filteredResults={filteredResults} 
+                    handleDownloadZip={handleDownloadZip} 
+                    dataURLToBlob={dataURLToBlob} 
+                  />
                 </SheetContent>
               </Sheet>
             </div>
@@ -814,7 +734,15 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
             </div>
             <Badge variant="outline" className="text-[9px] border-white/10 bg-white/5 text-white/30 uppercase font-black px-4 py-1.5 rounded-full italic">Active</Badge>
           </div>
-          <InspectorContent />
+          <InspectorContent 
+            results={results} 
+            activeCategory={activeCategory} 
+            setActiveCategory={setActiveCategory} 
+            categories={categories} 
+            filteredResults={filteredResults} 
+            handleDownloadZip={handleDownloadZip} 
+            dataURLToBlob={dataURLToBlob} 
+          />
         </aside>
 
       </main>
@@ -847,3 +775,111 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
     </div>
   );
 }
+
+
+
+const InspectorContent = ({ 
+  results, 
+  activeCategory, 
+  setActiveCategory, 
+  categories, 
+  filteredResults, 
+  handleDownloadZip,
+  dataURLToBlob
+}: { 
+  results: FaviconResult[], 
+  activeCategory: string, 
+  setActiveCategory: (cat: string) => void, 
+  categories: string[], 
+  filteredResults: FaviconResult[], 
+  handleDownloadZip: () => void,
+  dataURLToBlob: (dataUrl: string) => Blob
+}) => (
+  <div className="flex flex-col h-full bg-[#0a0a0a] min-h-0">
+    <div className="px-8 py-8 border-b border-white/5 bg-black/40 backdrop-blur-xl shrink-0">
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col gap-1">
+           <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary italic">Matrix Output</h4>
+           <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Atomic Node Synthesis</p>
+        </div>
+        <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black">{results.length} NODES</Badge>
+      </div>
+      <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
+        <TabsList className="bg-black/40 border border-white/5 rounded-[1.5rem] w-full p-1.5 h-14">
+          {categories.map(cat => (
+            <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
+    </div>
+
+    <ScrollArea className="flex-grow min-h-0">
+      <div className="p-8 space-y-6">
+        <AnimatePresence mode="popLayout">
+          {filteredResults.map((r, i) => (
+            <motion.div
+              key={r.name}
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.03 }}
+              className="group p-5 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-primary/30 hover:bg-primary/5 transition-all flex items-center gap-6 relative overflow-hidden"
+            >
+              <div className="w-20 h-20 rounded-[1.5rem] bg-black border border-white/10 flex items-center justify-center p-4 shrink-0 shadow-2xl group-hover:scale-105 transition-transform duration-500 relative">
+                <img src={r.url} className="max-w-full max-h-full object-contain relative z-10" alt="" />
+                <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <div className="flex-grow min-w-0">
+                <p className="text-[11px] font-black truncate text-white uppercase tracking-wider mb-2 leading-none italic">{r.name.split('/').pop()}</p>
+                <div className="flex items-center gap-2">
+                  <Badge variant="outline" className="text-[8px] px-2 h-4 border-white/5 bg-white/5 text-white/40 uppercase font-black">{r.size}</Badge>
+                  <div className="w-1 h-1 rounded-full bg-white/10" />
+                  <span className="text-[9px] font-black uppercase tracking-widest text-primary/60">{r.category}</span>
+                </div>
+              </div>
+              <Button 
+                variant="ghost"
+                size="icon"
+                onClick={() => {
+                  ExportManager.downloadFile(
+                    dataURLToBlob(r.url), 
+                    r.name.split('/').pop()!
+                  );
+                }}
+                className="h-12 w-12 rounded-2xl opacity-0 group-hover:opacity-100 text-primary hover:bg-primary/20 transition-all active:scale-90"
+              >
+                <Download className="w-5 h-5" />
+              </Button>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+
+        {results.length === 0 && (
+          <div className="py-40 text-center space-y-8 group">
+            <div className="w-24 h-24 rounded-[3rem] bg-white/5 border border-dashed border-white/10 mx-auto flex items-center justify-center relative overflow-hidden">
+              <Grid className="w-10 h-10 text-white/20 group-hover:rotate-90 transition-transform duration-1000" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
+            </div>
+            <div className="space-y-2">
+              <p className="text-sm font-black uppercase tracking-[0.4em] text-white/20">Matrix Standby</p>
+              <p className="text-[9px] text-white/10 uppercase font-bold tracking-widest">Architect identity to populate nodes</p>
+            </div>
+          </div>
+        )}
+      </div>
+    </ScrollArea>
+    
+    <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
+      <Button 
+        className="w-full h-18 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-white font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
+        onClick={handleDownloadZip}
+        disabled={results.length === 0}
+      >
+        <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+          <DownloadCloud className="w-5 h-5" />
+        </div>
+        Export Studio Bundle
+      </Button>
+    </div>
+  </div>
+);

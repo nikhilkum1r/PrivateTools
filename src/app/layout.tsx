@@ -8,13 +8,52 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PrivateTools — Privacy-First File Toolkit",
-  description: "Secure, browser-based file utility toolkit. Your files stay yours—zero upload, zero tracking.",
+  title: "SafeTools — Free Privacy-First File Tools",
+  description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking — your files never leave your device.",
   manifest: "/manifest.json",
+  metadataBase: new URL("https://safetools.space"),
+  alternates: {
+    canonical: "https://safetools.space",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png", rel: "android-chrome" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png", rel: "android-chrome" },
+    ],
+  },
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
-    title: "PrivateTools",
+    statusBarStyle: "black-translucent",
+    title: "SafeTools",
+  },
+  openGraph: {
+    title: "SafeTools — Free Privacy-First File Tools",
+    description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking — your files never leave your device.",
+    url: "https://safetools.space",
+    siteName: "SafeTools",
+    type: "website",
+    images: [
+      {
+        url: "/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "SafeTools Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "SafeTools — Free Privacy-First File Tools",
+    description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking.",
+    images: ["/android-chrome-512x512.png"],
   },
 };
 
@@ -33,8 +72,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
-      
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VWQJXZLMTH"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VWQJXZLMTH');
+          `}
+        </Script>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -180,7 +180,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
     });
   };
 
-  const SettingsContent = () => (
+  const renderSettings = () => (
     <div className="flex flex-col flex-grow min-h-0">
       <ScrollArea className="flex-grow min-h-0">
         <div className="p-8 space-y-12">
@@ -431,7 +431,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
               </div>
               <Badge variant="outline" className="text-[9px] border-white/10 bg-white/5 text-white/50 uppercase font-black px-3 py-1 rounded-full">Pro</Badge>
             </div>
-            <SettingsContent />
+            {renderSettings()}
           </aside>
 
           {/* Workspace */}
@@ -485,7 +485,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                         <Wand2 className="w-6 h-6 text-primary" /> Optimizer Engine
                       </SheetTitle>
                     </SheetHeader>
-                    <SettingsContent />
+                    {renderSettings()}
                   </SheetContent>
                 </Sheet>
               </div>

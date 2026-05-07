@@ -742,6 +742,59 @@ export default function VideoStudioPage() {
           </>
         )}
       </main>
+
+      {/* Structured Data: SoftwareApplication & FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Video Studio Pro",
+            "operatingSystem": "Any",
+            "applicationCategory": "MultimediaApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Local FFmpeg WASM Encoding",
+              "Precise Anonymization Zones",
+              "Temporal Trimming",
+              "Temporal Velocity (Speed) Adjustment",
+              "Privacy-First Local Processing"
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does video processing consume my data?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Unlike other tools that upload large video files to the cloud, Video Studio Pro runs FFmpeg directly in your browser using WebAssembly. Only the initial WASM engine download (approx 30MB) requires internet access."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I hide faces or license plates?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Use the 'Anonymize' tab to drag and drop blur zones directly onto the video preview. The tool uses hardware-accelerated box-blur filters to scrub identifying details locally."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   );
 }

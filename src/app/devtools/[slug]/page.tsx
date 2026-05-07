@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!tool) return { title: "Developer Tool" };
   
   return {
-    title: `${tool.name} - Professional & Private | PrivateTools`,
+    title: `${tool.name} - Professional & Private | SafeTools`,
     description: `${tool.desc}. Fast, browser-based utility with zero server interaction. Secure and high-performance processing for developers.`,
     keywords: [tool.name.toLowerCase(), tool.id, "developer utility", "private devtools", "local-first"],
     openGraph: {
-      title: `${tool.name} Studio | PrivateTools`,
+      title: `${tool.name} Studio | SafeTools`,
       description: tool.desc,
       type: "website",
     }

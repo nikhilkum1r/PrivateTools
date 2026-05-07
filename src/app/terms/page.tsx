@@ -25,17 +25,17 @@ export default function TermsOfServicePage() {
     {
       title: "1. The Local-First Covenant",
       icon: CloudOff,
-      content: "By using PrivateTools, you understand and agree that this is a client-side execution platform. We provide the 'Architectural Blueprint' (the code), but the 'Construction' (data processing) happens entirely on your local hardware. We do not provide a hosting service for your data; we provide a local execution environment."
+      content: "By using SafeTools, you understand and agree that this is a client-side execution platform. We provide the 'Architectural Blueprint' (the code), but the 'Construction' (data processing) happens entirely on your local hardware. We do not provide a hosting service for your data; we provide a local execution environment."
     },
     {
       title: "2. Absolute Data Sovereignty",
       icon: Database,
-      content: "Your files remain your property and never leave your machine. PrivateTools claims zero rights to your assets. Because we never see your data, we cannot fulfill 'Data Deletion' requests—as we have nothing to delete. You are the sole custodian of your digital assets."
+      content: "Your files remain your property and never leave your machine. SafeTools claims zero rights to your assets. Because we never see your data, we cannot fulfill 'Data Deletion' requests—as we have nothing to delete. You are the sole custodian of your digital assets."
     },
     {
       title: "3. Hardware Execution & Limits",
       icon: Cpu,
-      content: "Processing heavy media (e.g., 4K video or multi-page PDFs) consumes your local CPU, GPU, and RAM. Performance is dependent on your device's capabilities. PrivateTools is not responsible for browser crashes, memory overflows, or thermal throttling resulting from intensive local processing."
+      content: "Processing heavy media (e.g., 4K video or multi-page PDFs) consumes your local CPU, GPU, and RAM. Performance is dependent on your device's capabilities. SafeTools is not responsible for browser crashes, memory overflows, or thermal throttling resulting from intensive local processing."
     },
     {
       title: "4. No Persistence & Recovery",
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
     {
       title: "6. Limitation of Liability",
       icon: AlertTriangle,
-      content: "PrivateTools is provided 'as-is'. We do not guarantee 100% accuracy in file conversion or metadata stripping. We are not liable for any data loss, corruption, or consequential damages arising from the use of our browser-local utilities."
+      content: "SafeTools is provided 'as-is'. We do not guarantee 100% accuracy in file conversion or metadata stripping. We are not liable for any data loss, corruption, or consequential damages arising from the use of our browser-local utilities."
     }
   ];
 

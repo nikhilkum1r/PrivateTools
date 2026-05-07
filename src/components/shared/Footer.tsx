@@ -1,19 +1,8 @@
 import Link from "next/link";
-import { Shield, Heart, ExternalLink, Globe, Zap, Cpu, Lock } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
+import { Heart, Cpu, Lock } from "lucide-react";
 
-const GithubIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-    <path d="M9 18c-4.51 2-5-2-7-2" />
-  </svg>
-);
 
-const TwitterIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-  </svg>
-);
 
 const footerLinks = {
   tools: [
@@ -56,13 +45,11 @@ export function Footer() {
           <div className="lg:col-span-3 space-y-10">
             <div className="space-y-6">
               <Link href="/" className="flex items-center gap-3 group w-fit">
-                <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-blue-600 p-[1px] group-hover:scale-110 transition-transform">
-                  <div className="w-full h-full rounded-[calc(1.1rem)] bg-[#050505] flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-primary" />
-                  </div>
+                <div className="w-12 h-12 flex items-center justify-center rounded-2xl overflow-hidden group-hover:scale-110 transition-transform">
+                  <Image src="/android-chrome-192x192.png" alt="SafeTools Logo" width={48} height={48} className="rounded-2xl" />
                 </div>
                 <span className="font-black text-2xl tracking-tighter text-white italic uppercase">
-                  Private<span className="text-primary">Tools</span>
+                  Safe<span className="text-primary">Tools</span>
                 </span>
               </Link>
               <p className="text-base text-white/40 max-w-md leading-relaxed font-medium">
@@ -81,23 +68,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              {[
-                { icon: GithubIcon, href: "https://github.com" },
-                { icon: TwitterIcon, href: "https://twitter.com" },
-                { icon: Globe, href: "#" }
-              ].map((social, i) => (
-                <a
-                  key={i}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-2xl bg-white/[0.03] border border-white/10 text-white/40 hover:text-white hover:bg-primary/20 hover:border-primary/40 transition-all active:scale-90 shadow-xl"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
+
           </div>
 
           {/* Links Sections */}
@@ -180,7 +151,7 @@ export function Footer() {
         <div className="border-t border-white/5 mt-24 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-6">
             <p className="text-[10px] font-black uppercase tracking-widest text-white/20 italic">
-              © {new Date().getFullYear()} PrivateTools System. Sovereign &amp; Decentralized.
+              © {new Date().getFullYear()} SafeTools System. Sovereign &amp; Decentralized.
             </p>
           </div>
           

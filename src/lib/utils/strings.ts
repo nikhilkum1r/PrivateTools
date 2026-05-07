@@ -16,7 +16,7 @@ export const STRINGS = {
     qrNotDetected:     "QR code not detected. Try a higher resolution or clearer image.",
     cameraPermission:  "Camera permission denied. You can still scan by uploading an image.",
     stegPngRequired:   "Steganography requires a PNG file. JPEG compression destroys hidden data.",
-    lockedFileMagic:   "This file doesn't appear to be a PrivateTools locked file.",
+    lockedFileMagic:   "This file doesn't appear to be a SafeTools locked file.",
     webCryptoNoHttps:  "Encryption requires HTTPS. Please access the app over HTTPS.",
     processingFailed:  "Something went wrong during processing. Please try again.",
   },

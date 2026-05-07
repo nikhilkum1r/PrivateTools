@@ -1,5 +1,5 @@
 # Product Requirements Document (PRD)
-## PrivateTools — Privacy-First File Toolkit
+## SafeTools — Privacy-First File Toolkit
 **Version:** 2.0 (FINAL)
 **Status:** Approved for Development
 **Author:** Solo Developer
@@ -43,7 +43,7 @@
 ## 1. Overview
 
 ### 1.1 Product Vision
-PrivateTools is a modular, browser-based file utility toolkit built on a **privacy-first, zero-upload principle**. All processing happens locally on the user's device for free users. Pro users unlock server-side processing for heavy files and workloads.
+SafeTools is a modular, browser-based file utility toolkit built on a **privacy-first, zero-upload principle**. All processing happens locally on the user's device for free users. Pro users unlock server-side processing for heavy files and workloads.
 
 ### 1.2 Problem Statement
 Most free online file tools (Smallpdf, iLovePDF, Convertio, TinyPNG) upload user files to third-party servers, creating privacy and security risks, often with opaque data retention policies. Users have no reliable, fast, offline-capable alternative that handles images, PDFs, video, audio, documents, and file privacy all in one place — with a clear, honest business model.
@@ -129,7 +129,7 @@ Most free online file tools (Smallpdf, iLovePDF, Convertio, TinyPNG) upload user
 
 | Tool | Privacy | Offline | All-in-one | Free limits | Price |
 |---|---|---|---|---|---|
-| **PrivateTools** | ✅ Zero upload (free) | ✅ PWA | ✅ 8 modules | Generous | ~$8/mo Pro |
+| **SafeTools** | ✅ Zero upload (free) | ✅ PWA | ✅ 8 modules | Generous | ~$8/mo Pro |
 | Smallpdf | ❌ Uploads to server | ❌ | Partial | 2 tasks/day | $12/mo |
 | iLovePDF | ❌ Uploads to server | ❌ | PDF only | Limited | $8/mo |
 | Convertio | ❌ Uploads to server | ❌ | Partial | 100 MB/file | $9.99/mo |
@@ -280,7 +280,7 @@ PRO   =  Server-side processing  (Next.js API routes → Supabase Edge Functions
 ## 7. File & Folder Structure
 
 ```
-privatetools/
+safetools/
 │
 ├── app/                                        # Next.js App Router
 │   ├── layout.tsx                              # Root layout: theme, nav, PWA meta
@@ -614,12 +614,12 @@ CREATE INDEX idx_shared_files_expires ON public.shared_files(expires_at);
 ### 8.5 Supabase Storage Buckets
 
 ```
-privatetools-jobs/            Private. Signed URLs via admin client.
+safetools-jobs/            Private. Signed URLs via admin client.
   └── {user_id}/{job_id}/
       ├── input.{ext}
       └── output.{ext}
 
-privatetools-shared/          Public read via signed URL. Owner write/delete.
+safetools-shared/          Public read via signed URL. Owner write/delete.
   └── {user_id}/{share_token}/
       └── {filename}
 ```
@@ -693,8 +693,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key       # Server only
 
 # App
-NEXT_PUBLIC_APP_URL=https://privatetools.app
-NEXT_PUBLIC_APP_NAME=PrivateTools
+NEXT_PUBLIC_APP_URL=https://safetools.app
+NEXT_PUBLIC_APP_NAME=SafeTools
 
 # Payments
 PAYMENT_WEBHOOK_SECRET=your-webhook-signing-secret
@@ -805,7 +805,7 @@ module.exports = withPWA({
 ## 11. Information Architecture
 
 ```
-PrivateTools
+SafeTools
 ├── Home / Module Picker                  /
 ├── 🖼️  Image Tools                       /image
 ├── 🎬  Video Tools                        /video
@@ -914,7 +914,7 @@ Step 7 → Reset        Clear button resets state without page reload.
 | File is corrupted / unreadable | Catch parse error; show: "This file appears to be corrupted." |
 | User uploads JPEG for steganography | Show warning: "Steganography requires PNG. JPEG compression destroys hidden data." |
 | Zero-byte file | Detect and reject before processing |
-| User uploads wrong `.locked` format | Detect magic bytes; show: "This doesn't appear to be a PrivateTools locked file." |
+| User uploads wrong `.locked` format | Detect magic bytes; show: "This doesn't appear to be a SafeTools locked file." |
 
 ### 15.2 Processing Errors
 | Scenario | Behaviour |
@@ -928,7 +928,7 @@ Step 7 → Reset        Clear button resets state without page reload.
 ### 15.3 Network / PWA Errors
 | Scenario | Behaviour |
 |---|---|
-| App opened offline (first load) | Show: "No internet connection. Please connect to install PrivateTools." |
+| App opened offline (first load) | Show: "No internet connection. Please connect to install SafeTools." |
 | App opened offline (after PWA install) | Works fully — all free features available offline |
 | FFmpeg.wasm not yet cached + offline | Show: "Video tools require an internet connection on first use. Once loaded, they work offline." |
 | Server job attempted offline (Pro) | Detect offline; show: "Server processing requires internet. Your file was not uploaded." |
@@ -1054,7 +1054,7 @@ Step 7 → Reset        Clear button resets state without page reload.
 ### Branding
 | Element | Value |
 |---|---|
-| Recommended name | PrivateTools |
+| Recommended name | SafeTools |
 | Alternatives | ZeroLeak, SafeFiles, LocalConvert |
 | Tagline | "Your files stay yours." |
 | Trust badge (free) | "No data leaves your device" |
@@ -1085,7 +1085,7 @@ Step 7 → Reset        Clear button resets state without page reload.
 
 ### 21.1 SEO
 - Static pages for each tool (SSG via Next.js) — fully crawlable
-- Page titles: "Free Online [Tool] — No Upload Required | PrivateTools"
+- Page titles: "Free Online [Tool] — No Upload Required | SafeTools"
 - Meta descriptions focused on privacy angle for each tool
 - Open Graph image per module (1200×630)
 - Canonical URLs, sitemap.xml, robots.txt
@@ -1098,12 +1098,12 @@ Step 7 → Reset        Clear button resets state without page reload.
 ### 21.2 Marketing Angles
 - "The only file tool that never sees your files" — primary hook
 - Privacy angle for HackerNews, Reddit r/privacy, r/netsec, r/selfhosted
-- Tool comparison posts: "PrivateTools vs Smallpdf — What Happens to Your Files?"
+- Tool comparison posts: "SafeTools vs Smallpdf — What Happens to Your Files?"
 - Product Hunt launch after Phase 1 stabilises (~4 weeks post-launch)
 - Twitter/X thread: "I built a file toolkit where the code processes everything in your browser. Here's how."
 
 ### 21.3 Referral / Growth (Phase 2)
-- "Powered by PrivateTools" watermark on shared file download page (removable with Pro)
+- "Powered by SafeTools" watermark on shared file download page (removable with Pro)
 - Free users can remove watermark by sharing on social
 
 ---

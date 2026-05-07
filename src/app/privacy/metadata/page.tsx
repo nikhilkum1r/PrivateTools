@@ -79,10 +79,6 @@ export default function MetadataCleanerPage() {
 
   const activeFile = files.find(f => f.id === selectedFileId) || files[0];
 
-  useEffect(() => {
-    initEngine();
-  }, []);
-
   const initEngine = async () => {
     try {
       const ffmpeg = await loadFFmpegInstance();
@@ -92,6 +88,10 @@ export default function MetadataCleanerPage() {
       console.error("FFmpeg failed to load", e);
     }
   };
+
+  useEffect(() => {
+    initEngine();
+  }, []);
 
   const handleFilesDrop = async (newFiles: File[]) => {
     const processedFiles = await Promise.all(newFiles.map(async (f) => {

@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const to = parts[1].toUpperCase();
   
   return {
-    title: `Convert ${from} to ${to} Online - Free & Private | PrivateTools`,
+    title: `Convert ${from} to ${to} Online - Free & Private | SafeTools`,
     description: `High-quality ${from} to ${to} converter. Secure, browser-based conversion with zero server uploads. Batch process your ${from} files to ${to} instantly.`,
     keywords: [`convert ${from} to ${to}`, `${from} to ${to} online`, `batch ${from} converter`, `private image conversion`],
     openGraph: {
-      title: `Convert ${from} to ${to} | PrivateTools Studio`,
+      title: `Convert ${from} to ${to} | SafeTools Studio`,
       description: `Professional-grade ${from} to ${to} conversion. 100% private.`,
       type: "website",
     }

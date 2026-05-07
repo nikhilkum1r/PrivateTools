@@ -48,10 +48,6 @@ export default function AudioStudioPage() {
   const ffmpegRef = useRef<any>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => {
-    initEngine();
-  }, []);
-
   const initEngine = async () => {
     try {
       const ffmpeg = await loadFFmpegInstance(
@@ -65,6 +61,10 @@ export default function AudioStudioPage() {
       toast.error("Audio engine failed to initialize.");
     }
   };
+
+  useEffect(() => {
+    initEngine();
+  }, []);
 
   const handleFileDrop = (files: File[]) => {
     if (files[0]) {
@@ -356,6 +356,50 @@ export default function AudioStudioPage() {
           </div>
         </aside>
       </main>
+
+      {/* Structured Data: SoftwareApplication & FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Audio Studio Pro",
+            "operatingSystem": "Any",
+            "applicationCategory": "MultimediaApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "LAME/Vorbis Encoding (WASM)",
+              "Local ID3 Metadata Editing",
+              "Studio Bitrate Control (up to 320kbps)",
+              "Zero-Server Mastering Pipeline"
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is my audio quality preserved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The Audio Studio uses the standard LAME and Vorbis libraries compiled to WebAssembly, ensuring parity with professional desktop software while maintaining 100% privacy."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   );
 }

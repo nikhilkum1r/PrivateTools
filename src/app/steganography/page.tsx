@@ -113,7 +113,7 @@ export default function SteganographyPage() {
         const byte = payload[i];
         for (let bit = 7; bit >= 0; bit--) {
           const bitValue = (byte >> bit) & 1;
-          let pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
+          const pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
           data[pixelIdx] = (data[pixelIdx] & 0xFE) | bitValue;
           bitIdx++;
         }
@@ -154,32 +154,34 @@ export default function SteganographyPage() {
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const data = imageData.data;
       setProgress(40);
-      let lengthBytes = new Uint8Array(4);
+      const lengthBytes = new Uint8Array(4);
       let bitIdx = 0;
       for (let i = 0; i < 4; i++) {
         let byte = 0;
         for (let bit = 7; bit >= 0; bit--) {
-          let pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
+          const pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
           const bitValue = data[pixelIdx] & 1;
           byte |= (bitValue << bit);
           bitIdx++;
         }
         lengthBytes[i] = byte;
       }
+
       const length = new DataView(lengthBytes.buffer).getUint32(0, false);
-      if (length <= 0 || length > 1000000) throw new Error("No secure signature detected.");
-      setProgress(70);
-      let messageBytes = new Uint8Array(length);
+      if (length > (data.length * 3) / 8) throw new Error("Invalid payload length detected.");
+
+      const messageBytes = new Uint8Array(length);
       for (let i = 0; i < length; i++) {
         let byte = 0;
         for (let bit = 7; bit >= 0; bit--) {
-          let pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
+          const pixelIdx = Math.floor(bitIdx / 3) * 4 + (bitIdx % 3);
           const bitValue = data[pixelIdx] & 1;
           byte |= (bitValue << bit);
           bitIdx++;
         }
         messageBytes[i] = byte;
       }
+
       const decoded = new TextDecoder().decode(messageBytes);
       setExtractedMessage(decoded);
       setProgress(100);

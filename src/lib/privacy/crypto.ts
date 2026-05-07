@@ -62,7 +62,7 @@ export async function encryptBlob(blob: Blob, password: string): Promise<Blob> {
 
 /**
  * Decrypt a .locked Blob.
- * Throws if magic bytes don't match (not a PrivateTools locked file).
+ * Throws if magic bytes don't match (not a SafeTools locked file).
  * Throws if decryption fails (wrong password).
  */
 export async function decryptBlob(blob: Blob, password: string): Promise<Blob> {
@@ -73,7 +73,7 @@ export async function decryptBlob(blob: Blob, password: string): Promise<Blob> {
   // Check magic
   const magic = new TextDecoder().decode(data.slice(0, 8));
   if (magic !== "PVTLOCK!") {
-    throw new Error("This doesn't appear to be a PrivateTools locked file.");
+    throw new Error("This doesn't appear to be a SafeTools locked file.");
   }
 
   let offset = 8;

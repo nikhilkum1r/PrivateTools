@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const format = slug.replace("compress-", "").toUpperCase();
   
   return {
-    title: `Compress ${format} Online - Free & Private | PrivateTools`,
+    title: `Compress ${format} Online - Free & Private | SafeTools`,
     description: `Professional-grade ${format} compressor. Reduce file size of your ${format} images without losing quality. 100% private, browser-based optimization.`,
     keywords: [`compress ${format}`, `reduce ${format} file size`, `online ${format} optimizer`, `private image compression`],
     openGraph: {
-      title: `Optimize ${format} Images | PrivateTools`,
+      title: `Optimize ${format} Images | SafeTools`,
       description: `Shrink your ${format} assets by up to 90%. No server uploads.`,
       type: "website",
     }

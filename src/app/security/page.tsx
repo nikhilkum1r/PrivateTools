@@ -57,7 +57,8 @@ export default function SecurityToolsPage() {
     for (let i = 0; i < length; i++) {
       result += allowedChars.charAt(array[i] % allowedChars.length);
     }
-    setPassword(result);
+    // Use setTimeout to avoid synchronous setState during effect (React 18 recommendation)
+    setTimeout(() => setPassword(result), 0);
   };
 
   useEffect(() => {

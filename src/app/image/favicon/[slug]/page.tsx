@@ -37,11 +37,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const displayTitle = slug.replace(/-/g, " ").toUpperCase();
   
   return {
-    title: `${title} | PrivateTools`,
+    title: `${title} | SafeTools`,
     description: `Professional-grade ${displayTitle} tool. Generate 16x16, 32x32 favicons, iOS icons, and Android launcher icons locally in your browser. 100% private.`,
     keywords: [slug.replace(/-/g, " "), "favicon generator", "app icon creator", "pwa icon generator", "private tools icon"],
     openGraph: {
-      title: `${title} | PrivateTools Studio`,
+      title: `${title} | SafeTools Studio`,
       description: `Generate production-ready icons and favicons directly in your browser.`,
       type: "website",
     }

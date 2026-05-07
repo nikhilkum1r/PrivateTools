@@ -2,11 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { 
-  Shield, 
-  ImageIcon, 
-  FileText, 
-  Lock, 
+import Image from "next/image";
+import {
+
+  ImageIcon,
+  FileText,
+  Lock,
   Fingerprint,
   Menu,
   Moon,
@@ -53,20 +54,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const GithubIcon = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-    <path d="M9 18c-4.51 2-5-2-7-2" />
-  </svg>
-);
+
 
 const toolCategories = [
   {
@@ -132,12 +120,12 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-            <Shield className="w-5 h-5 text-primary" />
+          <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
+            <Image src="/android-chrome-192x192.png" alt="SafeTools" width={36} height={36} className="rounded-xl" />
           </div>
           <div className="flex flex-col">
             <span className="font-black text-xl tracking-tight hidden sm:inline-block leading-none">
-              Private<span className="text-primary">Tools</span>
+              Safe<span className="text-primary">Tools</span>
             </span>
             <div className="flex items-center gap-1.5 mt-0.5 hidden md:flex">
               <div className="w-1 h-1 bg-emerald-500 rounded-full animate-pulse" />
@@ -175,8 +163,8 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link 
-                  href="/privacy" 
+                <Link
+                  href="/privacy"
                   className={cn(navigationMenuTriggerStyle(), "bg-transparent font-bold")}
                 >
                   Manifesto
@@ -188,16 +176,10 @@ export function Navbar() {
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-2">
-          <Link 
-            href="https://github.com" 
-            target="_blank" 
-            className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full")}
-          >
-            <GithubIcon className="w-5 h-5" />
-          </Link>
+
 
           <DropdownMenu>
-            <DropdownMenuTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full hover:bg-white/5 transition-all")}>
+            <DropdownMenuTrigger aria-label="Toggle color theme" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full hover:bg-white/5 transition-all")}>
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-primary" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
               <span className="sr-only">Toggle theme</span>
@@ -209,19 +191,12 @@ export function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Button 
-            variant="default" 
-            size="sm" 
-            className="rounded-full bg-primary hover:bg-primary/90 text-white font-black text-[9px] uppercase tracking-[0.2em] h-9 px-5 gap-2 shadow-lg shadow-primary/20 hidden md:flex italic"
-            onClick={() => router.push('/privacy/vault')}
-          >
-            <Lock className="w-3 h-3" /> GOD-TIER Vault
-          </Button>
+
 
           {/* Mobile Menu Toggle */}
           <div className="lg:hidden flex">
             <Sheet>
-              <SheetTrigger 
+              <SheetTrigger
                 render={
                   <Button variant="ghost" size="icon" className="lg:hidden" />
                 }
@@ -231,8 +206,8 @@ export function Navbar() {
               <SheetContent side="left" className="w-[85vw] sm:w-[400px] overflow-y-auto">
                 <SheetHeader className="mb-8 text-left">
                   <SheetTitle className="flex items-center gap-2">
-                    <Shield className="w-5 h-5 text-primary" />
-                    PrivateTools
+                    <Image src="/android-chrome-192x192.png" alt="SafeTools" width={20} height={20} className="rounded-md" />
+                    SafeTools
                   </SheetTitle>
                 </SheetHeader>
                 <div className="flex flex-col gap-8 pb-20">

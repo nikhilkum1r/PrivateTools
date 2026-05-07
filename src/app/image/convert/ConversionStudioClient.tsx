@@ -178,7 +178,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
     );
   };
 
-  const SettingsContent = () => (
+  const renderSettings = () => (
     <div className="flex flex-col flex-grow min-h-0">
       <ScrollArea className="flex-grow min-h-0">
         <div className="p-8 space-y-12">
@@ -364,7 +364,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
               </div>
               <Badge variant="outline" className="text-[9px] border-white/10 bg-white/5 text-white/50 uppercase font-black px-3 py-1 rounded-full">v4.0 Pro</Badge>
             </div>
-            <SettingsContent />
+            {renderSettings()}
           </aside>
 
           {/* Workspace */}
@@ -418,7 +418,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                         <Wand2 className="w-6 h-6 text-primary" /> Studio Engine
                       </SheetTitle>
                     </SheetHeader>
-                    <SettingsContent />
+                    {renderSettings()}
                   </SheetContent>
                 </Sheet>
               </div>
@@ -451,14 +451,14 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                           <div className="space-y-6">
                             <h3 className="text-4xl font-black uppercase tracking-tighter italic">Expert Conversion: <span className="text-primary">{fromFormat.toUpperCase()}</span> to <span className="text-blue-500">{toFormat.toUpperCase()}</span></h3>
                             <p className="text-muted-foreground text-lg leading-relaxed font-medium">
-                              Transform your digital assets with pixel-perfect precision using PrivateTools' proprietary local computing engine. We maintain the highest fidelity across 200+ format pairs, ensuring that every bit of metadata and color depth is preserved—all without your data ever touching a remote server.
+                              Transform your digital assets with pixel-perfect precision using SafeTools' proprietary local computing engine. We maintain the highest fidelity across 200+ format pairs, ensuring that every bit of metadata and color depth is preserved—all without your data ever touching a remote server.
                             </p>
                           </div>
 
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {[
                               { 
-                                title: "Why use PrivateTools?", 
+                                title: "Why use SafeTools?", 
                                 desc: "Standard cloud converters monetize your data. We process everything in sandboxed browser memory, providing 100% data sovereignty.",
                                 icon: Shield 
                               },
@@ -494,7 +494,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                             </h3>
                             <div className="grid grid-cols-1 gap-4">
                               {[
-                                { q: `Is it free to convert ${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()}?`, a: "Yes. PrivateTools is a community-driven utility suite with no subscriptions, paywalls, or hidden costs." },
+                                { q: `Is it free to convert ${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()}?`, a: "Yes. SafeTools is a community-driven utility suite with no subscriptions, paywalls, or hidden costs." },
                                 { q: "Where is my data stored?", a: "Nowhere. Your files exist only in your device's RAM during the conversion process and are purged instantly when the tab is closed." },
                                 { q: "What is the maximum file size?", a: "Since we use your local hardware, there are no software-imposed limits. You are only limited by your available system memory." }
                               ].map((faq, i) => (

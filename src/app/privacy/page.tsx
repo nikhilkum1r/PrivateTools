@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { 
   ShieldAlert, 
@@ -63,7 +64,7 @@ export default function PrivacyManifestoPage() {
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               In an age of surveillance capitalism, we believe your files should remain yours. 
-              PrivateTools was built to prove that professional software doesn't need your data.
+              SafeTools was built to prove that professional software doesn't need your data.
             </p>
           </div>
 
@@ -96,7 +97,7 @@ export default function PrivacyManifestoPage() {
                 When you use a standard online converter, your file is uploaded to a server, processed, 
                 and then stored (even if temporarily). This creates a vulnerability. 
                 <br /><br />
-                PrivateTools uses <strong>WebAssembly (WASM)</strong> and the <strong>Web Canvas API</strong> 
+                SafeTools uses <strong>WebAssembly (WASM)</strong> and the <strong>Web Canvas API</strong> 
                 to bring the processing engine TO your file, rather than sending your file to the engine.
               </p>
             </div>
@@ -121,11 +122,11 @@ export default function PrivacyManifestoPage() {
           <div className="text-center py-12">
             <h2 className="text-4xl font-black mb-8">Ready to work securely?</h2>
             <div className="flex justify-center gap-4">
-              <a href="/">
+              <Link href="/">
                 <Button size="lg" className="rounded-2xl h-14 px-8 font-bold text-lg">
                   Launch the Suite
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

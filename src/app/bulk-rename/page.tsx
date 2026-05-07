@@ -55,7 +55,7 @@ export default function BulkRenamePage() {
 
   const applyLogic = () => {
     setItems(prev => prev.map((item, index) => {
-      let name = item.originalName;
+      const name = item.originalName;
       const extIndex = name.lastIndexOf('.');
       const namePart = extIndex !== -1 ? name.slice(0, extIndex) : name;
       const extPart = extIndex !== -1 ? name.slice(extIndex) : "";

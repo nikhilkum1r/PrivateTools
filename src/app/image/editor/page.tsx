@@ -58,10 +58,12 @@ export default function ImageStudioPage() {
   const [isOcrLoading, setIsOcrLoading] = useState(false);
   const [ocrResult, setOcrResult] = useState<string | null>(null);
   const [extractedColors, setExtractedColors] = useState<string[]>([]);
+  const [imageDimensions, setImageDimensions] = useState<{ naturalWidth: number, naturalHeight: number } | null>(null);
   const [metadataFile, setMetadataFile] = useState<ImageFile | null>(null);
   const [isMobileSettingsOpen, setIsMobileSettingsOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [activeTab, setActiveTab] = useState("format");
+  const [isScanning, setIsScanning] = useState(false);
   const imageRef = useRef<HTMLImageElement>(null);
   
   // History Stack for Undo/Redo
@@ -109,38 +111,6 @@ export default function ImageStudioPage() {
     toast.info("Settings reset");
   };
 
-  // Keyboard Shortcuts
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
-        e.preventDefault();
-        undo();
-      }
-      if ((e.ctrlKey || e.metaKey) && e.key === 'y') {
-        e.preventDefault();
-        redo();
-      }
-      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-        e.preventDefault();
-        handleProcess();
-      }
-      if (e.key === 'r' && !e.ctrlKey && !e.metaKey) {
-        // Only if not in an input
-        if (document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
-          updateSettings({ rotate: ((settings.rotate + 90) % 360) as any });
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [settings, history, redoStack, currentFile]);
-
-  useEffect(() => {
-    if (files.length > 0 && !selectedId) {
-      setSelectedId(files[0].id);
-    }
-  }, [files, selectedId]);
-
   const handleProcess = async () => {
     if (!currentFile) return;
     setIsProcessing(true);
@@ -156,6 +126,8 @@ export default function ImageStudioPage() {
       setFileStatus(currentFile.id, "completed");
       setActiveTab("format");
       toast.success("Image processed successfully");
+      setIsScanning(true);
+      setTimeout(() => setIsScanning(false), 2000);
     } catch (err) {
       setFileStatus(currentFile.id, "error");
       toast.error("Processing failed");
@@ -288,268 +260,53 @@ export default function ImageStudioPage() {
     };
   };
 
-  const CropOverlay = ({ file }: { file: ImageFile }) => {
-    const [isDraggingBox, setIsDraggingBox] = useState(false);
-    const [dragStart, setDragStart] = useState({ x: 0, y: 0, cropX: 0, cropY: 0 });
-    const containerRef = useRef<HTMLDivElement>(null);
-
-    if (!imageRef.current) return null;
-
-    const img = imageRef.current;
-    const rect = img.getBoundingClientRect();
-    const naturalWidth = img.naturalWidth;
-    const naturalHeight = img.naturalHeight;
-
-    // Calculate actual image dimensions within object-contain
-    const imageRatio = naturalWidth / naturalHeight;
-    const containerRatio = rect.width / rect.height;
-    
-    let displayWidth = rect.width;
-    let displayHeight = rect.height;
-    let offsetX = 0;
-    let offsetY = 0;
-
-    if (imageRatio > containerRatio) {
-      displayHeight = rect.width / imageRatio;
-      offsetY = (rect.height - displayHeight) / 2;
-    } else {
-      displayWidth = rect.height * imageRatio;
-      offsetX = (rect.width - displayWidth) / 2;
-    }
-
-    const crop = file.crop || { x: 0, y: 0, width: naturalWidth, height: naturalHeight };
-
-    // Convert natural pixels to display pixels
-    const scale = displayWidth / naturalWidth;
-    const displayX = offsetX + (crop.x * scale);
-    const displayY = offsetY + (crop.y * scale);
-    const displayW = crop.width * scale;
-    const displayH = crop.height * scale;
-
-    const handleMouseDown = (e: React.MouseEvent) => {
-      e.preventDefault();
-      setIsDraggingBox(true);
-      setDragStart({ x: e.clientX, y: e.clientY, cropX: crop.x, cropY: crop.y });
-    };
-
-    useEffect(() => {
-      const handleMouseMove = (e: MouseEvent) => {
-        if (!isDraggingBox) return;
-        const dx = (e.clientX - dragStart.x) / scale;
-        const dy = (e.clientY - dragStart.y) / scale;
-
-        const nextX = Math.max(0, Math.min(naturalWidth - crop.width, dragStart.cropX + dx));
-        const nextY = Math.max(0, Math.min(naturalHeight - crop.height, dragStart.cropY + dy));
-
-        updateFileCrop(file.id, { x: Math.round(nextX), y: Math.round(nextY) });
-      };
-
-      const handleMouseUp = () => setIsDraggingBox(false);
-
-      if (isDraggingBox) {
-        window.addEventListener("mousemove", handleMouseMove);
-        window.addEventListener("mouseup", handleMouseUp);
+  // Keyboard Shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'z') {
+        e.preventDefault();
+        undo();
       }
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-        window.removeEventListener("mouseup", handleMouseUp);
-      };
-    }, [isDraggingBox, dragStart, crop, file.id, scale, naturalWidth, naturalHeight]);
-
-    const handleResize = (handle: string, e: React.MouseEvent) => {
-      e.stopPropagation();
-      e.preventDefault();
-      const startX = e.clientX;
-      const startY = e.clientY;
-      const startCrop = { ...crop };
-
-      const onMove = (moveEvent: MouseEvent) => {
-        const dx = (moveEvent.clientX - startX) / scale;
-        const dy = (moveEvent.clientY - startY) / scale;
-        let nextCrop = { ...startCrop };
-
-        if (handle.includes("e")) nextCrop.width = Math.max(10, Math.min(naturalWidth - startCrop.x, startCrop.width + dx));
-        if (handle.includes("s")) nextCrop.height = Math.max(10, Math.min(naturalHeight - startCrop.y, startCrop.height + dy));
-        if (handle.includes("w")) {
-          const moveX = Math.min(startCrop.width - 10, Math.max(-startCrop.x, dx));
-          nextCrop.x = startCrop.x + moveX;
-          nextCrop.width = startCrop.width - moveX;
+      if ((e.ctrlKey || e.metaKey) && e.key === 'y') {
+        e.preventDefault();
+        redo();
+      }
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault();
+        handleProcess();
+      }
+      if (e.key === 'r' && !e.ctrlKey && !e.metaKey) {
+        // Only if not in an input
+        if (document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+          updateSettings({ rotate: ((settings.rotate + 90) % 360) as any });
         }
-        if (handle.includes("n")) {
-          const moveY = Math.min(startCrop.height - 10, Math.max(-startCrop.y, dy));
-          nextCrop.y = startCrop.y + moveY;
-          nextCrop.height = startCrop.height - moveY;
-        }
-
-        updateFileCrop(file.id, { 
-          x: Math.round(nextCrop.x), 
-          y: Math.round(nextCrop.y), 
-          width: Math.round(nextCrop.width), 
-          height: Math.round(nextCrop.height) 
-        });
-      };
-
-      const onUp = () => {
-        window.removeEventListener("mousemove", onMove);
-        window.removeEventListener("mouseup", onUp);
-      };
-
-      window.addEventListener("mousemove", onMove);
-      window.addEventListener("mouseup", onUp);
+      }
     };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [settings, history, redoStack, currentFile]);
 
-    return (
-      <div className="absolute inset-0 z-40 pointer-events-none select-none overflow-hidden">
-        {/* Dimming overlay */}
-        <svg className="w-full h-full">
-          <defs>
-            <mask id="crop-mask">
-              <rect width="100%" height="100%" fill="white" />
-              <rect 
-                x={displayX} 
-                y={displayY} 
-                width={displayW} 
-                height={displayH} 
-                fill="black" 
-                rx="2"
-              />
-            </mask>
-          </defs>
-          <rect width="100%" height="100%" fill="black/60" mask="url(#crop-mask)" className="pointer-events-auto" />
-        </svg>
+  useEffect(() => {
+    if (files.length > 0 && !selectedId) {
+      setSelectedId(files[0].id);
+    }
+  }, [files, selectedId]);
 
-        {/* Interaction Box */}
-        <div 
-          className="absolute border-2 border-primary shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] cursor-move pointer-events-auto group"
-          style={{ 
-            left: displayX, 
-            top: displayY, 
-            width: displayW, 
-            height: displayH,
-            boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.2)'
-          }}
-          onMouseDown={handleMouseDown}
-        >
-          {/* Grid lines */}
-          <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 opacity-20 pointer-events-none">
-            <div className="border-r border-white/50" />
-            <div className="border-r border-white/50" />
-            <div />
-            <div className="border-b border-white/50" />
-            <div className="border-b border-white/50" />
-            <div />
-          </div>
 
-          {/* Handles */}
-          {["nw", "n", "ne", "e", "se", "s", "sw", "w"].map((h) => (
-            <div
-              key={h}
-              className={cn(
-                "absolute w-4 h-4 bg-primary border-2 border-white rounded-full -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform cursor-pointer shadow-lg",
-                h === "nw" && "left-0 top-0 cursor-nw-resize",
-                h === "n" && "left-1/2 top-0 cursor-n-resize",
-                h === "ne" && "left-full top-0 cursor-ne-resize",
-                h === "e" && "left-full top-1/2 cursor-e-resize",
-                h === "se" && "left-full top-full cursor-se-resize",
-                h === "s" && "left-1/2 top-full cursor-s-resize",
-                h === "sw" && "left-0 top-full cursor-sw-resize",
-                h === "w" && "left-0 top-1/2 cursor-w-resize"
-              )}
-              onMouseDown={(e) => handleResize(h, e)}
-            />
-          ))}
 
-          {/* Animated labels */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-white text-[10px] font-black rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl">
-            {crop.width} × {crop.height} PX
-          </div>
+
+
+  const renderSettings = () => {
+    if (!currentFile) return (
+      <div className="flex-grow flex items-center justify-center p-12 text-center space-y-4">
+        <div className="space-y-2">
+          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20">No Selection</p>
+          <p className="text-xs text-white/10 italic">Upload an image to unlock studio controls.</p>
         </div>
       </div>
     );
-  };
-
-  const BlurOverlay = ({ file }: { file: ImageFile }) => {
-    const [isDrawing, setIsDrawing] = useState(false);
-    const [startPos, setStartPos] = useState({ x: 0, y: 0 });
-    const [currentBlur, setCurrentBlur] = useState<{ x: number, y: number, width: number, height: number } | null>(null);
-    const containerRef = useRef<HTMLDivElement>(null);
-
-    const handleMouseDown = (e: React.MouseEvent) => {
-      const x = e.nativeEvent.offsetX;
-      const y = e.nativeEvent.offsetY;
-      setIsDrawing(true);
-      setStartPos({ x, y });
-    };
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-      if (!isDrawing) return;
-      const x = e.nativeEvent.offsetX;
-      const y = e.nativeEvent.offsetY;
-      
-      const width = Math.abs(x - startPos.x);
-      const height = Math.abs(y - startPos.y);
-      const left = Math.min(x, startPos.x);
-      const top = Math.min(y, startPos.y);
-      
-      setCurrentBlur({ x: left, y: top, width, height });
-    };
-
-    const handleMouseUp = () => {
-      if (!isDrawing) return;
-      setIsDrawing(false);
-      if (currentBlur && currentBlur.width > 5 && currentBlur.height > 5) {
-        const newBlur = { 
-          id: Math.random().toString(36).substring(7),
-          ...currentBlur
-        };
-        updateFileBlurs(file.id, [...(file.blurs || []), newBlur]);
-      }
-      setCurrentBlur(null);
-    };
 
     return (
-      <div 
-        ref={containerRef}
-        className="absolute inset-0 z-40 cursor-crosshair"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-      >
-        {file.blurs?.map(blur => (
-          <div 
-            key={blur.id}
-            className="absolute border-2 border-emerald-500/50 backdrop-blur-3xl group/blur overflow-visible"
-            style={{ 
-              left: blur.x, 
-              top: blur.y, 
-              width: blur.width, 
-              height: blur.height,
-              backgroundColor: 'rgba(0,0,0,0.1)'
-            }}
-          >
-            <div className="absolute inset-0 bg-emerald-500/10 pointer-events-none" />
-            <button 
-              className="absolute -top-3 -right-3 w-6 h-6 bg-destructive text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-xl z-50 hover:scale-110 active:scale-90"
-              onClick={(e) => {
-                e.stopPropagation();
-                updateFileBlurs(file.id, file.blurs?.filter(b => b.id !== blur.id) || []);
-              }}
-            >
-              <X className="w-3 h-3" />
-            </button>
-          </div>
-        ))}
-        {currentBlur && (
-          <div 
-            className="absolute border-2 border-emerald-500 border-dashed bg-emerald-500/10"
-            style={{ left: currentBlur.x, top: currentBlur.y, width: currentBlur.width, height: currentBlur.height }}
-          />
-        )}
-      </div>
-    );
-  };
-
-  const SettingsContent = () => (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="flex flex-col flex-grow min-h-0">
       <div className="px-6 py-4 border-b border-white/5 bg-[#0a0a0a]">
         <TabsList className="bg-white/5 border border-white/5 rounded-2xl w-full p-1 h-12">
@@ -967,16 +724,63 @@ export default function ImageStudioPage() {
                 </p>
                 
                 <div className="space-y-3 pt-2 relative z-10">
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-white transition-all shadow-xl" onClick={() => handleOCR(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-white transition-all shadow-xl" onClick={() => currentFile && handleOCR(currentFile.file)}>
                     {isOcrLoading ? <Loader2 className="w-4 h-4 mr-3 animate-spin" /> : <ScanText className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" />} Extract Text (OCR)
                   </Button>
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all shadow-xl" onClick={() => extractColors(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all shadow-xl" onClick={() => currentFile && extractColors(currentFile.file)}>
                     <Palette className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Design Palette
                   </Button>
-                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition-all shadow-xl" onClick={() => setMetadataFile(currentFile)}>
+                  <Button variant="outline" className="w-full h-14 rounded-[1.25rem] bg-white/[0.03] border-white/10 text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-white transition-all shadow-xl" onClick={() => currentFile && setMetadataFile(currentFile)}>
                     <Info className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Deep Metadata Inspector
                   </Button>
                 </div>
+              </div>
+
+              {/* Watermark Section */}
+              <div className="pt-10 border-t border-white/5 space-y-8">
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-1">
+                    <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Signature Matrix</Label>
+                    <p className="text-[8px] font-bold text-white/10 uppercase tracking-widest">WASM-Level Watermarking</p>
+                  </div>
+                  <Switch 
+                    checked={!!settings.watermarkText} 
+                    onCheckedChange={(checked) => pushSettings({ watermarkText: checked ? "PRIVATE TOOLS" : undefined })} 
+                    className="data-[state=checked]:bg-primary"
+                  />
+                </div>
+
+                {settings.watermarkText !== undefined && (
+                  <motion.div 
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    className="space-y-6 overflow-hidden"
+                  >
+                    <div className="space-y-3">
+                      <Label className="text-[8px] uppercase font-black tracking-widest text-white/40">Custom Label</Label>
+                      <Input 
+                        value={settings.watermarkText}
+                        onChange={(e) => updateSettings({ watermarkText: e.target.value })}
+                        className="bg-white/5 border-white/10 rounded-xl h-12 text-[10px] font-black uppercase tracking-widest"
+                      />
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center">
+                        <Label className="text-[8px] uppercase font-black tracking-widest text-white/40">Density Scale</Label>
+                        <span className="text-[10px] font-mono text-primary font-black">{settings.watermarkSize}PX</span>
+                      </div>
+                      <Slider 
+                        value={[settings.watermarkSize]} 
+                        min={10} 
+                        max={100} 
+                        onValueChange={(v) => {
+                          const val = Array.isArray(v) ? v[0] : v;
+                          updateSettings({ watermarkSize: val });
+                        }}
+                      />
+                    </div>
+                  </motion.div>
+                )}
               </div>
             </div>
 
@@ -1023,9 +827,21 @@ export default function ImageStudioPage() {
           {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5 group-hover:scale-110 transition-transform" />}
           Render Studio Asset
         </Button>
+
+        {files.length > 1 && (
+          <Button 
+            variant="ghost"
+            className="w-full text-white/40 hover:text-white rounded-[1.5rem] font-black h-12 gap-3 text-[9px] uppercase tracking-[0.3em] active:scale-95 transition-all"
+            onClick={handleProcessAll}
+            disabled={isProcessing}
+          >
+            <Zap className="w-4 h-4" /> Neural Batch Render ({files.length} Assets)
+          </Button>
+        )}
       </div>
     </Tabs>
-  );
+    );
+  };
 
   return (
     <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
@@ -1169,7 +985,7 @@ export default function ImageStudioPage() {
                       <Wand2 className="w-6 h-6 text-primary" /> Studio Control
                     </SheetTitle>
                   </SheetHeader>
-                  <SettingsContent />
+                  {renderSettings()}
                 </SheetContent>
               </Sheet>
             </div>
@@ -1238,8 +1054,15 @@ export default function ImageStudioPage() {
                           console.log("Image Loaded:", img.naturalWidth, img.naturalHeight);
                         }}
                       />
-                      {activeTab === "crop" && <CropOverlay file={currentFile} />}
-                      {activeTab === "privacy" && <BlurOverlay file={currentFile} />}
+                      {activeTab === "crop" && imageDimensions && (
+                        <CropOverlay 
+                          file={currentFile} 
+                          imageRef={imageRef} 
+                          dimensions={imageDimensions}
+                          updateFileCrop={updateFileCrop} 
+                        />
+                      )}
+                      {activeTab === "privacy" && <BlurOverlay file={currentFile} updateFileBlurs={updateFileBlurs} />}
                     </div>
                     <AnimatePresence>
                       {isProcessing && (
@@ -1253,6 +1076,23 @@ export default function ImageStudioPage() {
                           <div className="flex flex-col items-center gap-1">
                             <p className="text-[12px] font-black uppercase tracking-[0.5em] text-primary animate-pulse">Neural Processing</p>
                             <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest">Optimizing via WebAssembly</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Neural Scan Animation */}
+                    <AnimatePresence>
+                      {isScanning && (
+                        <motion.div 
+                          initial={{ top: "-10%" }}
+                          animate={{ top: "110%" }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 2, ease: "linear" }}
+                          className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_rgba(var(--primary-rgb),0.8)] z-50 pointer-events-none"
+                        >
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-white text-[8px] font-black uppercase tracking-[0.3em] rounded-full whitespace-nowrap">
+                            Neural Sync In Progress
                           </div>
                         </motion.div>
                       )}
@@ -1447,7 +1287,7 @@ export default function ImageStudioPage() {
             </div>
             <Badge variant="outline" className="text-[9px] border-white/10 bg-white/5 text-white/50 uppercase font-black px-3 py-1 rounded-full italic">Native</Badge>
           </div>
-          <SettingsContent />
+          {renderSettings()}
         </aside>
       </main>
 
@@ -1615,3 +1455,254 @@ export default function ImageStudioPage() {
     </div>
   );
 }
+
+const CropOverlay = ({ 
+  file, 
+  imageRef, 
+  dimensions,
+  updateFileCrop 
+}: { 
+  file: ImageFile, 
+  imageRef: React.RefObject<HTMLImageElement | null>,
+  dimensions: { naturalWidth: number, naturalHeight: number },
+  updateFileCrop: (id: string, crop: { x: number, y: number, width: number, height: number }) => void
+}) => {
+  const [isDraggingBox, setIsDraggingBox] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0, cropX: 0, cropY: 0 });
+  const [displayMetrics, setDisplayMetrics] = useState<{
+    width: number, height: number, offsetX: number, offsetY: number, scale: number
+  } | null>(null);
+
+  const { naturalWidth, naturalHeight } = dimensions;
+
+  useEffect(() => {
+    const measure = () => {
+      if (!imageRef.current) return;
+      const rect = imageRef.current.getBoundingClientRect();
+      const imageRatio = naturalWidth / naturalHeight;
+      const containerRatio = rect.width / rect.height;
+      
+      let displayWidth = rect.width;
+      let displayHeight = rect.height;
+      let offsetX = 0;
+      let offsetY = 0;
+
+      if (imageRatio > containerRatio) {
+        displayHeight = rect.width / imageRatio;
+        offsetY = (rect.height - displayHeight) / 2;
+      } else {
+        displayWidth = rect.height * imageRatio;
+        offsetX = (rect.width - displayWidth) / 2;
+      }
+
+      setDisplayMetrics({
+        width: displayWidth,
+        height: displayHeight,
+        offsetX,
+        offsetY,
+        scale: displayWidth / naturalWidth
+      });
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [imageRef, naturalWidth, naturalHeight]);
+
+  const crop = file.crop || { x: 0, y: 0, width: naturalWidth, height: naturalHeight };
+
+  useEffect(() => {
+    if (!displayMetrics) return;
+    const { scale } = displayMetrics;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDraggingBox) return;
+      const dx = (e.clientX - dragStart.x) / scale;
+      const dy = (e.clientY - dragStart.y) / scale;
+
+      const nextX = Math.max(0, Math.min(naturalWidth - crop.width, dragStart.cropX + dx));
+      const nextY = Math.max(0, Math.min(naturalHeight - crop.height, dragStart.cropY + dy));
+
+      updateFileCrop(file.id, { x: Math.round(nextX), y: Math.round(nextY), width: crop.width, height: crop.height });
+    };
+
+    const handleMouseUp = () => setIsDraggingBox(false);
+
+    if (isDraggingBox) {
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleMouseUp);
+    }
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+    };
+  }, [isDraggingBox, dragStart, crop, file.id, displayMetrics, naturalWidth, naturalHeight, updateFileCrop]);
+
+  if (!displayMetrics) return null;
+
+  const { offsetX, offsetY, scale, width: displayW_total, height: displayH_total } = displayMetrics;
+  const displayX = offsetX + (crop.x * scale);
+  const displayY = offsetY + (crop.y * scale);
+  const displayW = crop.width * scale;
+  const displayH = crop.height * scale;
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDraggingBox(true);
+    setDragStart({ x: e.clientX, y: e.clientY, cropX: crop.x, cropY: crop.y });
+  };
+
+  const handleResize = (handle: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const startCrop = { ...crop };
+
+    const onMove = (moveEvent: MouseEvent) => {
+      const { scale } = displayMetrics;
+      const dx = (moveEvent.clientX - startX) / scale;
+      const dy = (moveEvent.clientY - startY) / scale;
+
+      const nextCrop = { ...startCrop };
+
+      if (handle.includes("e")) nextCrop.width = Math.max(10, Math.min(naturalWidth - startCrop.x, startCrop.width + dx));
+      if (handle.includes("s")) nextCrop.height = Math.max(10, Math.min(naturalHeight - startCrop.y, startCrop.height + dy));
+      if (handle.includes("w")) {
+        const moveX = Math.min(startCrop.width - 10, Math.max(-startCrop.x, dx));
+        nextCrop.x = startCrop.x + moveX;
+        nextCrop.width = startCrop.width - moveX;
+      }
+      if (handle.includes("n")) {
+        const moveY = Math.min(startCrop.height - 10, Math.max(-startCrop.y, dy));
+        nextCrop.y = startCrop.y + moveY;
+        nextCrop.height = startCrop.height - moveY;
+      }
+
+      updateFileCrop(file.id, { 
+        x: Math.round(nextCrop.x), 
+        y: Math.round(nextCrop.y), 
+        width: Math.round(nextCrop.width), 
+        height: Math.round(nextCrop.height) 
+      });
+    };
+
+    const onUp = () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+  };
+
+  return (
+    <div className="absolute inset-0 z-40 pointer-events-none select-none overflow-hidden">
+      <svg className="w-full h-full">
+        <defs>
+          <mask id="crop-mask">
+            <rect width="100%" height="100%" fill="white" />
+            <rect x={displayX} y={displayY} width={displayW} height={displayH} fill="black" rx="2" />
+          </mask>
+        </defs>
+        <rect width="100%" height="100%" fill="black" fillOpacity="0.6" mask="url(#crop-mask)" className="pointer-events-auto" />
+      </svg>
+      <div 
+        className="absolute border-2 border-primary shadow-[0_0_20px_rgba(var(--primary-rgb),0.3)] cursor-move pointer-events-auto group"
+        style={{ left: displayX, top: displayY, width: displayW, height: displayH }}
+        onMouseDown={handleMouseDown}
+      >
+        {["nw", "n", "ne", "e", "se", "s", "sw", "w"].map((h) => (
+          <div
+            key={h}
+            className={cn(
+              "absolute w-4 h-4 bg-primary border-2 border-white rounded-full -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform cursor-pointer shadow-lg",
+              h === "nw" && "left-0 top-0 cursor-nw-resize",
+              h === "n" && "left-1/2 top-0 cursor-n-resize",
+              h === "ne" && "left-full top-0 cursor-ne-resize",
+              h === "e" && "left-full top-1/2 cursor-e-resize",
+              h === "se" && "left-full top-full cursor-se-resize",
+              h === "s" && "left-1/2 top-full cursor-s-resize",
+              h === "sw" && "left-0 top-full cursor-sw-resize",
+              h === "w" && "left-0 top-1/2 cursor-w-resize"
+            )}
+            onMouseDown={(e) => handleResize(h, e)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const BlurOverlay = ({ 
+  file, 
+  updateFileBlurs 
+}: { 
+  file: ImageFile, 
+  updateFileBlurs: (id: string, blurs: any[]) => void
+}) => {
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+  const [currentBlur, setCurrentBlur] = useState<{ x: number, y: number, width: number, height: number } | null>(null);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    const x = e.nativeEvent.offsetX;
+    const y = e.nativeEvent.offsetY;
+    setIsDrawing(true);
+    setStartPos({ x, y });
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDrawing) return;
+    const x = e.nativeEvent.offsetX;
+    const y = e.nativeEvent.offsetY;
+    const width = Math.abs(x - startPos.x);
+    const height = Math.abs(y - startPos.y);
+    const left = Math.min(x, startPos.x);
+    const top = Math.min(y, startPos.y);
+    setCurrentBlur({ x: left, y: top, width, height });
+  };
+
+  const handleMouseUp = () => {
+    if (!isDrawing) return;
+    setIsDrawing(false);
+    if (currentBlur && currentBlur.width > 5 && currentBlur.height > 5) {
+      const newBlur = { id: Math.random().toString(36).substring(7), ...currentBlur };
+      updateFileBlurs(file.id, [...(file.blurs || []), newBlur]);
+    }
+    setCurrentBlur(null);
+  };
+
+  return (
+    <div 
+      className="absolute inset-0 z-40 cursor-crosshair"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+    >
+      {file.blurs?.map(blur => (
+        <div 
+          key={blur.id}
+          className="absolute border-2 border-emerald-500/50 backdrop-blur-3xl group/blur"
+          style={{ left: blur.x, top: blur.y, width: blur.width, height: blur.height, backgroundColor: 'rgba(0,0,0,0.1)' }}
+        >
+          <button 
+            className="absolute -top-3 -right-3 w-6 h-6 bg-destructive text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+            onClick={(e) => {
+              e.stopPropagation();
+              updateFileBlurs(file.id, file.blurs?.filter(b => b.id !== blur.id) || []);
+            }}
+          >
+            <X className="w-3 h-3" />
+          </button>
+        </div>
+      ))}
+      {currentBlur && (
+        <div 
+          className="absolute border-2 border-emerald-500 border-dashed bg-emerald-500/10"
+          style={{ left: currentBlur.x, top: currentBlur.y, width: currentBlur.width, height: currentBlur.height }}
+        />
+      )}
+    </div>
+  );
+};

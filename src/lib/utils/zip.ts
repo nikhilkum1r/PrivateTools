@@ -27,7 +27,7 @@ export async function createZip(
 /** Download multiple blobs as a single ZIP file */
 export async function downloadAsZip(
   files: ZipEntry[],
-  zipFilename = "privatetools-export.zip",
+  zipFilename = "safetools-export.zip",
   onProgress?: (percent: number) => void
 ): Promise<void> {
   const { downloadBlob } = await import("./download");

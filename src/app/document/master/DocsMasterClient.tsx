@@ -246,7 +246,7 @@ export default function DocsMasterClient() {
     
     if (scrubMetadata) {
       newWb.Props = {
-        Author: "PrivateTools User",
+        Author: "SafeTools User",
         Title: "Secured Document",
         CreatedDate: new Date()
       };
@@ -274,8 +274,8 @@ export default function DocsMasterClient() {
       newPdf.addPage(copiedPage);
 
       if (scrubMetadata) {
-        newPdf.setAuthor("PrivateTools User");
-        newPdf.setCreator("PrivateTools Studio");
+        newPdf.setAuthor("SafeTools User");
+        newPdf.setCreator("SafeTools Studio");
         newPdf.setProducer("WASM Engine");
       }
 
@@ -681,7 +681,10 @@ export default function DocsMasterClient() {
                                  </div>
                                  <pre className="leading-relaxed">{JSON.stringify(metadata, null, 3)}</pre>
                                  <div className="mt-10 pt-10 border-t border-white/10 opacity-30 italic">
-                                    Engine analysis complete. Memory address: {Math.random().toString(16).slice(2, 10).toUpperCase()}
+                                    Engine analysis complete. Memory address: {(() => {
+                                      const hash = (file?.name || "0").split("").reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
+                                      return (0xDEADC0DE + hash).toString(16).toUpperCase();
+                                    })()}
                                  </div>
                               </div>
                            )}
@@ -693,6 +696,59 @@ export default function DocsMasterClient() {
           </>
         )}
       </main>
+
+      {/* Structured Data: SoftwareApplication & FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Docs Master Pro",
+            "operatingSystem": "Any",
+            "applicationCategory": "BusinessApplication",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Local DOCX/PPTX/XLSX Rendering",
+              "Privacy Metadata Scrubbing",
+              "PDF Page Extraction",
+              "CSV/JSON Structure Analysis",
+              "Zero-Server Data Sovereignty"
+            ]
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is my sensitive document uploaded to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Docs Master Pro uses local WASM (WebAssembly) engines to render and process documents entirely within your browser's memory. Your data never leaves your machine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which Office formats are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The suite supports DOCX (Word), XLSX (Excel), PPTX (PowerPoint), PDF, CSV, JSON, and standard TXT files using specialized client-side parsers."
+                }
+              }
+            ]
+          })
+        }}
+      />
     </div>
   );
 }

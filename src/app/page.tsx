@@ -3,10 +3,10 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { 
-  Shield, ImageIcon, FileText, Lock, 
-  Video, Music, QrCode, 
-  Zap, Terminal, Search, 
+import {
+  Shield, ImageIcon, FileText, Lock,
+  Video, Music, QrCode,
+  Zap, Terminal, Search,
   Cpu, Layers, ShieldCheck, Database,
   Sparkles, ArrowRight, Palette, Key,
   Eye, FileCode, Fingerprint, Upload,
@@ -24,6 +24,67 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 const CATEGORIES = ["All", "Creative", "Documents", "Media", "Security", "Dev"] as const;
 type Category = typeof CATEGORIES[number];
+
+const HOMEPAGE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://safetools.space/#organization",
+      "name": "SafeTools",
+      "url": "https://safetools.space",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://safetools.space/android-chrome-512x512.png"
+      },
+      "description": "SafeTools provides 150+ free, privacy-first browser-based file utilities for PDF, image, video, audio, and document editing.",
+      "foundingDate": "2024",
+      "sameAs": ["https://safetools.space"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://safetools.space/#website",
+      "url": "https://safetools.space",
+      "name": "SafeTools",
+      "publisher": { "@id": "https://safetools.space/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://safetools.space/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are SafeTools completely free to use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every tool on SafeTools is 100% free with no account required. There are no hidden fees, subscriptions, or usage limits." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do my files get uploaded to a server?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens locally in your browser using WebAssembly (WASM) engines. Your files never leave your device and are never uploaded to any server." }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats does SafeTools support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SafeTools supports 150+ formats including PDF, DOCX, PPTX, XLSX, HEIC, WebP, AVIF, SVG, MP4, MP3, WAV, and many more. Every tool specifies its supported formats clearly." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SafeTools safe for sensitive documents?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Because all processing is done locally with no server uploads, your sensitive documents — medical records, financial files, legal contracts — are processed with complete privacy. The Secure Vault also offers AES-256 GCM client-side encryption." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to install any software?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No installation needed. SafeTools runs entirely in modern browsers like Chrome, Firefox, Safari, and Edge. No plugins, no extensions, no downloads required." }
+        }
+      ]
+    }
+  ]
+};
 
 interface Tool {
   title: string;
@@ -203,7 +264,7 @@ export default function HomePage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState<Category>("All");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  
+
   // Smart Routing State
   const [dragActive, setDragActive] = useState(false);
   const [smartRoutingFile, setSmartRoutingFile] = useState<File | null>(null);
@@ -223,11 +284,11 @@ export default function HomePage() {
   const filteredTools = useMemo(() => {
     return tools.filter(t => {
       const searchTerm = search.toLowerCase().trim();
-      const matchSearch = searchTerm === "" || 
-        t.title.toLowerCase().includes(searchTerm) || 
+      const matchSearch = searchTerm === "" ||
+        t.title.toLowerCase().includes(searchTerm) ||
         t.desc.toLowerCase().includes(searchTerm) ||
         t.tags.some(tag => tag.toLowerCase().includes(searchTerm));
-      
+
       const matchCat = activeCategory === "All" || t.cat === activeCategory;
       return matchSearch && matchCat;
     });
@@ -244,7 +305,7 @@ export default function HomePage() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       setSmartRoutingFile(e.dataTransfer.files[0]);
       setIsRoutingOpen(true);
@@ -272,7 +333,7 @@ export default function HomePage() {
   };
 
   return (
-    <div 
+    <div
       className="flex flex-col min-h-screen bg-[#050505] text-white selection:bg-primary selection:text-white"
       onDragEnter={handleDrag}
       onDragOver={handleDrag}
@@ -280,25 +341,25 @@ export default function HomePage() {
       onDrop={handleDrop}
     >
       <Navbar />
-      
+
       <main className="flex-grow relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-600/10 blur-[140px] rounded-full" />
-          <div 
-            className="absolute inset-0 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" 
-            style={{ 
+          <div
+            className="absolute inset-0 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+            style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)`,
               backgroundSize: '32px 32px'
-            }} 
+            }}
           />
         </div>
 
         {/* Global Drag Overlay */}
         <AnimatePresence>
           {dragActive && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -329,10 +390,7 @@ export default function HomePage() {
                 animate={{ opacity: [0.7, 1, 0.7] }}
                 transition={{ repeat: Infinity, duration: 3 }}
               >
-                <Badge variant="outline" className="py-2 px-6 rounded-full border-primary/30 bg-primary/5 text-[10px] font-black uppercase tracking-[0.3em] text-primary shadow-lg shadow-primary/10">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-ping mr-3 inline-block" />
-                  <Sparkles className="w-3 h-3 mr-2 inline" /> Universal Engine · Online · {tools.length} Tools Armed
-                </Badge>
+
               </motion.div>
               <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-[0.9]">
                 Privacy is <br />
@@ -341,42 +399,15 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-                The world's most powerful collection of 150+ file utilities. 
+                The world's most powerful collection of 150+ file utilities.
                 Everything happens in your browser. No accounts. No servers. No limits.
               </p>
             </motion.div>
 
-            {/* Search Box */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-              className="max-w-2xl mx-auto relative group"
-            >
-              <div className="absolute -inset-4 bg-primary/20 blur-2xl rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative flex items-center bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[2rem] p-2 pr-4 shadow-2xl focus-within:border-primary/50 transition-all">
-                <div className="pl-6 text-primary">
-                  <Search className="w-6 h-6" />
-                </div>
-                <Input 
-                  placeholder="Find a tool (e.g. 'HEIC to PDF', 'OCR', 'Metadata')..." 
-                  className="bg-transparent border-none focus-visible:ring-0 text-lg h-14 font-medium"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-                {search && (
-                  <button
-                    onClick={() => setSearch("")}
-                    className="text-white/30 hover:text-white transition-colors shrink-0"
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-            </motion.div>
+
 
             {/* Stats */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -424,7 +455,15 @@ export default function HomePage() {
         </div>
 
         {/* Tools Grid */}
-        <div className="container mx-auto px-4 pb-40 relative z-10">
+        <div className="container mx-auto px-4 pb-20 relative z-10">
+          <div className="max-w-6xl mx-auto mb-10">
+            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-center">
+              Browse <span className="text-primary">150+ Free Tools</span> — No Account Needed
+            </h2>
+            <p className="text-center text-muted-foreground text-sm mt-3 max-w-xl mx-auto">
+              Convert, compress, encrypt, and edit any file type — entirely offline in your browser.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             <AnimatePresence mode="popLayout">
               {filteredTools.map((tool, i) => (
@@ -461,7 +500,7 @@ export default function HomePage() {
                           </div>
                           <ArrowRight className="w-4 h-4 text-primary opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                         </div>
-                        
+
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
                             <Badge variant="outline" className="text-[9px] uppercase font-black tracking-widest border-white/10 bg-white/5">
@@ -507,6 +546,32 @@ export default function HomePage() {
           )}
         </div>
 
+        {/* FAQ Section */}
+        <section className="container mx-auto px-4 pb-24 relative z-10" aria-label="Frequently Asked Questions">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-black tracking-tight text-center mb-3">
+              Frequently Asked <span className="text-primary">Questions</span>
+            </h2>
+            <p className="text-center text-muted-foreground text-sm mb-12">
+              Everything you need to know about SafeTools and how it keeps your files private.
+            </p>
+            <div className="space-y-4">
+              {[
+                { q: "Are SafeTools completely free to use?", a: "Yes. Every tool on SafeTools is 100% free with no account required. There are no hidden fees, subscriptions, or usage limits." },
+                { q: "Do my files get uploaded to a server?", a: "No. All processing happens locally in your browser using WebAssembly (WASM) engines. Your files never leave your device and are never uploaded to any server." },
+                { q: "What file formats does SafeTools support?", a: "SafeTools supports 150+ formats including PDF, DOCX, PPTX, XLSX, HEIC, WebP, AVIF, SVG, MP4, MP3, WAV, and many more. Every tool specifies its supported formats clearly." },
+                { q: "Is SafeTools safe for sensitive documents?", a: "Absolutely. Because all processing is done locally with no server uploads, your sensitive documents — medical records, financial files, legal contracts — are processed with complete privacy. The Secure Vault also offers AES-256 GCM client-side encryption." },
+                { q: "Do I need to install any software?", a: "No installation needed. SafeTools runs entirely in modern browsers like Chrome, Firefox, Safari, and Edge. No plugins, no extensions, no downloads required." },
+              ].map(({ q, a }, i) => (
+                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all group">
+                  <h3 className="font-bold text-base text-white group-hover:text-primary transition-colors mb-2">{q}</h3>
+                  <p className="text-sm text-white/50 leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Smart Routing Dialog */}
         <Dialog open={isRoutingOpen} onOpenChange={setIsRoutingOpen}>
           <DialogContent className="sm:max-w-xl bg-[#0a0a0a] border-white/10 p-0 overflow-hidden rounded-[3rem]">
@@ -528,16 +593,16 @@ export default function HomePage() {
                 <Badge className="bg-primary/10 text-primary border-primary/20">Smart File Routing</Badge>
                 <DialogTitle className="text-3xl font-black tracking-tight uppercase">Analyze & Process</DialogTitle>
                 <p className="text-muted-foreground font-medium">
-                  We've detected <span className="text-white font-bold">{smartRoutingFile?.name}</span>. <br/>
+                  We've detected <span className="text-white font-bold">{smartRoutingFile?.name}</span>. <br />
                   What would you like to do with it?
                 </p>
               </div>
 
               <div className="grid grid-cols-1 gap-4 relative z-10">
                 {getSuggestedTools(smartRoutingFile).map((tool) => (
-                  <Button 
+                  <Button
                     key={tool.href}
-                    variant="outline" 
+                    variant="outline"
                     className="h-20 justify-start px-6 rounded-3xl border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-primary/30 transition-all group"
                     onClick={() => {
                       // Note: In a real app, we'd pass the file to the tool's store here
@@ -566,27 +631,16 @@ export default function HomePage() {
           </DialogContent>
         </Dialog>
 
-        {/* Privacy Status Badge */}
-        <div className="fixed bottom-8 left-8 z-[100] hidden lg:block">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="p-4 rounded-3xl bg-black/80 backdrop-blur-xl border border-white/10 flex items-center gap-4 shadow-2xl hover:border-emerald-500/30 transition-colors cursor-default group"
-          >
-            <div className="relative">
-              <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping absolute inset-0" />
-              <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full relative" />
-            </div>
-            <div className="text-[10px] font-black uppercase tracking-widest">
-              <span className="text-white/30">Session:</span> <span className="text-emerald-400">Encrypted · Local · Zero-Server</span>
-            </div>
-            <ShieldCheck className="w-4 h-4 text-emerald-500/50 group-hover:text-emerald-500 transition-colors" />
-          </motion.div>
-        </div>
+
       </main>
-      
+
       <Footer />
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOMEPAGE_SCHEMA) }}
+      />
     </div>
   );
 }

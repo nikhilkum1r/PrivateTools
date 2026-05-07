@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "Data Processing Policy",
       icon: CloudOff,
-      content: "PrivateTools operates on a 'Zero-Server' architecture. All file processing—including image editing, video encoding, and PDF manipulation—happens locally in your browser's memory. We do not upload your files to our servers, and we do not have technical access to the data you process."
+      content: "SafeTools operates on a 'Zero-Server' architecture. All file processing—including image editing, video encoding, and PDF manipulation—happens locally in your browser's memory. We do not upload your files to our servers, and we do not have technical access to the data you process."
     },
     {
       title: "No Tracking & Cookies",

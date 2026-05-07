@@ -1,6 +1,6 @@
-# 🛡️ PrivateTools Suite
+# 🛡️ SafeTools Suite
 
-**PrivateTools** is a professional-grade, 100% local-first document and media processing studio. Designed for high-stakes privacy, every byte of your data stays on your machine.
+**SafeTools** is a professional-grade, 100% local-first document and media processing studio. Designed for high-stakes privacy, every byte of your data stays on your machine.
 
 ---
 

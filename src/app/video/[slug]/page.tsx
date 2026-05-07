@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = slug.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
   
   return {
-    title: `${title} - Free, Private & Pro | PrivateTools`,
+    title: `${title} - Free, Private & Pro | SafeTools`,
     description: `Professional-grade ${title} utility. Browser-based execution for maximum privacy and performance. Zero server uploads.`,
     keywords: [slug.replace(/-/g, " "), "private video editor", "local video processing", "wasm video engine"],
     openGraph: {
-      title: `${title} | PrivateTools Studio`,
+      title: `${title} | SafeTools Studio`,
       description: `Secure, local-first ${title} laboratory.`,
       type: "website",
     }
