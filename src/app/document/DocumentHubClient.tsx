@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FileText, FileInput, FileOutput, AlignLeft, ArrowRight } from "lucide-react";
+import { FileText, FileInput, FileOutput, AlignLeft, ArrowRight, Zap } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { PrivacyBadge } from "@/components/shared/PrivacyBadge";
@@ -38,6 +38,15 @@ const TOOLS = [
     tags: ["TXT", "Utility"],
     color: "text-green-500",
     bg: "bg-green-500/10",
+  },
+  {
+    name: "Compress PDF",
+    icon: Zap,
+    href: "/pdf/compress",
+    desc: "Reduce PDF file size while maintaining document quality.",
+    tags: ["PDF", "Optimization"],
+    color: "text-orange-600",
+    bg: "bg-orange-600/10",
   },
 ];
 

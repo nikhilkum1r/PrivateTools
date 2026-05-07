@@ -173,6 +173,15 @@ const tools: Tool[] = [
     tags: ["extract", "pages", "split", "break", "separate", "pdf"]
   },
   {
+    title: "Compress PDF",
+    desc: "Shrink PDF files locally without losing visual quality.",
+    href: "/pdf/compress",
+    icon: Zap,
+    color: "from-orange-600 to-amber-500",
+    cat: "Documents",
+    tags: ["pdf", "compress", "shrink", "optimize", "size", "linearize"]
+  },
+  {
     title: "Convert PDF to Word/PPT",
     desc: "Convert PDFs to PPTX, DOCX or images locally.",
     href: "/pdf/convert",

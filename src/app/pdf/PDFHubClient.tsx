@@ -12,7 +12,8 @@ import {
   Sparkles,
   FileSearch,
   Lock,
-  Unlock
+  Unlock,
+  Zap
 } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
@@ -37,6 +38,14 @@ const docTools = [
     href: "/pdf/split",
     color: "from-blue-500 to-indigo-500",
     tags: ["Precision", "New"]
+  },
+  {
+    title: "Compress PDF",
+    desc: "Reduce file size while maintaining maximum quality. Smart local optimization.",
+    icon: Zap,
+    href: "/pdf/compress",
+    color: "from-orange-500 to-red-600",
+    tags: ["Optimization", "Fast"]
   },
   {
     title: "Unlock PDF",
