@@ -279,7 +279,6 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
                     { label: "Execution Time", value: "0.12ms", icon: Cpu },
                     { label: "Memory Pressure", value: "2.4MB", icon: Layers },
                     { label: "Bit Entropy", value: "High", icon: Sparkles },
-                    { label: "Security Level", value: "GOD-TIER", icon: ShieldCheck },
                   ].map((stat, i) => (
                     <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-secondary/30 border border-border group hover:bg-secondary/50 transition-all">
                       <div className="flex items-center gap-3">

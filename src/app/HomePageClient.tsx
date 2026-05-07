@@ -287,7 +287,6 @@ const tools: Tool[] = [
 
 const stats = [
   { label: "Formats Supported", value: "150+", icon: Layers, color: "text-blue-500 dark:text-blue-400" },
-  { label: "Privacy Rating", value: "GOD-TIER", icon: Shield, color: "text-primary" },
   { label: "Processing", value: "LOCAL WASM", icon: Cpu, color: "text-emerald-600 dark:text-emerald-400" },
   { label: "Data Sent", value: "0 BYTES", icon: Database, color: "text-orange-600 dark:text-orange-400" },
 ];
@@ -426,7 +425,7 @@ export default function HomePageClient() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
               {stats.map((s, i) => (
                 <div key={i} className="p-5 rounded-xl bg-card/40 backdrop-blur-xl border border-border space-y-2 group transition-all hover:border-primary/30">
                   <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">

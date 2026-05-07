@@ -374,7 +374,6 @@ const tools: Tool[] = [
 
 const stats = [
   { label: "Formats Supported", value: "150+", icon: Layers, color: "text-blue-400" },
-  { label: "Privacy Rating", value: "GOD-TIER", icon: Shield, color: "text-primary" },
   { label: "Processing", value: "LOCAL WASM", icon: Cpu, color: "text-emerald-400" },
   { label: "Data Sent", value: "0 BYTES", icon: Database, color: "text-orange-400" },
 ];
@@ -531,7 +530,7 @@ export default function HomeClient() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto"
             >
               {stats.map((s, i) => (
                 <motion.div
