@@ -16,177 +16,84 @@ import { toast } from "sonner";
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function pt2mm(pt: number) { return pt * 0.352778; }
 
-// ─── Core conversion: mammoth + jsPDF text API (no html2canvas) ───────────────
-// html2canvas is incompatible with Cross-Origin-Embedder-Policy: require-corp
-// and requires visible DOM nodes — causing blank pages or screen flicker.
-// Instead we parse mammoth's HTML output in memory (DOMParser) and render
-// directly with jsPDF's text/drawing primitives.
 async function docxToPdf(file: File): Promise<Blob> {
   const mammoth    = await import("mammoth");
-  const { jsPDF } = await import("jspdf");
+  const html2canvas = (await import("html2canvas")).default;
+  const { jsPDF }  = await import("jspdf");
 
   const arrayBuffer = await file.arrayBuffer();
   const { value: html } = await mammoth.convertToHtml({ arrayBuffer });
+  if (!html?.trim()) throw new Error("Document appears empty or could not be parsed.");
 
-  if (!html?.trim()) {
-    throw new Error("The document appears to be empty or could not be parsed.");
-  }
+  // Container: fixed at (0,0), nearly invisible (opacity:0.001) and behind the page
+  // (z-index:-9999). The browser still fully renders it — we just can't see it.
+  const container = document.createElement("div");
+  container.style.cssText = [
+    "position:fixed", "top:0", "left:0",
+    "width:794px", "padding:60px 70px", "box-sizing:border-box",
+    "background:#ffffff", "color:#000000",
+    "font-family:Arial,Helvetica,sans-serif", "font-size:12pt", "line-height:1.6",
+    "opacity:0.001", "pointer-events:none", "z-index:-9999",
+  ].join(";");
 
-  // Parse HTML in memory — zero DOM side-effects
-  const parsed = new DOMParser().parseFromString(`<div id="root">${html}</div>`, "text/html");
-  const root   = parsed.getElementById("root")!;
+  container.innerHTML = `<style>
+    .wtp h1{font-size:22pt;font-weight:700;margin:0 0 12px}
+    .wtp h2{font-size:17pt;font-weight:700;margin:12px 0 8px}
+    .wtp h3{font-size:14pt;font-weight:700;margin:10px 0 6px}
+    .wtp p{margin:0 0 10px}
+    .wtp ul,.wtp ol{margin:0 0 10px 24px}
+    .wtp li{margin:3px 0}
+    .wtp table{border-collapse:collapse;width:100%;margin:10px 0}
+    .wtp td,.wtp th{border:1px solid #ccc;padding:6px 10px;font-size:11pt}
+    .wtp th{background:#f0f0f0;font-weight:700}
+    .wtp strong{font-weight:700} .wtp em{font-style:italic}
+    .wtp blockquote{border-left:4px solid #ddd;padding-left:16px;color:#555;margin:10px 0}
+  </style><div class="wtp">${html}</div>`;
 
-  // ── jsPDF setup ─────────────────────────────────────────────────────────────
-  const pdf      = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
-  const pageW    = pdf.internal.pageSize.getWidth();   // 210 mm
-  const pageH    = pdf.internal.pageSize.getHeight();  // 297 mm
-  const mX       = 20;  // horizontal margin
-  const mY       = 20;  // vertical margin
-  const maxW     = pageW - mX * 2;
+  document.body.appendChild(container);
 
-  let curY = mY;
+  try {
+    await new Promise(r => setTimeout(r, 600)); // let layout settle
 
-  function ensureSpace(needed: number) {
-    if (curY + needed > pageH - mY) {
-      pdf.addPage();
-      curY = mY;
+    const contentH = container.scrollHeight;
+    const canvas = await html2canvas(container, {
+      scale: 2,
+      useCORS: false,
+      allowTaint: true,
+      logging: false,
+      backgroundColor: "#ffffff",
+      width: 794,
+      height: contentH,
+      // onclone: restore full opacity on the clone html2canvas renders
+      // so the capture has perfect fidelity while the real element stays hidden
+      onclone: (_doc: Document, el: HTMLElement) => {
+        el.style.opacity = "1";
+        el.style.zIndex  = "auto";
+        el.style.height  = contentH + "px";
+      },
+    });
+
+    if (!canvas.width || !canvas.height) throw new Error("Canvas rendering failed.");
+
+    const pdf  = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
+    const imgW  = pageW;
+    const imgH  = (canvas.height / canvas.width) * imgW;
+    const img   = canvas.toDataURL("image/jpeg", 0.95);
+
+    let y = 0, page = 0;
+    while (y < imgH) {
+      if (page++ > 0) pdf.addPage();
+      pdf.addImage(img, "JPEG", 0, -y, imgW, imgH);
+      y += pageH;
     }
+    return pdf.output("blob");
+  } finally {
+    if (container.parentNode) document.body.removeChild(container);
   }
-
-  // Render a block of text with wrapping and automatic page breaks
-  function renderBlock(
-    text: string,
-    fontSize: number,
-    style: "normal" | "bold" | "italic" | "bolditalic" = "normal",
-    indent = 0,
-    spaceBefore = 0,
-    spaceAfter  = 3,
-  ) {
-    if (!text.trim()) return;
-    curY += spaceBefore;
-    pdf.setFontSize(fontSize);
-    pdf.setFont("helvetica", style);
-    const usableW = maxW - indent;
-    const lines   = pdf.splitTextToSize(text, usableW);
-    const lineH   = pt2mm(fontSize) * 1.45;
-    for (const line of lines) {
-      ensureSpace(lineH);
-      pdf.text(line, mX + indent, curY);
-      curY += lineH;
-    }
-    curY += spaceAfter;
-  }
-
-  // Recursively process the parsed DOM tree
-  function processNode(el: Element, listDepth = 0, listType: "ul" | "ol" = "ul", listIndex = { n: 1 }) {
-    const tag  = el.tagName?.toLowerCase() ?? "";
-    const text = el.textContent?.trim() ?? "";
-
-    switch (tag) {
-      case "h1": renderBlock(text, 20, "bold",   0, 6, 4); break;
-      case "h2": renderBlock(text, 16, "bold",   0, 4, 3); break;
-      case "h3": renderBlock(text, 13, "bold",   0, 3, 2); break;
-      case "h4":
-      case "h5":
-      case "h6": renderBlock(text, 11, "bold",   0, 2, 2); break;
-
-      case "p":
-        if (text) renderBlock(text, 11, "normal", 0, 0, 3);
-        break;
-
-      case "blockquote":
-        renderBlock(text, 11, "italic", 8, 2, 2);
-        break;
-
-      case "ul":
-      case "ol": {
-        const idx = { n: 1 };
-        Array.from(el.children).forEach((li) => {
-          processNode(li, listDepth + 1, tag, idx);
-        });
-        curY += 2;
-        break;
-      }
-
-      case "li": {
-        const bullet = listType === "ol" ? `${listIndex.n++}.  ` : "•  ";
-        const indent = listDepth * 6;
-        if (!text) break;
-        pdf.setFontSize(11);
-        pdf.setFont("helvetica", "normal");
-        const bulletW = pdf.getStringUnitWidth(bullet) * pt2mm(11);
-        const lines   = pdf.splitTextToSize(text, maxW - indent - bulletW);
-        const lineH   = pt2mm(11) * 1.45;
-        ensureSpace(lineH);
-        // bullet on first line, subsequent lines indented
-        pdf.text(bullet, mX + indent, curY);
-        for (let i = 0; i < lines.length; i++) {
-          ensureSpace(lineH);
-          pdf.text(lines[i], mX + indent + bulletW, curY);
-          curY += lineH;
-        }
-        break;
-      }
-
-      case "table": {
-        const rows     = Array.from(el.querySelectorAll("tr"));
-        const colCount = Math.max(...rows.map(r => r.children.length), 1);
-        const colW     = maxW / colCount;
-        pdf.setFontSize(9);
-        for (const row of rows) {
-          const cells  = Array.from(row.children);
-          const cellH  = pt2mm(9) * 1.45 + 4;
-          ensureSpace(cellH + 1);
-          let cx = mX;
-          for (const cell of cells) {
-            const isHeader = cell.tagName.toLowerCase() === "th";
-            const cellText = (cell.textContent ?? "").trim();
-            pdf.setFont("helvetica", isHeader ? "bold" : "normal");
-            pdf.rect(cx, curY - pt2mm(9) * 1.2, colW, cellH);
-            if (cellText) {
-              pdf.text(
-                pdf.splitTextToSize(cellText, colW - 3),
-                cx + 1.5,
-                curY,
-              );
-            }
-            cx += colW;
-          }
-          curY += cellH;
-        }
-        curY += 3;
-        break;
-      }
-
-      case "br":
-        curY += pt2mm(11) * 1.45;
-        break;
-
-      case "hr":
-        curY += 2;
-        ensureSpace(1);
-        pdf.setDrawColor(180, 180, 180);
-        pdf.line(mX, curY, pageW - mX, curY);
-        pdf.setDrawColor(0, 0, 0);
-        curY += 3;
-        break;
-
-      default:
-        // div, span, section, article, etc. — recurse into children
-        for (const child of Array.from(el.children)) {
-          processNode(child, listDepth, listType, listIndex);
-        }
-    }
-  }
-
-  for (const child of Array.from(root.children)) {
-    processNode(child);
-  }
-
-  const blob = pdf.output("blob");
-  if (blob.size < 500) throw new Error("PDF output appears empty. The document may be unsupported.");
-  return blob;
 }
+
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function WordToPdfClient() {
