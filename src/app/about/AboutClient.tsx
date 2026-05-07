@@ -75,7 +75,7 @@ export default function AboutClient() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white overflow-y-auto selection:bg-blue-500/30">
+    <div className="flex flex-col min-h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden selection:bg-blue-500/30">
       <Navbar />
 
       <main className="flex-grow pt-32">
@@ -120,16 +120,16 @@ export default function AboutClient() {
         </section>
 
         {/* Table of Contents - Mobile Sticky/Floating Desktop */}
-        <nav className="sticky top-20 z-50 flex justify-center py-4 px-4 bg-black/40 backdrop-blur-3xl border-y border-white/5 pointer-events-auto">
+        <nav className="sticky top-20 z-50 flex justify-center py-4 px-4 bg-muted/40 backdrop-blur-3xl border-y border-border pointer-events-auto">
            <div className="flex items-center gap-2 md:gap-8 overflow-x-auto no-scrollbar scroll-smooth">
-              <div className="hidden md:flex items-center gap-2 text-white/30 text-[10px] font-black uppercase tracking-widest mr-4">
+              <div className="hidden md:flex items-center gap-2 text-muted-foreground/50 text-[10px] font-black uppercase tracking-widest mr-4">
                  <List className="w-3.5 h-3.5" /> Contents
               </div>
               {tocItems.map(item => (
                 <a 
                   key={item.id} 
                   href={`#${item.id}`} 
-                  className="text-[10px] font-black uppercase tracking-widest text-white/40 hover:text-primary transition-colors whitespace-nowrap px-4 py-2 rounded-full border border-transparent hover:border-white/5"
+                  className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 hover:text-primary transition-colors whitespace-nowrap px-4 py-2 rounded-full border border-transparent hover:border-border"
                 >
                   {item.name}
                 </a>
@@ -138,15 +138,15 @@ export default function AboutClient() {
         </nav>
 
         {/* E-E-A-T Signals */}
-        <section id="trust" className="container mx-auto px-4 py-32 border-b border-white/5 bg-white/[0.01]">
+        <section id="trust" className="container mx-auto px-4 py-32 border-b border-border bg-white/[0.01]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustSignals.map((signal, i) => (
               <div key={i} className="flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-blue-400">
+                <div className="w-12 h-12 rounded-xl bg-secondary/50 flex items-center justify-center text-blue-400">
                   <signal.icon className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-white/30">{signal.label}</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">{signal.label}</p>
                   <p className="text-sm font-black uppercase italic">{signal.value}</p>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function AboutClient() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * i }}
               >
-                <Card className="p-10 bg-white/[0.02] border-white/5 h-full rounded-[3rem] hover:bg-white/[0.04] transition-all group relative overflow-hidden">
+                <Card className="p-10 bg-secondary/30 border-border h-full rounded-[3rem] hover:bg-secondary/50 transition-all group relative overflow-hidden">
                   <div className={`w-16 h-16 rounded-2xl ${pillar.bg} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
                     <pillar.icon className={`w-8 h-8 ${pillar.color}`} />
                   </div>
@@ -194,9 +194,9 @@ export default function AboutClient() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {technologies.map(tech => (
-                  <div key={tech.name} className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-1">
+                  <div key={tech.name} className="p-4 rounded-2xl bg-white/[0.03] border border-border space-y-1">
                     <div className="text-[11px] font-black uppercase tracking-widest text-emerald-500">{tech.name}</div>
-                    <p className="text-[10px] text-white/40 font-medium">{tech.desc}</p>
+                    <p className="text-[10px] text-muted-foreground/60 font-medium">{tech.desc}</p>
                   </div>
                 ))}
               </div>
@@ -204,10 +204,10 @@ export default function AboutClient() {
 
             <div className="relative">
                <div className="absolute inset-0 bg-blue-500/10 blur-[80px] rounded-full" />
-               <Card className="relative p-8 bg-black/40 border-white/10 backdrop-blur-3xl rounded-[3rem] shadow-2xl overflow-hidden">
+               <Card className="relative p-8 bg-muted/40 border-border backdrop-blur-3xl rounded-[3rem] shadow-2xl overflow-hidden">
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
-                      <Zap className="w-6 h-6 text-white" />
+                      <Zap className="w-6 h-6 text-foreground" />
                     </div>
                     <div>
                       <h4 className="font-black uppercase tracking-widest text-[10px] opacity-40">Performance Metrics</h4>
@@ -225,7 +225,7 @@ export default function AboutClient() {
                            <span>{stat.label}</span>
                            <span>{stat.value}</span>
                          </div>
-                         <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                         <div className="h-1.5 w-full bg-secondary/50 rounded-full overflow-hidden">
                             <motion.div 
                               initial={{ width: 0 }}
                               whileInView={{ width: "100%" }}
@@ -250,7 +250,7 @@ export default function AboutClient() {
             
             <div className="relative z-10 space-y-6">
               <h2 className="text-5xl font-black tracking-tight leading-none">Ready to take control?</h2>
-              <p className="text-white/80 text-xl font-medium max-w-xl mx-auto">
+              <p className="text-foreground/80 text-xl font-medium max-w-xl mx-auto">
                 Explore our full suite of professional utilities and experience the power of private, localized file processing.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-6 pt-8">

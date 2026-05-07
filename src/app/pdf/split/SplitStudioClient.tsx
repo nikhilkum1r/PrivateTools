@@ -159,7 +159,7 @@ export default function SplitStudioClient() {
     : 0;
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative scrollbar-hide">
@@ -180,33 +180,33 @@ export default function SplitStudioClient() {
                   <h1 className="text-5xl md:text-6xl font-black tracking-tighter uppercase italic">
                     PDF <span className="text-primary">Splitter.</span>
                   </h1>
-                  <p className="text-white/40 text-lg font-medium max-w-md mx-auto leading-relaxed">
+                  <p className="text-muted-foreground/60 text-lg font-medium max-w-md mx-auto leading-relaxed">
                     Precision document slicing. Extract pages or custom ranges — entirely in your browser.
                   </p>
                 </div>
               </div>
-              <DropZone onFilesDrop={handleFileDrop} accept=".pdf" multiple={false} title=" " className="h-56 border-dashed border-white/10 bg-white/[0.02] rounded-[3rem] hover:bg-white/[0.05] hover:border-primary/30 transition-all" />
+              <DropZone onFilesDrop={handleFileDrop} accept=".pdf" multiple={false} title=" " className="h-56 border-dashed border-border bg-secondary/30 rounded-[3rem] hover:bg-secondary/70 hover:border-primary/30 transition-all" />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-6 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+              <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Layers className="w-4 h-4" /> Identity Engine
                   </h3>
                   <div className="flex items-center gap-3 mt-1">
-                    <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
+                    <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
                     <div className="flex gap-1.5 opacity-30">
                       <Play className="w-2 h-2 text-primary fill-primary" />
                       <div className="w-2 h-2 rounded-full border border-white/40" />
-                      <Smartphone className="w-2 h-2 text-white" />
+                      <Smartphone className="w-2 h-2 text-foreground" />
                     </div>
                   </div>
                 </div>
-                <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-3 py-1 rounded-full font-black italic">ACTIVE</Badge>
+                <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-3 py-1 rounded-full font-black italic">ACTIVE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
@@ -214,12 +214,12 @@ export default function SplitStudioClient() {
                   {/* Mode Toggle */}
                   <div className="space-y-3">
                     <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Split Mode</Label>
-                    <div className="grid grid-cols-2 gap-2 p-1.5 bg-black/40 rounded-2xl border border-white/5">
+                    <div className="grid grid-cols-2 gap-2 p-1.5 bg-muted/40 rounded-2xl border border-border">
                       {(["fixed", "range"] as const).map(mode => (
                         <Button
                           key={mode}
                           variant={splitMode === mode ? "default" : "ghost"}
-                          className={cn("rounded-xl text-[10px] font-black h-10 uppercase tracking-widest", splitMode === mode ? "bg-primary text-white shadow-lg shadow-primary/20" : "text-white/30")}
+                          className={cn("rounded-xl text-[10px] font-black h-10 uppercase tracking-widest", splitMode === mode ? "bg-primary text-foreground shadow-lg shadow-primary/20" : "text-muted-foreground/50")}
                           onClick={() => setSplitMode(mode)}
                         >
                           {mode === "fixed" ? "By Interval" : "By Range"}
@@ -243,12 +243,12 @@ export default function SplitStudioClient() {
                         className="py-2"
                       />
                       <div className="grid grid-cols-2 gap-2">
-                        <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-center">
-                          <p className="text-[9px] text-white/20 font-black uppercase tracking-widest">Parts</p>
+                        <div className="p-3 rounded-xl bg-white/[0.03] border border-border text-center">
+                          <p className="text-[9px] text-muted-foreground/40 font-black uppercase tracking-widest">Parts</p>
                           <p className="text-lg font-black text-primary tabular-nums">{estimatedParts}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-center">
-                          <p className="text-[9px] text-white/20 font-black uppercase tracking-widest">Per Part</p>
+                        <div className="p-3 rounded-xl bg-white/[0.03] border border-border text-center">
+                          <p className="text-[9px] text-muted-foreground/40 font-black uppercase tracking-widest">Per Part</p>
                           <p className="text-lg font-black tabular-nums">{fixedInterval}pg</p>
                         </div>
                       </div>
@@ -260,7 +260,7 @@ export default function SplitStudioClient() {
                         placeholder="e.g. 1-3, 4-7, 10"
                         value={customRanges}
                         onChange={e => { setCustomRanges(e.target.value); setRangeError(null); }}
-                        className={cn("h-12 bg-white/5 border-white/10 rounded-xl px-4 font-mono text-sm focus:ring-primary/20", rangeError && "border-red-500/50")}
+                        className={cn("h-12 bg-secondary/50 border-border rounded-xl px-4 font-mono text-sm focus:ring-primary/20", rangeError && "border-red-500/50")}
                       />
                       {rangeError ? (
                         <div className="flex items-center gap-2 text-red-400">
@@ -268,7 +268,7 @@ export default function SplitStudioClient() {
                           <p className="text-[10px] font-bold">{rangeError}</p>
                         </div>
                       ) : (
-                        <p className="text-[10px] text-white/20 font-medium">
+                        <p className="text-[10px] text-muted-foreground/40 font-medium">
                           {estimatedParts} part{estimatedParts !== 1 ? "s" : ""} will be created • Pages 1–{file.pageCount} available
                         </p>
                       )}
@@ -301,7 +301,7 @@ export default function SplitStudioClient() {
                               "w-6 h-8 rounded-md border flex items-end justify-center pb-1 text-[7px] font-black transition-all cursor-pointer select-none",
                               isInRange
                                 ? "bg-primary/20 border-primary/40 text-primary"
-                                : "bg-white/10 border-white/10 text-white/20 hover:bg-primary/10 hover:border-primary/30 hover:text-primary/60"
+                                : "bg-secondary border-border text-muted-foreground/40 hover:bg-primary/10 hover:border-primary/30 hover:text-primary/60"
                             )}
                             title={`Page ${pageNum}`}
                             onClick={() => {
@@ -323,7 +323,7 @@ export default function SplitStudioClient() {
                         );
                       })}
                       {file.pageCount > 40 && (
-                        <div className="w-6 h-8 rounded-md bg-white/5 border border-dashed border-white/10 flex items-center justify-center text-[8px] text-white/20">
+                        <div className="w-6 h-8 rounded-md bg-secondary/50 border border-dashed border-border flex items-center justify-center text-[8px] text-muted-foreground/40">
                           +{file.pageCount - 40}
                         </div>
                       )}
@@ -335,7 +335,7 @@ export default function SplitStudioClient() {
                     )}
                   </div>
 
-                  <div className="p-4 rounded-[1.5rem] bg-white/[0.02] border border-white/5 space-y-2">
+                  <div className="p-4 rounded-[1.5rem] bg-secondary/30 border border-border space-y-2">
                     <div className="flex items-center gap-2">
                       <Zap className="w-4 h-4 text-primary" />
                       <h4 className="text-[10px] font-black uppercase tracking-widest">WASM Engine</h4>
@@ -347,18 +347,18 @@ export default function SplitStudioClient() {
                 </div>
               </ScrollArea>
 
-              <div className="p-5 border-t border-white/5 bg-black/40 shrink-0 space-y-3">
+              <div className="p-5 border-t border-border bg-muted/40 shrink-0 space-y-3">
                 {isProcessing && (
                   <div className="space-y-1.5">
                     <div className="flex justify-between">
-                      <span className="text-[9px] font-black uppercase tracking-widest text-white/30">Processing...</span>
+                      <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/50">Processing...</span>
                       <span className="text-[9px] font-black text-primary">{progress}%</span>
                     </div>
-                    <Progress value={progress} className="h-1 bg-white/10" />
+                    <Progress value={progress} className="h-1 bg-secondary" />
                   </div>
                 )}
                 <Button
-                  className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-white font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
+                  className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
                   onClick={splitPdf}
                   disabled={isProcessing}
                 >
@@ -370,7 +370,7 @@ export default function SplitStudioClient() {
 
             {/* Center */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[500px] lg:min-h-0 h-full max-h-full">
-              <header className="p-5 md:p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20 gap-4">
+              <header className="p-5 md:p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20 gap-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-[1.5rem] bg-red-600/10 flex items-center justify-center border border-red-500/20">
                     <FileText className="w-6 h-6 text-red-400" />
@@ -379,17 +379,17 @@ export default function SplitStudioClient() {
                     <h2 className="font-black text-lg md:text-2xl tracking-tighter uppercase italic truncate max-w-[200px] md:max-w-sm">{file.file.name}</h2>
                     <div className="flex items-center gap-3 mt-0.5">
                       <Badge className="text-[9px] bg-red-500/10 text-red-400 border-red-500/20 px-3 py-0.5 rounded-full font-black uppercase">{file.pageCount} pages</Badge>
-                      <span className="text-[9px] text-white/20 uppercase font-black tracking-widest">{((file.file.size) / 1024 / 1024).toFixed(2)} MB</span>
+                      <span className="text-[9px] text-muted-foreground/40 uppercase font-black tracking-widest">{((file.file.size) / 1024 / 1024).toFixed(2)} MB</span>
                     </div>
                   </div>
                 </div>
-                <Button variant="ghost" size="icon" className="h-10 w-10 rounded-xl hover:bg-red-500/10 text-white/20 hover:text-red-400 transition-all shrink-0" onClick={() => setFile(null)}>
+                <Button variant="ghost" size="icon" className="h-10 w-10 rounded-xl hover:bg-red-500/10 text-muted-foreground/40 hover:text-red-400 transition-all shrink-0" onClick={() => setFile(null)}>
                   <Trash2 className="w-5 h-5" />
                 </Button>
               </header>
 
               <div className="flex-grow relative flex items-center justify-center p-8 lg:p-16">
-                <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.03] rounded-[3rem] border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
+                <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.03] rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
                   {file.status === "completed" ? (
                     <>
                       <div className="w-20 h-20 rounded-[2rem] bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
@@ -397,7 +397,7 @@ export default function SplitStudioClient() {
                       </div>
                       <div className="space-y-1 text-center">
                         <h3 className="text-lg font-black uppercase">Split Complete</h3>
-                        <p className="text-white/30 text-xs font-bold uppercase tracking-widest">{file.results.length} parts ready</p>
+                        <p className="text-muted-foreground/50 text-xs font-bold uppercase tracking-widest">{file.results.length} parts ready</p>
                       </div>
                     </>
                   ) : (
@@ -411,9 +411,9 @@ export default function SplitStudioClient() {
                       </div>
                       <div className="flex gap-1 flex-wrap justify-center px-8">
                         {Array.from({ length: Math.min(file.pageCount, 12) }).map((_, i) => (
-                          <div key={i} className="w-4 h-5 bg-white/5 border border-white/10 rounded-sm" />
+                          <div key={i} className="w-4 h-5 bg-secondary/50 border border-border rounded-sm" />
                         ))}
-                        {file.pageCount > 12 && <span className="text-[8px] text-white/20 self-center">+{file.pageCount - 12}</span>}
+                        {file.pageCount > 12 && <span className="text-[8px] text-muted-foreground/40 self-center">+{file.pageCount - 12}</span>}
                       </div>
                     </>
                   )}
@@ -423,13 +423,13 @@ export default function SplitStudioClient() {
             </section>
 
             {/* Right Sidebar */}
-            <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
-              <div className="p-6 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+              <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
                   </h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
                 </div>
                 {file.status === "completed" && (
                   <Badge variant="outline" className="text-[10px] border-emerald-500/20 bg-emerald-500/10 text-emerald-500 uppercase font-black px-3 py-1 rounded-full italic">READY</Badge>
@@ -442,11 +442,11 @@ export default function SplitStudioClient() {
                     {file.status === "completed" && file.results.length > 0 ? (
                       <>
                         <div className="flex items-center justify-between mb-2">
-                          <p className="text-[10px] font-black uppercase tracking-widest text-white/30">{file.results.length} fragments</p>
+                          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">{file.results.length} fragments</p>
                           <Button
                             size="sm"
                             variant="outline"
-                            className="h-7 px-3 rounded-xl text-[9px] font-black border-white/10 hover:bg-white/10 gap-2"
+                            className="h-7 px-3 rounded-xl text-[9px] font-black border-border hover:bg-secondary gap-2"
                             onClick={downloadAll}
                             disabled={isZipping}
                           >
@@ -456,14 +456,14 @@ export default function SplitStudioClient() {
                         </div>
                         {file.results.map((res, i) => (
                           <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}>
-                            <Card className="p-3.5 bg-white/[0.02] border-white/5 hover:border-primary/30 transition-all group flex items-center justify-between rounded-2xl">
+                            <Card className="p-3.5 bg-secondary/30 border-border hover:border-primary/30 transition-all group flex items-center justify-between rounded-2xl">
                               <div className="flex items-center gap-3 min-w-0">
                                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
                                   <FileDown className="w-4 h-4" />
                                 </div>
                                 <div className="min-w-0">
                                   <p className="text-[10px] font-black uppercase truncate">{res.name}</p>
-                                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest">Part {i + 1}</p>
+                                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">Part {i + 1}</p>
                                 </div>
                               </div>
                               <Button
@@ -488,7 +488,7 @@ export default function SplitStudioClient() {
                       </>
                     ) : (
                       <div className="py-16 text-center space-y-3 opacity-20">
-                        <div className="w-14 h-14 rounded-3xl bg-white/5 border border-dashed border-white/20 flex items-center justify-center mx-auto">
+                        <div className="w-14 h-14 rounded-3xl bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
                           <Layers className="w-5 h-5" />
                         </div>
                         <p className="text-[10px] font-black uppercase tracking-widest">No results yet</p>
@@ -499,7 +499,7 @@ export default function SplitStudioClient() {
                 </div>
               </ScrollArea>
 
-              <div className="p-5 border-t border-white/5 bg-black/40 shrink-0">
+              <div className="p-5 border-t border-border bg-muted/40 shrink-0">
                 <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/15">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> All Fragments Verified
                 </div>

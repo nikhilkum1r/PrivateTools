@@ -141,7 +141,7 @@ export default function MergeStudioClient() {
   const totalSize = files.reduce((acc, f) => acc + f.file.size, 0);
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative scrollbar-hide">
@@ -152,22 +152,22 @@ export default function MergeStudioClient() {
         </div>
 
         {/* Left Sidebar */}
-        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-          <div className="p-6 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+          <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Files className="w-4 h-4" /> Identity Engine
               </h3>
               <div className="flex items-center gap-3 mt-1">
-                <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
+                <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
                 <div className="flex gap-1.5 opacity-30">
                   <Play className="w-2 h-2 text-primary fill-primary" />
                   <div className="w-2 h-2 rounded-full border border-white/40" />
-                  <Smartphone className="w-2 h-2 text-white" />
+                  <Smartphone className="w-2 h-2 text-foreground" />
                 </div>
               </div>
             </div>
-            <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-3 py-1 rounded-full font-black italic">{files.length} NODES</Badge>
+            <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-3 py-1 rounded-full font-black italic">{files.length} NODES</Badge>
           </div>
           
           <ScrollArea className="flex-grow min-h-0">
@@ -187,14 +187,14 @@ export default function MergeStudioClient() {
                             "group p-3 rounded-2xl border transition-all cursor-pointer flex items-center gap-3",
                             selectedId === f.id
                               ? "bg-primary/10 border-primary/30"
-                              : "bg-white/[0.02] border-white/5 hover:bg-white/[0.05]"
+                              : "bg-secondary/30 border-border hover:bg-secondary/70"
                           )}
                         >
                           <div className="text-muted-foreground cursor-grab active:cursor-grabbing opacity-20 group-hover:opacity-60 transition-opacity shrink-0">
                             <GripVertical className="w-4 h-4" />
                           </div>
                           <div className={cn(
-                            "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border border-white/5 relative",
+                            "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border border-border relative",
                             f.file.type === "application/pdf" ? "bg-red-500/10 text-red-400" : "bg-blue-500/10 text-blue-400"
                           )}>
                             {f.status === "processing" && <div className="absolute inset-0 rounded-xl bg-primary/20 animate-pulse" />}
@@ -222,17 +222,17 @@ export default function MergeStudioClient() {
                   </Reorder.Group>
                 ) : (
                   <div className="py-16 text-center space-y-4">
-                    <div className="w-14 h-14 rounded-[2rem] bg-white/5 border border-dashed border-white/10 flex items-center justify-center mx-auto opacity-20">
+                    <div className="w-14 h-14 rounded-[2rem] bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto opacity-20">
                       <FileText className="w-5 h-5" />
                     </div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-white/20">No assets loaded</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">No assets loaded</p>
                   </div>
                 )}
               </AnimatePresence>
             </div>
           </ScrollArea>
           
-          <div className="p-4 border-t border-white/5 bg-black/40 shrink-0 space-y-3">
+          <div className="p-4 border-t border-border bg-muted/40 shrink-0 space-y-3">
             {files.length > 0 && (
               <div className="grid grid-cols-3 gap-2">
                 {[
@@ -240,15 +240,15 @@ export default function MergeStudioClient() {
                   { label: "Pages", value: totalPages },
                   { label: "Size", value: totalSize > 1048576 ? `${(totalSize/1048576).toFixed(1)}M` : `${(totalSize/1024).toFixed(0)}K` },
                 ].map(s => (
-                  <div key={s.label} className="p-2 rounded-xl bg-white/5 border border-white/5 text-center">
-                    <p className="text-[8px] font-black uppercase tracking-widest text-white/20">{s.label}</p>
+                  <div key={s.label} className="p-2 rounded-xl bg-secondary/50 border border-border text-center">
+                    <p className="text-[8px] font-black uppercase tracking-widest text-muted-foreground/40">{s.label}</p>
                     <p className="text-sm font-black tabular-nums mt-0.5">{s.value}</p>
                   </div>
                 ))}
               </div>
             )}
             <Button
-              className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white rounded-2xl font-black uppercase tracking-widest h-12 group transition-all active:scale-95"
+              className="w-full bg-secondary hover:bg-white/20 border border-border text-foreground rounded-2xl font-black uppercase tracking-widest h-12 group transition-all active:scale-95"
               onClick={() => document.getElementById('pdf-add-btn')?.click()}
             >
               <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform" />
@@ -260,16 +260,16 @@ export default function MergeStudioClient() {
 
         {/* Center */}
         <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[700px] lg:min-h-0 h-full max-h-full">
-          <header className="p-4 md:p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20 gap-4">
+          <header className="p-4 md:p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20 gap-4">
             <div className="flex items-center gap-5">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-red-600 via-red-500 to-primary flex items-center justify-center border border-white/20 shadow-[0_0_40px_rgba(239,68,68,0.2)]">
-                <FileText className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-[1.5rem] bg-gradient-to-br from-red-600 via-red-500 to-primary flex items-center justify-center border border-border shadow-[0_0_40px_rgba(239,68,68,0.2)]">
+                <FileText className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
               </div>
               <div>
-                <h2 className="font-black text-xl md:text-2xl tracking-tighter uppercase italic text-white">Document Architect</h2>
+                <h2 className="font-black text-xl md:text-2xl tracking-tighter uppercase italic text-foreground">Document Architect</h2>
                 <div className="flex items-center gap-3 mt-1">
                   <Badge className="text-[10px] bg-primary/10 text-primary border-primary/20 px-3 py-0.5 rounded-full font-black uppercase tracking-[0.15em] italic">Localized Assembly</Badge>
-                  <span className="text-[10px] text-white/30 uppercase font-black tracking-widest">{files.length} Assets</span>
+                  <span className="text-[10px] text-muted-foreground/50 uppercase font-black tracking-widest">{files.length} Assets</span>
                 </div>
               </div>
             </div>
@@ -282,7 +282,7 @@ export default function MergeStudioClient() {
                   <p className="text-[10px] font-black uppercase tracking-widest text-primary">{progressLabel}</p>
                   <span className="text-[10px] font-black tabular-nums text-primary">{progress}%</span>
                 </div>
-                <Progress value={progress} className="h-1.5 bg-white/10" />
+                <Progress value={progress} className="h-1.5 bg-secondary" />
               </div>
             </div>
           )}
@@ -297,12 +297,12 @@ export default function MergeStudioClient() {
                     </div>
                     <div className="space-y-1">
                       <h3 className="text-2xl font-black uppercase">Assembled</h3>
-                      <p className="text-white/40 text-sm font-medium">{files.length} assets • {totalPages} pages</p>
+                      <p className="text-muted-foreground/60 text-sm font-medium">{files.length} assets • {totalPages} pages</p>
                     </div>
                   </div>
                   <div className="flex justify-center gap-3">
                     <Button
-                      className="h-14 px-10 rounded-[2rem] bg-primary hover:bg-primary/90 text-white font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
+                      className="h-14 px-10 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
                       onClick={async () => {
                         const response = await fetch(mergedUrl);
                         const blob = await response.blob();
@@ -311,38 +311,38 @@ export default function MergeStudioClient() {
                     >
                       <DownloadCloud className="w-5 h-5" /> Download PDF
                     </Button>
-                    <Button variant="outline" className="h-14 px-8 rounded-[2rem] border-white/10 font-bold hover:bg-white/5" onClick={() => { setMergedUrl(null); setFiles(prev => prev.map(f => ({ ...f, status: "idle" }))); }}>
+                    <Button variant="outline" className="h-14 px-8 rounded-[2rem] border-border font-bold hover:bg-secondary/50" onClick={() => { setMergedUrl(null); setFiles(prev => prev.map(f => ({ ...f, status: "idle" }))); }}>
                       Edit Sequence
                     </Button>
                   </div>
                 </motion.div>
               ) : currentFile ? (
                 <motion.div key={currentFile.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="w-full space-y-6 flex flex-col items-center">
-                  <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.02] rounded-[2.5rem] border border-white/10 shadow-2xl overflow-hidden relative group">
+                  <div className="aspect-[3/4] w-full max-w-xs bg-secondary/30 rounded-[2.5rem] border border-border shadow-2xl overflow-hidden relative group">
                     {currentFile.previewUrl ? (
                       <img src={currentFile.previewUrl} className="w-full h-full object-contain" alt="" />
                     ) : (
                       <div className="w-full h-full flex flex-col items-center justify-center gap-4 opacity-20">
                         <FileText className="w-16 h-16" />
                         <span className="text-xs font-black uppercase tracking-widest">PDF Document</span>
-                        {currentFile.pageCount && <Badge className="bg-white/10 text-white/60">{currentFile.pageCount} pages</Badge>}
+                        {currentFile.pageCount && <Badge className="bg-secondary text-muted-foreground/80">{currentFile.pageCount} pages</Badge>}
                       </div>
                     )}
                   </div>
                   <div className="text-center space-y-1">
                     <h2 className="text-lg font-black uppercase tracking-tight truncate max-w-xs">{currentFile.file.name}</h2>
-                    <p className="text-[10px] text-white/30 uppercase font-black tracking-widest">
+                    <p className="text-[10px] text-muted-foreground/50 uppercase font-black tracking-widest">
                       {currentFile.pageCount ? `${currentFile.pageCount} pages` : "Image asset"} • {((currentFile.file.size) / 1024).toFixed(0)} KB
                     </p>
                   </div>
                 </motion.div>
               ) : (
                 <div className="text-center space-y-8 max-w-sm">
-                  <div className="w-28 h-28 rounded-[3rem] bg-gradient-to-br from-red-500/20 to-primary/20 border border-white/10 flex items-center justify-center mx-auto">
-                    <Layout className="w-12 h-12 text-white/20" />
+                  <div className="w-28 h-28 rounded-[3rem] bg-gradient-to-br from-red-500/20 to-primary/20 border border-border flex items-center justify-center mx-auto">
+                    <Layout className="w-12 h-12 text-muted-foreground/40" />
                   </div>
 
-                  <DropZone onFilesDrop={addFiles} accept=".pdf,image/*" multiple title=" " className="h-40 border-dashed border-white/10 bg-white/[0.02] rounded-[2rem] hover:bg-white/[0.05] transition-all" />
+                  <DropZone onFilesDrop={addFiles} accept=".pdf,image/*" multiple title=" " className="h-40 border-dashed border-border bg-secondary/30 rounded-[2rem] hover:bg-secondary/70 transition-all" />
                 </div>
               )}
             </AnimatePresence>
@@ -350,13 +350,13 @@ export default function MergeStudioClient() {
         </section>
 
         {/* Right Sidebar */}
-        <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
-          <div className="p-6 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+          <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Settings2 className="w-4 h-4" /> Studio Matrix
               </h3>
-              <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
+              <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
             </div>
             <Badge variant="outline" className="text-[10px] border-primary/20 bg-primary/5 text-primary uppercase font-black px-3 py-1 rounded-full italic">ACTIVE</Badge>
           </div>
@@ -370,25 +370,25 @@ export default function MergeStudioClient() {
                   { label: "Size", value: totalSize > 1048576 ? `${(totalSize/1048576).toFixed(1)}M` : `${(totalSize/1024).toFixed(0)}K`, icon: Layers },
                   { label: "Status", value: isProcessing ? "PROC." : mergedUrl ? "DONE" : "READY", icon: Zap },
                 ].map(s => (
-                  <div key={s.label} className="p-3 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1">
-                    <p className="text-[9px] font-black uppercase tracking-widest text-white/20">{s.label}</p>
+                  <div key={s.label} className="p-3 rounded-2xl bg-secondary/30 border border-border space-y-1">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">{s.label}</p>
                     <p className="text-base font-black tabular-nums">{s.value}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="p-5 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-3">
+              <div className="p-5 rounded-[2rem] bg-secondary/30 border border-border space-y-3">
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-emerald-500" />
                   <h4 className="text-xs font-black uppercase tracking-widest">Privacy Shield</h4>
                 </div>
-                <p className="text-[10px] text-white/30 leading-relaxed font-medium">
+                <p className="text-[10px] text-muted-foreground/50 leading-relaxed font-medium">
                   Assembly runs entirely in your browser via pdf-lib WASM. No files are uploaded or transmitted.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <p className="text-[10px] font-black uppercase tracking-widest text-white/20 flex items-center gap-2">
+                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40 flex items-center gap-2">
                   <Info className="w-3.5 h-3.5" /> Assembly Notes
                 </p>
                 <ul className="space-y-2">
@@ -398,7 +398,7 @@ export default function MergeStudioClient() {
                     "Images auto-fit to page size",
                     "Original quality preserved",
                   ].map((note, i) => (
-                    <li key={i} className="flex items-start gap-2 text-[10px] text-white/30 font-medium">
+                    <li key={i} className="flex items-start gap-2 text-[10px] text-muted-foreground/50 font-medium">
                       <span className="text-primary mt-0.5">•</span> {note}
                     </li>
                   ))}
@@ -407,9 +407,9 @@ export default function MergeStudioClient() {
             </div>
           </ScrollArea>
 
-          <div className="p-5 border-t border-white/5 bg-black/40 shrink-0 space-y-3">
+          <div className="p-5 border-t border-border bg-muted/40 shrink-0 space-y-3">
             <Button
-              className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-white font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
+              className="w-full h-14 rounded-[1.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
               onClick={processDocuments}
               disabled={files.length === 0 || isProcessing}
             >

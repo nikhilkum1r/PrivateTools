@@ -25,7 +25,7 @@ export default function ImagePage() {
       <ImageHubClient />
 
       {/* SEO Content Section */}
-      <section className="container mx-auto px-4 py-24 border-t border-white/5">
+      <section className="container mx-auto px-4 py-24 border-t border-border">
         <div className="max-w-4xl mx-auto space-y-16">
           <div className="space-y-6">
             <h2 className="text-3xl font-black italic">Next-Gen Image Processing</h2>

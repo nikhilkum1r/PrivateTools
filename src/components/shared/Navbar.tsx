@@ -179,15 +179,15 @@ export function Navbar() {
 
 
           <DropdownMenu>
-            <DropdownMenuTrigger aria-label="Toggle color theme" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full hover:bg-white/5 transition-all")}>
+            <DropdownMenuTrigger aria-label="Toggle color theme" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full transition-all")}>
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-primary" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
               <span className="sr-only">Toggle theme</span>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-[#0a0a0a] border-white/10 rounded-2xl p-1 shadow-2xl">
-              <DropdownMenuItem onClick={() => setTheme("light")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2">Light</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2">Dark</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2">System</DropdownMenuItem>
+            <DropdownMenuContent align="end" className="rounded-2xl p-1 shadow-2xl">
+              <DropdownMenuItem onClick={() => setTheme("light")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2 cursor-pointer">Light</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2 cursor-pointer">Dark</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")} className="rounded-xl focus:bg-primary/20 text-[10px] font-black uppercase tracking-widest py-2 cursor-pointer">System</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

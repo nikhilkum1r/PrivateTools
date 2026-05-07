@@ -57,7 +57,7 @@ export default function WordCounterClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-6xl">
@@ -83,14 +83,14 @@ export default function WordCounterClient() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Input Section */}
             <div className="lg:col-span-3 space-y-6">
-              <Card className="p-8 rounded-[3rem] bg-white/[0.02] border-white/10 space-y-6">
+              <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-6">
                 <div className="flex justify-between items-center px-2">
-                   <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Source Content</Label>
+                   <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Source Content</Label>
                    <div className="flex gap-2">
                       <Button variant="ghost" size="icon" className="h-8 w-8 text-primary" onClick={handleCopy} disabled={!input}>
                          {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       </Button>
-                      <Button variant="ghost" size="icon" className="h-8 w-8 text-white/20 hover:text-red-500" onClick={() => setInput("")}>
+                      <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground/40 hover:text-red-500" onClick={() => setInput("")}>
                          <Trash2 className="w-4 h-4" />
                       </Button>
                    </div>
@@ -99,7 +99,7 @@ export default function WordCounterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Paste your manuscript here..."
-                  className="min-h-[500px] rounded-[2rem] bg-black border-white/5 font-mono text-base leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20 transition-all"
+                  className="min-h-[500px] rounded-[2rem] bg-card border-border font-mono text-base leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20 transition-all"
                 />
               </Card>
             </div>
@@ -113,9 +113,9 @@ export default function WordCounterClient() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 flex flex-col gap-1 group hover:border-primary/30 transition-all"
+                    className="p-6 rounded-[2rem] bg-secondary/30 border border-border flex flex-col gap-1 group hover:border-primary/30 transition-all"
                   >
-                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/30">
+                    <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">
                       <s.icon className={cn("w-3.5 h-3.5", s.color)} />
                       {s.label}
                     </div>
@@ -134,7 +134,7 @@ export default function WordCounterClient() {
           </div>
 
           {/* FAQ/Content Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-border">
              <div className="space-y-6">
                 <h3 className="text-2xl font-black italic">Advanced Text Analytics</h3>
                 <div className="space-y-4 text-muted-foreground font-medium text-sm leading-relaxed">

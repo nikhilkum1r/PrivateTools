@@ -165,7 +165,7 @@ export function DropZone({
               <motion.div
                 key={`${file.name}-${index}`}
                 layout
-                className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.02] border border-white/5 shadow-sm group"
+                className="flex items-center justify-between p-4 rounded-2xl bg-secondary/50 border border-border shadow-sm group"
               >
                 <div className="flex items-center gap-4">
                   <div className="p-2 rounded-xl bg-primary/5 text-primary">
@@ -175,7 +175,7 @@ export function DropZone({
                     <span className="font-black text-[10px] uppercase tracking-widest truncate max-w-[200px]">
                       {file.name}
                     </span>
-                    <span className="text-[9px] font-bold text-white/20 uppercase tracking-[0.2em]">
+                    <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-[0.2em]">
                       {(file.size / 1024 / 1024).toFixed(2)} MB
                     </span>
                   </div>

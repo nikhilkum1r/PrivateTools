@@ -177,7 +177,7 @@ export default function ColorLabClient() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-[#050505] text-white overflow-hidden selection:bg-primary/30">
+    <div className="flex flex-col h-screen bg-background text-foreground overflow-hidden selection:bg-primary/30">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden relative scrollbar-hide">
@@ -199,7 +199,7 @@ export default function ColorLabClient() {
             <div className="max-w-2xl w-full space-y-12 text-center">
               <div className="space-y-6">
                 <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-primary to-blue-600 p-[1px] mx-auto animate-pulse">
-                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-white/5">
+                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Palette className="w-10 h-10 text-primary" />
                   </div>
                 </div>
@@ -216,15 +216,15 @@ export default function ColorLabClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*" 
                 multiple={false} 
-                className="h-64 border-dashed border-white/10 bg-white/5 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar - Identity Engine */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -238,12 +238,12 @@ export default function ColorLabClient() {
                     </div>
                   </div>
                 </div>
-                <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
+                <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
                 <div className="p-8 space-y-10">
-                   <div className="aspect-square rounded-[3rem] bg-black/40 border border-white/10 overflow-hidden relative group">
+                   <div className="aspect-square rounded-[3rem] bg-muted/40 border border-border overflow-hidden relative group">
                       <img 
                          ref={imageRef}
                          src={preview!} 
@@ -252,7 +252,7 @@ export default function ColorLabClient() {
                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                          alt="" 
                        />
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8">
+                      <div className="absolute inset-0 bg-muted/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8">
                          <Button variant="ghost" className="rounded-2xl text-red-500 hover:bg-red-500/10" onClick={() => { setFile(null); setPreview(null); setColors([]); }}>
                             <Trash2 className="w-6 h-6" />
                          </Button>
@@ -260,34 +260,34 @@ export default function ColorLabClient() {
                    </div>
 
                    <div className="space-y-6">
-                      <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Analysis Stats</h4>
+                      <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Analysis Stats</h4>
                       <div className="grid grid-cols-2 gap-3">
-                        <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1">
-                           <p className="text-[9px] font-black text-white/20 uppercase tracking-widest">Swatches</p>
+                        <div className="p-4 rounded-2xl bg-secondary/30 border border-border space-y-1">
+                           <p className="text-[9px] font-black text-muted-foreground/40 uppercase tracking-widest">Swatches</p>
                            <p className="text-xl font-black tabular-nums">{colors.length}</p>
                         </div>
-                        <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1">
-                           <p className="text-[9px] font-black text-white/20 uppercase tracking-widest">Precision</p>
+                        <div className="p-4 rounded-2xl bg-secondary/30 border border-border space-y-1">
+                           <p className="text-[9px] font-black text-muted-foreground/40 uppercase tracking-widest">Precision</p>
                            <p className="text-xl font-black uppercase tracking-tighter">{sampleRate}PX</p>
                         </div>
                       </div>
                    </div>
 
-                   <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-4">
+                   <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Wand2 className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Neural Scan</h4>
                     </div>
-                    <p className="text-[10px] text-white/30 leading-relaxed font-medium">
+                    <p className="text-[10px] text-muted-foreground/50 leading-relaxed font-medium">
                       High-fidelity design palette extraction using pixel-by-pixel neural sampling.
                     </p>
                   </div>
                 </div>
               </ScrollArea>
 
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
                   onClick={extractPalette}
                   disabled={isProcessing}
                 >
@@ -299,7 +299,7 @@ export default function ColorLabClient() {
 
             {/* Center - Color Workspace */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
-              <header className="p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20">
+              <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                     <Palette className="w-8 h-8 text-primary" />
@@ -312,7 +312,7 @@ export default function ColorLabClient() {
                       <Badge className="text-[10px] bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-4 py-1 rounded-full font-black uppercase tracking-widest italic">
                         SECURE SESSION
                       </Badge>
-                      <span className="text-[10px] text-white/20 uppercase font-black tracking-widest">
+                      <span className="text-[10px] text-muted-foreground/40 uppercase font-black tracking-widest">
                         {colors.length} SWATCHES EXTRACTED
                       </span>
                     </div>
@@ -320,12 +320,12 @@ export default function ColorLabClient() {
                 </div>
                 {colors.length > 0 && (
                   <div className="flex items-center gap-2">
-                    <div className="flex p-1 bg-white/5 border border-white/10 rounded-xl">
+                    <div className="flex p-1 bg-secondary/50 border border-border rounded-xl">
                       {(["css", "scss", "json"] as const).map(fmt => (
-                        <button key={fmt} onClick={() => setExportFormat(fmt)} className={cn("px-3 h-7 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all", exportFormat === fmt ? "bg-primary text-white" : "text-white/30 hover:text-white")}>{fmt}</button>
+                        <button key={fmt} onClick={() => setExportFormat(fmt)} className={cn("px-3 h-7 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all", exportFormat === fmt ? "bg-primary text-foreground" : "text-muted-foreground/50 hover:text-foreground")}>{fmt}</button>
                       ))}
                     </div>
-                    <Button variant="outline" className="h-9 px-4 rounded-xl border-white/10 bg-white/5 text-white font-black gap-2 hover:bg-white/10 transition-all text-[10px]" onClick={exportPalette}>
+                    <Button variant="outline" className="h-9 px-4 rounded-xl border-border bg-secondary/50 text-foreground font-black gap-2 hover:bg-secondary transition-all text-[10px]" onClick={exportPalette}>
                       <FileDown className="w-4 h-4" /> Export
                     </Button>
                   </div>
@@ -345,13 +345,13 @@ export default function ColorLabClient() {
                             transition={{ delay: i * 0.05 }}
                           >
                         <Card 
-                              className="group p-6 rounded-[3rem] bg-white/[0.02] border border-white/5 flex flex-col gap-5 hover:bg-white/[0.05] hover:border-primary/30 transition-all cursor-pointer relative overflow-hidden"
+                              className="group p-6 rounded-[3rem] bg-secondary/30 border border-border flex flex-col gap-5 hover:bg-secondary/70 hover:border-primary/30 transition-all cursor-pointer relative overflow-hidden"
                               onClick={() => copyToClipboard(c.hex)}
                             >
                                <div className="flex items-center gap-6">
-                                 <div className="w-20 h-20 md:w-24 md:h-24 rounded-[2.5rem] border-4 border-white/10 shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-500 relative overflow-hidden" style={{ backgroundColor: c.hex }}>
+                                 <div className="w-20 h-20 md:w-24 md:h-24 rounded-[2.5rem] border-4 border-border shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-500 relative overflow-hidden" style={{ backgroundColor: c.hex }}>
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/10">
-                                       <Copy className={cn("w-6 h-6", c.isDark ? "text-white" : "text-black")} />
+                                       <Copy className={cn("w-6 h-6", c.isDark ? "text-foreground" : "text-black")} />
                                     </div>
                                  </div>
                                  <div className="flex-grow min-w-0">
@@ -359,10 +359,10 @@ export default function ColorLabClient() {
                                       <p className="font-black text-xl md:text-2xl tracking-tighter uppercase italic">{c.hex}</p>
                                       <Badge className={cn(
                                         "text-[9px] font-black border-none px-3 h-5 uppercase tracking-[0.15em] rounded-full",
-                                        c.type === "dominant" ? "bg-primary text-white" :
-                                        c.type === "vibrant" ? "bg-blue-600 text-white" :
-                                        c.type === "muted" ? "bg-white/10 text-white/40" :
-                                        "bg-orange-600 text-white"
+                                        c.type === "dominant" ? "bg-primary text-foreground" :
+                                        c.type === "vibrant" ? "bg-blue-600 text-foreground" :
+                                        c.type === "muted" ? "bg-secondary text-muted-foreground/60" :
+                                        "bg-orange-600 text-foreground"
                                       )}>{c.type}</Badge>
                                     </div>
                                     <div className="flex flex-col gap-1 opacity-25 mb-3">
@@ -374,25 +374,25 @@ export default function ColorLabClient() {
                                         <span className={cn("px-2 py-0.5 rounded-md text-[8px] font-black uppercase", cr.passAAA ? "bg-emerald-500/20 text-emerald-400" : cr.passAA ? "bg-yellow-500/20 text-yellow-400" : "bg-red-500/20 text-red-400")}>
                                           {cr.passAAA ? "AAA ✓" : cr.passAA ? "AA ✓" : "FAIL"}
                                         </span>
-                                        <span className="px-2 py-0.5 rounded-md text-[8px] font-black bg-white/5 text-white/30">/{cr.onWhite}</span>
-                                        <span className="px-2 py-0.5 rounded-md text-[8px] font-black bg-black/40 text-white/30">/{cr.onBlack}</span>
+                                        <span className="px-2 py-0.5 rounded-md text-[8px] font-black bg-secondary/50 text-muted-foreground/50">/{cr.onWhite}</span>
+                                        <span className="px-2 py-0.5 rounded-md text-[8px] font-black bg-muted/40 text-muted-foreground/50">/{cr.onBlack}</span>
                                       </div>
                                     ); })()}
                                  </div>
                                </div>
                                {/* Copy action buttons */}
-                               <div className="flex gap-2 pt-1 border-t border-white/5">
-                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.hex); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-white/5 hover:bg-primary/20 hover:text-primary transition-all">HEX</button>
-                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.rgb); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-white/5 hover:bg-primary/20 hover:text-primary transition-all">RGB</button>
-                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.hsl); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-white/5 hover:bg-primary/20 hover:text-primary transition-all">HSL</button>
-                                 <button onClick={(e) => { e.stopPropagation(); setShowHarmony(showHarmony === c.hex ? null : c.hex); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-white/5 hover:bg-blue-500/20 hover:text-blue-400 transition-all">HARMONY</button>
+                               <div className="flex gap-2 pt-1 border-t border-border">
+                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.hex); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-secondary/50 hover:bg-primary/20 hover:text-primary transition-all">HEX</button>
+                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.rgb); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-secondary/50 hover:bg-primary/20 hover:text-primary transition-all">RGB</button>
+                                 <button onClick={(e) => { e.stopPropagation(); copyToClipboard(c.hsl); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-secondary/50 hover:bg-primary/20 hover:text-primary transition-all">HSL</button>
+                                 <button onClick={(e) => { e.stopPropagation(); setShowHarmony(showHarmony === c.hex ? null : c.hex); }} className="flex-1 text-[9px] font-black uppercase tracking-widest py-2 rounded-xl bg-secondary/50 hover:bg-blue-500/20 hover:text-blue-400 transition-all">HARMONY</button>
                                </div>
                                {/* Harmony row */}
                                {showHarmony === c.hex && (
                                  <div className="flex gap-2 pt-1">
                                    {getHarmonyColors(c.hex).map(h => (
                                      <div key={h.label} className="flex-1 text-center space-y-1" onClick={(e) => { e.stopPropagation(); copyToClipboard(h.hex); }}>
-                                       <div className="w-full h-8 rounded-xl border border-white/10 cursor-pointer hover:scale-105 transition-transform" style={{ backgroundColor: h.hex }} />
+                                       <div className="w-full h-8 rounded-xl border border-border cursor-pointer hover:scale-105 transition-transform" style={{ backgroundColor: h.hex }} />
                                        <p className="text-[7px] font-black uppercase tracking-widest opacity-30">{h.label}</p>
                                      </div>
                                    ))}
@@ -406,7 +406,7 @@ export default function ColorLabClient() {
 
                    {colors.length === 0 && !isProcessing && (
                       <div className="py-20 text-center space-y-6 opacity-20">
-                         <div className="w-24 h-24 rounded-[3rem] bg-white/5 border border-dashed border-white/20 flex items-center justify-center mx-auto">
+                         <div className="w-24 h-24 rounded-[3rem] bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto">
                             <Pipette className="w-10 h-10" />
                          </div>
                          <p className="text-sm font-black uppercase tracking-[0.3em] italic">Select source to extract palette</p>
@@ -417,15 +417,15 @@ export default function ColorLabClient() {
             </section>
 
             {/* Right Sidebar - Studio Matrix */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
                   </h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
                 </div>
-                <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
+                <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
@@ -455,8 +455,8 @@ export default function ColorLabClient() {
                           key={mode.id}
                           variant={activeAnalysis === mode.id ? "default" : "outline"}
                           className={cn(
-                            "h-14 justify-start gap-4 rounded-2xl px-6 border-white/5 transition-all duration-300",
-                            activeAnalysis === mode.id ? "bg-primary text-white shadow-lg shadow-primary/20" : "bg-white/[0.03] hover:bg-white/[0.08]"
+                            "h-14 justify-start gap-4 rounded-2xl px-6 border-border transition-all duration-300",
+                            activeAnalysis === mode.id ? "bg-primary text-foreground shadow-lg shadow-primary/20" : "bg-white/[0.03] hover:bg-white/[0.08]"
                           )}
                           onClick={() => setActiveAnalysis(mode.id as any)}
                         >
@@ -467,20 +467,20 @@ export default function ColorLabClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-4">
+                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">Neural Guard</h4>
                     </div>
-                    <p className="text-[10px] text-white/30 leading-relaxed font-medium">
+                    <p className="text-[10px] text-muted-foreground/50 leading-relaxed font-medium">
                       Localized chromatic analysis performed in high-entropy worker threads.
                     </p>
                   </div>
                 </div>
               </ScrollArea>
               
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
-                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
+                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/40">
                     <ShieldCheck className="w-4 h-4 text-emerald-500" /> Chromatic Integrity Verified
                  </div>
               </div>

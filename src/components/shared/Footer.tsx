@@ -35,7 +35,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#050505] mt-auto relative overflow-hidden">
+    <footer className="border-t border-border bg-secondary/30 mt-auto relative overflow-hidden">
       {/* Subtle Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[300px] bg-primary/5 blur-[120px] rounded-full pointer-events-none opacity-30" />
       
@@ -48,11 +48,11 @@ export function Footer() {
                 <div className="w-12 h-12 flex items-center justify-center rounded-2xl overflow-hidden group-hover:scale-110 transition-transform">
                   <Image src="/android-chrome-192x192.png" alt="SafeTools Logo" width={48} height={48} className="rounded-2xl" />
                 </div>
-                <span className="font-black text-2xl tracking-tighter text-white italic uppercase">
+                <span className="font-black text-2xl tracking-tighter text-foreground italic uppercase">
                   Safe<span className="text-primary">Tools</span>
                 </span>
               </Link>
-              <p className="text-base text-white/40 max-w-md leading-relaxed font-medium">
+              <p className="text-base text-muted-foreground/60 max-w-md leading-relaxed font-medium">
                 The absolute standard in client-side media engineering. 
                 All processing happens in your browser's RAM — zero latency, 
                 zero tracking, absolute data sovereignty.
@@ -82,7 +82,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[13px] text-white/30 hover:text-white transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
+                      className="text-[13px] text-muted-foreground hover:text-primary transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -100,7 +100,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[13px] text-white/30 hover:text-white transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
+                      className="text-[13px] text-muted-foreground hover:text-primary transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -118,7 +118,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[13px] text-white/30 hover:text-white transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
+                      className="text-[13px] text-muted-foreground hover:text-primary transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -136,7 +136,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[13px] text-white/30 hover:text-white transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
+                      className="text-[13px] text-muted-foreground hover:text-primary transition-all font-bold uppercase tracking-tight hover:translate-x-1 inline-block"
                     >
                       {link.name}
                     </Link>
@@ -148,9 +148,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/5 mt-24 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="border-t border-border mt-24 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-6">
-            <p className="text-[10px] font-black uppercase tracking-widest text-white/20 italic">
+            <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40 italic">
               © {new Date().getFullYear()} SafeTools System. Sovereign &amp; Decentralized.
             </p>
           </div>
@@ -158,20 +158,20 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/20">Zero-Server</span>
+              <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">Zero-Server</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/20">WASM Engine</span>
+              <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">WASM Engine</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" style={{ animationDelay: '1s' }} />
-              <span className="text-[9px] font-black uppercase tracking-widest text-white/20">150+ Tools</span>
+              <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">150+ Tools</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 p-4 rounded-2xl bg-white/[0.02] border border-white/5 shadow-2xl">
-            <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/40">
+          <div className="flex items-center gap-1.5 p-4 rounded-2xl bg-secondary/50 border border-border shadow-2xl">
+            <p className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
               Forged in <Heart className="w-3.5 h-3.5 text-primary fill-primary animate-pulse" /> for the Open Web
             </p>
           </div>

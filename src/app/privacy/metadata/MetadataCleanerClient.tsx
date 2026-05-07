@@ -208,7 +208,7 @@ export default function MetadataCleanerClient() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-[#050505] text-white overflow-hidden selection:bg-primary/30">
+    <div className="flex flex-col h-screen bg-background text-foreground overflow-hidden selection:bg-primary/30">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden relative scrollbar-hide">
@@ -230,7 +230,7 @@ export default function MetadataCleanerClient() {
             <div className="max-w-2xl w-full space-y-12 text-center">
               <div className="space-y-6">
                 <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-primary to-red-600 p-[1px] mx-auto animate-pulse">
-                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-white/5">
+                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Shield className="w-10 h-10 text-primary" />
                   </div>
                 </div>
@@ -247,15 +247,15 @@ export default function MetadataCleanerClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*,video/*,audio/*,.pdf" 
                 multiple={true} 
-                className="h-64 border-dashed border-white/10 bg-white/5 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar - Asset Matrix */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -288,12 +288,12 @@ export default function MetadataCleanerClient() {
                       >
                         <Card 
                           className={cn(
-                            "p-3 flex items-center gap-4 cursor-pointer transition-all border-white/5 hover:border-primary/20 group relative overflow-hidden rounded-2xl",
-                            selectedFileId === f.id ? "bg-primary/5 border-primary/30" : "bg-white/[0.02]"
+                            "p-3 flex items-center gap-4 cursor-pointer transition-all border-border hover:border-primary/20 group relative overflow-hidden rounded-2xl",
+                            selectedFileId === f.id ? "bg-primary/5 border-primary/30" : "bg-secondary/30"
                           )}
                           onClick={() => setSelectedFileId(f.id)}
                         >
-                          <div className="w-12 h-12 rounded-xl overflow-hidden bg-black/40 shrink-0 relative flex items-center justify-center border border-white/5">
+                          <div className="w-12 h-12 rounded-xl overflow-hidden bg-muted/40 shrink-0 relative flex items-center justify-center border border-border">
                             {f.file.type.startsWith("image/") ? (
                               <img src={f.previewUrl} className="w-full h-full object-cover" alt="" />
                             ) : (
@@ -301,14 +301,14 @@ export default function MetadataCleanerClient() {
                             )}
                             {f.status === "completed" && (
                               <div className="absolute inset-0 bg-emerald-500/80 flex items-center justify-center">
-                                <CheckCircle2 className="w-6 h-6 text-white" />
+                                <CheckCircle2 className="w-6 h-6 text-foreground" />
                               </div>
                             )}
                           </div>
                           <div className="min-w-0 flex-grow">
                             <p className="text-[11px] font-black uppercase truncate tracking-tight">{f.file.name}</p>
                             <div className="flex items-center gap-2 mt-1">
-                              <Badge variant={f.status === "completed" ? "default" : "secondary"} className={cn("text-[8px] h-4 py-0 font-black tracking-widest", f.status === "completed" ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20" : "bg-white/5 text-white/40")}>
+                              <Badge variant={f.status === "completed" ? "default" : "secondary"} className={cn("text-[8px] h-4 py-0 font-black tracking-widest", f.status === "completed" ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20" : "bg-secondary/50 text-muted-foreground/60")}>
                                 {f.status === "completed" ? "CLEAN" : `RISK ${f.riskScore}%`}
                               </Badge>
                             </div>
@@ -328,9 +328,9 @@ export default function MetadataCleanerClient() {
                 </div>
               </ScrollArea>
 
-              <div className="p-6 border-t border-white/5 bg-black/40 shrink-0">
+              <div className="p-6 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+                  className="w-full h-14 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
                   onClick={batchScrub}
                   disabled={isBatchProcessing || !files.some(f => f.status === "idle")}
                 >
@@ -342,7 +342,7 @@ export default function MetadataCleanerClient() {
 
             {/* Center - Preview Engine */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
-              <header className="p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20">
+              <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl">
                     <ShieldCheck className="w-8 h-8 text-primary" />
@@ -352,10 +352,10 @@ export default function MetadataCleanerClient() {
                       {activeFile?.file.name || "Awaiting Payload"}
                     </h2>
                     <div className="flex items-center gap-4">
-                      <Badge className="text-[10px] bg-white/5 text-white/40 border-white/10 px-4 py-1 rounded-full font-black uppercase tracking-widest italic">
+                      <Badge className="text-[10px] bg-secondary/50 text-muted-foreground/60 border-border px-4 py-1 rounded-full font-black uppercase tracking-widest italic">
                         {activeFile?.file.type.toUpperCase() || "NULL"}
                       </Badge>
-                      <span className="text-[10px] text-white/20 uppercase font-black tracking-widest">
+                      <span className="text-[10px] text-muted-foreground/40 uppercase font-black tracking-widest">
                         {activeFile ? ((activeFile.file.size || 0) / 1024).toFixed(1) : 0} KB
                       </span>
                     </div>
@@ -374,7 +374,7 @@ export default function MetadataCleanerClient() {
 
               <div className="flex-grow relative flex items-center justify-center p-8 lg:p-12 overflow-hidden">
                 {activeFile ? (
-                   <div className="w-full h-full max-w-4xl bg-white/[0.02] rounded-[3rem] border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden">
+                   <div className="w-full h-full max-w-4xl bg-secondary/30 rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden">
                       {activeFile.file.type.startsWith("image/") ? (
                         <img 
                           src={activeFile.status === "completed" ? activeFile.resultUrl : activeFile.previewUrl} 
@@ -386,7 +386,7 @@ export default function MetadataCleanerClient() {
                            <div className="w-24 h-24 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20">
                               <Lock className="w-10 h-10 text-primary" />
                            </div>
-                           <p className="text-white/40 font-black uppercase tracking-widest text-xs">Binary Stream Preview Restricted</p>
+                           <p className="text-muted-foreground/60 font-black uppercase tracking-widest text-xs">Binary Stream Preview Restricted</p>
                         </div>
                       )}
                       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -401,21 +401,21 @@ export default function MetadataCleanerClient() {
             </section>
 
             {/* Right Sidebar - Studio Matrix */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
                   </h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
                 </div>
-                <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
+                <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
                 <div className="p-8 space-y-10">
                   <div className="space-y-6">
-                    <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Scrub Protocol</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Scrub Protocol</h4>
                     <div className="space-y-4">
                        {[
                          { id: "gps", label: "Strip GPS/Location", key: "stripGPS" },
@@ -423,8 +423,8 @@ export default function MetadataCleanerClient() {
                          { id: "software", label: "Strip Software Sig", key: "stripSoftware" },
                          { id: "fuzz", label: "Fuzz/Scramble Data", key: "fuzzData" }
                        ].map((item) => (
-                         <div key={item.id} className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                            <Label htmlFor={item.id} className="text-[11px] font-black uppercase text-white/60 tracking-wider">{item.label}</Label>
+                         <div key={item.id} className="flex items-center justify-between p-4 rounded-2xl bg-secondary/30 border border-border">
+                            <Label htmlFor={item.id} className="text-[11px] font-black uppercase text-muted-foreground/80 tracking-wider">{item.label}</Label>
                             <Switch 
                               id={item.id} 
                               checked={(settings as any)[item.key]} 
@@ -437,13 +437,13 @@ export default function MetadataCleanerClient() {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Metadata Inspector</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Metadata Inspector</h4>
                     <div className="space-y-2">
                        {activeFile?.metadata.length ? (
                          activeFile.metadata.map((tag, i) => (
-                           <div key={i} className={cn("p-4 rounded-2xl border text-xs flex flex-col gap-1 transition-all", tag.category === "location" ? "bg-red-500/5 border-red-500/20" : "bg-white/[0.02] border-white/5")}>
-                              <p className="text-[9px] font-black uppercase text-white/20 tracking-widest">{tag.name}</p>
-                              <p className="font-mono text-[11px] break-all text-white/60">{tag.value}</p>
+                           <div key={i} className={cn("p-4 rounded-2xl border text-xs flex flex-col gap-1 transition-all", tag.category === "location" ? "bg-red-500/5 border-red-500/20" : "bg-secondary/30 border-border")}>
+                              <p className="text-[9px] font-black uppercase text-muted-foreground/40 tracking-widest">{tag.name}</p>
+                              <p className="font-mono text-[11px] break-all text-muted-foreground/80">{tag.value}</p>
                            </div>
                          ))
                        ) : (
@@ -455,20 +455,20 @@ export default function MetadataCleanerClient() {
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-4">
+                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-primary" />
                       <h4 className="text-xs font-black uppercase tracking-widest">WASM Guard</h4>
                     </div>
-                    <p className="text-[10px] text-white/30 leading-relaxed font-medium">
+                    <p className="text-[10px] text-muted-foreground/50 leading-relaxed font-medium">
                       All scrubbing logic is executed within a high-entropy WebAssembly container. No data packets leave the local thread architecture.
                     </p>
                   </div>
                 </div>
               </ScrollArea>
               
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
-                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
+                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/40">
                     <ShieldCheck className="w-4 h-4 text-emerald-500" /> Identity Protected
                  </div>
               </div>

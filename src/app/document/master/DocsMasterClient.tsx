@@ -307,7 +307,7 @@ export default function DocsMasterClient() {
   };
 
    return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative">
@@ -326,19 +326,19 @@ export default function DocsMasterClient() {
                 </div>
                 <div className="space-y-4">
                   <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">Docs <br/><span className="text-emerald-500">Master.</span></h1>
-                  <p className="text-white/40 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Unified secure document laboratory. Universal support for Office, PDF, and Data formats.</p>
+                  <p className="text-muted-foreground/60 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Unified secure document laboratory. Universal support for Office, PDF, and Data formats.</p>
                 </div>
               </div>
               <DropZone 
                 onFilesDrop={handleFileDrop} 
                 accept=".pdf,.docx,.xlsx,.pptx,.csv,.txt,.json" 
                 multiple={false} 
-                className="h-64 border-dashed border-white/10 bg-white/[0.02] rounded-none hover:bg-white/[0.05] hover:border-emerald-500/40 transition-all group" 
+                className="h-64 border-dashed border-border bg-secondary/30 rounded-none hover:bg-secondary/70 hover:border-emerald-500/40 transition-all group" 
               />
               
               <div className="grid grid-cols-4 gap-4 opacity-40">
                 {["PDF", "DOCX", "XLSX", "CSV"].map(t => (
-                  <div key={t} className="p-4 border border-white/5 bg-white/[0.01] rounded-none flex flex-col items-center gap-2">
+                  <div key={t} className="p-4 border border-border bg-white/[0.01] rounded-none flex flex-col items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                     <span className="text-[10px] font-black tracking-widest uppercase">{t}</span>
                   </div>
@@ -349,13 +349,13 @@ export default function DocsMasterClient() {
         ) : (
           <>
             {/* Left Sidebar - Inspector */}
-            <aside className="flex w-full lg:w-[400px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[400px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-500 flex items-center gap-3">
                     <Edit3 className="w-4 h-4" /> Doc Inspector
                   </h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest mt-1">Universal Engine v2.0</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest mt-1">Universal Engine v2.0</p>
                 </div>
                 <Badge variant="outline" className="text-[10px] border-emerald-500/20 bg-emerald-500/5 text-emerald-500 px-4 py-1.5 rounded-none font-black italic">
                   {docType?.toUpperCase()} ENGINE
@@ -366,14 +366,14 @@ export default function DocsMasterClient() {
                 <div className="p-8 space-y-10">
                   {/* Metadata Card */}
                   <div className="space-y-6">
-                    <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">File Identity</Label>
-                    <div className="p-5 rounded-none bg-white/[0.03] border border-white/10 space-y-4">
+                    <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">File Identity</Label>
+                    <div className="p-5 rounded-none bg-white/[0.03] border border-border space-y-4">
                       <div className="flex justify-between items-center">
-                        <span className="text-[9px] font-bold text-white/40 uppercase">Name</span>
+                        <span className="text-[9px] font-bold text-muted-foreground/60 uppercase">Name</span>
                         <span className="text-[10px] font-black truncate max-w-[200px]">{file.name}</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-[9px] font-bold text-white/40 uppercase">Size</span>
+                        <span className="text-[9px] font-bold text-muted-foreground/60 uppercase">Size</span>
                         <span className="text-[10px] font-black">{(file.size / 1024 / 1024).toFixed(2)} MB</span>
                       </div>
                     </div>
@@ -381,29 +381,29 @@ export default function DocsMasterClient() {
 
                   {/* Actions */}
                   <div className="space-y-6">
-                    <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Master Controls</Label>
+                    <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Master Controls</Label>
                     <div className="grid gap-3">
                       {(docType === "xlsx" || docType === "csv") && (
-                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportSpreadsheet}>
+                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportSpreadsheet}>
                           <Save className="w-4 h-4" /> Save Spreadsheet
                         </Button>
                       )}
                       {(docType === "txt" || docType === "json" || docType === "pptx") && (
-                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-white font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportText}>
+                        <Button className="w-full h-14 rounded-none bg-blue-600 hover:bg-blue-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={exportText}>
                           <Save className="w-4 h-4" /> Save Extracted Text
                         </Button>
                       )}
                       {docType === "docx" && (
                         <>
                           <Button 
-                            className={cn("w-full h-14 rounded-none font-black uppercase tracking-widest text-[10px] gap-3", isEditing ? "bg-amber-500 hover:bg-amber-400 text-black" : "bg-blue-600 hover:bg-blue-500 text-white")}
+                            className={cn("w-full h-14 rounded-none font-black uppercase tracking-widest text-[10px] gap-3", isEditing ? "bg-amber-500 hover:bg-amber-400 text-black" : "bg-blue-600 hover:bg-blue-500 text-foreground")}
                             onClick={() => setIsEditing(!isEditing)}
                           >
                             <Edit3 className="w-4 h-4" /> {isEditing ? "Disable Edit Mode" : "Enable Edit Mode"}
                           </Button>
                           {isEditing && (
                             <Button 
-                              className="w-full h-14 rounded-none bg-indigo-600 hover:bg-indigo-500 text-white font-black uppercase tracking-widest text-[10px] gap-3"
+                              className="w-full h-14 rounded-none bg-indigo-600 hover:bg-indigo-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3"
                               onClick={() => window.print()}
                             >
                               <Save className="w-4 h-4" /> Print / Save as PDF
@@ -411,10 +411,10 @@ export default function DocsMasterClient() {
                           )}
                         </>
                       )}
-                      <Button className="w-full h-14 rounded-none bg-emerald-600 hover:bg-emerald-500 text-white font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => ExportManager.downloadFromUrl(URL.createObjectURL(file), file.name)}>
+                      <Button className="w-full h-14 rounded-none bg-emerald-600 hover:bg-emerald-500 text-foreground font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => ExportManager.downloadFromUrl(URL.createObjectURL(file), file.name)}>
                         <DownloadCloud className="w-4 h-4" /> Export Original
                       </Button>
-                      <Button variant="outline" className="w-full h-14 rounded-none border-white/10 hover:bg-white/5 text-white/60 font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => setFile(null)}>
+                      <Button variant="outline" className="w-full h-14 rounded-none border-border hover:bg-secondary/50 text-muted-foreground/80 font-black uppercase tracking-widest text-[10px] gap-3" onClick={() => setFile(null)}>
                         <RefreshCw className="w-4 h-4" /> Load Different
                       </Button>
                     </div>
@@ -423,30 +423,30 @@ export default function DocsMasterClient() {
                   {/* PDF Page Extractor */}
                   {docType === "pdf" && (
                     <div className="space-y-6">
-                      <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">PDF Manipulation</Label>
-                      <div className="p-6 bg-white/[0.03] border border-white/5 rounded-none space-y-6">
+                      <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">PDF Manipulation</Label>
+                      <div className="p-6 bg-white/[0.03] border border-border rounded-none space-y-6">
                          <div className="space-y-3">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-white/60 flex items-center gap-2">
+                            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/80 flex items-center gap-2">
                                <Layers className="w-3.5 h-3.5 text-rose-500" /> Target Page
                             </span>
                             <div className="flex items-center gap-3">
                                <input 
                                   type="number"
                                   min="1"
-                                  className="w-full h-12 bg-black border border-white/10 rounded-none text-center font-black text-emerald-500 focus:outline-none focus:border-emerald-500/50"
+                                  className="w-full h-12 bg-card border border-border rounded-none text-center font-black text-emerald-500 focus:outline-none focus:border-emerald-500/50"
                                   value={selectedPage}
                                   onChange={(e) => setSelectedPage(parseInt(e.target.value) || 1)}
                                />
                                <Button 
                                   onClick={extractPDFPage}
-                                  className="h-12 bg-white text-black hover:bg-emerald-500 hover:text-white rounded-none border-0 font-black uppercase tracking-widest text-[10px] px-6"
+                                  className="h-12 bg-white text-black hover:bg-emerald-500 hover:text-foreground rounded-none border-0 font-black uppercase tracking-widest text-[10px] px-6"
                                >
                                   EXTRACT
                                </Button>
                             </div>
                          </div>
-                         <div className="pt-4 border-t border-white/5">
-                            <p className="text-[8px] font-bold text-white/20 uppercase leading-relaxed tracking-widest">
+                         <div className="pt-4 border-t border-border">
+                            <p className="text-[8px] font-bold text-muted-foreground/40 uppercase leading-relaxed tracking-widest">
                                PRO TIP: This tool creates a fresh 1-page PDF using only the selected buffer.
                             </p>
                          </div>
@@ -457,20 +457,20 @@ export default function DocsMasterClient() {
                   {/* DOCX Engine Selection */}
                   {docType === "docx" && (
                     <div className="space-y-6">
-                      <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Word Rendering Core</Label>
-                      <div className="p-6 bg-white/[0.03] border border-white/5 rounded-none space-y-4">
+                      <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Word Rendering Core</Label>
+                      <div className="p-6 bg-white/[0.03] border border-border rounded-none space-y-4">
                         <div className="flex items-center justify-between">
-                          <span className="text-[10px] font-black uppercase tracking-widest text-white/60">Legacy Support</span>
+                          <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/80">Legacy Support</span>
                           <Button 
                             variant="ghost" 
                             size="sm" 
                             onClick={() => setForceMammoth(!forceMammoth)}
-                            className={cn("h-8 px-4 rounded-none text-[8px] font-black uppercase tracking-[0.2em]", forceMammoth ? "bg-amber-500 text-black hover:bg-amber-400" : "bg-white/5 text-white/40 hover:bg-white/10")}
+                            className={cn("h-8 px-4 rounded-none text-[8px] font-black uppercase tracking-[0.2em]", forceMammoth ? "bg-amber-500 text-black hover:bg-amber-400" : "bg-secondary/50 text-muted-foreground/60 hover:bg-secondary")}
                           >
                             {forceMammoth ? "ENABLED" : "DISABLED"}
                           </Button>
                         </div>
-                        <p className="text-[8px] font-bold text-white/20 uppercase leading-relaxed tracking-widest">
+                        <p className="text-[8px] font-bold text-muted-foreground/40 uppercase leading-relaxed tracking-widest">
                           Enable this if the document fails to render or contains complex structural elements.
                         </p>
                       </div>
@@ -479,26 +479,26 @@ export default function DocsMasterClient() {
 
                   {/* Privacy & View Controls */}
                   <div className="space-y-6">
-                    <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Studio Config</Label>
+                    <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Studio Config</Label>
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between p-4 bg-white/[0.03] border border-white/5 rounded-none group hover:border-emerald-500/30 transition-all cursor-pointer" onClick={() => setScrubMetadata(!scrubMetadata)}>
+                      <div className="flex items-center justify-between p-4 bg-white/[0.03] border border-border rounded-none group hover:border-emerald-500/30 transition-all cursor-pointer" onClick={() => setScrubMetadata(!scrubMetadata)}>
                         <div className="flex flex-col gap-1">
                           <span className="text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-                             <ShieldCheck className={cn("w-3.5 h-3.5 transition-colors", scrubMetadata ? "text-emerald-500" : "text-white/20")} />
+                             <ShieldCheck className={cn("w-3.5 h-3.5 transition-colors", scrubMetadata ? "text-emerald-500" : "text-muted-foreground/40")} />
                              Privacy Scrub
                           </span>
-                          <span className="text-[8px] font-bold text-white/20 uppercase tracking-widest">Strip EXIF & Identity</span>
+                          <span className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">Strip EXIF & Identity</span>
                         </div>
                         <Switch checked={scrubMetadata} onCheckedChange={setScrubMetadata} className="data-[state=checked]:bg-emerald-500" />
                       </div>
 
-                      <div className="flex items-center justify-between p-4 bg-white/[0.03] border border-white/5 rounded-none group hover:border-blue-500/30 transition-all cursor-pointer" onClick={() => setDarkPreview(!darkPreview)}>
+                      <div className="flex items-center justify-between p-4 bg-white/[0.03] border border-border rounded-none group hover:border-blue-500/30 transition-all cursor-pointer" onClick={() => setDarkPreview(!darkPreview)}>
                         <div className="flex flex-col gap-1">
                           <span className="text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
-                             <Eye className={cn("w-3.5 h-3.5 transition-colors", darkPreview ? "text-blue-500" : "text-white/20")} />
+                             <Eye className={cn("w-3.5 h-3.5 transition-colors", darkPreview ? "text-blue-500" : "text-muted-foreground/40")} />
                              Studio Dark
                           </span>
-                          <span className="text-[8px] font-bold text-white/20 uppercase tracking-widest">Toggle Viewer Theme</span>
+                          <span className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">Toggle Viewer Theme</span>
                         </div>
                         <Switch checked={darkPreview} onCheckedChange={setDarkPreview} className="data-[state=checked]:bg-blue-600" />
                       </div>
@@ -510,20 +510,20 @@ export default function DocsMasterClient() {
                         <ShieldCheck className="w-5 h-5" />
                         <span className="text-[10px] font-black uppercase tracking-widest">Privacy Guard</span>
                      </div>
-                     <p className="text-[9px] font-medium text-white/40 leading-relaxed uppercase">Document is processed entirely in your browser. No data ever reaches any server.</p>
+                     <p className="text-[9px] font-medium text-muted-foreground/60 leading-relaxed uppercase">Document is processed entirely in your browser. No data ever reaches any server.</p>
                   </div>
                 </div>
               </ScrollArea>
             </aside>
 
             {/* Main Preview Area */}
-            <div className="flex-grow flex flex-col bg-[#050505] relative overflow-hidden">
-               <div className="h-14 border-b border-white/5 bg-black/40 backdrop-blur-xl flex items-center px-8 justify-between shrink-0">
+            <div className="flex-grow flex flex-col bg-background relative overflow-hidden">
+               <div className="h-14 border-b border-border bg-muted/40 backdrop-blur-xl flex items-center px-8 justify-between shrink-0">
                   <div className="flex items-center gap-8">
-                     <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "preview" ? "text-emerald-500" : "text-white/20")} onClick={() => setActiveTab("preview")}>Visual Preview</button>
-                     <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "data" ? "text-emerald-500" : "text-white/20")} onClick={() => setActiveTab("data")}>Raw Structure</button>
+                     <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "preview" ? "text-emerald-500" : "text-muted-foreground/40")} onClick={() => setActiveTab("preview")}>Visual Preview</button>
+                     <button className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", activeTab === "data" ? "text-emerald-500" : "text-muted-foreground/40")} onClick={() => setActiveTab("data")}>Raw Structure</button>
                   </div>
-                  <div className="flex items-center gap-4 text-white/20 text-[10px] font-black italic uppercase">
+                  <div className="flex items-center gap-4 text-muted-foreground/40 text-[10px] font-black italic uppercase">
                      <CloudOff className="w-4 h-4" /> 100% Local Processing
                   </div>
                </div>
@@ -537,23 +537,23 @@ export default function DocsMasterClient() {
                     { label: "Stability", value: "Verified", icon: ShieldCheck },
                     { label: "Engine", value: "WASM v2.0", icon: Sparkles }
                   ].map((stat, i) => (
-                    <div key={i} className="bg-white/[0.03] border border-white/5 p-4 flex items-center gap-4 group hover:border-white/10 transition-all">
-                      <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                    <div key={i} className="bg-white/[0.03] border border-border p-4 flex items-center gap-4 group hover:border-border transition-all">
+                      <div className="w-8 h-8 rounded-lg bg-secondary/50 flex items-center justify-center text-muted-foreground/60 group-hover:text-foreground transition-colors">
                         <stat.icon className="w-4 h-4" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{stat.label}</span>
-                        <span className="text-[10px] font-black uppercase tracking-widest text-white/80">{stat.value}</span>
+                        <span className="text-[8px] font-black uppercase tracking-widest text-muted-foreground/40">{stat.label}</span>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-foreground/80">{stat.value}</span>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <Card className={cn("w-full max-w-6xl min-h-[900px] shadow-2xl rounded-none flex flex-col overflow-hidden border-0 transition-colors duration-500", darkPreview ? "bg-[#111] text-white" : "bg-white text-black")}>
+                <Card className={cn("w-full max-w-6xl min-h-[900px] shadow-2xl rounded-none flex flex-col overflow-hidden border-0 transition-colors duration-500", darkPreview ? "bg-[#111] text-foreground" : "bg-white text-black")}>
                      {/* Pro Preview Header */}
-                     <div className={cn("h-20 border-b flex items-center px-10 justify-between shrink-0 transition-colors duration-500", darkPreview ? "border-white/5 bg-black/40" : "border-gray-100 bg-gray-50/50")}>
+                     <div className={cn("h-20 border-b flex items-center px-10 justify-between shrink-0 transition-colors duration-500", darkPreview ? "border-border bg-muted/40" : "border-gray-100 bg-gray-50/50")}>
                         <div className="flex items-center gap-6">
-                           <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg transition-transform hover:scale-110", darkPreview ? "bg-white text-black" : "bg-black text-white")}>
+                           <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center text-foreground shadow-lg transition-transform hover:scale-110", darkPreview ? "bg-white text-black" : "bg-black text-foreground")}>
                               {docType === "xlsx" || docType === "csv" ? <FileSpreadsheet className="w-5 h-5" /> : 
                                docType === "docx" ? <FileText className="w-5 h-5" /> :
                                docType === "pdf" ? <FileText className="w-5 h-5 text-red-400" /> :
@@ -562,7 +562,7 @@ export default function DocsMasterClient() {
                            </div>
                            <div className="flex flex-col">
                               <h2 className="text-lg font-black tracking-tight uppercase leading-none">{file.name}</h2>
-                              <span className={cn("text-[10px] font-bold uppercase tracking-widest mt-1 transition-colors", darkPreview ? "text-white/20" : "text-gray-400")}>
+                              <span className={cn("text-[10px] font-bold uppercase tracking-widest mt-1 transition-colors", darkPreview ? "text-muted-foreground/40" : "text-gray-400")}>
                                  {docType === "xlsx" || docType === "csv" ? `Sheet: ${sheets[currentSheet] || "N/A"}` : 
                                   docType === "pdf" ? "Document View" : "Universal Preview"}
                               </span>
@@ -570,7 +570,7 @@ export default function DocsMasterClient() {
                         </div>
 
                         {(docType === "xlsx" || docType === "csv") && sheets.length > 1 && (
-                           <div className={cn("flex items-center gap-2 p-1.5 border shadow-sm transition-colors", darkPreview ? "bg-black border-white/10" : "bg-white border-gray-200")}>
+                           <div className={cn("flex items-center gap-2 p-1.5 border shadow-sm transition-colors", darkPreview ? "bg-card border-border" : "bg-white border-gray-200")}>
                               {sheets.map((sheet, idx) => (
                                  <button
                                     key={sheet}
@@ -578,8 +578,8 @@ export default function DocsMasterClient() {
                                     className={cn(
                                        "px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all",
                                        currentSheet === idx 
-                                          ? (darkPreview ? "bg-white text-black" : "bg-black text-white") 
-                                          : (darkPreview ? "text-white/20 hover:text-white hover:bg-white/5" : "text-gray-400 hover:text-black hover:bg-gray-50")
+                                          ? (darkPreview ? "bg-white text-black" : "bg-black text-foreground") 
+                                          : (darkPreview ? "text-muted-foreground/40 hover:text-foreground hover:bg-secondary/50" : "text-gray-400 hover:text-black hover:bg-gray-50")
                                     )}
                                  >
                                     {sheet}
@@ -589,22 +589,22 @@ export default function DocsMasterClient() {
                         )}
 
                         <div className="flex items-center gap-4">
-                           <div className={cn("flex items-center gap-2 border p-1 shadow-sm transition-colors", darkPreview ? "bg-black border-white/10" : "bg-white border-gray-200")}>
+                           <div className={cn("flex items-center gap-2 border p-1 shadow-sm transition-colors", darkPreview ? "bg-card border-border" : "bg-white border-gray-200")}>
                               <button onClick={() => setZoom(Math.max(50, zoom - 10))} className="p-1 hover:bg-gray-50 text-gray-400 hover:text-black transition-colors"><Search className="w-3.5 h-3.5" /></button>
                               <span className="text-[9px] font-black w-10 text-center">{zoom}%</span>
                               <button onClick={() => setZoom(Math.min(200, zoom + 10))} className="p-1 hover:bg-gray-50 text-gray-400 hover:text-black transition-colors"><Maximize2 className="w-3.5 h-3.5" /></button>
                            </div>
                            <div className="relative group/search">
-                              <Search className={cn("absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors", darkPreview ? "text-white/20" : "text-gray-400")} />
+                              <Search className={cn("absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors", darkPreview ? "text-muted-foreground/40" : "text-gray-400")} />
                               <input 
                                  placeholder="Search document..."
                                  className={cn("h-10 pl-10 pr-4 rounded-none text-xs font-medium focus:outline-none transition-all w-[200px] lg:w-[300px]", 
-                                    darkPreview ? "bg-black border-white/10 text-white focus:ring-white/20" : "bg-white border-gray-200 text-black focus:ring-black")}
+                                    darkPreview ? "bg-card border-border text-foreground focus:ring-white/20" : "bg-white border-gray-200 text-black focus:ring-black")}
                                  value={searchTerm}
                                  onChange={(e) => setSearchTerm(e.target.value)}
                               />
                            </div>
-                           <Badge variant="outline" className={cn("rounded-none text-[9px] font-black uppercase tracking-widest px-4 py-1.5 transition-colors", darkPreview ? "border-white/10 text-white/40" : "border-gray-200 text-black/40")}>
+                           <Badge variant="outline" className={cn("rounded-none text-[9px] font-black uppercase tracking-widest px-4 py-1.5 transition-colors", darkPreview ? "border-border text-muted-foreground/60" : "border-gray-200 text-black/40")}>
                               {activeTab === "preview" ? "Visual Mode" : "Structural Mode"}
                            </Badge>
                         </div>
@@ -614,22 +614,22 @@ export default function DocsMasterClient() {
                         <div style={{ transform: `scale(${zoom / 100})`, transformOrigin: "top center", transition: "transform 0.2s ease-out" }} className="w-full h-full">
                            {activeTab === "preview" ? (
                               docType === "xlsx" || docType === "csv" ? (
-                                 <div className={cn("overflow-auto border transition-colors", darkPreview ? "border-white/5 bg-black" : "border-gray-100 bg-white")}>
+                                 <div className={cn("overflow-auto border transition-colors", darkPreview ? "border-border bg-black" : "border-gray-100 bg-white")}>
                                     <table className="w-full border-collapse">
                                        <tbody>
                                           {(previewContent as any[] || []).map((row, i) => {
                                              const rowMatches = searchTerm && row.some((cell: any) => cell?.toString().toLowerCase().includes(searchTerm.toLowerCase()));
                                              return (
                                                 <tr key={i} className={cn("border-b last:border-0 hover:bg-gray-50/30 transition-colors", 
-                                                   darkPreview ? "border-white/5" : "border-gray-50",
+                                                   darkPreview ? "border-border" : "border-gray-50",
                                                    rowMatches && (darkPreview ? "bg-blue-500/10" : "bg-blue-50/20"))}>
                                                    {(row as any[]).map((cell, j) => (
                                                       <td key={j} className={cn("p-0 border-r last:border-0 text-sm font-medium min-w-[120px] transition-colors", 
-                                                         darkPreview ? "border-white/5" : "border-gray-100",
+                                                         darkPreview ? "border-border" : "border-gray-100",
                                                          searchTerm && cell?.toString().toLowerCase().includes(searchTerm.toLowerCase()) && (darkPreview ? "bg-blue-900/40" : "bg-yellow-100"))}>
                                                          <input 
                                                             className={cn("w-full h-full p-4 bg-transparent border-none focus:outline-none focus:bg-blue-50/50 transition-colors", 
-                                                               darkPreview ? "text-white/80" : "text-gray-700")}
+                                                               darkPreview ? "text-foreground/80" : "text-gray-700")}
                                                             value={cell || ""}
                                                             onChange={(e) => handleCellChange(i, j, e.target.value)}
                                                          />
@@ -667,7 +667,7 @@ export default function DocsMasterClient() {
                                  <div className="space-y-8 h-full">
                                     <textarea 
                                        className={cn("w-full h-[800px] p-10 font-mono text-sm leading-relaxed border-0 focus:outline-none transition-all rounded-none resize-none", 
-                                          darkPreview ? "bg-black/40 text-emerald-400/80" : "bg-gray-50/50 text-gray-800")}
+                                          darkPreview ? "bg-muted/40 text-emerald-400/80" : "bg-gray-50/50 text-gray-800")}
                                        value={typeof previewContent === "string" ? previewContent : JSON.stringify(previewContent, null, 2)}
                                        onChange={(e) => setPreviewContent(e.target.value)}
                                        placeholder="Enter content here..."
@@ -676,11 +676,11 @@ export default function DocsMasterClient() {
                               )
                            ) : (
                               <div className="font-mono text-[11px] p-10 bg-gray-900 text-emerald-400 rounded-none overflow-auto w-full min-h-[700px] shadow-2xl">
-                                 <div className="flex items-center gap-4 mb-8 text-white/40 uppercase tracking-widest border-b border-white/10 pb-4">
+                                 <div className="flex items-center gap-4 mb-8 text-muted-foreground/60 uppercase tracking-widest border-b border-border pb-4">
                                     <Database className="w-5 h-5" /> Structural Metadata Analysis
                                  </div>
                                  <pre className="leading-relaxed">{JSON.stringify(metadata, null, 3)}</pre>
-                                 <div className="mt-10 pt-10 border-t border-white/10 opacity-30 italic">
+                                 <div className="mt-10 pt-10 border-t border-border opacity-30 italic">
                                     Engine analysis complete. Memory address: {(() => {
                                       const hash = (file?.name || "0").split("").reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
                                       return (0xDEADC0DE + hash).toString(16).toUpperCase();

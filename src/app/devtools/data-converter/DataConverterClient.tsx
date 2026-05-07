@@ -81,7 +81,7 @@ export default function DataConverterClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
@@ -104,7 +104,7 @@ export default function DataConverterClient() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-white/[0.02] border-white/10 space-y-8">
+          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button 
                 variant={mode === "json-to-csv" ? "default" : "outline"}
@@ -125,8 +125,8 @@ export default function DataConverterClient() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="flex justify-between items-center px-2">
-                   <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Input Matrix</Label>
-                   <Button variant="ghost" size="icon" className="h-8 w-8 text-white/20 hover:text-red-500" onClick={() => setInput("")}>
+                   <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Input Matrix</Label>
+                   <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground/40 hover:text-red-500" onClick={() => setInput("")}>
                       <Trash2 className="w-4 h-4" />
                    </Button>
                 </div>
@@ -134,18 +134,18 @@ export default function DataConverterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={mode === "json-to-csv" ? '[{"id": 1, "name": "Admin"}, ...]' : 'id,name\n1,Admin'}
-                  className="min-h-[400px] rounded-[2rem] bg-black border-white/5 font-mono text-xs leading-relaxed text-white/60 placeholder:text-white/10 p-6 focus-visible:ring-primary/20"
+                  className="min-h-[400px] rounded-[2rem] bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 placeholder:text-white/10 p-6 focus-visible:ring-primary/20"
                 />
               </div>
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center px-2">
-                   <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Output Matrix</Label>
+                   <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Output Matrix</Label>
                    <div className="flex gap-2">
                       <Button variant="ghost" size="icon" className="h-8 w-8 text-primary" onClick={handleCopy} disabled={!output}>
                          {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       </Button>
-                      <Button variant="ghost" size="icon" className="h-8 w-8 text-white" onClick={downloadResult} disabled={!output}>
+                      <Button variant="ghost" size="icon" className="h-8 w-8 text-foreground" onClick={downloadResult} disabled={!output}>
                          <Download className="w-4 h-4" />
                       </Button>
                    </div>
@@ -155,7 +155,7 @@ export default function DataConverterClient() {
                      readOnly
                      value={output}
                      placeholder="Awaiting synthesis..."
-                     className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-white/5 font-mono text-xs leading-relaxed text-primary/80 placeholder:text-white/10 p-6 resize-none"
+                     className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 placeholder:text-white/10 p-6 resize-none"
                    />
                    {!output && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-5 pointer-events-none space-y-4">
@@ -168,7 +168,7 @@ export default function DataConverterClient() {
             </div>
 
             <Button 
-              className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-white font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
+              className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
               onClick={convertData}
             >
               <Zap className="w-5 h-5" /> EXECUTE CONVERSION
@@ -193,7 +193,7 @@ export default function DataConverterClient() {
              <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
                 <div className="flex items-center gap-4">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
-                      <Database className="w-6 h-6 text-white" />
+                      <Database className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Enterprise Ready</h4>
                 </div>

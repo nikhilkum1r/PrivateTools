@@ -286,7 +286,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative scrollbar-hide">
@@ -305,22 +305,22 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
         </div>
 
         {/* Left Sidebar - Control Panel */}
-        <aside className="flex w-full lg:w-[420px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-          <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[420px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+          <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Layers className="w-4 h-4" /> Identity Engine
               </h3>
               <div className="flex items-center gap-3 mt-1">
-                <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
+                <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none">Multi-Platform Asset Matrix</p>
                 <div className="flex gap-1.5 opacity-30">
                   <Play className="w-2 h-2 text-primary fill-primary" />
                   <div className="w-2 h-2 rounded-full border border-white/40" />
-                  <Smartphone className="w-2 h-2 text-white" />
+                  <Smartphone className="w-2 h-2 text-foreground" />
                 </div>
               </div>
             </div>
-            <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-primary border-primary/20 uppercase font-black px-4 py-1.5 rounded-full italic shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]">PRO v2.0</Badge>
+            <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-primary border-primary/20 uppercase font-black px-4 py-1.5 rounded-full italic shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)]">PRO v2.0</Badge>
           </div>
           
           <ScrollArea className="flex-grow min-h-0">
@@ -330,26 +330,26 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                   <DropZone 
                     onFilesDrop={(fs) => { setFile(fs[0]); setPreview(URL.createObjectURL(fs[0])); setResults([]); }} 
                     title="Source Architect"
-                    className="h-64 bg-white/[0.02] border-dashed border-white/10 rounded-[3rem] hover:bg-white/[0.05] hover:border-primary/50 transition-all group"
+                    className="h-64 bg-secondary/30 border-dashed border-border rounded-[3rem] hover:bg-secondary/70 hover:border-primary/50 transition-all group"
                   />
-                  <div className="p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-[#0a0a0a] to-blue-600/10 border border-white/5 space-y-4 shadow-xl">
+                  <div className="p-6 rounded-[2rem] bg-gradient-to-br from-primary/10 via-[#0a0a0a] to-blue-600/10 border border-border space-y-4 shadow-xl">
                     <div className="flex items-center gap-3 text-primary">
                       <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/30 shadow-lg">
                         <Info className="w-5 h-5" />
                       </div>
                       <span className="text-[11px] font-black uppercase tracking-[0.2em]">Master Matrix</span>
                     </div>
-                    <p className="text-[11px] text-white/40 leading-relaxed font-medium italic">
+                    <p className="text-[11px] text-muted-foreground/60 leading-relaxed font-medium italic">
                       For pixel-perfect clarity across retina displays, utilize a 1024x1024 master asset without transparency padding.
                     </p>
                   </div>
                 </div>
               ) : (
                 <div className="space-y-10">
-                  <div className="relative aspect-square rounded-[3rem] overflow-hidden bg-black/60 border border-white/10 flex items-center justify-center p-12 group shadow-[0_50px_100px_-20px_rgba(0,0,0,1)] transition-all duration-700 hover:border-primary/20">
+                  <div className="relative aspect-square rounded-[3rem] overflow-hidden bg-muted/60 border border-border flex items-center justify-center p-12 group shadow-[0_50px_100px_-20px_rgba(0,0,0,1)] transition-all duration-700 hover:border-primary/20">
                     <img src={preview!} className="max-w-full max-h-full object-contain filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]" alt="" />
                     <button 
-                      className="absolute top-6 right-6 p-3 rounded-2xl bg-destructive/10 text-destructive opacity-0 group-hover:opacity-100 transition-all hover:bg-destructive hover:text-white active:scale-90"
+                      className="absolute top-6 right-6 p-3 rounded-2xl bg-destructive/10 text-destructive opacity-0 group-hover:opacity-100 transition-all hover:bg-destructive hover:text-foreground active:scale-90"
                       onClick={() => { setFile(null); setResults([]); setPreview(null); }}
                     >
                       <Trash2 className="w-5 h-5" />
@@ -360,13 +360,13 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                     <div className="space-y-6">
                       <div className="flex justify-between items-center">
                         <Label className="text-[10px] uppercase font-black tracking-widest opacity-40 text-primary">In-Engine Padding</Label>
-                        <span className="text-xs font-mono font-black text-white/60">{Math.round(zoom * 100)}%</span>
+                        <span className="text-xs font-mono font-black text-muted-foreground/80">{Math.round(zoom * 100)}%</span>
                       </div>
                       <Slider value={[zoom * 100]} min={10} max={200} step={1} onValueChange={(v) => setZoom((Array.isArray(v) ? v[0] : v) / 100)} className="py-2" />
                     </div>
 
                     {palette.length > 0 && (
-                      <div className="space-y-4 pt-4 border-t border-white/5">
+                      <div className="space-y-4 pt-4 border-t border-border">
                         <div className="flex items-center gap-2">
                            <Sparkles className="w-4 h-4 text-primary" />
                            <Label className="text-[10px] uppercase font-black tracking-widest opacity-40 text-primary">Identity Palette</Label>
@@ -381,15 +381,15 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                               className="group relative"
                             >
                               <div 
-                                className="w-10 h-10 rounded-xl border border-white/10 shadow-lg cursor-pointer active:scale-90 transition-transform"
+                                className="w-10 h-10 rounded-xl border border-border shadow-lg cursor-pointer active:scale-90 transition-transform"
                                 style={{ backgroundColor: color }}
                                 onClick={() => {
                                   navigator.clipboard.writeText(color);
                                   toast.success(`Copied ${color.toUpperCase()}`);
                                 }}
                               />
-                              <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black border border-white/10 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
-                                 <span className="text-[8px] font-mono text-white font-black">{color.toUpperCase()}</span>
+                              <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-card border border-border rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
+                                 <span className="text-[8px] font-mono text-foreground font-black">{color.toUpperCase()}</span>
                               </div>
                             </motion.div>
                           ))}
@@ -398,7 +398,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                     )}
 
                     <Button 
-                      className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-tighter gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic text-lg"
+                      className="w-full h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-foreground font-black uppercase tracking-tighter gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic text-lg"
                       onClick={generateIcons}
                       disabled={isProcessing}
                     >
@@ -414,11 +414,11 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
         {/* Center - Mockup Workspace */}
         <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[700px] lg:min-h-0">
-          <header className="p-4 md:p-10 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20">
+          <header className="p-4 md:p-10 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
             <div className="flex items-center gap-8">
-              <div className="w-14 h-14 md:w-20 md:h-20 rounded-[2rem] bg-gradient-to-br from-primary via-primary to-blue-600 flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(var(--primary-rgb),0.3)] group overflow-hidden relative">
+              <div className="w-14 h-14 md:w-20 md:h-20 rounded-[2rem] bg-gradient-to-br from-primary via-primary to-blue-600 flex items-center justify-center border border-border shadow-[0_0_50px_rgba(var(--primary-rgb),0.3)] group overflow-hidden relative">
                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <Zap className="w-8 h-8 md:w-10 md:h-10 text-white relative z-10" />
+                <Zap className="w-8 h-8 md:w-10 md:h-10 text-foreground relative z-10" />
               </div>
               <div className="flex flex-col gap-1">
                 <h2 className="font-black text-xl md:text-3xl tracking-tighter uppercase italic bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent">
@@ -428,7 +428,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                    <Badge className="text-[10px] bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full font-black uppercase tracking-[0.2em] italic">
                        Pro Environment
                     </Badge>
-                   <span className="text-[10px] text-white/30 uppercase font-black tracking-widest truncate max-w-[250px]">{file?.name || "Matrix Standby"}</span>
+                   <span className="text-[10px] text-muted-foreground/50 uppercase font-black tracking-widest truncate max-w-[250px]">{file?.name || "Matrix Standby"}</span>
                 </div>
               </div>
             </div>
@@ -437,14 +437,14 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
               <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
                 <SheetTrigger 
                   render={
-                    <Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-white/10 bg-white/5 h-12 w-12 md:h-14 md:w-14 shadow-xl" />
+                    <Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-14 md:w-14 shadow-xl" />
                   }
                 >
                   <Settings2 className="w-5 h-5" />
                 </SheetTrigger>
-                <SheetContent side="right" className="w-full sm:w-[450px] p-0 bg-[#0a0a0a] border-white/10 rounded-l-[3rem]">
-                  <SheetHeader className="p-8 border-b border-white/5">
-                    <SheetTitle className="text-white flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
+                <SheetContent side="right" className="w-full sm:w-[450px] p-0 bg-card border-border rounded-l-[3rem]">
+                  <SheetHeader className="p-8 border-b border-border">
+                    <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
                       <Cpu className="w-6 h-6 text-primary" /> Matrix Inspector
                     </SheetTitle>
                   </SheetHeader>
@@ -462,7 +462,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
             </div>
           </header>
 
-          <div className="flex-grow relative flex flex-col items-center p-12 overflow-y-auto bg-[#050505]/40 scrollbar-none">
+          <div className="flex-grow relative flex flex-col items-center p-12 overflow-y-auto bg-background/40 scrollbar-none">
              <div className="absolute inset-0 pointer-events-none opacity-[0.05]" 
               style={{ 
                 backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
@@ -477,12 +477,12 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                       onFilesDrop={(fs) => { setFile(fs[0]); setPreview(URL.createObjectURL(fs[0])); setResults([]); }} 
                       title=" "
                       description=" "
-                      className="h-48 bg-white/[0.02] border-2 border-dashed border-white/5 rounded-[3rem] hover:border-primary/50 transition-all group"
+                      className="h-48 bg-secondary/30 border-2 border-dashed border-border rounded-[3rem] hover:border-primary/50 transition-all group"
                     />
                   </div>
 
                   {/* Dynamic SEO Link Cloud */}
-                  <div className="space-y-10 pt-20 border-t border-white/5 relative z-10">
+                  <div className="space-y-10 pt-20 border-t border-border relative z-10">
                     <h3 className="text-3xl font-black uppercase tracking-tighter italic flex items-center gap-4">
                       <Layers className="w-8 h-8 text-primary" /> Identity Hub
                     </h3>
@@ -493,7 +493,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                         <Link 
                           key={slug}
                           href={`/image/favicon/${slug}`}
-                          className="px-6 py-3 rounded-2xl bg-white/[0.02] border border-white/5 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary/20 hover:border-primary/40 hover:text-white transition-all shadow-xl"
+                          className="px-6 py-3 rounded-2xl bg-secondary/30 border border-border text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary/20 hover:border-primary/40 hover:text-foreground transition-all shadow-xl"
                         >
                           {slug.replace(/-/g, " ")}
                         </Link>
@@ -507,22 +507,22 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="w-full rounded-[4rem] bg-[#0a0a0a] border border-white/10 shadow-[0_120px_250px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
+                  className="w-full rounded-[4rem] bg-card border border-border shadow-[0_120px_250px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
                 >
-                  <div className="h-20 bg-[#151515] border-b border-white/5 flex items-center px-12 gap-6">
+                  <div className="h-20 bg-[#151515] border-b border-border flex items-center px-12 gap-6">
                     <div className="flex gap-2.5">
                       <div className="w-4 h-4 rounded-full bg-red-500/20 border border-red-500/30" />
                       <div className="w-4 h-4 rounded-full bg-yellow-500/20 border border-yellow-500/30" />
                       <div className="w-4 h-4 rounded-full bg-green-500/20 border border-green-500/30" />
                     </div>
-                    <div className="h-11 flex-grow max-w-2xl bg-black/40 rounded-[1.25rem] border border-white/5 flex items-center px-5 gap-4 shadow-inner group-hover:border-primary/40 transition-colors">
-                      <div className="w-6 h-6 shrink-0 rounded-lg overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center shadow-2xl relative">
+                    <div className="h-11 flex-grow max-w-2xl bg-muted/40 rounded-[1.25rem] border border-border flex items-center px-5 gap-4 shadow-inner group-hover:border-primary/40 transition-colors">
+                      <div className="w-6 h-6 shrink-0 rounded-lg overflow-hidden bg-secondary/50 border border-border flex items-center justify-center shadow-2xl relative">
                         {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Globe className="w-4 h-4 text-white/5" />}
                         <div className="absolute inset-0 bg-primary/5 animate-pulse" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[9px] font-black text-white/30 tracking-[0.2em] uppercase leading-none mb-0.5">Live Environment</span>
-                        <span className="text-[10px] font-bold text-white/60 truncate italic">studio.private.tools/identity/v2</span>
+                        <span className="text-[9px] font-black text-muted-foreground/50 tracking-[0.2em] uppercase leading-none mb-0.5">Live Environment</span>
+                        <span className="text-[10px] font-bold text-muted-foreground/80 truncate italic">studio.private.tools/identity/v2</span>
                       </div>
                     </div>
                     <div className="ml-auto flex items-center gap-4 opacity-20">
@@ -537,45 +537,45 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.1 }}
-                  className="w-full aspect-[16/9] rounded-[4rem] bg-[#0a0a0a] border border-white/10 shadow-[0_100px_200px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
+                  className="w-full aspect-[16/9] rounded-[4rem] bg-card border border-border shadow-[0_100px_200px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
                 >
                   {/* Desktop Background Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-black to-blue-900/10 opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-blue-900/10 opacity-40" />
                   
                   {/* Desktop Shortcut */}
                   <div className="absolute top-16 left-16 flex flex-col items-center gap-3 group/shortcut cursor-pointer active:scale-95 transition-all">
-                    <div className="w-20 h-20 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/5 flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/shortcut:border-primary/40 group-hover/shortcut:bg-primary/5 relative">
-                      {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain relative z-10" /> : <div className="w-10 h-10 rounded-lg bg-white/5" />}
+                    <div className="w-20 h-20 rounded-2xl bg-muted/40 backdrop-blur-xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/shortcut:border-primary/40 group-hover/shortcut:bg-primary/5 relative">
+                      {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain relative z-10" /> : <div className="w-10 h-10 rounded-lg bg-secondary/50" />}
                       <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover/shortcut:opacity-100 transition-opacity" />
                     </div>
-                    <span className="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] italic group-hover:text-white transition-colors">Identity</span>
+                    <span className="text-[10px] font-black text-muted-foreground/60 uppercase tracking-[0.3em] italic group-hover:text-foreground transition-colors">Identity</span>
                   </div>
 
                   {/* Taskbar */}
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] h-16 bg-black/60 backdrop-blur-3xl border border-white/10 rounded-[1.5rem] flex items-center px-8 gap-8 shadow-2xl">
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] h-16 bg-muted/60 backdrop-blur-3xl border border-border rounded-[1.5rem] flex items-center px-8 gap-8 shadow-2xl">
                     <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/40 shadow-lg group-hover:scale-110 transition-transform">
                        <Grid className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-grow flex justify-center gap-3">
                        {Array.from({ length: 4 }).map((_, i) => (
-                         <div key={i} className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center opacity-40">
-                            <div className="w-6 h-6 rounded-lg bg-white/10" />
+                         <div key={i} className="w-12 h-12 rounded-xl bg-secondary/50 border border-border flex items-center justify-center opacity-40">
+                            <div className="w-6 h-6 rounded-lg bg-secondary" />
                          </div>
                        ))}
                        {/* Active Identity App */}
                        <div className="relative group/active">
-                         <div className="w-12 h-12 rounded-xl bg-white/10 border border-primary/40 flex items-center justify-center p-2 shadow-2xl group-hover/active:scale-110 transition-all cursor-pointer">
+                         <div className="w-12 h-12 rounded-xl bg-secondary border border-primary/40 flex items-center justify-center p-2 shadow-2xl group-hover/active:scale-110 transition-all cursor-pointer">
                             {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <div className="w-8 h-8 rounded-md bg-primary/20" />}
                          </div>
                          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-5 h-1 bg-primary rounded-full shadow-[0_0_15px_rgba(var(--primary-rgb),1)]" />
                        </div>
                        {Array.from({ length: 3 }).map((_, i) => (
-                         <div key={i+4} className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center opacity-40">
-                            <div className="w-6 h-6 rounded-lg bg-white/10" />
+                         <div key={i+4} className="w-12 h-12 rounded-xl bg-secondary/50 border border-border flex items-center justify-center opacity-40">
+                            <div className="w-6 h-6 rounded-lg bg-secondary" />
                          </div>
                        ))}
                     </div>
-                    <div className="flex items-center gap-6 text-[10px] font-black text-white/30 uppercase tracking-widest italic">
+                    <div className="flex items-center gap-6 text-[10px] font-black text-muted-foreground/50 uppercase tracking-widest italic">
                        <div className="flex items-center gap-2">
                           <Badge className="bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-2 h-4 text-[7px]">Online</Badge>
                           <span>12:00</span>
@@ -589,14 +589,14 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="w-full aspect-[16/9] rounded-[4rem] bg-[#0a0a0a] border border-white/10 shadow-[0_120px_250px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
+                  className="w-full aspect-[16/9] rounded-[4rem] bg-card border border-border shadow-[0_120px_250px_-50px_rgba(0,0,0,1)] overflow-hidden group hover:border-primary/20 transition-all duration-1000 relative"
                 >
                   {/* Mac OS Background Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-black to-purple-900/10 opacity-50" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-background to-purple-900/10 opacity-50" />
                   
                   {/* Menu Bar */}
-                  <div className="absolute top-0 inset-x-0 h-8 bg-white/5 backdrop-blur-3xl border-b border-white/5 flex items-center px-8 justify-between">
-                    <div className="flex items-center gap-6 text-[8px] font-black text-white/40 uppercase tracking-widest italic">
+                  <div className="absolute top-0 inset-x-0 h-8 bg-secondary/50 backdrop-blur-3xl border-b border-border flex items-center px-8 justify-between">
+                    <div className="flex items-center gap-6 text-[8px] font-black text-muted-foreground/60 uppercase tracking-widest italic">
                        <span>Identity Lab</span>
                        <span>File</span>
                        <span>Edit</span>
@@ -605,29 +605,29 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
                   {/* Desktop Shortcut */}
                   <div className="absolute top-20 right-16 flex flex-col items-center gap-3 group/macshortcut cursor-pointer active:scale-95 transition-all">
-                    <div className="w-20 h-20 rounded-[22.5%] bg-black/40 backdrop-blur-xl border border-white/5 flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/macshortcut:border-primary/40 group-hover/macshortcut:scale-110 relative">
-                      {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain relative z-10" /> : <div className="w-10 h-10 rounded-2xl bg-white/5" />}
+                    <div className="w-20 h-20 rounded-[22.5%] bg-muted/40 backdrop-blur-xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/macshortcut:border-primary/40 group-hover/macshortcut:scale-110 relative">
+                      {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain relative z-10" /> : <div className="w-10 h-10 rounded-2xl bg-secondary/50" />}
                     </div>
-                    <span className="text-[10px] font-black text-white/40 uppercase tracking-[0.3em] italic group-hover:text-white transition-colors">Project Identity</span>
+                    <span className="text-[10px] font-black text-muted-foreground/60 uppercase tracking-[0.3em] italic group-hover:text-foreground transition-colors">Project Identity</span>
                   </div>
 
                   {/* Mac OS Dock */}
-                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 h-20 bg-white/10 backdrop-blur-3xl border border-white/10 rounded-[1.75rem] flex items-center px-4 gap-4 shadow-[0_50px_100px_-20px_rgba(0,0,0,1)]">
+                  <div className="absolute bottom-6 left-1/2 -translate-x-1/2 h-20 bg-secondary backdrop-blur-3xl border border-border rounded-[1.75rem] flex items-center px-4 gap-4 shadow-[0_50px_100px_-20px_rgba(0,0,0,1)]">
                     {Array.from({ length: 3 }).map((_, i) => (
-                      <div key={i} className="w-14 h-14 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center opacity-40">
-                         <div className="w-8 h-8 rounded-lg bg-white/10" />
+                      <div key={i} className="w-14 h-14 rounded-2xl bg-secondary/50 border border-border flex items-center justify-center opacity-40">
+                         <div className="w-8 h-8 rounded-lg bg-secondary" />
                       </div>
                     ))}
                     {/* Active Identity App */}
                     <div className="relative group/macactive pb-2">
-                      <div className="w-14 h-14 rounded-[22.5%] bg-white/10 border border-primary/40 flex items-center justify-center p-0 shadow-2xl group-hover/macactive:scale-125 transition-all cursor-pointer origin-bottom">
+                      <div className="w-14 h-14 rounded-[22.5%] bg-secondary border border-primary/40 flex items-center justify-center p-0 shadow-2xl group-hover/macactive:scale-125 transition-all cursor-pointer origin-bottom">
                          {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Zap className="w-8 h-8 rounded-[22.5%] bg-primary/20" />}
                       </div>
                       <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white/60 rounded-full shadow-lg" />
                     </div>
                     {Array.from({ length: 4 }).map((_, i) => (
-                      <div key={i+4} className="w-14 h-14 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center opacity-40">
-                         <div className="w-8 h-8 rounded-lg bg-white/10" />
+                      <div key={i+4} className="w-14 h-14 rounded-2xl bg-secondary/50 border border-border flex items-center justify-center opacity-40">
+                         <div className="w-8 h-8 rounded-lg bg-secondary" />
                       </div>
                     ))}
                   </div>
@@ -638,29 +638,29 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, type: "spring", damping: 20 }}
-                  className="relative aspect-[9/19] w-80 rounded-[5rem] bg-[#0a0a0a] border-[14px] border-[#151515] overflow-hidden shadow-[0_150px_300px_-50px_rgba(0,0,0,1)] ring-1 ring-white/10 group hover:border-primary/20 transition-all duration-1000 scale-105"
+                  className="relative aspect-[9/19] w-80 rounded-[5rem] bg-card border-[14px] border-[#151515] overflow-hidden shadow-[0_150px_300px_-50px_rgba(0,0,0,1)] ring-1 ring-white/10 group hover:border-primary/20 transition-all duration-1000 scale-105"
                 >
                   <div className="absolute top-0 inset-x-0 h-12 bg-black flex items-center justify-center z-20">
-                    <div className="w-28 h-7 bg-white/5 rounded-full border border-white/5" />
+                    <div className="w-28 h-7 bg-secondary/50 rounded-full border border-border" />
                   </div>
-                  <div className="p-10 h-full flex flex-col items-center justify-center gap-12 relative bg-gradient-to-br from-primary/10 via-black to-black">
+                  <div className="p-10 h-full flex flex-col items-center justify-center gap-12 relative bg-gradient-to-br from-primary/10 via-background to-black">
                     
                     <div className="w-full space-y-8 relative z-10">
                       {/* iOS & Desktop Simulation */}
                       <div className="grid grid-cols-2 gap-6">
                         <div className="space-y-4">
-                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 italic block ml-2">iOS Standard</span>
+                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground/40 italic block ml-2">iOS Standard</span>
                           <div className="flex flex-col items-center gap-4 group/ios cursor-pointer active:scale-95 transition-all">
-                            <div className="w-16 h-16 rounded-[22.5%] overflow-hidden bg-black/60 backdrop-blur-3xl border border-white/10 flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/ios:border-primary/40 group-hover/ios:scale-110">
+                            <div className="w-16 h-16 rounded-[22.5%] overflow-hidden bg-muted/60 backdrop-blur-3xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/ios:border-primary/40 group-hover/ios:scale-110">
                               {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Zap className="w-8 h-8 text-white/5" />}
                             </div>
                           </div>
                         </div>
 
                         <div className="space-y-4">
-                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 italic block ml-2">Windows Core</span>
+                          <span className="text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground/40 italic block ml-2">Windows Core</span>
                           <div className="flex flex-col items-center gap-4 group/win cursor-pointer active:scale-95 transition-all">
-                            <div className="w-16 h-16 rounded-none overflow-hidden bg-black/60 backdrop-blur-3xl border border-white/10 flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/win:border-primary/40 group-hover/win:scale-110">
+                            <div className="w-16 h-16 rounded-none overflow-hidden bg-muted/60 backdrop-blur-3xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/win:border-primary/40 group-hover/win:scale-110">
                               {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Grid className="w-8 h-8 text-white/5" />}
                             </div>
                           </div>
@@ -669,7 +669,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
                       {/* Advanced Simulation Matrix */}
                       <div className="space-y-4">
-                        <span className="text-[9px] font-black uppercase tracking-[0.3em] text-white/20 italic block ml-2">Adaptive Protocols</span>
+                        <span className="text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground/40 italic block ml-2">Adaptive Protocols</span>
                         <div className="grid grid-cols-4 gap-3">
                            {[
                              { name: "Circle", radius: "rounded-full" },
@@ -682,10 +682,10 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                              { name: "Legacy", radius: "rounded-sm" }
                            ].map((s) => (
                              <div key={s.name} className="flex flex-col items-center gap-2 group/variant cursor-pointer active:scale-95 transition-all">
-                                <div className={cn("w-12 h-12 overflow-hidden bg-black/60 border border-white/10 flex items-center justify-center p-0 shadow-xl group-hover/variant:border-primary/40 group-hover/variant:scale-110 transition-all", s.radius)}>
-                                   {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <div className={cn("w-6 h-6 bg-white/5", s.radius)} />}
+                                <div className={cn("w-12 h-12 overflow-hidden bg-muted/60 border border-border flex items-center justify-center p-0 shadow-xl group-hover/variant:border-primary/40 group-hover/variant:scale-110 transition-all", s.radius)}>
+                                   {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <div className={cn("w-6 h-6 bg-secondary/50", s.radius)} />}
                                 </div>
-                                <span className="text-[6px] font-black text-white/20 uppercase tracking-widest">{s.name}</span>
+                                <span className="text-[6px] font-black text-muted-foreground/40 uppercase tracking-widest">{s.name}</span>
                              </div>
                            ))}
                         </div>
@@ -698,13 +698,13 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                       ))}
                     </div>
                   </div>
-                  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-36 h-1.5 bg-white/10 rounded-full" />
+                  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-36 h-1.5 bg-secondary rounded-full" />
                 </motion.div>
 
                 {/* Processing Overlay */}
                 <AnimatePresence>
                   {isProcessing && (
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/60 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center gap-8">
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-muted/60 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center gap-8">
                        <div className="relative">
                           <Loader2 className="w-24 h-24 animate-spin text-primary opacity-20" />
                           <div className="absolute inset-0 flex items-center justify-center">
@@ -713,7 +713,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                        </div>
                        <div className="flex flex-col items-center gap-2">
                           <p className="text-[14px] font-black uppercase tracking-[0.6em] text-primary animate-pulse italic">Architecting Bundle</p>
-                          <p className="text-[10px] font-bold text-white/20 uppercase tracking-widest">Multi-Platform Matrix Resampling</p>
+                          <p className="text-[10px] font-bold text-muted-foreground/40 uppercase tracking-widest">Multi-Platform Matrix Resampling</p>
                        </div>
                     </motion.div>
                   )}
@@ -724,15 +724,15 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
         </section>
 
         {/* Right Sidebar - Engine Inspector / Asset Matrix */}
-        <aside className="flex w-full lg:w-[420px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-          <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/10 shrink-0">
+        <aside className="flex w-full lg:w-[420px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+          <div className="p-8 border-b border-border flex items-center justify-between bg-black/10 shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Cpu className="w-4 h-4" /> Studio Matrix
               </h3>
               <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">WASM Thread Execution</p>
             </div>
-            <Badge variant="outline" className="text-[9px] border-white/10 bg-white/5 text-white/30 uppercase font-black px-4 py-1.5 rounded-full italic">Active</Badge>
+            <Badge variant="outline" className="text-[9px] border-border bg-secondary/50 text-muted-foreground/50 uppercase font-black px-4 py-1.5 rounded-full italic">Active</Badge>
           </div>
           <InspectorContent 
             results={results} 
@@ -757,17 +757,17 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
             className="lg:hidden fixed bottom-12 right-6 z-50 flex flex-col gap-4"
           >
              <Button 
-              className="w-16 h-16 rounded-full bg-white text-black shadow-2xl flex items-center justify-center p-0 border-4 border-white/20 active:scale-90 transition-all shadow-black/60"
+              className="w-16 h-16 rounded-full bg-white text-black shadow-2xl flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all shadow-black/60"
               onClick={() => { setFile(null); setResults([]); setPreview(null); }}
              >
                <Trash2 className="w-8 h-8" />
              </Button>
              <Button 
-              className="w-16 h-16 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-white/20 active:scale-90 transition-all"
+              className="w-16 h-16 rounded-full bg-primary shadow-[0_20px_50px_rgba(var(--primary-rgb),0.5)] flex items-center justify-center p-0 border-4 border-border active:scale-90 transition-all"
               onClick={generateIcons}
               disabled={isProcessing}
              >
-               <Zap className="w-8 h-8 text-white" />
+               <Zap className="w-8 h-8 text-foreground" />
              </Button>
           </motion.div>
         )}
@@ -795,19 +795,19 @@ const InspectorContent = ({
   handleDownloadZip: () => void,
   dataURLToBlob: (dataUrl: string) => Blob
 }) => (
-  <div className="flex flex-col h-full bg-[#0a0a0a] min-h-0">
-    <div className="px-8 py-8 border-b border-white/5 bg-black/40 backdrop-blur-xl shrink-0">
+  <div className="flex flex-col h-full bg-card min-h-0">
+    <div className="px-8 py-8 border-b border-border bg-muted/40 backdrop-blur-xl shrink-0">
       <div className="flex items-center justify-between mb-8">
         <div className="flex flex-col gap-1">
            <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary italic">Matrix Output</h4>
-           <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none">Atomic Node Synthesis</p>
+           <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none">Atomic Node Synthesis</p>
         </div>
-        <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black">{results.length} NODES</Badge>
+        <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-4 py-1.5 rounded-full font-black">{results.length} NODES</Badge>
       </div>
       <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-        <TabsList className="bg-black/40 border border-white/5 rounded-[1.5rem] w-full p-1.5 h-14">
+        <TabsList className="bg-muted/40 border border-border rounded-[1.5rem] w-full p-1.5 h-14">
           {categories.map(cat => (
-            <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
+            <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
           ))}
         </TabsList>
       </Tabs>
@@ -823,17 +823,17 @@ const InspectorContent = ({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.03 }}
-              className="group p-5 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-primary/30 hover:bg-primary/5 transition-all flex items-center gap-6 relative overflow-hidden"
+              className="group p-5 rounded-[2.5rem] bg-secondary/30 border border-border hover:border-primary/30 hover:bg-primary/5 transition-all flex items-center gap-6 relative overflow-hidden"
             >
-              <div className="w-20 h-20 rounded-[1.5rem] bg-black border border-white/10 flex items-center justify-center p-4 shrink-0 shadow-2xl group-hover:scale-105 transition-transform duration-500 relative">
+              <div className="w-20 h-20 rounded-[1.5rem] bg-card border border-border flex items-center justify-center p-4 shrink-0 shadow-2xl group-hover:scale-105 transition-transform duration-500 relative">
                 <img src={r.url} className="max-w-full max-h-full object-contain relative z-10" alt="" />
                 <div className="absolute inset-0 bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <div className="flex-grow min-w-0">
-                <p className="text-[11px] font-black truncate text-white uppercase tracking-wider mb-2 leading-none italic">{r.name.split('/').pop()}</p>
+                <p className="text-[11px] font-black truncate text-foreground uppercase tracking-wider mb-2 leading-none italic">{r.name.split('/').pop()}</p>
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline" className="text-[8px] px-2 h-4 border-white/5 bg-white/5 text-white/40 uppercase font-black">{r.size}</Badge>
-                  <div className="w-1 h-1 rounded-full bg-white/10" />
+                  <Badge variant="outline" className="text-[8px] px-2 h-4 border-border bg-secondary/50 text-muted-foreground/60 uppercase font-black">{r.size}</Badge>
+                  <div className="w-1 h-1 rounded-full bg-secondary" />
                   <span className="text-[9px] font-black uppercase tracking-widest text-primary/60">{r.category}</span>
                 </div>
               </div>
@@ -856,12 +856,12 @@ const InspectorContent = ({
 
         {results.length === 0 && (
           <div className="py-40 text-center space-y-8 group">
-            <div className="w-24 h-24 rounded-[3rem] bg-white/5 border border-dashed border-white/10 mx-auto flex items-center justify-center relative overflow-hidden">
-              <Grid className="w-10 h-10 text-white/20 group-hover:rotate-90 transition-transform duration-1000" />
+            <div className="w-24 h-24 rounded-[3rem] bg-secondary/50 border border-dashed border-border mx-auto flex items-center justify-center relative overflow-hidden">
+              <Grid className="w-10 h-10 text-muted-foreground/40 group-hover:rotate-90 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
             </div>
             <div className="space-y-2">
-              <p className="text-sm font-black uppercase tracking-[0.4em] text-white/20">Matrix Standby</p>
+              <p className="text-sm font-black uppercase tracking-[0.4em] text-muted-foreground/40">Matrix Standby</p>
               <p className="text-[9px] text-white/10 uppercase font-bold tracking-widest">Architect identity to populate nodes</p>
             </div>
           </div>
@@ -869,13 +869,13 @@ const InspectorContent = ({
       </div>
     </ScrollArea>
     
-    <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
+    <div className="p-8 border-t border-border bg-muted/40 shrink-0">
       <Button 
-        className="w-full h-18 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-white font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
+        className="w-full h-18 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
         onClick={handleDownloadZip}
         disabled={results.length === 0}
       >
-        <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+        <div className="w-10 h-10 rounded-2xl bg-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
           <DownloadCloud className="w-5 h-5" />
         </div>
         Export Studio Bundle

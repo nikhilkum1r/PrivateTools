@@ -180,7 +180,7 @@ export default function VaultClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
 
       <main className="flex-grow container mx-auto px-4 py-16">
@@ -199,18 +199,18 @@ export default function VaultClient() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7 space-y-8">
-              <Card className="p-8 bg-white/[0.02] border-white/5 rounded-[2.5rem] relative overflow-hidden group">
+              <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] relative overflow-hidden group">
                 <div className="absolute inset-0 bg-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 
-                <div className="flex gap-4 p-1 bg-black/40 rounded-2xl mb-8 border border-white/5">
+                <div className="flex gap-4 p-1 bg-muted/40 rounded-2xl mb-8 border border-border">
                   <Button 
-                    className={cn("flex-1 h-12 rounded-xl font-black gap-2 transition-all", mode === "encrypt" ? "bg-red-600 text-white" : "bg-transparent text-muted-foreground")}
+                    className={cn("flex-1 h-12 rounded-xl font-black gap-2 transition-all", mode === "encrypt" ? "bg-red-600 text-foreground" : "bg-transparent text-muted-foreground")}
                     onClick={() => { setMode("encrypt"); setResult(null); setFile(null); }}
                   >
                     <Lock className="w-4 h-4" /> SECURE
                   </Button>
                   <Button 
-                    className={cn("flex-1 h-12 rounded-xl font-black gap-2 transition-all", mode === "decrypt" ? "bg-red-600 text-white" : "bg-transparent text-muted-foreground")}
+                    className={cn("flex-1 h-12 rounded-xl font-black gap-2 transition-all", mode === "decrypt" ? "bg-red-600 text-foreground" : "bg-transparent text-muted-foreground")}
                     onClick={() => { setMode("decrypt"); setResult(null); setFile(null); }}
                   >
                     <Unlock className="w-4 h-4" /> EXTRACT
@@ -220,12 +220,12 @@ export default function VaultClient() {
                 {!file ? (
                   <DropZone 
                     onFilesDrop={handleDrop} 
-                    className="h-80 bg-white/5 border-dashed border-white/10 rounded-3xl"
+                    className="h-80 bg-secondary/50 border-dashed border-border rounded-3xl"
                     accept={mode === "encrypt" ? "*/*" : ".vault"}
                   />
                 ) : (
                   <div className="space-y-8">
-                    <div className="p-8 rounded-[2rem] bg-black/60 border border-white/10 flex items-center gap-6 relative group/file">
+                    <div className="p-8 rounded-[2rem] bg-muted/60 border border-border flex items-center gap-6 relative group/file">
                       <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center">
                         <FileLock2 className="w-8 h-8 text-red-500" />
                       </div>
@@ -253,7 +253,7 @@ export default function VaultClient() {
                         <Button 
                           variant="ghost" 
                           size="sm" 
-                          className="h-6 text-[9px] font-black uppercase tracking-tighter text-white/30 hover:text-red-500 hover:bg-red-500/10 rounded-full px-3"
+                          className="h-6 text-[9px] font-black uppercase tracking-tighter text-muted-foreground/50 hover:text-red-500 hover:bg-red-500/10 rounded-full px-3"
                           onClick={() => window.open('/security', '_blank')}
                         >
                           Need a password?
@@ -263,7 +263,7 @@ export default function VaultClient() {
                         <Input 
                           type={showPassword ? "text" : "password"} 
                           placeholder="Enter vault password..." 
-                          className="h-16 bg-white/5 border-white/10 rounded-2xl px-6 font-mono text-lg focus:ring-red-500/20 focus:border-red-500/40 pr-16 text-white"
+                          className="h-16 bg-secondary/50 border-border rounded-2xl px-6 font-mono text-lg focus:ring-red-500/20 focus:border-red-500/40 pr-16 text-foreground"
                           value={password}
                           onChange={(e) => setPassword(e.target.value)}
                         />
@@ -284,7 +284,7 @@ export default function VaultClient() {
                           <span>{mode === "encrypt" ? "Sealing" : "Extracting"}...</span>
                           <span>{progress}%</span>
                         </div>
-                        <Progress value={progress} className="h-2 bg-white/5 overflow-hidden" />
+                        <Progress value={progress} className="h-2 bg-secondary/50 overflow-hidden" />
                       </div>
                     )}
 
@@ -297,7 +297,7 @@ export default function VaultClient() {
 
                     {!result ? (
                       <Button 
-                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-red-500/20 bg-red-600 hover:bg-red-700 text-white transition-all hover:scale-[1.02]"
+                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-red-500/20 bg-red-600 hover:bg-red-700 text-foreground transition-all hover:scale-[1.02]"
                         disabled={isProcessing || !password}
                         onClick={processFile}
                       >
@@ -306,7 +306,7 @@ export default function VaultClient() {
                       </Button>
                     ) : (
                       <Button 
-                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-emerald-500/20 bg-emerald-600 hover:bg-emerald-700 text-white transition-all hover:scale-[1.02]"
+                        className="w-full h-16 rounded-2xl font-black gap-3 text-xl shadow-2xl shadow-emerald-500/20 bg-emerald-600 hover:bg-emerald-700 text-foreground transition-all hover:scale-[1.02]"
                         onClick={() => {
                           const a = document.createElement("a");
                           a.href = URL.createObjectURL(result.blob);
@@ -324,7 +324,7 @@ export default function VaultClient() {
             </div>
 
             <div className="lg:col-span-5 space-y-8">
-              <Card className="p-8 bg-white/[0.02] border-white/5 rounded-[2.5rem] space-y-8">
+              <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] space-y-8">
                 <div className="flex items-center gap-4 text-red-500">
                   <ShieldAlert className="w-6 h-6" />
                   <h3 className="text-xs font-black uppercase tracking-widest">Vault Protocol</h3>
@@ -336,7 +336,7 @@ export default function VaultClient() {
                         <Zap className="w-5 h-5 text-red-500" />
                       </div>
                       <div>
-                        <h4 className="text-[11px] font-black uppercase tracking-widest mb-1 text-white/80">Full Metadata Restoration</h4>
+                        <h4 className="text-[11px] font-black uppercase tracking-widest mb-1 text-foreground/80">Full Metadata Restoration</h4>
                         <p className="text-[11px] text-muted-foreground leading-relaxed">Unlike basic encryption, our vault stores original filenames and MIME types securely, restoring files perfectly upon extraction.</p>
                       </div>
                    </div>
@@ -345,7 +345,7 @@ export default function VaultClient() {
                         <ShieldCheck className="w-5 h-5 text-red-500" />
                       </div>
                       <div>
-                        <h4 className="text-[11px] font-black uppercase tracking-widest mb-1 text-white/80">Magic-Byte Validation</h4>
+                        <h4 className="text-[11px] font-black uppercase tracking-widest mb-1 text-foreground/80">Magic-Byte Validation</h4>
                         <p className="text-[11px] text-muted-foreground leading-relaxed">Automatic vault verification ensures you only attempt to decrypt valid Private Vault containers.</p>
                       </div>
                    </div>

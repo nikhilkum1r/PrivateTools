@@ -64,7 +64,7 @@ export function DisclaimerModal({
 
           <div className="flex flex-col gap-3">
             <Button
-              className="w-full h-12 rounded-xl font-bold bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg shadow-yellow-500/20"
+              className="w-full h-12 rounded-xl font-bold bg-yellow-500 hover:bg-yellow-600 text-foreground shadow-lg shadow-yellow-500/20"
               onClick={onAccept}
             >
               I Understand — Continue

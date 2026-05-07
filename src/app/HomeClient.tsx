@@ -454,7 +454,7 @@ export default function HomeClient() {
 
   return (
     <div
-      className="flex flex-col min-h-screen bg-[#050505] text-white selection:bg-primary selection:text-white"
+      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-foreground"
       onDragEnter={handleDrag}
       onDragOver={handleDrag}
       onDragLeave={handleDrag}
@@ -468,9 +468,9 @@ export default function HomeClient() {
           <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary/20 blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-600/10 blur-[140px] rounded-full" />
           <div
-            className="absolute inset-0 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+            className="absolute inset-0 [mask-image:linear-gradient(180deg,var(--background),transparent)]"
             style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, var(--foreground) 0.05, transparent 0)`,
               backgroundSize: '32px 32px'
             }}
           />
@@ -485,9 +485,9 @@ export default function HomeClient() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-[200] bg-primary/20 backdrop-blur-xl flex items-center justify-center pointer-events-none"
             >
-              <div className="p-20 rounded-[4rem] border-4 border-dashed border-primary/50 flex flex-col items-center gap-8 bg-black/40">
+              <div className="p-20 rounded-[4rem] border-4 border-dashed border-primary/50 flex flex-col items-center gap-8 bg-card/90">
                 <div className="w-24 h-24 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
-                  <Upload className="w-12 h-12 text-white animate-bounce" />
+                  <Upload className="w-12 h-12 text-foreground animate-bounce" />
                 </div>
                 <div className="text-center space-y-2">
                   <h2 className="text-4xl font-black uppercase tracking-tighter">Drop to Route</h2>
@@ -539,10 +539,10 @@ export default function HomeClient() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + i * 0.08 }}
-                  whileHover={{ scale: 1.04, borderColor: "rgba(var(--primary-rgb),0.3)" }}
-                  className="p-5 rounded-[1.5rem] bg-white/[0.02] border border-white/5 space-y-2 cursor-default group transition-all"
+                  whileHover={{ scale: 1.04, borderColor: "var(--primary)" }}
+                  className="p-5 rounded-[1.5rem] bg-secondary/50 border border-border space-y-2 cursor-default group transition-all"
                 >
-                  <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-white/30">
+                  <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-muted-foreground/60">
                     <s.icon className={`w-3.5 h-3.5 ${s.color}`} />
                     {s.label}
                   </div>
@@ -564,8 +564,8 @@ export default function HomeClient() {
                 className={cn(
                   "px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-300",
                   activeCategory === cat
-                    ? "bg-primary text-white shadow-lg shadow-primary/30"
-                    : "bg-white/5 text-white/50 border border-white/10 hover:bg-white/10 hover:text-white/80"
+                    ? "bg-primary text-foreground shadow-lg shadow-primary/30"
+                    : "bg-secondary text-muted-foreground border border-border hover:bg-secondary/80 hover:text-foreground"
                 )}
               >
                 {cat}
@@ -599,16 +599,16 @@ export default function HomeClient() {
                 >
                   <Link href={tool.href}>
                     <Card className={cn(
-                      "group h-full p-7 rounded-[2.5rem] bg-white/[0.03] border border-white/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer",
-                      hoveredIndex === i && "translate-y-[-8px] shadow-[0_30px_60px_-15px_rgba(var(--primary-rgb),0.2)]"
+                      "group h-full p-7 rounded-[2.5rem] bg-card border border-border hover:border-primary/30 transition-all duration-500 relative overflow-hidden cursor-pointer shadow-sm",
+                      hoveredIndex === i && "translate-y-[-8px] shadow-2xl shadow-primary/20"
                     )}>
                       {/* Animated shine on hover */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent" />
-                        <div className={cn("absolute inset-0 bg-gradient-to-br opacity-[0.06]", tool.color)} />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+                        <div className={cn("absolute inset-0 bg-gradient-to-br opacity-[0.04]", tool.color)} />
                       </div>
                       {/* Shine sweep */}
-                      <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-12 group-hover:left-full transition-all duration-700 ease-in-out pointer-events-none" />
+                      <div className="absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-primary/5 to-transparent skew-x-12 group-hover:left-full transition-all duration-700 ease-in-out pointer-events-none" />
 
                       <div className="relative z-10 space-y-5">
                         <div className="flex items-start justify-between">
@@ -616,14 +616,14 @@ export default function HomeClient() {
                             "w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500",
                             tool.color
                           )}>
-                            <tool.icon className="w-7 h-7 text-white" />
+                            <tool.icon className="w-7 h-7 text-foreground" />
                           </div>
                           <ArrowRight className="w-4 h-4 text-primary opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                         </div>
 
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-[9px] uppercase font-black tracking-widest border-white/10 bg-white/5">
+                            <Badge variant="outline" className="text-[9px] uppercase font-black tracking-widest border-border bg-secondary/50">
                               {tool.cat}
                             </Badge>
                             {tool.cat === "Security" && (
@@ -651,10 +651,10 @@ export default function HomeClient() {
           </div>
 
           {filteredTools.length === 0 && (
-            <div className="text-center py-24 space-y-6">
-              <div className="w-20 h-20 rounded-full bg-white/5 border border-dashed border-white/10 flex items-center justify-center mx-auto">
-                <Search className="w-8 h-8 text-white/20" />
-              </div>
+            <div className="text-center py-20 space-y-4">
+            <div className="w-20 h-20 rounded-full bg-secondary border border-dashed border-border flex items-center justify-center mx-auto">
+              <Search className="w-8 h-8 text-muted-foreground/30" />
+            </div>
               <div>
                 <p className="text-xl font-bold">No results for "{search}"</p>
                 <p className="text-muted-foreground mt-1">Try formats like 'PNG' or actions like 'Compress'</p>
@@ -675,26 +675,24 @@ export default function HomeClient() {
             <p className="text-center text-muted-foreground text-sm mb-12">
               Everything you need to know about SafeTools and how it keeps your files private.
             </p>
-            <div className="space-y-4">
-              {[
-                { q: "Are SafeTools completely free to use?", a: "Yes. Every tool on SafeTools is 100% free with no account required. There are no hidden fees, subscriptions, or usage limits." },
-                { q: "Do my files get uploaded to a server?", a: "No. All processing happens locally in your browser using WebAssembly (WASM) engines. Your files never leave your device and are never uploaded to any server." },
-                { q: "What file formats does SafeTools support?", a: "SafeTools supports 150+ formats including PDF, DOCX, PPTX, XLSX, HEIC, WebP, AVIF, SVG, MP4, MP3, WAV, and many more. Every tool specifies its supported formats clearly." },
-                { q: "Is SafeTools safe for sensitive documents?", a: "Absolutely. Because all processing is done locally with no server uploads, your sensitive documents — medical records, financial files, legal contracts — are processed with complete privacy. The Secure Vault also offers AES-256 GCM client-side encryption." },
-                { q: "Do I need to install any software?", a: "No installation needed. SafeTools runs entirely in modern browsers like Chrome, Firefox, Safari, and Edge. No plugins, no extensions, no downloads required." },
-              ].map(({ q, a }, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-primary/20 transition-all group">
-                  <h3 className="font-bold text-base text-white group-hover:text-primary transition-colors mb-2">{q}</h3>
-                  <p className="text-sm text-white/50 leading-relaxed">{a}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {HOMEPAGE_SCHEMA["@graph"][2].mainEntity?.map((faq: any, i: number) => {
+                const q = faq.name;
+                const a = faq.acceptedAnswer.text;
+                return (
+                  <div key={i} className="p-6 rounded-2xl bg-secondary/50 border border-border hover:border-primary/20 transition-all group">
+                    <h3 className="font-bold text-base text-foreground group-hover:text-primary transition-colors mb-2">{q}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Smart Routing Dialog */}
         <Dialog open={isRoutingOpen} onOpenChange={setIsRoutingOpen}>
-          <DialogContent className="sm:max-w-xl bg-[#0a0a0a] border-white/10 p-0 overflow-hidden rounded-[3rem]">
+          <DialogContent className="sm:max-w-xl bg-background border-border p-0 overflow-hidden rounded-[3rem]">
             <div className="relative p-10 space-y-10">
               <div className="absolute top-0 right-0 p-10 opacity-5 rotate-12 scale-150">
                 <Shield className="w-64 h-64" />
@@ -702,18 +700,18 @@ export default function HomeClient() {
 
               <div className="flex flex-col items-center text-center space-y-4 relative z-10">
                 {smartRoutingPreview ? (
-                  <div className="w-32 h-32 rounded-[2rem] border-4 border-white/10 overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 mb-2">
+                  <div className="w-32 h-32 rounded-[2rem] border-4 border-border overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 mb-2">
                     <img src={smartRoutingPreview} alt="Preview" className="w-full h-full object-cover" />
                   </div>
                 ) : (
-                  <div className="w-20 h-20 rounded-[2rem] bg-white/5 border border-white/10 flex items-center justify-center mb-2">
+                  <div className="w-20 h-20 rounded-[2rem] bg-secondary border border-border flex items-center justify-center mb-2">
                     <FileQuestion className="w-10 h-10 text-primary" />
                   </div>
                 )}
                 <Badge className="bg-primary/10 text-primary border-primary/20">Smart File Routing</Badge>
                 <DialogTitle className="text-3xl font-black tracking-tight uppercase">Analyze & Process</DialogTitle>
-                <p className="text-muted-foreground font-medium">
-                  We've detected <span className="text-white font-bold">{smartRoutingFile?.name}</span>. <br />
+                <p className="text-muted-foreground text-sm font-medium">
+                  We've detected <span className="text-foreground font-bold">{smartRoutingFile?.name}</span>. <br />
                   What would you like to do with it?
                 </p>
               </div>
@@ -723,14 +721,14 @@ export default function HomeClient() {
                   <Button
                     key={tool.href}
                     variant="outline"
-                    className="h-20 justify-start px-6 rounded-3xl border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-primary/30 transition-all group"
+                    className="h-20 justify-start px-6 rounded-3xl border-border bg-secondary/50 hover:bg-secondary hover:border-primary/30 transition-all group"
                     onClick={() => {
                       // Note: In a real app, we'd pass the file to the tool's store here
                       router.push(tool.href);
                     }}
                   >
                     <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center shrink-0 mr-4 group-hover:scale-110 transition-transform", tool.color)}>
-                      <tool.icon className="w-6 h-6 text-white" />
+                      <tool.icon className="w-6 h-6 text-foreground" />
                     </div>
                     <div className="text-left">
                       <div className="font-bold text-base">{tool.title}</div>

@@ -355,7 +355,7 @@ export default function HomePageClient() {
 
   return (
     <div 
-      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-white"
+      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-foreground"
       onDragEnter={handleDrag}
       onDragOver={handleDrag}
       onDragLeave={handleDrag}
@@ -387,7 +387,7 @@ export default function HomePageClient() {
             >
               <div className="p-20 rounded-[4rem] border-4 border-dashed border-primary/50 flex flex-col items-center gap-8 bg-card/80 backdrop-blur-2xl shadow-2xl">
                 <div className="w-24 h-24 rounded-3xl bg-primary flex items-center justify-center shadow-[0_0_50px_rgba(var(--primary-rgb),0.5)]">
-                  <Upload className="w-12 h-12 text-white animate-bounce" />
+                  <Upload className="w-12 h-12 text-foreground animate-bounce" />
                 </div>
                 <h2 className="text-4xl font-black uppercase tracking-tighter text-foreground">Drop to Route</h2>
               </div>
@@ -442,7 +442,7 @@ export default function HomePageClient() {
         <div className="container mx-auto px-4 pb-8 relative z-10">
           <div className="flex items-center justify-center gap-2 flex-wrap">
             {CATEGORIES.map((cat) => (
-              <button key={cat} onClick={() => setActiveCategory(cat)} className={cn("px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-300", activeCategory === cat ? "bg-primary text-white shadow-lg shadow-primary/30" : "bg-card/40 text-muted-foreground/60 border border-border hover:bg-card/60 hover:text-foreground")}>
+              <button key={cat} onClick={() => setActiveCategory(cat)} className={cn("px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-300", activeCategory === cat ? "bg-primary text-foreground shadow-lg shadow-primary/30" : "bg-card/40 text-muted-foreground/60 border border-border hover:bg-card/60 hover:text-foreground")}>
                 {cat}
               </button>
             ))}
@@ -458,7 +458,7 @@ export default function HomePageClient() {
                     <div className="relative z-10 space-y-6">
                       <div className="flex items-start justify-between">
                         <div className={cn("w-14 h-14 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500", tool.color)}>
-                          <tool.icon className="w-7 h-7 text-white" />
+                          <tool.icon className="w-7 h-7 text-foreground" />
                         </div>
                         <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                       </div>
@@ -544,7 +544,7 @@ export default function HomePageClient() {
             <div className="grid grid-cols-1 gap-4">
               {getSuggestedTools(smartRoutingFile).map((tool) => (
                 <Button key={tool.href} variant="outline" className="h-20 justify-start px-6 rounded-3xl border-border bg-secondary/30 hover:bg-secondary/50 group transition-all" onClick={() => router.push(tool.href)}>
-                  <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 shadow-lg group-hover:scale-105 transition-transform", tool.color)}><tool.icon className="w-6 h-6 text-white" /></div>
+                  <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 shadow-lg group-hover:scale-105 transition-transform", tool.color)}><tool.icon className="w-6 h-6 text-foreground" /></div>
                   <div className="text-left font-black uppercase tracking-tight text-base text-foreground italic">{tool.title}</div>
                 </Button>
               ))}

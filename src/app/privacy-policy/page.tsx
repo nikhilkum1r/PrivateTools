@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
 
       <main className="flex-grow pt-32 pb-20 px-4">
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="p-8 bg-white/[0.02] border-white/5 rounded-[2.5rem] flex flex-col md:flex-row gap-8 items-start">
+                <Card className="p-8 bg-secondary/30 border-border rounded-[2.5rem] flex flex-col md:flex-row gap-8 items-start">
                   <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
                     <section.icon className="w-8 h-8 text-emerald-500" />
                   </div>

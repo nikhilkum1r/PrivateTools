@@ -270,14 +270,14 @@ export default function VideoStudioPage() {
         </svg>
         <div className="absolute flex flex-col items-center">
           <span className="text-4xl font-black tabular-nums tracking-tighter italic">{value}%</span>
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">Rendering</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/50">Rendering</span>
         </div>
       </div>
     );
   };
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative scrollbar-hide">
@@ -296,77 +296,77 @@ export default function VideoStudioPage() {
                 </div>
                 <div className="space-y-4">
                   <h1 className="text-6xl md:text-7xl font-black tracking-tighter uppercase italic leading-none">Video <br/><span className="text-primary">Studio Pro.</span></h1>
-                  <p className="text-white/40 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Privacy-focused, high-performance localized video production laboratory.</p>
+                  <p className="text-muted-foreground/60 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Privacy-focused, high-performance localized video production laboratory.</p>
                 </div>
               </div>
-              <DropZone onFilesDrop={handleFileDrop} accept="video/*" multiple={false} className="h-64 border-dashed border-white/10 bg-white/[0.02] rounded-[4rem] hover:bg-white/[0.05] hover:border-primary/40 transition-all group" />
+              <DropZone onFilesDrop={handleFileDrop} accept="video/*" multiple={false} className="h-64 border-dashed border-border bg-secondary/30 rounded-[4rem] hover:bg-secondary/70 hover:border-primary/40 transition-all group" />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar - Studio Controls */}
-            <aside className="flex w-full lg:w-[420px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[420px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3"><Sliders className="w-4 h-4" /> Asset Inspector</h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest mt-1">Industrial WASM Pipeline v4.5</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest mt-1">Industrial WASM Pipeline v4.5</p>
                 </div>
                 <Badge variant="outline" className="text-[10px] border-emerald-500/20 bg-emerald-500/5 text-emerald-500 px-4 py-1.5 rounded-full font-black italic shadow-[0_0_15px_rgba(16,185,129,0.1)]">ACTIVE ENGINE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
                 <Tabs defaultValue="render" className="w-full">
-                  <TabsList className="w-full h-14 bg-black/40 border-b border-white/5 rounded-none p-0">
-                    <TabsTrigger value="render" className="flex-1 h-full rounded-none data-[state=active]:bg-primary/5 data-[state=active]:text-primary border-r border-white/5 font-black text-[10px] uppercase tracking-widest">Pipeline</TabsTrigger>
-                    <TabsTrigger value="filters" className="flex-1 h-full rounded-none data-[state=active]:bg-primary/5 data-[state=active]:text-primary border-r border-white/5 font-black text-[10px] uppercase tracking-widest">Filters</TabsTrigger>
+                  <TabsList className="w-full h-14 bg-muted/40 border-b border-border rounded-none p-0">
+                    <TabsTrigger value="render" className="flex-1 h-full rounded-none data-[state=active]:bg-primary/5 data-[state=active]:text-primary border-r border-border font-black text-[10px] uppercase tracking-widest">Pipeline</TabsTrigger>
+                    <TabsTrigger value="filters" className="flex-1 h-full rounded-none data-[state=active]:bg-primary/5 data-[state=active]:text-primary border-r border-border font-black text-[10px] uppercase tracking-widest">Filters</TabsTrigger>
                     <TabsTrigger value="timeline" className="flex-1 h-full rounded-none data-[state=active]:bg-primary/5 data-[state=active]:text-primary font-black text-[10px] uppercase tracking-widest">Timeline</TabsTrigger>
                   </TabsList>
 
                   <div className="p-8 pb-32">
                     <TabsContent value="render" className="m-0 space-y-10">
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40 flex items-center justify-between">
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60 flex items-center justify-between">
                           <span>Quality Density (CRF)</span>
                           <span className="text-primary tabular-nums">{crf}</span>
                         </Label>
                         <Slider value={[crf ?? 28]} min={0} max={51} step={1} onValueChange={(v) => setCrf(Array.isArray(v) ? (v[0] ?? 28) : (v ?? 28))} className="py-2" />
-                        <div className="flex justify-between text-[8px] font-black uppercase text-white/20 tracking-widest">
+                        <div className="flex justify-between text-[8px] font-black uppercase text-muted-foreground/40 tracking-widest">
                           <span>High Quality (0)</span>
                           <span>Max Compression (51)</span>
                         </div>
                       </div>
 
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Render Preset</Label>
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Render Preset</Label>
                         <Select value={preset} onValueChange={(v) => setPreset(v ?? "ultrafast")}>
-                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black text-[10px] uppercase tracking-widest">
+                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
-                          <SelectContent className="bg-[#0a0a0a] border-white/10">
+                          <SelectContent className="bg-card border-border">
                             {["ultrafast", "superfast", "veryfast", "faster", "fast", "medium", "slow", "slower", "veryslow"].map(p => (
                               <SelectItem key={p} value={p} className="font-black text-[10px] uppercase py-3">{p}</SelectItem>
                             ))}
                           </SelectContent>
                         </Select>
-                        <p className="text-[8px] font-medium text-white/20 uppercase tracking-widest leading-relaxed">Faster presets = larger files. Slower presets = better compression.</p>
+                        <p className="text-[8px] font-medium text-muted-foreground/40 uppercase tracking-widest leading-relaxed">Faster presets = larger files. Slower presets = better compression.</p>
                       </div>
 
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Target Protocol</Label>
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Target Protocol</Label>
                         <div className="grid grid-cols-2 gap-3">
                           {["mp4", "webm", "mkv", "avi"].map(fmt => (
-                            <Button key={fmt} variant={outputFormat === fmt ? "default" : "ghost"} className={cn("rounded-2xl text-[10px] font-black h-12 uppercase tracking-widest border border-white/5", outputFormat === fmt ? "bg-primary text-white shadow-[0_10px_30px_rgba(var(--primary-rgb),0.3)]" : "text-white/30 hover:bg-white/5")} onClick={() => setOutputFormat(fmt)}>{fmt}</Button>
+                            <Button key={fmt} variant={outputFormat === fmt ? "default" : "ghost"} className={cn("rounded-2xl text-[10px] font-black h-12 uppercase tracking-widest border border-border", outputFormat === fmt ? "bg-primary text-foreground shadow-[0_10px_30px_rgba(var(--primary-rgb),0.3)]" : "text-muted-foreground/50 hover:bg-secondary/50")} onClick={() => setOutputFormat(fmt)}>{fmt}</Button>
                           ))}
                         </div>
                       </div>
 
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Scale Resolution</Label>
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Scale Resolution</Label>
                         <Select value={resolution} onValueChange={(v) => setResolution(v ?? "original")}>
-                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black text-[10px] uppercase tracking-widest">
+                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
-                          <SelectContent className="bg-[#0a0a0a] border-white/10">
+                          <SelectContent className="bg-card border-border">
                             <SelectItem value="original" className="font-black text-[10px] uppercase py-3">Native Matrix</SelectItem>
                             <SelectItem value="1080p" className="font-black text-[10px] uppercase py-3">HD 1080p</SelectItem>
                             <SelectItem value="720p" className="font-black text-[10px] uppercase py-3">HD 720p</SelectItem>
@@ -376,10 +376,10 @@ export default function VideoStudioPage() {
                         </Select>
                       </div>
 
-                      <div className="flex items-center justify-between p-5 rounded-3xl bg-white/[0.02] border border-white/5">
+                      <div className="flex items-center justify-between p-5 rounded-3xl bg-secondary/30 border border-border">
                         <div className="space-y-1">
-                          <Label className="text-[10px] font-black uppercase text-white/60 tracking-wider">Mute Audio</Label>
-                          <p className="text-[8px] font-medium text-white/20 uppercase tracking-widest">Strip binary stream</p>
+                          <Label className="text-[10px] font-black uppercase text-muted-foreground/80 tracking-wider">Mute Audio</Label>
+                          <p className="text-[8px] font-medium text-muted-foreground/40 uppercase tracking-widest">Strip binary stream</p>
                         </div>
                         <Switch checked={mute} onCheckedChange={setMute} className="data-[state=checked]:bg-primary" />
                       </div>
@@ -392,8 +392,8 @@ export default function VideoStudioPage() {
                             <EyeOff className="w-6 h-6" />
                           </div>
                           <div className="space-y-1">
-                            <Label className="text-[11px] font-black uppercase text-white/80 tracking-wider">Privacy Blur</Label>
-                            <p className="text-[8px] font-medium text-white/30 uppercase tracking-widest italic">Global Anonymization</p>
+                            <Label className="text-[11px] font-black uppercase text-foreground/80 tracking-wider">Privacy Blur</Label>
+                            <p className="text-[8px] font-medium text-muted-foreground/50 uppercase tracking-widest italic">Global Anonymization</p>
                           </div>
                         </div>
                         <Switch checked={privacyBlur} onCheckedChange={setPrivacyBlur} className="data-[state=checked]:bg-primary" />
@@ -402,11 +402,11 @@ export default function VideoStudioPage() {
                       {/* Region Manager */}
                       <div className="space-y-6">
                          <div className="flex items-center justify-between">
-                            <h4 className="text-[10px] font-black uppercase tracking-widest text-white/40">Active Blur Zones</h4>
+                            <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Active Blur Zones</h4>
                             <Badge variant="outline" className="text-[9px] border-primary/20 text-primary font-black italic">{blurRegions.length} Regions</Badge>
                          </div>
                          
-                         <ScrollArea className="h-[200px] rounded-3xl bg-white/[0.02] border border-white/5 p-4">
+                         <ScrollArea className="h-[200px] rounded-3xl bg-secondary/30 border border-border p-4">
                             <div className="space-y-3">
                                {blurRegions.length === 0 ? (
                                   <div className="flex flex-col items-center justify-center h-[160px] text-center space-y-3 opacity-30">
@@ -415,17 +415,17 @@ export default function VideoStudioPage() {
                                   </div>
                                ) : (
                                   blurRegions.map((reg, i) => (
-                                     <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/5 group hover:border-primary/30 transition-all">
+                                     <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-border group hover:border-primary/30 transition-all">
                                         <div className="flex items-center gap-4">
                                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-[10px] font-black italic">
                                               #{i+1}
                                            </div>
                                            <div className="flex flex-col">
-                                              <span className="text-[9px] font-black uppercase text-white/60">Area {Math.round(reg.w)}x{Math.round(reg.h)}%</span>
-                                              <span className="text-[8px] text-white/20 uppercase font-bold tracking-widest">Offset {Math.round(reg.x)}:{Math.round(reg.y)}</span>
+                                              <span className="text-[9px] font-black uppercase text-muted-foreground/80">Area {Math.round(reg.w)}x{Math.round(reg.h)}%</span>
+                                              <span className="text-[8px] text-muted-foreground/40 uppercase font-bold tracking-widest">Offset {Math.round(reg.x)}:{Math.round(reg.y)}</span>
                                            </div>
                                         </div>
-                                        <Button variant="ghost" size="icon" className="w-8 h-8 rounded-xl opacity-0 group-hover:opacity-100 text-white/20 hover:text-red-500 transition-all" onClick={() => setBlurRegions(blurRegions.filter((_, idx) => idx !== i))}>
+                                        <Button variant="ghost" size="icon" className="w-8 h-8 rounded-xl opacity-0 group-hover:opacity-100 text-muted-foreground/40 hover:text-red-500 transition-all" onClick={() => setBlurRegions(blurRegions.filter((_, idx) => idx !== i))}>
                                            <Trash2 className="w-4 h-4" />
                                         </Button>
                                      </div>
@@ -435,14 +435,14 @@ export default function VideoStudioPage() {
                          </ScrollArea>
                          
                          {blurRegions.length > 0 && (
-                            <Button variant="outline" className="w-full h-12 rounded-2xl border-white/5 bg-white/[0.02] text-[9px] font-black uppercase tracking-widest hover:bg-red-500/10 hover:text-red-500 hover:border-red-500/20 transition-all" onClick={() => setBlurRegions([])}>
+                            <Button variant="outline" className="w-full h-12 rounded-2xl border-border bg-secondary/30 text-[9px] font-black uppercase tracking-widest hover:bg-red-500/10 hover:text-red-500 hover:border-red-500/20 transition-all" onClick={() => setBlurRegions([])}>
                                RESET ALL ZONES
                             </Button>
                          )}
                       </div>
 
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Spatial Rotation</Label>
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Spatial Rotation</Label>
                         <div className="grid grid-cols-4 gap-2">
                           {[
                             { val: "0", icon: Maximize },
@@ -450,7 +450,7 @@ export default function VideoStudioPage() {
                             { val: "180", icon: RotateCw },
                             { val: "270", icon: RotateCw }
                           ].map((r, i) => (
-                            <Button key={r.val} variant={rotation === r.val ? "default" : "ghost"} className={cn("rounded-xl h-12 flex flex-col items-center justify-center gap-1", rotation === r.val ? "bg-primary text-white" : "text-white/20 border border-white/5")} onClick={() => setRotation(r.val)}>
+                            <Button key={r.val} variant={rotation === r.val ? "default" : "ghost"} className={cn("rounded-xl h-12 flex flex-col items-center justify-center gap-1", rotation === r.val ? "bg-primary text-foreground" : "text-muted-foreground/40 border border-border")} onClick={() => setRotation(r.val)}>
                               <r.icon className={cn("w-4 h-4", r.val === "180" && "rotate-180", r.val === "270" && "-rotate-90")} />
                               <span className="text-[8px] font-black">{r.val}°</span>
                             </Button>
@@ -459,12 +459,12 @@ export default function VideoStudioPage() {
                       </div>
 
                       <div className="space-y-5">
-                        <Label className="text-[10px] uppercase font-black tracking-widest text-white/40">Temporal Velocity</Label>
+                        <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Temporal Velocity</Label>
                         <Select value={speed} onValueChange={(v) => setSpeed(v ?? "1.0")}>
-                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black text-[10px] uppercase tracking-widest">
+                          <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
-                          <SelectContent className="bg-[#0a0a0a] border-white/10">
+                          <SelectContent className="bg-card border-border">
                             <SelectItem value="0.5" className="font-black text-[10px] uppercase py-3">0.5x (Slow Motion)</SelectItem>
                             <SelectItem value="1.0" className="font-black text-[10px] uppercase py-3">1.0x (Standard)</SelectItem>
                             <SelectItem value="1.5" className="font-black text-[10px] uppercase py-3">1.5x (Accelerated)</SelectItem>
@@ -475,7 +475,7 @@ export default function VideoStudioPage() {
                     </TabsContent>
 
                     <TabsContent value="timeline" className="m-0 space-y-10">
-                      <div className="p-6 rounded-[2.5rem] bg-white/[0.02] border border-white/5 space-y-8">
+                      <div className="p-6 rounded-[2.5rem] bg-secondary/30 border border-border space-y-8">
                         <div className="flex items-center gap-3 text-primary">
                           <Scissors className="w-5 h-5" />
                           <h4 className="text-[10px] font-black uppercase tracking-[0.2em]">Precision Trim</h4>
@@ -483,7 +483,7 @@ export default function VideoStudioPage() {
                         
                         <div className="space-y-6">
                           <div className="space-y-3">
-                            <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-white/40 italic">
+                            <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 italic">
                                <span>Segment Start</span>
                                <span className="text-primary">{(trimStart ?? 0).toFixed(2)}s</span>
                             </div>
@@ -491,7 +491,7 @@ export default function VideoStudioPage() {
                           </div>
                           
                           <div className="space-y-3">
-                            <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-white/40 italic">
+                            <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 italic">
                               <span>Segment End</span>
                               <span className="text-primary">{(trimEnd ?? duration).toFixed(2)}s</span>
                             </div>
@@ -499,12 +499,12 @@ export default function VideoStudioPage() {
                           </div>
                         </div>
 
-                        <div className="pt-4 flex items-center justify-between border-t border-white/5">
+                        <div className="pt-4 flex items-center justify-between border-t border-border">
                            <div className="flex flex-col gap-1">
-                             <span className="text-[8px] font-black text-white/20 uppercase tracking-widest">Active Runtime</span>
+                             <span className="text-[8px] font-black text-muted-foreground/40 uppercase tracking-widest">Active Runtime</span>
                              <span className="text-xs font-black italic tabular-nums text-primary">{((trimEnd ?? duration) - (trimStart ?? 0)).toFixed(2)}s</span>
                            </div>
-                           <Button variant="ghost" size="icon" className="rounded-xl text-white/20 hover:text-white" onClick={() => { setTrimStart(0); setTrimEnd(duration); }}>
+                           <Button variant="ghost" size="icon" className="rounded-xl text-muted-foreground/40 hover:text-foreground" onClick={() => { setTrimStart(0); setTrimEnd(duration); }}>
                              <RefreshCw className="w-4 h-4" />
                            </Button>
                         </div>
@@ -514,8 +514,8 @@ export default function VideoStudioPage() {
                 </Tabs>
               </ScrollArea>
 
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
-                <Button className="w-full h-20 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-white font-black text-xl gap-4 shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic disabled:grayscale disabled:opacity-50" onClick={processVideo} disabled={isProcessing || !isLoaded}>
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
+                <Button className="w-full h-20 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-xl gap-4 shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic disabled:grayscale disabled:opacity-50" onClick={processVideo} disabled={isProcessing || !isLoaded}>
                   {isProcessing ? <Loader2 className="w-7 h-7 animate-spin" /> : <Zap className="w-7 h-7 group-hover:scale-125 transition-transform" />}
                   {isProcessing ? "Rendering Asset..." : "Export Pro Studio"}
                 </Button>
@@ -524,7 +524,7 @@ export default function VideoStudioPage() {
 
             {/* Center - Laboratory Preview */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[500px] lg:min-h-0">
-              <header className="p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20">
+              <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 rounded-[2rem] bg-primary/10 flex items-center justify-center border border-primary/20 shadow-2xl relative overflow-hidden group">
                     <div className="absolute inset-0 bg-primary/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
@@ -534,15 +534,15 @@ export default function VideoStudioPage() {
                     <h2 className="font-black text-3xl tracking-tighter uppercase italic truncate max-w-[200px] md:max-w-xl">{videoFile.name}</h2>
                     <div className="flex items-center gap-4 mt-1">
                       <Badge className="text-[10px] bg-primary/10 text-primary border-primary/20 px-4 py-1 rounded-full font-black uppercase tracking-[0.2em] italic">SOURCE MOUNTED</Badge>
-                      <span className="text-[10px] text-white/20 uppercase font-black tracking-widest tabular-nums italic">{((videoFile.size) / 1024 / 1024).toFixed(2)} MB • {(duration ?? 0).toFixed(1)}s</span>
+                      <span className="text-[10px] text-muted-foreground/40 uppercase font-black tracking-widest tabular-nums italic">{((videoFile.size) / 1024 / 1024).toFixed(2)} MB • {(duration ?? 0).toFixed(1)}s</span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Button variant="ghost" size="icon" className="w-14 h-14 rounded-2xl hover:bg-white/5 text-white/30 hover:text-white transition-all shadow-xl" onClick={takeSnapshot} title="Capture Precise Frame">
+                  <Button variant="ghost" size="icon" className="w-14 h-14 rounded-2xl hover:bg-secondary/50 text-muted-foreground/50 hover:text-foreground transition-all shadow-xl" onClick={takeSnapshot} title="Capture Precise Frame">
                     <Camera className="w-6 h-6" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="w-14 h-14 rounded-2xl hover:bg-red-500/10 text-white/30 hover:text-red-500 transition-all shadow-xl" onClick={() => setVideoFile(null)}>
+                  <Button variant="ghost" size="icon" className="w-14 h-14 rounded-2xl hover:bg-red-500/10 text-muted-foreground/50 hover:text-red-500 transition-all shadow-xl" onClick={() => setVideoFile(null)}>
                     <Trash2 className="w-6 h-6" />
                   </Button>
                 </div>
@@ -557,7 +557,7 @@ export default function VideoStudioPage() {
                   ) : (
                     <motion.div key="preview" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} className="relative group max-w-full lg:max-w-6xl mx-auto">
                       <div 
-                        className="relative shadow-[0_100px_200px_-50px_rgba(0,0,0,1)] border border-white/10 rounded-none overflow-hidden bg-black/40 group-hover:border-primary/30 transition-all duration-1000 ring-1 ring-white/5 cursor-crosshair w-fit mx-auto"
+                        className="relative shadow-[0_100px_200px_-50px_rgba(0,0,0,1)] border border-border rounded-none overflow-hidden bg-muted/40 group-hover:border-primary/30 transition-all duration-1000 ring-1 ring-white/5 cursor-crosshair w-fit mx-auto"
                         onMouseDown={(e) => {
                           const container = e.currentTarget;
                           const rect = container.getBoundingClientRect();
@@ -624,11 +624,11 @@ export default function VideoStudioPage() {
                         </svg>
 
                         {/* Custom Playback Overlay (since controls are disabled for drawing) */}
-                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 rounded-2xl bg-black/80 backdrop-blur-3xl border border-white/10 flex items-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                           <Button variant="ghost" size="icon" className="text-white/40 hover:text-white" onClick={() => { if (videoRef.current?.paused) { videoRef.current.play().catch(() => {}); } else { videoRef.current?.pause(); } }}>
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 rounded-2xl bg-muted/80 backdrop-blur-3xl border border-border flex items-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                           <Button variant="ghost" size="icon" className="text-muted-foreground/60 hover:text-foreground" onClick={() => { if (videoRef.current?.paused) { videoRef.current.play().catch(() => {}); } else { videoRef.current?.pause(); } }}>
                               <Play className="w-5 h-5" />
                            </Button>
-                           <div className="h-4 w-px bg-white/10" />
+                           <div className="h-4 w-px bg-secondary" />
                            <span className="text-[10px] font-black tabular-nums italic text-primary">
                               {Math.floor(currentTime / 60)}:{(currentTime % 60).toFixed(0).padStart(2, '0')}
                            </span>
@@ -642,7 +642,7 @@ export default function VideoStudioPage() {
 
               {/* Thread Monitor */}
               <div className="absolute bottom-8 left-8 z-30">
-                 <div className="p-4 rounded-2xl bg-black/60 backdrop-blur-3xl border border-white/5 w-64 space-y-3 shadow-2xl">
+                 <div className="p-4 rounded-2xl bg-muted/60 backdrop-blur-3xl border border-border w-64 space-y-3 shadow-2xl">
                     <div className="flex items-center justify-between">
                        <span className="text-[8px] font-black uppercase tracking-widest text-primary italic">Engine Feed</span>
                        <div className="flex gap-1">
@@ -650,7 +650,7 @@ export default function VideoStudioPage() {
                           <div className="w-1 h-1 rounded-full bg-primary/20" />
                        </div>
                     </div>
-                    <div className="h-16 overflow-y-auto scrollbar-hide font-mono text-[8px] text-white/30 space-y-1">
+                    <div className="h-16 overflow-y-auto scrollbar-hide font-mono text-[8px] text-muted-foreground/50 space-y-1">
                        {logs.slice(-3).map((log, i) => <div key={i} className="truncate tracking-tight opacity-60 italic">{">"} {log}</div>)}
                     </div>
                  </div>
@@ -658,11 +658,11 @@ export default function VideoStudioPage() {
             </section>
 
             {/* Right Sidebar - Gallery & History */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3"><History className="w-4 h-4" /> Render Output</h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">Exported Asset History</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">Exported Asset History</p>
                 </div>
               </div>
 
@@ -682,12 +682,12 @@ export default function VideoStudioPage() {
                                <p className="text-xs font-black uppercase truncate tracking-tighter">export_{outputFormat}.{outputFormat}</p>
                                <div className="flex gap-2">
                                   <Badge className="bg-emerald-500/10 text-emerald-500 border-emerald-500/10 text-[8px] px-2 py-0">PRO</Badge>
-                                  <span className="text-[9px] font-bold text-white/20 uppercase tracking-widest italic">{outputFormat.toUpperCase()}</span>
+                                  <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-widest italic">{outputFormat.toUpperCase()}</span>
                                </div>
                             </div>
                          </div>
                          <Button 
-                            className="w-full h-14 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-black uppercase tracking-widest text-[10px] shadow-xl shadow-emerald-600/20 gap-3 active:scale-95 transition-all" 
+                            className="w-full h-14 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-foreground font-black uppercase tracking-widest text-[10px] shadow-xl shadow-emerald-600/20 gap-3 active:scale-95 transition-all" 
                             onClick={() => ExportManager.downloadFromUrl(outputUrl, `studio-export-${Date.now()}.${outputFormat}`)}
                           >
                              <DownloadCloud className="w-5 h-5" /> Export Asset
@@ -698,9 +698,9 @@ export default function VideoStudioPage() {
 
                   {snapshots.length > 0 && (
                     <div className="space-y-6">
-                      <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                      <div className="flex items-center justify-between border-b border-border pb-4">
                         <Label className="text-[10px] uppercase font-black tracking-widest opacity-40 italic">Precision Frames</Label>
-                        <Badge variant="outline" className="text-[9px] font-black text-white/20 border-white/5">{snapshots.length} UNITS</Badge>
+                        <Badge variant="outline" className="text-[9px] font-black text-muted-foreground/40 border-border">{snapshots.length} UNITS</Badge>
                       </div>
                       <div className="grid grid-cols-2 gap-4">
                         {snapshots.map((snap, i) => (
@@ -708,14 +708,14 @@ export default function VideoStudioPage() {
                             key={i}
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="group relative aspect-video rounded-2xl overflow-hidden border border-white/5 bg-black hover:border-primary/40 transition-all cursor-pointer shadow-xl" 
+                            className="group relative aspect-video rounded-2xl overflow-hidden border border-border bg-black hover:border-primary/40 transition-all cursor-pointer shadow-xl" 
                             onClick={() => ExportManager.downloadFromUrl(snap.url, `frame-${snap.time.toFixed(1)}.jpg`)}
                           >
                             <img src={snap.url} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="" />
                             <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                              <DownloadCloud className="w-6 h-6 text-white drop-shadow-2xl" />
+                              <DownloadCloud className="w-6 h-6 text-foreground drop-shadow-2xl" />
                             </div>
-                            <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[8px] font-black text-primary border border-white/5 tracking-widest">{snap.time.toFixed(1)}S</div>
+                            <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-muted/60 backdrop-blur-md text-[8px] font-black text-primary border border-border tracking-widest">{snap.time.toFixed(1)}S</div>
                           </motion.div>
                         ))}
                       </div>
@@ -724,7 +724,7 @@ export default function VideoStudioPage() {
 
                   {!outputUrl && snapshots.length === 0 && (
                     <div className="py-32 text-center space-y-6 opacity-10">
-                       <div className="w-20 h-20 rounded-[2.5rem] bg-white/5 border border-dashed border-white/20 flex items-center justify-center mx-auto animate-pulse">
+                       <div className="w-20 h-20 rounded-[2.5rem] bg-secondary/50 border border-dashed border-border flex items-center justify-center mx-auto animate-pulse">
                           <History className="w-8 h-8" />
                        </div>
                        <p className="text-[11px] font-black uppercase tracking-[0.4em] italic">Session Idle</p>
@@ -733,7 +733,7 @@ export default function VideoStudioPage() {
                 </div>
               </ScrollArea>
 
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-white/15 italic">
                   <ShieldCheck className="w-4 h-4 text-emerald-500" /> AES-256 Thread Guard
                 </div>

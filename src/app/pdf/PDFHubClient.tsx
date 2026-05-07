@@ -114,7 +114,7 @@ export default function PDFHubClient() {
                     <div className={cn("absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-5 blur-3xl -mr-16 -mt-16 group-hover:opacity-10 transition-opacity", tool.color)} />
                     
                     <div className="space-y-6 relative z-10">
-                      <div className={cn("w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-500", tool.color)}>
+                      <div className={cn("w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center text-foreground shadow-lg group-hover:scale-110 transition-transform duration-500", tool.color)}>
                         <tool.icon className="w-8 h-8" />
                       </div>
                       

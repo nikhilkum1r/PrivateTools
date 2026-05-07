@@ -146,7 +146,7 @@ export default function ShredderClient() {
             <div className="flex flex-col gap-3">
               {status !== "done" && (
                 <Button
-                  className="w-full h-12 rounded-xl font-bold gap-2 bg-red-500 hover:bg-red-600 text-white shadow-lg shadow-red-500/20"
+                  className="w-full h-12 rounded-xl font-bold gap-2 bg-red-500 hover:bg-red-600 text-foreground shadow-lg shadow-red-500/20"
                   onClick={handleShred}
                   disabled={!accepted}
                 >

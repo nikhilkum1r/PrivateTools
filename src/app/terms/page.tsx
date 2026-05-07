@@ -55,7 +55,7 @@ export default function TermsOfServicePage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
       <Navbar />
 
       <main className="flex-grow pt-32 pb-20 px-4 relative">
@@ -93,7 +93,7 @@ export default function TermsOfServicePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="p-10 h-full bg-white/[0.02] border-white/5 rounded-[3rem] hover:bg-white/[0.04] transition-all group overflow-hidden relative">
+                <Card className="p-10 h-full bg-secondary/30 border-border rounded-[3rem] hover:bg-secondary/50 transition-all group overflow-hidden relative">
                    <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
                       <section.icon className="w-32 h-32" />
                    </div>
@@ -110,8 +110,8 @@ export default function TermsOfServicePage() {
           </div>
 
           {/* Final Clause */}
-          <div className="p-12 md:p-20 rounded-[4rem] bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent border border-white/5 relative overflow-hidden text-center space-y-8">
-            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-white/40">
+          <div className="p-12 md:p-20 rounded-[4rem] bg-gradient-to-br from-purple-600/10 via-blue-600/5 to-transparent border border-border relative overflow-hidden text-center space-y-8">
+            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-secondary/50 border border-border text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
               <Lock className="w-3 h-3 text-purple-500" /> End-to-End Privacy
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">Need a custom agreement?</h2>
@@ -122,7 +122,7 @@ export default function TermsOfServicePage() {
                <Button className="h-14 px-10 rounded-2xl bg-purple-600 hover:bg-purple-700 font-black gap-2">
                  Contact Legal <ChevronRight className="w-4 h-4" />
                </Button>
-               <Button variant="ghost" className="h-14 px-10 rounded-2xl font-black border border-white/5">
+               <Button variant="ghost" className="h-14 px-10 rounded-2xl font-black border border-border">
                  Archive (v3.0)
                </Button>
             </div>

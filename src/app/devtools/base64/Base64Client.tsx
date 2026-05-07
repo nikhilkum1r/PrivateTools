@@ -68,7 +68,7 @@ export default function Base64Client() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
@@ -91,7 +91,7 @@ export default function Base64Client() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-white/[0.02] border-white/10 space-y-8">
+          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button 
                 variant={type === "text" ? "default" : "outline"}
@@ -115,19 +115,19 @@ export default function Base64Client() {
                   <div className="flex justify-between items-center px-2">
                      <div className="flex gap-4">
                         <button 
-                          className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", mode === "encode" ? "text-primary" : "text-white/20")}
+                          className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", mode === "encode" ? "text-primary" : "text-muted-foreground/40")}
                           onClick={() => setMode("encode")}
                         >
                           Encode
                         </button>
                         <button 
-                          className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", mode === "decode" ? "text-primary" : "text-white/20")}
+                          className={cn("text-[10px] font-black uppercase tracking-widest transition-colors", mode === "decode" ? "text-primary" : "text-muted-foreground/40")}
                           onClick={() => setMode("decode")}
                         >
                           Decode
                         </button>
                      </div>
-                     <Button variant="ghost" size="icon" className="h-8 w-8 text-white/20 hover:text-red-500" onClick={() => setInput("")}>
+                     <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground/40 hover:text-red-500" onClick={() => setInput("")}>
                         <Trash2 className="w-4 h-4" />
                      </Button>
                   </div>
@@ -135,7 +135,7 @@ export default function Base64Client() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={mode === "encode" ? "Enter plain text..." : "Enter Base64 string..."}
-                    className="min-h-[300px] rounded-[2rem] bg-black border-white/5 font-mono text-xs leading-relaxed text-white/60 p-6"
+                    className="min-h-[300px] rounded-[2rem] bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 p-6"
                   />
                   <Button className="w-full h-14 rounded-2xl bg-primary font-black italic gap-2" onClick={processData}>
                      <Zap className="w-4 h-4" /> EXECUTE {mode.toUpperCase()}
@@ -144,7 +144,7 @@ export default function Base64Client() {
 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center px-2">
-                     <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Result</Label>
+                     <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Result</Label>
                      <Button variant="ghost" size="icon" className="h-8 w-8 text-primary" onClick={handleCopy} disabled={!output}>
                         {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                      </Button>
@@ -154,7 +154,7 @@ export default function Base64Client() {
                        readOnly
                        value={output}
                        placeholder="Awaiting synthesis..."
-                       className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-white/5 font-mono text-xs leading-relaxed text-primary/80 p-6 resize-none"
+                       className="absolute inset-0 rounded-[2rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-6 resize-none"
                      />
                   </div>
                 </div>
@@ -162,13 +162,13 @@ export default function Base64Client() {
             ) : (
               <div className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   <DropZone onFilesDrop={handleImageDrop} accept="image/*" multiple={false} className="h-80 rounded-[3rem] border-dashed border-white/10 bg-white/5" />
+                   <DropZone onFilesDrop={handleImageDrop} accept="image/*" multiple={false} className="h-80 rounded-[3rem] border-dashed border-border bg-secondary/50" />
                    <div className="relative group h-80">
                       <Textarea 
                         readOnly
                         value={output}
                         placeholder="Awaiting image string..."
-                        className="absolute inset-0 rounded-[3rem] bg-white/[0.01] border-white/5 font-mono text-xs leading-relaxed text-primary/80 p-8 resize-none"
+                        className="absolute inset-0 rounded-[3rem] bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 p-8 resize-none"
                       />
                       {output && (
                         <Button 
@@ -182,9 +182,9 @@ export default function Base64Client() {
                    </div>
                 </div>
                 {output && output.startsWith('data:image') && (
-                  <div className="p-8 rounded-[3rem] bg-white/[0.02] border border-white/10 flex flex-col items-center gap-6">
-                     <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Preview Rendering</Label>
-                     <div className="max-w-md w-full aspect-video rounded-2xl overflow-hidden border border-white/5 bg-black">
+                  <div className="p-8 rounded-[3rem] bg-secondary/30 border border-border flex flex-col items-center gap-6">
+                     <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Preview Rendering</Label>
+                     <div className="max-w-md w-full aspect-video rounded-2xl overflow-hidden border border-border bg-black">
                         <img src={output} className="w-full h-full object-contain" alt="Base64 Preview" />
                      </div>
                   </div>
@@ -211,7 +211,7 @@ export default function Base64Client() {
              <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
                 <div className="flex items-center gap-4">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
-                      <Binary className="w-6 h-6 text-white" />
+                      <Binary className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Industrial Precision</h4>
                 </div>

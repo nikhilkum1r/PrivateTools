@@ -113,7 +113,7 @@ export default function AudioStudioPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-[#050505] text-white overflow-y-auto lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
+    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative scrollbar-hide">
@@ -144,7 +144,7 @@ export default function AudioStudioPage() {
                         <h2 className="text-4xl font-black uppercase italic tracking-tighter">Master Ready</h2>
                         <div className="flex items-center justify-center gap-3">
                            <Badge className="bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-4 py-1 rounded-full font-black uppercase tracking-widest text-[9px]">Success</Badge>
-                           <span className="text-white/40 text-[10px] uppercase font-black tracking-widest">Target: {outputFormat.toUpperCase()} @ {bitrate}</span>
+                           <span className="text-muted-foreground/60 text-[10px] uppercase font-black tracking-widest">Target: {outputFormat.toUpperCase()} @ {bitrate}</span>
                         </div>
                       </div>
                       <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
@@ -160,7 +160,7 @@ export default function AudioStudioPage() {
                           {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 fill-black" />}
                         </Button>
                         <Button 
-                          className="h-16 px-12 rounded-full bg-primary hover:bg-primary/90 text-white font-black text-lg shadow-2xl shadow-primary/40 gap-3 group active:scale-95 transition-all"
+                          className="h-16 px-12 rounded-full bg-primary hover:bg-primary/90 text-foreground font-black text-lg shadow-2xl shadow-primary/40 gap-3 group active:scale-95 transition-all"
                           onClick={() => ExportManager.downloadFromUrl(outputUrl, `private-master-${Date.now()}.${outputFormat}`)}
                         >
                           <DownloadCloud className="w-6 h-6 group-hover:translate-y-1 transition-transform" /> Export Master Asset
@@ -196,14 +196,14 @@ export default function AudioStudioPage() {
                           key={i}
                           animate={{ height: isProcessing ? [20, 100, 20] : 20 }}
                           transition={{ repeat: Infinity, duration: 1, delay: i * 0.04 }}
-                          className="w-1.5 rounded-full bg-white/10"
+                          className="w-1.5 rounded-full bg-secondary"
                         />
                       ))}
                     </div>
                     <div className="space-y-3">
                       <h2 className="text-4xl font-black uppercase tracking-tighter italic">{audioFile.name}</h2>
                       <div className="flex items-center justify-center gap-3">
-                        <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-primary uppercase font-black px-4 py-1 rounded-full italic tracking-widest">Active Studio Asset</Badge>
+                        <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-primary uppercase font-black px-4 py-1 rounded-full italic tracking-widest">Active Studio Asset</Badge>
                         <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
                       </div>
                     </div>
@@ -215,7 +215,7 @@ export default function AudioStudioPage() {
                         <span>Mastering Local Frame</span>
                         <span>{progress}%</span>
                       </div>
-                      <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden border border-white/5 p-0.5">
+                      <div className="h-2 w-full bg-secondary/50 rounded-full overflow-hidden border border-border p-0.5">
                          <motion.div 
                            className="h-full bg-primary rounded-full shadow-[0_0_20px_rgba(var(--primary-rgb),0.6)]"
                            initial={{ width: 0 }}
@@ -229,7 +229,7 @@ export default function AudioStudioPage() {
                 <div className="text-center space-y-10">
                   <div className="w-32 h-32 rounded-[3rem] bg-gradient-to-br from-purple-500 to-primary p-[1px] mx-auto animate-pulse shadow-[0_0_50px_rgba(var(--primary-rgb),0.2)]">
                     <div className="w-full h-full rounded-[calc(3rem-1px)] bg-black flex items-center justify-center">
-                      <Mic className="w-12 h-12 text-white/30" />
+                      <Mic className="w-12 h-12 text-muted-foreground/50" />
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -250,14 +250,14 @@ export default function AudioStudioPage() {
         </section>
  
         {/* Right Sidebar - Inspector */}
-        <aside className="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/60 backdrop-blur-3xl shrink-0 flex flex-col h-[500px] lg:h-full">
-          <div className="p-8 border-b border-white/5 flex flex-col shrink-0 bg-black/20">
+        <aside className="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-border bg-card/60 backdrop-blur-3xl shrink-0 flex flex-col h-[500px] lg:h-full">
+          <div className="p-8 border-b border-border flex flex-col shrink-0 bg-muted/20">
             <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
               <Settings2 className="w-4 h-4" /> Studio Matrix
             </h3>
             <div className="flex items-center justify-between mt-2">
               <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">WASM Thread Execution</p>
-              <Badge className="bg-white/5 border-white/10 text-white/40 text-[9px] font-black uppercase px-3 py-1 rounded-full italic">v4.0 Pro</Badge>
+              <Badge className="bg-secondary/50 border-border text-muted-foreground/60 text-[9px] font-black uppercase px-3 py-1 rounded-full italic">v4.0 Pro</Badge>
             </div>
           </div>
  
@@ -266,10 +266,10 @@ export default function AudioStudioPage() {
               <div className="space-y-4">
                 <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Target Pipeline</Label>
                 <Select value={outputFormat} onValueChange={(val) => val && setOutputFormat(val)}>
-                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
+                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#0a0a0a] border-white/10 text-white rounded-2xl">
+                  <SelectContent className="bg-card border-border text-foreground rounded-2xl">
                     <SelectItem value="mp3" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">MP3 (LAME Engine)</SelectItem>
                     <SelectItem value="wav" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">WAV (Lossless Master)</SelectItem>
                     <SelectItem value="aac" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">AAC (Modern Pipeline)</SelectItem>
@@ -281,10 +281,10 @@ export default function AudioStudioPage() {
               <div className="space-y-4">
                 <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Audio Bitrate</Label>
                 <Select value={bitrate} onValueChange={(val) => val && setBitrate(val)}>
-                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
+                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#0a0a0a] border-white/10 text-white rounded-2xl">
+                  <SelectContent className="bg-card border-border text-foreground rounded-2xl">
                     <SelectItem value="128k" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">128kbps (Standard)</SelectItem>
                     <SelectItem value="192k" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">192kbps (High Fidelity)</SelectItem>
                     <SelectItem value="320k" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">320kbps (Studio Master)</SelectItem>
@@ -295,10 +295,10 @@ export default function AudioStudioPage() {
               <div className="space-y-4">
                 <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Sample Rate</Label>
                 <Select value={sampleRate} onValueChange={(val) => val && setSampleRate(val)}>
-                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-white/10 font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
+                  <SelectTrigger className="h-14 rounded-2xl bg-white/[0.03] border-border font-black uppercase tracking-widest text-xs focus:border-primary/50 transition-all">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-[#0a0a0a] border-white/10 text-white rounded-2xl">
+                  <SelectContent className="bg-card border-border text-foreground rounded-2xl">
                     <SelectItem value="44100" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">44.1 kHz (CD Standard)</SelectItem>
                     <SelectItem value="48000" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">48.0 kHz (Studio Grade)</SelectItem>
                     <SelectItem value="96000" className="rounded-xl focus:bg-primary/20 uppercase font-black tracking-widest text-[10px] py-3">96.0 kHz (Audiophile)</SelectItem>
@@ -306,13 +306,13 @@ export default function AudioStudioPage() {
                 </Select>
               </div>
  
-              <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-6">
+              <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-6">
                  <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Identity Tags (ID3)</Label>
                  <div className="space-y-4">
                     <div className="space-y-2">
                        <p className="text-[8px] font-black uppercase tracking-widest opacity-20 ml-1">Asset Title</p>
                        <input 
-                         className="w-full bg-black/40 border border-white/5 rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
+                         className="w-full bg-muted/40 border border-border rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
                          value={metadata.title}
                          onChange={e => setMetadata(prev => ({ ...prev, title: e.target.value }))}
                          placeholder="Unknown Track"
@@ -321,7 +321,7 @@ export default function AudioStudioPage() {
                     <div className="space-y-2">
                        <p className="text-[8px] font-black uppercase tracking-widest opacity-20 ml-1">Lead Artist</p>
                        <input 
-                         className="w-full bg-black/40 border border-white/5 rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
+                         className="w-full bg-muted/40 border border-border rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
                          value={metadata.artist}
                          onChange={e => setMetadata(prev => ({ ...prev, artist: e.target.value }))}
                          placeholder="Independent Creator"
@@ -330,7 +330,7 @@ export default function AudioStudioPage() {
                     <div className="space-y-2">
                        <p className="text-[8px] font-black uppercase tracking-widest opacity-20 ml-1">Album Archive</p>
                        <input 
-                         className="w-full bg-black/40 border border-white/5 rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
+                         className="w-full bg-muted/40 border border-border rounded-xl h-10 px-4 text-[10px] font-bold focus:border-primary/50 outline-none transition-all"
                          value={metadata.album}
                          onChange={e => setMetadata(prev => ({ ...prev, album: e.target.value }))}
                          placeholder="Pro Studio Vol. 1"
@@ -341,9 +341,9 @@ export default function AudioStudioPage() {
             </div>
           </ScrollArea>
  
-          <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
+          <div className="p-8 border-t border-border bg-muted/40 shrink-0">
             <Button 
-              className="w-full h-20 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-white font-black text-xl gap-3 shadow-[0_20px_50px_rgba(var(--primary-rgb),0.3)] active:scale-95 transition-all group disabled:opacity-30 disabled:grayscale"
+              className="w-full h-20 rounded-[2.5rem] bg-primary hover:bg-primary/90 text-foreground font-black text-xl gap-3 shadow-[0_20px_50px_rgba(var(--primary-rgb),0.3)] active:scale-95 transition-all group disabled:opacity-30 disabled:grayscale"
               onClick={processAudio}
               disabled={!audioFile || isProcessing || !isLoaded}
             >

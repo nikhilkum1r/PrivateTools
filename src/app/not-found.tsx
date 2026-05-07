@@ -29,7 +29,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white overflow-hidden">
+    <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
       <Navbar />
       
       <main className="flex-grow flex flex-col items-center justify-center p-4 relative">
@@ -44,7 +44,7 @@ export default function NotFound() {
             animate={{ opacity: 1, scale: 1 }}
             className="space-y-6"
           >
-            <div className="w-24 h-24 rounded-[2.5rem] bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-8 shadow-2xl">
+            <div className="w-24 h-24 rounded-[2.5rem] bg-secondary/50 border border-border flex items-center justify-center mx-auto mb-8 shadow-2xl">
               <FileQuestion className="w-12 h-12 text-primary animate-pulse" />
             </div>
             
@@ -70,15 +70,15 @@ export default function NotFound() {
           >
             {suggestedTools.map((tool, i) => (
               <Link key={i} href={tool.href}>
-                <Card className="p-6 bg-white/[0.02] border-white/5 hover:border-primary/30 hover:bg-white/[0.04] transition-all rounded-[2rem] flex items-center gap-4 group cursor-pointer">
-                  <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center ${tool.color} group-hover:scale-110 transition-transform`}>
+                <Card className="p-6 bg-secondary/30 border-border hover:border-primary/30 hover:bg-secondary/50 transition-all rounded-[2rem] flex items-center gap-4 group cursor-pointer">
+                  <div className={`w-12 h-12 rounded-xl bg-secondary/50 flex items-center justify-center ${tool.color} group-hover:scale-110 transition-transform`}>
                     <tool.icon className="w-6 h-6" />
                   </div>
                   <div className="text-left">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-white/20">Suggested</p>
+                    <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Suggested</p>
                     <p className="text-sm font-black uppercase italic">{tool.name}</p>
                   </div>
-                  <ChevronRight className="w-4 h-4 ml-auto text-white/20 group-hover:text-primary transition-colors" />
+                  <ChevronRight className="w-4 h-4 ml-auto text-muted-foreground/40 group-hover:text-primary transition-colors" />
                 </Card>
               </Link>
             ))}
@@ -90,10 +90,10 @@ export default function NotFound() {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4 pt-8"
           >
-            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-14 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black italic gap-2")}>
+            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-14 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black italic gap-2")}>
               <Home className="w-4 h-4" /> RETURN TO SYSTEM
             </Link>
-            <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-14 px-8 rounded-2xl border-white/10 hover:bg-white/5 text-white font-black italic gap-2")}>
+            <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-14 px-8 rounded-2xl border-border hover:bg-secondary/50 text-foreground font-black italic gap-2")}>
               <Search className="w-4 h-4" /> VIEW MANIFESTO
             </Link>
           </motion.div>

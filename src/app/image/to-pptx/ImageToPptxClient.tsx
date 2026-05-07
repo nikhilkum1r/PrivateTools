@@ -119,7 +119,7 @@ export default function ImageToPptxClient() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-[#050505] text-white overflow-hidden selection:bg-orange-500/30">
+    <div className="flex flex-col h-screen bg-background text-foreground overflow-hidden selection:bg-orange-500/30">
       <Navbar />
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden relative scrollbar-hide">
@@ -141,7 +141,7 @@ export default function ImageToPptxClient() {
             <div className="max-w-2xl w-full space-y-12 text-center">
               <div className="space-y-6">
                 <div className="w-24 h-24 rounded-[2.5rem] bg-gradient-to-br from-orange-500 to-red-600 p-[1px] mx-auto animate-pulse">
-                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-white/5">
+                  <div className="w-full h-full rounded-[calc(2.5rem-1px)] bg-black flex items-center justify-center border border-border">
                     <Presentation className="w-10 h-10 text-orange-500" />
                   </div>
                 </div>
@@ -158,15 +158,15 @@ export default function ImageToPptxClient() {
                 onFilesDrop={handleFilesDrop} 
                 accept="image/*" 
                 multiple={true} 
-                className="h-64 border-dashed border-white/10 bg-white/5 rounded-[3rem] hover:bg-white/[0.08] transition-all"
+                className="h-64 border-dashed border-border bg-secondary/50 rounded-[3rem] hover:bg-white/[0.08] transition-all"
               />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar - Identity Engine */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 flex items-center gap-2">
                     <Layers className="w-4 h-4" /> Identity Engine
@@ -176,7 +176,7 @@ export default function ImageToPptxClient() {
                     <div className="flex gap-1.5 opacity-30">
                       <Play className="w-2 h-2 text-orange-500 fill-orange-500" />
                       <div className="w-2 h-2 rounded-full border border-white/40" />
-                      <Smartphone className="w-2 h-2 text-white" />
+                      <Smartphone className="w-2 h-2 text-foreground" />
                     </div>
                   </div>
                 </div>
@@ -199,15 +199,15 @@ export default function ImageToPptxClient() {
                       >
                         <Card 
                           className={cn(
-                            "p-3 flex items-center gap-4 cursor-pointer transition-all border-white/5 hover:border-orange-500/20 group relative overflow-hidden rounded-2xl",
-                            selectedId === f.id ? "bg-orange-500/5 border-orange-500/30" : "bg-white/[0.02]"
+                            "p-3 flex items-center gap-4 cursor-pointer transition-all border-border hover:border-orange-500/20 group relative overflow-hidden rounded-2xl",
+                            selectedId === f.id ? "bg-orange-500/5 border-orange-500/30" : "bg-secondary/30"
                           )}
                           onClick={() => setSelectedId(f.id)}
                         >
-                          <div className="w-6 text-[10px] font-black text-white/20 group-hover:text-orange-500/40 transition-colors shrink-0">
+                          <div className="w-6 text-[10px] font-black text-muted-foreground/40 group-hover:text-orange-500/40 transition-colors shrink-0">
                             {String(i + 1).padStart(2, '0')}
                           </div>
-                          <div className="w-12 h-8 rounded-lg overflow-hidden bg-black/40 shrink-0 relative flex items-center justify-center border border-white/5 shadow-lg">
+                          <div className="w-12 h-8 rounded-lg overflow-hidden bg-muted/40 shrink-0 relative flex items-center justify-center border border-border shadow-lg">
                             <img src={f.previewUrl} className="w-full h-full object-cover" alt="" />
                           </div>
                           <div className="min-w-0 flex-grow">
@@ -232,9 +232,9 @@ export default function ImageToPptxClient() {
                 </div>
               </ScrollArea>
 
-              <div className="p-6 border-t border-white/5 bg-black/40 shrink-0">
+              <div className="p-6 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-14 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-black text-sm gap-2 shadow-2xl shadow-orange-500/20 active:scale-95 transition-all italic"
+                  className="w-full h-14 rounded-2xl bg-orange-600 hover:bg-orange-700 text-foreground font-black text-sm gap-2 shadow-2xl shadow-orange-500/20 active:scale-95 transition-all italic"
                   onClick={createPPTX}
                   disabled={isProcessing || files.length === 0}
                 >
@@ -246,7 +246,7 @@ export default function ImageToPptxClient() {
 
             {/* Center - Slide Workspace */}
             <section className="flex-grow bg-transparent relative flex flex-col shrink-0 lg:shrink min-h-[600px] lg:min-h-0">
-              <header className="p-8 flex items-center justify-between bg-black/40 backdrop-blur-3xl border-b border-white/5 relative z-20">
+              <header className="p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20">
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 rounded-[2rem] bg-orange-500/10 flex items-center justify-center border border-orange-500/20 shadow-2xl">
                     <Presentation className="w-8 h-8 text-orange-500" />
@@ -259,7 +259,7 @@ export default function ImageToPptxClient() {
                       <Badge className="text-[10px] bg-orange-500/10 text-orange-500 border-orange-500/20 px-4 py-1 rounded-full font-black uppercase tracking-widest italic">
                         DECK STUDIO
                       </Badge>
-                      <span className="text-[10px] text-white/20 uppercase font-black tracking-widest">
+                      <span className="text-[10px] text-muted-foreground/40 uppercase font-black tracking-widest">
                         SLIDE {files.indexOf(currentFile!) + 1} OF {files.length}
                       </span>
                     </div>
@@ -281,7 +281,7 @@ export default function ImageToPptxClient() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.9 }}
-                        className="w-full h-full max-w-5xl bg-white/[0.02] rounded-[3rem] border border-white/10 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden p-8"
+                        className="w-full h-full max-w-5xl bg-secondary/30 rounded-[3rem] border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex items-center justify-center relative group overflow-hidden p-8"
                      >
                         <img 
                           src={currentFile.previewUrl} 
@@ -289,7 +289,7 @@ export default function ImageToPptxClient() {
                           alt="Slide Preview" 
                         />
                         <div className="absolute bottom-10 left-10">
-                           <Badge className="bg-black/60 backdrop-blur-xl text-white/40 border-white/10 px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-[10px]">
+                           <Badge className="bg-muted/60 backdrop-blur-xl text-muted-foreground/60 border-border px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-[10px]">
                              WASM SYNTHESIS ACTIVE
                            </Badge>
                         </div>
@@ -305,28 +305,28 @@ export default function ImageToPptxClient() {
             </section>
 
             {/* Right Sidebar - Studio Matrix */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-white/5 bg-[#0a0a0a]/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-              <div className="p-8 border-b border-white/5 flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+              <div className="p-8 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500 flex items-center gap-3">
                     <Settings2 className="w-4 h-4" /> Studio Matrix
                   </h3>
-                  <p className="text-[8px] font-bold text-white/20 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
+                  <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest leading-none mt-1">WASM Thread Execution</p>
                 </div>
-                <Badge variant="outline" className="text-[10px] border-white/10 bg-white/5 text-white/40 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
+                <Badge variant="outline" className="text-[10px] border-border bg-secondary/50 text-muted-foreground/60 px-4 py-1.5 rounded-full font-black italic">ACTIVE</Badge>
               </div>
 
               <ScrollArea className="flex-grow min-h-0">
                 <div className="p-8 space-y-10">
                   <div className="space-y-6">
-                    <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Deck Identity</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Deck Identity</h4>
                     <div className="space-y-4">
                        <div className="space-y-2">
-                          <Label className="text-[9px] text-white/40 uppercase font-black tracking-widest">Presentation Title</Label>
+                          <Label className="text-[9px] text-muted-foreground/60 uppercase font-black tracking-widest">Presentation Title</Label>
                           <Input 
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                            className="bg-white/5 border-white/10 rounded-2xl h-14 font-black uppercase tracking-tighter italic text-orange-500"
+                            className="bg-secondary/50 border-border rounded-2xl h-14 font-black uppercase tracking-tighter italic text-orange-500"
                             placeholder="PROJECT_ALPHA"
                           />
                        </div>
@@ -334,38 +334,38 @@ export default function ImageToPptxClient() {
                   </div>
 
                   <div className="space-y-6">
-                    <h4 className="text-[10px] font-black uppercase tracking-widest text-white/20">Slide Intelligence</h4>
+                    <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Slide Intelligence</h4>
                     <div className="grid grid-cols-1 gap-3">
                         {[
                           { label: "Aspect Ratio", value: "16:9 HD", icon: Monitor },
                           { label: "Sizing Mode", value: "Contain", icon: Layout },
                           { label: "Resolution", value: "4K Native", icon: Zap }
                         ].map((stat, i) => (
-                          <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                          <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-secondary/30 border border-border">
                              <div className="flex items-center gap-3">
-                                <stat.icon className="w-4 h-4 text-white/20" />
-                                <span className="text-[10px] font-black uppercase text-white/60 tracking-wider">{stat.label}</span>
+                                <stat.icon className="w-4 h-4 text-muted-foreground/40" />
+                                <span className="text-[10px] font-black uppercase text-muted-foreground/80 tracking-wider">{stat.label}</span>
                              </div>
-                             <Badge variant="outline" className="text-[9px] border-white/10 text-orange-500 font-black">{stat.value}</Badge>
+                             <Badge variant="outline" className="text-[9px] border-border text-orange-500 font-black">{stat.value}</Badge>
                           </div>
                         ))}
                     </div>
                   </div>
 
-                  <div className="p-6 rounded-[2rem] bg-white/[0.02] border border-white/5 space-y-4">
+                  <div className="p-6 rounded-[2rem] bg-secondary/30 border border-border space-y-4">
                     <div className="flex items-center gap-3">
                       <Cpu className="w-5 h-5 text-orange-500" />
                       <h4 className="text-xs font-black uppercase tracking-widest">WASM Guard</h4>
                     </div>
-                    <p className="text-[10px] text-white/30 leading-relaxed font-medium">
+                    <p className="text-[10px] text-muted-foreground/50 leading-relaxed font-medium">
                       Slide synthesis logic is executed locally within a secure WebAssembly thread. Asset integrity is maintained without external telemetry.
                     </p>
                   </div>
                 </div>
               </ScrollArea>
               
-              <div className="p-8 border-t border-white/5 bg-black/40 shrink-0">
-                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
+              <div className="p-8 border-t border-border bg-muted/40 shrink-0">
+                 <div className="flex items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/40">
                     <DownloadCloud className="w-4 h-4 text-orange-500" /> Synthesis Optimized
                  </div>
               </div>

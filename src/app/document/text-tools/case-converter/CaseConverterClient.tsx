@@ -51,7 +51,7 @@ export default function CaseConverterClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] text-white">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
@@ -74,7 +74,7 @@ export default function CaseConverterClient() {
             <PrivacyBadge />
           </div>
 
-          <Card className="p-8 rounded-[3rem] bg-white/[0.02] border-white/10 space-y-8">
+          <Card className="p-8 rounded-[3rem] bg-secondary/30 border-border space-y-8">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
               {[
                 { name: "UPPER", mode: "upper", icon: CaseUpper },
@@ -87,7 +87,7 @@ export default function CaseConverterClient() {
                 <Button 
                   key={m.mode}
                   variant="outline"
-                  className="h-12 rounded-xl font-bold text-[10px] uppercase tracking-wider border-white/5 bg-white/[0.02] hover:bg-primary hover:text-white transition-all"
+                  className="h-12 rounded-xl font-bold text-[10px] uppercase tracking-wider border-border bg-secondary/30 hover:bg-primary hover:text-foreground transition-all"
                   onClick={() => convert(m.mode as any)}
                 >
                   {m.name}
@@ -97,12 +97,12 @@ export default function CaseConverterClient() {
 
             <div className="space-y-4">
               <div className="flex justify-between items-center px-2">
-                 <Label className="text-[10px] font-black uppercase tracking-widest text-white/40">Text Matrix</Label>
+                 <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Text Matrix</Label>
                  <div className="flex gap-2">
                     <Button variant="ghost" size="icon" className="h-8 w-8 text-primary" onClick={handleCopy} disabled={!input}>
                        {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                     </Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-white/20 hover:text-red-500" onClick={() => setInput("")}>
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground/40 hover:text-red-500" onClick={() => setInput("")}>
                        <Trash2 className="w-4 h-4" />
                     </Button>
                  </div>
@@ -111,7 +111,7 @@ export default function CaseConverterClient() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter text to transform..."
-                className="min-h-[400px] rounded-[2rem] bg-black border-white/5 font-mono text-sm leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20"
+                className="min-h-[400px] rounded-[2rem] bg-card border-border font-mono text-sm leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20"
               />
             </div>
           </Card>
@@ -134,7 +134,7 @@ export default function CaseConverterClient() {
              <div className="p-8 rounded-[3rem] bg-primary/5 border border-primary/10 flex flex-col justify-center gap-6">
                 <div className="flex items-center gap-4">
                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center">
-                      <CaseSensitive className="w-6 h-6 text-white" />
+                      <CaseSensitive className="w-6 h-6 text-foreground" />
                    </div>
                    <h4 className="text-xl font-black uppercase tracking-tight">Identity Safe</h4>
                 </div>
