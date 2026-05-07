@@ -14,72 +14,90 @@ import { formatBytes } from "@/lib/utils/fileSize";
 import { toast } from "sonner";
 
 // ─── Core conversion logic ────────────────────────────────────────────────────
-// We use docx-preview (renders DOCX → DOM) + html2canvas (DOM → canvas image) +
-// jsPDF (canvas → paginated PDF). This avoids html2pdf.js which is a UMD bundle
-// that breaks when dynamically imported inside Next.js (unresolved externals).
+// Pipeline: mammoth (DOCX → HTML) → html2canvas (DOM → canvas) → jsPDF (→ PDF)
+// mammoth is used instead of docx-preview because docx-preview throws
+// "Cannot read properties of undefined (reading 'children')" on many DOCX
+// variants due to fragile internal XML traversal.
 async function docxToPdf(file: File): Promise<Blob> {
-  // Lazy-load all heavy libs — none of these run on the server
-  const { renderAsync } = await import("docx-preview");
+  const mammoth = await import("mammoth");
   const html2canvas = (await import("html2canvas")).default;
   const { jsPDF } = await import("jspdf");
 
-  // Offscreen container at A4 width (794px ≈ 210mm @ 96dpi)
+  const arrayBuffer = await file.arrayBuffer();
+
+  // 1. DOCX → HTML (mammoth is robust to quirky DOCX structures)
+  const { value: html } = await mammoth.convertToHtml({ arrayBuffer });
+
+  if (!html || html.trim().length === 0) {
+    throw new Error("The document appears to be empty or could not be parsed.");
+  }
+
+  // 2. Render HTML in an offscreen A4-width container (794px ≈ 210mm @ 96dpi)
   const container = document.createElement("div");
   container.style.cssText = [
     "position:fixed",
     "left:-99999px",
     "top:0",
     "width:794px",
-    "min-height:1px",
+    "padding:48px 64px",
+    "box-sizing:border-box",
     "background:#ffffff",
     "color:#000000",
+    "font-family:Arial,Helvetica,sans-serif",
     "font-size:11pt",
-    "line-height:1.5",
+    "line-height:1.6",
     "-webkit-print-color-adjust:exact",
   ].join(";");
+
+  // Basic styling for mammoth HTML output
+  const style = document.createElement("style");
+  style.textContent = `
+    .wtp-wrap h1 { font-size:20pt; font-weight:700; margin:16px 0 8px; }
+    .wtp-wrap h2 { font-size:16pt; font-weight:700; margin:14px 0 6px; }
+    .wtp-wrap h3 { font-size:13pt; font-weight:700; margin:12px 0 4px; }
+    .wtp-wrap p  { margin:0 0 8px; }
+    .wtp-wrap table { border-collapse:collapse; width:100%; margin:8px 0; }
+    .wtp-wrap td, .wtp-wrap th { border:1px solid #ccc; padding:4px 8px; font-size:10pt; }
+    .wtp-wrap ul, .wtp-wrap ol { margin:0 0 8px 24px; }
+    .wtp-wrap li { margin:2px 0; }
+    .wtp-wrap strong { font-weight:700; }
+    .wtp-wrap em { font-style:italic; }
+  `;
+  container.className = "wtp-wrap";
+  container.innerHTML = html;
+  container.prepend(style);
   document.body.appendChild(container);
 
   try {
-    // 1. Render DOCX → HTML inside the container
-    await renderAsync(await file.arrayBuffer(), container, undefined, {
-      className: "docx-preview-wtp",
-      ignoreLastRenderedPageBreak: false,
-    });
+    // Wait for fonts and layout to settle
+    await new Promise((r) => setTimeout(r, 400));
 
-    // 2. Wait for DOM/images to settle
-    await new Promise((r) => setTimeout(r, 700));
-
-    // 3. Snapshot the full rendered height into a single canvas
+    // 3. Snapshot the full rendered height into one canvas at 2× for sharpness
     const canvas = await html2canvas(container, {
       scale: 2,
       useCORS: true,
       logging: false,
       backgroundColor: "#ffffff",
-      // Capture full scrollable height
       windowWidth: 794,
       windowHeight: container.scrollHeight,
       width: 794,
       height: container.scrollHeight,
     });
 
-    // 4. Build PDF — A4 portrait in mm
+    // 4. Build A4 PDF and paginate
     const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
     const pageW = pdf.internal.pageSize.getWidth();  // 210 mm
     const pageH = pdf.internal.pageSize.getHeight(); // 297 mm
 
-    // Scale canvas to fit A4 width; compute total image height in mm
     const imgW = pageW;
     const imgH = (canvas.height / canvas.width) * imgW;
-
     const imgData = canvas.toDataURL("image/jpeg", 0.96);
 
-    // 5. Paginate: draw the full image across multiple pages
-    //    By shifting the Y origin by -pageH * pageIndex, we "scroll" through it.
+    let yRendered = 0;
     let pagesWritten = 0;
-    let yRendered = 0; // mm of image already "past the top"
     while (yRendered < imgH) {
       if (pagesWritten > 0) pdf.addPage();
-      // Draw image starting at -yRendered so the right slice aligns to page top
+      // Shift image up so current slice aligns to the top of this page
       pdf.addImage(imgData, "JPEG", 0, -yRendered, imgW, imgH);
       yRendered += pageH;
       pagesWritten++;
