@@ -24,20 +24,19 @@ async function docxToPdf(file: File): Promise<Blob> {
   const { jsPDF } = await import("jspdf");
 
   const arrayBuffer = await file.arrayBuffer();
-
-  // 1. DOCX → HTML (mammoth is robust to quirky DOCX structures)
   const { value: html } = await mammoth.convertToHtml({ arrayBuffer });
 
-  if (!html || html.trim().length === 0) {
+  if (!html?.trim()) {
     throw new Error("The document appears to be empty or could not be parsed.");
   }
 
-  // 2. Render HTML in an offscreen A4-width container (794px ≈ 210mm @ 96dpi)
+  // ── Render container ──────────────────────────────────────────────────────
+  // IMPORTANT: Do NOT use position:fixed with a large negative offset.
+  // html2canvas uses getBoundingClientRect() to locate the element — if it's
+  // off-screen it captures an empty area → blank pages.
+  // Solution: append in normal document flow; compensate scroll with scrollY.
   const container = document.createElement("div");
   container.style.cssText = [
-    "position:fixed",
-    "left:-99999px",
-    "top:0",
     "width:794px",
     "padding:48px 64px",
     "box-sizing:border-box",
@@ -46,61 +45,72 @@ async function docxToPdf(file: File): Promise<Blob> {
     "font-family:Arial,Helvetica,sans-serif",
     "font-size:11pt",
     "line-height:1.6",
-    "-webkit-print-color-adjust:exact",
   ].join(";");
 
-  // Basic styling for mammoth HTML output
-  const style = document.createElement("style");
-  style.textContent = `
-    .wtp-wrap h1 { font-size:20pt; font-weight:700; margin:16px 0 8px; }
-    .wtp-wrap h2 { font-size:16pt; font-weight:700; margin:14px 0 6px; }
-    .wtp-wrap h3 { font-size:13pt; font-weight:700; margin:12px 0 4px; }
-    .wtp-wrap p  { margin:0 0 8px; }
-    .wtp-wrap table { border-collapse:collapse; width:100%; margin:8px 0; }
-    .wtp-wrap td, .wtp-wrap th { border:1px solid #ccc; padding:4px 8px; font-size:10pt; }
-    .wtp-wrap ul, .wtp-wrap ol { margin:0 0 8px 24px; }
-    .wtp-wrap li { margin:2px 0; }
-    .wtp-wrap strong { font-weight:700; }
-    .wtp-wrap em { font-style:italic; }
+  const styleEl = document.createElement("style");
+  styleEl.textContent = `
+    .wtp h1{font-size:20pt;font-weight:700;margin:16px 0 8px}
+    .wtp h2{font-size:16pt;font-weight:700;margin:14px 0 6px}
+    .wtp h3{font-size:13pt;font-weight:700;margin:12px 0 4px}
+    .wtp p {margin:0 0 8px}
+    .wtp table{border-collapse:collapse;width:100%;margin:8px 0}
+    .wtp td,.wtp th{border:1px solid #ccc;padding:4px 8px;font-size:10pt}
+    .wtp ul,.wtp ol{margin:0 0 8px 24px}
+    .wtp li{margin:2px 0}
+    .wtp strong{font-weight:700}
+    .wtp em{font-style:italic}
   `;
-  container.className = "wtp-wrap";
+  container.className = "wtp";
   container.innerHTML = html;
-  container.prepend(style);
+  container.prepend(styleEl);
+
+  // Append at end of body (below page content) — briefly visible but fine
+  // since the user sees the "Converting…" button state.
   document.body.appendChild(container);
 
   try {
-    // Wait for fonts and layout to settle
-    await new Promise((r) => setTimeout(r, 400));
+    // Allow layout + fonts to settle
+    await new Promise((r) => setTimeout(r, 500));
 
-    // 3. Snapshot the full rendered height into one canvas at 2× for sharpness
+    const contentHeight = container.scrollHeight;
+
+    // Capture the full element.
+    // scrollY: -window.scrollY corrects for the viewport scroll offset so
+    // html2canvas maps the element's document position → canvas position correctly.
     const canvas = await html2canvas(container, {
       scale: 2,
       useCORS: true,
+      allowTaint: true,
       logging: false,
       backgroundColor: "#ffffff",
-      windowWidth: 794,
-      windowHeight: container.scrollHeight,
       width: 794,
-      height: container.scrollHeight,
+      height: contentHeight,
+      windowWidth: 794,
+      windowHeight: contentHeight,
+      scrollX: 0,
+      scrollY: -window.scrollY,
     });
 
-    // 4. Build A4 PDF and paginate
+    if (canvas.width === 0 || canvas.height === 0) {
+      throw new Error("Rendering produced an empty canvas. Please try again.");
+    }
+
+    // ── Paginate into A4 jsPDF ───────────────────────────────────────────────
     const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
     const pageW = pdf.internal.pageSize.getWidth();  // 210 mm
     const pageH = pdf.internal.pageSize.getHeight(); // 297 mm
 
-    const imgW = pageW;
-    const imgH = (canvas.height / canvas.width) * imgW;
-    const imgData = canvas.toDataURL("image/jpeg", 0.96);
+    const imgW  = pageW;
+    const imgH  = (canvas.height / canvas.width) * imgW;
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
 
     let yRendered = 0;
-    let pagesWritten = 0;
+    let pageCount = 0;
     while (yRendered < imgH) {
-      if (pagesWritten > 0) pdf.addPage();
-      // Shift image up so current slice aligns to the top of this page
+      if (pageCount > 0) pdf.addPage();
       pdf.addImage(imgData, "JPEG", 0, -yRendered, imgW, imgH);
       yRendered += pageH;
-      pagesWritten++;
+      pageCount++;
     }
 
     return pdf.output("blob");
