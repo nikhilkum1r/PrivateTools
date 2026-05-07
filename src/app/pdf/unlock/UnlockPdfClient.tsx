@@ -157,7 +157,27 @@ export default function UnlockPdfClient() {
         return;
       }
 
-      // ✅ Success
+      // ─── Definitive encryption check ───────────────────────────────────────
+      // qpdf WASM can write an encrypted (or partially written) output even when
+      // the password is wrong (since noExitRuntime suppresses the exit code).
+      // Standard PDF encryption ALWAYS places an /Encrypt dictionary entry in
+      // the document trailer. qpdf --decrypt removes it on success.
+      // We scan the last 8 KB (where the trailer lives) for this marker.
+      const trailerSlice = decryptedBytes.slice(Math.max(0, decryptedBytes.length - 8192));
+      const trailerText = new TextDecoder("latin1").decode(trailerSlice);
+      const isStillEncrypted = trailerText.includes("/Encrypt");
+
+      if (isStillEncrypted) {
+        try { qpdf.FS.unlink(inputPath); } catch {}
+        try { qpdf.FS.unlink(outputPath); } catch {}
+        restoreConsole(saved);
+        toast.error("Incorrect password. The PDF could not be decrypted.");
+        setStatus("idle");
+        return;
+      }
+      // ───────────────────────────────────────────────────────────────────────
+
+      // ✅ Confirmed decrypted
       // Copy into a plain ArrayBuffer — qpdf FS may return a SharedArrayBuffer-backed
       // Uint8Array (for its WASM thread model). Blob only accepts ArrayBuffer, not
       // SharedArrayBuffer, so we copy into a fresh Uint8Array<ArrayBuffer> first.
