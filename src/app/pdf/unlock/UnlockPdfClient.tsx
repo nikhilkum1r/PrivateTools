@@ -67,9 +67,11 @@ export default function UnlockPdfClient() {
       print: () => {},
       printErr: () => {},
       locateFile: (filename: string) => {
-        // Point WASM loader to /public assets
+        // Always resolve from public root — without this, the browser resolves
+        // relative to the current page URL (/pdf/unlock) and requests /pdf/qpdf.js (404)
         if (filename.endsWith(".wasm")) return "/qpdf.wasm";
-        return filename;
+        if (filename.endsWith(".js")) return "/" + filename;
+        return "/" + filename;
       },
     });
     qpdfRef.current = qpdf;
