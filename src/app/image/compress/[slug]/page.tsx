@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CompressorStudioClient from "../CompressorStudioClient";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -39,8 +40,15 @@ export default async function CompressionSEOPage({ params }: PageProps) {
   }
   
   return (
-    <CompressorStudioClient 
-      defaultFormat={format === "jpeg" ? "jpeg" : (format === "original" ? undefined : format)} 
-    />
+    <>
+      <SEOStructuredData 
+        name={`Compress ${format.toUpperCase()}`}
+        description={`Professional-grade ${format.toUpperCase()} compressor. Reduce file size of your ${format.toUpperCase()} images without losing quality.`}
+        url={`https://safetools.space/image/compress/${slug}`}
+      />
+      <CompressorStudioClient 
+        defaultFormat={format === "jpeg" ? "jpeg" : (format === "original" ? undefined : format)} 
+      />
+    </>
   );
 }

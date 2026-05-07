@@ -1,12 +1,28 @@
 import { Metadata } from "next";
 import AudioStudioClient from "./AudioStudioClient";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Audio Studio - Studio-Grade Mastering & Conversion | SafeTools",
+  title: "Online Audio Converter & Mastering - Free & Private | SafeTools",
   description: "Professional-grade audio mastering and conversion in your browser. Convert MP3, WAV, AAC with absolute privacy. ID3 tag management and high-fidelity local processing.",
-  keywords: ["audio converter", "mp3 converter", "wav converter", "audio mastering online", "id3 tag editor", "private audio tools"],
+  keywords: ["audio converter", "mp3 converter", "wav converter", "aac converter", "audio mastering online", "id3 tag editor", "private audio tools", "browser audio editor"],
+  openGraph: {
+    title: "SafeTools Audio Studio | Professional Mastering Engine",
+    description: "Convert and master audio files securely in your browser. zero server uploads.",
+    type: "website",
+    url: "https://safetools.space/audio",
+  },
 };
 
 export default function AudioPage() {
-  return <AudioStudioClient />;
+  return (
+    <>
+      <SEOStructuredData 
+        name="Audio Converter & Mastering"
+        description="Professional-grade audio conversion and mastering directly in your browser. zero server uploads."
+        url="https://safetools.space/audio"
+      />
+      <AudioStudioClient />
+    </>
+  );
 }

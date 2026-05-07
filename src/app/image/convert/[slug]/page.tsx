@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ConversionStudioClient from "../ConversionStudioClient";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -55,9 +56,16 @@ export default async function ConversionSEOPage({ params }: PageProps) {
   const to = parts[1];
   
   return (
-    <ConversionStudioClient 
-      fromFormat={from} 
-      toFormat={to} 
-    />
+    <>
+      <SEOStructuredData 
+        name={`Convert ${from.toUpperCase()} to ${to.toUpperCase()}`}
+        description={`Securely convert ${from.toUpperCase()} files to ${to.toUpperCase()} format in your browser.`}
+        url={`https://safetools.space/image/convert/${slug}`}
+      />
+      <ConversionStudioClient 
+        fromFormat={from} 
+        toFormat={to} 
+      />
+    </>
   );
 }

@@ -1,103 +1,62 @@
-"use client";
+import { Metadata } from "next";
+import DocumentHubClient from "./DocumentHubClient";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { FileText, FileInput, FileOutput, AlignLeft, ArrowRight } from "lucide-react";
-import { Navbar } from "@/components/shared/Navbar";
-import { Footer } from "@/components/shared/Footer";
-import { PrivacyBadge } from "@/components/shared/PrivacyBadge";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+export const metadata: Metadata = {
+  title: "Online Document Conversion & Text Utilities | SafeTools",
+  description: "Convert Word to PDF, extract text from PDF, and access a suite of text utilities. All processed locally in your browser with 100% privacy.",
+  keywords: ["document conversion online", "word to pdf converter", "extract text from pdf", "text utilities online", "private document tools", "browser based office tools"],
+  openGraph: {
+    title: "SafeTools Document Studio | Universal Text Intelligence",
+    description: "The ultimate local-first document processing suite. Fast, private, and powerful.",
+    type: "website",
+    url: "https://safetools.space/document",
+  },
+};
 
-const TOOLS = [
-  {
-    name: "Word → PDF",
-    icon: FileOutput,
-    href: "/document/word-to-pdf",
-    desc: "Convert .docx Word documents to PDF instantly in your browser.",
-    tags: ["DOCX", "PDF"],
-    color: "text-blue-500",
-    bg: "bg-blue-500/10",
-  },
-  {
-    name: "PDF → Text",
-    icon: FileInput,
-    href: "/document/pdf-to-txt",
-    desc: "Extract all text content from PDF files with paragraph structure preserved.",
-    tags: ["PDF", "TXT"],
-    color: "text-orange-500",
-    bg: "bg-orange-500/10",
-  },
-  {
-    name: "Text Utilities",
-    icon: AlignLeft,
-    href: "/document/text-tools",
-    desc: "Word count, case conversion, deduplication, Base64/URL encoding, and more.",
-    tags: ["TXT", "Utility"],
-    color: "text-green-500",
-    bg: "bg-green-500/10",
-  },
-];
-
-export default function DocumentPage() {
+export default function DocumentHubPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Header */}
-          <div className="text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-              <FileText className="w-8 h-8 text-primary" />
-            </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-black tracking-tight">Document Tools</h1>
-              <p className="text-muted-foreground mt-3 text-lg max-w-xl mx-auto">
-                Convert, extract, and transform documents — all processed locally in your browser.
+    <>
+      <SEOStructuredData 
+        name="Document Utility Suite"
+        description="A comprehensive suite of document tools including conversion, text extraction, and formatting, all running locally in your browser."
+        url="https://safetools.space/document"
+      />
+      <DocumentHubClient />
+
+      {/* SEO Content Section */}
+      <section className="container mx-auto px-4 py-24 border-t border-white/5">
+        <div className="max-w-4xl mx-auto space-y-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-black italic">Universal Document Intelligence</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              SafeTools Document Studio is the world's first browser-based Office and PDF engineering suite 
+              that prioritizes privacy above all else. By utilizing local WebAssembly (WASM) and high-performance 
+              Javascript parsers, we provide the ability to view, edit, and convert documents without ever 
+              creating a temporary copy on a remote server.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">Can I edit DOCX and PPTX files?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Yes. Our Docs Master tool provides a visual preview and structural editing capabilities 
+                for Microsoft Office formats. All edits are applied locally and saved back to your device 
+                instantly, ensuring 100% data residency.
               </p>
             </div>
-            <PrivacyBadge />
-          </div>
-
-          {/* Tool cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TOOLS.map((tool, i) => (
-              <motion.div
-                key={tool.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -4 }}
-              >
-                <Card className="h-full p-6 flex flex-col justify-between hover:border-primary/20 transition-all duration-300">
-                  <div className="space-y-4">
-                    <div className={`w-12 h-12 rounded-xl ${tool.bg} flex items-center justify-center`}>
-                      <tool.icon className={`w-6 h-6 ${tool.color}`} />
-                    </div>
-                    <div>
-                      <h2 className="text-xl font-black">{tool.name}</h2>
-                      <p className="text-muted-foreground text-sm mt-2 leading-relaxed">{tool.desc}</p>
-                    </div>
-                    <div className="flex gap-2 flex-wrap">
-                      {tool.tags.map((t) => (
-                        <Badge key={t} variant="secondary" className="text-[10px] font-black uppercase">{t}</Badge>
-                      ))}
-                    </div>
-                  </div>
-                  <Link href={tool.href} className="mt-6">
-                    <Button variant="outline" className="w-full gap-2 rounded-xl hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all">
-                      Open Tool <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </Link>
-                </Card>
-              </motion.div>
-            ))}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold">How does private text extraction work?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                We use client-side OCR and text layer extraction technologies. When you drop a PDF or Image, 
+                our local engine scans the character matrix on your CPU/GPU, allowing you to copy text 
+                without any external API calls or data harvesting.
+              </p>
+            </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </section>
+    </>
   );
 }

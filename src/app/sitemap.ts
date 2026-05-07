@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pdf/merge',
     '/pdf/split',
     '/pdf/convert',
+    '/pdf/unlock',
+    '/pdf/lock',
     '/video',
     '/audio',
     '/privacy',
@@ -39,7 +41,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/document/pdf-to-txt',
     '/document/text-tools',
     '/ai',
+    '/image/ocr',
+    '/devtools/data-converter',
+    '/devtools/base64',
+    '/document/text-tools/case-converter',
+    '/document/text-tools/word-counter',
   ]
+
+  // Add dynamic image compression routes
+  const formats = ["png", "jpeg", "webp", "avif", "heic", "svg", "tiff", "gif"];
+  formats.forEach(fmt => {
+    routes.push(`/image/compress/compress-${fmt}`);
+  });
+
+  // Add top image conversion pairs
+  const featured = ["png", "jpeg", "webp", "avif", "pdf", "heic"];
+  for (const from of featured) {
+    for (const to of featured) {
+      if (from !== to) {
+        routes.push(`/image/convert/${from}-to-${to}`);
+      }
+    }
+  }
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

@@ -11,7 +11,10 @@ import {
   Sparkles, ArrowRight, Palette, Key,
   Eye, FileCode, Fingerprint, Upload,
   X, CheckCircle2, AlertCircle, FileQuestion, Edit3,
-  Globe, ShieldAlert, Award, Verified, List, CloudOff
+  Globe, ShieldAlert, Award, Verified, List, CloudOff,
+  Binary, FileSearch, Table, CaseSensitive,
+  AlignLeft, Hash, BookOpen, Clock,
+  Presentation, StickyNote, Trash, Unlock
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/shared/Navbar";
@@ -38,7 +41,7 @@ interface Tool {
 
 const tools: Tool[] = [
   {
-    title: "Image Studio",
+    title: "Edit Images",
     desc: "Pro editor with OCR, filters, crop, and batch export.",
     href: "/image/editor",
     icon: ImageIcon,
@@ -47,7 +50,7 @@ const tools: Tool[] = [
     tags: ["crop", "resize", "filters", "ocr", "text", "editor", "photo", "batch"]
   },
   {
-    title: "Format Converter",
+    title: "Convert Image Format",
     desc: "Convert 150+ formats: HEIC, WebP, AVIF, RAW, PDF.",
     href: "/image/convert",
     icon: Zap,
@@ -56,7 +59,7 @@ const tools: Tool[] = [
     tags: ["heic", "webp", "avif", "raw", "pdf", "jpg", "png", "svg", "convert", "transform"]
   },
   {
-    title: "Image Compressor",
+    title: "Compress Image (KB/MB)",
     desc: "Shrink any image up to 90% with target-size control.",
     href: "/image/compress",
     icon: Layers,
@@ -65,7 +68,7 @@ const tools: Tool[] = [
     tags: ["shrink", "optimize", "size", "kb", "mb", "compress", "quality", "tinify"]
   },
   {
-    title: "Color Lab",
+    title: "Extract Colors from Image",
     desc: "Extract palettes, HEX, RGB, and HSL from any image.",
     href: "/image/colors",
     icon: Palette,
@@ -74,7 +77,7 @@ const tools: Tool[] = [
     tags: ["palette", "hex", "rgb", "hsl", "picker", "extract", "design", "colors"]
   },
   {
-    title: "App Icon Master",
+    title: "Create App Icons & Favicons",
     desc: "Generate iOS, Android & PWA icon bundles instantly.",
     href: "/image/favicon",
     icon: FileCode,
@@ -101,7 +104,7 @@ const tools: Tool[] = [
     tags: ["extract", "pages", "split", "break", "separate", "pdf"]
   },
   {
-    title: "PDF Converter",
+    title: "Convert PDF to Word/PPT",
     desc: "Convert PDFs to PPTX, DOCX or images locally.",
     href: "/pdf/convert",
     icon: FileCode,
@@ -110,7 +113,25 @@ const tools: Tool[] = [
     tags: ["pptx", "docx", "word", "powerpoint", "images", "convert", "pdf"]
   },
   {
-    title: "Docs Master",
+    title: "Unlock PDF",
+    desc: "Remove password protection and security restrictions from PDFs.",
+    href: "/pdf/unlock",
+    icon: Unlock,
+    color: "from-blue-600 to-indigo-700",
+    cat: "Documents",
+    tags: ["pdf", "unlock", "password", "security", "remove", "decryption"]
+  },
+  {
+    title: "Lock PDF",
+    desc: "Add strong password protection and encryption to your PDF files locally.",
+    href: "/pdf/lock",
+    icon: Lock,
+    color: "from-indigo-600 to-blue-700",
+    cat: "Documents",
+    tags: ["pdf", "lock", "password", "security", "encryption", "protect"]
+  },
+  {
+    title: "View & Edit Office Files",
     desc: "Universal viewer & editor for Office, PDF, and Data.",
     href: "/document/master",
     icon: Edit3,
@@ -119,7 +140,7 @@ const tools: Tool[] = [
     tags: ["docx", "pptx", "xlsx", "csv", "pdf", "view", "edit", "office", "excel", "word"]
   },
   {
-    title: "Video Lab",
+    title: "Compress & Convert Video",
     desc: "Compress and convert video with local WASM encoding.",
     href: "/video",
     icon: Video,
@@ -128,7 +149,7 @@ const tools: Tool[] = [
     tags: ["mp4", "mov", "webm", "compress", "video", "ffmpeg", "convert"]
   },
   {
-    title: "Audio Toolkit",
+    title: "Trim & Convert Audio",
     desc: "Trim, convert, and process audio files offline.",
     href: "/audio",
     icon: Music,
@@ -137,7 +158,7 @@ const tools: Tool[] = [
     tags: ["mp3", "wav", "trim", "cut", "convert", "audio", "voice"]
   },
   {
-    title: "Privacy Scrubber",
+    title: "Metadata & EXIF Remover",
     desc: "Strip EXIF and metadata from images and documents.",
     href: "/privacy/metadata",
     icon: ShieldCheck,
@@ -146,7 +167,7 @@ const tools: Tool[] = [
     tags: ["exif", "metadata", "gps", "location", "strip", "clean", "privacy", "secure"]
   },
   {
-    title: "Secure Vault",
+    title: "Encrypt & Decrypt Files",
     desc: "AES-256 GCM client-side file encryption. Zero-server.",
     href: "/privacy/vault",
     icon: Lock,
@@ -155,7 +176,7 @@ const tools: Tool[] = [
     tags: ["encrypt", "decrypt", "aes", "password", "lock", "secure", "privacy"]
   },
   {
-    title: "Password Pro",
+    title: "Password Generator",
     desc: "Generate high-entropy, cryptographically secure passwords.",
     href: "/security",
     icon: Key,
@@ -164,7 +185,16 @@ const tools: Tool[] = [
     tags: ["password", "generator", "random", "secure", "entropy", "key"]
   },
   {
-    title: "Steganography",
+    title: "Password Checker",
+    desc: "Analyze password strength and vulnerability locally.",
+    href: "/privacy/password-checker",
+    icon: ShieldCheck,
+    color: "from-emerald-500 to-green-600",
+    cat: "Security",
+    tags: ["password", "check", "strength", "secure", "privacy", "entropy", "leak"]
+  },
+  {
+    title: "Hide Text inside Image",
     desc: "Hide secret messages invisibly inside images.",
     href: "/steganography",
     icon: Eye,
@@ -173,7 +203,7 @@ const tools: Tool[] = [
     tags: ["hidden", "secret", "message", "lsb", "stego", "privacy", "hide"]
   },
   {
-    title: "QR Studio",
+    title: "Create & Scan QR Codes",
     desc: "Generate and scan QR codes with custom styling.",
     href: "/qr",
     icon: QrCode,
@@ -182,13 +212,76 @@ const tools: Tool[] = [
     tags: ["qrcode", "scan", "generate", "link", "wifi", "contact"]
   },
   {
-    title: "Dev Toolkit",
+    title: "Developer Utilities",
     desc: "JSON formatter, Base64, hash generators and more.",
     href: "/devtools",
     icon: Terminal,
     color: "from-green-600 to-teal-600",
     cat: "Dev",
     tags: ["json", "base64", "hash", "md5", "sha256", "format", "developer"]
+  },
+  {
+    title: "JSON & CSV Converter",
+    desc: "Convert JSON to CSV and back with zero-server privacy.",
+    href: "/devtools/data-converter",
+    icon: Table,
+    color: "from-orange-400 to-red-500",
+    cat: "Dev",
+    tags: ["json", "csv", "convert", "table", "data", "transform", "excel"]
+  },
+  {
+    title: "Base64 Encoder & Decoder",
+    desc: "Encode and decode text and images with zero-server privacy.",
+    href: "/devtools/base64",
+    icon: Binary,
+    color: "from-blue-600 to-indigo-700",
+    cat: "Dev",
+    tags: ["base64", "encode", "decode", "binary", "image", "string", "developer"]
+  },
+  {
+    title: "Image to PPTX",
+    desc: "Transform images into professional PowerPoint presentations.",
+    href: "/image/to-pptx",
+    icon: Presentation,
+    color: "from-orange-600 to-red-600",
+    cat: "Creative",
+    tags: ["pptx", "powerpoint", "slides", "presentation", "image", "convert"]
+  },
+  {
+    title: "Word to PDF",
+    desc: "Convert DOCX manuscripts to professional PDF documents.",
+    href: "/document/word-to-pdf",
+    icon: FileText,
+    color: "from-blue-600 to-indigo-600",
+    cat: "Documents",
+    tags: ["word", "pdf", "docx", "convert", "document"]
+  },
+  {
+    title: "PDF to Text",
+    desc: "Extract text layers and character matrices from any PDF.",
+    href: "/document/pdf-to-txt",
+    icon: FileSearch,
+    color: "from-teal-600 to-cyan-600",
+    cat: "Documents",
+    tags: ["pdf", "text", "extract", "ocr", "txt", "convert"]
+  },
+  {
+    title: "Secret Self-Destruct Note",
+    desc: "Create encrypted, self-destructing notes locally.",
+    href: "/privacy/secure-note",
+    icon: StickyNote,
+    color: "from-yellow-500 to-amber-600",
+    cat: "Security",
+    tags: ["note", "encrypt", "secure", "private", "self-destruct"]
+  },
+  {
+    title: "Permanently Delete Files",
+    desc: "Permanently wipe sensitive files from memory.",
+    href: "/privacy/shredder",
+    icon: Trash,
+    color: "from-red-600 to-rose-700",
+    cat: "Security",
+    tags: ["shred", "delete", "wipe", "secure", "privacy", "file"]
   },
 ];
 
