@@ -13,14 +13,16 @@ import { Card } from "@/components/ui/card";
 import { formatBytes } from "@/lib/utils/fileSize";
 import { toast } from "sonner";
 
-// ─── Core conversion logic ────────────────────────────────────────────────────
-// Pipeline: mammoth (DOCX → HTML) → html2canvas (DOM → canvas) → jsPDF (→ PDF)
-// mammoth is used instead of docx-preview because docx-preview throws
-// "Cannot read properties of undefined (reading 'children')" on many DOCX
-// variants due to fragile internal XML traversal.
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+function pt2mm(pt: number) { return pt * 0.352778; }
+
+// ─── Core conversion: mammoth + jsPDF text API (no html2canvas) ───────────────
+// html2canvas is incompatible with Cross-Origin-Embedder-Policy: require-corp
+// and requires visible DOM nodes — causing blank pages or screen flicker.
+// Instead we parse mammoth's HTML output in memory (DOMParser) and render
+// directly with jsPDF's text/drawing primitives.
 async function docxToPdf(file: File): Promise<Blob> {
-  const mammoth = await import("mammoth");
-  const html2canvas = (await import("html2canvas")).default;
+  const mammoth    = await import("mammoth");
   const { jsPDF } = await import("jspdf");
 
   const arrayBuffer = await file.arrayBuffer();
@@ -30,98 +32,165 @@ async function docxToPdf(file: File): Promise<Blob> {
     throw new Error("The document appears to be empty or could not be parsed.");
   }
 
-  // ── Render container ──────────────────────────────────────────────────────
-  // IMPORTANT: Do NOT use position:fixed with a large negative offset.
-  // html2canvas uses getBoundingClientRect() to locate the element — if it's
-  // off-screen it captures an empty area → blank pages.
-  // Solution: append in normal document flow; compensate scroll with scrollY.
-  const container = document.createElement("div");
-  container.style.cssText = [
-    "width:794px",
-    "padding:48px 64px",
-    "box-sizing:border-box",
-    "background:#ffffff",
-    "color:#000000",
-    "font-family:Arial,Helvetica,sans-serif",
-    "font-size:11pt",
-    "line-height:1.6",
-  ].join(";");
+  // Parse HTML in memory — zero DOM side-effects
+  const parsed = new DOMParser().parseFromString(`<div id="root">${html}</div>`, "text/html");
+  const root   = parsed.getElementById("root")!;
 
-  const styleEl = document.createElement("style");
-  styleEl.textContent = `
-    .wtp h1{font-size:20pt;font-weight:700;margin:16px 0 8px}
-    .wtp h2{font-size:16pt;font-weight:700;margin:14px 0 6px}
-    .wtp h3{font-size:13pt;font-weight:700;margin:12px 0 4px}
-    .wtp p {margin:0 0 8px}
-    .wtp table{border-collapse:collapse;width:100%;margin:8px 0}
-    .wtp td,.wtp th{border:1px solid #ccc;padding:4px 8px;font-size:10pt}
-    .wtp ul,.wtp ol{margin:0 0 8px 24px}
-    .wtp li{margin:2px 0}
-    .wtp strong{font-weight:700}
-    .wtp em{font-style:italic}
-  `;
-  container.className = "wtp";
-  container.innerHTML = html;
-  container.prepend(styleEl);
+  // ── jsPDF setup ─────────────────────────────────────────────────────────────
+  const pdf      = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+  const pageW    = pdf.internal.pageSize.getWidth();   // 210 mm
+  const pageH    = pdf.internal.pageSize.getHeight();  // 297 mm
+  const mX       = 20;  // horizontal margin
+  const mY       = 20;  // vertical margin
+  const maxW     = pageW - mX * 2;
 
-  // Append at end of body (below page content) — briefly visible but fine
-  // since the user sees the "Converting…" button state.
-  document.body.appendChild(container);
+  let curY = mY;
 
-  try {
-    // Allow layout + fonts to settle
-    await new Promise((r) => setTimeout(r, 500));
-
-    const contentHeight = container.scrollHeight;
-
-    // Capture the full element.
-    // scrollY: -window.scrollY corrects for the viewport scroll offset so
-    // html2canvas maps the element's document position → canvas position correctly.
-    const canvas = await html2canvas(container, {
-      scale: 2,
-      useCORS: true,
-      allowTaint: true,
-      logging: false,
-      backgroundColor: "#ffffff",
-      width: 794,
-      height: contentHeight,
-      windowWidth: 794,
-      windowHeight: contentHeight,
-      scrollX: 0,
-      scrollY: -window.scrollY,
-    });
-
-    if (canvas.width === 0 || canvas.height === 0) {
-      throw new Error("Rendering produced an empty canvas. Please try again.");
+  function ensureSpace(needed: number) {
+    if (curY + needed > pageH - mY) {
+      pdf.addPage();
+      curY = mY;
     }
-
-    // ── Paginate into A4 jsPDF ───────────────────────────────────────────────
-    const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
-    const pageW = pdf.internal.pageSize.getWidth();  // 210 mm
-    const pageH = pdf.internal.pageSize.getHeight(); // 297 mm
-
-    const imgW  = pageW;
-    const imgH  = (canvas.height / canvas.width) * imgW;
-    const imgData = canvas.toDataURL("image/jpeg", 0.95);
-
-    let yRendered = 0;
-    let pageCount = 0;
-    while (yRendered < imgH) {
-      if (pageCount > 0) pdf.addPage();
-      pdf.addImage(imgData, "JPEG", 0, -yRendered, imgW, imgH);
-      yRendered += pageH;
-      pageCount++;
-    }
-
-    return pdf.output("blob");
-  } finally {
-    if (container.parentNode) document.body.removeChild(container);
   }
+
+  // Render a block of text with wrapping and automatic page breaks
+  function renderBlock(
+    text: string,
+    fontSize: number,
+    style: "normal" | "bold" | "italic" | "bolditalic" = "normal",
+    indent = 0,
+    spaceBefore = 0,
+    spaceAfter  = 3,
+  ) {
+    if (!text.trim()) return;
+    curY += spaceBefore;
+    pdf.setFontSize(fontSize);
+    pdf.setFont("helvetica", style);
+    const usableW = maxW - indent;
+    const lines   = pdf.splitTextToSize(text, usableW);
+    const lineH   = pt2mm(fontSize) * 1.45;
+    for (const line of lines) {
+      ensureSpace(lineH);
+      pdf.text(line, mX + indent, curY);
+      curY += lineH;
+    }
+    curY += spaceAfter;
+  }
+
+  // Recursively process the parsed DOM tree
+  function processNode(el: Element, listDepth = 0, listType: "ul" | "ol" = "ul", listIndex = { n: 1 }) {
+    const tag  = el.tagName?.toLowerCase() ?? "";
+    const text = el.textContent?.trim() ?? "";
+
+    switch (tag) {
+      case "h1": renderBlock(text, 20, "bold",   0, 6, 4); break;
+      case "h2": renderBlock(text, 16, "bold",   0, 4, 3); break;
+      case "h3": renderBlock(text, 13, "bold",   0, 3, 2); break;
+      case "h4":
+      case "h5":
+      case "h6": renderBlock(text, 11, "bold",   0, 2, 2); break;
+
+      case "p":
+        if (text) renderBlock(text, 11, "normal", 0, 0, 3);
+        break;
+
+      case "blockquote":
+        renderBlock(text, 11, "italic", 8, 2, 2);
+        break;
+
+      case "ul":
+      case "ol": {
+        const idx = { n: 1 };
+        Array.from(el.children).forEach((li) => {
+          processNode(li, listDepth + 1, tag, idx);
+        });
+        curY += 2;
+        break;
+      }
+
+      case "li": {
+        const bullet = listType === "ol" ? `${listIndex.n++}.  ` : "•  ";
+        const indent = listDepth * 6;
+        if (!text) break;
+        pdf.setFontSize(11);
+        pdf.setFont("helvetica", "normal");
+        const bulletW = pdf.getStringUnitWidth(bullet) * pt2mm(11);
+        const lines   = pdf.splitTextToSize(text, maxW - indent - bulletW);
+        const lineH   = pt2mm(11) * 1.45;
+        ensureSpace(lineH);
+        // bullet on first line, subsequent lines indented
+        pdf.text(bullet, mX + indent, curY);
+        for (let i = 0; i < lines.length; i++) {
+          ensureSpace(lineH);
+          pdf.text(lines[i], mX + indent + bulletW, curY);
+          curY += lineH;
+        }
+        break;
+      }
+
+      case "table": {
+        const rows     = Array.from(el.querySelectorAll("tr"));
+        const colCount = Math.max(...rows.map(r => r.children.length), 1);
+        const colW     = maxW / colCount;
+        pdf.setFontSize(9);
+        for (const row of rows) {
+          const cells  = Array.from(row.children);
+          const cellH  = pt2mm(9) * 1.45 + 4;
+          ensureSpace(cellH + 1);
+          let cx = mX;
+          for (const cell of cells) {
+            const isHeader = cell.tagName.toLowerCase() === "th";
+            const cellText = (cell.textContent ?? "").trim();
+            pdf.setFont("helvetica", isHeader ? "bold" : "normal");
+            pdf.rect(cx, curY - pt2mm(9) * 1.2, colW, cellH);
+            if (cellText) {
+              pdf.text(
+                pdf.splitTextToSize(cellText, colW - 3),
+                cx + 1.5,
+                curY,
+              );
+            }
+            cx += colW;
+          }
+          curY += cellH;
+        }
+        curY += 3;
+        break;
+      }
+
+      case "br":
+        curY += pt2mm(11) * 1.45;
+        break;
+
+      case "hr":
+        curY += 2;
+        ensureSpace(1);
+        pdf.setDrawColor(180, 180, 180);
+        pdf.line(mX, curY, pageW - mX, curY);
+        pdf.setDrawColor(0, 0, 0);
+        curY += 3;
+        break;
+
+      default:
+        // div, span, section, article, etc. — recurse into children
+        for (const child of Array.from(el.children)) {
+          processNode(child, listDepth, listType, listIndex);
+        }
+    }
+  }
+
+  for (const child of Array.from(root.children)) {
+    processNode(child);
+  }
+
+  const blob = pdf.output("blob");
+  if (blob.size < 500) throw new Error("PDF output appears empty. The document may be unsupported.");
+  return blob;
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function WordToPdfClient() {
-  const [file, setFile] = useState<File | null>(null);
+  const [file,   setFile]   = useState<File | null>(null);
   const [status, setStatus] = useState<"idle" | "processing" | "done" | "error">("idle");
   const [result, setResult] = useState<Blob | null>(null);
 
@@ -129,10 +198,7 @@ export default function WordToPdfClient() {
     const f = files[0];
     if (!f) return;
     const ext = f.name.split(".").pop()?.toLowerCase();
-    if (ext !== "docx") {
-      toast.error("Only .docx files are supported.");
-      return;
-    }
+    if (ext !== "docx") { toast.error("Only .docx files are supported."); return; }
     setFile(f);
     setStatus("idle");
     setResult(null);
@@ -143,9 +209,6 @@ export default function WordToPdfClient() {
     setStatus("processing");
     try {
       const blob = await docxToPdf(file);
-      if (!blob || blob.size < 100) {
-        throw new Error("Output PDF appears empty. The document may be corrupted.");
-      }
       setResult(blob);
       setStatus("done");
       toast.success("Converted successfully!");
@@ -156,11 +219,7 @@ export default function WordToPdfClient() {
     }
   };
 
-  const handleReset = () => {
-    setFile(null);
-    setResult(null);
-    setStatus("idle");
-  };
+  const handleReset = () => { setFile(null); setResult(null); setStatus("idle"); };
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
@@ -168,7 +227,6 @@ export default function WordToPdfClient() {
       <main className="flex-grow container mx-auto px-4 py-6 max-w-xl">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
 
-          {/* Header */}
           <div className="text-center space-y-3">
             <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto border border-blue-500/20">
               <FileOutput className="w-5 h-5 text-blue-500" />
@@ -176,7 +234,7 @@ export default function WordToPdfClient() {
             <div>
               <h1 className="text-xl font-bold tracking-tight">Word → PDF</h1>
               <p className="text-sm text-muted-foreground mt-1">
-                Convert .docx files to PDF locally in your browser. Nothing is uploaded.
+                Convert .docx files to PDF locally. Nothing is uploaded.
               </p>
             </div>
             <PrivacyBadge />
@@ -188,7 +246,6 @@ export default function WordToPdfClient() {
             <div className="space-y-4">
               <FileSizeWarning fileSize={file.size} module="document" />
 
-              {/* File card */}
               <Card className="p-3 bg-secondary/30 border border-border flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0">
                   <FileText className="w-4 h-4 text-blue-500" />
@@ -202,22 +259,18 @@ export default function WordToPdfClient() {
                 </Button>
               </Card>
 
-              {/* Convert button */}
               {status !== "done" && (
                 <Button
                   className="w-full h-10 rounded-lg font-semibold gap-2"
                   onClick={handleConvert}
                   disabled={status === "processing"}
                 >
-                  {status === "processing" ? (
-                    <><Loader2 className="w-4 h-4 animate-spin" /> Converting… this may take a moment</>
-                  ) : (
-                    <><FileOutput className="w-4 h-4" /> Convert to PDF</>
-                  )}
+                  {status === "processing"
+                    ? <><Loader2 className="w-4 h-4 animate-spin" /> Converting…</>
+                    : <><FileOutput className="w-4 h-4" /> Convert to PDF</>}
                 </Button>
               )}
 
-              {/* Result */}
               {status === "done" && result && (
                 <ExportPanel
                   blob={result}
@@ -229,24 +282,19 @@ export default function WordToPdfClient() {
             </div>
           )}
 
-          {/* Info cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3 rounded-xl bg-secondary/30 border border-border flex items-start gap-3">
               <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-sm">100% Local</p>
-                <p className="text-xs text-muted-foreground">
-                  Conversion runs entirely in your browser using WebAssembly and Canvas APIs.
-                </p>
+                <p className="text-xs text-muted-foreground">Conversion runs entirely in your browser. No uploads.</p>
               </div>
             </div>
             <div className="p-3 rounded-xl bg-secondary/30 border border-border flex items-start gap-3">
               <FileOutput className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-sm">High Fidelity</p>
-                <p className="text-xs text-muted-foreground">
-                  Preserves fonts, tables, images, and layout using docx-preview rendering.
-                </p>
+                <p className="font-semibold text-sm">Headings, Tables & Lists</p>
+                <p className="text-xs text-muted-foreground">Text layout rendered directly — fast and reliable.</p>
               </div>
             </div>
           </div>
