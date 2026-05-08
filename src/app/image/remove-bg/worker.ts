@@ -29,11 +29,12 @@ async function processImage(imageDataURL: string) {
           pct,
         });
       },
-      // Use the official IMG.LY data CDN for version 1.7.0
-      publicPath: "https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/",
-      model: "isnet_quint8", // quint8 is smaller (~17MB) and faster for browser use
+      // Use unpkg as a more robust fallback CDN for model data
+      publicPath: "https://unpkg.com/@imgly/background-removal-data@1.7.0/dist/",
+      model: "isnet_quint8",
       fetchArgs: {
         mode: "cors",
+        credentials: "omit",
       },
       output: {
         format: "image/png",
