@@ -8,13 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SafeTools — Free Privacy-First File Tools",
-  description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking — your files never leave your device.",
+  title: "SafeTools - Free Privacy-First File Tools for PDF, Image, Video & Document Editing",
+  description: "SafeTools offers free privacy-first file tools for PDF, image, video, audio, and document editing. Convert, compress, merge, resize, and optimize files directly in your browser with zero uploads or tracking.",
   manifest: "/manifest.json",
   metadataBase: new URL("https://safetools.space"),
-  alternates: {
-    canonical: "https://safetools.space",
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -35,8 +32,8 @@ export const metadata: Metadata = {
     title: "SafeTools",
   },
   openGraph: {
-    title: "SafeTools — Free Privacy-First File Tools",
-    description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking — your files never leave your device.",
+    title: "SafeTools - Free Privacy-First File Tools for PDF, Image, Video & Document Editing",
+    description: "SafeTools offers free privacy-first file tools for PDF, image, video, audio, and document editing. Convert, compress, merge, resize, and optimize files directly in your browser with zero uploads or tracking.",
     url: "https://safetools.space",
     siteName: "SafeTools",
     type: "website",
@@ -51,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "SafeTools — Free Privacy-First File Tools",
-    description: "150+ free browser-based file tools for PDF, image, video & audio. Zero uploads, zero tracking.",
+    title: "SafeTools - Free Privacy-First File Tools for PDF, Image, Video & Document Editing",
+    description: "SafeTools offers free privacy-first file tools for PDF, image, video, audio, and document editing. Convert, compress, merge, resize, and optimize files directly in your browser with zero uploads or tracking.",
     images: ["/android-chrome-512x512.png"],
   },
 };
@@ -72,21 +69,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-VWQJXZLMTH"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VWQJXZLMTH');
-          `}
-        </Script>
 
+      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

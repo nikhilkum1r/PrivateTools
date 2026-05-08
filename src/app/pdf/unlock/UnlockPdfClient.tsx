@@ -60,7 +60,6 @@ export default function UnlockPdfClient() {
 
   const getQpdf = async () => {
     if (qpdfRef.current) return qpdfRef.current;
-    // @ts-ignore – no type declarations for qpdf-wasm
     const initQPDF = (await import("qpdf-wasm")).default;
     const qpdf = await initQPDF({
       // noExitRuntime is hardcoded true in this build — callMain never throws

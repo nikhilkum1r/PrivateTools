@@ -420,25 +420,25 @@ export default function RemoveBgClient() {
                           <div className="flex-grow flex flex-col items-center justify-center p-8 text-center gap-8 relative overflow-hidden">
                             {/* Magic Sparkle Overlay */}
                             <div className="absolute inset-0 pointer-events-none z-10">
-                              {[...Array(6)].map((_, i) => (
+                              {Array.from({ length: 6 }).map((_, i) => (
                                 <motion.div
                                   key={i}
                                   initial={{ opacity: 0, scale: 0 }}
                                   animate={{ 
                                     opacity: [0, 1, 0], 
                                     scale: [0.5, 1.2, 0.5],
-                                    x: [Math.random() * 200 - 100, Math.random() * 200 - 100],
-                                    y: [Math.random() * 200 - 100, Math.random() * 200 - 100]
+                                    x: [((i * 13) % 200) - 100, ((i * 17) % 200) - 100],
+                                    y: [((i * 19) % 200) - 100, ((i * 23) % 200) - 100]
                                   }}
                                   transition={{ 
-                                    duration: 2 + Math.random() * 2, 
+                                    duration: 2 + (i % 3), 
                                     repeat: Infinity, 
                                     delay: i * 0.4 
                                   }}
                                   className="absolute"
                                   style={{
-                                    left: `${20 + Math.random() * 60}%`,
-                                    top: `${20 + Math.random() * 60}%`,
+                                    left: `${20 + (i * 11) % 60}%`,
+                                    top: `${20 + (i * 13) % 60}%`,
                                   }}
                                 >
                                   <Sparkles className="w-6 h-6 text-indigo-400 blur-[1px]" />

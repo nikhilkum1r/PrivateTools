@@ -5,9 +5,9 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # COOP/COEP for SharedArrayBuffer (required for FFmpeg WASM)
+    # COOP/COEP for SharedArrayBuffer (required for FFmpeg WASM and AI Workers)
     Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Embedder-Policy = "credentialless"
     # Clickjacking protection
     X-Frame-Options = "DENY"
     # Prevent MIME sniffing
@@ -19,7 +19,7 @@
     # Permissions policy
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     # Content Security Policy
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' blob: https:; worker-src 'self' blob:; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' blob: https:; worker-src 'self' blob:; frame-ancestors 'none';"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

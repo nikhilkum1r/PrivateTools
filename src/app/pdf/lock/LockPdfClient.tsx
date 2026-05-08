@@ -52,7 +52,6 @@ export default function LockPdfClient() {
       const pdfBytes = await pdfDoc.save();
       
       // Now encrypt it using the specialized lite library
-      // @ts-ignore
       const { encryptPDF } = await import("@pdfsmaller/pdf-encrypt-lite");
       const encryptedBytes = await encryptPDF(pdfBytes, password, password);
 

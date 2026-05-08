@@ -38,7 +38,6 @@ export default function CompressPdfClient() {
 
   const getQpdf = async () => {
     if (qpdfRef.current) return qpdfRef.current;
-    // @ts-ignore – no type declarations for qpdf-wasm
     const initQPDF = (await import("qpdf-wasm")).default;
     const qpdf = await initQPDF({
       print: () => {},
