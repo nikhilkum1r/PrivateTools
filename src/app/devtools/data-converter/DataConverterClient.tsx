@@ -23,6 +23,10 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { DEV_TOOLS_FAQ } from "@/lib/faq-content";
 
 export default function DataConverterClient() {
   const [input, setInput] = useState("");
@@ -204,6 +208,20 @@ export default function DataConverterClient() {
           </div>
         </div>
       </main>
+      <SEOStructuredData 
+        name="JSON to CSV Data Converter"
+        description="Transform JSON to CSV, XML to JSON, and more locally in your browser. 100% private, no server uploads, ideal for sensitive enterprise data."
+        url="https://safetools.space/devtools/data-converter"
+        faqItems={DEV_TOOLS_FAQ}
+      />
+      <FAQ 
+        items={DEV_TOOLS_FAQ}
+        title="Data Converter FAQ"
+        description="Everything you need to know about secure, local-first data transformation."
+      />
+      <Footer />
     </div>
   );
 }
+
+

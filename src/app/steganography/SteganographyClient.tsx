@@ -44,6 +44,11 @@ import { Progress } from "@/components/ui/progress";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { SECURITY_FAQ } from "@/lib/faq-content";
+import { ExportManager } from "@/lib/export-manager";
 
 export default function SteganographyClient() {
   const [file, setFile] = useState<File | null>(null);
@@ -477,6 +482,19 @@ export default function SteganographyClient() {
           </>
         )}
       </main>
+      <SEOStructuredData 
+        name="LSB Steganography Studio"
+        description="Hide secret messages inside images invisibly using Least Significant Bit (LSB) encoding. 100% private, browser-based secure communication."
+        url="https://safetools.space/steganography"
+        faqItems={SECURITY_FAQ}
+      />
+      <FAQ 
+        items={SECURITY_FAQ}
+        title="Steganography FAQ"
+        description="Learn how to hide messages invisibly inside your images using secure, browser-based steganography."
+      />
+      <Footer />
     </div>
   );
 }
+

@@ -91,8 +91,8 @@ export function DropZone({
         )}
       >
         <div className="flex flex-col items-center text-center space-y-6 pointer-events-none relative z-10">
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               scale: isDragging ? [1, 1.2, 1] : 1,
               rotate: isDragging ? [0, 5, -5, 0] : 0
             }}
@@ -102,25 +102,27 @@ export function DropZone({
             <Upload className="w-10 h-10" />
           </motion.div>
           {title !== " " && (
-            <div className="space-y-3">
+            <div className="space-y-1">
               <p className="text-2xl font-black uppercase tracking-tighter italic">
-                {title || "Initialize Local Asset Pipeline"}
+                {title || "Upload Image"}
               </p>
-              <div className="flex items-center justify-center gap-3">
-                 <div className="flex gap-1">
+              {description && (
+                <div className="flex items-center justify-center gap-3">
+                  <div className="flex gap-1">
                     {[1, 2, 3].map(i => (
                       <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
                     ))}
-                 </div>
-                 <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] italic">
-                   {description || `Privacy-First Handling • Max ${maxSize}MB`}
-                 </p>
-                 <div className="flex gap-1">
+                  </div>
+                  <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] italic">
+                    {description}
+                  </p>
+                  <div className="flex gap-1">
                     {[1, 2, 3].map(i => (
                       <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
                     ))}
-                 </div>
-              </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

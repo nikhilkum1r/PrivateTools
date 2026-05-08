@@ -30,6 +30,10 @@ import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { ExportManager } from "@/lib/export-manager";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { VIDEO_TOOLS_FAQ } from "@/lib/faq-content";
 import { loadFFmpegInstance } from "@/lib/ffmpeg-loader";
 
 export default function VideoStudioPage() {
@@ -743,58 +747,19 @@ export default function VideoStudioPage() {
         )}
       </main>
 
-      {/* Structured Data: SoftwareApplication & FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Video Studio Pro",
-            "operatingSystem": "Any",
-            "applicationCategory": "MultimediaApplication",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "featureList": [
-              "Local FFmpeg WASM Encoding",
-              "Precise Anonymization Zones",
-              "Temporal Trimming",
-              "Temporal Velocity (Speed) Adjustment",
-              "Privacy-First Local Processing"
-            ]
-          })
-        }}
+      <SEOStructuredData 
+        name="Video Studio Pro"
+        description="Compress, convert, and anonymize video files locally in your browser. 100% private, zero server uploads, high-performance WASM engine."
+        url="https://safetools.space/video"
+        faqItems={VIDEO_TOOLS_FAQ}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Does video processing consume my data?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. Unlike other tools that upload large video files to the cloud, Video Studio Pro runs FFmpeg directly in your browser using WebAssembly. Only the initial WASM engine download (approx 30MB) requires internet access."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How do I hide faces or license plates?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Use the 'Anonymize' tab to drag and drop blur zones directly onto the video preview. The tool uses hardware-accelerated box-blur filters to scrub identifying details locally."
-                }
-              }
-            ]
-          })
-        }}
+      <FAQ 
+        items={VIDEO_TOOLS_FAQ}
+        title="Video Studio FAQ"
+        description="Technical insights and common questions about our private, browser-based video processing technology."
       />
+      <Footer />
     </div>
   );
 }
+

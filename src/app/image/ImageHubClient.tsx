@@ -46,6 +46,14 @@ const imageTools = [
     href: "/image/editor",
     color: "from-orange-500 to-red-500",
     tags: ["All-in-One", "Pro Features"]
+  },
+  {
+    title: "AI Background Remover",
+    desc: "Remove image backgrounds instantly with AI. 100% private, local-first segmentation.",
+    icon: Sparkles,
+    href: "/image/remove-bg",
+    color: "from-indigo-500 to-purple-600",
+    tags: ["New", "AI-Powered"]
   }
 ];
 

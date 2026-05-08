@@ -24,6 +24,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { FAQ } from "@/components/shared/FAQ";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 const CATEGORIES = ["All", "Creative", "Documents", "Media", "Security", "Dev"] as const;
 type Category = typeof CATEGORIES[number];
@@ -144,6 +146,15 @@ const tools: Tool[] = [
     color: "from-purple-500 to-pink-500",
     cat: "Creative",
     tags: ["palette", "hex", "rgb", "hsl", "picker", "extract", "design", "colors"]
+  },
+  {
+    title: "AI Background Remover",
+    desc: "Remove image backgrounds instantly with AI. 100% private, local-first segmentation.",
+    href: "/image/remove-bg",
+    icon: Sparkles,
+    color: "from-indigo-500 to-purple-600",
+    cat: "Creative",
+    tags: ["ai", "background remover", "remove background", "transparent", "png", "magic"]
   },
   {
     title: "Create App Icons & Favicons",
@@ -675,28 +686,15 @@ export default function HomeClient() {
         </div>
 
         {/* FAQ Section */}
-        <section className="container mx-auto px-4 pb-24 relative z-10" aria-label="Frequently Asked Questions">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-xl font-black tracking-tight text-center mb-3">
-              Frequently Asked <span className="text-primary">Questions</span>
-            </h2>
-            <p className="text-center text-muted-foreground text-sm mb-12">
-              Everything you need to know about SafeTools and how it keeps your files private.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {HOMEPAGE_SCHEMA["@graph"][2].mainEntity?.map((faq: any, i: number) => {
-                const q = faq.name;
-                const a = faq.acceptedAnswer.text;
-                return (
-                  <div key={i} className="p-6 rounded-2xl bg-secondary/50 border border-border hover:border-primary/20 transition-all group">
-                    <h3 className="font-bold text-base text-foreground group-hover:text-primary transition-colors mb-2">{q}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{a}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        <FAQ 
+          items={HOMEPAGE_SCHEMA["@graph"][2]?.mainEntity?.map((faq: any) => ({
+            question: faq.name,
+            answer: faq.acceptedAnswer.text
+          })) || []}
+          title="Frequently Asked Questions"
+          description="Everything you need to know about SafeTools and how it keeps your files private."
+          className="pb-24"
+        />
 
         {/* Smart Routing Dialog */}
         <Dialog open={isRoutingOpen} onOpenChange={setIsRoutingOpen}>

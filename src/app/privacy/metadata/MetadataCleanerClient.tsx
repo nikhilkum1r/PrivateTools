@@ -44,6 +44,10 @@ import { fetchFile } from "@ffmpeg/util";
 import { PDFDocument } from "pdf-lib";
 import { loadFFmpegInstance } from "@/lib/ffmpeg-loader";
 import { ExportManager } from "@/lib/export-manager";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { METADATA_FAQ } from "@/lib/faq-content";
 
 interface MetadataTag {
   name: string;
@@ -476,6 +480,19 @@ export default function MetadataCleanerClient() {
           </>
         )}
       </main>
+      <SEOStructuredData 
+        name="Metadata & EXIF Scrubber"
+        description="Strip EXIF and metadata from images and documents locally in your browser. Remove GPS, camera info, and author details privately."
+        url="https://safetools.space/privacy/metadata"
+        faqItems={METADATA_FAQ}
+      />
+      <FAQ 
+        items={METADATA_FAQ}
+        title="Metadata Cleaner FAQ"
+        description="Everything you need to know about protecting your digital identity by stripping metadata."
+      />
+      <Footer />
     </div>
   );
 }
+

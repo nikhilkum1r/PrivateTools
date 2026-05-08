@@ -39,6 +39,10 @@ import { cn } from "@/lib/utils";
 import JSZip from "jszip";
 import { toast } from "sonner";
 import { ExportManager } from "@/lib/export-manager";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { COMPRESSOR_FAQ } from "@/lib/faq-content";
 
 const CATEGORIZED_FORMATS = {
   "Regular Use": ["original", "webp", "jpeg", "png", "pdf", "svg", "heic"],
@@ -748,6 +752,19 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
 
         </div>
       </main>
+      <SEOStructuredData 
+        name="Image Compressor Studio"
+        description="Shrink image file sizes by up to 90% locally in your browser. Set target KB/MB limits with zero quality loss. 100% private."
+        url="https://safetools.space/image/compress"
+        faqItems={COMPRESSOR_FAQ}
+      />
+      <FAQ 
+        items={COMPRESSOR_FAQ}
+        title="Image Compression FAQ"
+        description="Everything you need to know about shrinking images without losing quality."
+      />
+      <Footer />
     </div>
   );
 }
+

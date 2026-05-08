@@ -39,6 +39,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { QR_FAQ } from "@/lib/faq-content";
 
 export default function QRStudioClient() {
   const [value, setValue] = useState("https://safetools.local");
@@ -420,6 +424,19 @@ export default function QRStudioClient() {
           </div>
         </aside>
       </main>
+      <SEOStructuredData 
+        name="QR Studio Pro"
+        description="Generate custom, high-fidelity QR codes locally in your browser. Add logos, colors, and styling without any server tracking or redirects."
+        url="https://safetools.space/qr"
+        faqItems={QR_FAQ}
+      />
+      <FAQ 
+        items={QR_FAQ}
+        title="QR Studio FAQ"
+        description="Everything you need to know about generating secure, static QR codes for your brand."
+      />
+      <Footer />
     </div>
   );
 }
+

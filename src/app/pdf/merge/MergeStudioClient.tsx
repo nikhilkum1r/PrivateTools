@@ -19,6 +19,10 @@ import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { ExportManager } from "@/lib/export-manager";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { PDF_TOOLS_FAQ } from "@/lib/faq-content";
 
 interface PDFFile {
   id: string;
@@ -422,9 +426,23 @@ export default function MergeStudioClient() {
           </div>
         </aside>
       </main>
+      <SEOStructuredData 
+        name="PDF Merger & Document Assembler"
+        description="Combine multiple PDFs and images into one professional document locally in your browser. 100% private, zero server uploads, fast and secure."
+        url="https://safetools.space/pdf/merge"
+        faqItems={PDF_TOOLS_FAQ}
+      />
+      <FAQ 
+        items={PDF_TOOLS_FAQ}
+        title="PDF Merger FAQ"
+        description="Frequently asked questions about our private, browser-based PDF merging and document assembly tool."
+      />
+      <Footer />
     </div>
   );
 }
+
+
 
 function Label({ children, className }: { children: React.ReactNode, className?: string }) {
   return <label className={cn("block text-sm font-medium", className)}>{children}</label>;

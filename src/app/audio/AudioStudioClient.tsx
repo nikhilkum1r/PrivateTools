@@ -23,6 +23,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { ExportManager } from "@/lib/export-manager";
+import { FAQ } from "@/components/shared/FAQ";
+import { Footer } from "@/components/shared/Footer";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { AUDIO_TOOLS_FAQ } from "@/lib/faq-content";
 import { loadFFmpegInstance } from "@/lib/ffmpeg-loader";
 
 export default function AudioStudioPage() {
@@ -357,49 +361,19 @@ export default function AudioStudioPage() {
         </aside>
       </main>
 
-      {/* Structured Data: SoftwareApplication & FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Audio Studio Pro",
-            "operatingSystem": "Any",
-            "applicationCategory": "MultimediaApplication",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            },
-            "featureList": [
-              "LAME/Vorbis Encoding (WASM)",
-              "Local ID3 Metadata Editing",
-              "Studio Bitrate Control (up to 320kbps)",
-              "Zero-Server Mastering Pipeline"
-            ]
-          })
-        }}
+      <SEOStructuredData 
+        name="Audio Studio Pro"
+        description="Master, trim, and convert audio files locally in your browser. 100% private, zero server uploads, professional-grade output."
+        url="https://safetools.space/audio"
+        faqItems={AUDIO_TOOLS_FAQ}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Is my audio quality preserved?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. The Audio Studio uses the standard LAME and Vorbis libraries compiled to WebAssembly, ensuring parity with professional desktop software while maintaining 100% privacy."
-                }
-              }
-            ]
-          })
-        }}
+      <FAQ 
+        items={AUDIO_TOOLS_FAQ}
+        title="Audio Studio FAQ"
+        description="Commonly asked questions about our private, browser-based audio processing tool."
       />
+      <Footer />
     </div>
   );
 }
+

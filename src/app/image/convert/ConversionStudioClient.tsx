@@ -16,6 +16,10 @@ import {
   FileCode, Sparkles, Wand2
 } from "lucide-react";
 import { DropZone } from "@/components/shared/DropZone";
+import { FAQ } from "@/components/shared/FAQ";
+import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { IMAGE_CONVERTER_FAQ } from "@/lib/faq-content";
+import { Footer } from "@/components/shared/Footer";
 import { useImageStore, ImageFormat } from "@/store/useImageStore";
 import { processImage } from "@/lib/image-processor";
 import { motion, AnimatePresence } from "framer-motion";
@@ -484,23 +488,12 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                             ))}
                           </div>
 
-                          <div className="space-y-4">
-                            <h3 className="text-2xl font-black uppercase tracking-tight flex items-center gap-4 italic border-l-4 border-primary pl-4">
-                              <Info className="w-6 h-6 text-primary" /> Studio Intel
-                            </h3>
-                            <div className="grid grid-cols-1 gap-4">
-                              {[
-                                { q: `Is it free to convert ${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()}?`, a: "Yes. SafeTools is a community-driven utility suite with no subscriptions, paywalls, or hidden costs." },
-                                { q: "Where is my data stored?", a: "Nowhere. Your files exist only in your device's RAM during the conversion process and are purged instantly when the tab is closed." },
-                                { q: "What is the maximum file size?", a: "Since we use your local hardware, there are no software-imposed limits. You are only limited by your available system memory." }
-                              ].map((faq, i) => (
-                                <div key={i} className="p-8 rounded-3xl border border-border bg-muted/40 hover:border-border transition-colors">
-                                  <h4 className="text-sm font-black text-foreground/80 mb-3 uppercase tracking-wide italic">Q: {faq.q}</h4>
-                                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">A: {faq.a}</p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                          <FAQ 
+                            items={IMAGE_CONVERTER_FAQ}
+                            title={`${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()} Conversion FAQ`}
+                            description="Technical insights and common questions about our high-fidelity image conversion engine."
+                            className="py-10"
+                          />
 
                           {/* SEO Link Cloud */}
                           <div className="space-y-6 pt-8 border-t border-border">
@@ -735,6 +728,14 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
 
         </div>
       </main>
+      <SEOStructuredData 
+        name={fromFormat && toFormat ? `${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()} Converter` : "Image Format Converter"}
+        description={fromFormat && toFormat ? `Transform ${fromFormat.toUpperCase()} to ${toFormat.toUpperCase()} with pixel-perfect precision using SafeTools' proprietary local computing engine. 100% private, zero server uploads.` : "Convert 150+ image formats locally in your browser. Supports HEIC, WebP, AVIF, RAW, and more."}
+        url={fromFormat && toFormat ? `https://safetools.space/image/convert/${fromFormat.toLowerCase()}-to-${toFormat.toLowerCase()}` : "https://safetools.space/image/convert"}
+        faqItems={IMAGE_CONVERTER_FAQ}
+      />
+      <Footer />
     </div>
   );
 }
+
