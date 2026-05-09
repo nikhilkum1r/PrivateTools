@@ -133,16 +133,18 @@
     background-image: 
       radial-gradient(at 0% 0%, var(--glow-primary) 0, transparent 50%),
       radial-gradient(at 100% 100%, var(--glow-secondary) 0, transparent 50%),
-      url('/site-bg.png');
-    background-size: 100% 100%, 100% 100%, 800px;
+      url('/site-bg.webp');
+    background-size: 100% 100%, 100% 100%, 600px;
     background-repeat: no-repeat, no-repeat, repeat;
     background-attachment: fixed;
     opacity: 0.1;
     z-index: -10;
+    /* Promote to own GPU layer to avoid compositing thrash */
+    will-change: opacity;
   }
 
   .dark body::before {
-    opacity: 0.4;
+    opacity: 0.35;
   }
 }
 
@@ -158,8 +160,8 @@
 
   .glass-card {
     background-color: rgba(var(--color-card-rgb), 0.7);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(var(--color-border-rgb), 0.5);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
   }
@@ -170,13 +172,19 @@
 
   .premium-glass {
     background-color: rgba(var(--color-card-rgb), 0.8);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(var(--color-border-rgb), 0.6);
   }
   .dark .premium-glass {
     background-color: rgba(var(--color-card-rgb), 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Reduce blur on mobile for perf */
+  @media (max-width: 768px) {
+    .glass-card { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .premium-glass { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
   }
 
   .mesh-gradient {
@@ -248,10 +256,52 @@
   100% { transform: translateX(calc(-50% - 24px)); }
 }
 
+@keyframes scan {
+  0%, 100% { top: 0%; }
+  50% { top: 100%; }
+}
+.animate-scan {
+  position: absolute;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: float 5s ease-in-out infinite 1s; }
+
 .animate-marquee {
   animation: marquee 40s linear infinite;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* ─── Performance Utilities ─────────────────────────────────────────────────── */
+/* content-visibility: auto skips rendering of off-screen sections entirely */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* GPU-accelerated transitions only where animation is actually visible */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient,
+  .animate-marquee,
+  .animate-pulse {
+    animation: none !important;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

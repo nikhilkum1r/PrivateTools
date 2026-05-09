@@ -895,7 +895,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                                   <div className="relative shrink-0 group/preview">
                                     <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-3xl blur-md opacity-0 group-hover/preview:opacity-100 transition-opacity" />
                                     <div className="w-28 h-28 md:w-40 md:h-40 rounded-3xl bg-black border border-white/10 overflow-hidden relative shadow-2xl transition-transform duration-500 group-hover/preview:scale-[1.02]">
-                                      <img src={f.previewUrl} className="w-full h-full object-cover opacity-70 group-hover/preview:opacity-100 transition-opacity" alt="" />
+                                      <img src={f.previewUrl} className="w-full h-full object-cover opacity-70 group-hover/preview:opacity-100 transition-opacity" alt="File preview thumbnail" />
                                       <AnimatePresence>
                                         {f.status === "completed" && (
                                           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute inset-0 bg-emerald-500/90 backdrop-blur-sm flex flex-col items-center justify-center text-white">
@@ -1305,7 +1305,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                     <img 
                       src={files.find(f => f.id === previewId)?.outputUrl} 
                       className="absolute inset-0 w-full h-full object-contain p-4 md:p-12" 
-                      alt="Optimized" 
+                      alt="Optimized image preview" 
                     />
                     
                     {/* Foreground Layer: Original (Clipped) */}
@@ -1316,7 +1316,7 @@ export default function CompressorStudioClient({ defaultFormat }: CompressorStud
                       <img 
                         src={files.find(f => f.id === previewId)?.previewUrl} 
                         className="absolute inset-0 w-full h-full object-contain p-4 md:p-12" 
-                        alt="Original" 
+                        alt="Original image preview" 
                       />
                     </div>
 

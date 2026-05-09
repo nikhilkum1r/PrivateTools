@@ -1,5 +1,4 @@
 import { ImageFormat } from "@/store/useImageStore";
-import { PDFDocument } from "pdf-lib";
 
 
 interface ProcessOptions {
@@ -475,6 +474,7 @@ export async function processImage(
         (async () => {
           try {
             if (options.format === "pdf") {
+              const { PDFDocument } = await import("pdf-lib");
               const pdfDoc = await PDFDocument.create();
               // Normalize to points (72 dpi) but maintain aspect ratio
               const pdfWidth = canvas.width;

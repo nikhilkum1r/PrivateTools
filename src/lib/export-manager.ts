@@ -1,10 +1,10 @@
 import { toast } from "sonner";
-import JSZip from "jszip";
 
 interface ExportOptions {
   showToast?: boolean;
   onProgress?: (progress: number) => void;
   revocationDelay?: number;
+  description?: string;
 }
 
 export class ExportManager {
@@ -12,13 +12,14 @@ export class ExportManager {
    * Export a single file as a download
    */
   static async downloadFile(blob: Blob, filename: string, options: ExportOptions = {}) {
-    const { showToast = true, revocationDelay = 1000 } = options;
+    const { showToast = true, revocationDelay = 1000, description } = options;
     
     try {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
       a.download = filename;
+      a.style.display = "none";
       document.body.appendChild(a);
       a.click();
       
@@ -30,7 +31,7 @@ export class ExportManager {
       
       if (showToast) {
         toast.success(`Exported: ${filename}`, {
-          description: `${(blob.size / 1024).toFixed(1)} KB · Sovereign Local Export`,
+          description: description || `${(blob.size / 1024).toFixed(1)} KB · Sovereign Local Export`,
         });
       }
     } catch (error) {
@@ -54,24 +55,30 @@ export class ExportManager {
     if (files.length === 0) return;
     
     try {
+      const JSZip = (await import("jszip")).default;
       const zip = new JSZip();
       
       files.forEach((file) => {
         zip.file(file.name, file.blob);
       });
       
-      const content = await zip.generateAsync({ type: "blob" }, (metadata) => {
+      const content = await zip.generateAsync({ 
+        type: "blob",
+        compression: "DEFLATE",
+        compressionOptions: { level: 6 }
+      }, (metadata) => {
         if (onProgress) onProgress(metadata.percent);
       });
       
-      await this.downloadFile(content, zipName.endsWith(".zip") ? zipName : `${zipName}.zip`, {
+      const finalZipName = zipName.endsWith(".zip") ? zipName : `${zipName}.zip`;
+      await this.downloadFile(content, finalZipName, {
         ...options,
-        showToast: false, // We'll show a custom toast for ZIPs
+        showToast: false,
       });
       
       if (showToast) {
         toast.success("ZIP Bundle Prepared", {
-          description: `Packaged ${files.length} assets into ${zipName}`,
+          description: `Packaged ${files.length} assets into ${finalZipName}`,
         });
       }
     } catch (error) {
@@ -93,6 +100,60 @@ export class ExportManager {
     } catch (error) {
       console.error("URL export failed:", error);
       toast.error("Network Export Failed");
+    }
+  }
+
+  /**
+   * Copy text to clipboard
+   */
+  static async copyText(text: string) {
+    try {
+      await navigator.clipboard.writeText(text);
+      toast.success("Copied to clipboard");
+    } catch (error) {
+      toast.error("Copy failed");
+    }
+  }
+
+  /**
+   * Copy image blob to clipboard
+   */
+  static async copyImage(blob: Blob) {
+    if (!navigator.clipboard?.write) {
+      toast.error("Clipboard API not supported in this browser.");
+      return;
+    }
+    try {
+      const item = new ClipboardItem({ [blob.type]: blob });
+      await navigator.clipboard.write([item]);
+      toast.success("Image copied to clipboard");
+    } catch (error) {
+      console.error("Copy failed:", error);
+      toast.error("Failed to copy image");
+    }
+  }
+
+  /**
+   * Share asset via Web Share API
+   */
+  static async shareFile(blob: Blob, filename: string, title?: string) {
+    if (!navigator.share || !navigator.canShare) {
+      toast.error("Sharing not supported on this device");
+      return false;
+    }
+    try {
+      const file = new File([blob], filename, { type: blob.type });
+      if (!navigator.canShare({ files: [file] })) {
+        toast.error("This file type cannot be shared");
+        return false;
+      }
+      await navigator.share({ title: title || filename, files: [file] });
+      return true;
+    } catch (error) {
+      if ((error as Error).name !== "AbortError") {
+        toast.error("Sharing failed");
+      }
+      return false;
     }
   }
 }

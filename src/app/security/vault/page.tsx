@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/security/vault",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Secure Vault | Privacy-First Encrypted Storage",
+    description: "Protect sensitive files, passwords, and private notes with a privacy-first encrypted vault. Local browser-based encryption with zero uploads and zero tracking.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/security/vault" },
 };
 
 export default function VaultPage() {

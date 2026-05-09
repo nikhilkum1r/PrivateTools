@@ -262,7 +262,7 @@ export default function PasswordGeneratorClient() {
 
         {/* SECURITY ARCHITECTURE SECTION */}
         <section className="py-32 border-t border-border relative overflow-hidden">
-           <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('/site-bg.png')] bg-repeat" />
+           <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('/site-bg.webp')] bg-repeat" />
            <div className="container mx-auto px-6">
               <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                  <div className="space-y-10">

@@ -4,7 +4,7 @@ import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
   title: "Image Color Picker & Palette Generator Online Free | SafeTools",
-  description: "Extract colors from images instantly with our free privacy-first image color picker and palette generator. Generate HEX, RGB, HSL, CMYK, gradients, Tailwind colors, and accessibility-safe palettes online.",
+  description: "Extract colors from images instantly with our free privacy-first palette generator. Generate HEX, RGB, gradients, and accessibility-safe palettes online.",
   keywords: [
     "image color picker", "color palette generator", "extract colors from image", "online color picker",
     "HEX color extractor", "RGB color generator", "Tailwind palette generator", "CSS gradient generator",
@@ -17,6 +17,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/image/colors",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Image Color Picker & Palette Generator Online Free | SafeTools",
+    description: "Extract colors from images instantly with our free privacy-first palette generator. Generate HEX, RGB, gradients, and accessibility-safe palettes online.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image/colors" },
 };
 
 export default function ColorLabPage() {

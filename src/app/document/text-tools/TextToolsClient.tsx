@@ -8,8 +8,7 @@ import { PrivacyBadge } from "@/components/shared/PrivacyBadge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { downloadBlob } from "@/lib/utils/download";
-import { toast } from "sonner";
+import { ExportManager } from "@/lib/export-manager";
 
 type Operation =
   | "word-count" | "char-count" | "line-count"
@@ -68,19 +67,23 @@ export default function TextToolsClient() {
   const [copied, setCopied] = useState(false);
 
   const handleOp = (op: Operation) => {
-    if (!input.trim()) { toast.error("Enter some text first."); return; }
+    if (!input.trim()) { 
+      import("sonner").then(m => m.toast.error("Enter some text first.")); 
+      return; 
+    }
     setOutput(applyOperation(input, op));
   };
 
   const handleCopy = async () => {
     if (!output) return;
-    await navigator.clipboard.writeText(output);
-    setCopied(true); toast.success("Copied!"); setTimeout(() => setCopied(false), 2000);
+    await ExportManager.copyText(output);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const handleDownload = () => {
     if (!output) return;
-    downloadBlob(new Blob([output], { type: "text/plain" }), "output.txt");
+    ExportManager.downloadFile(new Blob([output], { type: "text/plain" }), "output.txt");
   };
 
   return (

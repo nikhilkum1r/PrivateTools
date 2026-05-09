@@ -5,7 +5,7 @@ import { CASE_CONVERTER_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   title: "Case Converter Online Free – Uppercase, Lowercase & Text Case Tool | SafeTools",
-  description: "Convert text instantly with a free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, and more securely in your browser.",
+  description: "Convert text instantly with a free online case converter. Change text to uppercase, title case, camelCase, and more securely in your browser.",
   keywords: ["case converter", "uppercase converter", "lowercase converter", "title case converter", "sentence case converter", "camelcase converter", "snake case converter", "kebab case converter", "text formatter online", "online capitalization tool", "free case converter", "developer text formatter", "convert text case online", "text transformation tool", "coding naming converter", "seo title formatter"],
   openGraph: {
     title: "Case Converter Online Free – Uppercase, Lowercase & Text Case Tool | SafeTools",
@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/document/text-tools/case-converter",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Converter Online Free – Uppercase, Lowercase & Text Case Tool | SafeTools",
+    description: "Convert text instantly with a free online case converter. Change text to uppercase, title case, camelCase, and more securely in your browser.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/document/text-tools/case-converter" },
 };
 
 export default function CaseConverterPage() {

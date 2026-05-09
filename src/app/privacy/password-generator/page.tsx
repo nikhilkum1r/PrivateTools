@@ -5,8 +5,14 @@ import { PASSWORD_GENERATOR_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   title: "Free Secure Password Generator | SafeTools.space",
-  description: "Generate high-entropy, secure passwords locally in your browser. Uses Web Crypto API for cryptographically strong random values. Zero server uploads, 100% private.",
+  description: "Generate high-entropy, secure passwords locally in your browser using the Web Crypto API. Zero server uploads, 100% private, and cryptographically strong.",
   keywords: ["secure password generator", "random password creator", "high entropy passwords", "private password tool", "browser based password generator", "cryptographically secure passwords", "password maker"],
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Secure Password Generator | SafeTools.space",
+    description: "Generate high-entropy, secure passwords locally in your browser using the Web Crypto API. Zero server uploads, 100% private, and cryptographically strong.",
+    images: ["/og-image.webp"],
+  },
   alternates: {
     canonical: "https://safetools.space/privacy/password-generator",
   },

@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/image/compress",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compress Images Online | Free Privacy-First Image Compressor",
+    description: "Compress images securely in your browser with zero uploads and zero tracking. Reduce JPG, PNG, and WEBP image sizes using privacy-first local processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image/compress" },
 };
 
 export default function ImageCompressorPage() {

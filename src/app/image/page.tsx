@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/image",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Image Processing Suite - Free & Private | SafeTools",
+    description: "A comprehensive suite of local image tools. Compress, convert, edit, and analyze images with 100% privacy and zero server uploads.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image" },
 };
 
 export default function ImagePage() {

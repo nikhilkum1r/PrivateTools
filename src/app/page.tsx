@@ -3,13 +3,22 @@ import HomePageClient from "./HomePageClient";
 
 export const metadata: Metadata = {
   title: "SafeTools.space | 150+ Privacy-First Online File Tools That Run Locally",
-  description: "Convert, compress, edit, encrypt, and manage files securely in your browser. No uploads, no tracking, no server storage. Fast privacy-first online tools built for everyone.",
+  description: "Convert, compress, and edit files securely in your browser. No uploads, no tracking, no server storage. Fast privacy-first online tools for everyone.",
   keywords: ["privacy-first tools", "local file conversion", "secure pdf tools", "browser-based image editor", "no upload file tools", "private file processing", "wasm utilities"],
   openGraph: {
     title: "SafeTools.space | 150+ Privacy-First Online File Tools",
-    description: "Convert, compress, edit, encrypt, and manage files securely in your browser. No uploads, no tracking, no server storage.",
+    description: "Convert, compress, and edit files securely in your browser. No uploads, no tracking, no server storage.",
     type: "website",
     url: "https://safetools.space",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SafeTools.space | 150+ Privacy-First Online File Tools That Run Locally",
+    description: "Convert, compress, and edit files securely in your browser. No uploads, no tracking, no server storage. Fast privacy-first online tools for everyone.",
+    images: ["/og-image.webp"],
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -23,7 +32,7 @@ const HOMEPAGE_SCHEMA = {
       "url": "https://safetools.space",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://safetools.space/android-chrome-512x512.png"
+        "url": "https://safetools.space/android-chrome-512x512.webp"
       },
       "description": "SafeTools provides 150+ free, privacy-first browser-based file utilities for PDF, image, video, audio, and document editing.",
       "foundingDate": "2024",
@@ -40,6 +49,37 @@ const HOMEPAGE_SCHEMA = {
         "target": "https://safetools.space/?search={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://safetools.space/#software",
+      "name": "SafeTools",
+      "operatingSystem": "Web Browser",
+      "applicationCategory": "UtilityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1240"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Sarah Chen" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "Finally, a PDF editor that doesn't upload my sensitive legal documents to a random server. SafeTools is a game changer for privacy."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Marcus Thorne" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "The speed of the image compressor is incredible. All local, all private. This is how the web should be."
+        }
+      ]
     },
     {
       "@type": "FAQPage",

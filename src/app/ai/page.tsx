@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/ai",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Creative Lab - Local Browser-Based AI Image Tools | SafeTools",
+    description: "Experimental AI-powered image tools including Background Remover, AI Upscaler, and Anime Filters. All running locally in your browser with zero privacy risks.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/ai" },
 };
 
 export default function AILabPage() {

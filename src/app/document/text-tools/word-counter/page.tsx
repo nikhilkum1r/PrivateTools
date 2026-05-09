@@ -5,7 +5,7 @@ import { WORD_COUNTER_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
   title: "Word Counter Online Free – Count Words, Characters & Reading Time | SafeTools",
-  description: "Free online word counter tool to count words, characters, sentences, paragraphs, reading time, and speaking time instantly. Fast, secure, and privacy-focused browser-based text analysis.",
+  description: "Free online word counter to count words, characters, sentences, and reading time instantly. Fast, secure, privacy-focused browser-based text analysis.",
   keywords: ["word counter", "character counter", "online word counter", "free word counter", "text counter tool", "character count tool", "reading time calculator", "speaking time calculator", "essay word counter", "seo content analyzer", "word count checker", "online text analyzer", "live word counter", "paragraph counter", "sentence counter", "writing statistics tool"],
   openGraph: {
     title: "Word Counter Online Free – Count Words, Characters & Reading Time | SafeTools",
@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/document/text-tools/word-counter",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Word Counter Online Free – Count Words, Characters & Reading Time | SafeTools",
+    description: "Free online word counter to count words, characters, sentences, and reading time instantly. Fast, secure, privacy-focused browser-based text analysis.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/document/text-tools/word-counter" },
 };
 
 export default function WordCounterPage() {

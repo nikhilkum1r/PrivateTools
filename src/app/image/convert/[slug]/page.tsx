@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `Convert ${from} to ${to} | SafeTools Studio`,
       description: `Professional-grade ${from} to ${to} conversion. 100% private.`,
       type: "website",
+    },
+    alternates: {
+      canonical: `/image/convert/${slug}`,
     }
   };
 }

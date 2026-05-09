@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/security/file-shredder",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "File Shredder | Securely Delete Files & Protect Privacy",
+    description: "Securely remove sensitive files with a privacy-first browser-based file shredder. Local processing with zero uploads and zero tracking.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/security/file-shredder" },
 };
 
 export default function FileShredderPage() {

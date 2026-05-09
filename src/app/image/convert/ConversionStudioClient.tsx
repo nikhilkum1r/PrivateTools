@@ -128,7 +128,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
             await page.render({ canvasContext: ctx, viewport, canvas }).promise;
             
             const blob = await new Promise<Blob>((res) => canvas.toBlob(b => res(b!), "image/png"));
-            const pageFile = new File([blob], `${f.name.replace(".pdf", "")}-page-${i}.png`, { type: "image/png" });
+            const pageFile = new File([blob], `${f.name.replace(".pdf", "")}-page-${i}.png`, { type: "image/webp" });
             toAdd.push(pageFile);
           }
         } catch (e) {

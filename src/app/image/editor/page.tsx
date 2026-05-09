@@ -4,7 +4,7 @@ import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
   title: "Free Online Image Editor | Crop, Resize, Compress & Edit Photos",
-  description: "Edit images online for free with our privacy-first browser-based image editor. Crop, resize, compress, convert, enhance, remove backgrounds, and optimize photos instantly with no uploads.",
+  description: "Edit photos for free in your browser. Crop, resize, compress, and optimize images instantly with zero server uploads.",
   keywords: [
     "online image editor", "free photo editor", "browser based image editor", 
     "crop image online", "resize image online", "compress images", 
@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/image/editor",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Online Image Editor | Crop, Resize, Compress & Edit Photos",
+    description: "Edit photos for free in your browser. Crop, resize, compress, and optimize images instantly with zero server uploads.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image/editor" },
 };
 
 export default function ImageEditorPage() {

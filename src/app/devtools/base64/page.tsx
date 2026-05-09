@@ -4,7 +4,7 @@ import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
   title: "Base64 Encoder & Decoder - Online Image to Base64 | SafeTools",
-  description: "Encode text and images to Base64 or decode Base64 strings instantly. Convert JPG, PNG, SVG to Data URI securely in your browser. 100% private, zero server uploads.",
+  description: "Encode text and images to Base64 or decode strings instantly. Convert JPG, PNG, and SVG to Data URI securely in your browser with zero server uploads.",
   keywords: ["base64 encoder", "base64 decoder", "image to base64", "base64 to image", "data uri generator", "online base64 tool", "private encoding", "text to base64 converter"],
   openGraph: {
     title: "SafeTools Base64 Master | Professional Binary Studio",
@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/devtools/base64",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Base64 Encoder & Decoder - Online Image to Base64 | SafeTools",
+    description: "Encode text and images to Base64 or decode strings instantly. Convert JPG, PNG, and SVG to Data URI securely in your browser with zero server uploads.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/devtools/base64" },
 };
 
 export default function Base64Page() {

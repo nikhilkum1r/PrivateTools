@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/security/steganography",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steganography Tool | Hide Secret Messages in Images",
+    description: "Hide secret text inside images securely using browser-based steganography. Privacy-first local processing with zero uploads and zero tracking.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/security/steganography" },
 };
 
 export default function SteganographyPage() {

@@ -488,7 +488,7 @@ export default function RemoveBackgroundClient() {
                           activeIndex === idx ? "border-emerald-500 shadow-lg shadow-emerald-500/20" : "border-transparent hover:border-border/60"
                         )}
                       >
-                         <img src={item.preview} className="w-full h-full object-cover" />
+                         <img src={item.preview} className="w-full h-full object-cover" alt="Batch item preview" />
                          {item.status === "processing" && (
                             <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                                <div className="w-6 h-6 border-2 border-emerald-500/20 border-t-emerald-500 animate-spin rounded-full" />
@@ -578,7 +578,7 @@ export default function RemoveBackgroundClient() {
                                <button onClick={() => setIsBrushMode(false)} className="p-2 text-muted-foreground hover:text-red-400"><X className="w-5 h-5" /></button>
                             </div>
                             <div className="relative w-full h-full flex items-center justify-center cursor-crosshair">
-                               <img src={batch[activeIndex]?.preview} className="max-w-full max-h-full object-contain opacity-30" />
+                               <img src={batch[activeIndex]?.preview} className="max-w-full max-h-full object-contain opacity-30" alt="Source image for erasing" />
                                <canvas 
                                  ref={brushCanvasRef}
                                  onMouseDown={startDrawing}
@@ -596,12 +596,13 @@ export default function RemoveBackgroundClient() {
 
                       {(batch[activeIndex]?.status === "idle" || batch[activeIndex]?.status === "processing") && batch[activeIndex]?.preview && (
                         <div className="relative group h-full w-full flex items-center justify-center" onClick={batch[activeIndex]?.status === "idle" ? handleStart : undefined}>
-                           <img 
+                            <img 
                              src={batch[activeIndex]?.preview} 
                              className={cn(
                                "max-w-full max-h-full object-contain rounded-lg shadow-xl transition-all", 
                                batch[activeIndex]?.status === "idle" ? "group-hover:scale-[1.02] cursor-pointer" : "opacity-40 blur-[2px] grayscale-[0.5]"
                              )} 
+                             alt="Original image for background removal"
                            />
                            
                            {batch[activeIndex]?.status === "idle" && (
@@ -639,6 +640,7 @@ export default function RemoveBackgroundClient() {
                            <img 
                              src={batch[activeIndex]?.resultPreview!} 
                              className={cn("absolute max-w-full max-h-full object-contain pointer-events-none select-none", hasShadow && "drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]")} 
+                             alt="Processed image with background removed"
                            />
                            
                            {/* Top Layer: Original Image (Clipped) */}
@@ -646,6 +648,7 @@ export default function RemoveBackgroundClient() {
                              src={batch[activeIndex]?.preview!} 
                              className="absolute max-w-full max-h-full object-contain pointer-events-none select-none" 
                              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+                             alt="Original image for comparison"
                            />
                            
                            {/* Slider Visual Handle */}
@@ -741,7 +744,7 @@ export default function RemoveBackgroundClient() {
                              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-20" 
                            />
                            {customBgPreview ? (
-                             <img src={customBgPreview} className="w-full h-full object-cover pointer-events-none" />
+                             <img src={customBgPreview} className="w-full h-full object-cover pointer-events-none" alt="Custom background preview" />
                            ) : (
                              <ImageIcon className="w-5 h-5 text-muted-foreground pointer-events-none" />
                            )}

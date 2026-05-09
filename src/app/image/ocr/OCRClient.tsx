@@ -2,13 +2,13 @@
 
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  FileSearch, 
-  Copy, 
-  CheckCircle2, 
-  RefreshCw, 
-  Trash2, 
-  Languages, 
+import {
+  FileSearch,
+  Copy,
+  CheckCircle2,
+  RefreshCw,
+  Trash2,
+  Languages,
   FileText,
   Loader2,
   Sparkles,
@@ -58,7 +58,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { createWorker, PSM } from "tesseract.js";
 import { toast } from "sonner";
 import { formatBytes } from "@/lib/utils/fileSize";
 import { FAQ } from "@/components/shared/FAQ";
@@ -68,7 +67,7 @@ import { WhySafeTools } from "@/components/shared/WhySafeTools";
 import { RelatedTools } from "@/components/shared/RelatedTools";
 import { OCR_FAQ } from "@/lib/faq-content";
 import { cn } from "@/lib/utils";
-import { Document as DocxDocument, Packer, Paragraph, TextRun, AlignmentType } from "docx";
+import { ExportManager } from "@/lib/export-manager";
 
 const LANGUAGES = [
   { code: "auto", name: "✨ Auto-Detect Language" },
@@ -143,7 +142,8 @@ export default function OCRClient() {
 
   const getWorker = async () => {
     if (workerRef.current) return workerRef.current;
-    
+
+    const { createWorker } = await import("tesseract.js");
     const worker = await createWorker(language === "auto" ? "eng" : language, 1, {
       logger: (m) => {
         if (m.status === "recognizing text") {
@@ -151,13 +151,13 @@ export default function OCRClient() {
         }
       },
     });
-    workerRef.current = worker;
+    workerRef.current = worker as any;
     return worker;
   };
 
   const convertToStandardImage = async (inputFile: File, highRes = false): Promise<Blob | File | (Blob | File)[]> => {
     const ext = inputFile.name.toLowerCase().split('.').pop();
-    
+
     // HEIC/HEIF
     if (ext === "heic" || ext === "heif" || inputFile.type === "image/heic") {
       const heic2any = (await import("heic2any")).default;
@@ -171,10 +171,10 @@ export default function OCRClient() {
       pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
       const arrayBuffer = await inputFile.arrayBuffer();
       const pdf = await pdfjs.getDocument(arrayBuffer).promise;
-      
+
       const images: Blob[] = [];
-      const numPages = highRes ? pdf.numPages : 1; // Only do all pages if running full OCR
-      
+      const numPages = highRes ? pdf.numPages : 1;
+
       for (let i = 1; i <= numPages; i++) {
         const page = await pdf.getPage(i);
         const viewport = page.getViewport({ scale: highRes ? 2 : 1 });
@@ -255,7 +255,7 @@ export default function OCRClient() {
         URL.revokeObjectURL(url);
         const canvas = document.createElement("canvas");
         const ctx = canvas.getContext("2d")!;
-        
+
         // Use a high-quality resize if the image is too small
         const minDimension = 1800; // Increased for even higher accuracy
         let width = img.width;
@@ -318,7 +318,7 @@ export default function OCRClient() {
     if (newFiles.length > 0) {
       setFiles(prev => [...prev, ...newFiles]);
       setStatus("idle");
-      
+
       // Warm up worker early
       getWorker().catch(console.error);
 
@@ -340,11 +340,11 @@ export default function OCRClient() {
       for (let fIdx = 0; fIdx < files.length; fIdx++) {
         setCurrentFileIndex(fIdx);
         const currentFile = files[fIdx];
-        
+
         // 1. Convert to standard format
         const baseImages = await convertToStandardImage(currentFile, true);
         const images = Array.isArray(baseImages) ? baseImages : [baseImages];
-        
+
         cumulativeText += `\n--- FILE: ${currentFile.name} ---\n\n`;
 
         // Auto-Detect Logic
@@ -355,20 +355,20 @@ export default function OCRClient() {
         }
 
         await worker.setParameters({
-          tessedit_pageseg_mode: PSM.AUTO, 
-          tessedit_char_whitelist: "", 
+          tessedit_pageseg_mode: '3' as any, // PSM.AUTO = 3
+          tessedit_char_whitelist: "",
           preserve_interword_spaces: "1",
         });
 
         for (let i = 0; i < images.length; i++) {
           const enhancedSource = await enhanceImageForOCR(images[i] as Blob);
-          setStatus("processing"); 
+          setStatus("processing");
 
           const { data } = await worker.recognize(enhancedSource) as any;
           setResult(prev => prev + (prev ? "\n\n" : "") + data.text);
           setWords(data.words || []);
           cumulativeText += (i > 0 ? "\n\n--- Page " + (i + 1) + " ---\n\n" : "") + data.text;
-          
+
           // Progress across files and pages
           const totalSteps = files.reduce((acc, f) => acc + (f.type === "application/pdf" ? 5 : 1), 0); // Heuristic
           setProgress(Math.round(((fIdx + (i + 1) / images.length) / files.length) * 100));
@@ -376,7 +376,7 @@ export default function OCRClient() {
       }
 
       setResult(cumulativeText.trim());
-      
+
       // Add to history
       const newItem: HistoryItem = {
         id: Math.random().toString(36).substring(7),
@@ -420,17 +420,17 @@ export default function OCRClient() {
     let extension = format;
 
     const header = `--------------------------------------------------\n` +
-                   `SAFTOOLS OCR EXTRACTION REPORT\n` +
-                   `--------------------------------------------------\n` +
-                   `Source File: ${activeFile?.name}\n` +
-                   `Extracted At: ${new Date().toLocaleString()}\n` +
-                   `Detected Lang: ${detectedLang || language}\n` +
-                   `--------------------------------------------------\n\n`;
+      `SAFTOOLS OCR EXTRACTION REPORT\n` +
+      `--------------------------------------------------\n` +
+      `Source File: ${activeFile?.name}\n` +
+      `Extracted At: ${new Date().toLocaleString()}\n` +
+      `Detected Lang: ${detectedLang || language}\n` +
+      `--------------------------------------------------\n\n`;
 
     if (format === 'txt') {
       content = header + result;
     } else if (format === 'json') {
-      content = JSON.stringify({ 
+      content = JSON.stringify({
         metadata: {
           source: activeFile?.name,
           timestamp: new Date().toISOString(),
@@ -447,12 +447,13 @@ export default function OCRClient() {
       mimeType = "application/json";
     } else if (format === 'csv') {
       const csvHeader = "Word,Confidence,X0,Y0,X1,Y1\n";
-      const csvRows = words.map(w => 
+      const csvRows = words.map(w =>
         `"${w.text.replace(/"/g, '""')}",${w.confidence},${w.bbox.x0},${w.bbox.y0},${w.bbox.x1},${w.bbox.y1}`
       ).join("\n");
       content = csvHeader + csvRows;
       mimeType = "text/csv";
     } else if (format === 'docx') {
+      const { Document: DocxDocument, Packer, Paragraph, TextRun, AlignmentType } = await import("docx");
       const doc = new DocxDocument({
         sections: [{
           properties: {},
@@ -485,22 +486,12 @@ export default function OCRClient() {
       });
 
       const blob = await Packer.toBlob(doc);
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `ocr-${activeFile?.name.split('.')[0] || 'result'}.docx`;
-      a.click();
-      URL.revokeObjectURL(url);
+      ExportManager.downloadFile(blob, `ocr-${activeFile?.name.split('.')[0] || 'result'}.docx`);
       return;
     }
 
     const blob = typeof content === "string" ? new Blob([content], { type: mimeType }) : content;
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `ocr-${activeFile?.name.split('.')[0] || 'result'}.${extension}`;
-    a.click();
-    URL.revokeObjectURL(url);
+    ExportManager.downloadFile(blob, `ocr-${activeFile?.name.split('.')[0] || 'result'}.${extension}`);
   };
 
   const scrollToTool = () => {
@@ -510,11 +501,11 @@ export default function OCRClient() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary/30">
       <Navbar />
-      
+
       {/* HERO SECTION */}
       <section className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-40">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--primary-rgb)_0%,_transparent_70%)] opacity-[0.03] pointer-events-none" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <motion.div
@@ -525,8 +516,8 @@ export default function OCRClient() {
               <Sparkles className="w-3.5 h-3.5" />
               Privacy-First AI Intelligence
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -534,8 +525,8 @@ export default function OCRClient() {
             >
               Free Online <span className="text-primary not-italic">OCR Tool</span> — Extract Text Instantly
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -543,27 +534,27 @@ export default function OCRClient() {
             >
               Convert images, scanned documents, screenshots, handwritten notes, and PDFs into editable text using our privacy-first browser-based OCR tool. Fast, accurate, and completely free.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
               className="flex flex-wrap items-center justify-center gap-4"
             >
-              <Button 
+              <Button
                 onClick={scrollToTool}
                 className="h-14 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-sm uppercase tracking-widest shadow-2xl shadow-primary/20 group"
               >
                 Extract Text Now <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 onClick={scrollToTool}
                 className="h-14 px-8 rounded-2xl border-border hover:bg-secondary font-black text-sm uppercase tracking-widest"
               >
                 Upload Image
               </Button>
-              <Button 
+              <Button
                 variant="ghost"
                 onClick={scrollToTool}
                 className="h-14 px-8 rounded-2xl text-primary font-black text-sm uppercase tracking-widest hover:bg-primary/5"
@@ -571,8 +562,8 @@ export default function OCRClient() {
                 Try OCR Demo
               </Button>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -600,7 +591,7 @@ export default function OCRClient() {
         <div className="relative group">
           <div className="absolute -inset-4 bg-primary/10 blur-[100px] rounded-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-blue-500/10 to-primary/20 rounded-[45px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-          
+
           <Card className="relative overflow-hidden rounded-[40px] border-border/40 shadow-2xl bg-card/50 backdrop-blur-xl p-6 md:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
               {/* Left Column: Input */}
@@ -616,9 +607,9 @@ export default function OCRClient() {
                     </div>
                   </div>
                   {files.length > 0 && (
-                    <Button 
-                      variant="destructive" 
-                      size="sm" 
+                    <Button
+                      variant="destructive"
+                      size="sm"
                       className="bg-red-500 hover:bg-red-600 text-white shadow-lg shadow-red-500/20 h-9 rounded-xl font-black text-[10px] uppercase tracking-widest px-4"
                       onClick={() => { setFiles([]); setResult(""); setStatus("idle"); }}
                     >
@@ -629,22 +620,22 @@ export default function OCRClient() {
 
                 {files.length === 0 ? (
                   <div className="aspect-square lg:aspect-video">
-                    <DropZone 
-                      onFilesDrop={handleDrop} 
-                      accept="image/*,application/pdf,.heic,.psd,.tiff,.tif,.docx" 
-                      multiple={true} 
-                      className="h-full rounded-[32px] border-dashed border-border bg-secondary/30 hover:bg-secondary/50 transition-colors" 
+                    <DropZone
+                      onFilesDrop={handleDrop}
+                      accept="image/*,application/pdf,.heic,.psd,.tiff,.tif,.docx"
+                      multiple={true}
+                      className="h-full rounded-[32px] border-dashed border-border bg-secondary/30 hover:bg-secondary/50 transition-colors"
                     />
                   </div>
                 ) : (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="space-y-6"
                   >
                     <div className="aspect-square lg:aspect-video rounded-[32px] overflow-hidden bg-secondary/50 border border-border relative group/preview">
                       {preview && <img src={preview} className="w-full h-full object-contain" alt="OCR Source" />}
-                      
+
                       {/* OCR Overlay */}
                       {showOverlay && (words?.length ?? 0) > 0 && (
                         <div className="absolute inset-0 pointer-events-none">
@@ -677,10 +668,10 @@ export default function OCRClient() {
                           <Maximize2 className="w-5 h-5" />
                         </Button>
                         {words.length > 0 && (
-                          <Button 
-                            variant={showOverlay ? "default" : "secondary"} 
-                            size="icon" 
-                            className="h-12 w-12 rounded-2xl" 
+                          <Button
+                            variant={showOverlay ? "default" : "secondary"}
+                            size="icon"
+                            className="h-12 w-12 rounded-2xl"
                             onClick={() => setShowOverlay(!showOverlay)}
                           >
                             <FileSearch className="w-5 h-5" />
@@ -712,7 +703,7 @@ export default function OCRClient() {
                         </Select>
                       </div>
                       <div className="flex items-end">
-                        <Button 
+                        <Button
                           className="w-full h-12 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black gap-2 shadow-xl shadow-primary/20 italic"
                           onClick={runOCR}
                           disabled={status === "loading" || status === "processing"}
@@ -727,11 +718,11 @@ export default function OCRClient() {
                     </div>
                   </motion.div>
                 )}
-                
+
                 <PrivacyBadge />
 
                 {history.length > 0 && (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="pt-8 border-t border-border/40 space-y-4"
@@ -805,7 +796,7 @@ export default function OCRClient() {
                       >
                         {isSpeaking ? <Square className="w-4 h-4 text-white" /> : <Volume2 className="w-4 h-4 text-white" />}
                       </Button>
-                      
+
                       <div className="w-[1px] h-6 bg-border mx-1 hidden md:block" />
 
                       <Button
@@ -841,13 +832,13 @@ export default function OCRClient() {
 
                 <Card className="flex-grow rounded-[32px] bg-secondary/20 border-border p-6 md:p-8 flex flex-col min-h-[400px] relative group/output">
                   <div className="flex-grow relative">
-                    <Textarea 
+                    <Textarea
                       value={result}
                       onChange={(e) => setResult(e.target.value)}
                       placeholder="Upload an asset to begin neural analysis..."
                       className="absolute inset-0 bg-transparent border-none focus-visible:ring-0 resize-none font-mono text-sm leading-relaxed text-foreground/80 placeholder:text-foreground/10 p-0 custom-scrollbar"
                     />
-                    
+
                     {!result && status === "idle" && (
                       <div className="absolute inset-0 flex flex-col items-center justify-center opacity-10 pointer-events-none space-y-4">
                         <FileSearch className="w-16 h-16" />
@@ -866,7 +857,7 @@ export default function OCRClient() {
                           <p className="text-xl font-black text-primary italic">{progress}% Synthesized</p>
                         </div>
                         <div className="w-64 h-1.5 bg-secondary rounded-full overflow-hidden border border-border/50">
-                          <motion.div 
+                          <motion.div
                             className="h-full bg-primary"
                             initial={{ width: 0 }}
                             animate={{ width: `${progress}%` }}
@@ -875,7 +866,7 @@ export default function OCRClient() {
                       </div>
                     )}
                   </div>
-                  
+
                   {result && (
                     <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-between text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">
                       <div className="flex items-center gap-4">
@@ -903,7 +894,7 @@ export default function OCRClient() {
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Powerful AI <span className="text-primary not-italic">OCR Features</span></h2>
             <p className="text-muted-foreground font-medium">State-of-the-art Optical Character Recognition engine optimized for the browser.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Type, title: "Extract Image Text", desc: "Convert any image text into editable content instantly." },
@@ -1086,7 +1077,7 @@ export default function OCRClient() {
             <div className="bg-card border border-border/60 rounded-[48px] p-8 md:p-16 flex flex-col lg:flex-row gap-12">
               <div className="lg:w-1/3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest mb-6">
-                   Knowledge Base
+                  Knowledge Base
                 </div>
                 <h2 className="text-3xl font-black tracking-tighter italic">What is <span className="text-primary not-italic">OCR?</span></h2>
               </div>
@@ -1117,7 +1108,7 @@ export default function OCRClient() {
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Popular <span className="text-primary not-italic">Use Cases</span></h2>
             <p className="text-muted-foreground font-medium">SafeTools OCR is designed for diverse workflows and professional needs.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: GraduationCap, title: "Students", desc: "Convert lecture notes, textbooks, and research papers into editable study guides." },
@@ -1142,65 +1133,65 @@ export default function OCRClient() {
       {/* SCREENSHOT, HANDWRITING, PDF OCR SECTIONS */}
       <section className="py-24 md:py-40">
         <div className="container mx-auto px-4 space-y-40">
-           {/* Screenshot */}
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <div className="space-y-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest">
-                   Screenshot Intelligence
-                </div>
-                <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Extract Text from <span className="text-blue-500 not-italic">Screenshots</span></h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                   Instantly copy text from YouTube captures, Instagram posts, or Zoom presentations. No more manual typing or re-creating content from scratch.
-                </p>
-                <div className="flex gap-4">
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Social Media</Badge>
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Webinars</Badge>
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">UI/UX Design</Badge>
-                </div>
+          {/* Screenshot */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-[10px] font-black uppercase tracking-widest">
+                Screenshot Intelligence
               </div>
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-xl opacity-50 group-hover:opacity-100 transition-all" />
-                <Card className="relative overflow-hidden rounded-[32px] border-blue-500/20 bg-card p-4">
-                   <div className="aspect-video rounded-2xl bg-secondary/50 flex flex-col items-center justify-center gap-4 border border-blue-500/10 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426')] opacity-20 bg-cover bg-center" />
-                      <div className="relative z-10 p-6 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 max-w-[80%]">
-                         <p className="text-[10px] font-mono text-emerald-400 mb-2">Detected String:</p>
-                         <p className="text-xs font-mono text-white/80">"SafeTools: Neural Text Extraction v3.0"</p>
-                      </div>
-                   </div>
-                </Card>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Extract Text from <span className="text-blue-500 not-italic">Screenshots</span></h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Instantly copy text from YouTube captures, Instagram posts, or Zoom presentations. No more manual typing or re-creating content from scratch.
+              </p>
+              <div className="flex gap-4">
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Social Media</Badge>
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Webinars</Badge>
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">UI/UX Design</Badge>
               </div>
-           </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 blur-xl opacity-50 group-hover:opacity-100 transition-all" />
+              <Card className="relative overflow-hidden rounded-[32px] border-blue-500/20 bg-card p-4">
+                <div className="aspect-video rounded-2xl bg-secondary/50 flex flex-col items-center justify-center gap-4 border border-blue-500/10 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426')] opacity-20 bg-cover bg-center" />
+                  <div className="relative z-10 p-6 bg-black/60 backdrop-blur-md rounded-2xl border border-white/10 max-w-[80%]">
+                    <p className="text-[10px] font-mono text-emerald-400 mb-2">Detected String:</p>
+                    <p className="text-xs font-mono text-white/80">"SafeTools: Neural Text Extraction v3.0"</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
 
-           {/* Handwriting */}
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-              <div className="order-2 lg:order-1 relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-orange-500/20 blur-xl opacity-50 group-hover:opacity-100 transition-all" />
-                <Card className="relative overflow-hidden rounded-[32px] border-amber-500/20 bg-card p-4">
-                   <div className="aspect-video rounded-2xl bg-secondary/50 flex flex-col items-center justify-center gap-4 border border-amber-500/10 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=2670')] opacity-20 bg-cover bg-center" />
-                      <div className="relative z-10 flex flex-col items-center">
-                        <Type className="w-16 h-16 text-amber-500/40 mb-4" />
-                        <p className="text-[10px] font-black uppercase tracking-widest text-amber-500">Handwriting AI Active</p>
-                      </div>
-                   </div>
-                </Card>
-              </div>
-              <div className="order-1 lg:order-2 space-y-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] font-black uppercase tracking-widest">
-                   Pen to Pixel
+          {/* Handwriting */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="order-2 lg:order-1 relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-orange-500/20 blur-xl opacity-50 group-hover:opacity-100 transition-all" />
+              <Card className="relative overflow-hidden rounded-[32px] border-amber-500/20 bg-card p-4">
+                <div className="aspect-video rounded-2xl bg-secondary/50 flex flex-col items-center justify-center gap-4 border border-amber-500/10 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=2670')] opacity-20 bg-cover bg-center" />
+                  <div className="relative z-10 flex flex-col items-center">
+                    <Type className="w-16 h-16 text-amber-500/40 mb-4" />
+                    <p className="text-[10px] font-black uppercase tracking-widest text-amber-500">Handwriting AI Active</p>
+                  </div>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Handwriting <span className="text-amber-500 not-italic">Recognition</span></h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                   Convert handwritten notes, journal entries, and whiteboards into digital text. Our AI is trained to understand varying handwriting styles and cursive scripts.
-                </p>
-                <div className="flex gap-4">
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Journals</Badge>
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Assignments</Badge>
-                   <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Whiteboards</Badge>
-                </div>
+              </Card>
+            </div>
+            <div className="order-1 lg:order-2 space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-[10px] font-black uppercase tracking-widest">
+                Pen to Pixel
               </div>
-           </div>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Handwriting <span className="text-amber-500 not-italic">Recognition</span></h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Convert handwritten notes, journal entries, and whiteboards into digital text. Our AI is trained to understand varying handwriting styles and cursive scripts.
+              </p>
+              <div className="flex gap-4">
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Journals</Badge>
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Assignments</Badge>
+                <Badge variant="secondary" className="px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest">Whiteboards</Badge>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1208,62 +1199,62 @@ export default function OCRClient() {
       <section className="py-24 md:py-32 bg-secondary/5 border-y border-border/40">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-             {/* Export */}
-             <div className="space-y-8">
-                <h2 className="text-3xl font-black tracking-tighter italic">Export in <span className="text-primary not-italic">Multiple Formats</span></h2>
-                <p className="text-muted-foreground font-medium leading-relaxed">
-                   Once your text is extracted, save it in the format that best fits your workflow. Copy instantly or download high-quality files.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                   {[
-                     { icon: FileText, label: "Plain Text (.TXT)" },
-                     { icon: FileArchive, label: "Document (.DOCX)" },
-                     { icon: Code, label: "Structured (.JSON)" },
-                     { icon: TableIcon, label: "Tabular (.CSV)" }
-                   ].map((f, i) => (
-                     <div key={i} className="p-4 rounded-2xl bg-card border border-border/60 flex items-center gap-3">
-                        <f.icon className="w-5 h-5 text-primary" />
-                        <span className="text-[10px] font-black uppercase tracking-widest">{f.label}</span>
-                     </div>
-                   ))}
-                </div>
-             </div>
+            {/* Export */}
+            <div className="space-y-8">
+              <h2 className="text-3xl font-black tracking-tighter italic">Export in <span className="text-primary not-italic">Multiple Formats</span></h2>
+              <p className="text-muted-foreground font-medium leading-relaxed">
+                Once your text is extracted, save it in the format that best fits your workflow. Copy instantly or download high-quality files.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: FileText, label: "Plain Text (.TXT)" },
+                  { icon: FileArchive, label: "Document (.DOCX)" },
+                  { icon: Code, label: "Structured (.JSON)" },
+                  { icon: TableIcon, label: "Tabular (.CSV)" }
+                ].map((f, i) => (
+                  <div key={i} className="p-4 rounded-2xl bg-card border border-border/60 flex items-center gap-3">
+                    <f.icon className="w-5 h-5 text-primary" />
+                    <span className="text-[10px] font-black uppercase tracking-widest">{f.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-             {/* Performance */}
-             <div className="space-y-8">
-                <h2 className="text-3xl font-black tracking-tighter italic">Ultra Fast <span className="text-primary not-italic">Neural Engine</span></h2>
-                <p className="text-muted-foreground font-medium leading-relaxed">
-                   Optimized using WebAssembly and GPU acceleration to ensure fast recognition even on high-resolution assets.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                   <div className="space-y-2">
-                      <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                         <span>Browser Optimization</span>
-                         <span className="text-emerald-500">99%</span>
-                      </div>
-                      <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                         <div className="h-full bg-emerald-500 w-[99%]" />
-                      </div>
-                   </div>
-                   <div className="space-y-2">
-                      <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
-                         <span>Character Accuracy</span>
-                         <span className="text-blue-500">98.5%</span>
-                      </div>
-                      <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
-                         <div className="h-full bg-blue-500 w-[98.5%]" />
-                      </div>
-                   </div>
+            {/* Performance */}
+            <div className="space-y-8">
+              <h2 className="text-3xl font-black tracking-tighter italic">Ultra Fast <span className="text-primary not-italic">Neural Engine</span></h2>
+              <p className="text-muted-foreground font-medium leading-relaxed">
+                Optimized using WebAssembly and GPU acceleration to ensure fast recognition even on high-resolution assets.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                    <span>Browser Optimization</span>
+                    <span className="text-emerald-500">99%</span>
+                  </div>
+                  <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                    <div className="h-full bg-emerald-500 w-[99%]" />
+                  </div>
                 </div>
-                <div className="flex gap-4">
-                   <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
-                      <Zap className="w-3 h-3 text-primary" /> WebAssembly
-                   </div>
-                   <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
-                      <Cpu className="w-3 h-3 text-primary" /> GPU Accelerated
-                   </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                    <span>Character Accuracy</span>
+                    <span className="text-blue-500">98.5%</span>
+                  </div>
+                  <div className="h-1.5 bg-secondary rounded-full overflow-hidden">
+                    <div className="h-full bg-blue-500 w-[98.5%]" />
+                  </div>
                 </div>
-             </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+                  <Zap className="w-3 h-3 text-primary" /> WebAssembly
+                </div>
+                <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">
+                  <Cpu className="w-3 h-3 text-primary" /> GPU Accelerated
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1276,7 +1267,7 @@ export default function OCRClient() {
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter italic">Why Choose <span className="text-primary not-italic">SafeTools OCR</span></h2>
               <p className="text-muted-foreground font-medium">Compare us with traditional cloud-based OCR tools.</p>
             </div>
-            
+
             <div className="overflow-hidden rounded-[32px] border border-border/60 bg-card shadow-2xl">
               <div className="overflow-x-auto">
                 <table className="w-full text-left">
@@ -1305,7 +1296,7 @@ export default function OCRClient() {
                           ) : <span className="text-xs font-bold">{row.s}</span>}
                         </td>
                         <td className="p-6 opacity-40">
-                           {typeof row.t === 'boolean' ? (
+                          {typeof row.t === 'boolean' ? (
                             row.t ? <Check className="w-4 h-4 text-emerald-500" /> : <div className="flex items-center gap-2 text-red-500 text-xs font-black uppercase italic"><X className="w-4 h-4" /> No</div>
                           ) : <span className="text-xs font-bold italic">{row.t}</span>}
                         </td>
@@ -1365,13 +1356,13 @@ export default function OCRClient() {
             Extract text from screenshots, scanned documents, handwritten notes, and PDFs directly in your browser with fast privacy-first OCR technology.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button 
+            <Button
               onClick={scrollToTool}
               className="h-16 px-10 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-base uppercase tracking-widest shadow-[0_0_40px_-10px_rgba(var(--primary-rgb),0.5)] group"
             >
               Start OCR Now <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button 
+            <Button
               variant="outline"
               onClick={scrollToTool}
               className="h-16 px-10 rounded-2xl border-border hover:bg-secondary font-black text-base uppercase tracking-widest"
@@ -1382,7 +1373,7 @@ export default function OCRClient() {
         </div>
       </section>
 
-      <RelatedTools 
+      <RelatedTools
         title="Explore More Tools"
         tools={[
           { name: "Image Editor", href: "/image/editor" },
@@ -1394,7 +1385,7 @@ export default function OCRClient() {
       />
 
       <WhySafeTools />
-      
+
       <Footer />
     </div>
   );

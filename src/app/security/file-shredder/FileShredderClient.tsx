@@ -16,10 +16,9 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Label } from "@/components/ui/label";
 import { shredFile, shreddedFilename, type ShredPasses } from "@/lib/privacy/shredder";
-import { downloadBlob } from "@/lib/utils/download";
+import { ExportManager } from "@/lib/export-manager";
 import { formatBytes } from "@/lib/utils/fileSize";
 import { STRINGS } from "@/lib/utils/strings";
-import { toast } from "sonner";
 import { FAQ } from "@/components/shared/FAQ";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -55,16 +54,16 @@ export default function FileShredderClient() {
       const blob = await shredFile(file, passes, setProgress);
       setResultBlob(blob);
       setStatus("done");
-      toast.success("File shredded successfully.");
+      import("sonner").then(m => m.toast.success("File shredded successfully."));
     } catch (e) {
-      toast.error("Shredding failed: " + (e as Error).message);
+      import("sonner").then(m => m.toast.error("Shredding failed: " + (e as Error).message));
       setStatus("idle");
     }
   }, [file, passes, accepted]);
 
   const handleDownload = () => {
     if (!resultBlob || !file) return;
-    downloadBlob(resultBlob, shreddedFilename(file.name));
+    ExportManager.downloadFile(resultBlob, shreddedFilename(file.name));
   };
 
   return (

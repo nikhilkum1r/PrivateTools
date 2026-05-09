@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${tool.name} Studio | SafeTools`,
       description: tool.desc,
       type: "website",
+    },
+    alternates: {
+      canonical: `/devtools/${slug}`,
     }
   };
 }

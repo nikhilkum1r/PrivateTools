@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf/split-pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Split PDF Files Online | Free Privacy-First PDF Splitter",
+    description: "Split PDF files securely in your browser with zero uploads and zero tracking. Extract pages and separate PDFs using privacy-first local processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf/split-pdf" },
 };
 
 export default function SplitPdfPage() {

@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/video",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Online Video Compressor & Converter - Free & Private | SafeTools",
+    description: "High-performance, browser-based video transcoding and frame extraction. Convert MP4, WebM, and more with absolute privacy. No server uploads, powered by WASM.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/video" },
 };
 
 export default function VideoPage() {

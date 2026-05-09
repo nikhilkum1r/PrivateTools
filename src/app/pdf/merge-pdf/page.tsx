@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf/merge-pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Merge PDF Files Online | Free Privacy-First PDF Merger",
+    description: "Merge PDF files securely in your browser with zero uploads and zero tracking. Fast privacy-first PDF combiner with local processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf/merge-pdf" },
 };
 
 export default function MergePdfPage() {

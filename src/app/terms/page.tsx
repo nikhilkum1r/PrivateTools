@@ -5,6 +5,19 @@ export const metadata: Metadata = {
   title: "Terms of Service | Local-First Sovereign Covenant | SafeTools",
   description: "Read our service covenant. Understand your rights to data sovereignty, local-first execution, and our commitment to zero-server processing architecture.",
   keywords: "terms of service, data sovereignty, local first agreement, privacy software legal, zero server terms",
+  openGraph: {
+    title: "Terms of Service | Local-First Sovereign Covenant | SafeTools",
+    description: "Read our service covenant. Understand your rights to data sovereignty, local-first execution, and our commitment to zero-server processing architecture.",
+    type: "website",
+    url: "https://safetools.space/terms",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Local-First Sovereign Covenant | SafeTools",
+    description: "Read our service covenant. Understand your rights to data sovereignty, local-first execution, and our commitment to zero-server processing architecture.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

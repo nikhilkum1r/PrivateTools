@@ -460,7 +460,7 @@ export default function ImageToPptxClient() {
                           </div>
                           <div className="w-16 h-10 rounded-lg overflow-hidden bg-muted/40 shrink-0 relative flex items-center justify-center border border-border shadow-inner">
                             {f.previewUrl ? (
-                              <img src={f.previewUrl} className="w-full h-full object-cover" alt="" />
+                              <img src={f.previewUrl} className="w-full h-full object-cover" alt="Deck asset preview" />
                             ) : (
                               <FileText className="w-4 h-4 text-muted-foreground/20" />
                             )}
@@ -545,7 +545,7 @@ export default function ImageToPptxClient() {
                           <img 
                             src={currentFile.previewUrl} 
                             className="max-w-full max-h-full object-contain rounded-xl shadow-2xl transition-transform group-hover:scale-[1.005] duration-700" 
-                            alt="Slide Preview" 
+                            alt="Presentation slide preview" 
                           />
                         ) : (
                           <div className="flex flex-col items-center gap-4 text-muted-foreground/20">

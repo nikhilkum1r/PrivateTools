@@ -5,6 +5,19 @@ export const metadata: Metadata = {
   title: "Frequently Asked Questions | SafeTools Knowledge Base",
   description: "Get answers to common questions about SafeTools. Learn about our zero-server privacy architecture, local-first processing, and technical security standards.",
   keywords: "privacy tools faq, zero server architecture, local processing help, safetools security, browser based conversion faq",
+  openGraph: {
+    title: "Frequently Asked Questions | SafeTools Knowledge Base",
+    description: "Get answers to common questions about SafeTools. Learn about our zero-server privacy architecture, local-first processing, and technical security standards.",
+    type: "website",
+    url: "https://safetools.space/faq",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Frequently Asked Questions | SafeTools Knowledge Base",
+    description: "Get answers to common questions about SafeTools. Learn about our zero-server privacy architecture, local-first processing, and technical security standards.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {

@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${title} | SafeTools Studio`,
       description: `Studio-grade ${title} laboratory.`,
       type: "website",
+    },
+    alternates: {
+      canonical: `/audio/${slug}`,
     }
   };
 }

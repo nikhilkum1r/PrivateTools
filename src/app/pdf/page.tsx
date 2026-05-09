@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional PDF Processing Suite - Free & Private | SafeTools",
+    description: "A comprehensive suite of local PDF tools. Merge, split, convert, and scrub PDF documents with 100% privacy and zero server uploads.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf" },
 };
 
 export default function PDFPage() {

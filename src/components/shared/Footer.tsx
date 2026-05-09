@@ -35,7 +35,7 @@ export function Footer() {
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.05] grayscale" 
         style={{ 
-          backgroundImage: "url('/footer-bg.png')",
+          backgroundImage: "url('/footer-bg.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

@@ -4,26 +4,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-
   ImageIcon,
   FileText,
   Lock,
-  Fingerprint,
   Menu,
   Moon,
   Sun,
-  Video,
-  Music,
   QrCode,
   Terminal
 } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useRouter } from "next/navigation";
-import { useImageStore } from "@/store/useImageStore";
-import { usePdfStore } from "@/store/usePdfStore";
-import { useVideoStore } from "@/store/useVideoStore";
-import { motion, AnimatePresence } from "framer-motion";
-import { DropZone } from "./DropZone";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -38,14 +28,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import {
   Sheet,
   SheetContent,
@@ -54,6 +37,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+
 
 
 
@@ -93,16 +77,18 @@ const toolCategories = [
 ];
 
 export function Navbar() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 flex items-center justify-center">
-            <motion.div
-              animate={{ rotate: [0, 90, 0] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            <div
               className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary to-blue-500 opacity-20 group-hover:opacity-40 transition-opacity"
             />
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
@@ -172,8 +158,14 @@ export function Navbar() {
 
           <DropdownMenu>
             <DropdownMenuTrigger aria-label="Toggle color theme" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full transition-all")}>
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-primary" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
+              {mounted ? (
+                <>
+                  <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-primary" />
+                  <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-primary" />
+                </>
+              ) : (
+                <div className="h-5 w-5 rounded-full bg-primary/10 animate-pulse" />
+              )}
               <span className="sr-only">Toggle theme</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="rounded-2xl p-1 shadow-2xl">
@@ -192,7 +184,7 @@ export function Navbar() {
               <SheetContent side="right" className="w-[300px] overflow-y-auto">
                 <SheetHeader className="mb-4 text-left">
                   <SheetTitle className="flex items-center gap-2">
-                    <Image src="/android-chrome-192x192.png" alt="SafeTools" width={24} height={24} className="rounded-md" />
+                    <Image src="/android-chrome-192x192.webp" alt="SafeTools" width={24} height={24} className="rounded-md" />
                     SafeTools
                   </SheetTitle>
                 </SheetHeader>

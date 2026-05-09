@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/security/metadata-cleaner",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Metadata Cleaner | Remove Hidden Data from Files & Images",
+    description: "Remove hidden metadata from images, documents, and files securely in your browser. Privacy-first local processing with zero uploads and zero tracking.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/security/metadata-cleaner" },
 };
 
 export default function MetadataCleanerPage() {

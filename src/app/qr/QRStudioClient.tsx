@@ -225,7 +225,7 @@ export default function QRStudioClient() {
                     <input type="file" accept="image/*" onChange={handleLogoUpload} className="hidden" id="logo-upload" />
                     <label htmlFor="logo-upload" className="flex flex-col items-center justify-center p-6 border-2 border-dashed border-border rounded-2xl cursor-pointer hover:border-primary/40 hover:bg-primary/5 transition-all">
                       {logoFile ? (
-                        <img src={logoFile} className="w-12 h-12 object-contain rounded-lg shadow-xl" />
+                        <img src={logoFile} className="w-12 h-12 object-contain rounded-lg shadow-xl" alt="Uploaded logo preview" />
                       ) : (
                         <>
                           <Sparkles className="w-6 h-6 text-foreground/10 mb-2 group-hover:text-primary transition-colors" />

@@ -7,7 +7,7 @@ const IconsLandingClient = dynamic(() => import("./IconsLandingClient"), {
 
 export const metadata: Metadata = {
   title: "Free Icon Generator & Favicon Creator Online | SafeTools",
-  description: "Create favicons, app icons, PWA icons, and website branding assets online for free. Generate ICO, PNG, SVG, Android, and iOS icons instantly with browser-based privacy-first processing.",
+  description: "Create favicons, app icons, and PWA assets online for free. Generate ICO and PNG icons instantly with browser-based privacy-first processing.",
   keywords: [
     "icon generator", "favicon creator", "free favicon generator", "app icon maker", 
     "website icon generator", "PWA icon generator", "Android icon generator", 
@@ -21,6 +21,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/image/icons",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Icon Generator & Favicon Creator Online | SafeTools",
+    description: "Create favicons, app icons, and PWA assets online for free. Generate ICO and PNG icons instantly with browser-based privacy-first processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image/icons" },
 };
 
 const PAGE_SCHEMA = {
@@ -38,6 +45,14 @@ const PAGE_SCHEMA = {
         "price": "0",
         "priceCurrency": "USD"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://safetools.space" },
+        { "@type": "ListItem", "position": 2, "name": "Image Tools", "item": "https://safetools.space/image" },
+        { "@type": "ListItem", "position": 3, "name": "Icon Studio", "item": "https://safetools.space/image/icons" }
+      ]
     },
     {
       "@type": "FAQPage",

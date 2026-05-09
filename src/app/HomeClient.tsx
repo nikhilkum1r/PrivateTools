@@ -40,7 +40,7 @@ const HOMEPAGE_SCHEMA = {
       "url": "https://safetools.space",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://safetools.space/android-chrome-512x512.png"
+        "url": "https://safetools.space/android-chrome-512x512.webp"
       },
       "description": "SafeTools provides 150+ free, privacy-first browser-based file utilities for PDF, image, video, audio, and document editing.",
       "foundingDate": "2024",

@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/tools/qr-generator",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "QR Code Generator | Free Privacy-First QR Maker",
+    description: "Generate QR codes instantly with a privacy-first browser-based QR generator. Create text, URL, WiFi, contact, and payment QR codes with zero tracking.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/tools/qr-generator" },
 };
 
 export default function QRGeneratorPage() {

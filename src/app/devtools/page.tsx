@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/devtools",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Developer Utility Suite - JSON, JWT, Base64 & More | SafeTools",
+    description: "A comprehensive suite of developer utilities including JSON formatting, JWT debugging, Base64 encoding, and more. All processing is 100% local and private.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/devtools" },
 };
 
 export default function DevToolsPage() {

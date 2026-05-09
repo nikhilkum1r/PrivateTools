@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `Optimize ${format} Images | SafeTools`,
       description: `Shrink your ${format} assets by up to 90%. No server uploads.`,
       type: "website",
+    },
+    alternates: {
+      canonical: `/image/compress/${slug}`,
     }
   };
 }

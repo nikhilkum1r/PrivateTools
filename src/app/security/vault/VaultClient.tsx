@@ -41,6 +41,10 @@ import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { encryptVault, decryptVault } from "@/lib/privacy/crypto";
+import { ExportManager } from "@/lib/export-manager";
+
+import { ClientOnly } from "@/components/shared/ClientOnly";
 
 export default function VaultClient() {
   const [mode, setMode] = useState<"encrypt" | "decrypt">("encrypt");
@@ -51,18 +55,13 @@ export default function VaultClient() {
   const [progress, setProgress] = useState(0);
   const [result, setResult] = useState<{ blob: Blob; name: string } | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
   const [isHttps, setIsHttps] = useState(false);
   const [isDev, setIsDev] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
     setIsHttps(window.location.protocol === "https:");
     setIsDev(window.location.hostname === "localhost");
   }, []);
-
-  const derivationIterations = 100000;
-  const vaultPrefix = "PVLT"; // Magic bytes for validation
 
   const handleDrop = (files: File[]) => {
     if (files[0]) {
@@ -73,145 +72,49 @@ export default function VaultClient() {
     }
   };
 
-  const deriveKey = async (password: string, salt: Uint8Array) => {
-    const encoder = new TextEncoder();
-    const passwordKey = await crypto.subtle.importKey(
-      "raw",
-      encoder.encode(password),
-      "PBKDF2",
-      false,
-      ["deriveKey"]
-    );
-
-    const nonSharedSalt = new Uint8Array(salt.byteLength);
-    nonSharedSalt.set(new Uint8Array(salt));
-
-    return crypto.subtle.deriveKey(
-      {
-        name: "PBKDF2",
-        salt: nonSharedSalt,
-        iterations: derivationIterations,
-        hash: "SHA-256",
-      },
-      passwordKey,
-      { name: "AES-GCM", length: 256 },
-      false,
-      ["encrypt", "decrypt"]
-    );
-  };
-
   const processFile = async () => {
     if (!file || !password) return;
     setIsProcessing(true);
-    setProgress(10);
+    setProgress(20);
     setError(null);
 
     try {
-      const fileData = await file.arrayBuffer();
-      const encoder = new TextEncoder();
-      const decoder = new TextDecoder();
-      
       if (mode === "encrypt") {
-        setProgress(30);
-        const salt = crypto.getRandomValues(new Uint8Array(16));
-        const iv = crypto.getRandomValues(new Uint8Array(12));
-        const key = await deriveKey(password, salt);
-
-        setProgress(60);
-        const nameBytes = encoder.encode(file.name);
-        const typeBytes = encoder.encode(file.type || "application/octet-stream");
-        
-        const metadataHeader = new Uint8Array(12 + nameBytes.length + typeBytes.length);
-        metadataHeader.set(encoder.encode(vaultPrefix), 0);
-        new DataView(metadataHeader.buffer).setUint32(4, nameBytes.length, false);
-        metadataHeader.set(nameBytes, 8);
-        new DataView(metadataHeader.buffer).setUint32(8 + nameBytes.length, typeBytes.length, false);
-        metadataHeader.set(typeBytes, 12 + nameBytes.length);
-
-        const encryptedContent = await crypto.subtle.encrypt(
-          { name: "AES-GCM", iv },
-          key,
-          fileData
-        );
-
+        const vaultBlob = await encryptVault(file, password);
         setProgress(90);
-        const combined = new Uint8Array(salt.length + iv.length + metadataHeader.length + encryptedContent.byteLength);
-        combined.set(salt, 0);
-        combined.set(iv, 16);
-        combined.set(metadataHeader, 28);
-        combined.set(new Uint8Array(encryptedContent), 28 + metadataHeader.length);
-
         setResult({
-          blob: new Blob([combined], { type: "application/octet-stream" }),
+          blob: vaultBlob,
           name: `${file.name}.vault`
         });
         toast.success("File secured successfully!");
       } else {
-        setProgress(20);
-        const fullData = new Uint8Array(fileData);
-        const salt = fullData.slice(0, 16);
-        const iv = fullData.slice(16, 28);
-        const key = await deriveKey(password, salt);
-
-        setProgress(50);
-        const magic = decoder.decode(fullData.slice(28, 32));
-        if (magic !== vaultPrefix) throw new Error("Not a valid SafeTools Vault file.");
-
-        const nameLen = new DataView(fullData.buffer).getUint32(32, false);
-        const originalName = decoder.decode(fullData.slice(36, 36 + nameLen));
-        
-        const typeLenPos = 36 + nameLen;
-        const typeLen = new DataView(fullData.buffer).getUint32(typeLenPos, false);
-        const originalType = decoder.decode(fullData.slice(typeLenPos + 4, typeLenPos + 4 + typeLen));
-
-        const payloadStart = typeLenPos + 4 + typeLen;
-        const encryptedContentRaw = fullData.slice(payloadStart);
-        
-        const encryptedContent = new Uint8Array(encryptedContentRaw.byteLength);
-        encryptedContent.set(encryptedContentRaw);
-
-        const ivSafe = new Uint8Array(iv.byteLength);
-        ivSafe.set(iv);
-
-        try {
-          setProgress(80);
-          const decryptedContent = await crypto.subtle.decrypt(
-            { name: "AES-GCM", iv: ivSafe },
-            key,
-            encryptedContent
-          );
-
-          setResult({
-            blob: new Blob([decryptedContent], { type: originalType }),
-            name: originalName
-          });
-          toast.success("File extracted successfully!");
-        } catch (e) {
-          throw new Error("Invalid password or corrupted vault file.");
-        }
+        const decrypted = await decryptVault(file, password);
+        setProgress(90);
+        setResult({
+          blob: decrypted.blob,
+          name: decrypted.name
+        });
+        toast.success("File extracted successfully!");
       }
       setProgress(100);
     } catch (e: any) {
-      setError(e.message || "An unexpected error occurred.");
-      toast.error(e.message || "Processing failed");
-      setProgress(0);
+      console.error(e);
+      setError(e.message || "Invalid security key or corrupted vault.");
+      toast.error("Operation failed");
     } finally {
       setIsProcessing(false);
     }
   };
 
-  const handleCopyResult = async () => {
+  const handleDownloadResult = () => {
     if (!result) return;
-    toast.success("Download started...");
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(result.blob);
-    a.download = result.name;
-    a.click();
+    ExportManager.downloadFile(result.blob, result.name);
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
-      <Navbar />
+    <ClientOnly fallback={<div className="min-h-screen bg-background animate-pulse" />}>
+      <div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
+        <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4 relative overflow-hidden">
@@ -402,7 +305,7 @@ export default function VaultClient() {
                     <Button 
                       className="w-full h-14 rounded-2xl font-black text-lg gap-3 bg-[#22C55E] hover:bg-[#1eb054] text-white shadow-lg shadow-green-500/20 active:scale-[0.98] transition-all disabled:opacity-50"
                       onClick={processFile}
-                      disabled={isProcessing || !password || (isClient && !isHttps && !isDev)}
+                      disabled={isProcessing || !password || (typeof window !== 'undefined' && !isHttps && !isDev)}
                     >
                       {isProcessing ? <RefreshCcw className="w-6 h-6 animate-spin" /> : (mode === "encrypt" ? <Lock className="w-6 h-6" /> : <Unlock className="w-6 h-6" />)}
                       {mode === "encrypt" ? "Encrypt to Vault" : "Extract Original"}
@@ -411,7 +314,7 @@ export default function VaultClient() {
                     <div className="space-y-3">
                       <Button 
                         className="w-full h-14 rounded-2xl font-black text-lg gap-3 bg-[#3B82F6] hover:bg-[#2563EB] text-white shadow-lg shadow-blue-500/20 active:scale-[0.98] transition-all"
-                        onClick={handleCopyResult}
+                        onClick={handleDownloadResult}
                       >
                         <Download className="w-6 h-6" />
                         Download {mode === "encrypt" ? "Vault" : "File"}
@@ -895,6 +798,7 @@ export default function VaultClient() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </ClientOnly>
   );
 }

@@ -5,9 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Download, Copy, Share2, RefreshCw, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { downloadBlob, copyImageBlob, shareBlob } from "@/lib/utils/download";
+import { ExportManager } from "@/lib/export-manager";
 import { formatBytes, formatSavings } from "@/lib/utils/fileSize";
-import { toast } from "sonner";
 
 interface ExportPanelProps {
   blob: Blob | null;
@@ -33,31 +32,20 @@ export function ExportPanel({
 
   const handleDownload = () => {
     if (!blob) return;
-    downloadBlob(blob, filename);
-    toast.success(`Downloaded ${filename}`);
+    ExportManager.downloadFile(blob, filename);
   };
 
   const handleCopy = async () => {
     if (!blob) return;
-    try {
-      await copyImageBlob(blob);
-      setCopied(true);
-      toast.success("Copied to clipboard!");
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      toast.error("Copy not supported in this browser.");
-    }
+    await ExportManager.copyImage(blob);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const handleShare = async () => {
     if (!blob) return;
-    try {
-      const ok = await shareBlob(blob, filename);
-      if (ok) setShared(true);
-      else toast.error("Sharing not supported on this device.");
-    } catch {
-      toast.error("Could not share file.");
-    }
+    const ok = await ExportManager.shareFile(blob, filename);
+    if (ok) setShared(true);
   };
 
   if (!blob) return null;

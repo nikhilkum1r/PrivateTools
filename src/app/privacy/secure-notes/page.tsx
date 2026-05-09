@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/privacy/secure-notes",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Secure Notes Online | Privacy-First Encrypted Notes Tool",
+    description: "Create encrypted secure notes directly in your browser with zero uploads, zero tracking, and privacy-first protection. Your notes stay private on your device.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/privacy/secure-notes" },
 };
 
 export default function SecureNotesPage() {

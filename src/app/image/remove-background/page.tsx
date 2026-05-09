@@ -11,6 +11,13 @@ export const metadata: Metadata = {
     description: "Remove image backgrounds securely in your browser with zero uploads and zero tracking.",
     url: "https://safetools.space/image/remove-background",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Remove Image Background Online | Free Privacy-First Background Remover",
+    description: "Remove image backgrounds securely in your browser with zero uploads and zero tracking. Fast privacy-first AI background remover for photos and graphics.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/image/remove-background" },
 };
 
 const BACKGROUND_REMOVER_FAQ = [

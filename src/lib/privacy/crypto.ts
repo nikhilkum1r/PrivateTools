@@ -8,11 +8,11 @@ const KEY_LENGTH = 256;
 const IV_LENGTH = 12;    // 96-bit IV for AES-GCM
 const SALT_LENGTH = 16;
 const ITERATIONS = 100_000;
+const VAULT_MAGIC = "ST-VAULT"; // 8 bytes
 
 /** Derive an AES-GCM key from a password using PBKDF2 */
 async function deriveKey(password: string, salt: Uint8Array): Promise<CryptoKey> {
   const enc = new TextEncoder();
-  // Ensure we pass a clean ArrayBuffer to satisfy strict types
   const saltBuffer = (salt.buffer instanceof SharedArrayBuffer 
     ? salt.buffer.slice(0) 
     : salt.buffer) as ArrayBuffer;
@@ -34,79 +34,116 @@ async function deriveKey(password: string, salt: Uint8Array): Promise<CryptoKey>
 }
 
 /**
- * Encrypt a Blob with AES-GCM 256-bit.
- * Output format: [salt(16)] + [iv(12)] + [ciphertext]
- * Returns a .locked Blob.
+ * Encrypt a File/Blob with metadata (filename, type).
+ * Output format: [VAULT_MAGIC(8)] + [salt(16)] + [iv(12)] + [metadata_len(4)] + [metadata_json] + [ciphertext]
  */
-export async function encryptBlob(blob: Blob, password: string): Promise<Blob> {
-  if (!crypto.subtle) throw new Error("Web Crypto API unavailable. Ensure the page is served over HTTPS.");
-  const salt = new Uint8Array(new ArrayBuffer(SALT_LENGTH));
-  crypto.getRandomValues(salt);
-  const iv = new Uint8Array(new ArrayBuffer(IV_LENGTH));
-  crypto.getRandomValues(iv);
+export async function encryptVault(file: File, password: string): Promise<Blob> {
+  if (!crypto.subtle) throw new Error("Web Crypto API unavailable.");
+  
+  const salt = crypto.getRandomValues(new Uint8Array(SALT_LENGTH));
+  const iv = crypto.getRandomValues(new Uint8Array(IV_LENGTH));
   const key = await deriveKey(password, salt);
-  const plaintext = await blob.arrayBuffer();
+  const plaintext = await file.arrayBuffer();
+
+  const metadata = JSON.stringify({
+    name: file.name,
+    type: file.type || "application/octet-stream",
+    size: file.size,
+    ts: Date.now()
+  });
+  const metadataBytes = new TextEncoder().encode(metadata);
+  
   const ciphertext = await crypto.subtle.encrypt({ name: ALGORITHM, iv }, key, plaintext);
 
-  // Pack: magic(8) + salt(16) + iv(12) + ciphertext
-  const magic = new TextEncoder().encode("PVTLOCK!"); // 8 bytes magic identifier
-  const output = new Uint8Array(magic.length + SALT_LENGTH + IV_LENGTH + ciphertext.byteLength);
-  let offset = 0;
-  output.set(magic, offset); offset += magic.length;
-  output.set(salt, offset); offset += SALT_LENGTH;
-  output.set(iv, offset); offset += IV_LENGTH;
-  output.set(new Uint8Array(ciphertext), offset);
+  // Construction
+  const magicBytes = new TextEncoder().encode(VAULT_MAGIC);
+  const metadataLen = new Uint8Array(new Uint32Array([metadataBytes.length]).buffer);
+  
+  const combined = new Blob([
+    magicBytes,
+    salt,
+    iv,
+    metadataLen,
+    metadataBytes,
+    ciphertext
+  ]);
 
-  return new Blob([output], { type: "application/octet-stream" });
+  return combined;
 }
 
 /**
- * Decrypt a .locked Blob.
- * Throws if magic bytes don't match (not a SafeTools locked file).
- * Throws if decryption fails (wrong password).
+ * Decrypt a vault Blob and recover original File.
  */
-export async function decryptBlob(blob: Blob, password: string): Promise<Blob> {
-  if (!crypto.subtle) throw new Error("Web Crypto API unavailable. Ensure the page is served over HTTPS.");
+export async function decryptVault(blob: Blob, password: string): Promise<{ blob: Blob, name: string, type: string }> {
+  if (!crypto.subtle) throw new Error("Web Crypto API unavailable.");
+  
   const buffer = await blob.arrayBuffer();
   const data = new Uint8Array(buffer);
+  const decoder = new TextDecoder();
 
   // Check magic
-  const magic = new TextDecoder().decode(data.slice(0, 8));
-  if (magic !== "PVTLOCK!") {
-    throw new Error("This doesn't appear to be a SafeTools locked file.");
+  const magic = decoder.decode(data.slice(0, 8));
+  if (magic !== VAULT_MAGIC) {
+    // Backward compatibility check for old "PVLT" magic if needed, 
+    // but we'll stick to ST-VAULT for the new production ready version.
+    if (decoder.decode(data.slice(28, 32)) === "PVLT") {
+       throw new Error("This is an older vault version. Please use the legacy extractor.");
+    }
+    throw new Error("Not a valid SafeTools Vault file.");
   }
 
   let offset = 8;
   const salt = data.slice(offset, offset + SALT_LENGTH); offset += SALT_LENGTH;
   const iv = data.slice(offset, offset + IV_LENGTH); offset += IV_LENGTH;
+  
+  const metadataLen = new Uint32Array(data.slice(offset, offset + 4).buffer)[0]; offset += 4;
+  const metadata = JSON.parse(decoder.decode(data.slice(offset, offset + metadataLen))); offset += metadataLen;
+  
   const ciphertext = data.slice(offset);
-
   const key = await deriveKey(password, salt);
+
   try {
     const plaintext = await crypto.subtle.decrypt({ name: ALGORITHM, iv }, key, ciphertext);
-    return new Blob([plaintext]);
+    return {
+      blob: new Blob([plaintext], { type: metadata.type }),
+      name: metadata.name,
+      type: metadata.type
+    };
   } catch {
-    throw new Error("Decryption failed. The password may be incorrect.");
+    throw new Error("Decryption failed. Invalid password or corrupted data.");
   }
 }
 
 /**
- * Encrypt a UTF-8 string to a Base64 string (for Secure Note).
- * Output: base64(magic + salt + iv + ciphertext)
+ * Encrypt a simple string (Secure Note).
  */
 export async function encryptText(text: string, password: string): Promise<string> {
-  const blob = new Blob([new TextEncoder().encode(text)]);
-  const encBlob = await encryptBlob(blob, password);
-  const buf = await encBlob.arrayBuffer();
-  return btoa(String.fromCharCode(...new Uint8Array(buf)));
+  const enc = new TextEncoder().encode(text);
+  const salt = crypto.getRandomValues(new Uint8Array(SALT_LENGTH));
+  const iv = crypto.getRandomValues(new Uint8Array(IV_LENGTH));
+  const key = await deriveKey(password, salt);
+  
+  const ciphertext = await crypto.subtle.encrypt({ name: ALGORITHM, iv }, key, enc);
+  
+  const combined = new Uint8Array(SALT_LENGTH + IV_LENGTH + ciphertext.byteLength);
+  combined.set(salt, 0);
+  combined.set(iv, SALT_LENGTH);
+  combined.set(new Uint8Array(ciphertext), SALT_LENGTH + IV_LENGTH);
+  
+  return btoa(String.fromCharCode(...combined));
 }
 
 /**
- * Decrypt a Base64 string back to UTF-8 text (for Secure Note).
+ * Decrypt a simple string.
  */
 export async function decryptText(cipherB64: string, password: string): Promise<string> {
-  const bytes = Uint8Array.from(atob(cipherB64), (c) => c.charCodeAt(0));
-  const blob = new Blob([bytes]);
-  const decBlob = await decryptBlob(blob, password);
-  return new TextDecoder().decode(await decBlob.arrayBuffer());
+  const data = Uint8Array.from(atob(cipherB64), (c) => c.charCodeAt(0));
+  const salt = data.slice(0, SALT_LENGTH);
+  const iv = data.slice(SALT_LENGTH, SALT_LENGTH + IV_LENGTH);
+  const ciphertext = data.slice(SALT_LENGTH + IV_LENGTH);
+  
+  const key = await deriveKey(password, salt);
+  const plaintext = await crypto.subtle.decrypt({ name: ALGORITHM, iv }, key, ciphertext);
+  
+  return new TextDecoder().decode(plaintext);
 }

@@ -18,345 +18,51 @@ import {
    Presentation, StickyNote, Trash, Unlock,
    Monitor, Smartphone, WifiOff, MousePointer2,
    Check, Info, ChevronDown, Rocket, Users,
-   UploadCloud, Download, ScanText, Heart, History, Command
+   UploadCloud, Download, ScanText, Heart, History, Command, Wand2
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
-import { TrustLayer } from "@/components/shared/TrustLayer";
-import { WhySafeTools } from "@/components/shared/WhySafeTools";
-import { LocalProcessingGuide } from "@/components/shared/LocalProcessingGuide";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useRetention } from "@/components/shared/RetentionProvider";
+import dynamic from "next/dynamic";
 
-const CATEGORIES = ["All", "Creative", "Documents", "Media", "Security", "Dev"] as const;
-type Category = typeof CATEGORIES[number];
+// Dynamic imports for below-fold components to improve initial load performance
+const TrustLayer = dynamic(() => import("@/components/shared/TrustLayer").then(mod => mod.TrustLayer), {
+   ssr: false,
+   loading: () => <div className="h-24 animate-pulse bg-secondary/20 rounded-3xl mx-6" />
+});
 
-interface Tool {
-   title: string;
-   desc: string;
-   href: string;
-   icon: any;
-   color: string;
-   cat: Category;
-   tags: string[];
-}
+const WhySafeTools = dynamic(() => import("@/components/shared/WhySafeTools").then(mod => mod.WhySafeTools), {
+   ssr: false,
+   loading: () => <div className="h-96 animate-pulse bg-secondary/10 rounded-[50px] mx-6" />
+});
 
-const tools: Tool[] = [
-   {
-      title: "Edit Images",
-      desc: "Pro editor with OCR, filters, crop, and batch export.",
-      href: "/image/editor",
-      icon: ImageIcon,
-      color: "from-blue-500 to-cyan-500",
-      cat: "Creative",
-      tags: ["crop", "resize", "filters", "ocr", "text", "editor", "photo", "batch"]
-   },
-   {
-      title: "AI Background Remover",
-      desc: "Remove image backgrounds instantly in-browser using local neural engines.",
-      href: "/image/remove-background",
-      icon: Sparkles,
-      color: "from-emerald-500 to-teal-500",
-      cat: "Creative",
-      tags: ["background", "remover", "ai", "transparent", "image", "edit"]
-   },
-   {
-      title: "Extract Text from Image (OCR)",
-      desc: "Extract text from images using neural recognition.",
-      href: "/image/ocr",
-      icon: FileSearch,
-      color: "from-blue-400 to-indigo-500",
-      cat: "Creative",
-      tags: ["ocr", "image to text", "scan", "extract", "reading", "photo"]
-   },
-   {
-      title: "Convert Image Format",
-      desc: "Convert 150+ formats: HEIC, WebP, AVIF, RAW, PDF.",
-      href: "/image/convert",
-      icon: Zap,
-      color: "from-yellow-500 to-orange-500",
-      cat: "Creative",
-      tags: ["heic", "webp", "avif", "raw", "pdf", "jpg", "png", "svg", "convert", "transform"]
-   },
-   {
-      title: "Compress Image (KB/MB)",
-      desc: "Shrink any image up to 90% with target-size control.",
-      href: "/image/compress",
-      icon: Layers,
-      color: "from-teal-500 to-green-500",
-      cat: "Creative",
-      tags: ["shrink", "optimize", "size", "kb", "mb", "compress", "quality", "tinify"]
-   },
-   {
-      title: "Extract Colors from Image",
-      desc: "Extract palettes, HEX, RGB, and HSL from any image.",
-      href: "/image/colors",
-      icon: Palette,
-      color: "from-purple-500 to-pink-500",
-      cat: "Creative",
-      tags: ["palette", "hex", "rgb", "hsl", "picker", "extract", "design", "colors"]
-   },
-   {
-      title: "Image to PPTX",
-      desc: "Transform images into professional PowerPoint presentations.",
-      href: "/image/to-pptx",
-      icon: Presentation,
-      color: "from-orange-600 to-red-600",
-      cat: "Creative",
-      tags: ["pptx", "powerpoint", "slides", "presentation", "image", "convert"]
-   },
-   {
-      title: "App Icon & Favicon Studio",
-      desc: "Generate professional iOS, Android, and PWA icon bundles instantly.",
-      href: "/image/icons",
-      icon: FileCode,
-      color: "from-indigo-500 to-purple-500",
-      cat: "Dev",
-      tags: ["favicon", "ios", "android", "pwa", "logo", "manifest", "assets", "mobile", "icons"]
-   },
-   {
-      title: "PDF Merger",
-      desc: "Combine multiple PDFs and images into one document.",
-      href: "/pdf/merge-pdf",
-      icon: FileText,
-      color: "from-red-500 to-pink-500",
-      cat: "Documents",
-      tags: ["combine", "join", "pdf", "pages", "images", "merge"]
-   },
-   {
-      title: "PDF Splitter",
-      desc: "Extract specific pages or split into separate files.",
-      href: "/pdf/split-pdf",
-      icon: Layers,
-      color: "from-orange-500 to-red-500",
-      cat: "Documents",
-      tags: ["extract", "pages", "split", "break", "separate", "pdf"]
-   },
-   {
-      title: "Compress PDF",
-      desc: "Shrink PDF files locally without losing visual quality.",
-      href: "/pdf/compress-pdf",
-      icon: Zap,
-      color: "from-orange-600 to-amber-500",
-      cat: "Documents",
-      tags: ["pdf", "compress", "shrink", "optimize", "size", "linearize"]
-   },
-   {
-      title: "Unlock PDF",
-      desc: "Remove password protection and security restrictions from PDFs.",
-      href: "/pdf/unlock-pdf",
-      icon: Unlock,
-      color: "from-blue-600 to-indigo-700",
-      cat: "Documents",
-      tags: ["pdf", "unlock", "password", "security", "remove", "decryption"]
-   },
-   {
-      title: "Protect PDF",
-      desc: "Add strong password protection and encryption to your PDF files locally.",
-      href: "/pdf/protect-pdf",
-      icon: Lock,
-      color: "from-indigo-600 to-blue-700",
-      cat: "Documents",
-      tags: ["pdf", "lock", "password", "security", "encryption", "protect"]
-   },
+const LocalProcessingGuide = dynamic(() => import("@/components/shared/LocalProcessingGuide").then(mod => mod.LocalProcessingGuide), {
+   ssr: false,
+   loading: () => <div className="h-96 animate-pulse bg-secondary/10 rounded-[50px] mx-6" />
+});
 
-   {
-      title: "Word to PDF",
-      desc: "Convert DOCX manuscripts to professional PDF documents.",
-      href: "/document/word-to-pdf",
-      icon: FileText,
-      color: "from-blue-600 to-indigo-600",
-      cat: "Documents",
-      tags: ["word", "pdf", "docx", "convert", "document"]
-   },
-   {
-      title: "PDF to Text",
-      desc: "Extract text layers and character matrices from any PDF.",
-      href: "/document/pdf-to-txt",
-      icon: FileSearch,
-      color: "from-teal-600 to-cyan-600",
-      cat: "Documents",
-      tags: ["pdf", "text", "extract", "ocr", "txt", "convert"]
-   },
-   {
-      title: "Case Converter",
-      desc: "Transform text casing instantly with sentence, title, and dev modes.",
-      href: "/document/text-tools/case-converter",
-      icon: CaseSensitive,
-      color: "from-blue-500 to-indigo-500",
-      cat: "Documents",
-      tags: ["text", "case", "converter", "upper", "lower", "camel", "snake", "title"]
-   },
-   {
-      title: "Word Counter",
-      desc: "Real-time character, word, and reading time analytics.",
-      href: "/document/text-tools/word-counter",
-      icon: AlignLeft,
-      color: "from-teal-500 to-emerald-600",
-      cat: "Documents",
-      tags: ["text", "word", "count", "character", "length", "reading", "time"]
-   },
-
-   {
-      title: "Metadata Cleaner",
-      desc: "Remove hidden data, EXIF, and GPS tracking locally.",
-      href: "/security/metadata-cleaner",
-      icon: ShieldCheck,
-      color: "from-green-500 to-emerald-500",
-      cat: "Security",
-      tags: ["exif", "metadata", "gps", "location", "strip", "clean", "privacy", "secure"]
-   },
-   {
-      title: "Secure Vault (AES-256)",
-      desc: "AES-256 GCM client-side file encryption. Zero-server.",
-      href: "/security/vault",
-      icon: Lock,
-      color: "from-slate-600 to-gray-900",
-      cat: "Security",
-      tags: ["encrypt", "decrypt", "aes", "password", "lock", "secure", "privacy"]
-   },
-   {
-      title: "Password Generator",
-      desc: "Generate high-entropy, cryptographically secure passwords.",
-      href: "/privacy/password-generator",
-      icon: Key,
-      color: "from-blue-600 to-indigo-600",
-      cat: "Security",
-      tags: ["password", "generator", "random", "secure", "entropy", "key"]
-   },
-   {
-      title: "Password Checker",
-      desc: "Analyze password strength and vulnerability locally.",
-      href: "/privacy/password-checker",
-      icon: ShieldCheck,
-      color: "from-emerald-500 to-green-600",
-      cat: "Security",
-      tags: ["password", "check", "strength", "secure", "privacy", "entropy", "leak"]
-   },
-   {
-      title: "Secure Notes",
-      desc: "Create encrypted, self-destructing notes locally.",
-      href: "/privacy/secure-notes",
-      icon: StickyNote,
-      color: "from-yellow-500 to-amber-600",
-      cat: "Security",
-      tags: ["note", "encrypt", "secure", "private", "self-destruct"]
-   },
-   {
-      title: "File Shredder",
-      desc: "Permanently wipe sensitive files from memory.",
-      href: "/security/file-shredder",
-      icon: Trash,
-      color: "from-red-600 to-rose-700",
-      cat: "Security",
-      tags: ["shred", "delete", "wipe", "secure", "privacy", "file"]
-   },
-   {
-      title: "Hide Text inside Image",
-      desc: "Hide secret messages invisibly inside images.",
-      href: "/security/steganography",
-      icon: Eye,
-      color: "from-gray-500 to-slate-700",
-      cat: "Security",
-      tags: ["hidden", "secret", "message", "lsb", "stego", "privacy", "hide"]
-   },
-   {
-      title: "QR Code Generator",
-      desc: "Generate and scan QR codes with custom styling.",
-      href: "/tools/qr-generator",
-      icon: QrCode,
-      color: "from-sky-500 to-blue-500",
-      cat: "Dev",
-      tags: ["qrcode", "scan", "generate", "link", "wifi", "contact"]
-   },
-   {
-      title: "Developer Utilities",
-      desc: "JSON formatter, Base64, hash generators and more.",
-      href: "/devtools",
-      icon: Terminal,
-      color: "from-green-600 to-teal-600",
-      cat: "Dev",
-      tags: ["json", "base64", "hash", "md5", "sha256", "format", "developer"]
-   },
-   {
-      title: "JSON & CSV Converter",
-      desc: "Convert JSON to CSV and back with zero-server privacy.",
-      href: "/devtools/data-converter",
-      icon: Table,
-      color: "from-orange-400 to-red-500",
-      cat: "Dev",
-      tags: ["json", "csv", "convert", "table", "data", "transform", "excel"]
-   },
-   {
-      title: "Base64 Encoder & Decoder",
-      desc: "Encode and decode text and images with zero-server privacy.",
-      href: "/devtools/base64",
-      icon: Binary,
-      color: "from-blue-600 to-indigo-700",
-      cat: "Dev",
-      tags: ["base64", "encode", "decode", "binary", "image", "string", "developer"]
-   }
-];
+import { tools, CATEGORIES, Category, Tool } from "@/lib/tools-data";
 
 export default function HomePageClient() {
    const router = useRouter();
    const [search, setSearch] = useState("");
    const [activeCategory, setActiveCategory] = useState<Category>("All");
-
    const [dragActive, setDragActive] = useState(false);
    const [smartRoutingFile, setSmartRoutingFile] = useState<File | null>(null);
    const [isRoutingOpen, setIsRoutingOpen] = useState(false);
 
-   // --- BIG UPGRADE: COMMAND PALETTE & RETENTION ---
-   const [isCommandOpen, setIsCommandOpen] = useState(false);
-   const [commandSearch, setCommandSearch] = useState("");
-   const [favorites, setFavorites] = useState<string[]>([]);
-   const [recentTools, setRecentTools] = useState<string[]>([]);
+   const { favorites, recentTools, toggleFavorite, trackUsage } = useRetention();
 
    useEffect(() => {
-      // Load retention data
-      const savedFavs = localStorage.getItem("safetools-favs");
-      const savedRecent = localStorage.getItem("safetools-recent");
-      if (savedFavs) setFavorites(JSON.parse(savedFavs));
-      if (savedRecent) setRecentTools(JSON.parse(savedRecent));
-
-      // Keyboard shortcut for Command Palette
-      const handleKeyDown = (e: KeyboardEvent) => {
-         if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-            e.preventDefault();
-            setIsCommandOpen(prev => !prev);
-         }
-      };
-      window.addEventListener("keydown", handleKeyDown);
-      return () => window.removeEventListener("keydown", handleKeyDown);
+      // Retention is handled by the provider now, but we can still trigger effects here if needed
    }, []);
-
-   const toggleFavorite = (href: string) => {
-      const newFavs = favorites.includes(href)
-         ? favorites.filter(f => f !== href)
-         : [...favorites, href];
-      setFavorites(newFavs);
-      localStorage.setItem("safetools-favs", JSON.stringify(newFavs));
-   };
-
-   const trackUsage = (href: string) => {
-      const newRecent = [href, ...recentTools.filter(t => t !== href)].slice(0, 4);
-      setRecentTools(newRecent);
-      localStorage.setItem("safetools-recent", JSON.stringify(newRecent));
-   };
-
-   const filteredCommandTools = useMemo(() => {
-      if (!commandSearch) return tools.slice(0, 10);
-      return tools.filter(t =>
-         t.title.toLowerCase().includes(commandSearch.toLowerCase()) ||
-         t.tags.some(tag => tag.toLowerCase().includes(commandSearch.toLowerCase()))
-      ).slice(0, 10);
-   }, [commandSearch, tools]);
 
    const filteredTools = useMemo(() => {
       return tools.filter(t => {
@@ -414,23 +120,14 @@ export default function HomePageClient() {
                {/* FULL HERO BACKGROUND IMAGE */}
                <div className="absolute inset-0 z-0">
                   <div
-                     className="absolute inset-0 bg-[url('/hero-bg.png')] bg-cover bg-center opacity-30 dark:opacity-40"
-                     style={{ backgroundAttachment: 'fixed' }}
+                     className="absolute inset-0 bg-[url('/hero-bg.webp')] bg-cover bg-center opacity-30 dark:opacity-40"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
 
-                  {/* Glowing Secure Nodes */}
+                  {/* Glowing Secure Nodes – CSS-only, no JS timer */}
                   <div className="absolute inset-0 z-0 pointer-events-none">
-                     <motion.div
-                        animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-                        transition={{ duration: 8, repeat: Infinity }}
-                        className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 blur-[140px] rounded-full"
-                     />
-                     <motion.div
-                        animate={{ scale: [1.2, 1, 1.2], opacity: [0.05, 0.15, 0.05] }}
-                        transition={{ duration: 10, repeat: Infinity }}
-                        className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-500/20 blur-[140px] rounded-full"
-                     />
+                     <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 blur-[140px] rounded-full animate-pulse opacity-10" />
+                     <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-500/20 blur-[120px] rounded-full animate-pulse opacity-5" style={{ animationDelay: '1s' }} />
                   </div>
                </div>
 
@@ -533,41 +230,30 @@ export default function HomePageClient() {
                            <div className="absolute -inset-10 bg-blue-500/10 blur-[120px] rounded-full opacity-30 animate-pulse delay-700" />
 
                            {/* Main Image with Glass Container */}
-                           <div className="relative rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-2xl p-4 shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
+                           <div className="relative rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl p-4 shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
                               <Image
-                                 src="/hero-engine.png"
-                                 alt="SafeTools Futuristic Privacy Engine"
+                                 src="/hero-engine.webp"
+                                 alt="SafeTools Privacy Engine - Browser-based local file processing"
                                  width={600}
                                  height={600}
                                  className="rounded-[32px] object-cover shadow-2xl brightness-110 contrast-110"
                                  priority
+                                 fetchPriority="high"
                               />
-                              {/* Scanning Line Effect */}
-                              <motion.div
-                                 animate={{ top: ["0%", "100%", "0%"] }}
-                                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                                 className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10 pointer-events-none"
-                              />
+                              {/* Scanning Line Effect - CSS animation */}
+                              <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10 pointer-events-none animate-scan" />
                            </div>
 
-                           {/* Floating Tech Badges */}
-                           <motion.div
-                              animate={{ y: [0, -10, 0] }}
-                              transition={{ duration: 4, repeat: Infinity }}
-                              className="absolute -top-6 -right-6 px-6 py-3 rounded-2xl bg-background/80 backdrop-blur-xl border border-primary/20 shadow-xl z-20 flex items-center gap-3"
-                           >
+                           {/* Floating Tech Badges - CSS float animations */}
+                           <div className="absolute -top-6 -right-6 px-6 py-3 rounded-2xl bg-background/80 backdrop-filter: blur(12px) border border-primary/20 shadow-xl z-20 flex items-center gap-3 animate-float">
                               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                               <span className="text-[10px] font-black uppercase tracking-widest italic">Engine v2.0 Live</span>
-                           </motion.div>
+                           </div>
 
-                           <motion.div
-                              animate={{ y: [0, 10, 0] }}
-                              transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-                              className="absolute -bottom-8 -left-8 px-6 py-3 rounded-2xl bg-background/80 backdrop-blur-xl border border-blue-500/20 shadow-xl z-20 flex items-center gap-3"
-                           >
+                           <div className="absolute -bottom-8 -left-8 px-6 py-3 rounded-2xl bg-background/80 backdrop-filter: blur(12px) border border-blue-500/20 shadow-xl z-20 flex items-center gap-3 animate-float-slow">
                               <div className="w-2 h-2 rounded-full bg-blue-500" />
                               <span className="text-[10px] font-black uppercase tracking-widest italic">100% Local Processing</span>
-                           </motion.div>
+                           </div>
                         </div>
                      </motion.div>
                   </div>
@@ -595,7 +281,8 @@ export default function HomePageClient() {
             </section>
 
             {/* TECHNICAL INFRASTRUCTURE SECTION */}
-            <section className="py-24 relative overflow-hidden">
+            <section className="py-24 relative overflow-hidden cv-auto">
+               <h2 className="sr-only">Technical Infrastructure</h2>
                <div className="container mx-auto px-6">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
                      {[
@@ -635,7 +322,8 @@ export default function HomePageClient() {
             </section>
 
             {/* BENTO GRID FEATURES */}
-            <section className="py-32 bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm">
+            <section className="py-32 bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm cv-auto">
+               <h2 className="sr-only">Core Features</h2>
                <div className="container mx-auto px-6">
                   <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[700px]">
                      {/* Large Feature 1 */}
@@ -691,7 +379,7 @@ export default function HomePageClient() {
             <LocalProcessingGuide />
 
             {/* MODERN WORKFLOW SECTION */}
-            <section className="py-32 bg-secondary/80 backdrop-blur-sm relative">
+            <section className="py-32 bg-secondary/80 backdrop-blur-sm relative cv-auto">
                <div className="container mx-auto px-6">
                   <div className="flex flex-col lg:flex-row items-center gap-20 max-w-6xl mx-auto">
                      <div className="flex-1 space-y-8">
@@ -1557,11 +1245,12 @@ export default function HomePageClient() {
                         <div className="order-2 lg:order-1">
                            <div className="relative rounded-[40px] overflow-hidden border border-border shadow-2xl group">
                               <Image
-                                 src="/images/visuals/secure_local_processing.png"
-                                 alt="Secure Local Processing"
+                                 src="/images/visuals/secure_local_processing.webp"
+                                 alt="Secure Local Processing - Browser-based privacy-first file tools"
                                  width={800}
                                  height={800}
                                  className="w-full h-auto group-hover:scale-105 transition-transform duration-1000"
+                                 loading="lazy"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                               <div className="absolute bottom-8 left-8 right-8 p-6 glass-card rounded-2xl border-white/10">
@@ -1726,77 +1415,7 @@ export default function HomePageClient() {
                </DialogContent>
             </Dialog>
 
-            {/* BIG UPGRADE: COMMAND PALETTE OVERLAY */}
-            <AnimatePresence>
-               {isCommandOpen && (
-                  <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] px-4">
-                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={() => setIsCommandOpen(false)}
-                        className="absolute inset-0 bg-background/80 backdrop-blur-sm"
-                     />
-                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95, y: -20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.95, y: -20 }}
-                        className="relative w-full max-w-2xl glass-card border border-border shadow-2xl rounded-3xl overflow-hidden backdrop-blur-3xl"
-                     >
-                        <div className="flex items-center px-6 py-6 border-b border-border gap-4">
-                           <Command className="w-6 h-6 text-primary" />
-                           <input
-                              autoFocus
-                              type="text"
-                              value={commandSearch}
-                              onChange={(e) => setCommandSearch(e.target.value)}
-                              placeholder="Search across 150+ tools..."
-                              className="flex-1 bg-transparent border-none outline-none text-xl font-bold placeholder:opacity-30 placeholder:italic"
-                           />
-                           <div className="text-[10px] font-black uppercase tracking-widest opacity-40 px-3 py-1 rounded-lg bg-secondary/80 dark:bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm">ESC</div>
-                        </div>
-                        <div className="max-h-[60vh] overflow-y-auto p-4 space-y-2 no-scrollbar">
-                           {filteredCommandTools.length > 0 ? filteredCommandTools.map(tool => (
-                              <button
-                                 key={tool.href}
-                                 onClick={() => {
-                                    trackUsage(tool.href);
-                                    router.push(tool.href);
-                                    setIsCommandOpen(false);
-                                 }}
-                                 className="w-full flex items-center gap-6 p-4 rounded-2xl hover:bg-secondary/80 dark:bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm/50 transition-all text-left group"
-                              >
-                                 <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br flex items-center justify-center text-foreground shadow-lg group-hover:scale-105 transition-transform", tool.color)}>
-                                    <tool.icon className="w-6 h-6" />
-                                 </div>
-                                 <div className="flex-1">
-                                    <div className="font-black uppercase italic tracking-tight font-heading group-hover:text-primary transition-colors">{tool.title}</div>
-                                    <div className="text-xs text-muted-foreground opacity-60 line-clamp-1">{tool.desc}</div>
-                                 </div>
-                                 <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-all" />
-                              </button>
-                           )) : (
-                              <div className="p-12 text-center space-y-4">
-                                 <div className="text-4xl">🔎</div>
-                                 <div className="text-sm font-black uppercase tracking-widest opacity-40 italic">No tools found matching "{commandSearch}"</div>
-                              </div>
-                           )}
-                        </div>
-                        <div className="px-6 py-4 bg-secondary/80 dark:bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm/30 border-t border-border flex items-center justify-between">
-                           <div className="flex items-center gap-6">
-                              <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-40">
-                                 <span className="p-1 rounded bg-secondary/80 dark:bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm border border-border">↑↓</span> Navigate
-                              </div>
-                              <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-40">
-                                 <span className="p-1 rounded bg-secondary/80 dark:bg-secondary/80 dark:bg-secondary/40 backdrop-blur-sm border border-border">ENTER</span> Launch
-                              </div>
-                           </div>
-                           <div className="text-[10px] font-black uppercase tracking-widest text-primary italic">SafeTools v2.0</div>
-                        </div>
-                     </motion.div>
-                  </div>
-               )}
-            </AnimatePresence>
+
          </main>
          <Footer />
       </div>

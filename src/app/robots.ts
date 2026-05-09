@@ -5,7 +5,14 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/admin/', '/login/'], // Just in case these are added later
+      disallow: [
+        '/admin/', 
+        '/login/',
+        '/api/',
+        '/temp/',
+        '/_next/',
+        '/static/',
+      ],
     },
     sitemap: 'https://safetools.space/sitemap.xml',
   }

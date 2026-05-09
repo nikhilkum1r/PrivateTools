@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf/unlock-pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Unlock PDF Files | Remove PDF Password Protection Securely",
+    description: "Unlock password-protected PDF files securely in your browser with zero uploads and zero tracking. Privacy-first PDF password removal tool.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf/unlock-pdf" },
 };
 
 export default function UnlockPdfPage() {

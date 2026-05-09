@@ -30,8 +30,18 @@ import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { ExportManager } from "@/lib/export-manager";
-import { FAQ } from "@/components/shared/FAQ";
-import { Footer } from "@/components/shared/Footer";
+import dynamic from "next/dynamic";
+
+// Dynamic imports for below-fold components to improve initial load performance
+const FAQ = dynamic(() => import("@/components/shared/FAQ").then(mod => mod.FAQ), {
+  ssr: false,
+  loading: () => <div className="h-64 animate-pulse bg-secondary/10 rounded-3xl mx-6" />
+});
+
+const Footer = dynamic(() => import("@/components/shared/Footer").then(mod => mod.Footer), {
+  ssr: false,
+  loading: () => <div className="h-24 animate-pulse bg-secondary/10 rounded-t-3xl" />
+});
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 import { VIDEO_TOOLS_FAQ } from "@/lib/faq-content";
 import { loadFFmpegInstance } from "@/lib/ffmpeg-loader";

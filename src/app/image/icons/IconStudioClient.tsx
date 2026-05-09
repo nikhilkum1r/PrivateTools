@@ -283,12 +283,12 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
       const sizes: ({ s: number; n: string; p: GeneratedIcon['platform']; scale?: string } | { w: number; h: number; n: string; p: GeneratedIcon['platform'] })[] = [
         // Web / Favicons
-        { s: 16, n: 'favicon-16x16.png', p: 'web' },
-        { s: 32, n: 'favicon-32x32.png', p: 'web' },
+        { s: 16, n: 'favicon-16x16.webp', p: 'web' },
+        { s: 32, n: 'favicon-32x32.webp', p: 'web' },
         { s: 48, n: 'favicon-48x48.png', p: 'web' },
-        { s: 180, n: 'apple-touch-icon.png', p: 'ios' },
-        { s: 192, n: 'android-chrome-192x192.png', p: 'android' },
-        { s: 512, n: 'android-chrome-512x512.png', p: 'android' },
+        { s: 180, n: 'apple-touch-icon.webp', p: 'ios' },
+        { s: 192, n: 'android-chrome-192x192.webp', p: 'android' },
+        { s: 512, n: 'android-chrome-512x512.webp', p: 'android' },
         
         // Android Specific (mipmap)
         { s: 48, n: 'ic_launcher.png', p: 'android', scale: 'mdpi' },
@@ -312,7 +312,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
         { s: 512, n: 'pwa-icon-512x512.png', p: 'pwa' },
 
         // SOCIAL MEDIA (Branding Toolkit)
-        { w: 1200, h: 630, n: 'og-image.png', p: 'social' },
+        { w: 1200, h: 630, n: 'og-image.webp', p: 'social' },
         { w: 1200, h: 600, n: 'twitter-preview.png', p: 'social' },
         { w: 1080, h: 1080, n: 'instagram-post.png', p: 'social' },
         { w: 1080, h: 1350, n: 'instagram-portrait.png', p: 'social' },
@@ -566,16 +566,16 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
     const htmlTags = `<!-- SafeTools Branding Embed Tags -->
 <!-- Place these in your <head> section -->
 
-<link rel="apple-touch-icon" sizes="180x180" href="/ios/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/ios/apple-touch-icon.webp">
+<link rel="icon" type="image/webp" sizes="32x32" href="/favicon/favicon-32x32.webp">
+<link rel="icon" type="image/webp" sizes="16x16" href="/favicon/favicon-16x16.webp">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="${bgColor === 'transparent' ? '#2d89ef' : bgColor}">
 <meta name="theme-color" content="${bgColor === 'transparent' ? '#ffffff' : bgColor}">
 
 <!-- Social Media Previews -->
-<meta property="og:image" content="/social/og-image.png">
+<meta property="og:image" content="/social/og-image.webp">
 <meta name="twitter:image" content="/social/twitter-preview.png">`;
 
     zip.file("html_embed_tags.html", htmlTags);
@@ -586,19 +586,19 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
 
 1. Web / Favicon (favicon/):
    - Place in your website's root or /public directory.
-   - <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+   - <link rel="icon" type="image/webp" sizes="32x32" href="/favicon/favicon-32x32.webp">
 
 2. PWA Integration (site.webmanifest):
    - Place in root directory.
    - <link rel="manifest" href="/site.webmanifest">
 
 3. Social Media Branding (social/):
-   - og-image.png: Facebook/LinkedIn Open Graph preview.
+   - og-image.webp: Facebook/LinkedIn Open Graph preview.
    - twitter-preview.png: Twitter/X Card preview.
    - instagram-post.png: High-resolution branding assets.
 
 4. Native iOS (ios/):
-   - Apple Touch Icon: <link rel="apple-touch-icon" href="/ios/apple-touch-icon.png">
+   - Apple Touch Icon: <link rel="apple-touch-icon" href="/ios/apple-touch-icon.webp">
    - Xcode: Copy 'AppIcon.appiconset' into Assets.xcassets.
 
 5. Native Android (android/):
@@ -636,7 +636,7 @@ Metadata:
               filter: `brightness(${brightness}%) contrast(${contrast}%)`
             }}
           >
-             {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+             {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Studio favicon preview" />}
           </div>
           <div className={`text-[10px] font-black uppercase tracking-[0.2em] truncate opacity-60 ${previewTheme === 'dark' ? 'text-white' : 'text-black'}`}>
              Studio
@@ -669,7 +669,7 @@ Metadata:
                 filter: `brightness(${brightness}%) contrast(${contrast}%)`
               }}
             >
-              {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+              {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Mobile home icon preview" />}
             </div>
             {[...Array(7)].map((_, i) => (
               <div key={i} className="aspect-square rounded-xl bg-white/10 backdrop-blur-sm" />
@@ -688,7 +688,7 @@ Metadata:
                     filter: `brightness(${brightness}%) contrast(${contrast}%)`
                   }}
                 >
-                   {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+                   {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Notification icon preview" />}
                 </div>
                 <div className="space-y-1">
                    <div className={`h-2 w-12 rounded-full ${previewTheme === 'dark' ? 'bg-white/20' : 'bg-black/10'}`} />
@@ -711,7 +711,7 @@ Metadata:
                         filter: `brightness(${brightness}%) contrast(${contrast}%)`
                       }}
                     >
-                       {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+                       {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Settings icon preview" />}
                     </div>
                   ) : (
                     <div className={`w-6 h-6 rounded-md ${previewTheme === 'dark' ? 'bg-white/10' : 'bg-black/5'}`} />
@@ -741,7 +741,7 @@ Metadata:
            filter: `brightness(${brightness}%) contrast(${contrast}%)`
          }}
        >
-         {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+         {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="macOS dock icon preview" />}
        </div>
        <div className="absolute bottom-2 w-1.5 h-1.5 bg-white rounded-full opacity-60" />
        {[...Array(3)].map((_, i) => (
@@ -771,7 +771,7 @@ Metadata:
              filter: `brightness(${brightness}%) contrast(${contrast}%)`
            }}
          >
-           {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+           {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Windows taskbar icon preview" />}
          </div>
          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-0.5 bg-blue-400 rounded-full" />
        </div>
@@ -797,7 +797,7 @@ Metadata:
           boxShadow: shadow > 0 ? `0 ${shadow/5}px ${shadow/2}px rgba(0,0,0,0.3)` : 'none'
         }}
       >
-         {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} />}
+         {preview && <img src={preview} className="w-full h-full object-contain" style={{ transform: `scale(${zoom})` }} alt="Desktop asset preview" />}
       </div>
       <div className="w-24 h-3 bg-muted/60 rounded-full z-10" />
     </div>
@@ -1445,7 +1445,7 @@ Metadata:
                                  icons: results.filter(i => i.platform === 'android' || i.platform === 'web').map(i => ({
                                    src: `/${i.name}`,
                                    sizes: `${i.size}x${i.size}`,
-                                   type: "image/png",
+                                   type: "image/webp",
                                    purpose: "any maskable"
                                  })),
                                  start_url: "/",
@@ -1496,7 +1496,7 @@ Metadata:
                              size="sm" 
                              className="h-8 gap-2 text-[10px] font-black uppercase tracking-widest hover:bg-blue-500/10 hover:text-blue-500 transition-all"
                              onClick={() => {
-                               const html = `<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">\n<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n<link rel="manifest" href="/site.webmanifest">`;
+                               const html = `<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">\n<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">\n<link rel="apple-touch-icon" href="/apple-touch-icon.webp">\n<link rel="manifest" href="/site.webmanifest">`;
                                navigator.clipboard.writeText(html);
                                toast.success("HTML tags copied!");
                              }}
@@ -1515,14 +1515,14 @@ Metadata:
                         </div>
                         <pre className="text-[11px] font-mono text-muted-foreground bg-black/40 p-6 rounded-2xl overflow-x-auto border border-white/5 h-[220px] scrollbar-hide shadow-inner relative">
                           <div className="absolute top-0 right-0 p-2 text-[8px] font-black uppercase opacity-20 pointer-events-none">HTML</div>
-  {`<link rel="icon" type="image/png" 
+  {`<link rel="icon" type="image/webp" 
         sizes="32x32" 
-        href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" 
+        href="/favicon-32x32.webp">
+  <link rel="icon" type="image/webp" 
         sizes="16x16" 
-        href="/favicon-16x16.png">
+        href="/favicon-16x16.webp">
   <link rel="apple-touch-icon" 
-        href="/apple-touch-icon.png">
+        href="/apple-touch-icon.webp">
   <link rel="manifest" 
         href="/site.webmanifest">`}
                         </pre>

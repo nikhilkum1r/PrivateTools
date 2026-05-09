@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/document",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Online Document Conversion & Text Utilities | SafeTools",
+    description: "Convert Word to PDF, extract text from PDF, and access a suite of text utilities. All processed locally in your browser with 100% privacy.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/document" },
 };
 
 export default function DocumentHubPage() {

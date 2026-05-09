@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf/protect-pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Protect PDF Files | Add Password Security to PDFs",
+    description: "Protect PDF files with password encryption securely in your browser. Privacy-first PDF protection tool with zero uploads and local processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf/protect-pdf" },
 };
 
 export default function ProtectPdfPage() {

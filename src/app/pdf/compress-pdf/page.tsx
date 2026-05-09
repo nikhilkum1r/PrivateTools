@@ -23,6 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://safetools.space/pdf/compress-pdf",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Compress PDF Files Online | Free Privacy-First PDF Compressor",
+    description: "Compress PDF files securely in your browser with zero uploads and zero tracking. Reduce PDF size instantly using privacy-first local processing.",
+    images: ["/og-image.webp"],
+  },
+  alternates: { canonical: "/pdf/compress-pdf" },
 };
 
 export default function CompressPdfPage() {

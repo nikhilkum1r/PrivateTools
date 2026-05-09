@@ -44,6 +44,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${title} | SafeTools Studio`,
       description: `Generate production-ready icons and favicons directly in your browser.`,
       type: "website",
+    },
+    alternates: {
+      canonical: `/image/icons/${slug}`,
     }
   };
 }

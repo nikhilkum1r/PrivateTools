@@ -197,25 +197,43 @@ export const useImageStore = create<ImageState>((set) => ({
   updateSettings: (settings) =>
     set((state) => ({
       settings: { ...state.settings, ...settings },
-      files: state.files.map(f => f.status === "completed" ? { ...f, status: "idle" as const } : f)
+      files: state.files.map(f => {
+        if (f.status === "completed") {
+          if (f.processedUrl) URL.revokeObjectURL(f.processedUrl);
+          return { ...f, status: "idle" as const, processedUrl: undefined, outputSize: undefined };
+        }
+        return f;
+      })
     })),
   updateFileSettings: (id, settings) =>
     set((state) => ({
-      files: state.files.map((f) =>
-        f.id === id ? { ...f, ...settings, status: "idle" as const } : f
-      ),
+      files: state.files.map((f) => {
+        if (f.id === id) {
+          if (f.processedUrl) URL.revokeObjectURL(f.processedUrl);
+          return { ...f, ...settings, status: "idle" as const, processedUrl: undefined, outputSize: undefined };
+        }
+        return f;
+      }),
     })),
   updateFileCrop: (id, crop) =>
     set((state) => ({
-      files: state.files.map((f) =>
-        f.id === id ? { ...f, crop: { x: 0, y: 0, width: 0, height: 0, ...f.crop, ...crop }, status: "idle" as const } : f
-      ),
+      files: state.files.map((f) => {
+        if (f.id === id) {
+          if (f.processedUrl) URL.revokeObjectURL(f.processedUrl);
+          return { ...f, crop: { x: 0, y: 0, width: 0, height: 0, ...f.crop, ...crop }, status: "idle" as const, processedUrl: undefined, outputSize: undefined };
+        }
+        return f;
+      }),
     })),
   updateFileBlurs: (id, blurs) =>
     set((state) => ({
-      files: state.files.map((f) =>
-        f.id === id ? { ...f, blurs, status: "idle" as const } : f
-      ),
+      files: state.files.map((f) => {
+        if (f.id === id) {
+          if (f.processedUrl) URL.revokeObjectURL(f.processedUrl);
+          return { ...f, blurs, status: "idle" as const, processedUrl: undefined, outputSize: undefined };
+        }
+        return f;
+      }),
     })),
   setFileStatus: (id, status, progress = 0) =>
     set((state) => ({

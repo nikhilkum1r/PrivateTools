@@ -19,7 +19,7 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
   const schemas: any[] = [
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": ["WebApplication", "SoftwareApplication"],
       "name": name,
       "description": description,
       "url": url,
@@ -30,10 +30,19 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
         "price": "0",
         "priceCurrency": "USD"
       },
-      "image": image || "https://safetools.space/android-chrome-512x512.png",
+      "image": image || "https://safetools.space/android-chrome-512x512.webp",
       "permissions": "None (Client-side only)",
       "browserRequirements": "Requires JavaScript and WebAssembly",
-      "softwareVersion": "1.0.0"
+      "softwareVersion": "1.0.0",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SafeTools",
+        "url": "https://safetools.space",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://safetools.space/android-chrome-512x512.webp"
+        }
+      }
     }
   ];
 

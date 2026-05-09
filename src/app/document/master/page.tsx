@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Docs Master - Universal Online Document Processor | SafeTools",
   description: "View and edit PDF, DOCX, XLSX, PPTX, and CSV files privately in your browser. High-performance WASM rendering with zero-upload privacy.",
   keywords: ["docx viewer online", "pptx editor online", "xlsx reader", "pdf processor", "private document editor", "browser office suite", "wasm document rendering"],
+  twitter: {
+    card: "summary_large_image",
+    title: "Docs Master - Universal Online Document Processor | SafeTools",
+    description: "View and edit PDF, DOCX, XLSX, PPTX, and CSV files privately in your browser. High-performance WASM rendering with zero-upload privacy.",
+    images: ["/og-image.webp"],
+  },
   alternates: {
     canonical: "/document/master",
   },
