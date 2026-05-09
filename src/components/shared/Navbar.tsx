@@ -22,6 +22,7 @@ import { useRouter } from "next/navigation";
 import { useImageStore } from "@/store/useImageStore";
 import { usePdfStore } from "@/store/usePdfStore";
 import { useVideoStore } from "@/store/useVideoStore";
+import { motion, AnimatePresence } from "framer-motion";
 import { DropZone } from "./DropZone";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -58,92 +59,76 @@ import { cn } from "@/lib/utils";
 
 const toolCategories = [
   {
-    title: "Image Tools",
+    title: "Image Studio",
     icon: ImageIcon,
     items: [
-      { name: "Image Compressor", href: "/image/compress", desc: "Batch reduce file size." },
+      { name: "Ultimate Editor", href: "/image/editor", desc: "Pro editor with filters & OCR." },
+      { name: "Background Remover", href: "/image/remove-background", desc: "AI-powered segmenting." },
+      { name: "Image Compressor", href: "/image/compress", desc: "Reduce size with KB/MB target." },
       { name: "Format Converter", href: "/image/convert", desc: "Convert HEIC, WebP, AVIF." },
-      { name: "Ultimate Editor", href: "/image/editor", desc: "Crop, rotate and OCR." },
-      { name: "Image to PPTX", href: "/image/to-pptx", desc: "Create Presentations." },
-      { name: "Color Lab", href: "/image/colors", desc: "Extract palettes." },
+      { name: "Color Lab", href: "/image/colors", desc: "Extract palettes & HEX." },
     ]
   },
   {
-    title: "Document Tools",
+    title: "PDF & Documents",
     icon: FileText,
     items: [
-      { name: "PDF Merger", href: "/pdf/merge", desc: "Combine multiple PDFs and images." },
-      { name: "PDF Splitter", href: "/pdf/split", desc: "Extract pages or split ranges." },
-      { name: "PDF to PPTX/DOCX", href: "/pdf/convert", desc: "Secure local layout conversion." },
-      { name: "Format Converter", href: "/image/convert", desc: "Convert PDF, HEIC, WebP." },
+      { name: "PDF Merger", href: "/pdf/merge-pdf", desc: "Combine multiple documents." },
+      { name: "PDF Splitter", href: "/pdf/split-pdf", desc: "Extract specific pages." },
+      { name: "PDF Compressor", href: "/pdf/compress-pdf", desc: "Shrink file size locally." },
+      { name: "Protect PDF", href: "/pdf/protect-pdf", desc: "Add password security." },
+      { name: "Office Master", href: "/document/master", desc: "View & Edit Office Files." },
       { name: "Bulk Renamer", href: "/bulk-rename", desc: "Batch rename files instantly." },
-    ]
-  },
-  {
-    title: "Media Lab",
-    icon: Video,
-    items: [
-      { name: "Video Compressor", href: "/video", desc: "Local WASM-based encoding." },
-      { name: "Audio Toolkit", href: "/audio", desc: "Convert and trim audio files." },
-      { name: "AI Creative Lab", href: "/ai", desc: "Experimental AI features." },
     ]
   },
   {
     title: "Privacy & Security",
     icon: Lock,
     items: [
-      { name: "Universal Scrubber", href: "/privacy/metadata", desc: "Strip metadata from any file." },
-      { name: "Secure Vault", href: "/privacy/vault", desc: "Military-grade file encryption." },
-      { name: "Steganography", href: "/steganography", desc: "Hide messages inside images." },
-      { name: "Password Generator", href: "/security", desc: "Secure, offline randomness." },
+      { name: "Secure Vault", href: "/security/vault", desc: "AES-256 GCM encryption." },
+      { name: "Metadata Cleaner", href: "/security/metadata-cleaner", desc: "Strip EXIF & tracking." },
+      { name: "Password Suite", href: "/privacy/password-generator", desc: "Gen & Check Strength." },
+      { name: "Secure Notes", href: "/privacy/secure-notes", desc: "Self-destructing notes." },
+      { name: "File Shredder", href: "/security/file-shredder", desc: "Permanently wipe files." },
     ]
   },
-  {
-    title: "Developer Tools",
-    icon: Terminal,
-    items: [
-      { name: "Dev Hub", href: "/devtools", desc: "JSON, Base64 and Hashing suite." },
-      { name: "QR Studio", href: "/qr", desc: "Professional QR generation." },
-      { name: "Icon Generator", href: "/image/favicon", desc: "Complete icon packs." },
-    ]
-  }
 ];
 
 export function Navbar() {
   const { setTheme } = useTheme();
-  const router = useRouter();
-  const setVideoFile = useVideoStore((state) => state.setVideoFile);
-
-
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-11 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors overflow-hidden">
-            <Image src="/android-chrome-192x192.png" alt="SafeTools" width={36} height={36} className="rounded-xl" />
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 flex items-center justify-center">
+            <motion.div
+              animate={{ rotate: [0, 90, 0] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary to-blue-500 opacity-20 group-hover:opacity-40 transition-opacity"
+            />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
+              <path d="M12 4L4 8L12 12L20 8L12 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary" />
+              <path d="M4 12L12 16L20 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary/70" />
+              <path d="M4 16L12 20L20 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary/40" />
+            </svg>
           </div>
-          <div className="flex flex-col">
-            <span className="font-black text-xl tracking-tight hidden sm:inline-block leading-none">
-              Safe<span className="text-primary">Tools</span>
-            </span>
-            <div className="flex items-center gap-1.5 mt-0.5 hidden md:flex">
-              <div className="w-1 h-1 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-[8px] font-black uppercase tracking-widest text-emerald-500/70">WASM Engine Armed</span>
-            </div>
-          </div>
+          <span className="font-heading font-black text-xl tracking-tight leading-none uppercase italic">
+            Safe<span className="text-primary">Tools</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-1">
+          <Link href="/" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Home</Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent font-bold">Tools</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent font-bold text-sm">Tools</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="w-[90vw] sm:w-[600px] lg:w-[850px] p-6 md:columns-2 lg:columns-3 gap-3">
+                  <ul className="w-[850px] p-6 grid grid-cols-3 gap-6">
                     {toolCategories.map((category) => (
-                      <div key={category.title} className="space-y-3 break-inside-avoid mb-6">
+                      <div key={category.title} className="space-y-3">
                         <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
                           <category.icon className="w-3 h-3" />
                           {category.title}
@@ -162,21 +147,30 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link
-                  href="/privacy"
-                  className={cn(navigationMenuTriggerStyle(), "bg-transparent font-bold")}
-                >
-                  Manifesto
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          <Link href="/tools" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors text-primary">Tools</Link>
+          <Link href="/features" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Features</Link>
+          <Link href="/privacy" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Privacy</Link>
+          <Link href="/developers" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Developers</Link>
+          <Link href="/pricing" className="px-4 py-2 text-sm font-bold hover:text-primary transition-colors">Pricing</Link>
         </div>
 
         {/* Right Side Actions */}
-        <div className="flex items-center gap-2">
-
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mr-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-black uppercase tracking-widest text-emerald-500">Systems Local</span>
+          </div>
+          <div className="hidden sm:flex items-center gap-2">
+            <Button variant="ghost" className="font-bold text-sm hidden md:flex items-center gap-2">
+              Open Tools
+              <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+                <span className="text-xs">⌘</span>K
+              </kbd>
+            </Button>
+            <Button className="font-bold text-sm rounded-full px-6">Start Free</Button>
+          </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger aria-label="Toggle color theme" className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "rounded-full transition-all")}>
@@ -191,52 +185,32 @@ export function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-
-
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex">
+          <div className="xl:hidden flex">
             <Sheet>
-              <SheetTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="lg:hidden" />
-                }
-              >
+              <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }))}>
                 <Menu className="w-6 h-6" />
               </SheetTrigger>
-              <SheetContent side="left" className="w-[85vw] sm:w-[300px] overflow-y-auto">
+              <SheetContent side="right" className="w-[300px] overflow-y-auto">
                 <SheetHeader className="mb-4 text-left">
                   <SheetTitle className="flex items-center gap-2">
-                    <Image src="/android-chrome-192x192.png" alt="SafeTools" width={20} height={20} className="rounded-md" />
+                    <Image src="/android-chrome-192x192.png" alt="SafeTools" width={24} height={24} className="rounded-md" />
                     SafeTools
                   </SheetTitle>
                 </SheetHeader>
-                <div className="flex flex-col gap-4 pb-8">
-                  {toolCategories.map((category) => (
-                    <div key={category.title} className="space-y-4">
-                      <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                        <category.icon className="w-4 h-4" />
-                        {category.title}
-                      </h4>
-                      <div className="flex flex-col gap-1 pl-2 border-l border-primary/10">
-                        {category.items.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="text-sm font-bold p-2 hover:bg-accent hover:text-accent-foreground rounded-lg transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                  <div className="space-y-3 mt-4 pt-4 border-t border-primary/10">
-                    <Link
-                      href="/privacy"
-                      className="text-sm font-black uppercase tracking-widest p-2 hover:text-primary transition-colors block"
-                    >
-                      Manifesto
-                    </Link>
+                <div className="flex flex-col gap-4 py-8">
+                  <Link href="/" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Home</Link>
+                  <Link href="/tools" className="text-sm font-bold p-2 hover:bg-accent rounded-lg text-primary">All Tools</Link>
+                  <Link href="/features" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Features</Link>
+                  <Link href="/privacy" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Privacy</Link>
+                  <Link href="/developers" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Developers</Link>
+                  <Link href="/pricing" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Pricing</Link>
+                  <Link href="/changelog" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Changelog</Link>
+                  <Link href="/faq" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">FAQ</Link>
+                  <Link href="/contact" className="text-sm font-bold p-2 hover:bg-accent rounded-lg">Contact</Link>
+                  <div className="grid grid-cols-1 gap-2 mt-4">
+                    <Button variant="outline" className="w-full font-bold">Open Tools</Button>
+                    <Button className="w-full font-bold">Start Free</Button>
                   </div>
                 </div>
               </SheetContent>

@@ -87,7 +87,7 @@ export default function CaseConverterClient() {
                 <Button 
                   key={m.mode}
                   variant="outline"
-                  className="h-12 rounded-xl font-bold text-[10px] uppercase tracking-wider border-border bg-secondary/30 hover:bg-primary hover:text-foreground transition-all"
+                  className="h-12 rounded-xl font-bold text-[10px] uppercase tracking-wider border-border bg-secondary/30 hover:bg-primary hover:text-primary-foreground transition-all"
                   onClick={() => convert(m.mode as any)}
                 >
                   {m.name}
@@ -111,7 +111,7 @@ export default function CaseConverterClient() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter text to transform..."
-                className="min-h-[400px] rounded-xl bg-card border-border font-mono text-sm leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20"
+                className="min-h-[400px] rounded-xl bg-card border-border font-mono text-sm leading-relaxed text-foreground/70 p-8 focus-visible:ring-primary/20"
               />
             </div>
           </Card>

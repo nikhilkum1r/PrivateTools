@@ -99,7 +99,7 @@ export default function WordCounterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Paste your manuscript here..."
-                  className="min-h-[500px] rounded-xl bg-card border-border font-mono text-base leading-relaxed text-white/70 p-8 focus-visible:ring-primary/20 transition-all"
+                  className="min-h-[500px] rounded-xl bg-card border-border font-mono text-base leading-relaxed text-foreground/70 p-8 focus-visible:ring-primary/20 transition-all"
                 />
               </Card>
             </div>

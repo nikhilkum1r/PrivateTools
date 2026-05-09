@@ -1,0 +1,390 @@
+# SafeTools Final Professional Font System
+
+For SafeTools, fonts are extremely important because your platform combines:
+
+* Privacy
+* Security
+* Developer tools
+* Modern SaaS UI
+* Browser technology
+* Productivity utilities
+
+The fonts should feel:
+
+* clean
+* fast
+* modern
+* premium
+* highly readable
+* technical but friendly
+
+---
+
+# FINAL BEST FONT COMBINATION
+
+# PRIMARY FONT SYSTEM
+
+## Main UI Font
+
+# Inter
+
+Best overall font for SafeTools.
+
+Why Inter:
+
+* extremely readable
+* modern SaaS standard
+* optimized for UI
+* excellent on mobile
+* works perfectly in dark mode
+* trusted by modern tech companies
+
+Used by:
+
+* Vercel
+* Stripe
+* GitHub
+* Linear
+* modern startups
+
+---
+
+# SECONDARY DISPLAY FONT
+
+## Sora
+
+Use for:
+
+* hero headings
+* large marketing text
+* feature highlights
+* premium sections
+
+Why:
+
+* futuristic
+* clean
+* premium tech feel
+* modern web aesthetic
+
+---
+
+# CODE / DEVELOPER FONT
+
+## JetBrains Mono
+
+Use for:
+
+* code blocks
+* converters
+* developer tools
+* JSON viewers
+* terminal UI
+* hashes
+* technical outputs
+
+Why:
+
+* highly readable
+* professional developer aesthetic
+* modern engineering feel
+
+---
+
+# FINAL FONT STACK
+
+## Main Font Stack
+
+```css id="4u6w7u"
+font-family:
+"Inter",
+system-ui,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+sans-serif;
+```
+
+---
+
+# Heading Font Stack
+
+```css id="0g7lpr"
+font-family:
+"Sora",
+"Inter",
+sans-serif;
+```
+
+---
+
+# Code Font Stack
+
+```css id="y5rvvq"
+font-family:
+"JetBrains Mono",
+"Fira Code",
+monospace;
+```
+
+---
+
+# FONT WEIGHT SYSTEM
+
+# Headings
+
+## Hero Heading
+
+```css id="aqmkz5"
+font-weight: 700;
+```
+
+or
+
+```css id="mb10r4"
+font-weight: 800;
+```
+
+---
+
+## Section Headings
+
+```css id="c3w62l"
+font-weight: 700;
+```
+
+---
+
+## Card Titles
+
+```css id="7tn67p"
+font-weight: 600;
+```
+
+---
+
+# BODY TEXT
+
+## Main Paragraphs
+
+```css id="8vnydr"
+font-weight: 400;
+```
+
+---
+
+## Medium Emphasis
+
+```css id="i70vmb"
+font-weight: 500;
+```
+
+---
+
+# BUTTONS
+
+```css id="rhm4wo"
+font-weight: 600;
+```
+
+---
+
+# FONT SIZE SYSTEM
+
+# Hero Section
+
+## Main Hero Title
+
+```css id="34gvpw"
+font-size: clamp(3rem, 8vw, 5.5rem);
+line-height: 1;
+letter-spacing: -0.04em;
+```
+
+---
+
+## Hero Subtitle
+
+```css id="1r0t2q"
+font-size: 1.25rem;
+line-height: 1.7;
+```
+
+---
+
+# SECTION TITLES
+
+```css id="m74w4f"
+font-size: clamp(2rem, 5vw, 3.5rem);
+line-height: 1.1;
+letter-spacing: -0.03em;
+```
+
+---
+
+# CARD TITLES
+
+```css id="obgkph"
+font-size: 1.125rem;
+font-weight: 600;
+```
+
+---
+
+# BODY TEXT
+
+```css id="rwbz33"
+font-size: 1rem;
+line-height: 1.8;
+```
+
+---
+
+# SMALL TEXT
+
+```css id="b4mqw5"
+font-size: 0.875rem;
+line-height: 1.6;
+```
+
+---
+
+# BUTTON TEXT
+
+```css id="jzjg7t"
+font-size: 0.95rem;
+font-weight: 600;
+```
+
+---
+
+# PERFECT TYPOGRAPHY STYLE FOR SAFETOOLS
+
+## Use:
+
+* large bold headlines
+* generous spacing
+* clean paragraph widths
+* minimal text clutter
+* high contrast
+
+---
+
+# RECOMMENDED LETTER SPACING
+
+## Large Headlines
+
+```css id="itv9qe"
+letter-spacing: -0.04em;
+```
+
+---
+
+## Section Titles
+
+```css id="jlwm9r"
+letter-spacing: -0.02em;
+```
+
+---
+
+## Normal Text
+
+```css id="e8xn4i"
+letter-spacing: normal;
+```
+
+---
+
+# LINE HEIGHT SYSTEM
+
+## Headings
+
+```css id="tob0gv"
+line-height: 1.1;
+```
+
+---
+
+## Paragraphs
+
+```css id="6fe8e4"
+line-height: 1.8;
+```
+
+---
+
+## Buttons
+
+```css id="v9j6gs"
+line-height: 1.2;
+```
+
+---
+
+# PERFECT TYPOGRAPHY FEEL
+
+Your typography should feel like:
+
+* Apple
+* Vercel
+* Linear
+* Notion
+* Stripe
+* Raycast
+
+Meaning:
+
+* minimal
+* premium
+* highly readable
+* spacious
+* modern
+* technical but human
+
+---
+
+# BEST FINAL COMBINATION
+
+# Recommended Final Setup
+
+## Headings
+
+### Sora
+
+## Body
+
+### Inter
+
+## Code / Technical Areas
+
+### JetBrains Mono
+
+This is the strongest modern combination for SafeTools.
+
+---
+
+# GOOGLE FONT IMPORTS
+
+```html id="i5a4m5"
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+```
+
+---
+
+# FINAL TYPOGRAPHY DIRECTION
+
+> Premium dark-mode-first typography system using Sora for futuristic branding, Inter for ultra-readable UI, and JetBrains Mono for technical tooling.
+
+This gives SafeTools:
+
+* professional credibility
+* modern startup quality
+* premium SaaS appearance
+* developer trust
+* global product feel
+* strong long-term branding consistency

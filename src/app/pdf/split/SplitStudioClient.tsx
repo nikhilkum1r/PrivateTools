@@ -166,7 +166,7 @@ export default function SplitStudioClient() {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/10 blur-[160px] rounded-full animate-pulse" />
           <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-red-600/10 blur-[160px] rounded-full animate-pulse" />
-          <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`, backgroundSize: '48px 48px' }} />
+          <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, rgba(var(--color-primary-rgb),0.1) 1px, transparent 0)`, backgroundSize: '48px 48px' }} />
         </div>
 
         {!file ? (
@@ -191,7 +191,7 @@ export default function SplitStudioClient() {
         ) : (
           <>
             {/* Left Sidebar */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
               <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -219,7 +219,7 @@ export default function SplitStudioClient() {
                         <Button
                           key={mode}
                           variant={splitMode === mode ? "default" : "ghost"}
-                          className={cn("rounded-xl text-[10px] font-black h-10 uppercase tracking-widest", splitMode === mode ? "bg-primary text-foreground shadow-lg shadow-primary/20" : "text-muted-foreground/50")}
+                          className={cn("rounded-xl text-[10px] font-black h-10 uppercase tracking-widest", splitMode === mode ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "text-muted-foreground/50")}
                           onClick={() => setSplitMode(mode)}
                         >
                           {mode === "fixed" ? "By Interval" : "By Range"}
@@ -243,11 +243,11 @@ export default function SplitStudioClient() {
                         className="py-2"
                       />
                       <div className="grid grid-cols-2 gap-2">
-                        <div className="p-3 rounded-xl bg-white/[0.03] border border-border text-center">
+                        <div className="p-3 rounded-xl bg-secondary border border-border text-center">
                           <p className="text-[9px] text-muted-foreground/40 font-black uppercase tracking-widest">Parts</p>
                           <p className="text-lg font-black text-primary tabular-nums">{estimatedParts}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-white/[0.03] border border-border text-center">
+                        <div className="p-3 rounded-xl bg-secondary border border-border text-center">
                           <p className="text-[9px] text-muted-foreground/40 font-black uppercase tracking-widest">Per Part</p>
                           <p className="text-lg font-black tabular-nums">{fixedInterval}pg</p>
                         </div>
@@ -340,7 +340,7 @@ export default function SplitStudioClient() {
                       <Zap className="w-4 h-4 text-primary" />
                       <h4 className="text-[10px] font-black uppercase tracking-widest">WASM Engine</h4>
                     </div>
-                    <p className="text-[10px] text-white/25 leading-relaxed font-medium">
+                    <p className="text-[10px] text-foreground/40 leading-relaxed font-medium">
                       Extraction runs in a local worker thread. Original resolution and font integrity are guaranteed.
                     </p>
                   </div>
@@ -358,7 +358,7 @@ export default function SplitStudioClient() {
                   </div>
                 )}
                 <Button
-                  className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-sm gap-3 shadow-2xl shadow-primary/20 group active:scale-95 transition-all italic"
                   onClick={splitPdf}
                   disabled={isProcessing}
                 >
@@ -389,7 +389,7 @@ export default function SplitStudioClient() {
               </header>
 
               <div className="flex-grow relative flex items-center justify-center p-8 lg:p-6">
-                <div className="aspect-[3/4] w-full max-w-xs bg-white/[0.03] rounded-2xl border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
+                <div className="aspect-[3/4] w-full max-w-xs bg-secondary rounded-2xl border border-border shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center gap-5 relative group overflow-hidden">
                   {file.status === "completed" ? (
                     <>
                       <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
@@ -407,7 +407,7 @@ export default function SplitStudioClient() {
                       </div>
                       <div className="space-y-1 text-center">
                         <h3 className="text-lg font-black uppercase">Source Ready</h3>
-                        <p className="text-white/25 text-xs font-bold uppercase tracking-widest italic">Configure split mode →</p>
+                        <p className="text-foreground/40 text-xs font-bold uppercase tracking-widest italic">Configure split mode →</p>
                       </div>
                       <div className="flex gap-1 flex-wrap justify-center px-8">
                         {Array.from({ length: Math.min(file.pageCount, 12) }).map((_, i) => (
@@ -423,7 +423,7 @@ export default function SplitStudioClient() {
             </section>
 
             {/* Right Sidebar */}
-            <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+            <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
               <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -500,7 +500,7 @@ export default function SplitStudioClient() {
               </ScrollArea>
 
               <div className="p-5 border-t border-border bg-muted/40 shrink-0">
-                <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/15">
+                <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-foreground/15">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> All Fragments Verified
                 </div>
               </div>

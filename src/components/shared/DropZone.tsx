@@ -104,7 +104,7 @@ export function DropZone({
           {title !== " " && (
             <div className="space-y-1">
               <p className="text-2xl font-black uppercase tracking-tighter italic">
-                {title || "Upload Image"}
+                {title || "Upload File"}
               </p>
               {description && (
                 <div className="flex items-center justify-center gap-3">

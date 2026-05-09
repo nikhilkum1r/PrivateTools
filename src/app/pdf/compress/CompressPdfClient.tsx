@@ -199,7 +199,7 @@ export default function CompressPdfClient() {
                   </div>
 
                   <Button 
-                    className="w-full h-12 rounded-xl font-bold gap-2 bg-orange-500 hover:bg-orange-600 text-white" 
+                    className="w-full h-12 rounded-xl font-bold gap-2 bg-orange-500 hover:bg-orange-600 text-foreground" 
                     onClick={handleCompress} 
                     disabled={status === "processing"}
                   >

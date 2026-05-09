@@ -254,7 +254,7 @@ export default function VaultClient() {
                           variant="ghost" 
                           size="sm" 
                           className="h-6 text-[9px] font-black uppercase tracking-tighter text-muted-foreground/50 hover:text-red-500 hover:bg-red-500/10 rounded-full px-3"
-                          onClick={() => window.open('/security', '_blank')}
+                          onClick={() => window.open('/privacy/password-generator', '_blank')}
                         >
                           Need a password?
                         </Button>

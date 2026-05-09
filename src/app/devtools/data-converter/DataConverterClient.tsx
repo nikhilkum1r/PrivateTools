@@ -138,7 +138,7 @@ export default function DataConverterClient() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={mode === "json-to-csv" ? '[{"id": 1, "name": "Admin"}, ...]' : 'id,name\n1,Admin'}
-                  className="min-h-[400px] rounded-xl bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 placeholder:text-white/10 p-6 focus-visible:ring-primary/20"
+                  className="min-h-[400px] rounded-xl bg-card border-border font-mono text-xs leading-relaxed text-muted-foreground/80 placeholder:text-foreground/10 p-6 focus-visible:ring-primary/20"
                 />
               </div>
 
@@ -159,7 +159,7 @@ export default function DataConverterClient() {
                      readOnly
                      value={output}
                      placeholder="Awaiting synthesis..."
-                     className="absolute inset-0 rounded-xl bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 placeholder:text-white/10 p-6 resize-none"
+                     className="absolute inset-0 rounded-xl bg-white/[0.01] border-border font-mono text-xs leading-relaxed text-primary/80 placeholder:text-foreground/10 p-6 resize-none"
                    />
                    {!output && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-5 pointer-events-none space-y-4">
@@ -172,7 +172,7 @@ export default function DataConverterClient() {
             </div>
 
             <Button 
-              className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
+              className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg gap-3 shadow-2xl shadow-primary/20 italic"
               onClick={convertData}
             >
               <Zap className="w-5 h-5" /> EXECUTE CONVERSION

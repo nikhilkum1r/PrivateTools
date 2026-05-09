@@ -1,0 +1,532 @@
+# SafeTools Professional AI Image & SEO Visual Strategy
+
+For SEO and premium branding, your website absolutely needs:
+
+* custom visuals
+* modern illustrations
+* landing page graphics
+* OG images
+* blog thumbnails
+* background visuals
+* tool preview images
+
+Without visuals:
+
+* SEO CTR becomes lower
+* brand feels less premium
+* homepage feels empty
+* users trust less
+* social sharing becomes weak
+
+---
+
+# BEST AI IMAGE STYLE FOR SAFETOOLS
+
+Your visuals should feel:
+
+* futuristic
+* modern
+* privacy-focused
+* technical
+* minimal
+* premium SaaS quality
+
+---
+
+# IMPORTANT
+
+Do NOT use:
+
+* random stock photos
+* generic office people
+* fake smiling teams
+* low-quality AI art
+* cartoon illustrations
+
+Those reduce trust for developer/privacy tools.
+
+---
+
+# BEST VISUAL STYLE
+
+## Recommended Style
+
+> Dark futuristic browser computing visuals with glowing gradients, floating UI cards, secure processing elements, and premium SaaS aesthetics.
+
+---
+
+# BEST TOOL FOR GENERATING IMAGES
+
+You said “bannana” probably meaning:
+
+# Banana AI / Banana.dev / AI image generators
+
+Better options:
+
+## BEST OPTIONS
+
+### Midjourney
+
+Best overall quality.
+
+---
+
+### Flux
+
+Excellent for modern UI scenes.
+
+---
+
+### Ideogram
+
+Very strong for typography + branding.
+
+---
+
+### DALL·E
+
+Good for clean compositions.
+
+---
+
+### Leonardo AI
+
+Good for consistent style packs.
+
+---
+
+# BEST IMAGE TYPES YOU NEED
+
+# 1. HERO BACKGROUND IMAGE
+
+## Purpose
+
+Create premium first impression.
+
+---
+
+# Best Hero Scene
+
+### Prompt Style
+
+```text id="jlwm0c"
+Futuristic privacy-first browser workspace, floating file processing panels, glowing blue and cyan gradients, modern SaaS dashboard UI, secure local browser computing, dark cinematic background, minimal premium design, volumetric lighting, ultra clean composition, high-end technology branding, realistic interface design, 3D layered UI cards, modern internet platform aesthetic
+```
+
+---
+
+# HERO IMAGE RULES
+
+## Use:
+
+* dark gradients
+* glowing blue lights
+* floating UI elements
+* browser-style cards
+* file processing flow
+
+---
+
+## Avoid:
+
+* humans
+* robots
+* cyberpunk overload
+* excessive neon
+* cluttered scenes
+
+---
+
+# 2. FEATURE SECTION BACKGROUNDS
+
+Each section should have subtle visuals.
+
+---
+
+# Privacy Section Background
+
+### Prompt
+
+```text id="jlwmc4"
+Abstract secure data flow visualization, browser-based privacy processing, glowing secure nodes, dark navy background, blue cyan gradients, minimal futuristic design, premium cybersecurity aesthetic
+```
+
+---
+
+# Performance Section Background
+
+### Prompt
+
+```text id="jlwmwb"
+Ultra-fast browser processing visualization, speed lines, glowing computation layers, futuristic UI interface, modern dark SaaS background, clean technology illustration
+```
+
+---
+
+# AI / Future Tools Section
+
+### Prompt
+
+```text id="jlwmca"
+Futuristic local AI processing inside browser, glowing neural processing interface, modern minimal AI workspace, privacy-first computing environment, premium technology visual
+```
+
+---
+
+# 3. TOOL CATEGORY IMAGES
+
+You need:
+
+* image tools visual
+* PDF tools visual
+* developer tools visual
+* security tools visual
+
+---
+
+# Example Prompt
+
+```text id="jlwm9d"
+Modern browser-based image editing interface, floating compression tools, blue glowing UI cards, premium SaaS dashboard, dark futuristic background
+```
+
+---
+
+# 4. BLOG FEATURED IMAGES
+
+Very important for SEO CTR.
+
+---
+
+# Blog Image Style
+
+## Consistent:
+
+* dark gradient backgrounds
+* minimal typography
+* glowing UI visuals
+* blue/cyan palette
+
+---
+
+# Example Blog Topics
+
+### “Why Most Online Converters Upload Your Files”
+
+Visual:
+
+* cloud upload warning
+* local browser processing comparison
+
+---
+
+### “Browser-Based File Processing Explained”
+
+Visual:
+
+* file flows
+* local device processing
+* privacy architecture
+
+---
+
+# 5. OPEN GRAPH IMAGES (VERY IMPORTANT)
+
+When people share your links:
+
+* Twitter/X
+* LinkedIn
+* WhatsApp
+* Discord
+
+these images appear.
+
+---
+
+# Best OG Image Design
+
+Include:
+
+* SafeTools logo
+* dark gradient
+* strong headline
+* floating UI
+* privacy badge
+
+---
+
+# Example Headline
+
+```text id="jlwmji"
+Modern File Tools That Never Upload Your Data
+```
+
+---
+
+# BEST IMAGE STYLE SETTINGS
+
+# Recommended Style Settings
+
+## Aspect Ratio
+
+### Hero
+
+```text id="jlwmym"
+16:9
+```
+
+---
+
+## Blog Thumbnails
+
+```text id="jlwm0w"
+16:9
+```
+
+---
+
+## Social Posts
+
+```text id="jlwm1u"
+1:1
+```
+
+---
+
+## Tool Previews
+
+```text id="jlwm9v"
+4:3
+```
+
+---
+
+# COLOR STYLE FOR IMAGES
+
+## Main Palette
+
+### Background
+
+```text id="jlwmwe"
+#020617
+```
+
+### Blue Glow
+
+```text id="jlwm4z"
+#3B82F6
+```
+
+### Cyan Glow
+
+```text id="jlwm8u"
+#06B6D4
+```
+
+### Purple Accent
+
+```text id="jlwm9n"
+#8B5CF6
+```
+
+---
+
+# IMAGE EFFECTS
+
+# Use:
+
+* soft glow
+* volumetric light
+* layered glass cards
+* floating panels
+* smooth gradients
+
+---
+
+# Avoid:
+
+* hard shadows
+* noisy textures
+* over-detailing
+* cheap AI look
+
+---
+
+# IMPORTANT SEO IMAGE RULES
+
+# Every Image Must Have:
+
+## Proper File Names
+
+GOOD:
+
+```text id="jlwm8m"
+png-to-jpg-converter.webp
+```
+
+BAD:
+
+```text id="jlwmz8"
+IMG_8273.png
+```
+
+---
+
+# Alt Text
+
+Example:
+
+```text id="jlwm9k"
+Privacy-first PNG to JPG converter interface
+```
+
+---
+
+# Use Modern Formats
+
+## Best
+
+```text id="jlwm8w"
+AVIF
+```
+
+Fallback:
+
+```text id="jlwm3u"
+WebP
+```
+
+---
+
+# Compress Images
+
+Target:
+
+```text id="jlwmzw"
+under 150KB
+```
+
+for most visuals.
+
+---
+
+# LANDING PAGE BACKGROUND STRATEGY
+
+# VERY IMPORTANT
+
+Do NOT use:
+
+* one giant static image
+
+Instead:
+
+* layered gradients
+* floating glows
+* animated mesh
+* subtle particles
+* lightweight overlays
+
+This feels much more premium.
+
+---
+
+# BEST HERO BACKGROUND COMBINATION
+
+## Layer 1
+
+Dark gradient base
+
+---
+
+## Layer 2
+
+Blue radial glow
+
+---
+
+## Layer 3
+
+Cyan blur effect
+
+---
+
+## Layer 4
+
+Floating UI cards
+
+---
+
+## Layer 5
+
+Noise texture lightly
+
+---
+
+# PREMIUM EFFECT
+
+This creates:
+
+* depth
+* cinematic feel
+* modern SaaS quality
+* premium perception
+
+---
+
+# BEST SEO IMAGE TYPES TO GENERATE FIRST
+
+# Priority Order
+
+## 1.
+
+Homepage hero
+
+## 2.
+
+OG image
+
+## 3.
+
+Tool category visuals
+
+## 4.
+
+Blog thumbnails
+
+## 5.
+
+Feature backgrounds
+
+## 6.
+
+Tool preview screenshots
+
+---
+
+# FINAL VISUAL STYLE
+
+SafeTools visuals should feel like:
+
+* Vercel
+* Stripe
+* Linear
+* Raycast
+* Proton
+* modern AI startups
+
+---
+
+# FINAL CREATIVE DIRECTION
+
+## Visual Identity
+
+> Futuristic privacy-first browser computing platform with cinematic dark gradients, glowing UI layers, and premium modern SaaS aesthetics.
+
+This direction will:
+
+* increase trust
+* improve SEO CTR
+* improve conversions
+* make screenshots shareable
+* strengthen branding
+* make SafeTools look globally competitive.

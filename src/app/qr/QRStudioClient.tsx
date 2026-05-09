@@ -128,15 +128,15 @@ export default function QRStudioClient() {
           <div 
             className="absolute inset-0 opacity-[0.2]" 
             style={{ 
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(var(--foreground-rgb), 0.05) 1px, transparent 0)`,
               backgroundSize: '48px 48px'
             }} 
           />
         </div>
 
         {/* Left Sidebar - Identity Engine */}
-        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
-          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-secondary/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Layers className="w-4 h-4" /> Identity Engine
@@ -145,7 +145,7 @@ export default function QRStudioClient() {
                 <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">Multi-Platform Asset Matrix</p>
                 <div className="flex gap-1.5 opacity-30">
                   <Play className="w-2 h-2 text-primary fill-primary" />
-                  <div className="w-2 h-2 rounded-full border border-white/40" />
+                  <div className="w-2 h-2 rounded-full border border-foreground/20" />
                   <Smartphone className="w-2 h-2" />
                 </div>
               </div>
@@ -159,10 +159,10 @@ export default function QRStudioClient() {
                 <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/40">Data Protocol</h4>
                 <Tabs defaultValue="link" className="w-full">
                   <TabsList className="w-full grid grid-cols-4 h-12 mb-6 bg-secondary/50 border border-border rounded-xl p-1">
-                    <TabsTrigger value="link" className="rounded-lg data-[state=active]:bg-primary"><LinkIcon className="w-3.5 h-3.5" /></TabsTrigger>
-                    <TabsTrigger value="wifi" className="rounded-lg data-[state=active]:bg-primary"><Wifi className="w-3.5 h-3.5" /></TabsTrigger>
-                    <TabsTrigger value="vcard" className="rounded-lg data-[state=active]:bg-primary"><Phone className="w-3.5 h-3.5" /></TabsTrigger>
-                    <TabsTrigger value="text" className="rounded-lg data-[state=active]:bg-primary"><MessageSquare className="w-3.5 h-3.5" /></TabsTrigger>
+                    <TabsTrigger value="link" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><LinkIcon className="w-3.5 h-3.5" /></TabsTrigger>
+                    <TabsTrigger value="wifi" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><Wifi className="w-3.5 h-3.5" /></TabsTrigger>
+                    <TabsTrigger value="vcard" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><Phone className="w-3.5 h-3.5" /></TabsTrigger>
+                    <TabsTrigger value="text" className="rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"><MessageSquare className="w-3.5 h-3.5" /></TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="link" className="space-y-4">
@@ -228,7 +228,7 @@ export default function QRStudioClient() {
                         <img src={logoFile} className="w-12 h-12 object-contain rounded-lg shadow-xl" />
                       ) : (
                         <>
-                          <Sparkles className="w-6 h-6 text-white/10 mb-2 group-hover:text-primary transition-colors" />
+                          <Sparkles className="w-6 h-6 text-foreground/10 mb-2 group-hover:text-primary transition-colors" />
                           <span className="text-[9px] font-black uppercase text-muted-foreground/40">Drop Icon Here</span>
                         </>
                       )}
@@ -251,7 +251,7 @@ export default function QRStudioClient() {
 
           <div className="p-6 border-t border-border bg-muted/40 shrink-0 flex flex-col gap-3">
             <Button 
-              className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+              className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
               onClick={() => downloadQR("png")}
             >
               <Download className="w-4 h-4" />
@@ -298,7 +298,7 @@ export default function QRStudioClient() {
           <div className="flex-grow relative flex items-center justify-center p-8 lg:p-5 overflow-hidden">
             <div className="absolute inset-0 grid grid-cols-[repeat(40,minmax(0,1fr))] grid-rows-[repeat(40,minmax(0,1fr))] pointer-events-none opacity-[0.03]">
               {Array.from({ length: 1600 }).map((_, i) => (
-                <div key={i} className="border-[0.5px] border-white" />
+                <div key={i} className="border-[0.5px] border-foreground/10" />
               ))}
             </div>
 
@@ -334,8 +334,8 @@ export default function QRStudioClient() {
         </section>
 
         {/* Right Sidebar - Studio Matrix */}
-        <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
-          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-secondary/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Settings2 className="w-4 h-4" /> Studio Matrix

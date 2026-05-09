@@ -90,7 +90,7 @@ export default function NotFound() {
             transition={{ delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4 pt-8"
           >
-            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-10 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black italic gap-2")}>
+            <Link href="/" className={cn(buttonVariants({ size: "lg" }), "h-10 px-8 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black italic gap-2")}>
               <Home className="w-4 h-4" /> RETURN TO SYSTEM
             </Link>
             <Link href="/about" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "h-10 px-8 rounded-2xl border-border hover:bg-secondary/50 text-foreground font-black italic gap-2")}>

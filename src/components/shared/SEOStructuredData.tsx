@@ -12,9 +12,10 @@ interface SEOStructuredDataProps {
   url: string;
   image?: string;
   faqItems?: FAQItem[];
+  breadcrumbs?: { name: string; item: string }[];
 }
 
-export default function SEOStructuredData({ name, description, url, image, faqItems }: SEOStructuredDataProps) {
+export default function SEOStructuredData({ name, description, url, image, faqItems, breadcrumbs }: SEOStructuredDataProps) {
   const schemas: any[] = [
     {
       "@context": "https://schema.org",
@@ -51,9 +52,22 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
     });
   }
 
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbs.map((crumb: { name: string; item: string }, i: number) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": crumb.name,
+        "item": crumb.item
+      }))
+    });
+  }
+
   return (
     <Script
-      id={`structured-data-${name.toLowerCase().replace(/\s+/g, '-')}`}
+      id={`structured-data-${(name || 'default').toLowerCase().replace(/\s+/g, '-')}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.length === 1 ? schemas[0] : { "@context": "https://schema.org", "@graph": schemas }) }}
     />

@@ -301,7 +301,7 @@ export default function EditorStudioClient() {
       <div className="flex-grow flex items-center justify-center p-5 text-center space-y-4">
         <div className="space-y-2">
           <p className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/40">No Selection</p>
-          <p className="text-xs text-white/10 italic">Upload an image to unlock studio controls.</p>
+          <p className="text-xs text-muted-foreground/60 italic">Upload an image to unlock studio controls.</p>
         </div>
       </div>
     );
@@ -310,11 +310,11 @@ export default function EditorStudioClient() {
     <Tabs value={activeTab} onValueChange={setActiveTab} className="flex flex-col flex-grow min-h-0">
       <div className="px-6 py-4 border-b border-border bg-card">
         <TabsList className="bg-secondary/50 border border-border rounded-2xl w-full p-1 h-12">
-          <TabsTrigger value="format" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Settings2 className="w-3.5 h-3.5 mr-2" /> CORE</TabsTrigger>
-          <TabsTrigger value="crop" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Scissors className="w-3.5 h-3.5 mr-2" /> CROP</TabsTrigger>
-          <TabsTrigger value="privacy" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-emerald-500 data-[state=active]:shadow-lg data-[state=active]:shadow-emerald-500/20"><ShieldOff className="w-3.5 h-3.5 mr-2" /> PRIVACY</TabsTrigger>
-          <TabsTrigger value="filters" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Palette className="w-3.5 h-3.5 mr-2" /> FX</TabsTrigger>
-          <TabsTrigger value="ai" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Zap className="w-3.5 h-3.5 mr-2" /> LAB</TabsTrigger>
+          <TabsTrigger value="format" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Settings2 className="w-3.5 h-3.5 mr-2" /> CORE</TabsTrigger>
+          <TabsTrigger value="crop" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Scissors className="w-3.5 h-3.5 mr-2" /> CROP</TabsTrigger>
+          <TabsTrigger value="privacy" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-emerald-500 data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-emerald-500/20"><ShieldOff className="w-3.5 h-3.5 mr-2" /> PRIVACY</TabsTrigger>
+          <TabsTrigger value="filters" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Palette className="w-3.5 h-3.5 mr-2" /> FX</TabsTrigger>
+          <TabsTrigger value="ai" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Zap className="w-3.5 h-3.5 mr-2" /> LAB</TabsTrigger>
         </TabsList>
       </div>
 
@@ -380,7 +380,7 @@ export default function EditorStudioClient() {
                                 className={cn(
                                   "format-item flex items-center justify-between px-3 py-2 rounded-lg border transition-all active:scale-95 group",
                                   settings.format === f 
-                                    ? "bg-primary border-primary shadow-lg shadow-primary/20 text-foreground" 
+                                    ? "bg-primary border-primary shadow-lg shadow-primary/20 text-primary-foreground" 
                                     : "bg-secondary/30 border-border text-muted-foreground/70 hover:bg-secondary/50 hover:border-primary/30 hover:text-foreground"
                                 )}
                                 onClick={() => pushSettings({ format: f as any })}
@@ -424,7 +424,7 @@ export default function EditorStudioClient() {
                   <Input 
                     type="number" 
                     placeholder="Unlimited" 
-                    className="bg-white/[0.03] border-border rounded-2xl h-10 pl-12 focus:border-primary/50 transition-all shadow-inner font-mono"
+                    className="bg-secondary/50 border-border rounded-2xl h-10 pl-12 focus:border-primary/50 transition-all shadow-inner font-mono"
                     value={settings.targetSize || ""}
                     onChange={(e) => updateSettings({ targetSize: parseInt(e.target.value) || undefined })}
                   />
@@ -437,19 +437,19 @@ export default function EditorStudioClient() {
             <div className="space-y-4">
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Geometry Core</Label>
               <div className="grid grid-cols-4 gap-2">
-                <Button variant="outline" size="icon" className="rounded-2xl h-12 w-full border-border bg-white/[0.03] hover:bg-primary/10 hover:border-primary/30 transition-all" onClick={() => pushSettings({ rotate: (settings.rotate + 90) % 360 })}>
+                <Button variant="outline" size="icon" className="rounded-2xl h-12 w-full border-border bg-secondary/50 hover:bg-primary/10 hover:border-primary/30 transition-all" onClick={() => pushSettings({ rotate: (settings.rotate + 90) % 360 })}>
                   <RotateCw className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="icon" className={cn("rounded-2xl h-12 w-full border-border bg-white/[0.03] transition-all", settings.flipX && "bg-primary border-primary")} onClick={() => pushSettings({ flipX: !settings.flipX })}>
+                <Button variant="outline" size="icon" className={cn("rounded-2xl h-12 w-full border-border bg-secondary/50 transition-all", settings.flipX && "bg-primary border-primary text-primary-foreground")} onClick={() => pushSettings({ flipX: !settings.flipX })}>
                   <FlipHorizontal className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="icon" className={cn("rounded-2xl h-12 w-full border-border bg-white/[0.03] transition-all", settings.flipY && "bg-primary border-primary")} onClick={() => pushSettings({ flipY: !settings.flipY })}>
+                <Button variant="outline" size="icon" className={cn("rounded-2xl h-12 w-full border-border bg-secondary/50 transition-all", settings.flipY && "bg-primary border-primary text-primary-foreground")} onClick={() => pushSettings({ flipY: !settings.flipY })}>
                   <FlipVertical className="w-4 h-4" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="rounded-2xl h-12 w-full border-border bg-white/[0.03] hover:bg-primary/10 hover:border-primary/30 transition-all"
+                  className="rounded-2xl h-12 w-full border-border bg-secondary/50 hover:bg-primary/10 hover:border-primary/30 transition-all"
                   onClick={() => setActiveTab("crop")}
                 >
                   <Scissors className="w-4 h-4" />
@@ -597,7 +597,7 @@ export default function EditorStudioClient() {
                      variant="outline" 
                      className={cn(
                        "w-full h-10 rounded-[1.25rem] text-[10px] font-black uppercase tracking-widest transition-all",
-                       activeTab === "privacy" ? "bg-emerald-500 text-foreground border-emerald-500" : "bg-white/[0.03] border-border hover:bg-emerald-500/10"
+                       activeTab === "privacy" ? "bg-emerald-500 text-primary-foreground border-emerald-500" : "bg-muted/20 border-border hover:bg-emerald-500/10"
                      )}
                      onClick={() => setActiveTab("privacy")}
                    >
@@ -605,7 +605,7 @@ export default function EditorStudioClient() {
                    </Button>
                    <Button 
                      variant="outline" 
-                     className="w-full h-12 rounded-[1.25rem] text-[10px] font-black uppercase tracking-widest bg-destructive/10 border-destructive/20 text-destructive hover:bg-destructive hover:text-foreground transition-all disabled:opacity-20"
+                     className="w-full h-12 rounded-[1.25rem] text-[10px] font-black uppercase tracking-widest bg-destructive/10 border-destructive/20 text-destructive hover:bg-destructive hover:text-destructive-foreground transition-all disabled:opacity-20"
                      onClick={() => currentFile && updateFileBlurs(currentFile.id, [])}
                      disabled={!currentFile?.blurs?.length}
                    >
@@ -659,7 +659,7 @@ export default function EditorStudioClient() {
                     size="sm" 
                     className={cn(
                       "rounded-xl h-12 uppercase font-black text-[10px] tracking-widest transition-all",
-                      settings.filter === f ? "bg-primary border-primary shadow-lg shadow-primary/20" : "border-border bg-white/[0.03] hover:bg-white/[0.08]"
+                      settings.filter === f ? "bg-primary border-primary text-primary-foreground shadow-lg shadow-primary/20" : "border-border bg-secondary/30 hover:bg-secondary/50"
                     )}
                     onClick={() => updateSettings({ filter: f as any })}
                   >
@@ -724,13 +724,13 @@ export default function EditorStudioClient() {
                 </p>
                 
                 <div className="space-y-3 pt-2 relative z-10">
-                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && handleOCR(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-secondary/30 border-border text-[10px] font-black uppercase tracking-widest group hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all shadow-xl" onClick={() => currentFile && handleOCR(currentFile.file)}>
                     {isOcrLoading ? <Loader2 className="w-4 h-4 mr-3 animate-spin" /> : <ScanText className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" />} Extract Text (OCR)
                   </Button>
-                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && extractColors(currentFile.file)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-secondary/30 border-border text-[10px] font-black uppercase tracking-widest group hover:bg-blue-600 hover:border-blue-600 hover:text-primary-foreground transition-all shadow-xl" onClick={() => currentFile && extractColors(currentFile.file)}>
                     <Palette className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Design Palette
                   </Button>
-                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-white/[0.03] border-border text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-foreground transition-all shadow-xl" onClick={() => currentFile && setMetadataFile(currentFile)}>
+                  <Button variant="outline" className="w-full h-10 rounded-[1.25rem] bg-secondary/30 border-border text-[10px] font-black uppercase tracking-widest group hover:bg-emerald-600 hover:border-emerald-600 hover:text-primary-foreground transition-all shadow-xl" onClick={() => currentFile && setMetadataFile(currentFile)}>
                     <Info className="w-4 h-4 mr-3 group-hover:scale-125 transition-transform" /> Deep Metadata Inspector
                   </Button>
                 </div>
@@ -741,7 +741,7 @@ export default function EditorStudioClient() {
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col gap-1">
                     <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Signature Matrix</Label>
-                    <p className="text-[8px] font-bold text-white/10 uppercase tracking-widest">WASM-Level Watermarking</p>
+                    <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">WASM-Level Watermarking</p>
                   </div>
                   <Switch 
                     checked={!!settings.watermarkText} 
@@ -820,7 +820,7 @@ export default function EditorStudioClient() {
           </Button>
         </div>
         <Button 
-          className="w-full bg-primary hover:bg-primary/90 text-foreground rounded-xl font-black h-10 gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all text-xs uppercase tracking-widest italic"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-black h-10 gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all text-xs uppercase tracking-widest italic"
           onClick={handleProcess}
           disabled={isProcessing || !currentFile}
         >
@@ -852,13 +852,6 @@ export default function EditorStudioClient() {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-[20%] left-[10%] w-[50%] h-[50%] bg-primary/5 blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[20%] right-[10%] w-[50%] h-[50%] bg-blue-500/5 blur-[140px] rounded-full animate-pulse" />
-          <div 
-            className="absolute inset-0 opacity-[0.4] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" 
-            style={{ 
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)`,
-              backgroundSize: '32px 32px'
-            }} 
-          />
         </div>
 
         {/* Left Sidebar - File Queue */}
@@ -1091,7 +1084,7 @@ export default function EditorStudioClient() {
                           transition={{ duration: 2, ease: "linear" }}
                           className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_rgba(var(--primary-rgb),0.8)] z-50 pointer-events-none"
                         >
-                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-foreground text-[8px] font-black uppercase tracking-[0.3em] rounded-full whitespace-nowrap">
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-primary-foreground text-[8px] font-black uppercase tracking-[0.3em] rounded-full whitespace-nowrap">
                             Neural Sync In Progress
                           </div>
                         </motion.div>
@@ -1110,7 +1103,7 @@ export default function EditorStudioClient() {
                     animate={{ scale: isDragging ? 1.02 : 1 }}
                     className="max-w-sm w-full"
                   >
-                  <Card className={`p-8 border-dashed bg-white/[0.01] rounded-2xl text-center space-y-4 relative group overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 ${isDragging ? 'border-primary/60 bg-primary/5 shadow-primary/20' : 'border-border'}`}>
+                  <Card className={`p-8 border-dashed bg-secondary/10 rounded-2xl text-center space-y-4 relative group overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 ${isDragging ? 'border-primary/60 bg-primary/5 shadow-primary/20' : 'border-border'}`}>
                     <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                     <div className="relative z-10">
                       <motion.div 
@@ -1202,7 +1195,7 @@ export default function EditorStudioClient() {
                             onClick={() => pushSettings({ quality: p.v })}
                             className={cn(
                               "w-7 h-7 rounded-full text-[8px] font-black transition-all",
-                              settings.quality === p.v ? "bg-primary text-foreground" : "text-muted-foreground/40 hover:bg-secondary/50"
+                              settings.quality === p.v ? "bg-primary text-primary-foreground" : "text-muted-foreground/40 hover:bg-secondary/50"
                             )}
                             title={p.t}
                           >
@@ -1241,7 +1234,7 @@ export default function EditorStudioClient() {
                         className={cn(
                           "relative rounded-xl px-8 h-10 font-black text-[10px] gap-3 shadow-2xl uppercase italic tracking-tighter group active:scale-95 transition-all duration-500",
                           currentFile?.status === "idle" 
-                            ? "bg-primary hover:bg-primary/90 text-foreground shadow-primary/30" 
+                            ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-primary/30" 
                             : "bg-secondary/50 border border-border text-muted-foreground/60 cursor-default"
                         )}
                         onClick={handleProcess}
@@ -1277,7 +1270,7 @@ export default function EditorStudioClient() {
         </section>
 
         {/* Right Sidebar - Engine Inspector */}
-        <aside className="hidden lg:flex w-[300px] h-full max-h-full border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl">
+        <aside className="hidden lg:flex w-[300px] h-full max-h-full border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl">
           <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">

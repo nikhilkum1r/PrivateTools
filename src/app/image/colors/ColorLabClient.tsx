@@ -188,7 +188,7 @@ export default function ColorLabClient() {
           <div 
             className="absolute inset-0 opacity-[0.2]" 
             style={{ 
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(var(--color-primary-rgb),0.1) 1px, transparent 0)`,
               backgroundSize: '48px 48px'
             }} 
           />
@@ -223,7 +223,7 @@ export default function ColorLabClient() {
         ) : (
           <>
             {/* Left Sidebar - Identity Engine */}
-            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+            <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
               <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
@@ -287,7 +287,7 @@ export default function ColorLabClient() {
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
                 <Button 
-                  className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
+                  className="w-full h-10 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-sm gap-2 shadow-2xl shadow-primary/20 active:scale-95 transition-all italic"
                   onClick={extractPalette}
                   disabled={isProcessing}
                 >
@@ -322,7 +322,7 @@ export default function ColorLabClient() {
                   <div className="flex items-center gap-2">
                     <div className="flex p-1 bg-secondary/50 border border-border rounded-xl">
                       {(["css", "scss", "json"] as const).map(fmt => (
-                        <button key={fmt} onClick={() => setExportFormat(fmt)} className={cn("px-3 h-7 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all", exportFormat === fmt ? "bg-primary text-foreground" : "text-muted-foreground/50 hover:text-foreground")}>{fmt}</button>
+                        <button key={fmt} onClick={() => setExportFormat(fmt)} className={cn("px-3 h-7 rounded-lg text-[9px] font-black uppercase tracking-widest transition-all", exportFormat === fmt ? "bg-primary text-foreground" : "text-muted-foreground/50 hover:text-primary-foreground")}>{fmt}</button>
                       ))}
                     </div>
                     <Button variant="outline" className="h-9 px-4 rounded-xl border-border bg-secondary/50 text-foreground font-black gap-2 hover:bg-secondary transition-all text-[10px]" onClick={exportPalette}>
@@ -359,7 +359,7 @@ export default function ColorLabClient() {
                                       <p className="font-black text-xl md:text-2xl tracking-tighter uppercase italic">{c.hex}</p>
                                       <Badge className={cn(
                                         "text-[9px] font-black border-none px-3 h-5 uppercase tracking-[0.15em] rounded-full",
-                                        c.type === "dominant" ? "bg-primary text-foreground" :
+                                        c.type === "dominant" ? "bg-primary text-primary-foreground" :
                                         c.type === "vibrant" ? "bg-blue-600 text-foreground" :
                                         c.type === "muted" ? "bg-secondary text-muted-foreground/60" :
                                         "bg-orange-600 text-foreground"
@@ -417,7 +417,7 @@ export default function ColorLabClient() {
             </section>
 
             {/* Right Sidebar - Studio Matrix */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
               <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -456,7 +456,7 @@ export default function ColorLabClient() {
                           variant={activeAnalysis === mode.id ? "default" : "outline"}
                           className={cn(
                             "h-10 justify-start gap-4 rounded-2xl px-6 border-border transition-all duration-300",
-                            activeAnalysis === mode.id ? "bg-primary text-foreground shadow-lg shadow-primary/20" : "bg-white/[0.03] hover:bg-white/[0.08]"
+                            activeAnalysis === mode.id ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "bg-white/[0.03] hover:bg-white/[0.08]"
                           )}
                           onClick={() => setActiveAnalysis(mode.id as any)}
                         >

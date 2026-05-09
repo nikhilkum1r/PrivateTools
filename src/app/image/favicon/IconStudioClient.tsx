@@ -298,14 +298,14 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
           <div 
             className="absolute inset-0 opacity-[0.2]" 
             style={{ 
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(var(--color-primary-rgb),0.1) 1px, transparent 0)`,
               backgroundSize: '48px 48px'
             }} 
           />
         </div>
 
         {/* Left Sidebar - Control Panel */}
-        <aside className="flex w-full lg:w-[300px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+        <aside className="flex w-full lg:w-[300px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
           <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -398,7 +398,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                     )}
 
                     <Button 
-                      className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-foreground font-black uppercase tracking-tighter gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic text-lg"
+                      className="w-full h-9 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-black uppercase tracking-tighter gap-3 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic text-lg"
                       onClick={generateIcons}
                       disabled={isProcessing}
                     >
@@ -493,7 +493,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                         <Link 
                           key={slug}
                           href={`/image/favicon/${slug}`}
-                          className="px-6 py-3 rounded-2xl bg-secondary/30 border border-border text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary/20 hover:border-primary/40 hover:text-foreground transition-all shadow-xl"
+                          className="px-6 py-3 rounded-2xl bg-secondary/30 border border-border text-[10px] font-black uppercase tracking-[0.2em] hover:bg-primary/20 hover:border-primary/40 hover:text-primary-foreground transition-all shadow-xl"
                         >
                           {slug.replace(/-/g, " ")}
                         </Link>
@@ -517,7 +517,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                     </div>
                     <div className="h-11 flex-grow max-w-2xl bg-muted/40 rounded-[1.25rem] border border-border flex items-center px-5 gap-4 shadow-inner group-hover:border-primary/40 transition-colors">
                       <div className="w-6 h-6 shrink-0 rounded-lg overflow-hidden bg-secondary/50 border border-border flex items-center justify-center shadow-2xl relative">
-                        {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Globe className="w-4 h-4 text-white/5" />}
+                        {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Globe className="w-4 h-4 text-foreground/5" />}
                         <div className="absolute inset-0 bg-primary/5 animate-pulse" />
                       </div>
                       <div className="flex flex-col">
@@ -652,7 +652,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                           <span className="text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground/40 italic block ml-2">iOS Standard</span>
                           <div className="flex flex-col items-center gap-4 group/ios cursor-pointer active:scale-95 transition-all">
                             <div className="w-11 h-11 rounded-[22.5%] overflow-hidden bg-muted/60 backdrop-blur-3xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/ios:border-primary/40 group-hover/ios:scale-110">
-                              {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Zap className="w-8 h-8 text-white/5" />}
+                              {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Zap className="w-8 h-8 text-foreground/5" />}
                             </div>
                           </div>
                         </div>
@@ -661,7 +661,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
                           <span className="text-[9px] font-black uppercase tracking-[0.3em] text-muted-foreground/40 italic block ml-2">Windows Core</span>
                           <div className="flex flex-col items-center gap-4 group/win cursor-pointer active:scale-95 transition-all">
                             <div className="w-11 h-11 rounded-none overflow-hidden bg-muted/60 backdrop-blur-3xl border border-border flex items-center justify-center p-0 shadow-2xl transition-all duration-500 group-hover/win:border-primary/40 group-hover/win:scale-110">
-                              {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Grid className="w-8 h-8 text-white/5" />}
+                              {preview ? <img src={preview} style={{ transform: `scale(${zoom})` }} className="w-full h-full object-contain" /> : <Grid className="w-8 h-8 text-foreground/5" />}
                             </div>
                           </div>
                         </div>
@@ -724,7 +724,7 @@ export default function IconStudioClient({ defaultTitle }: IconStudioClientProps
         </section>
 
         {/* Right Sidebar - Engine Inspector / Asset Matrix */}
-        <aside className="flex w-full lg:w-[300px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
+        <aside className="flex w-full lg:w-[300px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[600px] lg:h-full">
           <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10 shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
@@ -807,7 +807,7 @@ const InspectorContent = ({
       <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
         <TabsList className="bg-muted/40 border border-border rounded-xl w-full p-1.5 h-10">
           {categories.map(cat => (
-            <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
+            <TabsTrigger key={cat} value={cat} className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)] transition-all italic">{cat}</TabsTrigger>
           ))}
         </TabsList>
       </Tabs>
@@ -862,7 +862,7 @@ const InspectorContent = ({
             </div>
             <div className="space-y-2">
               <p className="text-sm font-black uppercase tracking-[0.4em] text-muted-foreground/40">Matrix Standby</p>
-              <p className="text-[9px] text-white/10 uppercase font-bold tracking-widest">Architect identity to populate nodes</p>
+              <p className="text-[9px] text-foreground/10 uppercase font-bold tracking-widest">Architect identity to populate nodes</p>
             </div>
           </div>
         )}
@@ -871,7 +871,7 @@ const InspectorContent = ({
     
     <div className="p-8 border-t border-border bg-muted/40 shrink-0">
       <Button 
-        className="w-full h-18 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
+        className="w-full h-18 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl gap-4 shadow-2xl shadow-primary/30 group active:scale-95 transition-all italic tracking-tighter"
         onClick={handleDownloadZip}
         disabled={results.length === 0}
       >

@@ -160,4 +160,48 @@ export const COMPRESSOR_FAQ: FAQItem[] = [
   }
 ];
 
+export const PASSWORD_CHECKER_FAQ: FAQItem[] = [
+  {
+    question: "Is it safe to type my real passwords into this checker?",
+    answer: "Absolutely. SafeTools is built on a 'Zero-Server' architecture. This means the code that analyzes your password runs entirely inside your web browser on your computer. Your password never leaves your device, is never logged, and is never seen by us or anyone else."
+  },
+  {
+    question: "How does the tool calculate password strength?",
+    answer: "We use a combination of entropy calculation (measuring the randomness of the string) and pattern matching (checking for common words, sequences, and keyboard patterns). This provides a realistic estimate of how long a brute-force attack would take to crack your password."
+  },
+  {
+    question: "Does this tool check if my password has been leaked in a breach?",
+    answer: "Yes, we perform a local heuristic check for common leaked patterns. For real-time global breach checking, we use privacy-preserving k-Anonymity queries (where only a small portion of your password's hash is sent), ensuring your full password remains 100% private."
+  },
+  {
+    question: "Why should I use a long passphrase instead of a complex short password?",
+    answer: "Length is the most significant factor in password entropy. A long passphrase made of several random words is often much harder for computers to crack than a short password with symbols, yet it is significantly easier for humans to remember."
+  },
+  {
+    question: "Does SafeTools store any of my data?",
+    answer: "No. All analysis is performed in volatile browser memory. As soon as you close the tab or refresh the page, all entered data and analysis results are permanently wiped from your device's RAM."
+  }
+];
 
+export const PASSWORD_GENERATOR_FAQ: FAQItem[] = [
+  {
+    question: "How does the password generator create 'truly random' passwords?",
+    answer: "SafeTools uses the Web Crypto API, which provides a Cryptographically Secure Pseudo-Random Number Generator (CSPRNG). Unlike standard random functions, this extracts high-quality randomness (entropy) from your operating system's underlying security layer, making the generated passwords mathematically impossible to predict."
+  },
+  {
+    question: "Is it safer to generate a password offline?",
+    answer: "Yes. By generating your password locally in your browser with SafeTools, you eliminate the risk of 'man-in-the-middle' attacks where a server-side generator could be intercepted or logged. Your generated secrets exist only in your browser's memory."
+  },
+  {
+    question: "Can I generate passwords for all types of accounts?",
+    answer: "Absolutely. You can customize the length and include uppercase letters, lowercase letters, numbers, and symbols to meet the specific requirements of any website or application while maintaining maximum security."
+  },
+  {
+    question: "Why does SafeTools not store my generated passwords?",
+    answer: "Our core philosophy is 'Zero-Server' privacy. Storing passwords on a server creates a centralized target for hackers. By not storing anything, we ensure that you are the only person who ever sees your generated secret."
+  },
+  {
+    question: "What is the recommended password length for 2026?",
+    answer: "For critical accounts like email or banking, we recommend a minimum of 16 to 24 characters. Our tool defaults to 24 characters to provide high-entropy protection that is resistant to modern brute-force and dictionary attacks."
+  }
+];

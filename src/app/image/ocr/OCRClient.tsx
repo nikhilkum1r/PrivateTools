@@ -173,7 +173,7 @@ export default function OCRClient() {
 
                     <div className="flex gap-4">
                        <Button 
-                         className="flex-grow h-10 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black gap-2 shadow-2xl shadow-primary/20 italic"
+                         className="flex-grow h-10 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black gap-2 shadow-2xl shadow-primary/20 italic"
                          onClick={runOCR}
                          disabled={status === "loading" || status === "processing"}
                        >
@@ -224,7 +224,7 @@ export default function OCRClient() {
                      value={result}
                      onChange={(e) => setResult(e.target.value)}
                      placeholder="Waiting for neural analysis..."
-                     className="absolute inset-0 bg-transparent border-none focus-visible:ring-0 resize-none font-mono text-sm leading-relaxed text-white/70 placeholder:text-white/10 p-0"
+                     className="absolute inset-0 bg-transparent border-none focus-visible:ring-0 resize-none font-mono text-sm leading-relaxed text-foreground/70 placeholder:text-foreground/10 p-0"
                    />
                    {!result && status === "idle" && (
                      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-10 pointer-events-none space-y-4">

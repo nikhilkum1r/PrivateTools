@@ -168,7 +168,7 @@ const tools: Tool[] = [
   {
     title: "PDF Merger",
     desc: "Combine multiple PDFs and images into one document.",
-    href: "/pdf/merge",
+    href: "/pdf/merge-pdf",
     icon: FileText,
     color: "from-red-500 to-pink-500",
     cat: "Documents",
@@ -177,7 +177,7 @@ const tools: Tool[] = [
   {
     title: "PDF Splitter",
     desc: "Extract specific pages or split into separate files.",
-    href: "/pdf/split",
+    href: "/pdf/split-pdf",
     icon: Layers,
     color: "from-orange-500 to-red-500",
     cat: "Documents",
@@ -186,7 +186,7 @@ const tools: Tool[] = [
   {
     title: "Compress PDF",
     desc: "Shrink PDF files locally without losing visual quality.",
-    href: "/pdf/compress",
+    href: "/pdf/compress-pdf",
     icon: Zap,
     color: "from-orange-600 to-amber-500",
     cat: "Documents",
@@ -204,7 +204,7 @@ const tools: Tool[] = [
   {
     title: "Unlock PDF",
     desc: "Remove password protection and security restrictions from PDFs.",
-    href: "/pdf/unlock",
+    href: "/pdf/unlock-pdf",
     icon: Unlock,
     color: "from-blue-600 to-indigo-700",
     cat: "Documents",
@@ -213,7 +213,7 @@ const tools: Tool[] = [
   {
     title: "Lock PDF",
     desc: "Add strong password protection and encryption to your PDF files locally.",
-    href: "/pdf/lock",
+    href: "/pdf/protect-pdf",
     icon: Lock,
     color: "from-indigo-600 to-blue-700",
     cat: "Documents",
@@ -265,9 +265,9 @@ const tools: Tool[] = [
     tags: ["mp3", "wav", "trim", "cut", "convert", "audio", "voice"]
   },
   {
-    title: "Metadata & EXIF Remover",
-    desc: "Strip EXIF and metadata from images and documents.",
-    href: "/privacy/metadata",
+    title: "Metadata Cleaner",
+    desc: "Remove hidden data, EXIF, and GPS tracking locally.",
+    href: "/security/metadata-cleaner",
     icon: ShieldCheck,
     color: "from-green-500 to-emerald-500",
     cat: "Security",
@@ -276,7 +276,7 @@ const tools: Tool[] = [
   {
     title: "Encrypt & Decrypt Files",
     desc: "AES-256 GCM client-side file encryption. Zero-server.",
-    href: "/privacy/vault",
+    href: "/security/vault",
     icon: Lock,
     color: "from-slate-600 to-gray-900",
     cat: "Security",
@@ -285,7 +285,7 @@ const tools: Tool[] = [
   {
     title: "Password Generator",
     desc: "Generate high-entropy, cryptographically secure passwords.",
-    href: "/security",
+    href: "/privacy/password-generator",
     icon: Key,
     color: "from-blue-600 to-indigo-600",
     cat: "Security",
@@ -303,7 +303,7 @@ const tools: Tool[] = [
   {
     title: "Hide Text inside Image",
     desc: "Hide secret messages invisibly inside images.",
-    href: "/steganography",
+    href: "/security/steganography",
     icon: Eye,
     color: "from-gray-500 to-slate-700",
     cat: "Security",
@@ -312,7 +312,7 @@ const tools: Tool[] = [
   {
     title: "Create & Scan QR Codes",
     desc: "Generate and scan QR codes with custom styling.",
-    href: "/qr",
+    href: "/tools/qr-generator",
     icon: QrCode,
     color: "from-sky-500 to-blue-500",
     cat: "Dev",
@@ -375,7 +375,7 @@ const tools: Tool[] = [
   {
     title: "Secret Self-Destruct Note",
     desc: "Create encrypted, self-destructing notes locally.",
-    href: "/privacy/secure-note",
+    href: "/privacy/secure-notes",
     icon: StickyNote,
     color: "from-yellow-500 to-amber-600",
     cat: "Security",
@@ -384,7 +384,7 @@ const tools: Tool[] = [
   {
     title: "Permanently Delete Files",
     desc: "Permanently wipe sensitive files from memory.",
-    href: "/privacy/shredder",
+    href: "/security/file-shredder",
     icon: Trash,
     color: "from-red-600 to-rose-700",
     cat: "Security",
@@ -473,7 +473,7 @@ export default function HomeClient() {
 
   return (
     <div
-      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-foreground"
+      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground"
       onDragEnter={handleDrag}
       onDragOver={handleDrag}
       onDragLeave={handleDrag}
@@ -583,7 +583,7 @@ export default function HomeClient() {
                 className={cn(
                   "px-5 py-2 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-300",
                   activeCategory === cat
-                    ? "bg-primary text-foreground shadow-lg shadow-primary/30"
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
                     : "bg-secondary text-muted-foreground border border-border hover:bg-secondary/80 hover:text-foreground"
                 )}
               >

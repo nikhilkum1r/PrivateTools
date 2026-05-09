@@ -269,7 +269,7 @@ export default function VideoStudioPage() {
     return (
       <div className="relative flex items-center justify-center">
         <svg className="w-48 h-48 transform -rotate-90">
-          <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" className="text-white/5" />
+          <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" className="text-foreground/5" />
           <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" className="text-primary transition-all duration-500 ease-out shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)]" />
         </svg>
         <div className="absolute flex flex-col items-center">
@@ -303,13 +303,13 @@ export default function VideoStudioPage() {
                   <p className="text-muted-foreground/60 text-xl font-medium max-w-md mx-auto leading-relaxed italic">Privacy-focused, high-performance localized video production laboratory.</p>
                 </div>
               </div>
-              <DropZone onFilesDrop={handleFileDrop} accept="video/*" multiple={false} className="h-64 border-dashed border-border bg-secondary/30 rounded-3xl hover:bg-secondary/70 hover:border-primary/40 transition-all group" />
+              <DropZone onFilesDrop={handleFileDrop} accept="video/*" multiple={false} className="h-64 border-dashed border-border bg-muted/10 rounded-3xl hover:bg-muted/20 hover:border-primary/40 transition-all group" />
             </div>
           </div>
         ) : (
           <>
             {/* Left Sidebar - Studio Controls */}
-            <aside className="flex w-full lg:w-[300px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+            <aside className="flex w-full lg:w-[300px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
               <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3"><Sliders className="w-4 h-4" /> Asset Inspector</h3>
@@ -343,7 +343,7 @@ export default function VideoStudioPage() {
                       <div className="space-y-5">
                         <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Render Preset</Label>
                         <Select value={preset} onValueChange={(v) => setPreset(v ?? "ultrafast")}>
-                          <SelectTrigger className="h-10 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
+                        <SelectTrigger className="h-10 rounded-2xl bg-muted/10 border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent className="bg-card border-border">
@@ -359,7 +359,7 @@ export default function VideoStudioPage() {
                         <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Target Protocol</Label>
                         <div className="grid grid-cols-2 gap-3">
                           {["mp4", "webm", "mkv", "avi"].map(fmt => (
-                            <Button key={fmt} variant={outputFormat === fmt ? "default" : "ghost"} className={cn("rounded-2xl text-[10px] font-black h-12 uppercase tracking-widest border border-border", outputFormat === fmt ? "bg-primary text-foreground shadow-[0_10px_30px_rgba(var(--primary-rgb),0.3)]" : "text-muted-foreground/50 hover:bg-secondary/50")} onClick={() => setOutputFormat(fmt)}>{fmt}</Button>
+                            <Button key={fmt} variant={outputFormat === fmt ? "default" : "ghost"} className={cn("rounded-2xl text-[10px] font-black h-12 uppercase tracking-widest border border-border", outputFormat === fmt ? "bg-primary text-primary-foreground shadow-[0_10px_30px_rgba(var(--primary-rgb),0.3)]" : "text-muted-foreground/50 hover:bg-secondary/50")} onClick={() => setOutputFormat(fmt)}>{fmt}</Button>
                           ))}
                         </div>
                       </div>
@@ -367,7 +367,7 @@ export default function VideoStudioPage() {
                       <div className="space-y-5">
                         <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Scale Resolution</Label>
                         <Select value={resolution} onValueChange={(v) => setResolution(v ?? "original")}>
-                          <SelectTrigger className="h-10 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
+                        <SelectTrigger className="h-10 rounded-2xl bg-muted/10 border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent className="bg-card border-border">
@@ -419,7 +419,7 @@ export default function VideoStudioPage() {
                                   </div>
                                ) : (
                                   blurRegions.map((reg, i) => (
-                                     <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-border group hover:border-primary/30 transition-all">
+                                     <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-muted/10 border border-border group hover:border-primary/30 transition-all">
                                         <div className="flex items-center gap-4">
                                            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-[10px] font-black italic">
                                               #{i+1}
@@ -454,7 +454,7 @@ export default function VideoStudioPage() {
                             { val: "180", icon: RotateCw },
                             { val: "270", icon: RotateCw }
                           ].map((r, i) => (
-                            <Button key={r.val} variant={rotation === r.val ? "default" : "ghost"} className={cn("rounded-xl h-12 flex flex-col items-center justify-center gap-1", rotation === r.val ? "bg-primary text-foreground" : "text-muted-foreground/40 border border-border")} onClick={() => setRotation(r.val)}>
+                            <Button key={r.val} variant={rotation === r.val ? "default" : "ghost"} className={cn("rounded-xl h-12 flex flex-col items-center justify-center gap-1", rotation === r.val ? "bg-primary text-primary-foreground" : "text-muted-foreground/40 border border-border")} onClick={() => setRotation(r.val)}>
                               <r.icon className={cn("w-4 h-4", r.val === "180" && "rotate-180", r.val === "270" && "-rotate-90")} />
                               <span className="text-[8px] font-black">{r.val}°</span>
                             </Button>
@@ -465,7 +465,7 @@ export default function VideoStudioPage() {
                       <div className="space-y-5">
                         <Label className="text-[10px] uppercase font-black tracking-widest text-muted-foreground/60">Temporal Velocity</Label>
                         <Select value={speed} onValueChange={(v) => setSpeed(v ?? "1.0")}>
-                          <SelectTrigger className="h-10 rounded-2xl bg-white/[0.03] border-border font-black text-[10px] uppercase tracking-widest">
+                        <SelectTrigger className="h-10 rounded-2xl bg-muted/10 border-border font-black text-[10px] uppercase tracking-widest">
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent className="bg-card border-border">
@@ -519,7 +519,7 @@ export default function VideoStudioPage() {
               </ScrollArea>
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
-                <Button className="w-full h-12 rounded-2xl bg-primary hover:bg-primary/90 text-foreground font-black text-xl gap-4 shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic disabled:grayscale disabled:opacity-50" onClick={processVideo} disabled={isProcessing || !isLoaded}>
+                <Button className="w-full h-12 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xl gap-4 shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic disabled:grayscale disabled:opacity-50" onClick={processVideo} disabled={isProcessing || !isLoaded}>
                   {isProcessing ? <Loader2 className="w-7 h-7 animate-spin" /> : <Zap className="w-7 h-7 group-hover:scale-125 transition-transform" />}
                   {isProcessing ? "Rendering Asset..." : "Export Pro Studio"}
                 </Button>
@@ -662,7 +662,7 @@ export default function VideoStudioPage() {
             </section>
 
             {/* Right Sidebar - Gallery & History */}
-            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+            <aside className="flex w-full lg:w-[380px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
               <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3"><History className="w-4 h-4" /> Render Output</h3>
@@ -677,7 +677,7 @@ export default function VideoStudioPage() {
                       <Label className="text-[10px] uppercase font-black tracking-widest text-emerald-500 flex items-center gap-3">
                         <CheckCircle2 className="w-4 h-4" /> Session Success
                       </Label>
-                      <Card className="p-6 bg-white/[0.03] border-emerald-500/20 hover:border-emerald-500/40 transition-all group flex flex-col gap-3 rounded-xl shadow-2xl shadow-emerald-500/5">
+                      <Card className="p-6 bg-muted/10 border-emerald-500/20 hover:border-emerald-500/40 transition-all group flex flex-col gap-3 rounded-xl shadow-2xl shadow-emerald-500/5">
                          <div className="flex items-center gap-5">
                             <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0 group-hover:scale-110 transition-transform">
                                <FileVideo className="w-7 h-7" />
@@ -738,7 +738,7 @@ export default function VideoStudioPage() {
               </ScrollArea>
 
               <div className="p-8 border-t border-border bg-muted/40 shrink-0">
-                <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-white/15 italic">
+                <div className="flex items-center justify-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-foreground/15 italic">
                   <ShieldCheck className="w-4 h-4 text-emerald-500" /> AES-256 Thread Guard
                 </div>
               </div>

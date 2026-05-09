@@ -3,11 +3,11 @@ import CompressorStudioClient from "./CompressorStudioClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Online Image Compressor - Free, Private & Batch | SafeTools",
-  description: "Compress images online without losing quality. Support for PNG, JPG, WebP, AVIF and more. 100% private, browser-based optimization with zero server uploads.",
-  keywords: ["image compressor", "compress image online", "reduce image size", "private image compression", "batch image optimizer"],
+  title: "Professional Image Compressor | Batch Optimize Online (100% Private)",
+  description: "Shrink images instantly with our professional image compressor. Batch optimize PNG, JPG, WebP & AVIF locally in your browser. No uploads, zero tracking, maximum quality.",
+  keywords: ["image compressor", "batch image optimizer", "private image compression", "compress png online", "reduce jpg size", "webp optimizer"],
   openGraph: {
-    title: "SafeTools Image Compressor | Privacy-First Optimization",
+    title: "SafeTools Image Compressor | Professional Studio",
     description: "Shrink your images by up to 90% instantly in your browser. No signup, no tracking.",
     type: "website",
     url: "https://safetools.space/image/compress",
@@ -21,6 +21,11 @@ export default function ImageCompressorPage() {
         name="Image Compressor"
         description="Professional-grade image compression directly in your browser. Zero server uploads."
         url="https://safetools.space/image/compress"
+        breadcrumbs={[
+          { name: "Home", item: "https://safetools.space" },
+          { name: "Image Tools", item: "https://safetools.space/image" },
+          { name: "Image Compressor", item: "https://safetools.space/image/compress" }
+        ]}
       />
       <CompressorStudioClient />
     </>

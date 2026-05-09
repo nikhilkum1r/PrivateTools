@@ -19,6 +19,8 @@ async function processImage(imageDataURL: string) {
     self.postMessage({ type: "status", message: "Loading AI model…" });
 
     const config: Config = {
+      // Using the official IMG.LY CDN as 1.7.0 is not on npm
+      publicPath: "https://staticimgly.com/@imgly/background-removal-data/1.7.0/dist/",
       progress: (key: string, current: number, total: number) => {
         const pct = total > 0 ? Math.round((current / total) * 100) : 0;
         self.postMessage({
@@ -29,12 +31,9 @@ async function processImage(imageDataURL: string) {
           pct,
         });
       },
-      // Use unpkg as a more robust fallback CDN for model data
-      publicPath: "https://unpkg.com/@imgly/background-removal-data@1.7.0/dist/",
       model: "isnet_quint8",
       fetchArgs: {
         mode: "cors",
-        credentials: "omit",
       },
       output: {
         format: "image/png",
@@ -54,10 +53,14 @@ async function processImage(imageDataURL: string) {
       { transfer: [arrayBuffer] }
     );
   } catch (err: any) {
-    console.error("[RemoveBg Worker] Error:", err);
+    console.error("[RemoveBg Worker] Error Details:", {
+      message: err?.message,
+      stack: err?.stack,
+      err
+    });
     self.postMessage({
       type: "error",
-      error: err?.message ?? "Unknown error during background removal.",
+      error: `AI Model Fetch Failed: ${err?.message || "Unknown Error"}. Please check your internet connection or try again. (Source: staticimgly)`,
     });
   }
 }

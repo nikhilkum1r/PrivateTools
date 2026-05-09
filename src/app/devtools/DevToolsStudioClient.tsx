@@ -126,8 +126,8 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
       
       <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative">
         {/* Left Sidebar - Utility Matrix */}
-        <aside className="flex w-full lg:w-[320px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl">
-          <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[320px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl">
+          <div className="p-6 border-b border-border flex items-center justify-between bg-secondary/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
                 <Terminal className="w-4 h-4" /> Utility Matrix
@@ -147,12 +147,12 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
                     "w-full flex items-start gap-4 p-4 rounded-2xl transition-all duration-300 group relative overflow-hidden",
                     activeTool === tool.id 
                       ? "bg-primary/10 border border-primary/20" 
-                      : "hover:bg-white/[0.03] border border-transparent"
+                      : "hover:bg-secondary/50 border border-transparent"
                   )}
                 >
                   <div className={cn(
                     "w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-500",
-                    activeTool === tool.id ? "bg-primary text-foreground scale-110" : "bg-secondary/50 text-muted-foreground/40 group-hover:text-primary/60"
+                    activeTool === tool.id ? "bg-primary text-primary-foreground scale-110" : "bg-secondary/50 text-muted-foreground/40 group-hover:text-primary/60"
                   )}>
                     <ToolIcon iconName={tool.iconName} className="w-5 h-5" />
                   </div>
@@ -203,7 +203,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
                <Button variant="outline" className="h-10 rounded-xl px-4 border-border bg-secondary/50 text-muted-foreground/60 font-black text-[10px] gap-2 hover:text-foreground transition-all" onClick={() => setInput("")}>
                  <Trash2 className="w-3.5 h-3.5" /> CLEAR
                </Button>
-               <Button className="h-10 rounded-xl px-6 bg-primary text-foreground font-black text-[10px] gap-2 shadow-lg shadow-primary/20 italic" onClick={processTool}>
+               <Button className="h-10 rounded-xl px-6 bg-primary text-primary-foreground font-black text-[10px] gap-2 shadow-lg shadow-primary/20 italic" onClick={processTool}>
                  <Zap className="w-3.5 h-3.5" /> RE-EXECUTE
                </Button>
             </div>
@@ -221,7 +221,7 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Enter payload here..."
-                    className="flex-grow bg-transparent border-none focus-visible:ring-0 resize-none font-mono text-[13px] leading-relaxed p-6 scrollbar-hide text-foreground/80 placeholder:text-white/10"
+                    className="flex-grow bg-transparent border-none focus-visible:ring-0 resize-none font-mono text-[13px] leading-relaxed p-6 scrollbar-hide text-foreground/80 placeholder:text-muted-foreground/20"
                   />
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     <p className="text-[9px] font-black text-muted-foreground/40 uppercase tracking-widest">{input.length} characters</p>
@@ -259,8 +259,8 @@ export default function DevToolsStudioClient({ initialTool = "json" }: DevToolsS
         </section>
 
         {/* Right Sidebar - Analytics & History */}
-        <aside className="flex w-full lg:w-[320px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl">
-          <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
+        <aside className="flex w-full lg:w-[320px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl">
+          <div className="p-6 border-b border-border flex items-center justify-between bg-secondary/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
                 <Settings2 className="w-4 h-4" /> Bit Inspector

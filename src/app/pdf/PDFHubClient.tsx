@@ -24,26 +24,26 @@ import { cn } from "@/lib/utils";
 
 const docTools = [
   {
-    title: "Merge PDFs",
+    title: "PDF Merger",
     desc: "Combine multiple PDFs and images into a single professional document in seconds.",
     icon: Files,
-    href: "/pdf/merge",
+    href: "/pdf/merge-pdf",
     color: "from-red-500 to-orange-500",
     tags: ["Productivity", "Fast"]
   },
   {
-    title: "Split PDF Pages",
+    title: "PDF Splitter",
     desc: "Extract specific pages or ranges from large documents. Precision slicing logic.",
     icon: Scissors,
-    href: "/pdf/split",
+    href: "/pdf/split-pdf",
     color: "from-blue-500 to-indigo-500",
     tags: ["Precision", "New"]
   },
   {
-    title: "Compress PDF",
+    title: "PDF Compressor",
     desc: "Reduce file size while maintaining maximum quality. Smart local optimization.",
     icon: Zap,
-    href: "/pdf/compress",
+    href: "/pdf/compress-pdf",
     color: "from-orange-500 to-red-600",
     tags: ["Optimization", "Fast"]
   },
@@ -51,23 +51,23 @@ const docTools = [
     title: "Unlock PDF",
     desc: "Remove passwords and security restrictions from your PDF files locally.",
     icon: Unlock,
-    href: "/pdf/unlock",
+    href: "/pdf/unlock-pdf",
     color: "from-blue-600 to-indigo-700",
     tags: ["Security", "Decryption"]
   },
   {
-    title: "Lock PDF",
+    title: "Protect PDF",
     desc: "Add strong password protection and encryption to your PDF files locally.",
     icon: Lock,
-    href: "/pdf/lock",
+    href: "/pdf/protect-pdf",
     color: "from-indigo-600 to-blue-700",
     tags: ["Security", "Encryption"]
   },
   {
-    title: "Metadata & EXIF Remover",
+    title: "Metadata Scrubber",
     desc: "Remove authors, creators, and hidden metadata from sensitive PDF documents.",
     icon: Lock,
-    href: "/privacy/metadata",
+    href: "/security/metadata-cleaner",
     color: "from-green-500 to-emerald-500",
     tags: ["Privacy", "Essential"]
   }

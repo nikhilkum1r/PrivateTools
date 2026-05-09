@@ -42,7 +42,7 @@ const TOOLS = [
   {
     name: "Compress PDF",
     icon: Zap,
-    href: "/pdf/compress",
+    href: "/pdf/compress-pdf",
     desc: "Reduce PDF file size while maintaining document quality.",
     tags: ["PDF", "Optimization"],
     color: "text-orange-600",

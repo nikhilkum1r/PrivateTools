@@ -61,6 +61,11 @@ export default async function ConversionSEOPage({ params }: PageProps) {
         name={`Convert ${from.toUpperCase()} to ${to.toUpperCase()}`}
         description={`Securely convert ${from.toUpperCase()} files to ${to.toUpperCase()} format in your browser.`}
         url={`https://safetools.space/image/convert/${slug}`}
+        breadcrumbs={[
+          { name: "Home", item: "https://safetools.space" },
+          { name: "Image Tools", item: "https://safetools.space/image" },
+          { name: `Convert ${from.toUpperCase()} to ${to.toUpperCase()}`, item: `https://safetools.space/image/convert/${slug}` }
+        ]}
       />
       <ConversionStudioClient 
         fromFormat={from} 

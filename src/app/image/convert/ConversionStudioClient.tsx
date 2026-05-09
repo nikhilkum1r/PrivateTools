@@ -199,7 +199,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
               <Label className="text-[10px] uppercase font-black tracking-widest opacity-40">Target Format</Label>
               <DropdownMenu>
                 <DropdownMenuTrigger render={
-                  <Button variant="outline" className="w-full h-10 rounded-lg bg-secondary/30 border-border px-3 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden relative">
+                  <Button variant="outline" className="w-full h-10 rounded-lg bg-secondary/50 border-border px-3 hover:border-primary/50 hover:bg-primary/5 transition-all group overflow-hidden relative">
                     <div className="flex items-center gap-3 w-full">
                       <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
                         <HardDrive className="w-3.5 h-3.5 text-primary" />
@@ -244,7 +244,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                                 className={cn(
                                   "format-item flex items-center justify-between px-3 py-2 rounded-lg border transition-all active:scale-95",
                                   settings.format === f 
-                                    ? "bg-primary border-primary text-white" 
+                                    ? "bg-primary border-primary text-primary-foreground" 
                                     : "bg-secondary/30 border-border text-muted-foreground hover:bg-secondary hover:border-primary/30 hover:text-foreground"
                                 )}
                                 onClick={() => updateSettings({ format: f as any })}
@@ -325,7 +325,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
       </ScrollArea>
       <div className="p-5 border-t border-border bg-card">
         <Button 
-          className="w-full h-10 rounded-lg bg-primary hover:bg-primary/90 text-white font-semibold text-sm gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all"
+          className="w-full h-10 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all"
           onClick={convertAll}
           disabled={files.length === 0 || isProcessingAll}
         >
@@ -345,9 +345,9 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
           <div className="absolute top-[20%] left-[10%] w-[40%] h-[40%] bg-primary/10 blur-[140px] rounded-full animate-pulse" />
           <div className="absolute bottom-[20%] right-[10%] w-[40%] h-[40%] bg-blue-500/10 blur-[140px] rounded-full animate-pulse" />
           <div 
-            className="absolute inset-0 opacity-[0.4] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" 
+            className="absolute inset-0 opacity-[0.2] dark:opacity-[0.4] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" 
             style={{ 
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)`,
+              backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
               backgroundSize: '32px 32px'
             }} 
           />
@@ -373,7 +373,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
             <header className="px-4 py-3 flex items-center justify-between studio-header">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-md">
-                  <FileStack className="w-4 h-4 text-white" />
+                  <FileStack className="w-4 h-4 text-foreground" />
                 </div>
                 <div>
                   <h2 className="font-bold text-sm md:text-base tracking-tight">
@@ -392,7 +392,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                 <AnimatePresence>
                   {files.some(f => f.status === "completed") && (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}>
-                      <Button variant="outline" className="rounded-lg border-primary/20 bg-primary/10 text-primary h-8 px-3 text-xs font-semibold gap-2 hover:bg-primary hover:text-white transition-all" onClick={downloadAll}>
+                      <Button variant="outline" className="rounded-lg border-primary/20 bg-primary/10 text-primary h-8 px-3 text-xs font-semibold gap-2 hover:bg-primary hover:text-primary-foreground transition-all" onClick={downloadAll}>
                         <DownloadCloud className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Export All</span>
                       </Button>
                     </motion.div>
@@ -540,7 +540,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                                       <Link 
                                         key={pair}
                                         href={`/image/convert/${pair}`}
-                                        className="px-4 py-2.5 rounded-xl bg-secondary/30 border border-border text-[10px] font-black uppercase tracking-widest hover:bg-primary/20 hover:border-primary/40 hover:text-foreground transition-all whitespace-nowrap"
+                                        className="px-4 py-2.5 rounded-xl bg-secondary/30 border border-border text-[10px] font-black uppercase tracking-widest hover:bg-primary/20 hover:border-primary/40 hover:text-primary-foreground transition-all whitespace-nowrap"
                                       >
                                         {pair.replace(/-/g, " ")}
                                       </Link>
@@ -720,7 +720,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat }: Convers
                   onClick={convertAll}
                   disabled={isProcessingAll}
                  >
-                   <Zap className="w-8 h-8 text-foreground" />
+                   <Zap className="w-8 h-8 text-primary-foreground" />
                  </Button>
               </motion.div>
             )}

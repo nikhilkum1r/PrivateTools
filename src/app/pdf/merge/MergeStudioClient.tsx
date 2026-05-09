@@ -152,11 +152,11 @@ export default function MergeStudioClient() {
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-red-600/10 blur-[160px] rounded-full animate-pulse" />
           <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-primary/10 blur-[160px] rounded-full animate-pulse" />
-          <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`, backgroundSize: '48px 48px' }} />
+          <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, rgba(var(--color-primary-rgb),0.1) 1px, transparent 0)`, backgroundSize: '48px 48px' }} />
         </div>
 
         {/* Left Sidebar */}
-        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border bg-card/40 backdrop-blur-3xl flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
+        <aside className="flex w-full lg:w-[380px] border-b lg:border-b-0 lg:border-r border-border glass-card flex-col shrink-0 relative z-10 shadow-2xl min-h-0 lg:h-full">
           <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -211,7 +211,7 @@ export default function MergeStudioClient() {
                               {f.pageCount ? `${f.pageCount}p` : "img"} • {((f.file.size) / 1024).toFixed(0)}KB
                             </p>
                           </div>
-                          <span className="text-[9px] font-black text-white/10 shrink-0">#{i + 1}</span>
+                          <span className="text-[9px] font-black text-foreground/10 shrink-0">#{i + 1}</span>
                           <Button
                             size="icon"
                             variant="ghost"
@@ -252,7 +252,7 @@ export default function MergeStudioClient() {
               </div>
             )}
             <Button
-              className="w-full bg-secondary hover:bg-white/20 border border-border text-foreground rounded-2xl font-black uppercase tracking-widest h-12 group transition-all active:scale-95"
+              className="w-full bg-secondary hover:bg-secondary/80 border border-border text-foreground rounded-2xl font-black uppercase tracking-widest h-12 group transition-all active:scale-95"
               onClick={() => document.getElementById('pdf-add-btn')?.click()}
             >
               <Plus className="w-4 h-4 mr-2 group-hover:rotate-90 transition-transform" />
@@ -267,7 +267,7 @@ export default function MergeStudioClient() {
           <header className="p-4 md:p-8 flex items-center justify-between bg-muted/40 backdrop-blur-3xl border-b border-border relative z-20 gap-4">
             <div className="flex items-center gap-5">
               <div className="w-12 h-12 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-red-600 via-red-500 to-primary flex items-center justify-center border border-border shadow-[0_0_40px_rgba(239,68,68,0.2)]">
-                <FileText className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
+                <FileText className="w-6 h-6 md:w-8 md:h-8 text-primary-foreground" />
               </div>
               <div>
                 <h2 className="font-black text-xl md:text-2xl tracking-tighter uppercase italic text-foreground">Document Architect</h2>
@@ -295,7 +295,7 @@ export default function MergeStudioClient() {
             <AnimatePresence mode="wait">
               {mergedUrl ? (
                 <motion.div key="done" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full space-y-4 text-center">
-                  <div className="aspect-[3/4] w-full max-w-xs mx-auto bg-white/[0.03] rounded-2xl border border-emerald-500/30 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] flex flex-col items-center justify-center gap-3">
+                  <div className="aspect-[3/4] w-full max-w-xs mx-auto bg-secondary rounded-2xl border border-emerald-500/30 shadow-[0_50px_100px_-20px_rgba(16,185,129,0.2)] flex flex-col items-center justify-center gap-3">
                     <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
                       <CheckCircle2 className="w-12 h-12 text-emerald-500" />
                     </div>
@@ -306,7 +306,7 @@ export default function MergeStudioClient() {
                   </div>
                   <div className="flex justify-center gap-3">
                     <Button
-                      className="h-10 px-5 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
+                      className="h-10 px-5 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-base shadow-xl shadow-primary/20 gap-3 active:scale-95 transition-all"
                       onClick={async () => {
                         const response = await fetch(mergedUrl);
                         const blob = await response.blob();
@@ -354,7 +354,7 @@ export default function MergeStudioClient() {
         </section>
 
         {/* Right Sidebar */}
-        <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border bg-card/40 backdrop-blur-3xl shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
+        <aside className="flex w-full lg:w-[360px] border-t lg:border-t-0 lg:border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl h-[500px] lg:h-full">
           <div className="p-6 border-b border-border flex items-center justify-between bg-black/30 backdrop-blur-xl shrink-0">
             <div className="flex flex-col gap-1">
               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary flex items-center gap-3">
@@ -413,14 +413,14 @@ export default function MergeStudioClient() {
 
           <div className="p-5 border-t border-border bg-muted/40 shrink-0 space-y-3">
             <Button
-              className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-foreground font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
+              className="w-full h-10 rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-black text-base gap-3 shadow-[0_10px_40px_rgba(var(--primary-rgb),0.3)] group active:scale-95 transition-all italic"
               onClick={processDocuments}
               disabled={files.length === 0 || isProcessing}
             >
               {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Zap className="w-5 h-5 group-hover:scale-125 transition-transform" />}
               {isProcessing ? progressLabel || "Assembling..." : "Assemble PDF"}
             </Button>
-            <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-white/15">
+            <div className="flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-[0.3em] text-foreground/20">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> 100% Local Processing
             </div>
           </div>
