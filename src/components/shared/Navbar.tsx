@@ -77,8 +77,6 @@ const toolCategories = [
       { name: "PDF Splitter", href: "/pdf/split-pdf", desc: "Extract specific pages." },
       { name: "PDF Compressor", href: "/pdf/compress-pdf", desc: "Shrink file size locally." },
       { name: "Protect PDF", href: "/pdf/protect-pdf", desc: "Add password security." },
-      { name: "Office Master", href: "/document/master", desc: "View & Edit Office Files." },
-      { name: "Bulk Renamer", href: "/bulk-rename", desc: "Batch rename files instantly." },
     ]
   },
   {

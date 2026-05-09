@@ -3,12 +3,12 @@ import OCRClient from "./OCRClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Online OCR - Extract Text from Images Free & Private | SafeTools",
-  description: "Extract text from images (JPG, PNG, WebP) instantly using professional-grade OCR. Multi-language support, 100% private local processing, zero server uploads.",
-  keywords: ["online ocr", "extract text from image", "image to text converter", "free ocr tool", "private ocr", "scan text from photo", "ocr multi language", "tesseract online"],
+  title: "Free Online OCR Tool | Extract Text From Images & PDFs",
+  description: "Extract text from images, screenshots, handwritten notes, and scanned PDFs instantly using our free privacy-first online OCR tool. Fast AI-powered text recognition with no uploads.",
+  keywords: ["OCR online free", "image to text converter", "extract text from image", "OCR PDF tool", "screenshot text extractor", "handwriting OCR", "scanned document OCR", "free OCR software", "AI OCR tool", "browser based OCR", "optical character recognition", "image to editable text", "PDF OCR online", "multilingual OCR", "OCR without upload"],
   openGraph: {
-    title: "SafeTools OCR Studio | Professional Neural Text Extraction",
-    description: "Convert your images into editable text securely in your browser. Powerful, private, and precise.",
+    title: "SafeTools OCR | Free Online OCR Tool - Extract Text From Images Instantly",
+    description: "Convert images, scanned documents, screenshots, handwritten notes, and PDFs into editable text using our privacy-first browser-based OCR tool. Fast, accurate, and completely free.",
     type: "website",
     url: "https://safetools.space/image/ocr",
   },
@@ -18,8 +18,8 @@ export default function OCRPage() {
   return (
     <>
       <SEOStructuredData 
-        name="Image OCR (Optical Character Recognition)"
-        description="Extract clean text from any image instantly using professional-grade neural recognition. 100% private local processing."
+        name="Free Online OCR Tool - Extract Text From Images"
+        description="Convert images, screenshots, and PDFs into editable text instantly with our privacy-first browser-based OCR tool. 100% free, secure, and local processing."
         url="https://safetools.space/image/ocr"
       />
       <OCRClient />

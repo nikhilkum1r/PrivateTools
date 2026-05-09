@@ -13,6 +13,11 @@ import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { FAQ } from "@/components/shared/FAQ";
 import { DropZone } from "@/components/shared/DropZone";
+import { TrustLayer } from "@/components/shared/TrustLayer";
+import { ToolHealth } from "@/components/shared/ToolHealth";
+import { WhySafeTools } from "@/components/shared/WhySafeTools";
+import { LocalProcessingGuide } from "@/components/shared/LocalProcessingGuide";
+import { RelatedTools } from "@/components/shared/RelatedTools";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -441,27 +446,13 @@ export default function RemoveBackgroundClient() {
                 Remove backgrounds from images instantly using browser-based privacy-first processing with zero uploads and local AI tools.
               </p>
               <p className="text-sm font-medium text-emerald-500 bg-emerald-500/10 inline-block px-4 py-2 rounded-full border border-emerald-500/20">
-                Remove image backgrounds securely without uploading photos to external servers.
+                Professional AI-powered subject segmentation — 100% Secure.
               </p>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-3 pt-4">
-              {[
-                { icon: Lock, text: "Local Processing" },
-                { icon: ShieldCheck, text: "Zero Upload" },
-                { icon: Search, text: "No Tracking" },
-                { icon: Zap, text: "AI-Powered" },
-                { icon: Monitor, text: "Browser-Based" }
-              ].map((badge, i) => (
-                <div key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-card bg-secondary/30 border border-border">
-                  <badge.icon className="w-3.5 h-3.5 text-muted-foreground" />
-                  <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{badge.text}</span>
-                </div>
-              ))}
             </div>
           </motion.div>
         </section>
+
+        <TrustLayer />
 
         {/* INTERACTIVE STUDIO AREA */}
         <section className="flex-grow flex flex-col lg:flex-row overflow-hidden relative border-t border-border bg-black/20 min-h-[600px]">
@@ -682,15 +673,8 @@ export default function RemoveBackgroundClient() {
                     </div>
                   </div>
 
-                  <footer className="p-4 bg-black/30 border-t border-border flex items-center justify-between shrink-0">
-                    <div className="flex gap-4">
-                      <div className="flex items-center gap-2 text-[9px] font-black uppercase text-muted-foreground/60">
-                        <List className="w-3.5 h-3.5" /> Queue: {batch.filter(i=>i.status==="done").length}/{batch.length}
-                      </div>
-                      <div className="flex items-center gap-2 text-[9px] font-black uppercase text-emerald-500/80">
-                        <ShieldCheck className="w-3.5 h-3.5" /> Local AES Verified
-                      </div>
-                    </div>
+                  <footer className="p-4 bg-black/30 border-t border-border flex flex-col md:flex-row items-center justify-between shrink-0 gap-4">
+                    <ToolHealth status={batch[activeIndex]?.status} className="bg-transparent border-none p-0 shadow-none" />
                     <div className="text-[9px] font-black uppercase text-muted-foreground/60 tracking-widest flex items-center gap-4">
                        <span>{processTime ? `${processTime}ms` : "---"} latency</span>
                        <span className="opacity-40">|</span>
@@ -1102,25 +1086,22 @@ export default function RemoveBackgroundClient() {
             ]}
           />
 
+          <WhySafeTools />
+          
+          <LocalProcessingGuide />
+
           {/* Related Tools */}
-          <section className="space-y-8 text-center border-t border-border pt-16">
-            <h2 className="text-2xl font-black text-foreground uppercase italic tracking-widest">Related Creative Tools</h2>
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                { name: "Image Compressor", href: "/image/compress" },
-                { name: "Image Converter", href: "/image/convert" },
-                { name: "Ultimate Editor", href: "/image/editor" },
-                { name: "Image to PPTX", href: "/image/to-pptx" },
-                { name: "Favicon Generator", href: "/image/favicon" },
-                { name: "QR Generator", href: "/tools/qr-generator" },
-                { name: "Metadata Cleaner", href: "/security/metadata-cleaner" }
-              ].map(tool => (
-                <Link key={tool.href} href={tool.href} className="px-6 py-3 rounded-full glass-card bg-secondary/30 hover:bg-emerald-600 hover:text-white border border-border hover:border-emerald-600 transition-all font-black text-xs uppercase tracking-widest text-foreground">
-                  {tool.name}
-                </Link>
-              ))}
-            </div>
-          </section>
+          <RelatedTools 
+            tools={[
+              { name: "Image Compressor", href: "/image/compress" },
+              { name: "Image Converter", href: "/image/convert" },
+              { name: "Ultimate Editor", href: "/image/editor" },
+              { name: "Image to PPTX", href: "/image/to-pptx" },
+              { name: "App Icon Studio", href: "/image/icons" },
+              { name: "QR Generator", href: "/tools/qr-generator" },
+              { name: "Metadata Cleaner", href: "/security/metadata-cleaner" }
+            ]}
+          />
 
           {/* Privacy Manifesto */}
           <section className="text-center max-w-2xl mx-auto space-y-6 pb-12">

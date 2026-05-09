@@ -46,7 +46,7 @@ const categories = [
     icon: FileText,
     color: "text-emerald-500 bg-emerald-500/10",
     tools: [
-      { name: "Docs Master", href: "/document/master", desc: "Unified document management hub." },
+
       { name: "Word to PDF", href: "/document/word-to-pdf", desc: "High-fidelity local conversion." },
       { name: "PDF Compressor", href: "/pdf/compress-pdf", desc: "Optimize file size without loss." },
       { name: "PDF Merger", href: "/pdf/merge-pdf", desc: "Combine multiple docs locally." },
@@ -70,10 +70,8 @@ const categories = [
     icon: Zap,
     color: "text-amber-500 bg-amber-500/10",
     tools: [
-      { name: "Bulk Renamer", href: "/bulk-rename", desc: "Smart local filename management." },
       { name: "QR Generator", href: "/tools/qr-generator", desc: "Secure, non-tracking QR codes." },
-      { name: "Video Studio", href: "/video/editor", desc: "In-browser video manipulation." },
-      { name: "Audio Engine", href: "/audio", desc: "Local audio processing & conversion." },
+
       { name: "Dev Tools", href: "/devtools", desc: "Advanced browser debugging utilities." }
     ]
   }

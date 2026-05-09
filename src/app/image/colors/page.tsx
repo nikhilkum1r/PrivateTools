@@ -3,12 +3,17 @@ import ColorLabClient from "./ColorLabClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Online Color Palette Generator - Extract Colors from Images | SafeTools",
-  description: "Extract professional color palettes from any image instantly. Verify accessibility with contrast checks and generate harmonious color schemes. 100% private and browser-based.",
-  keywords: ["color palette generator", "extract colors from image", "image color picker", "accessible color palette", "color lab online", "private design tools"],
+  title: "Image Color Picker & Palette Generator Online Free | SafeTools",
+  description: "Extract colors from images instantly with our free privacy-first image color picker and palette generator. Generate HEX, RGB, HSL, CMYK, gradients, Tailwind colors, and accessibility-safe palettes online.",
+  keywords: [
+    "image color picker", "color palette generator", "extract colors from image", "online color picker",
+    "HEX color extractor", "RGB color generator", "Tailwind palette generator", "CSS gradient generator",
+    "accessibility contrast checker", "free image palette tool", "dominant color extractor",
+    "brand color generator", "image color analyzer", "browser based color tool"
+  ],
   openGraph: {
-    title: "SafeTools Color Lab | Professional Chromatic Analysis",
-    description: "Extract and analyze design palettes securely in your browser. Precise, private, and powerful.",
+    title: "SafeTools Image Color Picker | Professional Palette Generator",
+    description: "Extract professional color palettes securely in your browser. Precise, private, and powerful.",
     type: "website",
     url: "https://safetools.space/image/colors",
   },

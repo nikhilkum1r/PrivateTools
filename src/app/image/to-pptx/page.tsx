@@ -3,12 +3,12 @@ import ImageToPptxClient from "./ImageToPptxClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Convert Images to PowerPoint (PPTX) Online - Free | SafeTools",
-  description: "Transform your photos and images into professional PowerPoint presentations instantly. Create slides from JPG, PNG, and more with zero server uploads and 100% privacy.",
-  keywords: ["convert image to pptx", "photos to powerpoint", "image to slides converter", "private pptx maker", "online presentation builder", "browser based pptx synthesis"],
+  title: "Image to PPTX Converter Online Free – Convert JPG, PNG & Images to PowerPoint Slides",
+  description: "Convert JPG, PNG, WEBP, SVG, BMP, GIF, TIFF and other image formats into PowerPoint PPTX presentations online for free. Fast, secure, browser-based Image to PPTX converter with no uploads required.",
+  keywords: ["convert image to pptx", "photos to powerpoint", "image to slides converter", "JPG to PPTX", "PNG to PowerPoint", "WEBP to PPTX", "BMP to PPTX", "GIF to PPTX", "TIFF to PPTX"],
   openGraph: {
-    title: "SafeTools Deck Studio | Professional Presentation Synthesis",
-    description: "Transform your media assets into professional PPTX decks securely in your browser. Powerful, private, and precise.",
+    title: "Image to PPTX Converter – Free Online JPG, PNG & WEBP to PowerPoint Tool",
+    description: "Turn your images into professional PowerPoint presentations instantly with SafeTools’ free Image to PPTX Converter. No server uploads, 100% private.",
     type: "website",
     url: "https://safetools.space/image/to-pptx",
   },

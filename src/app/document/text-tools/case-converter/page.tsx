@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import CaseConverterClient from "./CaseConverterClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
+import { CASE_CONVERTER_FAQ } from "@/lib/faq-content";
 
 export const metadata: Metadata = {
-  title: "Online Case Converter - Upper, Lower, Camel, Snake Case | SafeTools",
-  description: "Change text case instantly between UPPERCASE, lowercase, Title Case, Sentence case, camelCase, and snake_case. 100% private, browser-based text transformation.",
-  keywords: ["case converter online", "change text case", "convert text to uppercase", "title case converter", "camel case converter", "snake case generator", "sentence case tool", "private text tools"],
+  title: "Case Converter Online Free – Uppercase, Lowercase & Text Case Tool | SafeTools",
+  description: "Convert text instantly with a free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, and more securely in your browser.",
+  keywords: ["case converter", "uppercase converter", "lowercase converter", "title case converter", "sentence case converter", "camelcase converter", "snake case converter", "kebab case converter", "text formatter online", "online capitalization tool", "free case converter", "developer text formatter", "convert text case online", "text transformation tool", "coding naming converter", "seo title formatter"],
   openGraph: {
-    title: "SafeTools Case Master | Professional Text Transformation Studio",
-    description: "Transform your text casing securely in your browser. Powerful, private, and precise.",
+    title: "Case Converter Online Free – Uppercase, Lowercase & Text Case Tool | SafeTools",
+    description: "Convert text instantly with a free online case converter. Change text to uppercase, lowercase, title case, sentence case, camelCase, snake_case, and more securely in your browser.",
     type: "website",
     url: "https://safetools.space/document/text-tools/case-converter",
   },
@@ -18,9 +19,10 @@ export default function CaseConverterPage() {
   return (
     <>
       <SEOStructuredData 
-        name="Text Case Converter"
-        description="Transform text between various casing conventions including Sentence, Title, Camel, and Snake case. Professional-grade local text processing."
+        name="Case Converter"
+        description="Transform text instantly with a fast and privacy-focused online case converter. Convert uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case, and more directly in your browser."
         url="https://safetools.space/document/text-tools/case-converter"
+        faqItems={CASE_CONVERTER_FAQ}
       />
       <CaseConverterClient />
     </>

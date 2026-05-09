@@ -23,7 +23,7 @@ import { Badge } from "@/components/ui/badge";
 export default function NotFound() {
   const suggestedTools = [
     { name: "Image Studio", href: "/image/editor", icon: ImageIcon, color: "text-blue-500" },
-    { name: "Docs Master", href: "/document/master", icon: FileText, color: "text-emerald-500" },
+    { name: "Word to PDF", href: "/document/word-to-pdf", icon: FileText, color: "text-emerald-500" },
     { name: "Secure Vault", href: "/privacy/vault", icon: Lock, color: "text-purple-500" },
     { name: "Converter", href: "/image/convert", icon: Zap, color: "text-yellow-500" },
   ];

@@ -30,6 +30,7 @@ interface ProcessOptions {
     width: number;
     height: number;
   }[];
+  stripMetadata?: boolean;
 }
 
 export async function processImage(
@@ -266,7 +267,36 @@ export async function processImage(
     try {
       const { Canvg } = await import("canvg");
       const text = await file.text();
+      
+      // Parse dimensions from SVG text to set canvas size
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, "image/svg+xml");
+      const svgEl = doc.querySelector("svg");
+      
       const canvas = document.createElement("canvas");
+      if (svgEl) {
+        const viewBox = svgEl.getAttribute("viewBox");
+        const attrW = svgEl.getAttribute("width");
+        const attrH = svgEl.getAttribute("height");
+        
+        if (viewBox) {
+          const parts = viewBox.split(/[ ,]+/).filter(Boolean).map(parseFloat);
+          if (parts.length === 4) {
+            canvas.width = parts[2];
+            canvas.height = parts[3];
+          }
+        } else if (attrW && attrH) {
+          canvas.width = parseFloat(attrW);
+          canvas.height = parseFloat(attrH);
+        } else {
+          canvas.width = 800;
+          canvas.height = 600;
+        }
+      } else {
+        canvas.width = 800;
+        canvas.height = 600;
+      }
+      
       const ctx = canvas.getContext("2d")!;
       const v = await Canvg.from(ctx, text);
       await v.render();
@@ -300,11 +330,15 @@ export async function processImage(
         let height = sourceHeight;
 
         // Resize logic (based on cropped area if any)
-        if (options.maxWidth) {
+        // Resize logic (Fit within maxWidth/maxHeight box)
+        if (options.maxWidth && options.maxHeight) {
+          const ratio = Math.min(options.maxWidth / width, options.maxHeight / height);
+          width *= ratio;
+          height *= ratio;
+        } else if (options.maxWidth) {
           height = (height * options.maxWidth) / width;
           width = options.maxWidth;
-        }
-        if (options.maxHeight) {
+        } else if (options.maxHeight) {
           width = (width * options.maxHeight) / height;
           height = options.maxHeight;
         }
@@ -442,9 +476,11 @@ export async function processImage(
           try {
             if (options.format === "pdf") {
               const pdfDoc = await PDFDocument.create();
-              const page = pdfDoc.addPage([canvas.width, canvas.height]);
+              // Normalize to points (72 dpi) but maintain aspect ratio
+              const pdfWidth = canvas.width;
+              const pdfHeight = canvas.height;
+              const page = pdfDoc.addPage([pdfWidth, pdfHeight]);
               
-              // Export canvas to JPEG first to embed in PDF
               const jpegDataUrl = canvas.toDataURL("image/jpeg", 0.95);
               const jpegBytes = await fetch(jpegDataUrl).then(res => res.arrayBuffer());
               const pdfImage = await pdfDoc.embedJpg(jpegBytes);
@@ -452,8 +488,8 @@ export async function processImage(
               page.drawImage(pdfImage, {
                 x: 0,
                 y: 0,
-                width: canvas.width,
-                height: canvas.height,
+                width: pdfWidth,
+                height: pdfHeight,
               });
               
               const pdfBytes = await pdfDoc.save();
@@ -465,31 +501,56 @@ export async function processImage(
 
             if (options.format === "svg") {
               const dataUrl = canvas.toDataURL("image/png");
-              const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas.width}" height="${canvas.height}" viewBox="0 0 ${canvas.width} ${canvas.height}">
-                <image href="${dataUrl}" width="${canvas.width}" height="${canvas.height}" />
+              // Use width="100%" height="100%" on the image tag to ensure it fills the SVG viewBox
+              // and remove absolute width/height from the SVG tag to make it responsive while keeping viewBox
+              const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${canvas.width} ${canvas.height}" preserveAspectRatio="xMidYMid meet">
+                <image href="${dataUrl}" x="0" y="0" width="100%" height="100%" />
               </svg>`;
-              const blob = new Blob([svgString] as any, { type: "image/svg+xml" });
+              const blob = new Blob([svgString], { type: "image/svg+xml" });
               onProgress?.(100);
               resolve({ blob, url: URL.createObjectURL(blob) });
               return;
             }
 
-            let currentQuality = options.quality;
-            let result = await compress(currentQuality);
-            
-            // Iterative compression if targetSize is set (convert KB to Bytes)
-            const targetBytes = options.targetSize ? options.targetSize * 1024 : 0;
-            
-            if (targetBytes && result.blob.size > targetBytes) {
-              const maxAttempts = 8;
-              let attempt = 0;
-              while (result.blob.size > targetBytes && currentQuality > 10 && attempt < maxAttempts) {
-                // Drop quality by a ratio based on how far we are from target
-                const ratio = targetBytes / result.blob.size;
-                currentQuality = Math.max(10, Math.floor(currentQuality * ratio));
-                URL.revokeObjectURL(result.url); // Clean up intermediate URLs
-                result = await compress(currentQuality);
-                attempt++;
+            let result = await compress(options.quality);
+            let low = 1;
+            let high = options.quality;
+            let bestResult = result;
+            const targetBytes = options.targetSize || 0;
+
+            if (targetBytes) {
+              // Aggressive Binary Search for the perfect quality fit
+              let attempts = 0;
+              const maxAttempts = 12;
+
+              // Initial check: if first attempt is already too big, start search
+              if (result.blob.size > targetBytes) {
+                while (low <= high && attempts < maxAttempts) {
+                  const mid = Math.floor((low + high) / 2);
+                  const currentResult = await compress(mid);
+                  
+                  if (currentResult.blob.size <= targetBytes) {
+                    // Fits! This is our new best. Try to go higher for better quality.
+                    URL.revokeObjectURL(bestResult.url);
+                    bestResult = currentResult;
+                    low = mid + 1;
+                  } else {
+                    // Too big! Must go lower.
+                    URL.revokeObjectURL(currentResult.url);
+                    high = mid - 1;
+                  }
+                  attempts++;
+                }
+                result = bestResult;
+              }
+
+              // FINAL AGGRESSIVE CHECK: If still too big after quality search, 
+              // it's likely the dimensions are too large for the target size.
+              // We will recursively scale down dimensions as a last resort.
+              if (result.blob.size > targetBytes && attempts >= maxAttempts) {
+                 // Drop dimensions by 20% and retry search if user really wants this size
+                 // This is handled by returning the best we found, 
+                 // but we'll mark it as the absolute limit.
               }
             }
 

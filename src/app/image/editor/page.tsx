@@ -3,12 +3,18 @@ import EditorStudioClient from "./EditorStudioClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Professional Online Image Editor - Free & Private | SafeTools",
-  description: "Edit images online with pro-grade tools. Crop, resize, filter, and mask sensitive data. 100% private, browser-based image editing with zero server uploads.",
-  keywords: ["online image editor", "crop image online", "image filter online", "redact sensitive data from image", "private photo editor", "browser image processing"],
+  title: "Free Online Image Editor | Crop, Resize, Compress & Edit Photos",
+  description: "Edit images online for free with our privacy-first browser-based image editor. Crop, resize, compress, convert, enhance, remove backgrounds, and optimize photos instantly with no uploads.",
+  keywords: [
+    "online image editor", "free photo editor", "browser based image editor", 
+    "crop image online", "resize image online", "compress images", 
+    "image background remover", "AI photo editor", "photo editing tool", 
+    "edit pictures online", "image optimizer", "convert image formats", 
+    "watermark free editor", "private image editor", "online photoshop alternative"
+  ],
   openGraph: {
-    title: "SafeTools Pro Studio | Professional Image Engineering",
-    description: "Architect your visual assets securely in your browser. Powerful, private, and precise.",
+    title: "Free Online Image Editor | SafeTools",
+    description: "Edit photos securely in your browser with zero uploads. Privacy-first online image editor with AI-powered tools.",
     type: "website",
     url: "https://safetools.space/image/editor",
   },
@@ -22,7 +28,7 @@ export default function ImageEditorPage() {
         description="Professional-grade image editing directly in your browser. Crop, resize, filter, and redact data securely."
         url="https://safetools.space/image/editor"
       />
-      <EditorStudioClient />
+      <EditorStudioClient mode="landing" />
     </>
   );
 }

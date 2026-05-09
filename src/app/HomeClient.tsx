@@ -157,13 +157,13 @@ const tools: Tool[] = [
     tags: ["ai", "background remover", "remove background", "transparent", "png", "magic"]
   },
   {
-    title: "Create App Icons & Favicons",
-    desc: "Generate iOS, Android & PWA icon bundles instantly.",
-    href: "/image/favicon",
+    title: "App Icon & Favicon Studio",
+    desc: "Generate professional iOS, Android, and PWA icon bundles instantly.",
+    href: "/image/icons",
     icon: FileCode,
     color: "from-indigo-500 to-purple-500",
     cat: "Dev",
-    tags: ["favicon", "ios", "android", "pwa", "logo", "manifest", "assets", "mobile"]
+    tags: ["favicon", "ios", "android", "pwa", "logo", "manifest", "assets", "mobile", "icons"]
   },
   {
     title: "PDF Merger",
@@ -193,15 +193,6 @@ const tools: Tool[] = [
     tags: ["pdf", "compress", "shrink", "optimize", "size", "linearize"]
   },
   {
-    title: "Convert PDF to Word/PPT",
-    desc: "Convert PDFs to PPTX, DOCX or images locally.",
-    href: "/pdf/convert",
-    icon: FileCode,
-    color: "from-rose-500 to-red-500",
-    cat: "Documents",
-    tags: ["pptx", "docx", "word", "powerpoint", "images", "convert", "pdf"]
-  },
-  {
     title: "Unlock PDF",
     desc: "Remove password protection and security restrictions from PDFs.",
     href: "/pdf/unlock-pdf",
@@ -219,15 +210,7 @@ const tools: Tool[] = [
     cat: "Documents",
     tags: ["pdf", "lock", "password", "security", "encryption", "protect"]
   },
-  {
-    title: "View & Edit Office Files",
-    desc: "Universal viewer & editor for Office, PDF, and Data.",
-    href: "/document/master",
-    icon: Edit3,
-    color: "from-emerald-500 to-cyan-500",
-    cat: "Documents",
-    tags: ["docx", "pptx", "xlsx", "csv", "pdf", "view", "edit", "office", "excel", "word"]
-  },
+
   {
     title: "Case Converter",
     desc: "Transform text casing instantly with sentence, title, and dev modes.",
@@ -246,24 +229,7 @@ const tools: Tool[] = [
     cat: "Documents",
     tags: ["text", "word", "count", "character", "length", "reading", "time"]
   },
-  {
-    title: "Compress & Convert Video",
-    desc: "Compress and convert video with local WASM encoding.",
-    href: "/video",
-    icon: Video,
-    color: "from-violet-500 to-purple-500",
-    cat: "Media",
-    tags: ["mp4", "mov", "webm", "compress", "video", "ffmpeg", "convert"]
-  },
-  {
-    title: "Trim & Convert Audio",
-    desc: "Trim, convert, and process audio files offline.",
-    href: "/audio",
-    icon: Music,
-    color: "from-fuchsia-500 to-pink-500",
-    cat: "Media",
-    tags: ["mp3", "wav", "trim", "cut", "convert", "audio", "voice"]
-  },
+
   {
     title: "Metadata Cleaner",
     desc: "Remove hidden data, EXIF, and GPS tracking locally.",

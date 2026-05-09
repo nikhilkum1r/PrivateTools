@@ -7,15 +7,14 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-const COMMON_FORMATS = ["png", "jpeg", "webp", "avif", "pdf", "heic", "svg", "tiff", "gif", "ico"];
+const FEATURED_FORMATS = ["png", "jpeg", "webp", "avif", "pdf", "heic", "svg", "tiff", "gif", "ico", "bmp", "raw", "dng", "nef", "arw", "cr2", "psd", "ai", "eps"];
 
 export async function generateStaticParams() {
   const params: { slug: string }[] = [];
   
-  // Generate top 50 common pairs for build-time optimization
-  const featured = ["png", "jpeg", "webp", "avif", "pdf", "heic"];
-  for (const from of featured) {
-    for (const to of featured) {
+  // Generate high-value pairs for build-time optimization
+  for (const from of FEATURED_FORMATS) {
+    for (const to of ["webp", "png", "jpeg", "avif", "pdf", "heic", "svg", "ico"]) {
       if (from !== to) {
         params.push({ slug: `${from}-to-${to}` });
       }

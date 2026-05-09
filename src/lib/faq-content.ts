@@ -66,12 +66,32 @@ export const PDF_TOOLS_FAQ: FAQItem[] = [
 
 export const WORD_TO_PDF_FAQ: FAQItem[] = [
   {
-    question: "How accurate is the Word to PDF conversion?",
-    answer: "We use a high-fidelity rendering engine that preserves layouts, fonts, and images from your DOCX files, ensuring your PDF looks exactly like your Word document."
+    question: "How do I convert Word to PDF online for free?",
+    answer: "Upload your DOC or DOCX document, wait for the conversion process to finish, and download the generated PDF file instantly."
   },
   {
-    question: "Do I need Microsoft Word installed?",
-    answer: "No. Our tool works independently in your browser. You don't need Word or any other office software installed on your machine."
+    question: "Is this Word to PDF converter secure?",
+    answer: "Yes. Browser-based processing helps keep your documents private and secure during conversion."
+  },
+  {
+    question: "Can I convert DOCX to PDF without losing formatting?",
+    answer: "Yes. The converter is designed to preserve fonts, layout, spacing, headings, and document structure as accurately as possible."
+  },
+  {
+    question: "Does the converter add watermarks?",
+    answer: "No. Exported PDF files remain clean without unwanted branding or watermarks."
+  },
+  {
+    question: "Can I use this tool on mobile devices?",
+    answer: "Yes. The converter works on Android phones, iPhones, tablets, and desktop browsers."
+  },
+  {
+    question: "Is registration required?",
+    answer: "No. You can convert Word documents to PDF without creating an account."
+  },
+  {
+    question: "What is the difference between DOC and DOCX?",
+    answer: "DOC is the older Microsoft Word format, while DOCX is the newer XML-based format with improved compatibility and smaller file sizes."
   }
 ];
 
@@ -147,16 +167,24 @@ export const QR_FAQ: FAQItem[] = [
 
 export const COMPRESSOR_FAQ: FAQItem[] = [
   {
-    question: "How much can I reduce my image size?",
-    answer: "Our engine can often reduce image sizes by 70-90% while maintaining excellent visual quality. You can set a target file size (e.g., 50KB) and our tool will optimize the quality to meet that limit."
+    question: "Is SafeTools image compression private?",
+    answer: "Yes. All compression happens locally in your browser. Your files are never uploaded to servers."
   },
   {
-    question: "Is there a limit to the number of images I can compress?",
-    answer: "No. You can compress hundreds of images in batches directly in your browser. Since there are no server uploads, the process is incredibly fast and respects your privacy."
+    question: "Which image formats are supported?",
+    answer: "SafeTools supports JPG, JPEG, PNG, WEBP, AVIF, GIF, SVG, HEIC, TIFF, BMP, ICO and more."
   },
   {
-    question: "Does it support WebP and AVIF compression?",
-    answer: "Yes, we support compressing modern formats like WebP and AVIF, as well as standard JPEG and PNG files. You can also convert to these more efficient formats during compression."
+    question: "Can I compress multiple images?",
+    answer: "Yes. Batch compression is supported for faster processing."
+  },
+  {
+    question: "Does compression reduce image quality?",
+    answer: "You can choose between high-quality compression and maximum file reduction using quality controls."
+  },
+  {
+    question: "Is this tool free?",
+    answer: "Yes. The image compressor is completely free to use."
   }
 ];
 
@@ -203,5 +231,214 @@ export const PASSWORD_GENERATOR_FAQ: FAQItem[] = [
   {
     question: "What is the recommended password length for 2026?",
     answer: "For critical accounts like email or banking, we recommend a minimum of 16 to 24 characters. Our tool defaults to 24 characters to provide high-entropy protection that is resistant to modern brute-force and dictionary attacks."
+  }
+];
+
+export const COLOR_PICKER_FAQ: FAQItem[] = [
+  {
+    question: "Is the image color picker free?",
+    answer: "Yes, the tool is completely free to use with no hidden costs or limits."
+  },
+  {
+    question: "Are my images uploaded to servers?",
+    answer: "No. All processing happens locally inside your browser using the Canvas API. Your images never leave your device."
+  },
+  {
+    question: "Which image formats are supported?",
+    answer: "We support PNG, JPG, JPEG, WEBP, GIF, SVG, AVIF, BMP, ICO, and more."
+  },
+  {
+    question: "Can I export Tailwind CSS colors?",
+    answer: "Yes. Our tool allows you to instantly export generated palettes into Tailwind-ready configuration objects or CSS variables."
+  },
+  {
+    question: "Does the tool work on mobile devices?",
+    answer: "Yes. The tool is fully responsive and optimized for mobile browsers, allowing you to extract colors from your gallery or camera capture."
+  },
+  {
+    question: "Can I use the extracted palettes commercially?",
+    answer: "Absolutely. Any color palette generated with SafeTools can be used in personal or commercial projects without attribution."
+  }
+];
+
+export const IMAGE_EDITOR_FAQ = [
+  {
+    question: "Is the online image editor free to use?",
+    answer: "Yes, our image editor is 100% free with no hidden fees, watermarks, or subscription requirements. All premium editing tools are available at no cost."
+  },
+  {
+    question: "Are my photos uploaded to your servers?",
+    answer: "No. SafeTools uses advanced browser technology to process all image edits locally on your device. Your photos never leave your computer or smartphone."
+  },
+  {
+    question: "Does this editor work on mobile devices?",
+    answer: "Yes, the editor is fully responsive and optimized for both iOS and Android browsers. You can crop, resize, and edit photos directly on your phone."
+  },
+  {
+    question: "What image formats are supported?",
+    answer: "We support a wide range of formats including PNG, JPG, JPEG, WEBP, SVG, GIF, BMP, AVIF, TIFF, and even professional formats like HEIC and PSD for basic viewing."
+  },
+  {
+    question: "Can I remove backgrounds with this tool?",
+    answer: "Yes, we offer an AI-powered background removal tool within the editor that allows you to isolate subjects and create transparent backgrounds instantly."
+  },
+  {
+    question: "Is registration or signup required?",
+    answer: "No. You can start editing immediately without creating an account or providing any personal information."
+  }
+];
+
+export const OCR_FAQ: FAQItem[] = [
+  {
+    question: "Is the OCR tool free?",
+    answer: "Yes. The OCR tool is completely free to use without any hidden costs, watermarks, or subscription requirements."
+  },
+  {
+    question: "Are my files uploaded to servers?",
+    answer: "No. All OCR processing happens locally in your browser using WebAssembly. Your images never leave your device, ensuring maximum privacy and security."
+  },
+  {
+    question: "Which languages are supported?",
+    answer: "Our tool supports multiple global languages including English, Hindi, Spanish, French, German, Arabic, Chinese, Japanese, Korean, and many more."
+  },
+  {
+    question: "Can I extract text from handwritten notes?",
+    answer: "Yes. Our AI-powered OCR engine supports handwriting recognition for notes, assignments, journals, and whiteboard content."
+  },
+  {
+    question: "Does OCR work on PDFs?",
+    answer: "Yes. You can extract text from scanned PDFs and image-based documents by converting them into digital, editable text."
+  },
+  {
+    question: "Can I use OCR on mobile devices?",
+    answer: "Yes. The tool is fully responsive and works on modern smartphones and tablets directly through your web browser."
+  },
+  {
+    question: "Is registration required?",
+    answer: "No. You can start extracting text immediately without creating an account or providing any personal information."
+  }
+];
+
+export const PDF_TO_TXT_FAQ: FAQItem[] = [
+  {
+    question: "How do I convert PDF to TXT online for free?",
+    answer: "Upload your PDF file, allow the tool to process the document, and download the extracted TXT file instantly."
+  },
+  {
+    question: "Is this PDF to TXT converter secure?",
+    answer: "Yes. Browser-based processing helps keep files private without requiring uploads to external servers."
+  },
+  {
+    question: "Can I extract text from scanned PDFs?",
+    answer: "If OCR support is enabled, scanned PDFs and image-based PDFs can also be processed for text extraction."
+  },
+  {
+    question: "Does the converter preserve formatting?",
+    answer: "TXT files store plain text only, so advanced formatting such as images, tables, and styles may not be preserved."
+  },
+  {
+    question: "Can I use this converter on mobile devices?",
+    answer: "Yes. The converter works on Android phones, iPhones, tablets, and desktop systems."
+  },
+  {
+    question: "Is registration required?",
+    answer: "No. You can convert PDF files to TXT without creating an account."
+  },
+  {
+    question: "Does this tool add watermarks?",
+    answer: "No. Downloaded TXT files remain clean and watermark-free."
+  }
+];
+
+export const CASE_CONVERTER_FAQ: FAQItem[] = [
+  {
+    question: "What is a case converter?",
+    answer: "A case converter is a tool that changes text formatting into different capitalization styles such as uppercase, lowercase, title case, camelCase, or snake_case."
+  },
+  {
+    question: "Is this case converter free?",
+    answer: "Yes. The tool is completely free to use online without registration."
+  },
+  {
+    question: "Does the tool work offline?",
+    answer: "Most browser-based processing can work locally after the page loads depending on your browser capabilities."
+  },
+  {
+    question: "Is my text secure?",
+    answer: "Yes. Text processing happens directly in your browser for better privacy and security."
+  },
+  {
+    question: "Can developers use this tool?",
+    answer: "Yes. The tool supports common programming naming conventions including camelCase, PascalCase, snake_case, and kebab-case."
+  },
+  {
+    question: "Can I use the tool on mobile devices?",
+    answer: "Yes. The case converter works on phones, tablets, laptops, and desktop systems."
+  },
+  {
+    question: "Does the tool support large text input?",
+    answer: "Yes. You can convert paragraphs, articles, code snippets, or large blocks of text efficiently."
+  }
+];
+
+export const WORD_COUNTER_FAQ: FAQItem[] = [
+  {
+    question: "What is a word counter?",
+    answer: "A word counter is a tool that calculates the number of words, characters, sentences, paragraphs, and other writing statistics in text."
+  },
+  {
+    question: "Is this word counter free?",
+    answer: "Yes. The tool is completely free to use online without registration."
+  },
+  {
+    question: "Does the tool count characters?",
+    answer: "Yes. It counts total characters, characters without spaces, words, sentences, and paragraphs."
+  },
+  {
+    question: "Is my text secure?",
+    answer: "Yes. Text processing happens directly in your browser for better privacy and security."
+  },
+  {
+    question: "Can I use this tool for SEO writing?",
+    answer: "Yes. The tool helps optimize blog posts, articles, metadata, and other SEO content by tracking text length and readability."
+  },
+  {
+    question: "Does the word counter work on mobile devices?",
+    answer: "Yes. The tool works on Android, iPhone, tablets, laptops, and desktop systems."
+  },
+  {
+    question: "Can the tool handle large text?",
+    answer: "Yes. You can analyze long articles, essays, scripts, reports, and documents efficiently."
+  }
+];
+
+export const DATA_CONVERTER_FAQ: FAQItem[] = [
+  {
+    question: "What is a data converter?",
+    answer: "A data converter is a tool that transforms information between different structured, encoded, or programming-related formats."
+  },
+  {
+    question: "Is this data converter free?",
+    answer: "Yes. The tool is completely free to use online."
+  },
+  {
+    question: "Is my data secure?",
+    answer: "Yes. Processing happens locally in your browser for better privacy and security."
+  },
+  {
+    question: "Can developers use this tool for APIs?",
+    answer: "Yes. The tool is ideal for API testing, JSON formatting, XML conversion, and backend development."
+  },
+  {
+    question: "Does the converter support Base64 encoding?",
+    answer: "Yes. You can encode and decode Base64 instantly."
+  },
+  {
+    question: "Can I convert CSV to JSON?",
+    answer: "Yes. The tool supports CSV, JSON, XML, YAML, and many other formats."
+  },
+  {
+    question: "Does the tool work on mobile devices?",
+    answer: "Yes. The converter works on phones, tablets, laptops, and desktop browsers."
   }
 ];

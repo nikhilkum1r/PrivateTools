@@ -7,7 +7,10 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-const SUPPORTED_FORMATS = ["png", "jpeg", "webp", "avif", "heic", "svg", "tiff", "gif"];
+const SUPPORTED_FORMATS = [
+  "png", "jpeg", "webp", "avif", "heic", "svg", "tiff", "gif", "ico", "bmp", 
+  "raw", "dng", "nef", "arw", "cr2", "psd", "ai", "eps"
+];
 
 export async function generateStaticParams() {
   return SUPPORTED_FORMATS.map(fmt => ({

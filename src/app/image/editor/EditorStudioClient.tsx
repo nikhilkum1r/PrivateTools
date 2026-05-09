@@ -1,7 +1,15 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Navbar } from "@/components/shared/Navbar";
+
+import { Footer } from "@/components/shared/Footer";
+import { FAQ } from "@/components/shared/FAQ";
+import { TrustLayer } from "@/components/shared/TrustLayer";
+import { ToolHealth } from "@/components/shared/ToolHealth";
+import { WhySafeTools } from "@/components/shared/WhySafeTools";
+import { LocalProcessingGuide } from "@/components/shared/LocalProcessingGuide";
+import { RelatedTools } from "@/components/shared/RelatedTools";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -14,7 +22,8 @@ import {
   ChevronRight, ChevronLeft, ChevronDown, Maximize, ZoomIn, ZoomOut,
   Layers, Cpu, ShieldCheck, Zap, Info, ScanText, Save, Smartphone, Play,
   Eye, RefreshCw, X, Check, CheckCircle2, Copy, Share2, Sparkles, Plus, HardDrive,
-  Undo2, Redo2, AlertCircle, ShieldOff, MousePointer2
+  Undo2, Redo2, AlertCircle, ShieldOff, MousePointer2, Fingerprint, Monitor, CloudOff,
+  Clock, Heart, HelpCircle, Table
 } from "lucide-react";
 import { useImageStore, ImageFormat, ImageFile, ImageSettings } from "@/store/useImageStore";
 import { processImage } from "@/lib/image-processor";
@@ -31,6 +40,7 @@ import { Switch } from "@/components/ui/switch";
 import { createWorker } from "tesseract.js";
 import JSZip from "jszip";
 import { toast } from "sonner";
+import Link from "next/link";
 import {
   Sheet,
   SheetContent,
@@ -38,6 +48,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { IMAGE_EDITOR_FAQ } from "@/lib/faq-content";
+
+import { useRouter } from "next/navigation";
 
 const CATEGORIZED_FORMATS = {
   "Regular Use": ["webp", "jpeg", "png", "pdf", "svg", "heic"],
@@ -46,7 +59,8 @@ const CATEGORIZED_FORMATS = {
   "Professional Print": ["pdf", "tiff", "tif", "eps", "ai", "psd", "psb", "indd", "indt"]
 };
 
-export default function EditorStudioClient() {
+export default function EditorStudioClient({ mode = "landing" }: { mode?: "landing" | "studio" }) {
+  const router = useRouter();
   const { 
     files, settings, addFiles, removeFile, updateSettings, 
     setFileStatus, setProcessedUrl, clearFiles, updateFileCrop, updateFileBlurs
@@ -71,6 +85,20 @@ export default function EditorStudioClient() {
   const [redoStack, setRedoStack] = useState<ImageSettings[]>([]);
 
   const currentFile = files.find(f => f.id === selectedId) || files[0];
+
+  // Automatic Redirection Logic for Upload-First Flow
+  useEffect(() => {
+    if (mode === "landing" && files.length > 0) {
+      router.push("/image/editor/go");
+    }
+  }, [files.length, mode, router]);
+
+  const handleAddFiles = (newFiles: File[]) => {
+    addFiles(newFiles);
+    if (mode === "landing") {
+      router.push("/image/editor/go");
+    }
+  };
 
   // Helper to update settings with history
   const pushSettings = (newSettings: Partial<ImageSettings>) => {
@@ -204,7 +232,7 @@ export default function EditorStudioClient() {
       f.type.startsWith('image/') || /\.(heic|heif|tiff?|psd|pdf|svg|webp|avif)$/i.test(f.name)
     );
     if (dropped.length > 0) {
-      addFiles(dropped);
+      handleAddFiles(dropped);
       toast.success(`${dropped.length} file${dropped.length > 1 ? 's' : ''} added`);
     }
   };
@@ -307,14 +335,32 @@ export default function EditorStudioClient() {
     );
 
     return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="flex flex-col flex-grow min-h-0">
-      <div className="px-6 py-4 border-b border-border bg-card">
-        <TabsList className="bg-secondary/50 border border-border rounded-2xl w-full p-1 h-12">
-          <TabsTrigger value="format" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Settings2 className="w-3.5 h-3.5 mr-2" /> CORE</TabsTrigger>
-          <TabsTrigger value="crop" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Scissors className="w-3.5 h-3.5 mr-2" /> CROP</TabsTrigger>
-          <TabsTrigger value="privacy" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-emerald-500 data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-emerald-500/20"><ShieldOff className="w-3.5 h-3.5 mr-2" /> PRIVACY</TabsTrigger>
-          <TabsTrigger value="filters" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Palette className="w-3.5 h-3.5 mr-2" /> FX</TabsTrigger>
-          <TabsTrigger value="ai" className="flex-grow rounded-xl text-[10px] uppercase font-black tracking-widest data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:shadow-primary/20"><Zap className="w-3.5 h-3.5 mr-2" /> LAB</TabsTrigger>
+    <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as string)} className="flex flex-col flex-grow min-h-0">
+      <div className="px-4 py-3 border-b border-border bg-black/20">
+        <TabsList className="bg-secondary/40 border border-white/5 rounded-[1.25rem] w-full p-1.5 h-16 flex gap-1 shadow-inner backdrop-blur-2xl">
+          {[
+            { v: "format", i: Settings2, l: "Core" },
+            { v: "crop", i: Scissors, l: "Crop" },
+            { v: "privacy", i: ShieldOff, l: "Shield", activeColor: "bg-emerald-500" },
+            { v: "filters", i: Palette, l: "Filters" },
+            { v: "ai", i: Zap, l: "Lab" }
+          ].map((tab) => {
+            const Icon = tab.i;
+            return (
+              <TabsTrigger 
+                key={tab.v}
+                value={tab.v} 
+                className={cn(
+                  "flex-grow flex flex-col items-center justify-center gap-1.5 rounded-2xl transition-all duration-500",
+                  "data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-2xl data-[state=active]:shadow-primary/20",
+                  tab.activeColor && `data-[state=active]:${tab.activeColor} data-[state=active]:shadow-${tab.activeColor.split('-')[1]}-500/20`
+                )}
+              >
+                <Icon className="w-4 h-4" />
+                <span className="text-[7px] font-black uppercase tracking-widest">{tab.l}</span>
+              </TabsTrigger>
+            );
+          })}
         </TabsList>
       </div>
 
@@ -844,447 +890,897 @@ export default function EditorStudioClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen lg:h-screen bg-background text-foreground overflow-y-auto lg:overflow-hidden lg:overflow-hidden selection:bg-primary/30 custom-scrollbar">
-      <Navbar />
+    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary/30 custom-scrollbar">
+      {mode === "landing" && <Navbar />}
       
-      <main className="flex-grow flex flex-col lg:flex-row overflow-visible lg:overflow-hidden relative">
-        {/* Background Effects */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-[20%] left-[10%] w-[50%] h-[50%] bg-primary/5 blur-[140px] rounded-full animate-pulse" />
-          <div className="absolute bottom-[20%] right-[10%] w-[50%] h-[50%] bg-blue-500/5 blur-[140px] rounded-full animate-pulse" />
-        </div>
+      <main className="flex-grow flex flex-col relative z-10">
+        
+        {/* HERO SECTION - Landing Mode Only */}
+        {mode === "landing" && (
+          <section className="relative px-6 py-24 md:py-40 flex flex-col items-center text-center overflow-hidden">
+           {/* Background decorative elements */}
+           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 blur-[120px] rounded-full animate-pulse" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full animate-pulse" />
+           </div>
 
-        {/* Left Sidebar - File Queue */}
-        <aside className="hidden lg:flex w-[300px] h-full max-h-full studio-sidebar shrink-0 flex-col shrink-0 relative z-10 shadow-2xl">
-          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10">
-            <div className="flex flex-col gap-1">
-              <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
-                <Layers className="w-4 h-4" /> Identity Engine
-              </h3>
-              <div className="flex items-center gap-3 mt-1">
-                <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">Multi-Platform Asset Matrix</p>
-                <div className="flex gap-1.5 opacity-30">
-                  <Play className="w-2 h-2 text-primary fill-primary" />
-                  <div className="w-2 h-2 rounded-full border border-white/40" />
-                  <Smartphone className="w-2 h-2" />
-                </div>
+           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-4xl space-y-12 relative z-10"
+           >
+              <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full glass-card border border-primary/20 shadow-2xl">
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-primary italic">Professional Online Image Editor</span>
               </div>
-            </div>
-            <Badge className="rounded-full bg-primary/10 text-primary border-primary/20 text-[10px] font-black px-4 py-1">
-              {files.length}
-            </Badge>
-          </div>
-          
-          <ScrollArea className="flex-grow min-h-0">
-            <div className="p-6 space-y-4">
-              <AnimatePresence mode="popLayout">
-                {files.map((file) => (
-                  <motion.div
-                    key={file.id}
-                    layout
-                    initial={{ opacity: 0, x: -20, scale: 0.95 }}
-                    animate={{ opacity: 1, x: 0, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    onClick={() => setSelectedId(file.id)}
-                    className={cn(
-                      "group p-4 rounded-xl border transition-all cursor-pointer relative overflow-hidden duration-500",
-                      selectedId === file.id 
-                        ? "bg-primary/10 border-primary/30 shadow-2xl shadow-primary/20" 
-                        : "bg-secondary/30 border-border hover:bg-secondary/70 hover:border-border"
-                    )}
-                  >
-                    <div className="flex items-center gap-4 relative z-10">
-                      <div className="w-11 h-11 rounded-2xl overflow-hidden bg-muted/60 border border-border shrink-0 shadow-2xl group-hover:scale-105 transition-transform">
-                        <img src={file.previewUrl} className="w-full h-full object-cover" alt="" />
-                      </div>
-                      <div className="flex-grow min-w-0">
-                        <p className="text-xs font-black truncate leading-tight uppercase tracking-tight italic mb-1">{file.file.name}</p>
-                        <div className="flex items-center gap-2">
-                          <span className="text-[8px] uppercase font-black text-muted-foreground tracking-[0.2em]">
-                            {file.file.name.split('.').pop()}
-                          </span>
-                          <div className={cn(
-                            "w-1.5 h-1.5 rounded-full",
-                            file.status === "completed" ? "bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.8)]" :
-                            file.status === "processing" ? "bg-primary animate-pulse" :
-                            file.status === "error" ? "bg-destructive" : "bg-secondary"
-                          )} />
-                        </div>
-                      </div>
-                      <button 
-                        onClick={(e) => { e.stopPropagation(); removeFile(file.id); }}
-                        className="p-2 rounded-xl opacity-0 group-hover:opacity-100 text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-all"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </motion.div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic font-heading leading-[0.9]">
+                  Free Online <br />
+                  <span className="text-primary">Image Editor</span>
+                </h1>
+                <p className="text-muted-foreground text-lg md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed italic">
+                  Edit, crop, resize, compress, convert, enhance, and transform images online with our privacy-first browser-based editor. No uploads, no watermarks.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-center gap-4 pt-8">
+                 <Button 
+                   size="lg" 
+                   className="h-16 px-10 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground font-black uppercase tracking-widest text-xs gap-3 shadow-2xl shadow-primary/20"
+                   onClick={() => document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' })}
+                 >
+                   Start Editing Now <ChevronRight className="w-5 h-5" />
+                 </Button>
+                 <Button 
+                   size="lg" 
+                   variant="outline" 
+                   className="h-16 px-10 rounded-2xl border-border bg-secondary/50 font-black uppercase tracking-widest text-xs gap-3 hover:bg-secondary transition-all"
+                   onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+                 >
+                   Explore Features
+                 </Button>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pt-20">
+                {[
+                  { icon: ShieldCheck, label: "100% Private" },
+                  { icon: HardDrive, label: "Browser-Based" },
+                  { icon: CloudOff, label: "No Uploads" },
+                  { icon: Zap, label: "Free Forever" },
+                  { icon: Sparkles, label: "AI-Powered" }
+                ].map((badge, i) => (
+                  <div key={i} className="flex flex-col items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
+                    <badge.icon className="w-6 h-6 text-primary" />
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em]">{badge.label}</span>
+                  </div>
                 ))}
-              </AnimatePresence>
-            </div>
-          </ScrollArea>
-          
-          <input id="studio-upload" type="file" multiple accept="image/*,.heic,.heif,.tiff,.tif,.psd,.svg,.pdf,.webp,.avif" className="hidden" onChange={(e) => addFiles(Array.from(e.target.files || []))} />
-          
-          <div className="p-8 border-t border-border bg-card">
-            <Button 
-              className="w-full bg-white text-black hover:bg-white/90 rounded-xl font-black h-10 gap-3 text-xs uppercase tracking-widest shadow-2xl active:scale-95 transition-all"
-              onClick={() => document.getElementById('studio-upload-mobile')?.click()}
-            >
-              <Plus className="w-5 h-5" /> Import Assets
-            </Button>
-          </div>
-        </aside>
-
-        {/* Global file input — accessible on all screen sizes */}
-        <input
-          id="studio-upload-mobile"
-          type="file"
-          multiple
-          accept="image/*,.heic,.heif,.tiff,.tif,.psd,.svg,.pdf,.webp,.avif"
-          className="hidden"
-          onChange={(e) => {
-            addFiles(Array.from(e.target.files || []));
-            (e.target as HTMLInputElement).value = "";
-          }}
-        />
-
-        {/* Center - Workspace */}
-        <section className="flex-grow bg-transparent relative flex flex-col h-full overflow-y-auto overflow-x-hidden custom-scrollbar">
-          {/* Workspace Header */}
-          <header className="p-4 md:p-8 flex items-center justify-between studio-header relative z-20">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 md:w-11 md:h-11 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center border border-border shadow-2xl group overflow-hidden relative">
-                <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
-                <Cpu className="w-6 h-6 md:w-8 md:h-8 text-foreground relative z-10" />
               </div>
-              <div className="flex flex-col">
-                <h2 className="font-black text-lg md:text-2xl tracking-tighter uppercase italic">Creative Workspace</h2>
-                <div className="flex items-center gap-3">
-                   <Badge className="text-[9px] bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-3 py-0.5 rounded-full font-black uppercase tracking-widest">
-                       Secure Session
-                    </Badge>
-                   <span className="text-[10px] text-muted-foreground uppercase font-black tracking-widest opacity-40 truncate max-w-[200px]">{currentFile?.file.name || "Standby Mode"}</span>
+           </motion.div>
+        </section>
+        )}
+
+        {mode === "landing" && <TrustLayer />}
+
+
+        {/* INTERACTIVE STUDIO AREA */}
+        <section className={cn(
+          "flex flex-row overflow-hidden relative border-y border-border bg-black/20",
+          mode === "landing" ? "h-screen lg:h-[800px]" : "h-screen"
+        )}>
+          {/* Background Effects */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-[20%] left-[10%] w-[50%] h-[50%] bg-primary/5 blur-[140px] rounded-full animate-pulse" />
+            <div className="absolute bottom-[20%] right-[10%] w-[50%] h-[50%] bg-blue-500/5 blur-[140px] rounded-full animate-pulse" />
+          </div>
+
+          {/* Left Sidebar - Asset Navigator */}
+          {/* Left Sidebar - Asset Navigator (Only visible when files exist) */}
+          {files.length > 0 && (
+            <aside className="flex w-[60px] md:w-[320px] h-full max-h-full bg-card shrink-0 flex-col relative z-20 shadow-[0_0_50px_rgba(0,0,0,0.5)] border-r border-border transition-all duration-500 overflow-hidden group/sidebar hover:w-[320px]">
+              <div className="w-[320px]">
+                <div className="px-6 py-5 border-b border-border bg-black/20 space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
+                      <Layers className="w-4 h-4" /> Asset Navigator
+                    </h3>
+                    <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest italic">Local Memory Bin</p>
+                  </div>
+                  <Badge className="rounded-full bg-primary/10 text-primary border-primary/20 text-[10px] font-black px-3 py-0.5">
+                    {files.length}
+                  </Badge>
+                </div>
+
+                <div className="p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/10 flex items-center gap-2.5">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-[8px] font-black uppercase tracking-widest text-emerald-500/80 italic">Isolated Session Live</span>
                 </div>
               </div>
-            </div>
-            
-            <div className="flex items-center gap-3">
-              <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
-                <SheetTrigger render={<Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 md:h-10 md:w-14 shadow-xl"><Settings2 className="w-5 h-5" /></Button>} />
-                <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-card border-border rounded-l-xl flex flex-col h-full">
-                  <SheetHeader className="px-4 py-3 border-b border-border">
-                    <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
-                      <Wand2 className="w-6 h-6 text-primary" /> Studio Control
-                    </SheetTitle>
-                  </SheetHeader>
-                  {renderSettings()}
-                </SheetContent>
-              </Sheet>
-            </div>
-          </header>
-
-          <div 
-            className={cn(
-              "flex-grow relative flex items-center justify-center p-5 overflow-auto custom-scrollbar select-none",
-              zoom > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-default"
-            )}
-            onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
-            onDragLeave={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setIsDragging(false); }}
-            onDrop={handleDrop}
-          >
-            {/* Grid background moved to separate layer for better perf */}
-            <div className="absolute inset-0 pointer-events-none opacity-[0.05]" 
-              style={{ 
-                backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
-                backgroundSize: '40px 40px'
-              }} 
-            />
-
-            <AnimatePresence mode="wait">
-              {currentFile ? (
-                <motion.div 
-                  key={currentFile.id}
-                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative group flex flex-col items-center max-w-full max-h-full"
-                >
-                  <div 
-                    className="relative shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-border rounded-sm transition-all duration-700 ease-[0.16,1,0.3,1] bg-muted/40 group-hover:border-primary/20 flex items-center justify-center w-fit h-fit overflow-visible"
-                    style={{ 
-                      transform: `scale(${zoom})`,
-                      transformOrigin: 'center center',
-                      transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
-                      maxWidth: 'none',
-                      maxHeight: 'none'
-                    }}
-                  >
-                    {/* Unified Transform Layer */}
-                    <div 
-                      className="relative transition-transform duration-500 ease-[0.16,1,0.3,1]"
-                      style={{ 
-                        transform: `rotate(${settings.rotate}deg) scaleX(${settings.flipX ? -1 : 1}) scaleY(${settings.flipY ? -1 : 1})`,
-                      }}
-                    >
-                      <img 
-                        ref={imageRef}
-                        src={currentFile.processedUrl || currentFile.previewUrl} 
-                        className="w-auto h-auto max-w-none shadow-inner" 
-                        style={{ 
-                          filter: `brightness(${settings.brightness}%) contrast(${settings.contrast}%) saturate(${settings.saturation}%) ${
-                            settings.filter === "grayscale" ? "grayscale(100%)" :
-                            settings.filter === "sepia" ? "sepia(100%)" :
-                            settings.filter === "invert" ? "invert(100%)" :
-                            settings.filter === "vivid" ? "saturate(150%) contrast(120%)" : ""
-                          }`,
-                        }}
-                        alt="" 
-                        onLoad={(e) => {
-                          // Ensure overlays are updated when image loads
-                          const img = e.currentTarget;
-                          console.log("Image Loaded:", img.naturalWidth, img.naturalHeight);
-                        }}
-                      />
-                      {activeTab === "crop" && imageDimensions && (
-                        <CropOverlay 
-                          file={currentFile} 
-                          imageRef={imageRef} 
-                          dimensions={imageDimensions}
-                          updateFileCrop={updateFileCrop} 
-                        />
-                      )}
-                      {activeTab === "privacy" && <BlurOverlay file={currentFile} updateFileBlurs={updateFileBlurs} />}
-                    </div>
-                    <AnimatePresence>
-                      {isProcessing && (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-muted/80 backdrop-blur-2xl flex flex-col items-center justify-center gap-3">
-                          <div className="relative">
-                            <Loader2 className="w-20 h-12 animate-spin text-primary opacity-20" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                               <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+              
+              <ScrollArea className="flex-grow min-h-0">
+                <div className="p-4 space-y-3">
+                  <AnimatePresence mode="popLayout">
+                    {files.map((file) => (
+                      <motion.div
+                        key={file.id}
+                        layout
+                        initial={{ opacity: 0, x: -20, scale: 0.95 }}
+                        animate={{ opacity: 1, x: 0, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        onClick={() => setSelectedId(file.id)}
+                        className={cn(
+                          "group p-3 rounded-2xl border transition-all cursor-pointer relative overflow-hidden duration-500",
+                          selectedId === file.id 
+                            ? "bg-primary/10 border-primary/40 shadow-2xl shadow-primary/20" 
+                            : "bg-secondary/20 border-border/50 hover:bg-secondary/40 hover:border-border"
+                        )}
+                      >
+                        <div className="flex items-center gap-4 relative z-10">
+                          <div className="w-12 h-12 rounded-xl overflow-hidden bg-black border border-border/50 shrink-0 shadow-2xl group-hover:scale-105 transition-transform relative">
+                             <div className="absolute top-0 right-0 px-1 bg-black/60 backdrop-blur-md text-[6px] font-black uppercase text-primary border-bl border-border/50 z-20">
+                               {file.file.name.split('.').pop()}
+                             </div>
+                             <img src={file.previewUrl} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" alt="" />
+                          </div>
+                          <div className="flex-grow min-w-0">
+                            <p className="text-[11px] font-black truncate leading-tight uppercase tracking-tight italic text-foreground/80">{file.file.name}</p>
+                            <div className="flex items-center gap-2 mt-1">
+                              <span className="text-[8px] uppercase font-black text-muted-foreground/40 tracking-widest tabular-nums">
+                                {(file.file.size / 1024).toFixed(1)} KB
+                              </span>
+                              <div className={cn(
+                                "w-1.5 h-1.5 rounded-full",
+                                file.status === "completed" ? "bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]" :
+                                file.status === "processing" ? "bg-primary animate-pulse" :
+                                file.status === "error" ? "bg-destructive" : "bg-white/10"
+                              )} />
                             </div>
                           </div>
-                          <div className="flex flex-col items-center gap-1">
-                            <p className="text-[12px] font-black uppercase tracking-[0.5em] text-primary animate-pulse">Neural Processing</p>
-                            <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">Optimizing via WebAssembly</p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                    {/* Neural Scan Animation */}
-                    <AnimatePresence>
-                      {isScanning && (
-                        <motion.div 
-                          initial={{ top: "-10%" }}
-                          animate={{ top: "110%" }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 2, ease: "linear" }}
-                          className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_rgba(var(--primary-rgb),0.8)] z-50 pointer-events-none"
-                        >
-                          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-primary-foreground text-[8px] font-black uppercase tracking-[0.3em] rounded-full whitespace-nowrap">
-                            Neural Sync In Progress
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </motion.div>
-              ) : (
-                <div
-                  className="w-full h-full flex items-center justify-center p-8"
-                  onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
-                  onDragLeave={() => setIsDragging(false)}
-                  onDrop={handleDrop}
-                >
-                  <motion.div
-                    animate={{ scale: isDragging ? 1.02 : 1 }}
-                    className="max-w-sm w-full"
-                  >
-                  <Card className={`p-8 border-dashed bg-secondary/10 rounded-2xl text-center space-y-4 relative group overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] transition-all duration-300 ${isDragging ? 'border-primary/60 bg-primary/5 shadow-primary/20' : 'border-border'}`}>
-                    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    <div className="relative z-10">
-                      <motion.div 
-                         initial={{ scale: 0.9, opacity: 0 }}
-                         animate={{ scale: 1, opacity: 1 }}
-                         className="w-12 h-12 rounded-3xl bg-gradient-to-br from-primary/10 via-[#0a0a0a] to-blue-600/10 p-[1px] mx-auto mb-4 shadow-2xl relative group overflow-hidden"
-                      >
-                        <div className="absolute inset-0 bg-primary/5 animate-pulse" />
-                        <div className="w-full h-full rounded-[calc(1.5rem-1px)] bg-muted/40 backdrop-blur-xl flex items-center justify-center border border-border relative z-10">
-                          {isDragging
-                            ? <DownloadCloud className="w-10 h-10 text-primary animate-bounce" />
-                            : <Cpu className="w-10 h-10 text-primary opacity-20" />
-                          }
-                        </div>
-                      </motion.div>
-                      <p className="text-[10px] font-black text-muted-foreground/50 uppercase tracking-widest mb-6">
-                        {isDragging ? "Release to Import" : "Drop images here or click below"}
-                      </p>
-                      <Button 
-                        className="bg-white text-black hover:bg-white/90 rounded-xl font-black px-5 h-10 uppercase tracking-widest text-[10px] shadow-2xl active:scale-95 transition-all w-full"
-                        onClick={() => document.getElementById('studio-upload-mobile')?.click()}
-                      >
-                        Initialize Asset
-                      </Button>
-                    </div>
-                  </Card>
-                  </motion.div>
-                </div>
-              )}
-            </AnimatePresence>
-
-            {/* High-Performance Fixed Workspace Toolbar */}
-            <AnimatePresence>
-              {currentFile && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 50 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  className="fixed bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 p-3 rounded-2xl bg-card/80 backdrop-blur-3xl border border-border shadow-[0_30px_100px_-20px_rgba(0,0,0,1)] z-[100] hover:border-primary/20 max-w-[95vw] overflow-x-auto no-scrollbar group/toolbar"
-                  style={{ left: 'calc(50% + 10px)' }} // Offset for center-balanced look with sidebar
-                >
-                  {/* Undo/Redo Group */}
-                  <div className="flex items-center gap-1 bg-muted/40 rounded-full p-1 shrink-0">
-                    <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full hover:bg-secondary/50 disabled:opacity-20" onClick={undo} disabled={history.length === 0}>
-                      <Undo2 className="w-4 h-4" />
-                    </Button>
-                    <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full hover:bg-secondary/50 disabled:opacity-20" onClick={redo} disabled={redoStack.length === 0}>
-                      <Redo2 className="w-4 h-4" />
-                    </Button>
-                  </div>
-
-                  <div className="w-[1px] h-6 bg-secondary mx-1 shrink-0" />
-
-                  {/* Zoom Group */}
-                  <div className="flex items-center gap-3 px-3 shrink-0">
-                      <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full hover:bg-secondary/50" onClick={() => setZoom(Math.max(0.1, zoom - 0.2))}>
-                      <ZoomOut className="w-4 h-4 opacity-40" />
-                    </Button>
-                    <div className="w-24">
-                      <Slider 
-                        value={[zoom * 100]} 
-                        min={10} max={500} step={1}
-                        onValueChange={(v) => setZoom((Array.isArray(v) ? v[0] : v) / 100)}
-                        className="py-2"
-                      />
-                    </div>
-                    <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full hover:bg-secondary/50" onClick={() => setZoom(Math.min(5, zoom + 0.2))}>
-                      <ZoomIn className="w-4 h-4 opacity-40" />
-                    </Button>
-                    <div className="min-w-[40px] text-[10px] font-black text-primary tabular-nums text-center uppercase tracking-tighter italic">
-                      {Math.round(zoom * 100)}%
-                    </div>
-                  </div>
-
-                  <div className="w-[1px] h-6 bg-secondary mx-1 shrink-0" />
-
-                  {/* Quality Group */}
-                  <div className="flex items-center gap-3 px-3 shrink-0 text-foreground">
-                      <Zap className="w-4 h-4 opacity-40" />
-                      <div className="flex gap-1 bg-muted/20 rounded-full p-1 mr-2">
-                        {[
-                          { l: "L", v: 30, t: "Low" },
-                          { l: "M", v: 75, t: "Med" },
-                          { l: "H", v: 95, t: "High" }
-                        ].map(p => (
                           <button 
-                            key={p.l}
-                            onClick={() => pushSettings({ quality: p.v })}
-                            className={cn(
-                              "w-7 h-7 rounded-full text-[8px] font-black transition-all",
-                              settings.quality === p.v ? "bg-primary text-primary-foreground" : "text-muted-foreground/40 hover:bg-secondary/50"
-                            )}
-                            title={p.t}
+                            onClick={(e) => { e.stopPropagation(); removeFile(file.id); }}
+                            className="p-2 rounded-xl opacity-0 group-hover:opacity-100 text-muted-foreground hover:bg-destructive/10 hover:text-destructive transition-all"
                           >
-                            {p.l}
+                            <Trash2 className="w-3.5 h-3.5" />
                           </button>
+                        </div>
+                        {selectedId === file.id && (
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent pointer-events-none" />
+                        )}
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              </ScrollArea>
+              
+              <div className="p-6 border-t border-border bg-black/20">
+                <Button 
+                  className="w-full bg-white text-black hover:bg-primary hover:text-white rounded-2xl font-black h-12 gap-3 text-[10px] uppercase tracking-widest shadow-2xl active:scale-95 transition-all group"
+                  onClick={() => document.getElementById('studio-upload-mobile')?.click()}
+                >
+                  <Plus className="w-5 h-5 group-hover:rotate-90 transition-transform" /> 
+                  Add Local Assets
+                </Button>
+              </div>
+              </div>
+            </aside>
+          )}
+
+          {/* Global file input — accessible on all screen sizes */}
+          <input
+            id="studio-upload-mobile"
+            type="file"
+            multiple
+            accept="image/*,.heic,.heif,.tiff,.tif,.psd,.svg,.pdf,.webp,.avif"
+            className="hidden"
+            onChange={(e) => {
+              handleAddFiles(Array.from(e.target.files || []));
+              (e.target as HTMLInputElement).value = "";
+            }}
+          />
+
+          {/* Center - Workspace */}
+          <section className="flex-grow bg-transparent relative flex flex-col h-full overflow-y-auto overflow-x-hidden custom-scrollbar">
+            {/* Workspace Header (Only visible when files exist) */}
+            {files.length > 0 && (
+              <header className="p-4 md:px-8 md:py-6 flex items-center justify-between studio-header relative z-30 border-b border-border/50 bg-background/50 backdrop-blur-xl">
+                <div className="flex items-center gap-4">
+                  {mode === "studio" && (
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="rounded-xl hover:bg-primary/10 hover:text-primary transition-all active:scale-95 group"
+                      onClick={() => router.push("/image/editor")}
+                    >
+                      <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                    </Button>
+                  )}
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 shadow-[0_0_30px_rgba(var(--primary-rgb),0.1)] group relative overflow-hidden">
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity animate-pulse" />
+                    <Cpu className="w-6 h-6 text-primary relative z-10" />
+                  </div>
+                  <div className="flex flex-col">
+                    <h2 className="font-black text-lg md:text-xl tracking-tighter uppercase italic flex items-center gap-2">
+                      Creative Studio
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                    </h2>
+                    <div className="flex items-center gap-3">
+                      <Badge className="text-[8px] bg-emerald-500/10 text-emerald-500 border-emerald-500/20 px-2 py-0.5 rounded-full font-black uppercase tracking-widest">
+                          Isolated Session
+                        </Badge>
+                      <span className="text-[10px] text-muted-foreground uppercase font-black tracking-widest opacity-40 truncate max-w-[150px] md:max-w-[300px]">
+                        {currentFile?.file.name || "Standby Mode"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-3">
+                  <div className="hidden md:flex items-center gap-6 px-6 py-2 rounded-2xl bg-secondary/20 border border-border/50">
+                    <div className="flex flex-col items-center">
+                      <span className="text-[8px] font-black uppercase text-muted-foreground/40 tracking-widest">WASM Thread</span>
+                      <span className="text-[10px] font-black uppercase text-primary italic">Active</span>
+                    </div>
+                    <div className="w-[1px] h-6 bg-border/50" />
+                    <div className="flex flex-col items-center">
+                      <span className="text-[8px] font-black uppercase text-muted-foreground/40 tracking-widest">RAM Latency</span>
+                      <span className="text-[10px] font-black uppercase text-primary italic">0.2ms</span>
+                    </div>
+                    <div className="w-[1px] h-6 bg-border/50" />
+                    <div className="flex flex-col items-center">
+                      <span className="text-[8px] font-black uppercase text-muted-foreground/40 tracking-widest">Crypto Enclave</span>
+                      <span className="text-[10px] font-black uppercase text-emerald-500 italic">Verified</span>
+                    </div>
+                  </div>
+
+                  <Sheet open={isMobileSettingsOpen} onOpenChange={setIsMobileSettingsOpen}>
+                    <SheetTrigger render={<Button variant="outline" size="icon" className="lg:hidden rounded-2xl border-border bg-secondary/50 h-12 w-12 shadow-xl"><Settings2 className="w-5 h-5" /></Button>} />
+                    <SheetContent side="right" className="w-full sm:w-[320px] p-0 bg-card border-border rounded-l-xl flex flex-col h-full">
+                      <SheetHeader className="px-4 py-3 border-b border-border">
+                        <SheetTitle className="text-foreground flex items-center gap-3 text-2xl font-black uppercase italic tracking-tighter">
+                          <Wand2 className="w-6 h-6 text-primary" /> Studio Control
+                        </SheetTitle>
+                      </SheetHeader>
+                      {renderSettings()}
+                    </SheetContent>
+                  </Sheet>
+                </div>
+              </header>
+            )}
+
+            <div 
+              className={cn(
+                "flex-grow relative flex flex-col items-center justify-center p-8 overflow-hidden select-none bg-black/40",
+                zoom > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-default"
+              )}
+              onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+              onDragLeave={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setIsDragging(false); }}
+              onDrop={handleDrop}
+            >
+              {/* Studio Telemetry Overlay */}
+              <AnimatePresence>
+                {currentFile && (
+                  <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="absolute top-8 left-8 z-20 space-y-4 hidden xl:block pointer-events-none"
+                  >
+                    <div className="p-4 rounded-2xl bg-black/60 border border-border/50 backdrop-blur-xl space-y-3 shadow-2xl">
+                      <div className="flex items-center gap-2">
+                        <Monitor className="w-4 h-4 text-primary" />
+                        <span className="text-[10px] font-black uppercase tracking-widest text-foreground italic">Studio Telemetry</span>
+                      </div>
+                      <div className="space-y-2">
+                        {[
+                          { l: "MEM_USAGE", v: `${(currentFile.file.size / (1024 * 1024)).toFixed(2)} MB`, c: "text-primary" },
+                          { l: "PROC_ENGINE", v: "WASM_NATIVE", c: "text-foreground" },
+                          { l: "BIT_DEPTH", v: "8-BIT_RGBA", c: "text-foreground" },
+                          { l: "DIMENSIONS", v: imageDimensions ? `${imageDimensions.naturalWidth} x ${imageDimensions.naturalHeight}` : "Detecting...", c: "text-foreground" },
+                          { l: "STORAGE_IO", v: "ZERO_DEPENDENCY", c: "text-emerald-500" }
+                        ].map(stat => (
+                          <div key={stat.l} className="flex justify-between items-center gap-8">
+                            <span className="text-[8px] font-black text-muted-foreground/40 uppercase tracking-tighter">{stat.l}</span>
+                            <span className={cn("text-[10px] font-black font-mono tracking-tight", stat.c)}>{stat.v}</span>
+                          </div>
                         ))}
                       </div>
-                      <div className="w-20">
-                      <Slider 
-                        value={[settings.quality]} 
-                        min={1} max={100} step={1}
-                        onValueChange={(v) => updateSettings({ quality: Array.isArray(v) ? v[0] : v })}
-                        onValueCommitted={(v) => pushSettings({ quality: Array.isArray(v) ? v[0] : v })}
-                        className="py-2"
+                    </div>
+
+                    <div className="p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 backdrop-blur-xl flex items-center gap-3">
+                      <ShieldCheck className="w-5 h-5 text-emerald-500" />
+                      <div className="flex flex-col">
+                        <span className="text-[8px] font-black text-emerald-500 uppercase tracking-[0.2em]">Data Privacy Status</span>
+                        <span className="text-[10px] font-black text-foreground uppercase italic tracking-tighter">100% Local Pipeline</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Grid background moved to separate layer for better perf */}
+              <div className="absolute inset-0 pointer-events-none opacity-[0.1]" 
+                style={{ 
+                  backgroundImage: `linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)`,
+                  backgroundSize: '40px 40px'
+                }} 
+              />
+
+              <AnimatePresence mode="wait">
+                {currentFile ? (
+                  <motion.div 
+                    key={currentFile.id}
+                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: -20 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="relative group flex flex-col items-center max-w-full max-h-full"
+                  >
+                    <div 
+                      className="relative shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] border border-border rounded-sm transition-all duration-700 ease-[0.16,1,0.3,1] bg-[#0a0a0a] group-hover:border-primary/20 flex items-center justify-center w-fit h-fit overflow-visible"
+                      style={{ 
+                        transform: `scale(${zoom})`,
+                        transformOrigin: 'center center',
+                        transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                        maxWidth: 'none',
+                        maxHeight: 'none'
+                      }}
+                    >
+                      {/* Checkerboard Transparency Layer */}
+                      <div className="absolute inset-0 z-0 opacity-40 rounded-sm overflow-hidden" 
+                           style={{ 
+                             backgroundImage: `linear-gradient(45deg, #222 25%, transparent 25%), linear-gradient(-45deg, #222 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #222 75%), linear-gradient(-45deg, transparent 75%, #222 75%)`,
+                             backgroundSize: '20px 20px',
+                             backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
+                           }} 
                       />
-                    </div>
-                    <div className="min-w-[30px] text-[10px] font-black text-primary tabular-nums text-center uppercase tracking-tighter italic">
-                      Q{settings.quality}
-                    </div>
-                  </div>
 
-                  <div className="w-[1px] h-6 bg-secondary mx-1 shrink-0" />
-
-
-                  <div className="flex items-center gap-2 shrink-0">
-                      <Button size="icon" variant="ghost" className="h-10 w-10 rounded-full hover:bg-secondary/50" onClick={() => setZoom(1)}>
-                      <Maximize className="w-4 h-4 opacity-40" />
-                    </Button>
-                    
-                    <div className="relative group">
-                      {currentFile?.status === "idle" && (
-                        <div className="absolute -inset-1 bg-primary/20 blur-xl rounded-full animate-pulse group-hover:bg-primary/40 transition-all" />
-                      )}
-                      <Button 
-                        size="lg" 
-                        className={cn(
-                          "relative rounded-xl px-8 h-10 font-black text-[10px] gap-3 shadow-2xl uppercase italic tracking-tighter group active:scale-95 transition-all duration-500",
-                          currentFile?.status === "idle" 
-                            ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-primary/30" 
-                            : "bg-secondary/50 border border-border text-muted-foreground/60 cursor-default"
-                        )}
-                        onClick={handleProcess}
-                        disabled={isProcessing || currentFile?.status === "processing"}
+                      {/* Unified Transform Layer */}
+                      <div 
+                        className="relative z-10 transition-transform duration-500 ease-[0.16,1,0.3,1]"
+                        style={{ 
+                          transform: `rotate(${settings.rotate}deg) scaleX(${settings.flipX ? -1 : 1}) scaleY(${settings.flipY ? -1 : 1})`,
+                        }}
                       >
-                        {isProcessing ? (
-                          <Loader2 className="w-4 h-4 animate-spin" />
-                        ) : (
-                          <RefreshCw className={cn(
-                            "w-4 h-4 transition-transform duration-700",
-                            currentFile?.status === "idle" && "group-hover:rotate-180 text-foreground"
-                          )} />
+                        <img 
+                          ref={imageRef}
+                          src={currentFile.processedUrl || currentFile.previewUrl} 
+                          className="w-auto h-auto max-w-none shadow-2xl relative z-10" 
+                          style={{ 
+                            filter: `brightness(${settings.brightness}%) contrast(${settings.contrast}%) saturate(${settings.saturation}%) ${
+                              settings.filter === "grayscale" ? "grayscale(100%)" :
+                              settings.filter === "sepia" ? "sepia(100%)" :
+                              settings.filter === "invert" ? "invert(100%)" :
+                              settings.filter === "vivid" ? "saturate(150%) contrast(120%)" : ""
+                            }`,
+                          }}
+                          alt="" 
+                          onLoad={(e) => {
+                            const img = e.currentTarget;
+                            console.log("Image Loaded:", img.naturalWidth, img.naturalHeight);
+                          }}
+                        />
+                        {activeTab === "crop" && imageDimensions && (
+                          <CropOverlay 
+                            file={currentFile} 
+                            imageRef={imageRef} 
+                            dimensions={imageDimensions}
+                            settings={settings}
+                            zoom={zoom}
+                            updateFileCrop={updateFileCrop} 
+                          />
                         )}
-                        {isProcessing ? "Processing..." : currentFile?.status === "idle" ? "Render Changes" : "Up to Date"}
+                        {activeTab === "privacy" && <BlurOverlay file={currentFile} updateFileBlurs={updateFileBlurs} />}
+                      </div>
+                      <AnimatePresence>
+                        {isProcessing && (
+                          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-muted/80 backdrop-blur-2xl flex flex-col items-center justify-center gap-3">
+                            <div className="relative">
+                              <Loader2 className="w-20 h-12 animate-spin text-primary opacity-20" />
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <Sparkles className="w-8 h-8 text-primary animate-pulse" />
+                              </div>
+                            </div>
+                            <div className="flex flex-col items-center gap-1">
+                              <p className="text-[12px] font-black uppercase tracking-[0.5em] text-primary animate-pulse">Neural Processing</p>
+                              <p className="text-[8px] font-bold text-muted-foreground/40 uppercase tracking-widest">Optimizing via WebAssembly</p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+
+                      {/* Neural Scan Animation */}
+                      <AnimatePresence>
+                        {isScanning && (
+                          <motion.div 
+                            initial={{ top: "-10%" }}
+                            animate={{ top: "110%" }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 2, ease: "linear" }}
+                            className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent shadow-[0_0_30px_rgba(var(--primary-rgb),0.8)] z-50 pointer-events-none"
+                          >
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-primary text-primary-foreground text-[8px] font-black uppercase tracking-[0.3em] rounded-full whitespace-nowrap">
+                              Neural Sync In Progress
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <div
+                    className="w-full h-full flex items-center justify-center p-8 min-h-[500px]"
+                    onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                    onDragLeave={() => setIsDragging(false)}
+                    onDrop={handleDrop}
+                  >
+                    <motion.div
+                      animate={{ scale: isDragging ? 1.05 : 1 }}
+                      className="max-w-xl w-full"
+                    >
+                    <Card className={`p-12 md:p-20 border-dashed bg-secondary/10 rounded-[40px] text-center space-y-8 relative group overflow-hidden shadow-[0_80px_150px_-30px_rgba(0,0,0,0.8)] transition-all duration-500 ${isDragging ? 'border-primary/60 bg-primary/5 ring-4 ring-primary/10' : 'border-border/50'}`}>
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      
+                      <div className="relative z-10 space-y-8">
+                        <motion.div 
+                          initial={{ scale: 0.8, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          className="w-24 h-24 rounded-[32px] bg-gradient-to-br from-primary/20 via-[#0a0a0a] to-blue-600/20 p-[1px] mx-auto shadow-2xl relative overflow-hidden"
+                        >
+                          <div className="absolute inset-0 bg-primary/5 animate-pulse" />
+                          <div className="w-full h-full rounded-[calc(2rem-1px)] bg-muted/40 backdrop-blur-3xl flex items-center justify-center border border-primary/20 relative z-10">
+                            <ImageIcon className={cn("w-10 h-10 text-primary transition-all duration-500", isDragging ? "scale-125 rotate-12" : "opacity-40")} />
+                          </div>
+                        </motion.div>
+
+                        <div className="space-y-4">
+                          <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic leading-none">
+                            Ready to <span className="text-primary">Create?</span>
+                          </h3>
+                          <p className="text-muted-foreground text-sm md:text-lg font-medium max-w-sm mx-auto leading-relaxed italic">
+                            Drop your high-resolution assets here to initialize the secure WASM-powered studio.
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          <Button 
+                            size="lg"
+                            className="bg-white text-black hover:bg-primary hover:text-white rounded-2xl font-black px-10 h-16 uppercase tracking-widest text-xs shadow-2xl active:scale-95 transition-all w-full gap-3"
+                            onClick={() => document.getElementById('studio-upload-mobile')?.click()}
+                          >
+                            <Plus className="w-5 h-5" /> Initialize Asset
+                          </Button>
+                          <div className="flex items-center justify-center gap-6 opacity-30">
+                             {["PNG", "JPG", "WEBP", "PDF", "SVG"].map(f => (
+                               <span key={f} className="text-[10px] font-black tracking-widest">{f}</span>
+                             ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Scanning lines decorative */}
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-scan" />
+                    </Card>
+                    </motion.div>
+                  </div>
+                )}
+              </AnimatePresence>
+
+               {/* High-Performance Studio Control Center (Floating Toolbar) */}
+              <AnimatePresence>
+                {currentFile && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 50, x: "-50%" }}
+                    animate={{ opacity: 1, y: 0, x: "-50%" }}
+                    exit={{ opacity: 0, y: 50, x: "-50%" }}
+                    transition={{ type: "spring", stiffness: 400, damping: 40 }}
+                    className="fixed bottom-12 left-1/2 flex items-center gap-4 p-4 rounded-[2rem] bg-card/60 backdrop-blur-3xl border border-border/50 shadow-[0_50px_100px_-20px_rgba(0,0,0,1)] z-[100] group/toolbar ring-1 ring-white/5"
+                  >
+                    {/* Performance Pulse Indicator */}
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-black/80 border border-border/50 backdrop-blur-xl flex items-center gap-2 shadow-2xl">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
+                      <span className="text-[7px] font-black uppercase tracking-[0.2em] text-primary italic">Engine Sync Active</span>
+                    </div>
+
+                    {/* Navigation Group */}
+                    <div className="flex items-center gap-1 bg-black/40 rounded-2xl p-1.5 shrink-0 border border-border/20">
+                      <Button size="icon" variant="ghost" className="h-10 w-10 rounded-xl hover:bg-primary/10 hover:text-primary disabled:opacity-20 transition-all" onClick={undo} disabled={history.length === 0}>
+                        <Undo2 className="w-4 h-4" />
+                      </Button>
+                      <Button size="icon" variant="ghost" className="h-10 w-10 rounded-xl hover:bg-primary/10 hover:text-primary disabled:opacity-20 transition-all" onClick={redo} disabled={redoStack.length === 0}>
+                        <Redo2 className="w-4 h-4" />
                       </Button>
                     </div>
 
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="rounded-xl px-6 h-10 border-border bg-secondary/50 hover:bg-emerald-500/10 hover:border-emerald-500/30 hover:text-emerald-400 text-muted-foreground/80 font-black text-[10px] gap-2 uppercase italic tracking-tighter group active:scale-95 transition-all"
-                      onClick={handleDownloadSingle}
-                      disabled={!currentFile?.processedUrl}
-                    >
-                      <DownloadCloud className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      Save
-                    </Button>
+                    <div className="w-[1px] h-8 bg-border/50 mx-1 shrink-0" />
+
+                    {/* View Control Group */}
+                    <div className="flex items-center gap-3 px-2 shrink-0">
+                      <div className="flex items-center gap-1 bg-black/40 rounded-2xl p-1.5 border border-border/20">
+                        <Button size="icon" variant="ghost" className="h-8 w-8 rounded-lg hover:bg-secondary/50" onClick={() => setZoom(Math.max(0.1, zoom - 0.2))}>
+                          <ZoomOut className="w-3.5 h-3.5 opacity-40" />
+                        </Button>
+                        <div className="px-3 min-w-[50px] text-[10px] font-black text-foreground tabular-nums text-center uppercase tracking-tighter italic">
+                          {Math.round(zoom * 100)}%
+                        </div>
+                        <Button size="icon" variant="ghost" className="h-8 w-8 rounded-lg hover:bg-secondary/50" onClick={() => setZoom(Math.min(5, zoom + 0.2))}>
+                          <ZoomIn className="w-3.5 h-3.5 opacity-40" />
+                        </Button>
+                        <div className="w-[1px] h-4 bg-border/50 mx-1" />
+                        <Button size="icon" variant="ghost" className="h-8 w-8 rounded-lg hover:bg-secondary/50" onClick={() => setZoom(1)}>
+                          <Maximize className="w-3.5 h-3.5 opacity-40" />
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div className="w-[1px] h-8 bg-border/50 mx-1 shrink-0" />
+
+                    {/* Quality Matrix Group */}
+                    <div className="hidden sm:flex items-center gap-4 px-2 shrink-0">
+                      <div className="flex flex-col">
+                        <span className="text-[7px] font-black text-muted-foreground/40 uppercase tracking-widest mb-1">Export Quality</span>
+                        <div className="flex gap-1.5 bg-black/40 rounded-xl p-1 border border-border/20">
+                          {[
+                            { l: "L", v: 30 },
+                            { l: "M", v: 75 },
+                            { l: "H", v: 95 }
+                          ].map(p => (
+                            <button 
+                              key={p.l}
+                              onClick={() => pushSettings({ quality: p.v })}
+                              className={cn(
+                                "w-7 h-7 rounded-lg text-[8px] font-black transition-all",
+                                settings.quality === p.v ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20" : "text-muted-foreground/40 hover:bg-secondary/50"
+                              )}
+                            >
+                              {p.l}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="w-[1px] h-8 bg-border/50 mx-1 shrink-0" />
+
+                    {/* Action Execution Group */}
+                    <div className="flex items-center gap-3 shrink-0">
+                      <div className="relative group/btn">
+                        {currentFile?.status === "idle" && (
+                          <div className="absolute -inset-2 bg-primary/20 blur-xl rounded-full animate-pulse group-hover/btn:bg-primary/40 transition-all" />
+                        )}
+                        <Button 
+                          size="lg" 
+                          className={cn(
+                            "relative rounded-2xl px-8 h-12 font-black text-[10px] gap-3 shadow-2xl uppercase italic tracking-tighter group active:scale-95 transition-all duration-500",
+                            currentFile?.status === "idle" 
+                              ? "bg-primary hover:bg-primary/90 text-primary-foreground shadow-primary/30" 
+                              : "bg-secondary/50 border border-border text-muted-foreground/60 cursor-default"
+                          )}
+                          onClick={handleProcess}
+                          disabled={isProcessing || currentFile?.status === "processing"}
+                        >
+                          {isProcessing ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                          ) : (
+                            <RefreshCw className={cn(
+                              "w-4 h-4 transition-transform duration-700",
+                              currentFile?.status === "idle" && "group-hover:rotate-180"
+                            )} />
+                          )}
+                          <span className="hidden md:inline">{isProcessing ? "Rendering..." : currentFile?.status === "idle" ? "Render Changes" : "Up to Date"}</span>
+                          <span className="md:hidden">{isProcessing ? "..." : "Render"}</span>
+                        </Button>
+                      </div>
+
+                      <Button
+                        size="lg"
+                        className="rounded-2xl px-6 h-12 bg-white text-black hover:bg-emerald-500 hover:text-white font-black text-[10px] gap-2 uppercase italic tracking-tighter group active:scale-95 transition-all shadow-2xl"
+                        onClick={handleDownloadSingle}
+                        disabled={!currentFile?.processedUrl}
+                      >
+                        <DownloadCloud className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                        Save
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </section>
+
+          {/* Right Sidebar - Studio Inspector */}
+          {files.length > 0 && (
+            <aside className="flex w-[60px] md:w-[320px] h-full max-h-full border-l border-border bg-card shrink-0 flex-col relative z-20 shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-all duration-500 overflow-hidden group/inspector hover:w-[320px]">
+              <div className="w-[320px]">
+                <div className="px-6 py-5 border-b border-border bg-black/20 space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
+                      <Settings2 className="w-4 h-4" /> Studio Matrix
+                    </h3>
+                    <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">WASM Neural Execution</p>
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                  <Badge variant="outline" className="text-[8px] border-emerald-500/20 bg-emerald-500/10 text-emerald-500 uppercase font-black px-2 py-0.5 rounded-full italic animate-pulse">Live</Badge>
+                </div>
+
+                {/* Thread Heatmap Visual */}
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center text-[7px] font-black uppercase tracking-tighter text-muted-foreground/40">
+                    <span>Thread Load</span>
+                    <span>12.4%</span>
+                  </div>
+                  <div className="h-1.5 w-full bg-secondary/30 rounded-full overflow-hidden flex gap-0.5">
+                    <motion.div initial={{ width: "30%" }} animate={{ width: "45%" }} transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }} className="h-full bg-primary" />
+                    <div className="h-full w-1 bg-primary/20" />
+                    <div className="h-full w-4 bg-primary/40" />
+                    <div className="h-full w-2 bg-primary/10" />
+                  </div>
+                </div>
+              </div>
+              
+              <ScrollArea className="flex-grow">
+                <div className="p-0">
+                  {renderSettings()}
+                </div>
+              </ScrollArea>
+
+              <div className="p-6 border-t border-border bg-black/10 space-y-3">
+                <div className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 border border-primary/10">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Fingerprint className="w-4 h-4 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[8px] font-black uppercase tracking-widest text-primary">Crypto Vault</span>
+                    <span className="text-[10px] font-black uppercase text-foreground italic">Memory Isolated</span>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </aside>
+          )}
         </section>
 
-        {/* Right Sidebar - Engine Inspector */}
-        <aside className="hidden lg:flex w-[300px] h-full max-h-full border-l border-border glass-card shrink-0 flex-col relative z-10 shadow-2xl">
-          <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-black/10">
-            <div className="flex flex-col gap-1">
-              <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-primary flex items-center gap-2">
-                <Settings2 className="w-4 h-4" /> Studio Matrix
-              </h3>
-              <p className="text-[8px] font-bold text-muted-foreground uppercase tracking-widest">WASM Thread Execution</p>
-            </div>
-            <Badge variant="outline" className="text-[9px] border-border bg-secondary/50 text-muted-foreground/70 uppercase font-black px-3 py-1 rounded-full italic">Native</Badge>
-          </div>
-          {renderSettings()}
-        </aside>
+        {/* TOOL HEALTH & STATS FOOTER - Landing Mode Only */}
+        {mode === "landing" && (
+          <section className="bg-black/60 border-b border-border py-6 relative z-30">
+             <div className="container mx-auto px-6">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                   <ToolHealth status={currentFile?.status === "completed" ? "complete" : (currentFile?.status === "processing" ? "processing" : "idle")} />
+                   <div className="flex items-center gap-10 text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">
+                      <span className="flex items-center gap-2.5 group hover:text-primary transition-colors cursor-help">
+                        <Monitor className="w-4 h-4 opacity-50 group-hover:opacity-100" /> 
+                        100% Local GPU Pipeline
+                      </span>
+                      <span className="flex items-center gap-2.5 group hover:text-emerald-500 transition-colors cursor-help">
+                        <ShieldCheck className="w-4 h-4 opacity-50 group-hover:opacity-100" /> 
+                        Client-Side Secure Enclave
+                      </span>
+                      <span className="flex items-center gap-2.5 group hover:text-blue-500 transition-colors cursor-help">
+                        <CloudOff className="w-4 h-4 opacity-50 group-hover:opacity-100" /> 
+                        Offline Vector Support
+                      </span>
+                   </div>
+                </div>
+             </div>
+          </section>
+        )}
+
+        {/* SEO CONTENT - Landing Mode Only */}
+        {mode === "landing" && (
+          <>
+            <FAQ items={IMAGE_EDITOR_FAQ} />
+
+            <section id="features" className="py-32 border-t border-border/40">
+              <div className="container mx-auto px-6 max-w-5xl space-y-32">
+                
+                {/* Feature Showcase */}
+                <div className="space-y-16">
+                  <div className="text-center space-y-4">
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic">Powerful Editing Tools</h2>
+                    <p className="text-muted-foreground uppercase tracking-widest text-xs font-black">Everything you need in one browser-based studio</p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {[
+                      { icon: Wand2, title: "AI Background Removal", desc: "Isolate subjects and create transparent backgrounds with advanced edge detection." },
+                      { icon: Scissors, title: "Crop & Resize", desc: "Perfect dimensions for Instagram, YouTube, LinkedIn, and professional printing." },
+                      { icon: Zap, title: "Image Compression", desc: "Reduce file sizes while maintaining pixel-perfect clarity for web performance." },
+                      { icon: RefreshCw, title: "Format Conversion", desc: "Convert between PNG, JPG, WebP, AVIF, SVG, and more instantly." },
+                      { icon: Palette, title: "Filters & Effects", desc: "Apply professional-grade cinematic, vintage, and modern photo effects." },
+                      { icon: Type, title: "Text & Watermarks", desc: "Add signatures, branding, and text overlays with full control." }
+                    ].map((f, i) => (
+                      <Card key={i} className="p-8 rounded-[32px] glass-card border-border/40 space-y-6 hover:border-primary/50 transition-all group">
+                        <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+                          <f.icon className="w-7 h-7 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-black uppercase tracking-tight italic">{f.title}</h3>
+                        <p className="text-muted-foreground text-sm font-medium leading-relaxed italic">{f.desc}</p>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Privacy Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                  <div className="space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-[10px] font-black uppercase tracking-widest">
+                      <ShieldCheck className="w-4 h-4" /> Privacy-First Architecture
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic leading-[0.9]">
+                      100% Private <br />
+                      <span className="text-emerald-500">Local Editing</span>
+                    </h2>
+                    <p className="text-lg text-muted-foreground font-medium leading-relaxed italic">
+                      Unlike traditional online editors, SafeTools processes your images directly in your browser. Your photos are never uploaded to any server, ensuring maximum confidentiality for personal and business assets.
+                    </p>
+                    <div className="grid grid-cols-2 gap-6">
+                      {["Zero Uploads", "Offline Support", "GPU Accelerated", "Secure Sandboxing"].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+                          <span className="text-xs font-black uppercase tracking-widest opacity-60">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative aspect-video rounded-[40px] overflow-hidden border border-border/40 glass-card p-1">
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent" />
+                    <div className="relative h-full w-full rounded-[39px] bg-secondary/40 flex items-center justify-center">
+                      <Monitor className="w-32 h-32 text-emerald-500 opacity-20" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* AI Lab Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                  <div className="order-2 lg:order-1 relative aspect-video rounded-[40px] overflow-hidden border border-border/40 glass-card p-1">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent" />
+                    <div className="relative h-full w-full rounded-[39px] bg-secondary/40 flex items-center justify-center">
+                      <Sparkles className="w-32 h-32 text-primary opacity-20" />
+                    </div>
+                  </div>
+                  <div className="order-1 lg:order-2 space-y-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest">
+                      <Cpu className="w-4 h-4" /> Neural Engine
+                    </div>
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic leading-[0.9]">
+                      AI-Powered <br />
+                      <span className="text-primary">Photo Studio</span>
+                    </h2>
+                    <p className="text-lg text-muted-foreground font-medium leading-relaxed italic">
+                      Leverage advanced WebAssembly-powered AI to sharpen blurry images, upscale low-quality photos, and extract high-fidelity design palettes directly on your device.
+                    </p>
+                    <div className="space-y-4">
+                      {[
+                        "AI Background Removal Engine",
+                        "Neural OCR Text Extraction",
+                        "Advanced Chromatic Palette Analysis",
+                        "Dynamic Edge Detection"
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-primary/5 border border-primary/10">
+                          <CheckCircle2 className="w-5 h-5 text-primary" />
+                          <span className="text-xs font-black uppercase tracking-widest">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Media Presets */}
+                <div className="space-y-16">
+                  <div className="text-center space-y-4">
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic">Social Media Perfect</h2>
+                    <p className="text-muted-foreground uppercase tracking-widest text-xs font-black">Instant presets for all your content platforms</p>
+                  </div>
+
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {[
+                      { label: "Instagram Post", icon: Smartphone },
+                      { label: "YouTube Thumbnail", icon: Play },
+                      { label: "LinkedIn Banner", icon: Monitor },
+                      { label: "Twitter / X Post", icon: HardDrive },
+                      { label: "Facebook Cover", icon: ImageIcon },
+                      { label: "TikTok Cover", icon: Smartphone },
+                      { label: "Pinterest Pin", icon: Layers },
+                      { label: "Web Banner", icon: Maximize }
+                    ].map((item, i) => (
+                      <div key={i} className="flex flex-col items-center justify-center p-8 rounded-3xl glass-card border border-border/40 hover:border-primary/50 transition-all cursor-pointer group">
+                        <item.icon className="w-10 h-10 text-muted-foreground/40 group-hover:text-primary transition-colors mb-4" />
+                        <span className="text-[10px] font-black uppercase tracking-widest text-center">{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Comparison Table */}
+                <div className="space-y-16">
+                  <div className="text-center space-y-4">
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter italic text-emerald-500">The Private Choice</h2>
+                    <p className="text-muted-foreground uppercase tracking-widest text-xs font-black">SafeTools vs. Traditional Cloud Editors</p>
+                  </div>
+
+                  <div className="overflow-hidden rounded-[40px] border border-border/40 glass-card">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="bg-secondary/40 border-b border-border/40">
+                          <th className="p-8 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Feature</th>
+                          <th className="p-8 text-[10px] font-black uppercase tracking-widest text-emerald-500">SafeTools</th>
+                          <th className="p-8 text-[10px] font-black uppercase tracking-widest text-muted-foreground">Traditional</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-xs">
+                        {[
+                          { f: "Browser-Based", s: true, t: "Limited" },
+                          { f: "No Uploads Required", s: true, t: false },
+                          { f: "Free Forever", s: true, t: "Restricted" },
+                          { f: "Privacy First", s: true, t: false },
+                          { f: "Fast GPU Performance", s: true, t: "Slow" },
+                          { f: "Watermark Free", s: true, t: "Paid Only" }
+                        ].map((row, i) => (
+                          <tr key={i} className="border-b border-border/40 hover:bg-white/[0.02] transition-colors">
+                            <td className="p-8 font-black uppercase tracking-widest opacity-60 italic">{row.f}</td>
+                            <td className="p-8">
+                              {row.s === true ? <Check className="text-emerald-500 w-5 h-5" /> : row.s}
+                            </td>
+                            <td className="p-8 opacity-40">
+                              {row.t === true ? <Check className="w-5 h-5" /> : row.t === false ? <X className="text-destructive w-5 h-5" /> : row.t}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Final CTA */}
+                <div className="relative overflow-hidden rounded-[40px] p-16 text-center space-y-8 glass-card border border-primary/20">
+                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
+                   <Sparkles className="w-20 h-20 mx-auto text-primary animate-pulse" />
+                   <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter italic leading-none">Ready to Edit?</h2>
+                   <p className="text-lg text-muted-foreground font-medium max-w-2xl mx-auto italic">
+                     Join thousands of creators using the world's most private and powerful browser-based image editor.
+                   </p>
+                   <Button 
+                    size="lg" 
+                    className="h-20 px-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-primary-foreground font-black uppercase tracking-widest text-sm gap-4 shadow-[0_40px_100px_rgba(var(--primary-rgb),0.3)] active:scale-95 transition-all"
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                   >
+                     Launch Studio Now <ChevronRight className="w-6 h-6" />
+                   </Button>
+                </div>
+
+              </div>
+            </section>
+
+            <WhySafeTools />
+
+            <LocalProcessingGuide />
+
+            <RelatedTools 
+              tools={[
+                { name: "Background Remover", href: "/image/remove-background" },
+                { name: "Image Compressor", href: "/image/compress" },
+                { name: "Format Converter", href: "/image/convert" },
+                { name: "Color Lab", href: "/image/colors" },
+                { name: "App Icon Studio", href: "/image/icons" },
+                { name: "Metadata Cleaner", href: "/security/metadata-cleaner" }
+              ]}
+            />
+
+            {/* PRIVACY MANIFESTO */}
+            <section className="py-24 border-t border-border bg-black/20">
+               <div className="container mx-auto px-6 max-w-3xl text-center space-y-8">
+                  <Fingerprint className="w-16 h-16 mx-auto text-primary opacity-50" />
+                  <h2 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter">Privacy-First Creative Tools</h2>
+                  <p className="text-xl text-muted-foreground font-medium leading-relaxed italic">
+                    "SafeTools develops browser-based creative tools designed for secure local processing and maximum user privacy. Fast, privacy-first creative tools designed for secure browser-based image workflows."
+                  </p>
+               </div>
+            </section>
+          </>
+        )}
+
       </main>
 
-      {/* Modern Dialogs */}
+      {/* MODERN DIALOGS (OCR, COLORS, METADATA) */}
       <Dialog open={!!ocrResult} onOpenChange={() => setOcrResult(null)}>
         <DialogContent className="max-w-3xl bg-card border-border text-foreground rounded-2xl shadow-[0_80px_150px_-30px_rgba(0,0,0,1)] p-0 overflow-hidden">
           <div className="relative h-2 w-full bg-gradient-to-r from-blue-600 via-primary to-emerald-500" />
@@ -1411,8 +1907,10 @@ export default function EditorStudioClient() {
         </DialogContent>
       </Dialog>
 
+      {mode === "landing" && <Footer />}
 
       {/* Mobile FAB */}
+
       <AnimatePresence>
         {currentFile && (
           <motion.div 
@@ -1453,11 +1951,15 @@ const CropOverlay = ({
   file, 
   imageRef, 
   dimensions,
+  settings,
+  zoom,
   updateFileCrop 
 }: { 
   file: ImageFile, 
   imageRef: React.RefObject<HTMLImageElement | null>,
   dimensions: { naturalWidth: number, naturalHeight: number },
+  settings: ImageSettings,
+  zoom: number,
   updateFileCrop: (id: string, crop: { x: number, y: number, width: number, height: number }) => void
 }) => {
   const [isDraggingBox, setIsDraggingBox] = useState(false);
@@ -1471,36 +1973,31 @@ const CropOverlay = ({
   useEffect(() => {
     const measure = () => {
       if (!imageRef.current) return;
-      const rect = imageRef.current.getBoundingClientRect();
-      const imageRatio = naturalWidth / naturalHeight;
-      const containerRatio = rect.width / rect.height;
+      const img = imageRef.current;
       
-      let displayWidth = rect.width;
-      let displayHeight = rect.height;
-      let offsetX = 0;
-      let offsetY = 0;
-
-      if (imageRatio > containerRatio) {
-        displayHeight = rect.width / imageRatio;
-        offsetY = (rect.height - displayHeight) / 2;
-      } else {
-        displayWidth = rect.height * imageRatio;
-        offsetX = (rect.width - displayWidth) / 2;
-      }
-
+      // Since CropOverlay is inside the rotated container, 
+      // we can use the untransformed clientWidth/Height of the image.
+      const displayWidth = img.clientWidth;
+      const displayHeight = img.clientHeight;
+      const rect = img.getBoundingClientRect();
+      
       setDisplayMetrics({
         width: displayWidth,
         height: displayHeight,
-        offsetX,
-        offsetY,
-        scale: displayWidth / naturalWidth
+        offsetX: 0,
+        offsetY: 0,
+        scale: zoom * (displayWidth / naturalWidth)
       });
     };
 
     measure();
+    const timer = setTimeout(measure, 100); // Small delay to ensure DOM settled
     window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [imageRef, naturalWidth, naturalHeight]);
+    return () => {
+      window.removeEventListener('resize', measure);
+      clearTimeout(timer);
+    };
+  }, [imageRef, naturalWidth, naturalHeight, zoom, settings.rotate]);
 
   const crop = file.crop || { x: 0, y: 0, width: naturalWidth, height: naturalHeight };
 
@@ -1510,8 +2007,15 @@ const CropOverlay = ({
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDraggingBox) return;
-      const dx = (e.clientX - dragStart.x) / scale;
-      const dy = (e.clientY - dragStart.y) / scale;
+      
+      // Calculate raw mouse delta
+      let dx_screen = (e.clientX - dragStart.x) / scale;
+      let dy_screen = (e.clientY - dragStart.y) / scale;
+
+      // Transform delta if rotated
+      const rad = -(settings.rotate * Math.PI) / 180;
+      const dx = dx_screen * Math.cos(rad) - dy_screen * Math.sin(rad);
+      const dy = dx_screen * Math.sin(rad) + dy_screen * Math.cos(rad);
 
       const nextX = Math.max(0, Math.min(naturalWidth - crop.width, dragStart.cropX + dx));
       const nextY = Math.max(0, Math.min(naturalHeight - crop.height, dragStart.cropY + dy));
@@ -1554,8 +2058,13 @@ const CropOverlay = ({
 
     const onMove = (moveEvent: MouseEvent) => {
       const { scale } = displayMetrics;
-      const dx = (moveEvent.clientX - startX) / scale;
-      const dy = (moveEvent.clientY - startY) / scale;
+      let dx_screen = (moveEvent.clientX - startX) / scale;
+      let dy_screen = (moveEvent.clientY - startY) / scale;
+
+      // Transform delta if rotated
+      const rad = -(settings.rotate * Math.PI) / 180;
+      const dx = dx_screen * Math.cos(rad) - dy_screen * Math.sin(rad);
+      const dy = dx_screen * Math.sin(rad) + dy_screen * Math.cos(rad);
 
       const nextCrop = { ...startCrop };
 

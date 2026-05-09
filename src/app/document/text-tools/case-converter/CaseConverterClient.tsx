@@ -3,47 +3,57 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
-  Type, 
-  RefreshCw, 
-  Copy, 
-  CheckCircle2, 
-  Trash2,
-  Zap,
-  Sparkles,
-  ArrowDownUp,
-  CaseSensitive,
-  CaseUpper,
-  CaseLower
+  Type, RefreshCw, Copy, CheckCircle2, Trash2, Zap, Sparkles, 
+  CaseSensitive, CaseUpper, CaseLower, Code2, ShieldCheck, Globe, Star, FileText
 } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
-import { PrivacyBadge } from "@/components/shared/PrivacyBadge";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
+import { Footer } from "@/components/shared/Footer";
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { CASE_CONVERTER_FAQ } from "@/lib/faq-content";
 
 export default function CaseConverterClient() {
   const [input, setInput] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const convert = (mode: "upper" | "lower" | "title" | "sentence" | "camel" | "snake") => {
+  const convert = (mode: string) => {
     if (!input.trim()) return;
     let result = "";
+    const str = input;
     switch (mode) {
-      case "upper": result = input.toUpperCase(); break;
-      case "lower": result = input.toLowerCase(); break;
-      case "title": result = input.toLowerCase().split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' '); break;
-      case "sentence": result = input.toLowerCase().replace(/(^\w|\.\s+\w)/gm, s => s.toUpperCase()); break;
-      case "camel": result = input.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase()); break;
-      case "snake": result = input.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "_"); break;
+      case "upper": result = str.toUpperCase(); break;
+      case "lower": result = str.toLowerCase(); break;
+      case "title": result = str.toLowerCase().split(/\s+/).map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' '); break;
+      case "sentence": result = str.toLowerCase().replace(/(^\w|\.\s+\w)/gm, s => s.toUpperCase()); break;
+      case "capitalized": result = str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase()); break;
+      case "toggle": result = str.split('').map(c => c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase()).join(''); break;
+      case "camel": result = str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase()); break;
+      case "pascal": {
+        const camel = str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+        result = camel.charAt(0).toUpperCase() + camel.slice(1);
+        break;
+      }
+      case "snake": result = str.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "_"); break;
+      case "screaming_snake": result = str.toUpperCase().replace(/[^A-Z0-9]+/g, "_"); break;
+      case "kebab": result = str.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-"); break;
+      case "train": result = str.toUpperCase().replace(/[^A-Z0-9]+/g, "-"); break;
+      case "dot": result = str.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "."); break;
+      case "path": result = str.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "/"); break;
     }
     setInput(result);
-    toast.success(`${mode.charAt(0).toUpperCase() + mode.slice(1)} case applied!`);
+    toast.success("Conversion applied!");
   };
 
   const handleCopy = () => {
+    if (!input.trim()) return;
     navigator.clipboard.writeText(input);
     setCopied(true);
     toast.success("Copied to clipboard!");
@@ -51,100 +61,277 @@ export default function CaseConverterClient() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground">
+    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-indigo-500/30">
       <Navbar />
       
-      <main className="flex-grow container mx-auto px-4 py-16 md:py-24 max-w-5xl">
-        <div className="space-y-6">
-          <div className="text-center space-y-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest"
-            >
-              <CaseSensitive className="w-3.5 h-3.5" />
-              Linguistic Matrix Studio
-            </motion.div>
-            <h1 className="text-xl md:text-2xl font-black tracking-tight italic">
-              Case <span className="text-primary not-italic">Converter.</span>
-            </h1>
-            <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium">
-              Transform text casing instantly. Sentence, Title, Camel, and Snake case with zero server telemetry.
-            </p>
-            <PrivacyBadge />
-          </div>
+      <main className="flex-grow flex flex-col relative overflow-y-auto">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+          <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-indigo-600/10 blur-[160px] rounded-full animate-pulse" />
+          <div className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-blue-600/10 blur-[160px] rounded-full animate-pulse delay-1000" />
+          <div 
+            className="absolute inset-0 opacity-[0.2]" 
+            style={{ 
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.1) 1px, transparent 0)`,
+              backgroundSize: '48px 48px'
+            }} 
+          />
+        </div>
 
-          <Card className="p-8 rounded-2xl bg-secondary/30 border-border space-y-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="flex-grow flex flex-col relative z-10">
+          {/* Hero Section */}
+          <div className="max-w-5xl w-full mx-auto px-6 py-20 space-y-12 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-6"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-600 p-[1px] mx-auto shadow-2xl shadow-indigo-500/20">
+                <div className="w-full h-full rounded-[calc(1rem-1px)] bg-card flex items-center justify-center border border-border">
+                  <CaseSensitive className="w-8 h-8 text-indigo-500" />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic leading-none">
+                  Case <span className="text-indigo-500">Converter.</span>
+                </h1>
+                <p className="text-muted-foreground text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                  Transform text instantly with a fast and privacy-focused online case converter. Convert uppercase, lowercase, title case, sentence case, camelCase, snake_case, kebab-case, and more directly in your browser.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Editor Workspace */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="p-4 sm:p-6 rounded-3xl bg-card/50 backdrop-blur-2xl border-border shadow-2xl relative overflow-hidden flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none" />
+                
+                <div className="relative z-10 space-y-6 flex-grow flex flex-col">
+                  {/* Actions Bar */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2">
+                    {[
+                      { name: "UPPER", mode: "upper", icon: CaseUpper },
+                      { name: "lower", mode: "lower", icon: CaseLower },
+                      { name: "Title Case", mode: "title", icon: Type },
+                      { name: "Sentence", mode: "sentence", icon: CaseSensitive },
+                      { name: "camelCase", mode: "camel", icon: Code2 },
+                      { name: "snake_case", mode: "snake", icon: Code2 },
+                      { name: "kebab-case", mode: "kebab", icon: Code2 }
+                    ].map((m) => (
+                      <Button 
+                        key={m.mode}
+                        variant="outline"
+                        className="h-10 rounded-xl font-bold text-[10px] uppercase tracking-wider border-border bg-secondary/30 hover:bg-indigo-500 hover:text-white hover:border-indigo-500 transition-all flex gap-1"
+                        onClick={() => convert(m.mode)}
+                      >
+                        <m.icon className="w-3.5 h-3.5" />
+                        {m.name}
+                      </Button>
+                    ))}
+                  </div>
+
+                  {/* Textarea Area */}
+                  <div className="flex flex-col flex-grow relative border border-border rounded-2xl overflow-hidden bg-background focus-within:ring-2 ring-indigo-500/20 transition-all group">
+                    <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-secondary/30 backdrop-blur-md z-10">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Text Input</span>
+                      <div className="flex gap-1">
+                        <Button variant="ghost" size="icon" className="h-7 w-7 text-indigo-500 hover:bg-indigo-500/10" onClick={handleCopy} disabled={!input}>
+                          {copied ? <CheckCircle2 className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                        </Button>
+                        <Button variant="ghost" size="icon" className="h-7 w-7 text-muted-foreground/40 hover:text-red-500 hover:bg-red-500/10" onClick={() => setInput("")} disabled={!input}>
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </Button>
+                      </div>
+                    </div>
+                    <Textarea 
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      placeholder="Type or paste your text here..."
+                      className="flex-grow min-h-[300px] sm:min-h-[400px] border-0 rounded-none bg-transparent font-mono text-sm leading-relaxed text-foreground p-6 focus-visible:ring-0 resize-none custom-scrollbar"
+                      spellCheck={false}
+                    />
+                  </div>
+                  
+                  {/* Additional Coding Formats */}
+                  <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/60 mr-2">More Formats:</span>
+                    {[
+                      { name: "PascalCase", mode: "pascal" },
+                      { name: "Capitalized Case", mode: "capitalized" },
+                      { name: "SCREAMING_SNAKE", mode: "screaming_snake" },
+                      { name: "Train-Case", mode: "train" },
+                      { name: "dot.case", mode: "dot" },
+                      { name: "path/case", mode: "path" },
+                      { name: "tOGGLE cASE", mode: "toggle" }
+                    ].map((m) => (
+                      <Button 
+                        key={m.mode}
+                        variant="ghost"
+                        size="sm"
+                        className="h-7 px-3 rounded-lg font-bold text-[9px] uppercase tracking-wider text-muted-foreground hover:bg-indigo-500/10 hover:text-indigo-500 transition-colors"
+                        onClick={() => convert(m.mode)}
+                      >
+                        {m.name}
+                      </Button>
+                    ))}
+                  </div>
+
+                </div>
+              </Card>
+            </motion.div>
+
+            {/* Trusted By / Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
               {[
-                { name: "UPPER", mode: "upper", icon: CaseUpper },
-                { name: "lower", mode: "lower", icon: CaseLower },
-                { name: "Title Case", mode: "title", icon: Type },
-                { name: "Sentence", mode: "sentence", icon: CaseSensitive },
-                { name: "camelCase", mode: "camel", icon: Zap },
-                { name: "snake_case", mode: "snake", icon: RefreshCw }
-              ].map((m) => (
-                <Button 
-                  key={m.mode}
-                  variant="outline"
-                  className="h-12 rounded-xl font-bold text-[10px] uppercase tracking-wider border-border bg-secondary/30 hover:bg-primary hover:text-primary-foreground transition-all"
-                  onClick={() => convert(m.mode as any)}
-                >
-                  {m.name}
-                </Button>
+                { label: "Privacy-First", icon: ShieldCheck },
+                { label: "Instant Output", icon: Zap },
+                { label: "No Uploads", icon: Globe },
+                { label: "Dev Ready", icon: Code2 }
+              ].map((item, i) => (
+                <div key={i} className="p-4 rounded-2xl bg-secondary/20 border border-border flex flex-col items-center gap-2">
+                  <item.icon className="w-5 h-5 text-indigo-500" />
+                  <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{item.label}</span>
+                </div>
               ))}
             </div>
+          </div>
 
-            <div className="space-y-4">
-              <div className="flex justify-between items-center px-2">
-                 <Label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60">Text Matrix</Label>
-                 <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-primary" onClick={handleCopy} disabled={!input}>
-                       {copied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                    </Button>
-                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground/40 hover:text-red-500" onClick={() => setInput("")}>
-                       <Trash2 className="w-4 h-4" />
-                    </Button>
-                 </div>
-              </div>
-              <Textarea 
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Enter text to transform..."
-                className="min-h-[400px] rounded-xl bg-card border-border font-mono text-sm leading-relaxed text-foreground/70 p-8 focus-visible:ring-primary/20"
-              />
-            </div>
-          </Card>
-
-          {/* Guide Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-12">
-             <div className="space-y-6">
-                <h3 className="text-2xl font-black italic flex items-center gap-3">
-                   <Sparkles className="w-6 h-6 text-primary" /> Case Mechanics
-                </h3>
-                <div className="space-y-4 text-muted-foreground font-medium text-sm leading-relaxed">
-                   <p>SafeTools Case Converter provides a lightning-fast interface for textual transformation. All logic is executed in your browser's main thread.</p>
-                   <ul className="space-y-2 list-disc list-inside marker:text-primary">
-                      <li>Professional Utility: Perfect for developers and copywriters.</li>
-                      <li>Camel & Snake: Optimized for variable naming conventions.</li>
-                      <li>Zero Telemetry: Your text stays in your browser.</li>
-                   </ul>
-                </div>
-             </div>
-             <div className="p-8 rounded-2xl bg-primary/5 border border-primary/10 flex flex-col justify-center gap-3">
-                <div className="flex items-center gap-4">
-                   <div className="w-8 h-8 rounded-2xl bg-primary flex items-center justify-center">
-                      <CaseSensitive className="w-6 h-6 text-foreground" />
-                   </div>
-                   <h4 className="text-xl font-black uppercase tracking-tight">Identity Safe</h4>
-                </div>
-                <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                   Process classified notes, passwords, or code snippets with absolute confidence. SafeTools is the only utility suite that guarantees zero server interaction.
+          {/* Content Section */}
+          <div className="w-full bg-secondary/10 border-y border-border backdrop-blur-3xl">
+            <div className="max-w-5xl mx-auto px-6 py-24 space-y-24">
+              
+              {/* Free Online Case Converter Tool */}
+              <section className="space-y-6 text-center max-w-3xl mx-auto">
+                <h2 className="text-3xl font-black uppercase italic tracking-tighter text-indigo-500">Free Online Case Converter Tool</h2>
+                <p className="text-muted-foreground font-medium text-lg leading-relaxed">
+                  The Case Converter tool helps you quickly change text formatting into different writing styles and capitalization formats. Whether you are a developer, student, writer, marketer, content creator, or office professional, this tool makes text formatting easier and faster.
                 </p>
-             </div>
+                <p className="text-muted-foreground font-medium text-lg leading-relaxed">
+                  Convert text instantly without installing software or uploading files to external servers.
+                </p>
+              </section>
+
+              {/* Supported Text Case Formats */}
+              <section className="space-y-12">
+                <div className="text-center space-y-4">
+                  <h2 className="text-3xl font-black uppercase italic tracking-tighter">Supported Text Case Formats</h2>
+                  <p className="text-muted-foreground font-medium uppercase tracking-widest text-xs">Styles & Conventions</p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <Card className="p-8 rounded-3xl bg-background/50 border-border">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                        <Type className="w-5 h-5 text-indigo-500" />
+                      </div>
+                      <h3 className="text-lg font-black uppercase italic tracking-tight">Standard Writing</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {["UPPERCASE", "lowercase", "Title Case", "Sentence case", "Capitalized Case", "Toggle Case"].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3 text-muted-foreground text-sm font-medium">
+                          <CheckCircle2 className="w-4 h-4 text-indigo-500" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                  
+                  <Card className="p-8 rounded-3xl bg-background/50 border-border">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                        <Code2 className="w-5 h-5 text-indigo-500" />
+                      </div>
+                      <h3 className="text-lg font-black uppercase italic tracking-tight">Developer & Coding</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {["camelCase", "PascalCase", "snake_case", "SCREAMING_SNAKE_CASE", "kebab-case", "Train-Case", "dot.case", "path/case"].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3 text-muted-foreground text-sm font-mono">
+                          <CheckCircle2 className="w-4 h-4 text-indigo-500" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                </div>
+              </section>
+
+              {/* Key Features / Why Use */}
+              <section className="space-y-12">
+                <div className="text-center space-y-4">
+                  <h2 className="text-3xl font-black uppercase italic tracking-tighter">Features of the Online Case Converter</h2>
+                  <p className="text-muted-foreground font-medium uppercase tracking-widest text-xs">Why Use This Case Converter?</p>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {[
+                    { title: "Multiple Case Transformations", desc: "Convert text into various capitalization styles with one click.", icon: RefreshCw },
+                    { title: "Developer-Friendly", desc: "Perfect for programmers needing variable naming, CSS classes, API naming, etc.", icon: Code2 },
+                    { title: "SEO & Content Writing", desc: "Writers and marketers can quickly optimize headings, titles, and metadata.", icon: FileText },
+                    { title: "Browser-Based Security", desc: "All processing happens locally in your browser to help protect sensitive text.", icon: ShieldCheck }
+                  ].map((feature, i) => (
+                    <Card key={i} className="p-6 rounded-3xl bg-background/50 border-border hover:border-indigo-500/30 transition-all group">
+                      <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <feature.icon className="w-6 h-6 text-indigo-500" />
+                      </div>
+                      <h3 className="text-lg font-black uppercase italic mb-3 tracking-tight">{feature.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+
+              {/* How to Convert */}
+              <section className="space-y-12">
+                <div className="text-center space-y-4">
+                  <h2 className="text-3xl font-black uppercase italic tracking-tighter">How to Use the Case Converter</h2>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                  {[
+                    { step: "1", title: "Paste", desc: "Paste or type your text" },
+                    { step: "2", title: "Select", desc: "Select the desired text case" },
+                    { step: "3", title: "Convert", desc: "The tool converts text instantly" },
+                    { step: "4", title: "Copy", desc: "Copy the formatted result" }
+                  ].map((s, i) => (
+                    <div key={i} className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-secondary/20 border border-border">
+                      <div className="w-10 h-10 rounded-full bg-indigo-500 text-white font-black text-lg flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                        {s.step}
+                      </div>
+                      <h4 className="font-black uppercase italic tracking-tight">{s.title}</h4>
+                      <p className="text-xs text-muted-foreground">{s.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* FAQ Section */}
+              <section className="space-y-12 max-w-3xl mx-auto">
+                <div className="text-center space-y-4">
+                  <h2 className="text-3xl font-black uppercase italic tracking-tighter">Frequently Asked Questions</h2>
+                  <p className="text-muted-foreground font-medium uppercase tracking-widest text-xs">Everything you need to know</p>
+                </div>
+                <Accordion type="single" collapsible className="w-full space-y-4">
+                  {CASE_CONVERTER_FAQ.map((item, i) => (
+                    <AccordionItem key={i} value={`item-${i}`} className="border border-border rounded-2xl px-6 bg-background/50">
+                      <AccordionTrigger className="hover:no-underline font-black uppercase text-xs tracking-widest italic text-left">
+                        {item.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">
+                        {item.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </section>
+
+            </div>
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 }

@@ -14,7 +14,9 @@ const footerLinks = {
     { name: "Changelog", href: "/changelog" },
   ],
   resources: [
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Privacy Manifesto", href: "/privacy" },
+    { name: "Security Architecture", href: "/security" },
+    { name: "Local Processing", href: "/security" },
     { name: "Terms of Service", href: "/terms" },
     { name: "FAQ", href: "/faq" },
     { name: "System Status", href: "/status" },
@@ -62,8 +64,18 @@ export function Footer() {
               Privacy-First Browser Utilities. Built for the modern web with privacy, speed, and accessibility at the core.
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:text-primary transition-colors cursor-pointer"><Cpu className="w-4 h-4" /></div>
-              <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:text-primary transition-colors cursor-pointer"><Lock className="w-4 h-4" /></div>
+              <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Local Engine Active"><Cpu className="w-4 h-4" /></div>
+              <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:text-primary transition-colors cursor-pointer" title="Isolated Context Verified"><Lock className="w-4 h-4" /></div>
+            </div>
+            
+            {/* Browser Compatibility */}
+            <div className="pt-4 space-y-3">
+              <p className="text-[9px] font-black uppercase tracking-widest text-muted-foreground/40">Verified Support</p>
+              <div className="flex flex-wrap gap-4 opacity-30 grayscale hover:grayscale-0 transition-all">
+                {["Chrome", "Firefox", "Edge", "Safari", "Android", "iPhone"].map(b => (
+                   <span key={b} className="text-[10px] font-black tracking-tighter uppercase italic">{b}</span>
+                ))}
+              </div>
             </div>
           </div>
 

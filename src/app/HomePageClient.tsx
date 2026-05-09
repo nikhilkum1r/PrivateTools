@@ -23,6 +23,9 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
+import { TrustLayer } from "@/components/shared/TrustLayer";
+import { WhySafeTools } from "@/components/shared/WhySafeTools";
+import { LocalProcessingGuide } from "@/components/shared/LocalProcessingGuide";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -108,13 +111,13 @@ const tools: Tool[] = [
       tags: ["pptx", "powerpoint", "slides", "presentation", "image", "convert"]
    },
    {
-      title: "Create App Icons & Favicons",
-      desc: "Generate iOS, Android & PWA icon bundles instantly.",
-      href: "/image/favicon",
+      title: "App Icon & Favicon Studio",
+      desc: "Generate professional iOS, Android, and PWA icon bundles instantly.",
+      href: "/image/icons",
       icon: FileCode,
       color: "from-indigo-500 to-purple-500",
       cat: "Dev",
-      tags: ["favicon", "ios", "android", "pwa", "logo", "manifest", "assets", "mobile"]
+      tags: ["favicon", "ios", "android", "pwa", "logo", "manifest", "assets", "mobile", "icons"]
    },
    {
       title: "PDF Merger",
@@ -144,15 +147,6 @@ const tools: Tool[] = [
       tags: ["pdf", "compress", "shrink", "optimize", "size", "linearize"]
    },
    {
-      title: "Convert PDF to Word/PPT",
-      desc: "Convert PDFs to PPTX, DOCX or images locally.",
-      href: "/pdf/convert",
-      icon: FileCode,
-      color: "from-rose-500 to-red-500",
-      cat: "Documents",
-      tags: ["pptx", "docx", "word", "powerpoint", "images", "convert", "pdf"]
-   },
-   {
       title: "Unlock PDF",
       desc: "Remove password protection and security restrictions from PDFs.",
       href: "/pdf/unlock-pdf",
@@ -170,15 +164,7 @@ const tools: Tool[] = [
       cat: "Documents",
       tags: ["pdf", "lock", "password", "security", "encryption", "protect"]
    },
-   {
-      title: "View & Edit Office Files",
-      desc: "Universal viewer & editor for Office, PDF, and Data.",
-      href: "/document/master",
-      icon: Edit3,
-      color: "from-emerald-500 to-cyan-500",
-      cat: "Documents",
-      tags: ["docx", "pptx", "xlsx", "csv", "pdf", "view", "edit", "office", "excel", "word"]
-   },
+
    {
       title: "Word to PDF",
       desc: "Convert DOCX manuscripts to professional PDF documents.",
@@ -215,24 +201,7 @@ const tools: Tool[] = [
       cat: "Documents",
       tags: ["text", "word", "count", "character", "length", "reading", "time"]
    },
-   {
-      title: "Compress & Convert Video",
-      desc: "Compress and convert video with local WASM encoding.",
-      href: "/video",
-      icon: Video,
-      color: "from-violet-500 to-purple-500",
-      cat: "Media",
-      tags: ["mp4", "mov", "webm", "compress", "video", "ffmpeg", "convert"]
-   },
-   {
-      title: "Trim & Convert Audio",
-      desc: "Trim, convert, and process audio files offline.",
-      href: "/audio",
-      icon: Music,
-      color: "from-fuchsia-500 to-pink-500",
-      cat: "Media",
-      tags: ["mp3", "wav", "trim", "cut", "convert", "audio", "voice"]
-   },
+
    {
       title: "Metadata Cleaner",
       desc: "Remove hidden data, EXIF, and GPS tracking locally.",
@@ -331,16 +300,7 @@ const tools: Tool[] = [
       color: "from-blue-600 to-indigo-700",
       cat: "Dev",
       tags: ["base64", "encode", "decode", "binary", "image", "string", "developer"]
-   },
-   {
-      title: "Bulk File Renamer",
-      desc: "Batch rename files instantly with custom patterns and sequences.",
-      href: "/bulk-rename",
-      icon: Command,
-      color: "from-indigo-400 to-cyan-500",
-      cat: "Dev",
-      tags: ["rename", "batch", "files", "organize", "pattern", "bulk"]
-   },
+   }
 ];
 
 export default function HomePageClient() {
@@ -489,7 +449,7 @@ export default function HomePageClient() {
                            Powerful File Tools Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600 dark:from-primary dark:to-blue-400">Privacy & Speed</span>
                         </h1>
                         <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl font-medium leading-relaxed">
-                           Convert, compress, edit, secure, and manage files directly inside your browser without uploads or tracking.
+                           Convert, compress, edit, and optimize JPG, PNG, WEBP, SVG, AVIF, HEIC, GIF, and many more modern image formats securely with zero uploads.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
@@ -500,21 +460,8 @@ export default function HomePageClient() {
                            </Link>
                         </div>
 
-                        {/* Trust Indicators */}
-                        <div className="flex flex-wrap items-center gap-6 pt-4">
-                           {[
-                              { label: "100% Local Processing", icon: Monitor },
-                              { label: "Zero File Uploads", icon: CloudOff },
-                              { label: "Mobile & Desktop", icon: Smartphone },
-                              { label: "Offline Ready", icon: WifiOff },
-                              { label: "Slow Network Optimized", icon: Zap },
-                              { label: "No Tracking", icon: Eye }
-                           ].map((item, i) => (
-                              <div key={i} className="flex items-center gap-3">
-                                 <item.icon className="w-5 h-5 text-primary" />
-                                 <span className="text-xs font-black uppercase tracking-widest text-muted-foreground">{item.label}</span>
-                              </div>
-                           ))}
+                        <div className="pt-8">
+                           <TrustLayer />
                         </div>
 
                         {/* BIG UPGRADE: RETENTION BAR (Recently Used & Favorites) */}
@@ -739,64 +686,9 @@ export default function HomePageClient() {
                </div>
             </section>
 
-            {/* WHY SAFETOOLS SECTION */}
-            <section id="features" className="py-32 relative bg-background/50 backdrop-blur-sm">
-               <div className="container mx-auto px-6">
-                  <div className="max-w-4xl mx-auto text-center space-y-8 mb-24">
-                     <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic font-heading">
-                        The Future of <span className="text-primary">File Processing</span>
-                     </h2>
-                     <p className="text-xl text-muted-foreground font-medium">
-                        Traditional online tools are slow, insecure, and outdated. SafeTools rebuilds the utility stack from the ground up for the modern web.
-                     </p>
-                  </div>
+            <WhySafeTools />
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                     <div className="p-10 rounded-[40px] bg-secondary/40 backdrop-blur-sm border border-border/50 space-y-8">
-                        <div className="space-y-4">
-                           <h3 className="text-3xl font-black uppercase italic font-heading">Legacy Cloud Tools</h3>
-                           <p className="text-muted-foreground">The old way of processing files.</p>
-                        </div>
-                        <div className="space-y-4">
-                           {[
-                              "Uploads files to remote servers",
-                              "High latency (Upload/Download)",
-                              "Data privacy risks & leaks",
-                              "Limited by bandwidth",
-                              "Unpredictable storage policies"
-                           ].map((item, i) => (
-                              <div key={i} className="flex items-center gap-3 text-red-500/60 font-medium">
-                                 <X className="w-5 h-5 shrink-0" /> {item}
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-
-                     <div className="p-10 rounded-[40px] bg-primary/5 border border-primary/20 space-y-8 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-10">
-                           <ShieldCheck className="w-32 h-32 text-primary" />
-                        </div>
-                        <div className="space-y-4">
-                           <h3 className="text-3xl font-black uppercase italic font-heading text-primary">SafeTools Local</h3>
-                           <p className="text-muted-foreground">The modern, secure approach.</p>
-                        </div>
-                        <div className="space-y-4">
-                           {[
-                              "Zero file uploads (100% Local)",
-                              "Sub-second processing speeds",
-                              "Complete data sovereignty",
-                              "Infinite file size capacity",
-                              "Secure WebAssembly sandboxing"
-                           ].map((item, i) => (
-                              <div key={i} className="flex items-center gap-3 text-emerald-500 font-medium">
-                                 <CheckCircle2 className="w-5 h-5 shrink-0" /> {item}
-                              </div>
-                           ))}
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+            <LocalProcessingGuide />
 
             {/* MODERN WORKFLOW SECTION */}
             <section className="py-32 bg-secondary/80 backdrop-blur-sm relative">

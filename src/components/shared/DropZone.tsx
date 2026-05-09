@@ -14,6 +14,7 @@ interface DropZoneProps {
   className?: string;
   title?: string;
   description?: string;
+  children?: React.ReactNode;
 }
 
 export function DropZone({
@@ -24,6 +25,7 @@ export function DropZone({
   className,
   title,
   description,
+  children,
 }: DropZoneProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
@@ -90,42 +92,46 @@ export function DropZone({
           className
         )}
       >
-        <div className="flex flex-col items-center text-center space-y-6 pointer-events-none relative z-10">
-          <motion.div
-            animate={{
-              scale: isDragging ? [1, 1.2, 1] : 1,
-              rotate: isDragging ? [0, 5, -5, 0] : 0
-            }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="p-6 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-2xl group-hover:scale-110 transition-transform duration-500"
-          >
-            <Upload className="w-10 h-10" />
-          </motion.div>
-          {title !== " " && (
-            <div className="space-y-1">
-              <p className="text-2xl font-black uppercase tracking-tighter italic">
-                {title || "Upload File"}
-              </p>
-              {description && (
-                <div className="flex items-center justify-center gap-3">
-                  <div className="flex gap-1">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
-                    ))}
+        {children ? (
+          children
+        ) : (
+          <div className="flex flex-col items-center text-center space-y-6 pointer-events-none relative z-10">
+            <motion.div
+              animate={{
+                scale: isDragging ? [1, 1.2, 1] : 1,
+                rotate: isDragging ? [0, 5, -5, 0] : 0
+              }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="p-6 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+            >
+              <Upload className="w-10 h-10" />
+            </motion.div>
+            {title !== " " && (
+              <div className="space-y-1">
+                <p className="text-2xl font-black uppercase tracking-tighter italic">
+                  {title || "Upload File"}
+                </p>
+                {description && (
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="flex gap-1">
+                      {[1, 2, 3].map(i => (
+                        <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
+                      ))}
+                    </div>
+                    <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] italic">
+                      {description}
+                    </p>
+                    <div className="flex gap-1">
+                      {[1, 2, 3].map(i => (
+                        <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] italic">
-                    {description}
-                  </p>
-                  <div className="flex gap-1">
-                    {[1, 2, 3].map(i => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
+                )}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Secure Tunnel Effect */}
         <AnimatePresence>

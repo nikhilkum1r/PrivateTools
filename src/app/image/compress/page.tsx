@@ -3,12 +3,12 @@ import CompressorStudioClient from "./CompressorStudioClient";
 import SEOStructuredData from "@/components/shared/SEOStructuredData";
 
 export const metadata: Metadata = {
-  title: "Professional Image Compressor | Batch Optimize Online (100% Private)",
-  description: "Shrink images instantly with our professional image compressor. Batch optimize PNG, JPG, WebP & AVIF locally in your browser. No uploads, zero tracking, maximum quality.",
-  keywords: ["image compressor", "batch image optimizer", "private image compression", "compress png online", "reduce jpg size", "webp optimizer"],
+  title: "Compress Images Online | Free Privacy-First Image Compressor",
+  description: "Compress images securely in your browser with zero uploads and zero tracking. Reduce JPG, PNG, and WEBP image sizes using privacy-first local processing.",
+  keywords: ["compress image", "image compressor", "reduce image size", "compress JPG", "compress PNG", "browser image compressor", "local image compression", "secure image optimization", "privacy image tools"],
   openGraph: {
-    title: "SafeTools Image Compressor | Professional Studio",
-    description: "Shrink your images by up to 90% instantly in your browser. No signup, no tracking.",
+    title: "SafeTools Image Compressor | Professional Browser Studio",
+    description: "Compress images securely in your browser with zero uploads and zero tracking. Maximum quality, 100% private.",
     type: "website",
     url: "https://safetools.space/image/compress",
   },
