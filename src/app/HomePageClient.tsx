@@ -143,7 +143,7 @@ export default function HomePageClient() {
                            150+ Privacy-First Online File Tools
                         </Badge>
                         <h1 className="text-[clamp(3rem,8vw,5.5rem)] font-black tracking-[-0.04em] leading-[1] text-foreground font-heading">
-                           Powerful File Tools Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600 dark:from-primary dark:to-blue-400">Privacy & Speed</span>
+                           Powerful Tools Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-blue-600 dark:from-primary dark:to-blue-400">Privacy & Speed</span>
                         </h1>
                         <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl font-medium leading-relaxed">
                            Convert, compress, edit, and optimize JPG, PNG, WEBP, SVG, AVIF, HEIC, GIF, and many more modern image formats securely with zero uploads.

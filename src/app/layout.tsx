@@ -115,7 +115,6 @@ export const viewport: Viewport = {
 
 import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Toaster } from "sonner";
-import Script from "next/script";
 import CommandPalette from "@/components/shared/CommandPalette";
 import { RetentionProvider } from "@/components/shared/RetentionProvider";
 
@@ -127,13 +126,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable} h-full antialiased`} suppressHydrationWarning>
 
-      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
-        <Script 
+      <head>
+        <script 
           async 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></script>
+      </head>
+      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         <div className="noise-overlay" />
         <ThemeProvider
           attribute="class"
