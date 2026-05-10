@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "ca-pub-4227099386151379", // Adding as verification for clarity, though it's specifically an AdSense account tag
+    google: "ca-pub-4227099386151379",
   },
   other: {
     "google-adsense-account": "ca-pub-4227099386151379",

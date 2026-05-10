@@ -25,7 +25,7 @@ const sections = [
   {
     title: "1. The Ghost Policy",
     icon: Ghost,
-    content: "SafeTools does not use tracking cookies, advertising beacons, or third-party analytics scripts. We do not track your session across the web. To us, you are a ghost—and that is exactly how it should be.",
+    content: "SafeTools does not use tracking cookies for internal analytics or data harvesting. We do not track your session across the web for our own purposes. To us, you are a ghost—and that is exactly how it should be.",
     color: "from-slate-400 to-slate-600"
   },
   {
@@ -35,9 +35,9 @@ const sections = [
     color: "from-blue-500 to-cyan-500"
   },
   {
-    title: "3. Zero Third-Party Cookies",
+    title: "3. Advertising Cookies",
     icon: EyeOff,
-    content: "We strictly prohibit third-party cookies from loading on our domain. There are no Facebook Pixels, no Google Tags, and no Retargeting scripts. Your privacy sanctuary is strictly enforced.",
+    content: "We use Google AdSense to serve ads. Google may use cookies to serve ads based on your interests. You can manage your preferences or decline these cookies through the consent banner that appears when you first visit our site.",
     color: "from-purple-500 to-pink-500"
   }
 ];
@@ -62,7 +62,7 @@ export default function CookiesClient() {
                    Zero <br /> <span className="text-amber-500">Cookies.</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed italic">
-                   We believe the best cookie policy is no cookies at all. <br /> SafeTools is 100% tracker-free by architectural design.
+                   We minimize cookies to the absolute essential. <br /> SafeTools uses only standard advertising cookies to keep our tools free for everyone.
                 </p>
              </motion.div>
           </div>

@@ -14,10 +14,10 @@ const footerLinks = {
     { name: "Changelog", href: "/changelog" },
   ],
   resources: [
-    { name: "Privacy Manifesto", href: "/privacy" },
-    { name: "Security Architecture", href: "/security" },
-    { name: "Local Processing", href: "/security" },
+    { name: "About SafeTools", href: "/about" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms" },
+    { name: "Contact Us", href: "/contact" },
     { name: "FAQ", href: "/faq" },
     { name: "System Status", href: "/status" },
   ],

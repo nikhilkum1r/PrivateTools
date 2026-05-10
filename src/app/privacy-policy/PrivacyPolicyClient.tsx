@@ -9,7 +9,8 @@ import {
   CloudOff, 
   Database,
   FileSearch,
-  Scale
+  Scale,
+  ShieldAlert
 } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
@@ -37,6 +38,11 @@ export default function PrivacyPolicyClient() {
       title: "Your Rights",
       icon: Scale,
       content: "Because we do not collect your data, we do not 'sell' or 'share' it. You maintain 100% ownership and sovereignty over every byte of information you process through our utility suite."
+    },
+    {
+      title: "Advertising & AdSense",
+      icon: ShieldAlert,
+      content: "To keep SafeTools free and sustainable, we use Google AdSense to serve advertisements. Google uses cookies to serve ads based on your prior visits to this and other websites. You can opt-out of personalized advertising by visiting your Google Ad Settings or via our on-site consent manager."
     }
   ];
 
@@ -54,7 +60,7 @@ export default function PrivacyPolicyClient() {
               Privacy <span className="text-emerald-500 italic">Guaranteed.</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto font-medium">
-              Last Updated: May 6, 2026. This policy outlines our absolute commitment to your data sovereignty.
+              Last Updated: May 6, 2026. This policy outlines our absolute commitment to your data sovereignty, fully compliant with GDPR and CCPA regulations.
             </p>
           </div>
 
