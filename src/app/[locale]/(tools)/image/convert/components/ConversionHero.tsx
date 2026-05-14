@@ -33,17 +33,13 @@ export function ConversionHero({ t, fromFormat, toFormat, handleFilesDrop }: Con
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-8xl font-bold tracking-tight font-heading leading-none">
-          {fromFormat && toFormat 
-            ? t("hero.titleSpecific", { from: fromFormat.toUpperCase(), to: toFormat.toUpperCase() })
-            : t("hero.title")}
-        </h1>
-        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-medium max-w-4xl mx-auto">
-          {fromFormat && toFormat 
-            ? t("hero.descriptionSpecific", { from: fromFormat.toUpperCase(), to: toFormat.toUpperCase() })
-            : t("hero.description")
-          }
-        </p>
+        <h1 className="text-4xl md:text-8xl font-bold tracking-tight font-heading leading-none" dangerouslySetInnerHTML={{ __html: fromFormat && toFormat 
+            ? t.raw("hero.titleSpecific", { from: fromFormat.toUpperCase(), to: toFormat.toUpperCase() })
+            : t.raw("hero.title") }} />
+        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-medium max-w-4xl mx-auto" dangerouslySetInnerHTML={{ __html: fromFormat && toFormat 
+            ? t.raw("hero.descriptionSpecific", { from: fromFormat.toUpperCase(), to: toFormat.toUpperCase() })
+            : t.raw("hero.description")
+          }} />
       </div>
 
       <div className="relative group max-w-5xl mx-auto">
@@ -54,8 +50,8 @@ export function ConversionHero({ t, fromFormat, toFormat, handleFilesDrop }: Con
             multiple
             accept="image/*,.heic,.heif,.tiff,.psd,.svg"
             maxSize={1024}
-            title={t("hero.title")}
-            description={t("hero.description")}
+            title={t.raw("hero.title")}
+            description={t.raw("hero.description")}
             className="h-80 border-none bg-transparent hover:bg-primary/[0.02] transition-colors"
           />
         </div>

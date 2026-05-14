@@ -107,12 +107,8 @@ export function StudioLayout({
               <Icon className={cn("w-10 h-10", c.text)} />
             </div>
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-foreground">
-                {title}
-              </h1>
-              <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto leading-tight">
-                {description}
-              </p>
+                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-foreground" dangerouslySetInnerHTML={{ __html: title }} />
+              <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto leading-tight" dangerouslySetInnerHTML={{ __html: description }} />
               <p className={cn("text-sm font-medium inline-block px-4 py-2 rounded-full border", c.bg, c.border, c.text)}>
                 {badge}
               </p>

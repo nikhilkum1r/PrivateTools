@@ -65,7 +65,7 @@ export default function DocumentHubClient() {
               <FileText className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h1 className="text-2xl md:text-xl font-bold tracking-tight">{t("hero.title")}</h1>
+              <h1 className="text-2xl md:text-xl font-bold tracking-tight" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
               <p className="text-muted-foreground mt-3 text-lg max-w-xl mx-auto">
                 {t("hero.subtitle")}
               </p>

@@ -93,9 +93,7 @@ export default function FileShredderClient() {
               <Skull className="w-10 h-10 text-red-500" />
             </div>
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase">
-                {t("hero.title")}
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
               <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto">
                 {t("hero.subtitle")}
               </p>
@@ -283,7 +281,7 @@ export default function FileShredderClient() {
           {/* Privacy Manifesto */}
           <section className="text-center max-w-2xl mx-auto space-y-4 pb-12">
             <ShieldCheck className="w-8 h-8 mx-auto text-muted-foreground opacity-50" />
-            <h3 className="text-xl font-semibold uppercase tracking-wider text-muted-foreground">{t("landing.manifesto.title")}</h3>
+            <h3 className="text-xl font-semibold uppercase tracking-wider text-muted-foreground" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
             <p className="text-sm font-medium text-muted-foreground/80 leading-relaxed">
               {t("landing.manifesto.content")}
             </p>

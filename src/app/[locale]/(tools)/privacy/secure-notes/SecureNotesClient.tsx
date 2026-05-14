@@ -126,9 +126,7 @@ export default function SecureNotesClient() {
               <ShieldCheck className="w-3.5 h-3.5" />
               {t("hero.badge")}
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-              {t("hero.title")}
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t("hero.description")}
             </p>
@@ -691,7 +689,7 @@ export default function SecureNotesClient() {
             <div className="w-20 h-20 rounded-[30px] bg-gradient-to-br from-[#22C55E] to-[#3B82F6] flex items-center justify-center mx-auto shadow-2xl">
               <ShieldCheck className="w-10 h-10 text-white" />
             </div>
-            <h2 className="text-4xl font-bold">{t("manifesto.title")}</h2>
+            <h2 className="text-4xl font-bold" dangerouslySetInnerHTML={{ __html: t.raw("manifesto.title") }} />
             <p className="text-muted-foreground text-lg leading-relaxed">
               {t("manifesto.desc")}
             </p>

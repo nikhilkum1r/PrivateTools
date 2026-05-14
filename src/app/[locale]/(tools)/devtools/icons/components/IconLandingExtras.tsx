@@ -29,7 +29,7 @@ export function IconLandingExtras({ t, hp, t_tools }: IconLandingExtrasProps) {
       {/* Features Section */}
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight font-heading">{t("landing.features.title")}</h2>
+          <h2 className="text-3xl font-bold tracking-tight font-heading" dangerouslySetInnerHTML={{ __html: t.raw("landing.features.title") }} />
           <p className="text-xs font-bold tracking-wider text-muted-foreground/40">{t("landing.features.badge")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -54,7 +54,7 @@ export function IconLandingExtras({ t, hp, t_tools }: IconLandingExtrasProps) {
       {/* Comparison Section */}
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight font-heading leading-tight">{t("landing.manifesto.title")}</h2>
+          <h2 className="text-3xl font-bold tracking-tight font-heading leading-tight" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
           <p className="text-xs font-bold tracking-wider text-muted-foreground/40">{t("landing.manifesto.badge")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -93,7 +93,7 @@ export function IconLandingExtras({ t, hp, t_tools }: IconLandingExtrasProps) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50" />
           <div className="space-y-4 relative z-10">
             <Badge className="bg-primary/20 text-primary border-primary/30 py-2 px-6 rounded-full uppercase tracking-wider text-[10px] font-bold">{t("landing.cta.badge")}</Badge>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-heading">{t("landing.cta.title")}</h2>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-heading" dangerouslySetInnerHTML={{ __html: t.raw("landing.cta.title") }} />
             <p className="text-muted-foreground text-lg max-w-xl mx-auto italic font-medium">{t("landing.cta.description")}</p>
           </div>
           <Button className="h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 gap-4 shadow-2xl shadow-primary/30 relative z-10" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

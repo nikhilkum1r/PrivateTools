@@ -38,11 +38,8 @@ export function OCRHero({ t, scrollToTool }: OCRHeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-7xl font-extrabold tracking-tight leading-[0.9]"
-          >
-            {t.rich("hero.title", {
-              span: (chunks: React.ReactNode) => <span className="text-primary not-italic">{chunks}</span>
-            })}
-          </motion.h1>
+            dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }}
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

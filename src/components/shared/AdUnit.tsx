@@ -94,8 +94,16 @@ export function AdUnit({
       const ins = container.querySelector("ins.adsbygoogle");
       if (!ins) return false;
 
-      // Check if the AdSense script has loaded and defined adsbygoogle
-      if (typeof (window as any).adsbygoogle === "undefined") return false;
+      // Check if ad is already initialized by AdSense
+      if (ins.getAttribute("data-adsbygoogle-status") === "done") {
+        adRef.current = true;
+        return true;
+      }
+
+      // Ensure adsbygoogle is available
+      if (typeof (window as any).adsbygoogle === "undefined") {
+        (window as any).adsbygoogle = [];
+      }
 
       const isVisible = () => {
         const computedStyle = window.getComputedStyle(container);
@@ -111,12 +119,11 @@ export function AdUnit({
 
       if (isVisible() && container.offsetWidth >= 32) {
         try {
-          if (adRef.current) return true;
           ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
           adRef.current = true;
           return true;
         } catch (e) {
-          // AdSense push failed — will retry
+          console.error("AdSense push error:", e);
         }
       }
       return false;
@@ -124,13 +131,13 @@ export function AdUnit({
 
     // Retry logic: wait for AdSense script to be ready
     let retryCount = 0;
-    const maxRetries = 20;
+    const maxRetries = 15;
     const retryInterval = setInterval(() => {
       retryCount++;
       if (initAd() || retryCount >= maxRetries) {
         clearInterval(retryInterval);
       }
-    }, 500);
+    }, 1000);
 
     // Also use IntersectionObserver for lazy loading
     const intersectionObserver = new IntersectionObserver(
@@ -188,6 +195,7 @@ export function AdUnit({
           data-ad-layout={finalLayout}
           data-ad-layout-key={finalLayoutKey}
           data-full-width-responsive={responsive}
+          data-adtest={process.env.NODE_ENV === "development" ? "on" : undefined}
           suppressHydrationWarning
         />
       )}

@@ -154,6 +154,11 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className="min-h-full flex flex-col font-sans bg-transparent" suppressHydrationWarning>
         <div className="noise-overlay" aria-hidden="true" />
@@ -183,13 +188,6 @@ export default async function LocaleLayout({
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <Script
-          id="adsense-init"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-          async
         />
         <PWAPrompt />
       </body>

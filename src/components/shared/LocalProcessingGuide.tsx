@@ -22,9 +22,7 @@ export const LocalProcessingGuide = () => {
 
       <div className="max-w-4xl mx-auto px-6 space-y-10 relative z-10">
         <div className="text-center space-y-3">
-          <h2 id="processing-guide-heading" className="section-header text-2xl md:text-3xl">
-            {t("guide.title")}
-          </h2>
+          <h2 id="processing-guide-heading" className="section-header text-2xl md:text-3xl" dangerouslySetInnerHTML={{ __html: t.raw("guide.title") }} />
           <p className="section-subheader text-base mx-auto">
             {t("guide.subtitle")}
           </p>
@@ -36,12 +34,8 @@ export const LocalProcessingGuide = () => {
               <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center">
                 {React.createElement(icons[i % icons.length], { className: "w-5 h-5 text-primary" })}
               </div>
-              <h3 className="card-title text-base text-foreground">
-                {step.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
+              <h3 className="card-title text-base text-foreground" dangerouslySetInnerHTML={{ __html: step.title }} />
+              <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: step.description }} />
             </div>
           ))}
         </div>

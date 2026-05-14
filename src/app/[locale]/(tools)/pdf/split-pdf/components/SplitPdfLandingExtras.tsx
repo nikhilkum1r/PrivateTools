@@ -20,7 +20,7 @@ export function SplitPdfLandingExtras({ t }: SplitPdfLandingExtrasProps) {
       {/* Main Features */}
       <section className="space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground">{t("landing.features.title")}</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground" dangerouslySetInnerHTML={{ __html: t.raw("landing.features.title") }} />
           <p className="text-muted-foreground font-medium">{t("landing.features.subtitle")}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -192,7 +192,7 @@ export function SplitPdfLandingExtras({ t }: SplitPdfLandingExtrasProps) {
       {/* Privacy Manifesto */}
       <section className="text-center max-w-2xl mx-auto space-y-4 pb-12">
         <Fingerprint className="w-8 h-8 mx-auto text-muted-foreground opacity-50" />
-        <h3 className="text-xl font-semibold uppercase tracking-wider text-muted-foreground">{t("landing.manifesto.title")}</h3>
+        <h3 className="text-xl font-semibold uppercase tracking-wider text-muted-foreground" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
         <p className="text-sm font-medium text-muted-foreground leading-relaxed">
           {t("landing.manifesto.description")}
         </p>

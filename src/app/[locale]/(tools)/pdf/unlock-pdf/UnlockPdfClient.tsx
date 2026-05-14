@@ -143,14 +143,14 @@ export default function UnlockPdfClient() {
 
   return (
     <StudioLayout
-      title={t("hero.title")}
-      description={t("hero.description")}
+      title={t.raw("hero.title")}
+      description={t.raw("hero.description")}
       heroIcon={Unlock}
       badge={t("engine.active")}
       trustColor="emerald"
       breadcrumbs={[
         { label: common("Navbar.categories.pdf"), href: "/pdf" },
-        { label: t("hero.title"), href: "/pdf/unlock-pdf" }
+        { label: t.raw("hero.title"), href: "/pdf/unlock-pdf" }
       ]}
       trustTitle={t("badges.local")}
       trustDesc={t("hero.description")}
@@ -158,7 +158,7 @@ export default function UnlockPdfClient() {
         <div className="container mx-auto px-4 max-w-5xl py-12 space-y-20">
           <section className="space-y-8">
             <div className="text-center space-y-2">
-              <h2 className="text-3xl font-bold tracking-tight">{t("landing.features.title")}</h2>
+              <h2 className="text-3xl font-bold tracking-tight" dangerouslySetInnerHTML={{ __html: t.raw("landing.features.title") }} />
               <p className="text-muted-foreground font-medium">{t("landing.features.subtitle")}</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

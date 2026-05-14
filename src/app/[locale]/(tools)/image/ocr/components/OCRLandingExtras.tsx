@@ -67,7 +67,7 @@ export function OCRLandingExtras({ t, hp, t_tools }: OCRLandingExtrasProps) {
           <Badge variant="outline" className="rounded-full bg-primary/10 border-primary/20 text-primary uppercase text-[10px] font-bold tracking-widest px-6 py-2">
             {t("landing.useCases.badge")}
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight font-heading">{t("landing.useCases.title")}</h2>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight font-heading" dangerouslySetInnerHTML={{ __html: t.raw("landing.useCases.title") }} />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {(Array.isArray(t.raw("landing.useCases.items")) ? (t.raw("landing.useCases.items") as any[]) : []).slice(0, 3).map((item, i) => {
@@ -100,7 +100,7 @@ export function OCRLandingExtras({ t, hp, t_tools }: OCRLandingExtrasProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-4xl font-extrabold font-heading leading-tight italic">{t("landing.manifesto.title")}</h2>
+                <h2 className="text-4xl font-extrabold font-heading leading-tight italic" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
                 <p className="text-muted-foreground text-lg italic">{t("landing.manifesto.description")}</p>
               </div>
               <div className="space-y-4">
@@ -152,7 +152,7 @@ export function OCRLandingExtras({ t, hp, t_tools }: OCRLandingExtrasProps) {
         <div className="relative rounded-[5rem] bg-primary p-12 md:p-24 text-center text-primary-foreground overflow-hidden shadow-2xl shadow-primary/40">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_white_0%,_transparent_70%)] opacity-10" />
           <div className="relative z-10 space-y-8">
-            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight font-heading italic">{t("landing.cta.title")}</h2>
+            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight font-heading italic" dangerouslySetInnerHTML={{ __html: t.raw("landing.cta.title") }} />
             <p className="text-xl md:text-2xl font-medium opacity-80 max-w-2xl mx-auto italic">{t("landing.cta.description")}</p>
             <Button className="h-20 px-12 rounded-[2.5rem] bg-white text-primary hover:bg-blue-50 font-extrabold text-xl shadow-2xl transition-all hover:scale-105 active:scale-95" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Plus className="mr-3 w-6 h-6" /> {t("landing.cta.button")}

@@ -47,7 +47,7 @@ export function VaultLandingExtras({ t }: VaultLandingExtrasProps) {
         <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <Badge className="bg-blue-500 text-white">{t("landing.architecture.badge")}</Badge>
-            <h2 className="text-4xl font-bold">{t("landing.architecture.title")}</h2>
+            <h2 className="text-4xl font-bold" dangerouslySetInnerHTML={{ __html: t.raw("landing.architecture.title") }} />
             <p className="text-muted-foreground text-lg leading-relaxed">
               {t("landing.architecture.description")}
             </p>
@@ -161,7 +161,7 @@ export function VaultLandingExtras({ t }: VaultLandingExtrasProps) {
       <section className="grid lg:grid-cols-2 gap-12 items-center bg-blue-500/5 rounded-3xl p-8 md:p-16 border border-blue-500/10">
         <div className="space-y-6">
           <Badge className="bg-blue-600 text-white font-semibold uppercase tracking-wider text-[10px]">{t("landing.enterprise.badge")}</Badge>
-          <h2 className="text-4xl font-bold">{t("landing.enterprise.title")}</h2>
+          <h2 className="text-4xl font-bold" dangerouslySetInnerHTML={{ __html: t.raw("landing.enterprise.title") }} />
           <p className="text-muted-foreground leading-relaxed text-lg">
             {t("landing.enterprise.description")}
           </p>
@@ -222,7 +222,7 @@ export function VaultLandingExtras({ t }: VaultLandingExtrasProps) {
         </div>
         <div className="max-w-2xl space-y-6 relative z-10">
           <Badge className="bg-[#22C55E] text-white mx-auto lg:mx-0">{t("landing.offline.badge")}</Badge>
-          <h2 className="text-4xl font-bold text-foreground">{t("landing.offline.title")}</h2>
+          <h2 className="text-4xl font-bold text-foreground" dangerouslySetInnerHTML={{ __html: t.raw("landing.offline.title") }} />
           <p className="text-muted-foreground text-lg leading-relaxed">
             {t("landing.offline.description")}
           </p>
@@ -261,7 +261,7 @@ export function VaultLandingExtras({ t }: VaultLandingExtrasProps) {
           <div className="w-12 h-12 rounded-2xl bg-[#22C55E]/10 flex items-center justify-center mx-auto">
             <Shield className="w-6 h-6 text-[#22C55E]" />
           </div>
-          <h2 className="text-3xl font-bold">{t("landing.commitment.title")}</h2>
+          <h2 className="text-3xl font-bold" dangerouslySetInnerHTML={{ __html: t.raw("landing.commitment.title") }} />
           <p className="text-xl text-muted-foreground leading-relaxed">
             {t("landing.commitment.description")}
           </p>
@@ -291,7 +291,7 @@ export function VaultLandingExtras({ t }: VaultLandingExtrasProps) {
           <div className="w-20 h-20 rounded-[30px] bg-gradient-to-br from-[#22C55E] to-[#3B82F6] flex items-center justify-center mx-auto shadow-2xl">
             <ShieldCheck className="w-10 h-10 text-white" />
           </div>
-          <h2 className="text-4xl font-bold">{t("landing.manifesto.title")}</h2>
+          <h2 className="text-4xl font-bold" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
           <p className="text-muted-foreground text-lg leading-relaxed">
             {t("landing.manifesto.description")}
           </p>

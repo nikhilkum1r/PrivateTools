@@ -101,10 +101,8 @@ export default function IconsLandingClient({ pageSchema }: IconsLandingClientPro
               whileInView={{ opacity: 1, y: 0 }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">{t("landing.intro.title")}</h2>
-              <p className="text-lg font-medium text-muted-foreground/80 italic leading-relaxed">
-                {t("landing.intro.description")}
-              </p>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight" dangerouslySetInnerHTML={{ __html: t.raw("landing.intro.title") }} />
+              <p className="text-lg font-medium text-muted-foreground/80 italic leading-relaxed" dangerouslySetInnerHTML={{ __html: t.raw("landing.intro.description") }} />
               <p className="text-sm font-bold text-primary/60 uppercase tracking-wider">
                 {t("landing.intro.security")}
               </p>

@@ -134,8 +134,8 @@ export default function MergePdfClient() {
 
   return (
     <StudioLayout
-      title={t("hero.title")}
-      description={t("hero.description")}
+      title={t.raw("hero.title")}
+      description={t.raw("hero.description")}
       heroIcon={Files}
       badge={t("hero.disclaimer")}
       trustColor="emerald"

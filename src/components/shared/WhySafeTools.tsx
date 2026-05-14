@@ -27,9 +27,7 @@ export const WhySafeTools = () => {
             br: () => <br />
           })}
         </h2>
-        <p className="section-subheader text-base mx-auto">
-          {t("whySafeTools.subtitle")}
-        </p>
+        <p className="section-subheader text-base mx-auto" dangerouslySetInnerHTML={{ __html: t.raw("whySafeTools.subtitle") }} />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto px-6">
@@ -45,12 +43,8 @@ export const WhySafeTools = () => {
             <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
               {React.createElement(icons[i % icons.length], { className: "w-5 h-5 text-primary" })}
             </div>
-            <h3 className="card-title text-base mb-2.5 text-foreground">
-              {item.title}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {item.description}
-            </p>
+            <h3 className="card-title text-base mb-2.5 text-foreground" dangerouslySetInnerHTML={{ __html: item.title }} />
+            <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: item.description }} />
           </motion.div>
         ))}
       </div>

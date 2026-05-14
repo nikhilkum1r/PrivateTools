@@ -41,12 +41,8 @@ export function FAQ({ items, title, description, className }: FAQProps) {
             <HelpCircle className="w-6 h-6 text-primary" />
           </motion.div>
           <div className="space-y-2">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-              {title || common("faq.title")}
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base font-medium">
-              {description || common("faq.description")}
-            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70" dangerouslySetInnerHTML={{ __html: title || common.raw("faq.title") }} />
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm md:text-base font-medium" dangerouslySetInnerHTML={{ __html: description || common.raw("faq.description") }} />
           </div>
         </div>
 
@@ -64,13 +60,9 @@ export function FAQ({ items, title, description, className }: FAQProps) {
                 className="border border-border/50 bg-secondary/10 rounded-2xl px-6 transition-all data-[state=open]:bg-secondary/20 data-[state=open]:border-primary/30"
               >
                 <AccordionTrigger className="hover:no-underline py-6">
-                  <span className="text-left font-bold text-base md:text-lg group-hover:text-primary transition-colors">
-                    {item.q}
-                  </span>
+                  <span className="text-left font-bold text-base md:text-lg group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: item.q }} />
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed text-sm md:text-base">
-                  {item.a}
-                </AccordionContent>
+                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed text-sm md:text-base" dangerouslySetInnerHTML={{ __html: item.a }} />
               </AccordionItem>
             ))}
           </Accordion>

@@ -22,9 +22,7 @@ export function VaultHero({ t }: VaultHeroProps) {
             <ShieldCheck className="w-3.5 h-3.5" />
             {t("hero.badge")}
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground">
-            {t("hero.title")}
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t("hero.description")}
           </p>

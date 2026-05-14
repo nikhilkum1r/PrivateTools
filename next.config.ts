@@ -172,15 +172,14 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-          { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
+          { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
           {
             key: "X-Robots-Tag",
             value:
               "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
           },
           { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
@@ -191,7 +190,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' ${process.env.NODE_ENV === "development" ? "'unsafe-eval'" : ""} https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.google-analytics.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.google-analytics.com https://stats.g.doubleclick.net https://*.projectnaptha.com https://unpkg.com https://cdn.jsdelivr.net; frame-src 'self' https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com; worker-src 'self' blob: https://unpkg.com https://cdn.jsdelivr.net; child-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;`,
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.google-analytics.com https://*.adtrafficquality.google https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.google-analytics.com https://*.adtrafficquality.google; font-src 'self' https://fonts.gstatic.com; connect-src 'self' blob: https: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.google-analytics.com https://*.googleadservices.com https://stats.g.doubleclick.net https://*.adtrafficquality.google https://*.projectnaptha.com https://unpkg.com https://cdn.jsdelivr.net; frame-src 'self' https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com; worker-src 'self' blob: https://unpkg.com https://cdn.jsdelivr.net; child-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;`,
           },
         ],
       },

@@ -6,11 +6,11 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # COOP/COEP for SharedArrayBuffer (required for FFmpeg WASM and AI Workers)
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Embedder-Policy = "credentialless"
+    # COOP for SharedArrayBuffer (COEP disabled for third-party compatibility)
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    # Cross-Origin-Embedder-Policy removed to allow AdSense and other cross-origin resources
     # Clickjacking protection
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     # Prevent MIME sniffing
     X-Content-Type-Options = "nosniff"
     # Force HTTPS for 1 year
@@ -20,7 +20,7 @@
     # Permissions policy
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     # Content Security Policy — must include ALL Google AdSense domains
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.googletagmanager.com https://*.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' blob: https:; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self' https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.googletagmanager.com https://*.google-analytics.com https://*.adtrafficquality.google https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: https://*.adtrafficquality.google https://*.googlesyndication.com; media-src 'self' blob:; connect-src 'self' blob: https: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.googletagmanager.com https://*.google-analytics.com https://*.adtrafficquality.google https://stats.g.doubleclick.net; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self' https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com;"
 
 # ─── Immutable cache for Next.js hashed bundles ──────────────────────────────
 [[headers]]

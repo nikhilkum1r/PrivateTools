@@ -278,12 +278,12 @@
     ],
     "manifesto": {
       "badge": "The Manifesto",
-      "title": "Privacy is not a <br/> Feature.",
+      "title": "Privacy is not a <br></br> Feature.",
       "description": "It is a fundamental human right, encoded into every line of the SafeTools architecture."
     },
     "sovereignty": {
       "badge": "Data Sovereignty",
-      "title": "Your Data Is <br/> Sovereign.",
+      "title": "Your Data Is <br></br> Sovereign.",
       "description": "Unlike cloud-based tools, SafeTools operates entirely within your browser's private sandbox. We don't just protect your data; we never see it.",
       "points": [
         "No Cloud Uploads",

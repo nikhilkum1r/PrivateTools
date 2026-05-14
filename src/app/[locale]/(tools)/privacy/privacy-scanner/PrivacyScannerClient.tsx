@@ -145,7 +145,7 @@ export default function PrivacyScannerClient() {
               {t("hero.badge")}
             </Badge>
             <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85]">
-              {t("hero.title")} <span className="text-primary">{t("hero.highlight")}</span>
+              <span dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} /> <span className="text-primary" dangerouslySetInnerHTML={{ __html: t.raw("hero.highlight") }} />
             </h1>
             <p className="text-muted-foreground text-lg font-medium max-w-xl mx-auto italic opacity-80">
               {t("hero.subtitle")}

@@ -223,7 +223,7 @@
       },
       "tech_guide": {
         "badge": "Technical Guide",
-        "title": "Complete Icon Formats <br/> & Extension Guide",
+        "title": "Complete Icon Formats <br></br> & Extension Guide",
         "description": "Our online icon generator supports all major favicon, app icon, PWA icon, and branding image formats. Generate optimized icons for websites, Android, iOS, and social media instantly.",
         "browser": {
           "title": "Browser Favicon Suite",

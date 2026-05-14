@@ -19,7 +19,7 @@ export function VideoHero({ t, handleFileDrop }: VideoHeroProps) {
             <VideoIcon className="w-10 h-10 text-primary relative z-10" />
           </div>
           <div className="space-y-4">
-            <h1 className="text-2xl md:text-2xl font-extrabold tracking-tight uppercase leading-none" dangerouslySetInnerHTML={{ __html: t("hero.title") }} />
+            <h1 className="text-2xl md:text-2xl font-extrabold tracking-tight uppercase leading-none" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
             <p className="text-muted-foreground/60 text-xl font-medium max-w-md mx-auto leading-relaxed">{t("hero.subtitle")}</p>
           </div>
         </div>

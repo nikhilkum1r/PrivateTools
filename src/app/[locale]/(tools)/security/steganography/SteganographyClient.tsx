@@ -238,9 +238,7 @@ export default function SteganographyClient() {
             <Badge className="bg-primary/10 text-primary border-primary/20 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider animate-pulse">
               {t("hero.badge")}
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none uppercase">
-              {t("hero.title")}
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none uppercase" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
             <p className="text-xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed">
               {t("hero.description")}
             </p>
@@ -305,7 +303,7 @@ export default function SteganographyClient() {
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
                     <Fingerprint className="w-6 h-6 text-emerald-500" />
                   </div>
-                  <h2 className="text-xl font-bold tracking-tight">{t("engine.title")}</h2>
+                  <h2 className="text-xl font-bold tracking-tight" dangerouslySetInnerHTML={{ __html: t.raw("engine.title") }} />
                 </div>
                 <div className="flex bg-secondary/50 p-1 rounded-xl border border-border">
                   <Button 
@@ -614,9 +612,7 @@ export default function SteganographyClient() {
           </div>
           <div className="space-y-8 order-1 lg:order-2">
             <Badge className="bg-blue-500/10 text-blue-500 border-blue-500/20 px-4 py-1.5">{t("landing.educational.forensics.badge")}</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold uppercase leading-none">
-              {t("landing.educational.forensics.title")}
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold uppercase leading-none" dangerouslySetInnerHTML={{ __html: t.raw("landing.educational.forensics.title") }} />
             <p className="text-xl text-muted-foreground leading-relaxed">
               {t("landing.educational.forensics.description")}
             </p>
@@ -673,7 +669,7 @@ export default function SteganographyClient() {
            </div>
            <div className="relative z-10 max-w-3xl space-y-6">
              <Badge className="bg-red-500/10 text-red-500 border-red-500/20 px-4 py-1.5 font-semibold uppercase tracking-wider text-[10px]">{t("landing.educational.notice.badge")}</Badge>
-             <h2 className="text-4xl font-bold uppercase">{t("landing.educational.notice.title")}</h2>
+             <h2 className="text-4xl font-bold uppercase" dangerouslySetInnerHTML={{ __html: t.raw("landing.educational.notice.title") }} />
              <p className="text-xl text-red-400/80 leading-relaxed">
                {t("landing.educational.notice.description")}
              </p>
@@ -735,7 +731,7 @@ export default function SteganographyClient() {
         <section className="py-24 border-y border-border">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-4">
-              <Badge variant="outline" className="text-[10px] font-bold tracking-wider text-emerald-500 border-emerald-500/20 px-6 py-2 rounded-full">{t("landing.manifesto.title")}</Badge>
+              <Badge variant="outline" className="text-[10px] font-bold tracking-wider text-emerald-500 border-emerald-500/20 px-6 py-2 rounded-full" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
               <h2 className="text-5xl md:text-7xl font-semibold uppercase tracking-tight leading-none">
                 {t.rich("landing.manifesto.headline", { span: (c) => <span className="text-emerald-500">{c}</span>, br: () => <br /> })}
               </h2>

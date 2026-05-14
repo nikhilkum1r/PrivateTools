@@ -153,8 +153,8 @@ export default function SplitPdfClient() {
 
   return (
     <StudioLayout
-      title={t("hero.title")}
-      description={t("hero.description")}
+      title={t.raw("hero.title")}
+      description={t.raw("hero.description")}
       heroIcon={Scissors}
       badge={t("hero.disclaimer")}
       trustColor="blue"

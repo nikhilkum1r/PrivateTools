@@ -39,17 +39,13 @@ export function CompressorHero({ t, defaultFormat, onFilesDrop }: CompressorHero
           </div>
         </div>
 
-        <h1 className="text-4xl md:text-8xl font-bold tracking-tight font-heading leading-none">
-          {defaultFormat && defaultFormat !== "original"
-            ? t("hero.titleSpecific", { format: defaultFormat.toUpperCase() })
-            : t("hero.title")}
-        </h1>
-        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-medium max-w-4xl mx-auto">
-          {defaultFormat && defaultFormat !== "original"
-            ? t("hero.descriptionSpecific", { format: defaultFormat.toUpperCase() })
-            : t("hero.description")
-          }
-        </p>
+        <h1 className="text-4xl md:text-8xl font-bold tracking-tight font-heading leading-none" dangerouslySetInnerHTML={{ __html: defaultFormat && defaultFormat !== "original"
+            ? t.raw("hero.titleSpecific", { format: defaultFormat.toUpperCase() })
+            : t.raw("hero.title") }} />
+        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-medium max-w-4xl mx-auto" dangerouslySetInnerHTML={{ __html: defaultFormat && defaultFormat !== "original"
+            ? t.raw("hero.descriptionSpecific", { format: defaultFormat.toUpperCase() })
+            : t.raw("hero.description")
+          }} />
       </div>
 
       <div className="relative group max-w-4xl mx-auto">
@@ -67,8 +63,8 @@ export function CompressorHero({ t, defaultFormat, onFilesDrop }: CompressorHero
             onFilesDrop={onFilesDrop}
             multiple
             maxSize={1024}
-            title={t("dropzone.title")}
-            description={t("dropzone.description")}
+            title={t.raw("dropzone.title")}
+            description={t.raw("dropzone.description")}
             accept="image/*,.heic,.heif,.webp,.avif,.tiff,.tif,.svg"
             className="h-80 border-none bg-transparent hover:bg-primary/[0.02] transition-colors"
           />

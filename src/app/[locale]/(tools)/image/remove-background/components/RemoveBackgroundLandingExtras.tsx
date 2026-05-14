@@ -47,7 +47,7 @@ export function RemoveBackgroundLandingExtras({ t, common }: RemoveBackgroundLan
       {/* Deep Manifesto */}
       <section className="container mx-auto px-4 max-w-4xl text-center space-y-16">
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none italic">{t("manifesto.title")}</h2>
+          <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none italic" dangerouslySetInnerHTML={{ __html: t.raw("manifesto.title") }} />
           <div className="w-32 h-1.5 bg-emerald-500 mx-auto rounded-full" />
         </div>
         <div className="grid gap-8 text-left">
@@ -77,7 +77,7 @@ export function RemoveBackgroundLandingExtras({ t, common }: RemoveBackgroundLan
       />
       <FAQ
         items={Array.isArray(t.raw("faq.items")) ? (t.raw("faq.items") as any) : []}
-        title={t("faq.title")}
+        title={t.raw("faq.title") as string}
         description={t("faq.description")}
       />
     </div>

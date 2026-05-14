@@ -139,7 +139,7 @@ export default function PasswordCheckerClient() {
               {t("hero.badge")}
             </Badge>
             <h1 className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9]">
-              {t("hero.title")} <span className="text-primary">{t("hero.highlight")}</span>
+              <span dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} /> <span className="text-primary" dangerouslySetInnerHTML={{ __html: t.raw("hero.highlight") }} />
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl font-medium max-w-2xl mx-auto">
               {t("hero.subtitle")}

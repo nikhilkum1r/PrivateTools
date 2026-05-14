@@ -135,14 +135,8 @@ export function DropZone({
             </motion.div>
             {title !== " " && (
               <div className="space-y-2">
-                <p className="text-lg font-semibold tracking-tight">
-                  {title || t("title")}
-                </p>
-                {(description || t("description")) && (
-                  <p className="text-sm text-muted-foreground max-w-sm">
-                    {description || t("description")}
-                  </p>
-                )}
+                <p className="text-lg font-semibold tracking-tight" dangerouslySetInnerHTML={{ __html: (title as string) || t("title") }} />
+                  <p className="text-sm text-muted-foreground max-w-sm" dangerouslySetInnerHTML={{ __html: (description as string) || t("description") }} />
                   <div className="flex items-center justify-center gap-3 pt-1">
                     <div className="flex items-center gap-1.5 text-[10px] font-medium text-muted-foreground/60">
                       <ShieldCheck className="w-3 h-3" />

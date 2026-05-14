@@ -135,8 +135,8 @@ export default function QRStudioClient() {
       />
       <FAQ 
         items={faqItems}
-        title={t("hero.title")}
-        description={t("hero.subtitle")}
+        title={t.raw("hero.title")}
+        description={t.raw("hero.subtitle")}
       />
       <Footer />
     </div>

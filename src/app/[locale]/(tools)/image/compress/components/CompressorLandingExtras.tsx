@@ -50,7 +50,7 @@ export function CompressorLandingExtras({ t, hp, t_tools }: CompressorLandingExt
       {/* Comparison Table */}
       <div className="pt-20 space-y-12">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight font-heading">{t("landing.manifesto.title")}</h2>
+          <h2 className="text-3xl font-bold tracking-tight font-heading" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
           <p className="text-xs font-bold tracking-wider text-muted-foreground/40">{t("landing.manifesto.subtitle")}</p>
         </div>
         <div className="overflow-hidden rounded-3xl border border-border bg-black/20 backdrop-blur-xl">
@@ -144,7 +144,7 @@ export function CompressorLandingExtras({ t, hp, t_tools }: CompressorLandingExt
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         <div className="space-y-8">
           <Badge className="bg-primary/10 text-primary border-primary/20 py-2 px-6 rounded-full uppercase tracking-wider text-[10px] font-bold">{t("landing.performance.badge")}</Badge>
-          <h2 className="text-5xl font-bold tracking-tight font-heading leading-tight">{t("landing.performance.title")}</h2>
+          <h2 className="text-5xl font-bold tracking-tight font-heading leading-tight" dangerouslySetInnerHTML={{ __html: t.raw("landing.performance.title") }} />
           <div className="space-y-6">
             {(Array.isArray(t.raw("landing.performance.items")) ? (t.raw("landing.performance.items") as Array<{ t: string; d: string }>) : []).map((item, i) => (
               <div key={i} className="flex gap-6">
@@ -180,7 +180,7 @@ export function CompressorLandingExtras({ t, hp, t_tools }: CompressorLandingExt
       {/* Local vs Server Section */}
       <div className="space-y-12">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight font-heading leading-tight">{t("landing.manifesto.title")}</h2>
+          <h2 className="text-3xl font-bold tracking-tight font-heading leading-tight" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
           <p className="text-xs font-bold tracking-wider text-muted-foreground/40">{t("landing.manifesto.badge")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -247,7 +247,7 @@ export function CompressorLandingExtras({ t, hp, t_tools }: CompressorLandingExt
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50" />
           <div className="space-y-4 relative z-10">
             <Badge className="bg-primary/20 text-primary border-primary/30 py-2 px-6 rounded-full uppercase tracking-wider text-[10px] font-bold">{t("cta.badge")}</Badge>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-heading">{t("cta.title")}</h2>
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-heading" dangerouslySetInnerHTML={{ __html: t.raw("cta.title") }} />
             <p className="text-muted-foreground text-lg max-w-xl mx-auto italic font-medium">{t("cta.description")}</p>
           </div>
           <Button className="h-16 rounded-[2rem] bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 gap-4 shadow-2xl shadow-primary/30 relative z-10" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

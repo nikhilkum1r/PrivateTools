@@ -16,9 +16,7 @@ export function SplitPdfHero({ t }: SplitPdfHeroProps) {
           <Scissors className="w-10 h-10 text-blue-500" />
         </div>
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-foreground">
-            {t("hero.title")}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight uppercase text-foreground" dangerouslySetInnerHTML={{ __html: t.raw("hero.title") }} />
           <p className="text-xl md:text-2xl font-bold text-muted-foreground max-w-3xl mx-auto">
             {t("hero.subtitle")}
           </p>
