@@ -40,7 +40,10 @@
       "centerLogo": "Центральный логотип / иконка",
       "remove": "Удалить",
       "dropIcon": "Перетащите иконку / логотип",
-      "logoAlt": "Предпросмотр логотипа"
+      "logoAlt": "Предпросмотр логотипа",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "Предпросмотр в реальном времени",

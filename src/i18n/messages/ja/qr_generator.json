@@ -40,7 +40,10 @@
       "centerLogo": "中央ロゴ / アイコン",
       "remove": "削除",
       "dropIcon": "アイコン/ロゴをドロップ",
-      "logoAlt": "ロゴプレビュー"
+      "logoAlt": "ロゴプレビュー",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "リアルタイムプレビュー",

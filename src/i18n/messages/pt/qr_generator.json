@@ -40,7 +40,10 @@
       "centerLogo": "Logotipo Central / Ícone",
       "remove": "Remover",
       "dropIcon": "Solte o Ícone / Logotipo",
-      "logoAlt": "Pré-visualização do Logotipo"
+      "logoAlt": "Pré-visualização do Logotipo",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "Pré-visualização em Tempo Real",

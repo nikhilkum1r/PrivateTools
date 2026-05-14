@@ -62,7 +62,9 @@ export function FAQ({ items, title, description, className }: FAQProps) {
                 <AccordionTrigger className="hover:no-underline py-6">
                   <span className="text-left font-bold text-base md:text-lg group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: item.q }} />
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed text-sm md:text-base" dangerouslySetInnerHTML={{ __html: item.a }} />
+                <AccordionContent className="pb-6 text-muted-foreground leading-relaxed text-sm md:text-base">
+                  <div dangerouslySetInnerHTML={{ __html: item.a }} />
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

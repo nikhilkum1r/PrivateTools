@@ -40,7 +40,10 @@
       "centerLogo": "中心徽标 / 图标",
       "remove": "移除",
       "dropIcon": "拖放图标 / 徽标",
-      "logoAlt": "徽标预览"
+      "logoAlt": "徽标预览",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "实时预览",

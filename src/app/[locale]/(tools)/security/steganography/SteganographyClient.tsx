@@ -731,7 +731,9 @@ export default function SteganographyClient() {
         <section className="py-24 border-y border-border">
           <div className="max-w-4xl mx-auto text-center space-y-12">
             <div className="space-y-4">
-              <Badge variant="outline" className="text-[10px] font-bold tracking-wider text-emerald-500 border-emerald-500/20 px-6 py-2 rounded-full" dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
+              <Badge variant="outline" className="text-[10px] font-bold tracking-wider text-emerald-500 border-emerald-500/20 px-6 py-2 rounded-full">
+                <span dangerouslySetInnerHTML={{ __html: t.raw("landing.manifesto.title") }} />
+              </Badge>
               <h2 className="text-5xl md:text-7xl font-semibold uppercase tracking-tight leading-none">
                 {t.rich("landing.manifesto.headline", { span: (c) => <span className="text-emerald-500">{c}</span>, br: () => <br /> })}
               </h2>

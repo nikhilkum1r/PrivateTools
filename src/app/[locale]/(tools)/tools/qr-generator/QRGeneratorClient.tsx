@@ -22,6 +22,7 @@ import { toast } from "sonner";
 import { FAQ } from "@/components/shared/FAQ";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { validateQRValue, MAX_QR_CHARS, formatWiFi, formatMeCard } from "@/lib/qr";
 
 export default function QRGeneratorClient() {
   const t = useTranslations("qrGenerator");
@@ -38,20 +39,14 @@ export default function QRGeneratorClient() {
   const [logoFile, setLogoFile] = useState<string | null>(null);
   const qrRef = useRef<HTMLDivElement>(null);
 
-  const MAX_CHARS = 1200;
-
   const handleValueChange = (v: string) => {
     let trimmed = v;
-    if (v.length > MAX_CHARS) {
-      trimmed = v.slice(0, MAX_CHARS);
-      toast.error(`Payload too large. Trimmed to ${MAX_CHARS} characters.`);
+    if (v.length > MAX_QR_CHARS) {
+      trimmed = v.slice(0, MAX_QR_CHARS);
+      toast.error(`Payload too large. Trimmed to ${MAX_QR_CHARS} characters.`);
     }
     setValue(trimmed);
-    if (trimmed.startsWith("http") || trimmed.startsWith("mailto:") || trimmed.startsWith("tel:") || trimmed.startsWith("WIFI:")) {
-      try { new URL(trimmed); setUrlValid(true); } catch { setUrlValid(false); }
-    } else {
-      setUrlValid(trimmed.length > 0);
-    }
+    setUrlValid(validateQRValue(trimmed));
   };
 
   const downloadQR = (format: "png" | "svg" = "png") => {
@@ -78,7 +73,15 @@ export default function QRGeneratorClient() {
         toast.success(t("export.toastPng"));
       }, "image/png");
     };
-    img.src = "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svgData)));
+    // Use TextEncoder for safer base64 encoding of SVG data
+    const encoder = new TextEncoder();
+    const data = encoder.encode(svgData);
+    let binary = "";
+    const len = data.byteLength;
+    for (let i = 0; i < len; i++) {
+      binary += String.fromCharCode(data[i]);
+    }
+    img.src = "data:image/svg+xml;base64," + btoa(binary);
   };
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -171,10 +174,10 @@ export default function QRGeneratorClient() {
                     <h4 className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/50">{t("identity.protocol")}</h4>
                     <Tabs defaultValue="link" className="w-full">
                       <TabsList className="w-full grid grid-cols-4 h-12 mb-6 bg-secondary border border-border rounded-xl p-1">
-                        <TabsTrigger value="link" className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><LinkIcon className="w-4 h-4" /></TabsTrigger>
-                        <TabsTrigger value="wifi" className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><Wifi className="w-4 h-4" /></TabsTrigger>
-                        <TabsTrigger value="vcard" className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><Phone className="w-4 h-4" /></TabsTrigger>
-                        <TabsTrigger value="text" className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><MessageSquare className="w-4 h-4" /></TabsTrigger>
+                        <TabsTrigger value="link" aria-label={t("identity.link")} className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><LinkIcon className="w-4 h-4" /></TabsTrigger>
+                        <TabsTrigger value="wifi" aria-label={t("identity.wifi")} className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><Wifi className="w-4 h-4" /></TabsTrigger>
+                        <TabsTrigger value="vcard" aria-label={t("identity.vcard")} className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><Phone className="w-4 h-4" /></TabsTrigger>
+                        <TabsTrigger value="text" aria-label={t("identity.text")} className="rounded-lg data-[state=active]:bg-purple-600 data-[state=active]:text-white"><MessageSquare className="w-4 h-4" /></TabsTrigger>
                       </TabsList>
 
                       <TabsContent value="link" className="space-y-4">
@@ -183,7 +186,7 @@ export default function QRGeneratorClient() {
                           <Input 
                             value={value} 
                             onChange={(e) => handleValueChange(e.target.value)}
-                            maxLength={MAX_CHARS}
+                            maxLength={MAX_QR_CHARS}
                             className={cn(
                               "bg-background border-border rounded-xl h-12 font-bold text-foreground transition-all",
                               !urlValid && "border-red-500 bg-red-500/5 text-red-500"
@@ -213,7 +216,7 @@ export default function QRGeneratorClient() {
                               const ssidMatch = value.match(/S:(.*?);/);
                               const ssid = ssidMatch ? ssidMatch[1] : '';
                               const trimmed = e.target.value.slice(0, 100);
-                              setValue(`WIFI:S:${ssid};T:WPA;P:${trimmed};;`);
+                              setValue(formatWiFi(ssid, trimmed));
                             }} />
                           </div>
                         </div>
@@ -222,14 +225,14 @@ export default function QRGeneratorClient() {
                       <TabsContent value="vcard" className="space-y-4">
                         <div className="space-y-2">
                           <Label className="text-[10px] font-semibold uppercase text-muted-foreground/60 tracking-wider">{t("identity.contact")}</Label>
-                          <Input placeholder={t("identity.contactPlaceholder")} maxLength={200} className="bg-background border-border rounded-xl h-12" onChange={(e) => handleValueChange(`MECARD:N:${e.target.value.slice(0, 200)};`)} />
+                          <Input placeholder={t("identity.contactPlaceholder")} maxLength={200} className="bg-background border-border rounded-xl h-12" onChange={(e) => handleValueChange(formatMeCard(e.target.value.slice(0, 200)))} />
                         </div>
                       </TabsContent>
 
                       <TabsContent value="text" className="space-y-4">
                         <div className="space-y-2">
                           <Label className="text-[10px] font-semibold uppercase text-muted-foreground/60 tracking-wider">{t("identity.text")}</Label>
-                          <Input placeholder={t("identity.textPlaceholder")} maxLength={MAX_CHARS} className="bg-background border-border rounded-xl h-12" onChange={(e) => handleValueChange(e.target.value)} />
+                          <Input placeholder={t("identity.textPlaceholder")} maxLength={MAX_QR_CHARS} className="bg-background border-border rounded-xl h-12" onChange={(e) => handleValueChange(e.target.value)} />
                         </div>
                       </TabsContent>
                     </Tabs>
@@ -305,7 +308,7 @@ export default function QRGeneratorClient() {
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="relative group">
                   <div ref={qrRef} className="p-6 rounded-[2rem] bg-white shadow-2xl border border-border/10 transition-transform group-hover:scale-[1.02] duration-500 relative ring-1 ring-black/5 dark:ring-white/10">
                     <QRCodeSVG 
-                      value={value.length > MAX_CHARS ? value.slice(0, MAX_CHARS) : (value || " ")} 
+                      value={value.length > MAX_QR_CHARS ? value.slice(0, MAX_QR_CHARS) : (value || " ")} 
                       size={size} 
                       fgColor={fgColor} 
                       bgColor={bgColor} 
@@ -344,6 +347,7 @@ export default function QRGeneratorClient() {
                             type="color" 
                             value={fgColor} 
                             onChange={(e) => setFgColor(e.target.value)} 
+                            aria-label={t("design.foreground")}
                             className="w-8 h-8 p-0 border border-border rounded-lg cursor-pointer overflow-hidden bg-transparent [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none [&::-moz-color-swatch]:border-none"
                           />
                           <Input value={fgColor} onChange={(e) => setFgColor(e.target.value)} className="w-20 bg-background border-border rounded-lg h-8 font-mono text-[10px] uppercase text-center p-0" />
@@ -356,6 +360,7 @@ export default function QRGeneratorClient() {
                             type="color" 
                             value={bgColor} 
                             onChange={(e) => setBgColor(e.target.value)} 
+                            aria-label={t("design.background")}
                             className="w-8 h-8 p-0 border border-border rounded-lg cursor-pointer overflow-hidden bg-transparent [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none [&::-moz-color-swatch]:border-none"
                           />
                           <Input value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="w-20 bg-background border-border rounded-lg h-8 font-mono text-[10px] uppercase text-center p-0" />

@@ -40,7 +40,10 @@
       "centerLogo": "सेंटर लोगो / आइकन",
       "remove": "हटाएं",
       "dropIcon": "आइकन / लोगो यहाँ छोड़ें",
-      "logoAlt": "लोगो पूर्वावलोकन"
+      "logoAlt": "लोगो पूर्वावलोकन",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "रियल-टाइम पूर्वावलोकन",

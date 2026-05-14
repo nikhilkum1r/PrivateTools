@@ -40,7 +40,10 @@
       "centerLogo": "الشعار الأوسط / الأيقونة",
       "remove": "إزالة",
       "dropIcon": "إسقاط الأيقونة / الشعار",
-      "logoAlt": "معاينة الشعار"
+      "logoAlt": "معاينة الشعار",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "معاينة فورية",

@@ -40,7 +40,10 @@
       "centerLogo": "Center Logo / Icon",
       "remove": "Remove",
       "dropIcon": "Drop Icon / Logo",
-      "logoAlt": "Logo Preview"
+      "logoAlt": "Logo Preview",
+      "link": "Link / URL",
+      "wifi": "WiFi Configuration",
+      "vcard": "Contact (vCard)"
     },
     "preview": {
       "title": "Real-Time Preview",
