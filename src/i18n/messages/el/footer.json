@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Επαγγελματικά εργαλεία περιήγησης σχεδιασμένα για ιδιωτικότητα και ταχύτητα. Πάνω από 150 εργαλεία που εκτελούνται εξ ολοκλήρου στη συσκευή σας.",
+    "tagline": "Τα δεδομένα σας σάς ανήκουν.",
+    "localEngineActive": "Τοπική Μηχανή Ενεργή",
+    "isolatedContextVerified": "Επαληθευμένο Απομονωμένο Περιβάλλον",
+    "verifiedSupport": "Επαληθευμένη Συμβατότητα Προγράμματος Περιήγησης",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Προϊόν",
+    "resources": "Πηγές",
+    "community": "Κοινότητα",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Όλα τα Συστήματα Τοπικά",
+    "faq": "FAQ"
+  }
+}

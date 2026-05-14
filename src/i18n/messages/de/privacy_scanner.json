@@ -1,0 +1,58 @@
+{
+  "title": "Privatsphäre-Scanner",
+  "description": "Umfassendes Audit der Browsersicherheit und Anonymität. Identifizieren Sie Leaks, verfolgbare Fingerabdrücke und Sicherheitslücken lokal.",
+  "hero": {
+    "title": "Ghost",
+    "highlight": "Protocol",
+    "subtitle": "Analysieren Sie Ihren digitalen Schatten. Finden Sie heraus, wie viel Webseiten über Sie wissen.",
+    "badge": "Anonymitäts-Check",
+    "button": "Privatsphäre-Scan starten",
+    "scanning": "Browser-Umgebung wird gescannt..."
+  },
+  "metrics": {
+    "ip": "IP-Adresse",
+    "location": "Geografischer Leak",
+    "ua": "User Agent",
+    "fingerprint": "Fingerabdruck-Entropie",
+    "webrtc": "WebRTC-Leak",
+    "adblock": "AdBlocker-Status",
+    "cookies": "Drittanbieter-Cookies",
+    "tracking": "Tracking-Schutz"
+  },
+  "status": {
+    "secure": "Geschützt",
+    "vulnerable": "Gefährdet",
+    "active": "Aktiviert",
+    "inactive": "Deaktiviert",
+    "detected": "Erkannt",
+    "clean": "Keine Leaks"
+  },
+  "sections": {
+    "network": "Netzwerk-Ebene",
+    "identity": "Identität & Fingerabdruck",
+    "defenses": "Sicherheitsabwehr"
+  },
+  "advice": {
+    "title": "Härtungs-Leitfaden",
+    "vpn": "Nutzen Sie ein vertrauenswürdiges VPN, um Ihre IP und Ihren Standort zu verbergen.",
+    "brave": "Wechseln Sie zu einem datenschutzorientierten Browser wie Brave oder Librewolf.",
+    "ublock": "Installieren Sie uBlock Origin für erweitertes Tracker-Blocking.",
+    "webrtc": "Deaktivieren Sie WebRTC, um lokale IP-Leaks zu verhindern."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Wie funktioniert der Privatsphäre-Scanner?",
+        "a": "Er prüft Ihre Browser-Umgebung auf gängige Datenschutzschwachstellen. Dazu gehören Netzwerk-Leaks (WebRTC), Browser-Fingerprinting (Canvas API) und die Wirksamkeit Ihres Tracking-Schutzes."
+      },
+      {
+        "q": "Was ist ein WebRTC-Leak?",
+        "a": "WebRTC ist eine Technologie für Echtzeitkommunikation. Sie kann jedoch manchmal VPNs umgehen und Ihre echte lokale IP-Adresse preisgeben. Unser Scanner prüft, ob Ihr Browser diese Informationen weitergibt."
+      },
+      {
+        "q": "Was ist Browser-Fingerprinting?",
+        "a": "Fingerprinting ist eine Technik, bei der Webseiten kleine Datenmengen über Ihren Browser sammeln (Schriftarten, Auflösung, Hardware), um eine eindeutige ID für Sie zu erstellen. Dies ermöglicht das Tracking auch ohne Cookies."
+      }
+    ]
+  }
+}

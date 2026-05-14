@@ -1,0 +1,61 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "Chính sách Truy cập Công bằng",
+      "title": "Miễn phí cho <br></br> Mọi người.",
+      "subtitle": "Chúng tôi tin rằng quyền riêng tư không nên là một tính năng cao cấp. Nó phải là trạng thái mặc định của web."
+    },
+    "plan": {
+      "title": "Gói Chủ quyền",
+      "price": "$0",
+      "forever": "/ mãi mãi",
+      "description": "Truy cập toàn bộ cơ sở hạ tầng SafeTools mà không có bất kỳ sự thỏa hiệp nào. Không đăng ký, không giới hạn ẩn và không yêu cầu thẻ tín dụng.",
+      "button": "Bắt đầu sử dụng miễn phí",
+      "included": "Bao gồm những gì",
+      "features": [
+        "Hơn 150 công cụ chuyên nghiệp",
+        "Xử lý tệp không giới hạn",
+        "Không giới hạn kích thước tệp",
+        "Tốc độ tăng tốc phần cứng",
+        "100% Riêng tư & Cục bộ",
+        "Không yêu cầu tài khoản",
+        "Không quảng cáo hoặc trình theo dõi",
+        "Truy cập toàn bộ động cơ cục bộ"
+      ]
+    },
+    "comparison": {
+      "title": "Tại sao lại miễn phí?",
+      "subtitle": "Các công cụ truyền thống có máy chủ. Máy chủ tốn tiền. SafeTools sử dụng phần cứng của bạn để thực hiện công việc.",
+      "cloud": {
+        "title": "Công cụ đám mây \"Miễn phí\"",
+        "features": [
+          "Giới hạn ở các tệp 10MB",
+          "Thời gian chờ & danh sách chờ",
+          "Hình mờ trên bản xuất",
+          "Tiếp thị email rầm rộ"
+        ],
+        "unlimited_strike": "Xử lý không giới hạn"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100% Miễn phí mãi mãi",
+          "Không giới hạn kích thước tệp",
+          "Không chờ đợi / Cục bộ tức thì",
+          "Không hình mờ / Chất lượng đầy đủ",
+          "Không tài khoản / Ẩn danh tuyệt đối"
+        ]
+      }
+    },
+    "final": {
+      "title": "Hệ sinh thái <br></br> Ưu tiên quyền riêng tư.",
+      "subtitle": "Không đăng ký. Không theo dõi. Sức mạnh cục bộ thuần túy.",
+      "independent": "Được tài trợ độc lập",
+      "zeroServer": "Cơ sở hạ tầng không máy chủ"
+    },
+    "seo": {
+      "title": "Giá cả & Hỗ trợ | Bộ công cụ quyền riêng tư miễn phí SafeTools",
+      "description": "SafeTools hoàn toàn miễn phí mãi mãi. Tìm hiểu lý do tại sao chúng tôi không thu phí cho quyền riêng tư và cách bạn có thể hỗ trợ sứ mệnh của chúng tôi cho một web ưu tiên cục bộ."
+    }
+  }
+}

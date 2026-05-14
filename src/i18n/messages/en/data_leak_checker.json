@@ -1,0 +1,34 @@
+{
+  "title": "Data Leak Checker",
+  "description": "Find out if your email address or personal data has been exposed in a data breach. We use anonymous hashing to keep your search private.",
+  "hero": {
+    "title": "Exposed?",
+    "highlight": "Check Now",
+    "subtitle": "Billion-scale breach analysis. Your email is never sent to our servers.",
+    "badge": "Privacy Guaranteed",
+    "inputPlaceholder": "Enter your email address...",
+    "button": "Check for Leaks"
+  },
+  "results": {
+    "loading": "Analyzing global breach databases...",
+    "safe_title": "No Leaks Found",
+    "safe_desc": "Great news! Your email wasn't found in our indexed data breaches.",
+    "pwned_title": "You've been pwned!",
+    "pwned_desc": "This email was found in {count} data breaches. Follow the steps below to secure your account.",
+    "error": "Failed to check leaks. Please try again later.",
+    "invalid_email": "Please enter a valid email address."
+  },
+  "breaches": {
+    "title": "Breach History",
+    "date": "Breach Date:",
+    "pwn_count": "Accounts Compromised:",
+    "data_classes": "Compromised Data:"
+  },
+  "advice": {
+    "title": "Next Steps",
+    "password_reset": "Change your password immediately for all affected services.",
+    "mfa": "Enable 2-Factor Authentication (2FA) wherever possible.",
+    "unique_pass": "Use a unique, strong password for every account.",
+    "manager": "Use a password manager to keep track of your credentials."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Outils de navigation de qualité professionnelle conçus pour la confidentialité et la vitesse. Plus de 150 utilitaires qui s'exécutent entièrement sur votre appareil.",
+    "tagline": "Vos données vous appartiennent.",
+    "localEngineActive": "Moteur local actif",
+    "isolatedContextVerified": "Contexte isolé vérifié",
+    "verifiedSupport": "Compatibilité navigateur vérifiée",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Produit",
+    "resources": "Ressources",
+    "community": "Communauté",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Tous les systèmes sont locaux",
+    "faq": "FAQ"
+  }
+}

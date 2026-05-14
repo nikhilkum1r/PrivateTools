@@ -1,0 +1,335 @@
+{
+  "steganography": {
+    "metadata": {
+      "title": "Herramienta de Esteganografía | Ocultar Mensajes Secretos en Imágenes",
+      "description": "Oculte texto secreto dentro de imágenes de forma segura utilizando esteganografía basada en el navegador. Procesamiento local prioritario para la privacidad, sin cargas y sin rastreo.",
+      "ogTitle": "Herramienta de Esteganografía | Ocultar Mensajes Secretos en Imágenes",
+      "ogDescription": "Oculte texto secreto dentro de imágenes de forma segura utilizando esteganografía basada en el navegador. Procesamiento local prioritario para la privacidad, sin cargas y sin rastreo.",
+      "keywords": "herramienta de esteganografía, esteganografía de imágenes, ocultar texto en imagen, mensaje secreto en imagen, esteganografía de navegador, codificador de mensajes ocultos, herramienta de esteganografía local, esteganografía png, esteganografía en línea, mensajes ocultos seguros"
+    },
+    "hero": {
+      "badge": "Esteganografía Prioritaria para la Privacidad",
+      "title": "Herramienta de Esteganografía",
+      "description": "Oculte y extraiga mensajes secretos dentro de imágenes de forma segura utilizando esteganografía basada en el navegador y procesamiento local.",
+      "badges": {
+        "local": "Procesamiento Local",
+        "zero": "Cero Cargas",
+        "no_tracking": "Sin Rastreo",
+        "instant": "Codificación Instantánea",
+        "browser": "Basado en Navegador"
+      },
+      "disclaimer": {
+        "title": "⚠️ Aviso Legal: Esteganografía",
+        "body": "Esta herramienta oculta datos dentro de imágenes utilizando codificación LSB. Está destinada únicamente a fines de privacidad, marca de agua e investigación. Se prohíbe estrictamente el uso de esteganografía para ocultar contenido o actividades ilegales. Al continuar, usted acepta la responsabilidad total por el uso de esta herramienta."
+      }
+    },
+    "process": {
+      "carrier": {
+        "title": "Seleccionar Portador",
+        "desc": "Cargue una imagen PNG o WebP para que actúe como su portador secreto."
+      },
+      "payload": {
+        "title": "Ocultar Carga",
+        "desc": "Inyecte su texto secreto o identificador en los píxeles de la imagen."
+      },
+      "output": {
+        "title": "Salida Segura",
+        "desc": "Descargue la imagen visualmente idéntica que contiene su secreto."
+      }
+    },
+    "engine": {
+      "title": "Motor de Mutación LSB",
+      "encode": "CODIFICAR",
+      "decode": "DECODIFICAR",
+      "dropzone": {
+        "encode": "Seleccionar Imagen Portadora",
+        "decode": "Cargar Imagen Codificada",
+        "encodeDesc": "Se recomienda PNG o WebP",
+        "decodeDesc": "Extraer datos ocultos localmente"
+      },
+      "payloadLabel": "Mensaje de Carga",
+      "placeholder": "Haga desaparecer su texto secreto aquí...",
+      "hideButton": "OCULTAR MENSAJE",
+      "extractedLabel": "Inteligencia Extraída",
+      "copyButton": "COPIAR TEXTO",
+      "revealButton": "REVELAR SECRETOS",
+      "awaitingScan": "Esperando Escaneo de Píxeles",
+      "processing": "Procesando Bits...",
+      "remove": "ELIMINAR",
+      "capacityError": "La carga excede la capacidad del portador.",
+      "noPayloadError": "No se detectó ninguna carga oculta en esta imagen."
+    },
+    "toast": {
+      "initialized": "Imagen portadora {name} inicializada.",
+      "vanished": "¡El mensaje se desvaneció en la imagen!",
+      "revealed": "¡Mensaje oculto revelado!",
+      "copied": "¡Texto copiado al portapapeles!"
+    },
+    "status": {
+      "title": "Estado de Seguridad",
+      "local": "Codificación Local",
+      "zero": "Política de Cero Servidores",
+      "https": "Protegido por HTTPS",
+      "carrier": "Integridad del Portador",
+      "tracking": "Scripts de Rastreo",
+      "active": "Activo",
+      "verified": "Verificado",
+      "warning": "Advertencia",
+      "localDev": "Desarrollo Local",
+      "none": "Ninguno"
+    },
+    "trackers": {
+      "title": "Motores de Rastreo Bloqueados",
+      "note": "SafeTools es una zona libre de rastreadores. No inyectamos ningún script de terceros."
+    },
+    "landing": {
+      "educational": {
+        "whatIs": {
+          "badge": "Guía Educativa",
+          "title": "¿Qué es la Esteganografía?",
+          "titleRich": "¿Qué es la <span>Esteganografía</span>?",
+          "description": "La esteganografía es la práctica de ocultar información dentro de medios digitales como imágenes sin cambiar visiblemente el archivo original. A diferencia del cifrado, que hace que los datos sean ilegibles, la esteganografía hace que los datos sean indetectables.",
+          "items": [
+            {
+              "title": "Uso Educativo",
+              "desc": "Aprenda cómo se estructuran los datos en los canales de píxeles."
+            },
+            {
+              "title": "Protección de la Privacidad",
+              "desc": "Oculte identificadores sensibles de observadores casuales."
+            },
+            {
+              "title": "Notas Seguras",
+              "desc": "Incruste notas privadas dentro de fotos de apariencia inocente."
+            },
+            {
+              "title": "Marca de Agua Digital",
+              "desc": "Demuestre la propiedad sin artefactos visibles."
+            }
+          ]
+        },
+        "vs": {
+          "title": "Esteganografía vs Cifrado",
+          "subtitle": "Comprender la diferencia entre ocultar datos y protegerlos.",
+          "headers": [
+            "Característica",
+            "Esteganografía",
+            "Cifrado"
+          ],
+          "rows": [
+            [
+              "Oculta la Existencia",
+              "Sí",
+              "No"
+            ],
+            [
+              "Legible por No Autorizados",
+              "Si se encuentra",
+              "No"
+            ],
+            [
+              "Ocultamiento Visual",
+              "Sí",
+              "No"
+            ],
+            [
+              "Sobrecarga de Datos",
+              "Ninguna",
+              "Aumentada"
+            ],
+            [
+              "Riesgo de Detección",
+              "Denegación Plausible",
+              "Firma Obvia"
+            ]
+          ],
+          "tip": "Consejo de Seguridad: Para una seguridad máxima, siempre cifre primero su mensaje sensible y luego use esteganografía para ocultar el texto cifrado resultante dentro de una imagen. Esto proporciona tanto ocultamiento como protección de datos."
+        },
+        "formats": {
+          "title": "Formatos de Imagen Compatibles",
+          "subtitle": "Por qué la selección del formato es importante para la integridad de los datos ocultos.",
+          "items": [
+            {
+              "n": "PNG (Portable Network Graphics)",
+              "s": "Perfecto",
+              "d": "La compresión sin pérdidas garantiza que cada bit oculto permanezca exactamente como se codificó."
+            },
+            {
+              "n": "WebP (Sin Pérdidas)",
+              "s": "Recomendado",
+              "d": "La alta eficiencia con soporte sin pérdidas mantiene las cargas intactas."
+            },
+            {
+              "n": "JPEG / JPG",
+              "s": "Limitado",
+              "d": "La compresión con pérdidas puede corromper los bits ocultos. No se recomienda para LSB."
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Casos de Uso de la Esteganografía",
+          "subtitle": "Aplicaciones prácticas y profesionales para datos ocultos.",
+          "items": [
+            "Comunicación Oculta",
+            "Protección de la Privacidad",
+            "Intercambio Seguro de Notas",
+            "Marca de Agua Digital",
+            "Educación en Ciberseguridad",
+            "Demostraciones de Investigación",
+            "Ocultamiento de Metadatos",
+            "Marcadores de Autenticación"
+          ]
+        },
+        "forensics": {
+          "badge": "Conciencia Forense",
+          "view": "VISTA FORENSE",
+          "title": "Detección de Datos Ocultos",
+          "description": "Aunque la esteganografía LSB es visualmente indetectable, las herramientas forenses avanzadas pueden detectar patrones en los bits menos significativos. Los profesionales utilizan técnicas como el análisis Chi-cuadrado y ataques visuales para encontrar cargas ocultas.",
+          "items": [
+            {
+              "title": "Análisis Estadístico",
+              "desc": "Detección de desviaciones en la distribución de bits que indican datos no naturales."
+            },
+            {
+              "title": "Ataques Visuales",
+              "desc": "Aislamiento de planos de bits para revelar anomalías estructurales en el ruido."
+            },
+            {
+              "title": "Cambios de Histograma",
+              "desc": "Identificación de cambios sutiles en las frecuencias de color causados por la mutación de bits."
+            }
+          ],
+          "histogram": "Análisis de Histograma",
+          "lsbSignature": "Firma LSB",
+          "normalized": "NORMALIZADO"
+        },
+        "specs": {
+          "title": "Especificaciones Técnicas Avanzadas",
+          "subtitle": "Parámetros de bajo nivel del motor de mutación LSB de SafeTools.",
+          "items": [
+            {
+              "l": "Profundidad de Bits",
+              "v": "8 bits por canal"
+            },
+            {
+              "l": "Tasa de Inyección",
+              "v": "1 bit/canal"
+            },
+            {
+              "l": "Matriz de Canales",
+              "v": "Orden R-G-B"
+            },
+            {
+              "l": "Espacio de Mutación",
+              "v": "TrueColor de 24 bits"
+            },
+            {
+              "l": "Lógica de Cabecera",
+              "v": "BigEndian de 32 bits"
+            },
+            {
+              "l": "Delta Visual",
+              "v": "E < 0.001%"
+            },
+            {
+              "l": "Objetivo de Entropía",
+              "v": "Maximizado"
+            },
+            {
+              "l": "Motor del Navegador",
+              "v": "WASM / Canvas"
+            }
+          ]
+        },
+        "tips": {
+          "items": [
+            {
+              "t": "Use Imágenes de Alta Entropía",
+              "d": "Las imágenes con mucha textura y detalle (como fotos de la naturaleza) son mejores portadores que los colores planos y sólidos donde las mutaciones de bits son más fáciles de detectar estadísticamente."
+            },
+            {
+              "t": "Cifre Previamente las Cargas",
+              "d": "Siempre cifre su texto con AES-256 antes de ocultarlo. Esto garantiza que incluso si se detecta la esteganografía, los datos permanezcan ilegibles."
+            },
+            {
+              "t": "Evite Cambiar el Tamaño",
+              "d": "Cambiar el tamaño o volver a comprimir una imagen codificada casi con seguridad destruirá los datos ocultos. Siempre comparta el archivo de salida original."
+            }
+          ]
+        },
+        "notice": {
+          "badge": "Aviso de Seguridad Importante",
+          "title": "La Esteganografía No Es Cifrado",
+          "description": "La esteganografía se basa en la oscuridad, no en la dureza computacional. Aunque oculta la existencia de un mensaje, no necesariamente protege el contenido si se detecta la esteganografía.",
+          "points": [
+            "Combine siempre con un cifrado fuerte (AES-256) para datos sensibles.",
+            "Use formatos sin pérdidas (PNG) para evitar la corrupción de datos.",
+            "Nunca lo use para ocultamiento ilegal o poco ético.",
+            "Tenga en cuenta que las herramientas forenses pueden detectar mutaciones LSB."
+          ]
+        },
+        "offline": {
+          "title": "Funciona en Todas Partes",
+          "items": [
+            "Listo para usar sin conexión",
+            "Multiplataforma",
+            "Soporte PWA",
+            "Sin aplicaciones nativas"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes sobre Esteganografía",
+        "description": "Todo lo que necesita saber sobre ocultar datos en imágenes.",
+        "items": [
+          {
+            "q": "¿Se cargan las imágenes en los servidores?",
+            "a": "No. Toda la codificación y decodificación ocurren localmente dentro de su navegador utilizando la API de canvas y Web Workers."
+          },
+          {
+            "q": "¿Qué formato de imagen funciona mejor?",
+            "a": "Se recomienda encarecidamente PNG porque utiliza compresión sin pérdidas, lo que preserva perfectamente los bits ocultos en cada píxel."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Privacidad por Defecto",
+        "headline": "La <span>Privacidad</span> es un Derecho,<br></br>No una Función.",
+        "description": "La esteganografía es una de las formas más antiguas de protección de la privacidad. In the digital age, it remains a powerful tool for maintaining sovereignty over your information.",
+        "zeroServer": "Sin Servidor",
+        "localFirst": "Local Primero",
+        "noTracking": "Sin Rastreo"
+      },
+      "related": {
+        "title": "Herramientas de Seguridad Relacionadas",
+        "subtitle": "Proteja su identidad digital con nuestra suite segura.",
+        "items": [
+          {
+            "n": "Bóveda de Archivos",
+            "d": "Cifrado de archivos de grado militar."
+          },
+          {
+            "n": "Limpiador de Metadatos",
+            "d": "Purgue datos EXIF y GPS."
+          },
+          {
+            "n": "Notas Seguras",
+            "d": "Notas cifradas basadas en el navegador."
+          },
+          {
+            "n": "Generador de Contraseñas",
+            "d": "Genere contraseñas seguras sin conexión."
+          },
+          {
+            "n": "Comprobador de Fuerza",
+            "d": "Audite la seguridad de su contraseña."
+          },
+          {
+            "n": "Trituradora de Archivos",
+            "d": "Elimine permanentemente rastros digitales."
+          }
+        ]
+      }
+    }
+  }
+}

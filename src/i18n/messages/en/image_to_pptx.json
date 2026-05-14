@@ -1,0 +1,96 @@
+{
+  "imageToPptx": {
+    "seo": {
+      "title": "Image to PPTX Converter Online Free – Convert JPG, PNG & Images to PowerPoint Slides",
+      "description": "Convert JPG, PNG, and WebP into PowerPoint PPTX presentations online for free. Fast, secure, browser-based Image to PPTX converter with zero uploads.",
+      "keywords": "convert image to pptx, photos to powerpoint, image to slides converter, JPG to PPTX, PNG to PowerPoint, WEBP to PPTX, BMP to PPTX, GIF to PPTX, TIFF to PPTX",
+      "ogTitle": "Image to PPTX Converter – Free Online JPG, PNG & WEBP to PowerPoint Tool",
+      "ogDescription": "Turn your images into professional PowerPoint presentations instantly with SafeTools’ free Image to PPTX Converter. No server uploads, 100% private."
+    },
+    "hero": {
+      "title": "Image to PPTX.",
+      "description": "Turn your images into professional PowerPoint presentations instantly. Fast, secure, and 100% private.",
+      "dropzone": {
+        "title": "Drop Images Here",
+        "subtitle": "Supports JPG, PNG, WEBP, SVG, TIFF & More"
+      },
+      "badges": {
+        "privacy": "Privacy-First",
+        "noUploads": "No Uploads",
+        "instant": "Instant Export",
+        "noWatermark": "Zero Watermark"
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Key Features",
+        "subtitle": "Why professionals choose SafeTools",
+        "items": [
+          { "title": "Instant Conversion", "desc": "Create fully compatible PPTX presentation files from single or multiple images in seconds." },
+          { "title": "Privacy-First", "desc": "Your files stay on your device. Images are processed locally in your browser without uploading." },
+          { "title": "Batch Processing", "desc": "Upload multiple images and automatically generate multi-slide PowerPoint presentations." },
+          { "title": "High Quality", "desc": "Maintain image clarity, resolution, and colors during PPTX generation." },
+          { "title": "Cross-Device", "desc": "Works on Windows, macOS, Linux, Android, and iOS directly in your browser." },
+          { "title": "No Watermarks", "desc": "Generated presentations are clean, professional, and ready for use." }
+        ]
+      },
+      "formats": {
+        "title": "Supported Formats",
+        "subtitle": "Convert almost any image format"
+      },
+      "useCases": {
+        "title": "Common Use Cases",
+        "items": [
+          { "title": "Education", "desc": "Convert lecture notes, scanned pages, and diagrams into classroom slides." },
+          { "title": "Business", "desc": "Create reports, analytics decks, and product showcases from screenshots." },
+          { "title": "Designers", "desc": "Transform portfolios and mockups into client-ready presentations." },
+          { "title": "Marketing", "desc": "Turn campaign creatives and banners into editable pitch decks." }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know",
+        "items": [
+          { "q": "Is the Image to PPTX Converter free?", "a": "Yes. The tool is completely free to use with no hidden costs or watermarks." },
+          { "q": "Do I need to install software?", "a": "No. Everything works directly in your modern web browser (Chrome, Firefox, Safari, Edge)." },
+          { "q": "Are my files uploaded to servers?", "a": "No. SafeTools prioritizes browser-based processing. Your images never leave your device." },
+          { "q": "Can I convert multiple images into one PPTX file?", "a": "Yes. You can upload multiple images and they will be converted into a multi-slide PowerPoint presentation." },
+          { "q": "Does the tool support mobile devices?", "a": "Yes. The converter works seamlessly on Android phones, iPhones, tablets, and desktop devices." },
+          { "q": "Will image quality be reduced?", "a": "The converter is optimized to preserve image clarity and resolution as much as possible during the generation process." }
+        ]
+      }
+    },
+    "studio": {
+      "assetMatrix": "Asset Matrix",
+      "slidesInitialized": "{count} Slides Initialized",
+      "generate": "GENERATE PPTX DECK",
+      "slideIndicator": "SLIDE {current} / {total}",
+      "reset": "Reset",
+      "secureBrowser": "SECURE BROWSER THREAD",
+      "workspaceInitialized": "Workspace Initialized",
+      "studioConfig": "Studio Config",
+      "localSynthesis": "Local Synthesis Mode",
+      "presentationName": "Presentation Name",
+      "placeholder": "DECK_2024",
+      "optimization": "Optimization",
+      "layoutEngine": "Layout Engine",
+      "imageFit": "Image Fit",
+      "workerStatus": "Worker Status",
+      "privacyShield": "Privacy Shield",
+      "privacyDesc": "All slide construction occurs within your browser's sandboxed environment. No data is transmitted, cached, or stored on our infrastructure.",
+      "systemReady": "System Ready",
+      "noPreview": "No Preview Available",
+      "pro": "PRO",
+      "layoutValue": "HD 16:9",
+      "fitValue": "Contain",
+      "workerIdle": "Idle"
+    },
+    "messages": {
+      "processing": "Processing {count} files...",
+      "slidesAdded": "{count} slides added",
+      "processFailed": "Failed to process some files",
+      "exportSuccess": "Presentation exported successfully",
+      "exportFailed": "Export failed. Ensure all images are valid."
+    }
+  }
+}

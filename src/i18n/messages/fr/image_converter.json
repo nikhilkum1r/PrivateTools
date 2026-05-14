@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Studio de Conversion d'Images | 150+ Formats Supportés | SafeTools",
+      "description": "Convertissez des images entre plus de 150 formats localement dans votre navigateur. Support pour HEIC, WebP, AVIF, RAW, PDF et plus. 100 % privé."
+    },
+    "hero": {
+      "title": "Convertisseur d'Images Universel.",
+      "titleSpecific": "Convertir {from} en {to}.",
+      "description": "Convertissez des images entre plus de 150 formats localement dans votre navigateur. Zéro téléchargement vers le serveur.",
+      "descriptionSpecific": "Convertissez {from} en {to} instantanément. Traitement local axé sur la confidentialité avec zéro téléchargement.",
+      "engine": "Traitement Matériel Local",
+      "privateConverter": "Moteur de Navigateur Privé"
+    },
+    "benefits": {
+      "local": "Moteur Local",
+      "zero": "Zéro Téléchargement",
+      "no_tracking": "Pas de Suivi",
+      "fast": "Ultra Rapide",
+      "browser": "Dans le Navigateur"
+    },
+    "performance": {
+      "title": "Moteur Haute Performance",
+      "subtitle": "Traitement par Navigateur Accéléré par GPU",
+      "items": [
+        {
+          "title": "150+ Formats",
+          "description": "Support pour tout, du HEIC et RAW aux formats bitmap hérités."
+        },
+        {
+          "title": "Traitement par Lots",
+          "description": "Convertissez des centaines d'images simultanément sans atteindre les limites du serveur."
+        },
+        {
+          "title": "Qualité sans Perte",
+          "description": "Des algorithmes de rééchantillonnage avancés préservent chaque pixel de vos données d'origine."
+        },
+        {
+          "title": "OCR Local",
+          "description": "Extrayez des calques de texte pendant la conversion en utilisant des moteurs de reconnaissance intégrés."
+        },
+        {
+          "title": "Contrôle des Métadonnées",
+          "description": "Choisissez de supprimer ou de conserver les calques de données EXIF, GPS et IPTC."
+        },
+        {
+          "title": "Confidentialité du Navigateur",
+          "description": "Vos fichiers ne quittent jamais votre appareil. Architecture 100 % sécurisée prête pour le mode hors ligne."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Espace de Travail de Conversion",
+      "assets": "{count} Éléments",
+      "telemetry": "Traitement Matériel Local",
+      "savings": "Économies Actuelles",
+      "smaller": "{size} plus petit",
+      "impact": "Impact Global",
+      "saved": "{size} économisés",
+      "clear": "Vider l'espace de travail",
+      "addMore": "Ajouter des Fichiers",
+      "exportAll": "Exporter Tout (ZIP)"
+    },
+    "config": {
+      "title": "Paramètres Globaux",
+      "format": "Format Cible",
+      "selectFormat": "Sélectionner le Format",
+      "search": "Rechercher parmi 150+ formats...",
+      "quality": "Qualité & Compression",
+      "resizeW": "Redimensionner Largeur",
+      "resizeH": "Redimensionner Hauteur",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Contrôle des Métadonnées",
+      "strip": "Supprimer EXIF/GPS (Activé)",
+      "wasm": "Moteur WASM",
+      "accelerated": "Matériel Accéléré",
+      "targetSize": "Taille de Fichier Cible",
+      "limit": "Limiter à {size} Ko",
+      "optimized": "Qualité Optimisée"
+    },
+    "categories": {
+      "regular": "Formats Standard",
+      "web": "Optimisé pour le Web",
+      "modern": "Formats Nouvelle Génération",
+      "print": "Impression Professionnelle",
+      "design": "Ressources de Design",
+      "game": "Textures de Jeu",
+      "raw": "Données Caméra RAW",
+      "scientific": "Imagerie Scientifique",
+      "vector": "Graphiques Vectoriels",
+      "hdr": "Plage Dynamique Étendue (HDR)",
+      "document": "Bureau & Documents",
+      "legacy": "Formats Hérités"
+    },
+    "queue": {
+      "title": "File d'Attente de Conversion",
+      "converted": "Converti",
+      "in": "ENTRÉE",
+      "out": "SORTIE",
+      "smaller": "{percent} % plus petit",
+      "download": "Télécharger",
+      "convert": "Convertir",
+      "convert_all": "Convertir Tous les Fichiers"
+    },
+    "toast": {
+      "noProcessed": "Aucun fichier traité à télécharger.",
+      "copied": "Image copiée dans le presse-papiers !",
+      "clipboardFailed": "Échec de la copie de l'image dans le presse-papiers."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Moteur Local",
+        "zero": "Zéro Téléchargement",
+        "no_tracking": "Pas de Suivi",
+        "fast": "Ultra Rapide",
+        "browser": "Dans le Navigateur"
+      },
+      "performance": {
+        "title": "Moteur Haute Performance",
+        "subtitle": "Traitement par Navigateur Accéléré par GPU",
+        "items": [
+          {
+            "title": "150+ Formats",
+            "description": "Support pour tout, du HEIC et RAW aux formats bitmap hérités."
+          },
+          {
+            "title": "Traitement par Lots",
+            "description": "Convertissez des centaines d'images simultanément sans atteindre les limites du serveur."
+          },
+          {
+            "title": "Qualité sans Perte",
+            "description": "Des algorithmes de rééchantillonnage avancés préservent chaque pixel de vos données d'origine."
+          },
+          {
+            "title": "OCR Local",
+            "description": "Extrayez des calques de texte pendant la conversion en utilisant des moteurs de reconnaissance intégrés."
+          },
+          {
+            "title": "Contrôle des Métadonnées",
+            "description": "Choisissez de supprimer ou de conserver les calques de données EXIF, GPS et IPTC."
+          },
+          {
+            "title": "Confidentialité du Navigateur",
+            "description": "Vos fichiers ne quittent jamais votre appareil. Architecture 100 % sécurisée prête pour le mode hors ligne."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Formats Supportés",
+        "compatibility": "Matrice de Compatibilité Universelle",
+        "input": "Formats d'Entrée",
+        "output": "Formats de Sortie",
+        "freeTitle": "100 % Gratuit à Vie",
+        "freeDesc": "SafeTools est une suite d'utilitaires gratuite. Pas d'abonnement, pas de frais cachés, aucune carte de crédit requise.",
+        "optimizedTitle": "Optimisation sans Perte",
+        "optimizedDesc": "Notre moteur utilise un rééchantillonnage avancé pour garantir que vos images restent nettes même après conversion.",
+        "precisionTitle": "Précision du Navigateur",
+        "precisionDesc": "En s'exécutant localement, nous éliminons les artefacts causés par le traitement d'image basé sur le réseau.",
+        "popularTitle": "Conversions Populaires",
+        "popularSubtitle": "Traitement local instantané pour les tâches web courantes",
+        "moreFormats": "150+ Autres Formats",
+        "moreDesc": "Vous cherchez autre chose ? SafeTools supporte presque tous les formats d'image existants.",
+        "start": "Retour en haut"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Entre combien de formats puis-je convertir ?",
+            "a": "Vous pouvez convertir entre plus de 150 formats d'image, y compris les formats modernes comme WebP, AVIF et HEIC, ainsi que les formats professionnels comme les fichiers PSD, TIFF et RAW."
+          },
+          {
+            "q": "Vais-je perdre en qualité d'image lors de la conversion ?",
+            "a": "Nous utilisons des moteurs d'encodage de haute qualité. Vous pouvez ajuster manuellement les paramètres de qualité/compression pour vous assurer que votre résultat ressemble exactement à ce que vous souhaitez, que vous optimisiez pour le Web ou pour l'impression."
+          },
+          {
+            "q": "Puis-je convertir des photos HEIC de mon iPhone en JPG ?",
+            "a": "Oui ! Notre convertisseur est parfait pour transformer les fichiers HEIC en formats JPG ou PNG largement compatibles directement dans votre navigateur sans les télécharger sur un serveur."
+          },
+          {
+            "q": "Y a-t-il une limite au nombre de fichiers que je peux convertir ?",
+            "a": "Non. Vous pouvez convertir autant de fichiers que vous le souhaitez, un par un ou par lots, tout à fait gratuitement."
+          }
+        ],
+        "title": "Foire Aux Questions",
+        "description": "Tout ce que vous devez savoir sur notre outil axé sur la confidentialité."
+      }
+    }
+  }
+}

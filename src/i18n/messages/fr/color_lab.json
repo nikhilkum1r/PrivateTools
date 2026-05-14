@@ -1,0 +1,280 @@
+{
+  "colorLab": {
+    "seo": {
+      "title": "Color Lab | Extraire les couleurs d'une image | SafeTools",
+      "description": "Extrayez des palettes de couleurs professionnelles, HEX, RGB et HSL de n'importe quelle image localement dans votre navigateur. 100% privé.",
+      "keywords": [
+        "extracteur de couleur",
+        "générateur de palette d'image",
+        "hex d'image",
+        "extraire couleurs",
+        "outil de design"
+      ],
+      "ogTitle": "SafeTools Color Lab | Extraire des palettes localement",
+      "ogDescription": "Extrayez des palettes de couleurs professionnelles de vos images sans aucun téléchargement sur serveur.",
+      "structuredName": "SafeTools Color Lab",
+      "structuredDesc": "Un studio professionnel d'extraction de couleurs et de génération de palettes."
+    },
+    "badge": "Moteur de Couleur Neuronal",
+    "title": "Laboratoire",
+    "titleSecondary": "de Couleur",
+    "description": "Extrayez des palettes de couleurs professionnelles, des rapports de contraste et des harmonies de design directement depuis vos images. 100% privé.",
+    "extractNow": "Extraire Palette",
+    "uploadImage": "Charger Asset",
+    "heroBadges": [
+      "100% Privé",
+      "Traitement Local",
+      "Zéro Suivi",
+      "Chargement Instantané",
+      "Multiplateforme"
+    ],
+    "features": {
+      "title": "Fonctionnalités du Studio",
+      "items": [
+        {
+          "title": "Extraction Neuronale",
+          "desc": "Algorithmes avancés de clustering de pixels pour trouver les couleurs dominantes."
+        },
+        {
+          "title": "Logique Harmonique",
+          "desc": "Générez des harmonies triadiques, analogues et complémentaires."
+        },
+        {
+          "title": "Analyse de Contraste",
+          "desc": "Vérifications d'accessibilité WCAG 2.1 pour la lisibilité du texte."
+        },
+        {
+          "title": "Exportation en Masse",
+          "desc": "Exportez vos palettes sous forme de bundles CSS, SCSS ou JSON."
+        }
+      ]
+    },
+    "tool": {
+      "title": "Espace de Travail",
+      "engine": "Accélération WASM SIMD 128 bits",
+      "dropzoneTitle": "Déposez l'image pour analyser",
+      "dropzoneDesc": "JPEG, PNG, WebP, AVIF supportés",
+      "precision": "Densité d'Échantillonnage",
+      "mood": "Ambiance Détectée",
+      "pickCustom": "Choisir Couleur Personnalisée",
+      "regenerate": "Régénérer Palette",
+      "paletteTitle": "Pile de Couleurs",
+      "swatches": "Échantillons Extraits",
+      "export": "Exporter Palette",
+      "harmony": "Harmonies",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "types": {
+        "dominant": "Dominante",
+        "vibrant": "Vibrante",
+        "muted": "Atténuée",
+        "accent": "Accent"
+      },
+      "noEyeDropper": "Votre navigateur ne supporte pas l'API EyeDropper.",
+      "alreadyInPalette": "Cette couleur est déjà dans votre palette.",
+      "addedCustom": "Ajouté {hex} à la palette",
+      "exportedAs": "Palette exportée au format {format}"
+    },
+    "contrast": {
+      "title": "WCAG",
+      "white": "B",
+      "black": "N",
+      "pass": "SUCCÈS",
+      "fail": "ÉCHEC"
+    },
+    "harmonies": {
+      "comp": "Comp",
+      "triadicA": "Tri A",
+      "triadicB": "Tri B",
+      "analogous": "Analo"
+    },
+    "moods": {
+      "ethereal": "Éthéré",
+      "moody": "Sombre",
+      "balanced": "Équilibré"
+    },
+    "personas": {
+      "title": "Pour qui est-ce ?",
+      "subtitle": "Des outils professionnels pour chaque flux de travail créatif.",
+      "items": [
+        {
+          "title": "Designers UI/UX",
+          "points": [
+            "Vérifications d'accessibilité",
+            "Intégration Tailwind",
+            "Rapports de contraste"
+          ]
+        },
+        {
+          "title": "Identité de Marque",
+          "points": [
+            "Détection d'ambiance",
+            "Exportation de palettes",
+            "Échelles harmoniques"
+          ]
+        },
+        {
+          "title": "Développeurs",
+          "points": [
+            "Variables CSS/SCSS",
+            "Bundles JSON",
+            "HEX/RGB/HSL"
+          ]
+        }
+      ]
+    },
+    "educational": {
+      "howTo": {
+        "title": "Comment extraire les couleurs",
+        "description": "Téléchargez simplement votre image dans notre studio. Notre moteur local analyse chaque pixel pour les regrouper dans une palette significative.",
+        "description2": "Vous pouvez ensuite ajuster la densité d'échantillonnage pour trouver des accents plus subtils ou vous en tenir aux thèmes dominants.",
+        "steps": [
+          "Charger l'asset haute résolution",
+          "Ajuster l'échantillonnage neuronal",
+          "Choisir des accents personnalisés",
+          "Exporter pour la production"
+        ],
+        "precisionTitle": "Précision Neuronale",
+        "precisionDesc": "Notre moteur utilise un algorithme de clustering propriétaire qui équilibre performance et précision."
+      },
+      "formats": {
+        "title": "Formats de Couleur",
+        "subtitle": "Nous supportons tous les principaux formats standards de l'industrie.",
+        "items": [
+          {
+            "title": "Codes HEX",
+            "desc": "Codes hexadécimaux standards à 6 chiffres pour le web et le design."
+          },
+          {
+            "title": "Valeurs RGB",
+            "desc": "Valeurs des canaux Rouge, Vert, Bleu pour le rendu sur écran."
+          },
+          {
+            "title": "Échelles HSL",
+            "desc": "Teinte, Saturation et Luminosité pour des ajustements intuitifs."
+          },
+          {
+            "title": "CMJN",
+            "desc": "Cyan, Magenta, Jaune et Noir pour l'impression professionnelle."
+          }
+        ]
+      },
+      "accessibility": {
+        "title": "Accessibilité d'abord",
+        "description": "Nous calculons automatiquement les rapports de contraste WCAG 2.1 pour garantir que vos designs sont inclusifs et lisibles.",
+        "labels": [
+          "Design Inclusif",
+          "WCAG 2.1",
+          "Contraste Élevé"
+        ],
+        "aaPassed": "AA Réussi",
+        "standard": "Règles d'Accessibilité des Contenus Web"
+      },
+      "gradients": {
+        "title": "Gradients Dynamiques",
+        "description": "Convertissez votre palette extraite en dégradés CSS linéaires et radiaux en un clic."
+      }
+    },
+    "tailwind": {
+      "title": "Moteur Tailwind",
+      "subtitle": "Expérience Développeur",
+      "badge": "Prêt pour Next.js",
+      "description": "Objets de couleur parfaitement formatés pour votre tailwind.config.js.",
+      "items": [
+        "Config prête",
+        "Extension de thème",
+        "Mappage de variables"
+      ]
+    },
+    "comparison": {
+      "title": "Pourquoi Color Lab ?",
+      "subtitle": "L'outil de couleur le plus privé du web.",
+      "header": [
+        "Fonctionnalité",
+        "SafeTools",
+        "Outils en ligne"
+      ],
+      "rows": [
+        [
+          "Confidentialité",
+          "100% Local",
+          "Upload Cloud"
+        ],
+        [
+          "Accessibilité",
+          "WCAG intégré",
+          "Aucune"
+        ],
+        [
+          "Vitesse",
+          "Instantané",
+          "Latence"
+        ]
+      ]
+    },
+    "useCases": {
+      "items": [
+        {
+          "title": "Design Web",
+          "desc": "Thèmes de Couleur UI/UX"
+        },
+        {
+          "title": "Branding",
+          "desc": "Palettes d'Identité de Marque"
+        },
+        {
+          "title": "Développement",
+          "desc": "Configuration Tailwind"
+        },
+        {
+          "title": "Impression",
+          "desc": "Prêt pour l'Impression CMJN"
+        },
+        {
+          "title": "Photographie",
+          "desc": "Mood Boards"
+        },
+        {
+          "title": "Illustration",
+          "desc": "Harmonies Artistiques"
+        }
+      ]
+    },
+    "dynamicBackgrounds": "Hub Dynamique",
+    "faq": {
+      "title": "FAQ Color Lab",
+      "subtitle": "Questions fréquentes sur notre moteur d'extraction local.",
+      "items": [
+        {
+          "q": "Le sélecteur de couleur d'image est-il gratuit ?",
+          "a": "Oui, l'outil est entièrement gratuit, sans frais cachés ni limites."
+        },
+        {
+          "q": "Mes images sont-elles téléchargées sur des serveurs ?",
+          "a": "Non. Tout le traitement se fait localement dans votre navigateur via l'API Canvas. Vos images ne quittent jamais votre appareil."
+        },
+        {
+          "q": "Quels formats d'image sont supportés ?",
+          "a": "Nous supportons PNG, JPG, JPEG, WEBP, GIF, SVG, AVIF, BMP, ICO et plus."
+        },
+        {
+          "q": "Puis-je exporter des couleurs pour Tailwind CSS ?",
+          "a": "Oui. Notre outil vous permet d'exporter instantanément les palettes générées dans des objets de configuration Tailwind ou des variables CSS."
+        },
+        {
+          "q": "L'outil fonctionne-t-il sur les appareils mobiles ?",
+          "a": "Oui. L'outil est entièrement réactif et optimisé pour les navigateurs mobiles, vous permettant d'extraire des couleurs de votre galerie ou de votre appareil photo."
+        },
+        {
+          "q": "Puis-je utiliser les palettes extraites commercialement ?",
+          "a": "Absolument. Toute palette générée avec SafeTools peut être utilisée dans des projets personnels ou commerciaux sans attribution."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Commencer l'extraction",
+      "description": "Téléchargez votre première image pour découvrir sa palette de couleurs cachée.",
+      "button": "Lancer le Studio"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "contact": {
+    "hero": {
+      "badge": "Direct Intelligence",
+      "title": "Contact the <br></br> <span class=\"text-primary\">Studio Team.",
+      "subtitle": "Have feature requests, architectural questions, or security concerns? Reach out directly."
+    },
+    "channels": {
+      "title": "Communication Channels",
+      "subtitle": "We monitor these protocols for community feedback, security disclosures, and architectural contributions.",
+      "github": "nikhilkum1r",
+      "twitter": "@SafeTools",
+      "email": "support@safetools.space",
+      "support": "Live Portal"
+    },
+    "security": {
+      "label": "Encryption Note",
+      "note": "Messages sent via this form are processed via standard HTTPS encryption. For highly sensitive security disclosures, we recommend using our <strong>Secure Notes</strong> tool with self-destruction enabled."
+    },
+    "form": {
+      "title": "Secure Message",
+      "subtitle": "Transmit your inquiries directly to the engineering team.",
+      "name": "姓名",
+      "email": "电子邮件",
+      "subject": "主题",
+      "message": "留言",
+      "placeholders": {
+        "name": "Nikhil Kumar",
+        "email": "nikhil@safetools.space",
+        "subject": "e.g., Security Audit, Feature Request",
+        "message": "How can we improve the SafeTools ecosystem for your workflow?"
+      },
+      "submit": "发送留言"
+    },
+    "faq": {
+      "badge": "Knowledge Base",
+      "title": "Frequent Inquiries",
+      "subtitle": "Before reaching out, check our intelligence hub for instant answers to common architectural and security questions.",
+      "button": "Browse FAQ Hub"
+    },
+    "seo": {
+      "title": "Contact Us | SafeTools Support & Inquiry",
+      "description": "Reach out to the SafeTools team. Whether you have feature requests, architectural questions, or security concerns, we're here to help."
+    },
+    "title": "联系我们",
+    "description": "有什么问题或想给我们提供反馈吗？我们很乐意听取您的意见。",
+    "info": {
+      "email": "电子邮件：support@safetools.com",
+      "social": "在社交媒体上关注我们"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "about": {
+    "seo": {
+      "title": "À propos de SafeTools | Notre mission pour la confidentialité numérique",
+      "description": "Découvrez la mission, le manifeste et la technologie derrière SafeTools, la boîte à outils sans serveur conçue pour protéger votre souveraineté numérique."
+    },
+    "toc": {
+      "manifesto": "Le Manifeste",
+      "trust": "Signaux de confiance",
+      "pillars": "Piliers fondamentaux",
+      "tech": "Stack technique"
+    },
+    "manifesto": {
+      "badge": "Notre Manifeste",
+      "title": "La vie privée est un droit humain.",
+      "description": "SafeTools a été créé pour combler le fossé entre les utilitaires professionnels puissants et la souveraineté absolue des données. Nous pensons que vous ne devriez pas avoir à sacrifier votre identité pour une conversion PDF ou un transcodage vidéo."
+    },
+    "trustSignals": [
+      {
+        "label": "Conforme au RGPD",
+        "value": "Par architecture"
+      },
+      {
+        "label": "Sécurité vérifiée",
+        "value": "Local uniquement"
+      },
+      {
+        "label": "Standards ouverts",
+        "value": "Moteurs vérifiés"
+      },
+      {
+        "label": "Modèle de menace",
+        "value": "Zéro accès"
+      }
+    ],
+    "pillars": {
+      "zeroServer": {
+        "title": "Politique zéro serveur",
+        "description": "Vos fichiers ne sont jamais téléchargés. Nous traitons tout localement dans votre navigateur en utilisant WebAssembly et le JS côté client. Cela garantit une véritable souveraineté des données."
+      },
+      "noPersistence": {
+        "title": "Pas de persistance des données",
+        "description": "Une fois l'onglet fermé, votre session et vos fichiers sont purgés de la mémoire. Nous n'utilisons ni base de données ni journaux côté serveur. Votre espace de travail est temporaire et sécurisé."
+      },
+      "identityProtection": {
+        "title": "Protection de l'identité",
+        "description": "Pas de traçage, pas d'analyse et pas de fingerprinting. Nous ne savons même pas que vous êtes là, et c'est très bien ainsi. Nous privilégions l'anonymat aux métriques."
+      }
+    },
+    "engine": {
+      "badge": "Le Moteur",
+      "title": "Performance matérielle. Latence serveur nulle.",
+      "description": "Nous utilisons des technologies de navigation de pointe pour déplacer la puissance de traitement du cloud vers votre processeur et votre carte graphique locaux. Grâce à WebAssembly (WASM), nous exécutons des binaires C++ et Rust haute performance directement dans le moteur V8 de votre navigateur.",
+      "items": [
+        {
+          "name": "ffmpeg.wasm",
+          "desc": "Encodage vidéo et audio professionnel dans le navigateur."
+        },
+        {
+          "name": "pdf-lib",
+          "desc": "Manipulation de documents haute fidélité."
+        },
+        {
+          "name": "ONNX Runtime",
+          "desc": "IA côté client pour l'upscaling d'images et l'OCR."
+        },
+        {
+          "name": "WebAssembly",
+          "desc": "Performance native via des binaires haute vitesse."
+        }
+      ]
+    },
+    "metrics": {
+      "title": "Mesures de performance",
+      "subtitle": "Moteur de calcul local v4.0",
+      "items": [
+        {
+          "label": "Risque de fuite de données",
+          "value": "0%"
+        },
+        {
+          "label": "Vitesse de traitement",
+          "value": "Native"
+        },
+        {
+          "label": "Dépendance au Cloud",
+          "value": "Aucune"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à prendre le contrôle ?",
+      "description": "Explorez notre suite complète d'utilitaires professionnels et découvrez la puissance du traitement de fichiers privé et localisé."
+    }
+  }
+}

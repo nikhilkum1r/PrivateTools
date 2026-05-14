@@ -1,0 +1,178 @@
+{
+  "hero": {
+    "badge": "Centro de Utilitários Infinito",
+    "title": "O Diretório <br></br> <span>de Ferramentas.</span>",
+    "search": "Pesquise mais de 150 ferramentas locais..."
+  },
+  "categories": {
+    "ai": {
+      "name": "Inteligência IA",
+      "subtitle": "Motor de Processamento Neuronal Local",
+      "tools": {
+        "lab": {
+          "name": "Laboratório IA",
+          "desc": "Aceda a modelos de IA locais experimentais para várias tarefas."
+        },
+        "background": {
+          "name": "Extrator de Sujeito",
+          "desc": "Remoção de fundo de precisão utilizando modelos ONNX locais."
+        },
+        "ocr": {
+          "name": "Reconhecimento Ótico de Caracteres",
+          "desc": "Extraia texto de qualquer imagem ou documento instantaneamente."
+        },
+        "upscale": {
+          "name": "Upscaler Neuronal",
+          "desc": "Escalonamento de super-resolução para ativos de baixa qualidade."
+        },
+        "restore": {
+          "name": "Restauração de Rosto",
+          "desc": "Melhore e repare retratos antigos ou desfocados localmente."
+        }
+      }
+    },
+    "security": {
+      "name": "Cofre de Segurança",
+      "subtitle": "Proteção de Nível Militar",
+      "tools": {
+        "vault": {
+          "name": "Cofre Seguro",
+          "desc": "Armazenamento de ficheiros privados com chaves bloqueadas por hardware."
+        },
+        "steganography": {
+          "name": "Imagem Secreta",
+          "desc": "Esconda dados sensíveis dentro de imagens de aparência inocente."
+        },
+        "shredder": {
+          "name": "Destruidor de Ficheiros",
+          "desc": "Sobrescreva ficheiros permanentemente para além da recuperação."
+        },
+        "generator": {
+          "name": "Gerador de Chaves",
+          "desc": "Crie palavras-passe e chaves de segurança de alta entropia."
+        }
+      }
+    },
+    "dev": {
+      "name": "Suite de Programador",
+      "subtitle": "Ferramentas de Engenharia de Alta Eficiência",
+      "tools": {
+        "json": {
+          "name": "Estúdio JSON",
+          "desc": "Formate, valide e minifique dados JSON."
+        },
+        "base64": {
+          "name": "Motor Base64",
+          "desc": "Codifique e descodifique ficheiros e strings de forma segura."
+        },
+        "case": {
+          "name": "Conversor de Letras",
+          "desc": "Transforme texto entre todas as convenções de programação."
+        },
+        "qr": {
+          "name": "Gerador de QR",
+          "desc": "Crie códigos QR seguros e sem rastreio para quaisquer dados."
+        }
+      }
+    },
+    "creative": {
+      "name": "Estúdio de Imagem",
+      "subtitle": "Fluxos de Trabalho Visuais Profissionais",
+      "tools": {
+        "editor": {
+          "name": "Editor de Imagem",
+          "desc": "Suite de edição profissional local-first com camadas."
+        },
+        "converter": {
+          "name": "Conversor de Formato",
+          "desc": "Conversão em lote entre HEIC, WEBP, PNG e mais."
+        },
+        "compress": {
+          "name": "Compressor de Imagem",
+          "desc": "Reduza o tamanho do ficheiro preservando a fidelidade visual."
+        },
+        "pptx": {
+          "name": "Imagem para PPTX",
+          "desc": "Crie apresentações profissionais a partir de conjuntos de imagens."
+        },
+        "stripper": {
+          "name": "Removedor de Privacidade",
+          "desc": "Remova metadados EXIF, GPS e de câmara ocultos."
+        }
+      }
+    },
+    "documents": {
+      "name": "Mestre PDF",
+      "subtitle": "Processamento Avançado de Documentos",
+      "tools": {
+        "compressor": {
+          "name": "Compressor PDF",
+          "desc": "Otimize o tamanho do documento para e-mail e armazenamento."
+        },
+        "merger": {
+          "name": "Fusão de PDF",
+          "desc": "Combine múltiplos documentos num único ficheiro."
+        },
+        "splitter": {
+          "name": "Divisor de PDF",
+          "desc": "Extraia páginas ou divida documentos em ficheiros separados."
+        },
+        "protect": {
+          "name": "Encriptação PDF",
+          "desc": "Proteja os seus documentos com encriptação AES local."
+        },
+        "unlock": {
+          "name": "Desbloqueador de PDF",
+          "desc": "Remova palavras-passe de documentos autorizados."
+        }
+      }
+    },
+    "media": {
+      "name": "Estúdio de Vídeo",
+      "subtitle": "Motor de Média de Alto Desempenho",
+      "tools": {
+        "studio": {
+          "name": "Estúdio de Vídeo",
+          "desc": "Um ambiente abrangente de edição de vídeo local."
+        },
+        "compress": {
+          "name": "Compressor de Vídeo",
+          "desc": "Otimize ficheiros de vídeo para partilha na web localmente."
+        },
+        "gif": {
+          "name": "Criador de GIF",
+          "desc": "Converta segmentos de vídeo em GIFs otimizados."
+        },
+        "audio": {
+          "name": "Estúdio de Áudio",
+          "desc": "Masterize, corte e converta ficheiros de áudio localmente."
+        },
+        "video": {
+          "name": "Estúdio de Vídeo",
+          "desc": "Um ambiente abrangente de edição de vídeo local."
+        }
+      }
+    }
+  },
+  "stats": {
+    "toolsAvailable": "{count} Ferramentas Ativas",
+    "launch": "Lançar Estúdio"
+  },
+  "noResults": {
+    "title": "Falha na pesquisa: \"{search}\"",
+    "subtitle": "O nosso motor neuronal não conseguiu encontrar uma ferramenta correspondente neste setor.",
+    "button": "Solicitar Implementação"
+  },
+  "cta": {
+    "title": "Expandir o Motor?",
+    "description": "O SafeTools é construído pela comunidade. Se precisar de um utilitário local-first específico, a nossa equipa de engenharia está pronta para ouvir.",
+    "button": "Junte-se ao Desenvolvimento"
+  },
+  "seo": {
+    "title": "Diretório de Ferramentas | Mais de 150 Utilitários de Privacidade Local-First | SafeTools",
+    "description": "O diretório completo de utilitários SafeTools. Ferramentas profissionais de imagem, vídeo, PDF e segurança que funcionam 100% no seu navegador.",
+    "keywords": "ferramentas locais, apps web privadas, utilitários wasm, editor de imagem seguro, estúdio de vídeo local, ferramentas pdf sem upload",
+    "ogTitle": "Diretório de Ferramentas | Mais de 150 Utilitários de Privacidade Local-First | SafeTools",
+    "ogDescription": "O diretório completo de utilitários SafeTools. Ferramentas profissionais de imagem, vídeo, PDF e segurança que funcionam 100% no seu navegador."
+  }
+}

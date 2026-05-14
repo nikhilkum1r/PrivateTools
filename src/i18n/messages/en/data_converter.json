@@ -1,0 +1,95 @@
+{
+  "dataConverter": {
+    "seo": {
+      "title": "Data Converter | SafeTools - Secure Multi-Format Transformation",
+      "description": "Convert data instantly between multiple developer and data formats including JSON, XML, CSV, Base64, HEX, URL encoding, and more with a secure browser-based converter."
+    },
+    "hero": {
+      "title": "Data Converter.",
+      "subtitle": "Convert data instantly between multiple developer and data formats including JSON, XML, CSV, Base64, HEX, URL encoding, and more with a secure browser-based converter."
+    },
+    "mode_label": "Conversion Mode",
+    "modes": {
+      "json-to-csv": "JSON to CSV",
+      "csv-to-json": "CSV to JSON",
+      "json-to-xml": "JSON to XML",
+      "base64-encode": "Base64 Encode",
+      "base64-decode": "Base64 Decode",
+      "url-encode": "URL Encode",
+      "url-decode": "URL Decode",
+      "hex-encode": "HEX Encode",
+      "hex-decode": "HEX Decode"
+    },
+    "input_label": "Input Source",
+    "output_label": "Output Result",
+    "placeholder": "Paste your data here...",
+    "button": "CONVERT DATA INSTANTLY",
+    "messages": {
+      "empty": "Please provide input data.",
+      "success": "Conversion successful!",
+      "error": "Invalid format: {error}",
+      "copied": "Copied to clipboard!"
+    },
+    "waiting": "Awaiting Conversion",
+    "trust": [
+      {
+        "label": "Privacy-First"
+      },
+      {
+        "label": "Instant Output"
+      },
+      {
+        "label": "No Uploads"
+      },
+      {
+        "label": "Developer Ready"
+      }
+    ],
+    "faq": {
+      "items": [
+        {
+          "q": "Are my data conversions private?",
+          "a": "Yes. All processing happens locally in your browser. Your data is never sent to any server. This makes SafeTools ideal for processing sensitive API responses, config files, or proprietary data structures."
+        },
+        {
+          "q": "Which formats are supported?",
+          "a": "We currently support JSON, CSV, XML, Base64, HEX, and URL encoding/decoding. We are constantly expanding our matrix to include more developer-centric formats."
+        },
+        {
+          "q": "Can I use this for large datasets?",
+          "a": "Yes. Our engine is optimized for performance. However, because it runs entirely in your browser's memory, the maximum file size depends on your device's available RAM."
+        },
+        {
+          "q": "Does it support nested JSON to CSV?",
+          "a": "Currently, the JSON-to-CSV converter handles flat arrays of objects. For deeply nested structures, we recommend flattening your data before conversion for optimal results."
+        },
+        {
+          "q": "Is this tool open source?",
+          "a": "SafeTools is built on open standards. Our logic uses standard browser APIs and WASM-optimized libraries to ensure transparency and security."
+        }
+      ]
+    },
+    "related": [
+      {
+        "name": "JSON Formatter",
+        "href": "/devtools/json-formatter"
+      },
+      {
+        "name": "JWT Decoder",
+        "href": "/devtools/jwt-decoder"
+      },
+      {
+        "name": "SQL Formatter",
+        "href": "/devtools/sql-formatter"
+      },
+      {
+        "name": "Base64 Suite",
+        "href": "/devtools/base64"
+      },
+      {
+        "name": "Regex Tester",
+        "href": "/devtools/regex"
+      }
+    ]
+  }
+}

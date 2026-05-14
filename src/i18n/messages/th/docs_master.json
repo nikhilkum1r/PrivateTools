@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "title": "Docs <highlight>Master</highlight> Pro",
+    "subtitle": "Open, view, and edit any document format privately in your browser. No uploads. No accounts. 100% WebAssembly-powered.",
+    "dropzone": "Supports DOCX, XLSX, PDF, PPTX, CSV, JSON, XML, HTML, MD, TXT, RTF, ODT & more",
+    "badges": {
+      "privacy": "Zero-Upload Privacy",
+      "engine": "WASM Engine",
+      "formats": "20+ Formats"
+    }
+  },
+  "landing": {
+    "formats": {
+      "title": "Universal Format Support",
+      "subtitle": "Every major document format, rendered with pixel-perfect fidelity",
+      "groups": [
+        "Word Processing",
+        "Spreadsheets",
+        "Presentations",
+        "Documents & Code"
+      ]
+    },
+    "features": {
+      "title": "Why Choose Docs Master?",
+      "subtitle": "Professional-grade document intelligence without sacrificing privacy.",
+      "items": [
+        {
+          "title": "Zero-Upload Privacy",
+          "desc": "Documents are processed 100% locally in your browser using WebAssembly. Your files never leave your device."
+        },
+        {
+          "title": "Blazing Fast WASM Engine",
+          "desc": "Hardware-accelerated WebAssembly rendering for instant document parsing, even for large, complex files."
+        },
+        {
+          "title": "High-Fidelity Preview",
+          "desc": "Pixel-perfect rendering for DOCX, XLSX tables, PPTX slides, and native PDF embedding with zoom controls."
+        },
+        {
+          "title": "Live Spreadsheet Editing",
+          "desc": "Edit XLSX and CSV cells directly in-browser and export the updated file without needing Microsoft Office."
+        },
+        {
+          "title": "Metadata Scrubbing",
+          "desc": "Strip author, editor history, and personal metadata from documents before sharing for maximum privacy."
+        },
+        {
+          "title": "Extract & Export",
+          "desc": "Extract individual PDF pages, export edited spreadsheets, and download original files — all offline."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Open any document in three simple steps",
+      "steps": [
+        {
+          "title": "Drop Your File",
+          "desc": "Drag & drop or click to upload any supported document format."
+        },
+        {
+          "title": "Instant Analysis",
+          "desc": "The WASM engine parses and renders your document with full fidelity."
+        },
+        {
+          "title": "View, Edit & Export",
+          "desc": "Browse, search, edit cells, and export — all in-browser, all private."
+        }
+      ]
+    },
+    "professional": {
+      "title": "Built for Every Professional",
+      "desc": "Whether you're reviewing legal contracts, analyzing financial spreadsheets, or presenting to clients — Docs Master handles it all without ever sending your sensitive data to a third-party server.",
+      "useCases": [
+        "Legal document review",
+        "Financial spreadsheet analysis",
+        "Academic paper reading",
+        "Client presentation prep",
+        "Code file inspection",
+        "Data export & conversion",
+        "Privacy-first archiving",
+        "Secure metadata removal"
+      ],
+      "stats": [
+        {
+          "title": "Works Everywhere",
+          "desc": "Any modern browser, any OS, no install needed."
+        },
+        {
+          "title": "Data Stays Local",
+          "desc": "Zero-server WASM processing keeps files on-device."
+        },
+        {
+          "title": "Instant Load",
+          "desc": "WASM engines spin up in milliseconds."
+        },
+        {
+          "title": "Rich Rendering",
+          "desc": "Images, tables, fonts — all faithfully reproduced."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about Docs Master Pro",
+      "items": [
+        {
+          "q": "Is my document uploaded to a server?",
+          "a": "No. Docs Master Pro uses WebAssembly (WASM) engines to process everything locally in your browser's memory. Your files never leave your device — there are zero server uploads."
+        },
+        {
+          "q": "Which file formats are supported?",
+          "a": "The tool supports DOCX, DOC, RTF, ODT, TXT, MD (Word), XLSX, XLS, CSV, ODS (Spreadsheets), PPTX, PPT, ODP (Presentations), PDF, JSON, XML, and HTML files."
+        },
+        {
+          "q": "Can I edit documents directly in the browser?",
+          "a": "Yes! XLSX and CSV files can be edited cell-by-cell with a built-in spreadsheet editor. DOCX documents have a rich-text editing mode that lets you modify content and print or save."
+        },
+        {
+          "q": "How does metadata scrubbing work?",
+          "a": "When you enable the 'Scrub Metadata' toggle, the tool replaces author names, creation timestamps, editor history, and other personal identifiers from the exported file."
+        },
+        {
+          "q": "Can I extract specific pages from a PDF?",
+          "a": "Yes. Use the PDF Page Extractor in the sidebar to specify which page you want, and the tool will export a single-page PDF using the pdf-lib WASM engine."
+        },
+        {
+          "q": "Does this work on mobile devices?",
+          "a": "Yes. Docs Master is fully responsive and works on modern Android and iOS browsers, though the spreadsheet editor is best experienced on a larger screen."
+        }
+      ]
+    }
+  },
+  "inspector": {
+    "title": "Doc Inspector",
+    "version": "Universal Engine v2.0",
+    "engine": "{type} ENGINE",
+    "identity": {
+      "title": "File Identity",
+      "name": "Name",
+      "size": "Size"
+    },
+    "controls": {
+      "title": "Master Controls",
+      "saveSpreadsheet": "Save Spreadsheet",
+      "saveText": "Save Extracted Text",
+      "enableEdit": "Enable Edit Mode",
+      "disableEdit": "Disable Edit Mode",
+      "print": "Print / Save as PDF",
+      "exportOriginal": "Export Original",
+      "loadDifferent": "Load Different"
+    }
+  },
+  "manipulation": {
+    "pdf": {
+      "title": "PDF Manipulation",
+      "target": "Target Page",
+      "extract": "EXTRACT",
+      "tip": "PRO TIP: This tool creates a fresh 1-page PDF using only the selected buffer."
+    },
+    "docx": {
+      "title": "Word Rendering Core",
+      "legacy": "Legacy Support",
+      "enabled": "ENABLED",
+      "disabled": "DISABLED",
+      "tip": "Enable this if the document fails to render or contains complex structural elements."
+    }
+  },
+  "config": {
+    "title": "Studio Config",
+    "scrub": {
+      "title": "Privacy Scrub",
+      "desc": "Strip EXIF & Identity"
+    },
+    "dark": {
+      "title": "Studio Dark",
+      "desc": "Toggle Viewer Theme"
+    },
+    "guard": {
+      "title": "Privacy Guard",
+      "desc": "Document is processed entirely in your browser. No data ever reaches any server."
+    }
+  },
+  "viewer": {
+    "tabs": {
+      "preview": "Visual Preview",
+      "data": "Raw Structure"
+    },
+    "processing": "100% Local Processing",
+    "stats": {
+      "size": "File Size",
+      "format": "Format",
+      "stability": "Stability",
+      "engine": "Engine",
+      "verified": "Verified",
+      "wasm": "WASM v2.0"
+    },
+    "subtitles": {
+      "sheet": "Sheet: {name}",
+      "pdf": "Document View",
+      "universal": "Universal Preview"
+    },
+    "controls": {
+      "search": "Search document...",
+      "visual": "Visual Mode",
+      "structural": "Structural Mode"
+    },
+    "fallback": {
+      "active": "Smart Fallback Active: This document is rendered using a semantic parser to handle complex structures.",
+      "switch": "Switched to secondary rendering engine for compatibility.",
+      "failure": "Critical Engine Failure: This document is encrypted or fundamentally corrupted.",
+      "totalFailure": "All rendering engines failed to parse this document."
+    },
+    "pptxFailure": "Visual Engine Failure: Could not render slides. Check Raw Structure tab.",
+    "pptxTotalFailure": "Failed to render presentation visually.",
+    "initialized": "{type} Engine Initialized",
+    "placeholder": "Enter content here...",
+    "structuralHeader": "Structural Metadata Analysis",
+    "structuralFooter": "Engine analysis complete. Memory address: {address}"
+  }
+}

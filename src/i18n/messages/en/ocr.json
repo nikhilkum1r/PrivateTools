@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Free Online OCR Tool | Extract Text From Images & PDFs | SafeTools",
+      "description": "Extract text from images, screenshots, and PDFs instantly with our free privacy-first OCR tool. Fast AI-powered text recognition with zero uploads.",
+      "keywords": "OCR online free, image to text converter, extract text from image, OCR PDF tool, screenshot text extractor, handwriting OCR, scanned document OCR, free OCR software, AI OCR tool, browser based OCR, optical character recognition, image to editable text, PDF OCR online, multilingual OCR, OCR without upload",
+      "ogTitle": "SafeTools OCR | Free Online OCR Tool - Extract Text From Images Instantly",
+      "ogDescription": "Convert images, scanned documents, screenshots, handwritten notes, and PDFs into editable text using our privacy-first browser-based OCR tool. Fast, accurate, and completely free."
+    },
+    "hero": {
+      "badge": "Privacy-First AI Intelligence",
+      "title": "Free Online OCR Tool  Extract Text Instantly",
+      "description": "Convert images, scanned documents, screenshots, handwritten notes, and PDFs into editable text using our privacy-first browser-based OCR tool. Fast, accurate, and completely free.",
+      "extractNow": "Extract Text Now",
+      "uploadImage": "Upload Image",
+      "tryDemo": "Try OCR Demo",
+      "badges": {
+        "private": "100% Private",
+        "browser": "Browser-Based",
+        "noUpload": "No Upload Required",
+        "ai": "AI-Powered",
+        "free": "Free Forever"
+      }
+    },
+    "workspace": {
+      "source": "Source Asset",
+      "sourceSubtitle": "Image, PDF or Screenshot",
+      "clearQueue": "Clear Queue",
+      "dropzone": {
+        "title": "Drop Asset",
+        "subtitle": "JPEG, PNG, PDF, HEIC supported"
+      },
+      "engine": "Recognition Engine",
+      "start": "Start Extraction",
+      "active": "{progress}% Active",
+      "history": "Recent History",
+      "clearAll": "Clear All",
+      "copyHistory": "Copied from history!",
+      "detected": "{lang} Detected",
+      "matrix": "Extracted Matrix",
+      "matrixSubtitle": "Editable Digital Text",
+      "words": "Words",
+      "chars": "Chars",
+      "waiting": "Waiting for Neural Feed",
+      "processing": "Processing Neural Weights",
+      "handwriting_active": "Handwriting AI Active",
+      "detected_string": "Detected String:",
+      "neural_v3": "Neural Text Extraction v3.0",
+      "config": "Configuration",
+      "configDesc": "Select your language & execute",
+      "clear": "Clear",
+      "changeFile": "Change File",
+      "extracting": "Extracting Text...",
+      "language": "Language",
+      "run": "Run OCR",
+      "result": "Extraction Result",
+      "extractionComplete": "Extraction Complete",
+      "awaitingExtraction": "Awaiting Extraction",
+      "placeholder": "Extracted text will appear here...",
+      "copy": "Copy text",
+      "copied": "Copied!"
+    },
+    "messages": {
+      "analyzing": "Analyzing via multi-script engine...",
+      "extractionSuccess": "Extracted text from {count} files!",
+      "extractionFailed": "Extraction failed. Try a clearer image.",
+      "copySuccess": "Copied to clipboard!",
+      "invalidFile": "Invalid file type ({name})",
+      "svgNotSupported": "SVG files are not supported ({name})"
+    },
+    "languages": {
+      "auto": "✨ Auto-Detect Language",
+      "eng": "English",
+      "hin": "Hindi",
+      "spa": "Spanish",
+      "fra": "French",
+      "deu": "German",
+      "ara": "Arabic",
+      "chi_sim": "Chinese (Simp)",
+      "jpn": "Japanese",
+      "kor": "Korean",
+      "ita": "Italian",
+      "por": "Portuguese",
+      "rus": "Russian",
+      "eng_hin": "English + Hindi",
+      "eng_spa": "English + Spanish",
+      "eng_fra": "English + French"
+    },
+    "landing": {
+      "intro": {
+        "title": "Extract Text From Images Online Free",
+        "content": "Optical Character Recognition (OCR) technology converts printed or handwritten text inside images into editable digital text. Our free online OCR tool helps users digitize documents, copy text from screenshots, scan printed pages, and convert handwritten notes into editable files instantly."
+      },
+      "features": {
+        "extraction": {
+          "title": "Neural Extraction",
+          "description": "Proprietary AI models designed to detect text in complex backgrounds."
+        },
+        "multilingual": {
+          "title": "Global Support",
+          "description": "Recognize text in 100+ languages including CJK and Indic scripts."
+        },
+        "secure": {
+          "title": "Enterprise Secure",
+          "description": "Military-grade privacy with zero server interaction guaranteed."
+        },
+        "offline": {
+          "title": "Offline Ready",
+          "description": "The entire OCR engine runs in your browser without internet."
+        },
+        "title": "OCR Extraction Power",
+        "title2": "Powerful AI OCR Features",
+        "subtitle": "Professional-grade text recognition for every workflow.",
+        "items": [
+          "Digitize physical documents",
+          "Copy text from YouTube/Social Media",
+          "Convert handwritten assignments",
+          "Extract data from business receipts",
+          "Process legal and medical records",
+          "Save content as Word or Text files"
+        ]
+      },
+      "formats": {
+        "title": "Supported File Formats",
+        "image": "Image Formats",
+        "doc": "Document Formats",
+        "optimized": "Optimized For",
+        "standard": "Standard Office Documents",
+        "mobileReady": "Mobile Ready",
+        "socialMedia": "Social Media Screenshots",
+        "highPrecision": "High Precision"
+      },
+      "privacy": {
+        "title": "Privacy-First OCR Processing",
+        "content": "Unlike many online OCR tools, your files are not permanently stored on our servers. We leverage client-side processing using WebAssembly, meaning the OCR engine runs directly inside your browser.",
+        "execution": {
+          "title": "Local Execution",
+          "content": "Processing happens on your RAM, not our cloud."
+        },
+        "tracking": {
+          "title": "No Tracking",
+          "content": "We don't log your files or extraction results."
+        },
+        "registration": {
+          "title": "No Registration",
+          "content": "Use the full power of AI without an account."
+        }
+      },
+      "ai": {
+        "title": "AI-Powered Recognition",
+        "content": "Advanced neural networks improve text accuracy, layout preservation, and multi-lingual support. Our engine works effectively even on noisy, blurry, or low-resolution images.",
+        "items": [
+          "Handwriting recognition and conversion",
+          "Multi-column and table detection",
+          "Auto-rotation and tilt correction",
+          "Noisy image recovery and de-blurring"
+        ]
+      },
+      "whatIs": {
+        "title": "What is OCR?",
+        "content": "OCR stands for Optical Character Recognition. It's a technology that allows software to analyze images and detect letters, numbers, and symbols to transform them into searchable and editable digital content.",
+        "how": {
+          "title": "How it works",
+          "content": "OCR software scans the pixel patterns of an image, identifies shapes as characters, and uses language models to reconstruct sentences and paragraphs."
+        },
+        "apps": {
+          "title": "Applications",
+          "content": "Widely used in business automation, digitization of archives, and assistive technologies for the visually impaired."
+        }
+      },
+      "useCases": {
+        "badge": "Workflow Integration",
+        "title": "Popular Use Cases",
+        "subtitle": "SafeTools OCR is designed for diverse workflows and professional needs.",
+        "items": [
+          {
+            "title": "Students",
+            "desc": "Convert lecture notes, textbooks, and research papers into editable study guides."
+          },
+          {
+            "title": "Businesses",
+            "desc": "Digitize contracts, invoices, and physical records for faster digital workflows."
+          },
+          {
+            "title": "Developers",
+            "desc": "Extract structured text from UI mockups, code screenshots, and documentation."
+          },
+          {
+            "title": "Researchers",
+            "desc": "Transform old scanned archives into searchable PDF documents with selectable text."
+          },
+          {
+            "title": "Content Creators",
+            "desc": "Quickly reuse text from YouTube screenshots, infographics, and memes."
+          },
+          {
+            "title": "Legal Professionals",
+            "desc": "Securely digitize sensitive case files without risk of data exposure."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Screenshot Intelligence",
+        "title": "Extract Text from Screenshots",
+        "content": "Instantly copy text from YouTube captures, Instagram posts, or Zoom presentations. No more manual typing or re-creating content from scratch.",
+        "tags": [
+          "Social Media",
+          "Webinars",
+          "UI/UX Design"
+        ]
+      },
+      "handwriting": {
+        "badge": "Pen to Pixel",
+        "title": "Handwriting Recognition",
+        "content": "Convert handwritten notes, journal entries, and whiteboards into digital text. Our AI is trained to understand varying handwriting styles and cursive scripts.",
+        "handwritingActive": "Handwriting AI Active",
+        "tags": [
+          "Journals",
+          "Assignments",
+          "Whiteboards"
+        ]
+      },
+      "export": {
+        "title": "Export in Multiple Formats",
+        "content": "Once your text is extracted, save it in the format that best fits your workflow. Copy instantly or download high-quality files.",
+        "items": [
+          "Plain Text (.TXT)",
+          "Document (.DOCX)",
+          "Structured (.JSON)",
+          "Tabular (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Ultra Fast Neural Engine",
+        "content": "Optimized using WebAssembly and GPU acceleration to ensure fast recognition even on high-resolution assets.",
+        "optimization": "Browser Optimization",
+        "accuracy": "Character Accuracy",
+        "wasm": "WebAssembly",
+        "gpu": "GPU Accelerated"
+      },
+      "manifesto": {
+        "title": "Privacy First Manifesto",
+        "description": "We believe your data is your property. Our OCR engine respects that by design.",
+        "points": [
+          "No data leaves your machine",
+          "No account required",
+          "No tracking cookies",
+          "No hidden logging"
+        ],
+        "others": {
+          "title": "Other OCR Tools",
+          "points": [
+            "Sell your data to advertisers",
+            "Require cloud uploads",
+            "Inject tracking pixels",
+            "Store your sensitive documents"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Why Choose SafeTools OCR",
+        "subtitle": "Compare us with traditional cloud-based OCR tools.",
+        "headers": [
+          "Feature",
+          "SafeTools OCR",
+          "Traditional Tools"
+        ],
+        "rows": [
+          {
+            "f": "Browser-Based",
+            "s": "Yes",
+            "t": "Limited"
+          },
+          {
+            "f": "No Upload Required",
+            "s": "Yes",
+            "t": "No"
+          },
+          {
+            "f": "AI Powered Engine",
+            "s": "Yes",
+            "t": "Sometimes"
+          },
+          {
+            "f": "Handwriting Detection",
+            "s": "Yes",
+            "t": "Limited"
+          },
+          {
+            "f": "Mobile Friendly",
+            "s": "Yes",
+            "t": "Often Poor"
+          },
+          {
+            "f": "Privacy Focused",
+            "s": "Yes",
+            "t": "No"
+          },
+          {
+            "f": "Free Forever",
+            "s": "Yes",
+            "t": "Often Limited"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Advanced OCR Utilities",
+        "subtitle": "Professional features for complex document processing.",
+        "items": [
+          {
+            "title": "Table Detection",
+            "desc": "Extract structured tables from complex financial documents."
+          },
+          {
+            "title": "Multi-Column Scan",
+            "desc": "Maintain layout for newspapers and multi-column magazines."
+          },
+          {
+            "title": "Noise Removal",
+            "desc": "Automatically clean up grainy scans for higher accuracy."
+          },
+          {
+            "title": "Auto-Rotation",
+            "desc": "Fix tilted document scans instantly during recognition."
+          },
+          {
+            "title": "Batch OCR",
+            "desc": "Process multiple image assets simultaneously in your browser."
+          },
+          {
+            "title": "Metadata Cleaning",
+            "desc": "Remove hidden tracking metadata from processed images."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Convert Images to Editable Text Instantly",
+        "description": "Extract text from screenshots, scanned documents, handwritten notes, and PDFs directly in your browser with fast privacy-first OCR technology.",
+        "button": "Start OCR Now",
+        "upload": "Upload Image"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Is the OCR tool free?",
+            "a": "Yes. The OCR tool is completely free to use without any hidden costs, watermarks, or subscription requirements."
+          },
+          {
+            "q": "Are my files uploaded to servers?",
+            "a": "No. All OCR processing happens locally in your browser using WebAssembly. Your images never leave your device, ensuring maximum privacy and security."
+          },
+          {
+            "q": "Which languages are supported?",
+            "a": "Our tool supports multiple global languages including English, Hindi, Spanish, French, German, Arabic, Chinese, Japanese, Korean, and many more."
+          },
+          {
+            "q": "Can I extract text from handwritten notes?",
+            "a": "Yes. Our AI-powered OCR engine supports handwriting recognition for notes, assignments, journals, and whiteboard content."
+          },
+          {
+            "q": "Does OCR work on PDFs?",
+            "a": "Yes. You can extract text from scanned PDFs and image-based documents by converting them into digital, editable text."
+          },
+          {
+            "q": "Can I use OCR on mobile devices?",
+            "a": "Yes. The tool is fully responsive and works on modern smartphones and tablets directly through your web browser."
+          },
+          {
+            "q": "Is registration required?",
+            "a": "No. You can start extracting text immediately without creating an account or providing any personal information."
+          }
+        ],
+        "title": "OCR FAQ",
+        "description": "Frequently asked questions about our AI-powered OCR tool."
+      },
+      "related": {
+        "title": "Explore More Tools",
+        "items": [
+          {
+            "name": "Image Editor",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Image Compressor",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Image Converter",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF to Text",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Drop Asset",
+      "description": "JPEG, PNG, PDF, HEIC supported. Max 20MB."
+    },
+    "history": {
+      "title": "Recent History",
+      "subtitle": "Access your previous extractions",
+      "clearAll": "Clear All",
+      "restore": "Restore Result"
+    }
+  }
+}

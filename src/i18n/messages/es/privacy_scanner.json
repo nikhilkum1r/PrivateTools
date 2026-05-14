@@ -1,0 +1,58 @@
+{
+  "title": "Escáner de Privacidad",
+  "description": "Auditoría integral de seguridad y anonimato del navegador. Identifique filtraciones, huellas digitales rastreables y vulnerabilidades de seguridad localmente.",
+  "hero": {
+    "title": "Protocolo",
+    "highlight": "Fantasma",
+    "subtitle": "Analice su sombra digital. Descubra cuánto saben los sitios web sobre usted.",
+    "badge": "Verificación de Anonimato",
+    "button": "Iniciar Escaneo de Privacidad",
+    "scanning": "Escaneando entorno del navegador..."
+  },
+  "metrics": {
+    "ip": "Dirección IP",
+    "location": "Filtración Geográfica",
+    "ua": "Agente de Usuario",
+    "fingerprint": "Entropía de Huella Digital",
+    "webrtc": "Filtración WebRTC",
+    "adblock": "Estado de AdBlocker",
+    "cookies": "Cookies de Terceros",
+    "tracking": "Protección de Rastreo"
+  },
+  "status": {
+    "secure": "Protegido",
+    "vulnerable": "Vulnerable",
+    "active": "Activado",
+    "inactive": "Desactivado",
+    "detected": "Detectado",
+    "clean": "Sin Filtraciones"
+  },
+  "sections": {
+    "network": "Capa de Red",
+    "identity": "Identidad y Huella Digital",
+    "defenses": "Defensas de Seguridad"
+  },
+  "advice": {
+    "title": "Guía de Fortalecimiento",
+    "vpn": "Use una VPN confiable para ocultar su IP y ubicación.",
+    "brave": "Cambie a un navegador centrado en la privacidad como Brave o Librewolf.",
+    "ublock": "Instale uBlock Origin para un bloqueo de rastreadores avanzado.",
+    "webrtc": "Desactive WebRTC para evitar filtraciones de IP local."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "¿Cómo funciona el Escáner de Privacidad?",
+        "a": "Audita el entorno de su navegador en busca de vulnerabilidades de privacidad comunes. Esto incluye la verificación de filtraciones de red (WebRTC), huellas digitales del navegador (Canvas API) y la efectividad de su protección contra el rastreo."
+      },
+      {
+        "q": "¿Qué es una filtración WebRTC?",
+        "a": "WebRTC es una tecnología para la comunicación en tiempo real. Sin embargo, a veces puede eludir las VPN y revelar su dirección IP local real. Nuestro escáner verifica si su navegador está filtrando esta información."
+      },
+      {
+        "q": "¿Qué es la huella digital del navegador?",
+        "a": "La huella digital (fingerprinting) es una técnica donde los sitios web recopilan pequeños fragmentos de datos sobre su navegador (fuentes, resolución, hardware) para crear una identificación única para usted. Esto les permite rastrearlo incluso sin cookies."
+      }
+    ]
+  }
+}

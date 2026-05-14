@@ -1,0 +1,46 @@
+{
+  "contact": {
+    "hero": {
+      "badge": "Direct Intelligence",
+      "title": "Contact the <br></br> <span class=\"text-primary\">Studio Team.",
+      "subtitle": "Have feature requests, architectural questions, or security concerns? Reach out directly."
+    },
+    "channels": {
+      "title": "Communication Channels",
+      "subtitle": "We monitor these protocols for community feedback, security disclosures, and architectural contributions.",
+      "github": "nikhilkum1r",
+      "twitter": "@SafeTools",
+      "email": "support@safetools.space",
+      "support": "Live Portal"
+    },
+    "security": {
+      "label": "Encryption Note",
+      "note": "Messages sent via this form are processed via standard HTTPS encryption. For highly sensitive security disclosures, we recommend using our <strong>Secure Notes</strong> tool with self-destruction enabled."
+    },
+    "form": {
+      "title": "Secure Message",
+      "subtitle": "Transmit your inquiries directly to the engineering team.",
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Topic of Inquiry",
+      "message": "Message Body",
+      "placeholders": {
+        "name": "Nikhil Kumar",
+        "email": "nikhil@safetools.space",
+        "subject": "e.g., Security Audit, Feature Request",
+        "message": "How can we improve the SafeTools ecosystem for your workflow?"
+      },
+      "submit": "Transmit Message"
+    },
+    "faq": {
+      "badge": "Knowledge Base",
+      "title": "Frequent Inquiries",
+      "subtitle": "Before reaching out, check our intelligence hub for instant answers to common architectural and security questions.",
+      "button": "Browse FAQ Hub"
+    },
+    "seo": {
+      "title": "Contact Us | SafeTools Support & Inquiry",
+      "description": "Reach out to the SafeTools team. Whether you have feature requests, architectural questions, or security concerns, we're here to help."
+    }
+  }
+}

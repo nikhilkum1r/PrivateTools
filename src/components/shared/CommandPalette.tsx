@@ -7,12 +7,15 @@ import { Command, ArrowRight, Clock, Heart, Search, X } from "lucide-react";
 import { tools, Tool } from "@/lib/tools-data";
 import { cn } from "@/lib/utils";
 import { useRetention } from "./RetentionProvider";
+import { useTranslations } from "next-intl";
 
-export default function CommandPalette() {
+function CommandPalette() {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const { favorites, recentTools, trackUsage } = useRetention();
+  const t = useTranslations("CommandPalette");
+  const t_tools = useTranslations("tools");
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -66,11 +69,11 @@ export default function CommandPalette() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search across 150+ tools..."
-                className="flex-1 bg-transparent border-none outline-none text-xl font-bold placeholder:opacity-30 placeholder:italic"
+                placeholder={t("searchPlaceholder")}
+                className="flex-1 bg-transparent border-none outline-none text-lg font-semibold placeholder:opacity-30"
               />
               <div className="flex items-center gap-2">
-                <div className="text-[10px] font-black uppercase tracking-widest opacity-40 px-3 py-1 rounded-lg bg-secondary/80 border border-border">ESC</div>
+                <div className="text-[10px] font-semibold uppercase tracking-wider opacity-40 px-3 py-1 rounded-lg bg-secondary/80 border border-border">ESC</div>
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-secondary rounded-full transition-colors"
@@ -86,8 +89,8 @@ export default function CommandPalette() {
                 <div className="px-2 pb-4 space-y-4">
                   {favorites.length > 0 && (
                     <div className="space-y-2">
-                      <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2 px-2 italic">
-                        <Heart className="w-3 h-3 text-pink-500 fill-pink-500" /> Favorites
+                      <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2 px-2">
+                        <Heart className="w-3 h-3 text-pink-500 fill-pink-500" /> {t("favorites")}
                       </div>
                       <div className="grid grid-cols-2 gap-2">
                         {favorites.map(href => {
@@ -106,7 +109,9 @@ export default function CommandPalette() {
                               <div className={cn("w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center text-foreground text-[10px]", tool.color)}>
                                 <tool.icon className="w-4 h-4" />
                               </div>
-                              <span className="text-xs font-bold uppercase italic group-hover:text-primary transition-colors">{tool.title}</span>
+                              <span className="text-xs font-semibold group-hover:text-primary transition-colors">
+                                {t_tools(`data.${tool.href}.title`)}
+                              </span>
                             </button>
                           );
                         })}
@@ -119,7 +124,7 @@ export default function CommandPalette() {
               {filteredTools.length > 0 ? (
                 <div className="space-y-1">
                    {search && (
-                     <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground px-4 mb-2 opacity-60">Search Results</div>
+                     <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground px-4 mb-2 opacity-60">{t("searchResults")}</div>
                    )}
                    {filteredTools.map((tool) => (
                     <button
@@ -140,11 +145,11 @@ export default function CommandPalette() {
                         <tool.icon className="w-6 h-6" />
                       </div>
                       <div className="flex-1">
-                        <div className="font-black uppercase italic tracking-tight font-heading group-hover:text-primary transition-colors">
-                          {tool.title}
+                        <div className="font-bold tracking-tight font-heading group-hover:text-primary transition-colors">
+                          {t_tools(`data.${tool.href}.title`)}
                         </div>
                         <div className="text-xs text-muted-foreground opacity-60 line-clamp-1">
-                          {tool.desc}
+                          {t_tools(`data.${tool.href}.desc`)}
                         </div>
                       </div>
                       <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-all" />
@@ -154,8 +159,8 @@ export default function CommandPalette() {
               ) : (
                 <div className="p-12 text-center space-y-4">
                   <div className="text-4xl">🔎</div>
-                  <div className="text-sm font-black uppercase tracking-widest opacity-40 italic">
-                    No tools found matching "{search}"
+                  <div className="text-sm font-medium opacity-40">
+                    {t("noResults", { search })}
                   </div>
                 </div>
               )}
@@ -163,14 +168,14 @@ export default function CommandPalette() {
 
             <div className="px-6 py-4 bg-secondary/30 border-t border-border flex items-center justify-between">
               <div className="flex items-center gap-6">
-                <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-40">
-                  <span className="p-1 rounded bg-secondary border border-border">↑↓</span> Navigate
+                <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wider opacity-40">
+                  <span className="p-1 rounded bg-secondary border border-border">↑↓</span> {t("navigate")}
                 </div>
-                <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest opacity-40">
-                  <span className="p-1 rounded bg-secondary border border-border">ENTER</span> Launch
+                <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-wider opacity-40">
+                  <span className="p-1 rounded bg-secondary border border-border">ENTER</span> {t("launch")}
                 </div>
               </div>
-              <div className="text-[10px] font-black uppercase tracking-widest text-primary italic">
+              <div className="text-[10px] font-medium tracking-wider text-primary">
                 SafeTools v2.0
               </div>
             </div>
@@ -180,3 +185,5 @@ export default function CommandPalette() {
     </AnimatePresence>
   );
 }
+
+export default React.memo(CommandPalette);

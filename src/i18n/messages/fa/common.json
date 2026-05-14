@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "به SafeTools خوش آمدید",
+    "tagline": "بیش از ۱۵۰ ابزار فایل آنلاین با اولویت حریم خصوصی که به صورت محلی اجرا می‌شوند",
+    "upload": "بارگذاری فایل",
+    "download": "دانلود",
+    "compress": "فشرده‌سازی",
+    "convert": "تبدیل",
+    "edit": "ویرایش",
+    "search": "جستجو در بیش از ۱۵۰ ابزار...",
+    "privacy": "اولویت حریم خصوصی",
+    "speed": "بسیار سریع",
+    "security": "در سطح سازمانی",
+    "systemHealth": {
+      "title": "سلامت سیستم",
+      "localEngine": "موتور محلی",
+      "localEngineDesc": "پردازش ۱۰۰٪ به صورت محلی در دستگاه شما انجام می‌شود.",
+      "secureSession": "نشست امن",
+      "secureSessionDesc": "محیط مرورگر ایزوله برای حداکثر حریم خصوصی.",
+      "online": "متصل",
+      "onlineDesc": "آنلاین برای آخرین به‌روزرسانی‌های ابزار.",
+      "offlineReady": "آماده برای حالت آفلاین",
+      "offlineReadyDesc": "این ابزار بدون اتصال به اینترنت به خوبی کار می‌کند.",
+      "zeroTracking": "بدون ردیابی",
+      "zeroTrackingDesc": "هیچ داده‌ای برای ردیابی به سرورهای ما ارسال نمی‌شود."
+    },
+    "securityTools": "ابزارهای امنیتی",
+    "privacyTools": "ابزارهای حریم خصوصی",
+    "tools": {
+      "vault": "خزانه امن",
+      "metadataCleaner": "پاک‌کننده متادیتا",
+      "fileShredder": "خردکننده فایل",
+      "secureNotes": "یادداشت‌های امن",
+      "passwordGenerator": "سازنده رمز عبور",
+      "passwordChecker": "بررسی قدرت رمز عبور",
+      "ocr": "استخراج متن (OCR)",
+      "steganography": "پنهان‌نگاری تصویر",
+      "imageEditor": "ویرایشگر تصویر",
+      "imageCompressor": "فشرده‌ساز تصویر",
+      "formatConverter": "تبدیل‌کننده فرمت",
+      "backgroundRemover": "حذف پس‌زمینه",
+      "colorLab": "آزمایشگاه رنگ",
+      "pdfToImage": "تبدیل PDF به تصویر"
+    },
+    "toolsLabel": "ابزارها",
+    "features": "ویژگی‌ها",
+    "developers": "توسعه‌دهندگان",
+    "pricing": "قیمت‌گذاری",
+    "about": "درباره SafeTools",
+    "whyAds": "چرا تبلیغات نمایش می‌دهیم",
+    "privacyPolicy": "سیاست حریم خصوصی",
+    "termsOfService": "شرایط خدمات",
+    "contact": "تماس با ما",
+    "home": "خانه",
+    "faqLabel": "سوالات متداول",
+    "blog": "وبلاگ",
+    "changelog": "تغییرات اخیر",
+    "light": "روشن",
+    "dark": "تاریک",
+    "system": "سیستم",
+    "startFree": "شروع رایگان",
+    "systemStatus": "وضعیت سیستم",
+    "updates": "به‌روزرسانی‌ها",
+    "feedback": "بازخورد",
+    "contents": "محتوا",
+    "imageTools": "ابزارهای تصویر",
+    "openTools": "باز کردن ابزارها",
+    "ready": "آماده برای به دست گرفتن کنترل؟",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "آماده",
+      "blocked": "مسدود شده",
+      "success": "موفقیت",
+      "error": "خطا"
+    },
+    "getStarted": "شروع کنید",
+    "forever": "برای همیشه",
+    "step": "مرحله",
+    "dropzone": {
+      "title": "بارگذاری فایل",
+      "description": "فایل خود را اینجا بکشید و رها کنید",
+      "secure": "پردازش محلی امن",
+      "processedLocally": "به صورت محلی پردازش شد",
+      "maxSize": "حداکثر {size} مگابایت",
+      "noFileChosen": "فایلی انتخاب نشده است"
+    },
+    "export": {
+      "ready": "آماده برای دانلود",
+      "download": "دانلود",
+      "copy": "کپی",
+      "copied": "کپی شد!",
+      "share": "اشتراک‌گذاری",
+      "reset": "بازنشانی"
+    },
+    "faq": {
+      "title": "سوالات متداول",
+      "description": "هر آنچه که باید درباره این ابزار و نحوه محافظت آن از حریم خصوصی خود بدانید."
+    },
+    "related": {
+      "title": "ابزارهای حرفه‌ای مرتبط",
+      "subtitle": "ابزارهای بیشتری با اولویت حریم خصوصی برای گردش کار خود کاوش کنید."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "انتخاب زبان"
+    },
+    "relatedTools": "ابزارهای خلاقانه مرتبط",
+    "relatedToolsDesc": "ابزارهای بیشتری با اولویت حریم خصوصی کاوش کنید.",
+    "all": "همه",
+    "units": {
+      "px": "پیکسل",
+      "mb": "مگابایت",
+      "kb": "کیلوبایت",
+      "s": "ثانیه"
+    },
+    "advertisement": "تبلیغات",
+    "system_health": {
+      "title": "سلامت سیستم",
+      "localEngine": "موتور محلی",
+      "localEngineDesc": "پردازش روی سخت‌افزار شما",
+      "secureSession": "نشست امن",
+      "secureSessionDesc": "محیط مرورگر ایزوله",
+      "online": "آنلاین",
+      "onlineDesc": "بهینه‌سازی شده برای سرعت",
+      "offlineReady": "آماده برای آفلاین",
+      "offlineReadyDesc": "عملکرد کامل در حالت آفلاین",
+      "zeroTracking": "بدون ردیابی",
+      "zeroTrackingDesc": "معماری با اولویت حریم خصوصی"
+    },
+    "values": {
+      "yes": "بله",
+      "no": "خیر",
+      "limited": "محدود"
+    },
+    "pro": {
+      "comingSoon": "نسخه حرفه‌ای - به‌زودی",
+      "unlockPower": "قدرت بیشتری را آزاد کنید",
+      "features": [
+        "فایل‌های تا ۱۰ برابر بزرگتر",
+        "پردازش دسته‌ای نامحدود",
+        "صف پردازش اولویت‌دار سرور",
+        "لینک‌های قابل اشتراک‌گذاری (انقضا ۷۲ ساعت)",
+        "تاریخچه فایل - ۵۰ کار اخیر",
+        "پردازش سمت سرور برای فایل‌های سنگین"
+      ],
+      "waitlist": "به لیست انتظار بپیوندید - ۸ دلار در ماه در زمان عرضه",
+      "successTitle": "شما در لیست هستید! 🎉",
+      "successDesc": "هنگام عرضه نسخه حرفه‌ای به شما ایمیل خواهیم زد.",
+      "continueFree": "ادامه با نسخه رایگان",
+      "emailPlaceholder": "ایمیل شما",
+      "join": "عضویت",
+      "validEmail": "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+      "waitlistSuccess": "شما در لیست انتظار هستید! هنگام عرضه نسخه حرفه‌ای به شما اطلاع خواهیم داد.",
+      "freeLimit": "محدودیت رایگان: {limit}",
+      "proLimit": "محدودیت حرفه‌ای: {limit}",
+      "yourFile": "فایل شما: {size}"
+    },
+    "disclaimer": {
+      "understand": "متوجه شدم - ادامه",
+      "responsibility": "با ادامه دادن، مسئولیت کامل استفاده از این ابزار را می‌پذیرید."
+    },
+    "toast": {
+      "linkCopied": "لینک در حافظه کپی شد"
+    },
+    "seo": {
+      "browserReqs": "نیاز به جاوااسکریپت و WebAssembly دارد"
+    },
+    "aria": {
+      "goHome": "رفتن به خانه",
+      "toggleTheme": "تغییر تم",
+      "faq": "سوالات متداول",
+      "changeLanguage": "تغییر زبان",
+      "close": "بستن",
+      "menu": "منو",
+      "openTools": "باز کردن منوی ابزارها",
+      "exploreTools": "کاوش در تمام ابزارها",
+      "platformFeatures": "ویژگی‌های پلتفرم",
+      "privacyCommitment": "تعهد به حریم خصوصی",
+      "developerApi": "رابط برنامه نویسی و اسناد توسعه‌دهندگان",
+      "pricingPlans": "برنامه‌های قیمت‌گذاری"
+    },
+    "shareTool": {
+      "title": "گسترش حریم خصوصی",
+      "subtitle": "حمایت از پردازش محلی",
+      "copyLink": "کپی لینک",
+      "copied": "کپی شد",
+      "twitter": "این ابزار خصوصی و بدون نیاز به بارگذاری را برای {title} ببینید:",
+      "telegram": "پردازش امن فایل با SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "راهکارهای PDF",
+        "image": "استودیوی تصویر",
+        "privacy": "ابزارهای حریم خصوصی",
+        "developer": "ابزارهای توسعه‌دهنده",
+        "pdfMerge": "ادغام PDF",
+        "pdfSplit": "تقسیم PDF",
+        "pdfUnlock": "باز کردن قفل PDF",
+        "pdfProtect": "محافظت از PDF",
+        "pdfToImage": "تبدیل PDF به تصویر",
+        "securityFileShredder": "خردکننده فایل"
+      }
+    },
+    "error": "خطا"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "پردازش ۱۰۰٪ محلی",
+      "noUploads": "بدون بارگذاری در سرور",
+      "noTracking": "بدون ردیابی داده‌ها",
+      "privacyFirst": "تجربه کاربری با اولویت حریم خصوصی",
+      "worksOffline": "کارکرد در حالت آفلاین"
+    }
+  }
+}

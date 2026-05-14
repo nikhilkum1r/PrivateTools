@@ -1,0 +1,61 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "Dasar Akses Adil",
+      "title": "Percuma untuk <br></br> semua orang.",
+      "subtitle": "Kami percaya privasi tidak sepatutnya menjadi ciri premium. Ia sepatutnya menjadi keadaan lalai web."
+    },
+    "plan": {
+      "title": "Pelan Sovereign",
+      "price": "RM 0",
+      "forever": "/ selamanya",
+      "description": "Akses seluruh infrastruktur SafeTools tanpa kompromi. Tiada langganan, tiada had tersembunyi, dan tiada kad kredit diperlukan.",
+      "button": "Mula Percuma",
+      "included": "Apa yang Termasuk",
+      "features": [
+        "150+ Alat Profesional",
+        "Pemprosesan Fail Tanpa Had",
+        "Tiada Had Saiz Fail",
+        "Kelajuan Pecutan Perkakasan",
+        "100% Peribadi & Tempatan",
+        "Tiada Akaun Diperlukan",
+        "Tiada Iklan atau Penjejak",
+        "Akses Penuh ke Enjin Tempatan"
+      ]
+    },
+    "comparison": {
+      "title": "Mengapa Ia Percuma?",
+      "subtitle": "Alat tradisional mempunyai pelayan. Pelayan memerlukan wang. SafeTools menggunakan perkakasan anda untuk melakukan kerja.",
+      "cloud": {
+        "title": "Alat \"Percuma\" Awan",
+        "features": [
+          "Terhad kepada fail 10MB",
+          "Masa menunggu & senarai menunggu",
+          "Tanda air pada hasil eksport",
+          "Pemasaran e-mel yang agresif"
+        ],
+        "unlimited_strike": "Pemprosesan Tanpa Had"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100% Percuma Selamanya",
+          "Tiada Had Saiz Fail",
+          "Tiada Giliran / Segera Tempatan",
+          "Tiada Tanda Air / Kualiti Penuh",
+          "Tiada Akaun / Tanpa Nama Total"
+        ]
+      }
+    },
+    "final": {
+      "title": "Ekosistem <br></br> Utamakan Privasi.",
+      "subtitle": "Tiada langganan. Tiada penjejakan. Kuasa tempatan tulen.",
+      "independent": "Dibiayai secara bebas",
+      "zeroServer": "Infrastruktur Sifar-Pelayan"
+    },
+    "seo": {
+      "title": "Harga & Sokongan | Kit Alat Privasi Percuma SafeTools",
+      "description": "SafeTools adalah 100% percuma selamanya. Ketahui mengapa kami tidak mengenakan bayaran untuk privasi dan bagaimana anda boleh menyokong misi kami untuk web yang mengutamakan tempatan."
+    }
+  }
+}

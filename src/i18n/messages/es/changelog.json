@@ -1,0 +1,88 @@
+{
+  "changelog": {
+    "hero": {
+      "badge": "Protocolo de Evolución",
+      "title": "Actualizaciones del <br></br> <span class=\"text-primary\">Sistema.",
+      "subtitle": "Siguiendo la mejora continua del motor local-primero y la suite de estudio de SafeTools."
+    },
+    "data": [
+      {
+        "date": "10 DE MAYO DE 2026",
+        "version": "v0.4.1",
+        "title": "La Era Modular",
+        "desc": "Una revisión arquitectónica completa del motor de localización, que permite la carga de activos granulares y específicos de funciones para un rendimiento máximo.",
+        "highlights": [
+          {
+            "type": "Nuevo",
+            "text": "Marco i18n modular con aislamiento de espacio de nombres a nivel de función."
+          },
+          {
+            "type": "Mejorado",
+            "text": "Integridad de servidor cero mejorada para todas las herramientas criptográficas."
+          },
+          {
+            "type": "Seguridad",
+            "text": "Motor de mutación LSB reforzado para esteganografía de imágenes."
+          }
+        ],
+        "color": "from-primary to-blue-600"
+      },
+      {
+        "date": "28 DE ABRIL DE 2026",
+        "version": "v0.4.0",
+        "title": "Motor WASM v2",
+        "desc": "Se actualizó el motor de procesamiento principal con soporte de WebAssembly multiproceso para velocidades de procesamiento de archivos casi nativas.",
+        "highlights": [
+          {
+            "type": "Nuevo",
+            "text": "Depurador de metadatos avanzado con soporte de procesamiento por lotes."
+          },
+          {
+            "type": "Mejorado",
+            "text": "Tiempos de carga de FFmpeg WASM optimizados en un 40%."
+          },
+          {
+            "type": "Solución",
+            "text": "Se resolvieron fugas de memoria en trabajos pesados de conversión de imágenes."
+          }
+        ],
+        "color": "from-purple-500 to-pink-600"
+      },
+      {
+        "date": "12 DE ABRIL DE 2026",
+        "version": "v0.3.8",
+        "title": "Refuerzo de Seguridad",
+        "desc": "Enfocándose en la privacidad absoluta de los datos del usuario con encabezados de seguridad mejorados y entornos de ejecución aislados.",
+        "highlights": [
+          {
+            "type": "Nuevo",
+            "text": "Trituradora de archivos de grado industrial con sobrescritura de varias pasadas."
+          },
+          {
+            "type": "Seguridad",
+            "text": "Implementación de encabezados de aislamiento COOP/COEP."
+          },
+          {
+            "type": "Mejorado",
+            "text": "Manifiesto de privacidad y guía de verificación refinados."
+          }
+        ],
+        "color": "from-emerald-500 to-teal-600"
+      }
+    ],
+    "timeline": {
+      "visual": "Firma de Versión",
+      "moreUpdates": "Evolución Continua"
+    },
+    "cta": {
+      "title": "Moldea el Futuro.",
+      "subtitle": "SafeTools está construido para la comunidad. Informa errores, sugiere funciones o contribuye a nuestra arquitectura abierta.",
+      "github": "Ver repositorio en GitHub",
+      "follow": "Seguir el progreso"
+    },
+    "seo": {
+      "title": "Changelog de SafeTools | Últimas funciones y actualizaciones de seguridad",
+      "description": "Manténgase actualizado con los últimos lanzamientos, mejoras de rendimiento y parches de seguridad para el ecosistema de SafeTools."
+    }
+  }
+}

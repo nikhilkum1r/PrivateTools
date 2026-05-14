@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "专为隐私和速度设计的专业级浏览器工具。150 多个实用程序，完全在您的设备上运行。",
+    "tagline": "您的数据属于您。",
+    "localEngineActive": "本地引擎已激活",
+    "isolatedContextVerified": "隔离上下文已验证",
+    "verifiedSupport": "已验证的浏览器兼容性",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "产品",
+    "resources": "资源",
+    "community": "社区",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "所有系统均为本地",
+    "faq": "常见问题"
+  }
+}

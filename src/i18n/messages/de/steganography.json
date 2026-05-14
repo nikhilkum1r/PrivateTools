@@ -1,0 +1,335 @@
+{
+  "steganography": {
+    "metadata": {
+      "title": "Steganographie-Tool | Geheime Nachrichten in Bildern verstecken",
+      "description": "Verstecken Sie geheime Texte sicher in Bildern mit browserbasierter Steganographie. Datenschutzorientierte lokale Verarbeitung ohne Uploads und ohne Tracking.",
+      "ogTitle": "Steganographie-Tool | Geheime Nachrichten in Bildern verstecken",
+      "ogDescription": "Verstecken Sie geheime Texte sicher in Bildern mit browserbasierter Steganographie. Datenschutzorientierte lokale Verarbeitung ohne Uploads und ohne Tracking.",
+      "keywords": "Steganographie-Tool, Bild-Steganographie, Text in Bild verstecken, geheime Bildnachricht, Browser-Steganographie, Codierer für versteckte Nachrichten, lokales Steganographie-Tool, PNG-Steganographie, Online-Steganographie, sichere versteckte Nachrichten"
+    },
+    "hero": {
+      "badge": "Datenschutz-Zuerst Steganographie",
+      "title": "Steganographie-Tool",
+      "description": "Verstecken und extrahieren Sie geheime Nachrichten in Bildern sicher mit browserbasierter Steganographie und lokaler Verarbeitung.",
+      "badges": {
+        "local": "Lokale Verarbeitung",
+        "zero": "Kein Upload",
+        "no_tracking": "Kein Tracking",
+        "instant": "Sofortige Codierung",
+        "browser": "Browserbasiert"
+      },
+      "disclaimer": {
+        "title": "⚠️ Rechtlicher Hinweis: Steganographie",
+        "body": "Dieses Tool versteckt Daten in Bildern mittels LSB-Codierung. Es ist ausschließlich für Datenschutz, Wasserzeichen und Forschungszwecke bestimmt. Die Verwendung von Steganographie zur Verschleierung illegaler Inhalte oder Aktivitäten ist strengstens untersagt. Mit dem Fortfahren akzeptieren Sie die volle Verantwortung für Ihre Nutzung dieses Tools."
+      }
+    },
+    "process": {
+      "carrier": {
+        "title": "Trägermedium wählen",
+        "desc": "Laden Sie ein PNG- oder WebP-Bild hoch, das als Ihr geheimer Träger fungiert."
+      },
+      "payload": {
+        "title": "Inhalt verstecken",
+        "desc": "Injezieren Sie Ihren geheimen Text oder Ihre Kennung in die Pixel des Bildes."
+      },
+      "output": {
+        "title": "Sichere Ausgabe",
+        "desc": "Laden Sie das optisch identische Bild herunter, das Ihr Geheimnis enthält."
+      }
+    },
+    "engine": {
+      "title": "LSB-Mutations-Engine",
+      "encode": "CODIEREN",
+      "decode": "DECODIEREN",
+      "dropzone": {
+        "encode": "Trägerbild auswählen",
+        "decode": "Codiertes Bild laden",
+        "encodeDesc": "PNG oder WebP empfohlen",
+        "decodeDesc": "Versteckte Daten lokal extrahieren"
+      },
+      "payloadLabel": "Nachrichteninhalt",
+      "placeholder": "Lassen Sie Ihren geheimen Text hier verschwinden...",
+      "hideButton": "NACHRICHT VERSTECKEN",
+      "extractedLabel": "Extrahierte Informationen",
+      "copyButton": "TEXT KOPIEREN",
+      "revealButton": "GEHEIMNISSE ENTHÜLLEN",
+      "awaitingScan": "Warte auf Pixel-Scan",
+      "processing": "Bits werden verarbeitet...",
+      "remove": "ENTFERNEN",
+      "capacityError": "Inhalt überschreitet die Kapazität des Trägermediums.",
+      "noPayloadError": "Kein versteckter Inhalt in diesem Bild erkannt."
+    },
+    "toast": {
+      "initialized": "Trägerbild {name} initialisiert.",
+      "vanished": "Nachricht im Bild verschwunden!",
+      "revealed": "Versteckte Nachricht enthüllt!",
+      "copied": "Text in Zwischenablage kopiert!"
+    },
+    "status": {
+      "title": "Sicherheitsstatus",
+      "local": "Lokale Codierung",
+      "zero": "Zero-Server-Richtlinie",
+      "https": "HTTPS-geschützt",
+      "carrier": "Trägerintegrität",
+      "tracking": "Tracking-Skripte",
+      "active": "Aktiv",
+      "verified": "Verifiziert",
+      "warning": "Warnung",
+      "localDev": "Lokale Entw.",
+      "none": "Keine"
+    },
+    "trackers": {
+      "title": "Blockierte Tracking-Engines",
+      "note": "SafeTools ist eine trackerfreie Zone. Wir injizieren keine Skripte von Drittanbietern."
+    },
+    "landing": {
+      "educational": {
+        "whatIs": {
+          "badge": "Lernleitfaden",
+          "title": "Was ist Steganographie?",
+          "titleRich": "Was ist <span>Steganographie</span>?",
+          "description": "<span>Steganographie</span> ist die Praxis, Informationen in digitalen Medien wie Bildern zu verstecken, ohne die ursprüngliche Datei sichtbar zu verändern. Im Gegensatz zur Verschlüsselung, die Daten unlesbar macht, macht <span>Steganographie</span> Daten unentdeckbar.",
+          "items": [
+            {
+              "title": "Bildungszwecke",
+              "desc": "Erfahren Sie, wie Daten in Pixelkanälen strukturiert sind."
+            },
+            {
+              "title": "Datenschutz",
+              "desc": "Verbergen Sie sensible Kennungen vor flüchtigen Beobachtern."
+            },
+            {
+              "title": "Sichere Notizen",
+              "desc": "Betten Sie private Notizen in harmlos aussehende Fotos ein."
+            },
+            {
+              "title": "Digitales Wasserzeichen",
+              "desc": "Beweisen Sie Eigentum ohne sichtbare Artefakte."
+            }
+          ]
+        },
+        "vs": {
+          "title": "Steganographie vs. Verschlüsselung",
+          "subtitle": "Den Unterschied zwischen dem Verstecken von Daten und deren Schutz verstehen.",
+          "headers": [
+            "Merkmal",
+            "Steganographie",
+            "Verschlüsselung"
+          ],
+          "rows": [
+            [
+              "Verbirgt Existenz",
+              "Ja",
+              "Nein"
+            ],
+            [
+              "Lesbar für Unbefugte",
+              "Falls gefunden",
+              "Nein"
+            ],
+            [
+              "Visuelle Verschleierung",
+              "Ja",
+              "Nein"
+            ],
+            [
+              "Daten-Overhead",
+              "Keiner",
+              "Erhöht"
+            ],
+            [
+              "Erkennungsrisiko",
+              "Glaubhafte Abstreitbarkeit",
+              "Offensichtliche Signatur"
+            ]
+          ],
+          "tip": "Sicherheitsprofi-Tipp: Für maximale Sicherheit verschlüsseln Sie Ihre sensible Nachricht immer zuerst und verwenden Sie dann Steganographie, um den resultierenden Geheimtext in einem Bild zu verstecken. Dies bietet sowohl Verschleierung als auch Datenschutz."
+        },
+        "formats": {
+          "title": "Unterstützte Bildformate",
+          "subtitle": "Warum die Formatwahl für die Integrität versteckter Daten wichtig ist.",
+          "items": [
+            {
+              "n": "PNG (Portable Network Graphics)",
+              "s": "Perfekt",
+              "d": "Verlustfreie Kompression stellt sicher, dass jedes versteckte Bit exakt so bleibt, wie es codiert wurde."
+            },
+            {
+              "n": "WebP (Verlustfrei)",
+              "s": "Empfohlen",
+              "d": "Hohe Effizienz bei verlustfreier Unterstützung hält die Dateninhalte intakt."
+            },
+            {
+              "n": "JPEG / JPG",
+              "s": "Begrenzt",
+              "d": "Verlustbehaftete Kompression kann versteckte Bits beschädigen. Nicht für LSB empfohlen."
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Steganographie-Anwendungsfälle",
+          "subtitle": "Praktische und professionelle Anwendungen für versteckte Daten.",
+          "items": [
+            "Versteckte Kommunikation",
+            "Datenschutz",
+            "Sicherer Notizaustausch",
+            "Digitales Wasserzeichen",
+            "Cybersicherheit-Bildung",
+            "Forschungsdemos",
+            "Metadaten-Verschleierung",
+            "Authentifizierungsmarker"
+          ]
+        },
+        "forensics": {
+          "badge": "Forensisches Bewusstsein",
+          "view": "FORENSIK-ANSICHT",
+          "title": "Erkennung versteckter Daten",
+          "description": "Obwohl LSB-Steganographie visuell nicht erkennbar ist, können fortschrittliche forensische Tools Muster in den niederwertigsten Bits (LSB) erkennen. Profis nutzen Techniken wie die Chi-Quadrat-Analyse und visuelle Angriffe, um versteckte Inhalte zu finden.",
+          "items": [
+            {
+              "title": "Statistische Analyse",
+              "desc": "Erkennung von Abweichungen in der Bit-Verteilung, die auf nicht-natürliche Daten hinweisen."
+            },
+            {
+              "title": "Visuelle Angriffe",
+              "desc": "Isolierung von Bitebenen, um strukturelle Anomalien im Rauschen aufzudecken."
+            },
+            {
+              "title": "Histogramm-Verschiebungen",
+              "desc": "Identifizierung subtiler Verschiebungen in Farbfrequenzen, die durch Bit-Mutationen verursacht werden."
+            }
+          ],
+          "histogram": "Histogramm-Analyse",
+          "lsbSignature": "LSB-Signatur",
+          "normalized": "NORMALISIERT"
+        },
+        "specs": {
+          "title": "Erweiterte technische Spezifikationen",
+          "subtitle": "Low-Level-Parameter der SafeTools LSB-Mutations-Engine.",
+          "items": [
+            {
+              "l": "Bittiefe",
+              "v": "8-Bit pro Kanal"
+            },
+            {
+              "l": "Injektionsrate",
+              "v": "1 Bit/Kanal"
+            },
+            {
+              "l": "Kanalmatrix",
+              "v": "R-G-B Reihenfolge"
+            },
+            {
+              "l": "Mutationsraum",
+              "v": "24-Bit TrueColor"
+            },
+            {
+              "l": "Header-Logik",
+              "v": "32-Bit BigEndian"
+            },
+            {
+              "l": "Visuelles Delta",
+              "v": "E < 0,001%"
+            },
+            {
+              "l": "Entropie-Ziel",
+              "v": "Maximiert"
+            },
+            {
+              "l": "Browser-Engine",
+              "v": "WASM / Canvas"
+            }
+          ]
+        },
+        "tips": {
+          "items": [
+            {
+              "t": "Bilder mit hoher Entropie verwenden",
+              "d": "Bilder mit viel Textur und Details (wie Naturfotos) sind bessere Träger als flache, einfarbige Flächen, in denen Bit-Mutationen statistisch leichter zu erkennen sind."
+            },
+            {
+              "t": "Inhalte vorab verschlüsseln",
+              "d": "Verschlüsseln Sie Ihren Text vor dem Verstecken immer mit AES-256. Dies stellt sicher, dass die Daten unlesbar bleiben, selbst wenn die Steganographie entdeckt wird."
+            },
+            {
+              "t": "Skalierung vermeiden",
+              "d": "Das Ändern der Größe oder das erneute Komprimieren eines codierten Bildes wird die versteckten Daten fast sicher zerstören. Teilen Sie immer die Original-Ausgabedatei."
+            }
+          ]
+        },
+        "notice": {
+          "badge": "Wichtiger Sicherheitshinweis",
+          "title": "Steganographie ist keine Verschlüsselung",
+          "description": "Steganographie beruht auf Verschleierung, nicht auf rechnerischer Härte. Während sie die Existenz einer Nachricht verbirgt, schützt sie den Inhalt nicht zwangsläufig, wenn die Steganographie entdeckt wird.",
+          "points": [
+            "Kombinieren Sie für sensible Daten immer mit starker Verschlüsselung (AES-256).",
+            "Verwenden Sie verlustfreie Formate (PNG), um Datenbeschädigungen zu vermeiden.",
+            "Niemals für illegale oder unethische Verschleierung verwenden.",
+            "Beachten Sie, dass forensische Tools LSB-Mutationen erkennen können."
+          ]
+        },
+        "offline": {
+          "title": "Funktioniert überall",
+          "items": [
+            "Offline-bereit",
+            "Plattformübergreifend",
+            "PWA-Unterstützung",
+            "Keine nativen Apps"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Steganographie FAQ",
+        "description": "Alles, was Sie über das Verstecken von Daten in Bildern wissen müssen.",
+        "items": [
+          {
+            "q": "Werden Bilder auf Server hochgeladen?",
+            "a": "Nein. Alle Codierungen und Decodierungen erfolgen lokal in Ihrem Browser mittels Canvas-API und Web-Workern."
+          },
+          {
+            "q": "Welches Bildformat funktioniert am besten?",
+            "a": "PNG wird dringend empfohlen, da es eine verlustfreie Kompression verwendet, die die versteckten Bits in jedem Pixel perfekt bewahrt."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Datenschutz standardmäßig",
+        "headline": "<span>Privatsphäre</span> ist ein Recht,<br></br>kein Feature.",
+        "description": "Steganographie ist eine der ältesten Formen des Schutzes der Privatsphäre. Im digitalen Zeitalter bleibt sie ein mächtiges Werkzeug, um die Souveränität über Ihre Informationen zu bewahren.",
+        "zeroServer": "Zero-Server",
+        "localFirst": "Local-First",
+        "noTracking": "No-Tracking"
+      },
+      "related": {
+        "title": "Zugehörige Sicherheits-Tools",
+        "subtitle": "Schützen Sie Ihre digitale Identität mit unserer Sicherheitssuite.",
+        "items": [
+          {
+            "n": "Datei-Tresor",
+            "d": "Militärische Dateiverschlüsselung."
+          },
+          {
+            "n": "Metadaten-Reiniger",
+            "d": "EXIF- und GPS-Daten löschen."
+          },
+          {
+            "n": "Sichere Notizen",
+            "d": "Verschlüsselte browserbasierte Notizen."
+          },
+          {
+            "n": "Passwort-Generator",
+            "d": "Starke Offline-Passwörter generieren."
+          },
+          {
+            "n": "Stärke-Prüfer",
+            "d": "Prüfen Sie Ihre Passwortsicherheit."
+          },
+          {
+            "n": "Aktenvernichter",
+            "d": "Digitale Spuren permanent löschen."
+          }
+        ]
+      }
+    }
+  }
+}

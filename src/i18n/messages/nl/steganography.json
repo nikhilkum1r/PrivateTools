@@ -1,0 +1,335 @@
+{
+  "steganography": {
+    "metadata": {
+      "title": "Steganography Tool | Hide Secret Messages in Images",
+      "description": "Hide secret text inside images securely using browser-based steganography. Privacy-first local processing with zero uploads and zero tracking.",
+      "ogTitle": "Steganography Tool | Hide Secret Messages in Images",
+      "ogDescription": "Hide secret text inside images securely using browser-based steganography. Privacy-first local processing with zero uploads and zero tracking.",
+      "keywords": "steganography tool, image steganography, hide text in image, secret image message, browser steganography, hidden message encoder, local steganography tool, png steganography, online steganography, secure hidden messages"
+    },
+    "hero": {
+      "badge": "Privacy-First Steganography",
+      "title": "Steganography Tool",
+      "description": "Hide and extract secret messages inside images securely using browser-based steganography and local processing.",
+      "badges": {
+        "local": "Local Processing",
+        "zero": "Zero Upload",
+        "no_tracking": "No Tracking",
+        "instant": "Instant Encoding",
+        "browser": "Browser-Based"
+      },
+      "disclaimer": {
+        "title": "⚠️ Legal Disclaimer  Steganography",
+        "body": "This tool hides data inside images using LSB encoding. It is intended for privacy, watermarking, and research use only. Using steganography to conceal illegal content or activities is strictly prohibited. By continuing, you accept full responsibility for your use of this tool."
+      }
+    },
+    "process": {
+      "carrier": {
+        "title": "Select Carrier",
+        "desc": "Upload a PNG or WebP image to act as your secret carrier."
+      },
+      "payload": {
+        "title": "Hide Payload",
+        "desc": "Inject your secret text or identifier into the image's pixels."
+      },
+      "output": {
+        "title": "Secure Output",
+        "desc": "Download the visually identical image containing your secret."
+      }
+    },
+    "engine": {
+      "title": "LSB Mutation Engine",
+      "encode": "ENCODE",
+      "decode": "DECODE",
+      "dropzone": {
+        "encode": "Select Carrier Image",
+        "decode": "Load Encoded Image",
+        "encodeDesc": "PNG or WebP recommended",
+        "decodeDesc": "Extract hidden data locally"
+      },
+      "payloadLabel": "Payload Message",
+      "placeholder": "Vanish your secret text here...",
+      "hideButton": "HIDE MESSAGE",
+      "extractedLabel": "Extracted Intelligence",
+      "copyButton": "COPY TEXT",
+      "revealButton": "REVEAL SECRETS",
+      "awaitingScan": "Awaiting Pixel Scan",
+      "processing": "Processing Bits...",
+      "remove": "REMOVE",
+      "capacityError": "Payload exceeds carrier capacity.",
+      "noPayloadError": "No hidden payload detected in this image."
+    },
+    "toast": {
+      "initialized": "Carrier image {name} initialized.",
+      "vanished": "Message vanished into the image!",
+      "revealed": "Hidden message revealed!",
+      "copied": "Text copied to clipboard!"
+    },
+    "status": {
+      "title": "Security Status",
+      "local": "Local Encoding",
+      "zero": "Zero-Server Policy",
+      "https": "HTTPS Protected",
+      "carrier": "Carrier Integrity",
+      "tracking": "Tracking Scripts",
+      "active": "Active",
+      "verified": "Verified",
+      "warning": "Warning",
+      "localDev": "Local Dev",
+      "none": "None"
+    },
+    "trackers": {
+      "title": "Blocked Tracking Engines",
+      "note": "SafeTools is a tracker-free zone. We do not inject any 3rd party scripts."
+    },
+    "landing": {
+      "educational": {
+        "whatIs": {
+          "badge": "Educational Guide",
+          "title": "What Is Steganography?",
+          "titleRich": "What Is <span>Steganography</span>?",
+          "description": "Steganography is the practice of hiding information inside digital media such as images without visibly changing the original file. Unlike encryption, which makes data unreadable, steganography makes data undetectable.",
+          "items": [
+            {
+              "title": "Educational Use",
+              "desc": "Learn how data is structured in pixel channels."
+            },
+            {
+              "title": "Privacy Protection",
+              "desc": "Hide sensitive identifiers from casual observers."
+            },
+            {
+              "title": "Secure Notes",
+              "desc": "Embed private notes inside innocent-looking photos."
+            },
+            {
+              "title": "Digital Watermarking",
+              "desc": "Prove ownership without visible artifacts."
+            }
+          ]
+        },
+        "vs": {
+          "title": "Steganography vs Encryption",
+          "subtitle": "Understanding the difference between hiding data and protecting it.",
+          "headers": [
+            "Feature",
+            "Steganography",
+            "Encryption"
+          ],
+          "rows": [
+            [
+              "Hides Existence",
+              "Yes",
+              "No"
+            ],
+            [
+              "Readable by Unauthorized",
+              "If found",
+              "No"
+            ],
+            [
+              "Visual Concealment",
+              "Yes",
+              "No"
+            ],
+            [
+              "Data Overhead",
+              "None",
+              "Increased"
+            ],
+            [
+              "Detection Risk",
+              "Plausible Deniability",
+              "Obvious Signature"
+            ]
+          ],
+          "tip": "Security Pro-Tip: For maximum security, always encrypt your sensitive message first, then use steganography to hide the resulting ciphertext inside an image. This provides both concealment and data protection."
+        },
+        "formats": {
+          "title": "Supported Image Formats",
+          "subtitle": "Why format selection matters for hidden data integrity.",
+          "items": [
+            {
+              "n": "PNG (Portable Network Graphics)",
+              "s": "Perfect",
+              "d": "Lossless compression ensures every hidden bit remains exactly as encoded."
+            },
+            {
+              "n": "WebP (Lossless)",
+              "s": "Recommended",
+              "d": "High efficiency with lossless support keeps payloads intact."
+            },
+            {
+              "n": "JPEG / JPG",
+              "s": "Limited",
+              "d": "Lossy compression can corrupt hidden bits. Not recommended for LSB."
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Steganography Use Cases",
+          "subtitle": "Practical and professional applications for hidden data.",
+          "items": [
+            "Hidden Communication",
+            "Privacy Protection",
+            "Secure Note Sharing",
+            "Digital Watermarking",
+            "Cybersecurity Education",
+            "Research Demos",
+            "Metadata Concealment",
+            "Authentication Markers"
+          ]
+        },
+        "forensics": {
+          "badge": "Forensic Awareness",
+          "view": "FORENSIC VIEW",
+          "title": "Detecting Hidden Data",
+          "description": "While LSB steganography is visually undetectable, advanced forensic tools can detect patterns in the least significant bits. Professionals use techniques like Chi-square analysis and Visual Attacks to find hidden payloads.",
+          "items": [
+            {
+              "title": "Statistical Analysis",
+              "desc": "Detecting deviations in bit distribution that indicate non-natural data."
+            },
+            {
+              "title": "Visual Attacks",
+              "desc": "Isolating bit planes to reveal structural anomalies in the noise."
+            },
+            {
+              "title": "Histogram Shifts",
+              "desc": "Identifying subtle shifts in color frequencies caused by bit mutation."
+            }
+          ],
+          "histogram": "Histogram Analysis",
+          "lsbSignature": "LSB Signature",
+          "normalized": "NORMALIZED"
+        },
+        "specs": {
+          "title": "Advanced Technical Specs",
+          "subtitle": "Low-level parameters of the SafeTools LSB mutation engine.",
+          "items": [
+            {
+              "l": "Bit Depth",
+              "v": "8-bit per channel"
+            },
+            {
+              "l": "Injection Rate",
+              "v": "1 bit/channel"
+            },
+            {
+              "l": "Channel Matrix",
+              "v": "R-G-B Order"
+            },
+            {
+              "l": "Mutation Space",
+              "v": "24-bit TrueColor"
+            },
+            {
+              "l": "Header Logic",
+              "v": "32-bit BigEndian"
+            },
+            {
+              "l": "Visual Delta",
+              "v": "E < 0.001%"
+            },
+            {
+              "l": "Entropy Target",
+              "v": "Maximized"
+            },
+            {
+              "l": "Browser Engine",
+              "v": "WASM / Canvas"
+            }
+          ]
+        },
+        "tips": {
+          "items": [
+            {
+              "t": "Use High-Entropy Images",
+              "d": "Images with lots of texture and detail (like nature shots) are better carriers than flat, solid colors where bit mutations are easier to spot statistically."
+            },
+            {
+              "t": "Pre-Encrypt Payloads",
+              "d": "Always encrypt your text with AES-256 before hiding it. This ensures that even if the steganography is detected, the data remains unreadable."
+            },
+            {
+              "t": "Avoid Resizing",
+              "d": "Resizing or re-compressing an encoded image will almost certainly destroy the hidden data. Always share the original output file."
+            }
+          ]
+        },
+        "notice": {
+          "badge": "Important Security Notice",
+          "title": "Steganography Is Not Encryption",
+          "description": "Steganography relies on obscurity, not computational hardness. While it hides the existence of a message, it does not necessarily protect the content if the steganography is detected.",
+          "points": [
+            "Always combine with strong encryption (AES-256) for sensitive data.",
+            "Use lossless formats (PNG) to avoid data corruption.",
+            "Never use for illegal or unethical concealment.",
+            "Be aware that forensic tools can detect LSB mutations."
+          ]
+        },
+        "offline": {
+          "title": "Works Everywhere",
+          "items": [
+            "Offline Ready",
+            "Cross-Platform",
+            "PWA Support",
+            "No Native Apps"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Steganography FAQ",
+        "description": "Everything you need to know about hiding data in images.",
+        "items": [
+          {
+            "q": "Are images uploaded to servers?",
+            "a": "No. All encoding and decoding happen locally inside your browser using canvas API and Web Workers."
+          },
+          {
+            "q": "Which image format works best?",
+            "a": "PNG is strongly recommended because it uses lossless compression, which perfectly preserves the hidden bits in each pixel."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Privacy by Default",
+        "headline": "<span>Privacy</span> is a Right,<br></br>Not a Feature.",
+        "description": "Steganography is one of the oldest forms of privacy protection. In the digital age, it remains a powerful tool for maintaining sovereignty over your information.",
+        "zeroServer": "Zero-Server",
+        "localFirst": "Local-First",
+        "noTracking": "No-Tracking"
+      },
+      "related": {
+        "title": "Related Security Tools",
+        "subtitle": "Protect your digital identity with our secure suite.",
+        "items": [
+          {
+            "n": "File Vault",
+            "d": "Military-grade file encryption."
+          },
+          {
+            "n": "Metadata Cleaner",
+            "d": "Purge EXIF & GPS data."
+          },
+          {
+            "n": "Secure Notes",
+            "d": "Encrypted browser-based notes."
+          },
+          {
+            "n": "Password Generator",
+            "d": "Generate strong offline passwords."
+          },
+          {
+            "n": "Strength Checker",
+            "d": "Audit your password security."
+          },
+          {
+            "n": "File Shredder",
+            "d": "Permanently delete digital traces."
+          }
+        ]
+      }
+    }
+  }
+}

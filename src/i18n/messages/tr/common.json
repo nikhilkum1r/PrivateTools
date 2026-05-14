@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "SafeTools'a Hoş Geldiniz",
+    "tagline": "Yerel Olarak Çalışan 150+ Gizlilik Öncelikli Çevrimiçi Dosya Aracı",
+    "upload": "Dosya Yükle",
+    "download": "İndir",
+    "compress": "Sıkıştır",
+    "convert": "Dönüştür",
+    "edit": "Düzenle",
+    "search": "150'den fazla araçta ara...",
+    "privacy": "Önce Gizlilik",
+    "speed": "Ultra Hızlı",
+    "security": "Kurumsal Düzey",
+    "systemHealth": {
+      "title": "Sistem Durumu",
+      "localEngine": "Yerel Motor",
+      "localEngineDesc": "İşleme, cihazınızda %100 yerel olarak gerçekleşir.",
+      "secureSession": "Güvenli Oturum",
+      "secureSessionDesc": "Maksimum gizlilik için izole edilmiş tarayıcı ortamı.",
+      "online": "Bağlı",
+      "onlineDesc": "En son araç güncellemeleri için çevrimiçi.",
+      "offlineReady": "Çevrimdışı Kullanıma Hazır",
+      "offlineReadyDesc": "Bu araç internet bağlantısı olmadan mükemmel çalışır.",
+      "zeroTracking": "Sıfır Takip",
+      "zeroTrackingDesc": "Takip amacıyla sunucularımıza hiçbir veri gönderilmez."
+    },
+    "securityTools": "Güvenlik Araçları",
+    "privacyTools": "Gizlilik Araçları",
+    "tools": {
+      "vault": "Güvenli Kasa",
+      "metadataCleaner": "Meta Veri Temizleyici",
+      "fileShredder": "Dosya Öğütücü",
+      "secureNotes": "Güvenli Notlar",
+      "passwordGenerator": "Şifre Oluşturucu",
+      "passwordChecker": "Şifre Gücü Kontrolü",
+      "ocr": "OCR Ayıklama",
+      "steganography": "Görüntü Steganografisi",
+      "imageEditor": "Görüntü Düzenleyici",
+      "imageCompressor": "Görüntü Sıkıştırıcı",
+      "formatConverter": "Format Dönüştürücü",
+      "backgroundRemover": "Arka Plan Kaldırıcı",
+      "colorLab": "Renk Laboratuvarı",
+      "pdfToImage": "PDF'den Görüntüye"
+    },
+    "toolsLabel": "Araçlar",
+    "features": "Özellikler",
+    "developers": "Geliştiriciler",
+    "pricing": "Fiyatlandırma",
+    "about": "SafeTools Hakkında",
+    "whyAds": "Neden Reklam Gösteriyoruz",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları",
+    "contact": "Bize Ulaşın",
+    "home": "Ana Sayfa",
+    "faqLabel": "SSS",
+    "blog": "Blog",
+    "changelog": "Değişiklik Günlüğü",
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem",
+    "startFree": "Ücretsiz Başlayın",
+    "systemStatus": "Sistem Durumu",
+    "updates": "Güncellemeler",
+    "feedback": "Geri Bildirim",
+    "contents": "İçerik",
+    "imageTools": "Görüntü Araçları",
+    "openTools": "Araçları Aç",
+    "ready": "Kontrolü ele almaya hazır mısınız?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "HAZIR",
+      "blocked": "ENGELENDİ",
+      "success": "BAŞARILI",
+      "error": "HATA"
+    },
+    "getStarted": "Başlayın",
+    "forever": "sonsuza kadar",
+    "step": "Adım",
+    "dropzone": {
+      "title": "Dosya Yükle",
+      "description": "Dosyanızı buraya sürükleyip bırakın",
+      "secure": "Güvenli Yerel İşleme",
+      "processedLocally": "Yerel olarak işlendi",
+      "maxSize": "Maks {size}MB",
+      "noFileChosen": "Dosya seçilmedi"
+    },
+    "export": {
+      "ready": "İndirmeye hazır",
+      "download": "İndir",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı!",
+      "share": "Paylaş",
+      "reset": "Sıfırla"
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "description": "Bu araç ve gizliliğinizi nasıl koruduğu hakkında bilmeniz gereken her şey."
+    },
+    "related": {
+      "title": "İlgili Profesyonel Araçlar",
+      "subtitle": "İş akışınız için daha fazla gizlilik öncelikli yardımcı programı keşfedin."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Masaüstü",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Dil Seçin"
+    },
+    "relatedTools": "İlgili Yaratıcı Araçlar",
+    "relatedToolsDesc": "Daha fazla gizlilik öncelikli yardımcı programı keşfedin.",
+    "all": "Hepsi",
+    "units": {
+      "px": "piksel",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "sn"
+    },
+    "advertisement": "Reklam",
+    "system_health": {
+      "title": "Sistem Durumu",
+      "localEngine": "Yerel Motor",
+      "localEngineDesc": "Donanımınızda işleme",
+      "secureSession": "Güvenli Oturum",
+      "secureSessionDesc": "İzole edilmiş tarayıcı bağlamı",
+      "online": "Çevrimiçi",
+      "onlineDesc": "Hız için optimize edildi",
+      "offlineReady": "Çevrimdışı Hazır",
+      "offlineReadyDesc": "Çevrimdışı tamamen işlevsel",
+      "zeroTracking": "Sıfır Takip",
+      "zeroTrackingDesc": "Gizlilik öncelikli mimari"
+    },
+    "values": {
+      "yes": "Evet",
+      "no": "Hayır",
+      "limited": "Sınırlı"
+    },
+    "pro": {
+      "comingSoon": "Pro – Yakında",
+      "unlockPower": "Daha Fazla Güç Kilidini Açın",
+      "features": [
+        "10 kat daha büyük dosyalar",
+        "Sınırsız toplu işleme",
+        "Öncelikli sunucu işleme kuyruğu",
+        "Paylaşılabilir bağlantılar (72 saat geçerli)",
+        "Dosya geçmişi – son 50 iş",
+        "Ağır dosyalar için sunucu tarafı işleme"
+      ],
+      "waitlist": "Bekleme listesine katılın – Lansmanda aylık 8$",
+      "successTitle": "Listedisiniz! 🎉",
+      "successDesc": "Pro yayına girdiğinde size e-posta göndereceğiz.",
+      "continueFree": "Ücretsiz sürümle devam et",
+      "emailPlaceholder": "e-postaniz@mail.com",
+      "join": "Katıl",
+      "validEmail": "Lütfen geçerli bir e-posta adresi girin.",
+      "waitlistSuccess": "Bekleme listesindesiniz! Pro yayına girdiğinde size haber vereceğiz.",
+      "freeLimit": "Ücretsiz sınır: {limit}",
+      "proLimit": "Pro sınırı: {limit}",
+      "yourFile": "Dosyanız: {size}"
+    },
+    "disclaimer": {
+      "understand": "Anladım – Devam Et",
+      "responsibility": "Devam ederek bu aracı kullanımınızla ilgili tüm sorumluluğu kabul etmiş olursunuz."
+    },
+    "toast": {
+      "linkCopied": "Bağlantı panoya kopyalandı"
+    },
+    "seo": {
+      "browserReqs": "JavaScript ve WebAssembly gerektirir"
+    },
+    "aria": {
+      "goHome": "Ana Sayfaya Git",
+      "toggleTheme": "Temayı değiştir",
+      "faq": "Sıkça Sorulan Sorular",
+      "changeLanguage": "Dili değiştir",
+      "close": "Kapat",
+      "menu": "Menü",
+      "openTools": "Araçlar menüsünü aç",
+      "exploreTools": "Tüm Araçları Keşfedin",
+      "platformFeatures": "Platform Özellikleri",
+      "privacyCommitment": "Gizlilik Taahhüdü",
+      "developerApi": "Geliştirici API ve Dokümanlar",
+      "pricingPlans": "Fiyatlandırma Planları"
+    },
+    "shareTool": {
+      "title": "Gizliliği Yayın",
+      "subtitle": "Yerel öncelikli bilişimi destekleyin",
+      "copyLink": "Bağlantıyı Kopyala",
+      "copied": "Kopyalandı",
+      "twitter": "{title} için bu özel, yüklemesiz araca göz atın:",
+      "telegram": "SafeTools ile güvenli dosya işleme: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF Çözümleri",
+        "image": "Görüntü Stüdyosu",
+        "privacy": "Gizlilik Araçları",
+        "developer": "Geliştirici Araçları",
+        "pdfMerge": "PDF Birleştir",
+        "pdfSplit": "PDF Ayır",
+        "pdfUnlock": "PDF Kilidini Aç",
+        "pdfProtect": "PDF Koru",
+        "pdfToImage": "PDF'den Görüntüye",
+        "securityFileShredder": "Dosya Öğütücü"
+      }
+    },
+    "error": "Hata"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "%100 Yerel İşleme",
+      "noUploads": "Sıfır Sunucu Yüklemesi",
+      "noTracking": "Sıfır Veri Takibi",
+      "privacyFirst": "Gizlilik Öncelikli UX",
+      "worksOffline": "Çevrimdışı Çalışır"
+    }
+  }
+}

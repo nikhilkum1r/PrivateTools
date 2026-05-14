@@ -44,12 +44,12 @@ export function FileSizeWarning({ fileSize, module, className, onUpgrade }: File
           <>
             <p className="font-bold">File too large for free processing</p>
             <p className="text-xs opacity-80">
-              Your file is {sizeStr} — the free limit is {limitStr}. Pro processes files up to {formatBytes(FREE_LIMITS[module] * 10)}.
+              Your file is {sizeStr}  the free limit is {limitStr}. Pro processes files up to {formatBytes(FREE_LIMITS[module] * 10)}.
             </p>
           </>
         ) : (
           <>
-            <p className="font-bold">Large file — may be slow</p>
+            <p className="font-bold">Large file  may be slow</p>
             <p className="text-xs opacity-80">
               {sizeStr} of {limitStr} free limit used. Processing may take longer than usual.
             </p>

@@ -1,0 +1,150 @@
+{
+  "privacy": {
+    "hero": {
+      "badge": "El Manifiesto de Privacidad",
+      "title": "La privacidad es un <br></br> <span class='text-primary'>Derecho Humano.</span>",
+      "subtitle": "El software profesional no debería requerir su identidad. SafeTools fue creado para demostrar que se pueden tener herramientas de clase mundial sin vigilancia."
+    },
+    "pillars": [
+      {
+        "title": "100% capaz de funcionar sin conexión",
+        "desc": "Una vez que se carga la herramienta, puede desconectar su internet. El motor ahora es completamente suyo."
+      },
+      {
+        "title": "Residencia de datos cero",
+        "desc": "No poseemos bases de datos para el contenido del usuario. Sus archivos nunca tocan un disco duro fuera del suyo."
+      },
+      {
+        "title": "Cómputo solo en RAM",
+        "desc": "Todo el procesamiento ocurre en memoria volátil de alta velocidad. Cerrar la pestaña equivale a un borrado seguro."
+      }
+    ],
+    "verification": {
+      "title": "La verificación de <br></br> <span class='text-primary'>10 segundos.</span>",
+      "subtitle": "No pedimos su confianza. Proporcionamos las herramientas para que verifique nuestras afirmaciones en segundos.",
+      "steps": [
+        {
+          "title": "Abra cualquier herramienta",
+          "desc": "Seleccione cualquier utilidad de imagen o PDF desde la página de inicio."
+        },
+        {
+          "title": "Desconéctese",
+          "desc": "Active el modo avión o desconecte su cable Ethernet."
+        },
+        {
+          "title": "Procese archivos",
+          "desc": "Cargue y procese su archivo. Notará que funciona a velocidad nativa con cero actividad de red."
+        }
+      ],
+      "card": {
+        "network": "Red: 0.00 KB",
+        "system": "[Sistema]",
+        "initializing": "Inicializando WASM...",
+        "active": "Sandbox seguro activo",
+        "blocked": "Conexión de red: BLOQUEADA",
+        "success": "[Éxito]",
+        "complete": "Tarea completada (Local)",
+        "label": "Servidor Cero Verificado",
+        "sublabel": "Aislamiento a nivel de hardware"
+      }
+    },
+    "commitments": {
+      "badge": "Soberanía de datos",
+      "title": "Nuestros compromisos <br></br> <span class='text-primary'>inquebrantables</span>",
+      "items": [
+        {
+          "title": "Conocimiento Cero del Servidor",
+          "desc": "No solo 'ciframos' sus archivos; nunca los vemos. Nuestros servidores solo sirven código estático. Sus datos permanecen en su RAM, exactamente donde pertenecen."
+        },
+        {
+          "title": "Sin capitalismo de vigilancia",
+          "desc": "No utilizamos análisis, ni cookies, ni rastreadores. No queremos saber quién es usted, dónde está ni qué está procesando."
+        },
+        {
+          "title": "Efímero por defecto",
+          "desc": "Sus datos se procesan en memoria volátil. Una vez que cierra la pestaña, el estado se borra. No hay copias de seguridad porque no hay almacenamiento."
+        },
+        {
+          "title": "Aislamiento verificado",
+          "desc": "SafeTools utiliza los encabezados de seguridad de navegador más altos (COOP/COEP) para garantizar que su sesión de procesamiento esté estrictamente aislada de otros contenidos web."
+        }
+      ]
+    },
+    "protection": {
+      "title": "Protección total",
+      "subtitle": "Aplicamos la misma lógica de cero compromiso a cada tipo de dato.",
+      "items": [
+        {
+          "label": "Biometría"
+        },
+        {
+          "label": "Identidad"
+        },
+        {
+          "label": "Contraseñas"
+        },
+        {
+          "label": "Metadatos"
+        }
+      ]
+    },
+    "final": {
+      "title": "Internet <br></br> debería ser privado.",
+      "subtitle": "SafeTools no es solo un producto; es una declaración. En un mundo que quiere rastrear cada clic, proporcionamos un santuario de productividad. Sin cuentas. Sin rastreo. Sin compromisos.",
+      "button": "Volver a la Suite"
+    }
+  },
+  "terms": {
+    "badge": "Marco Legal v4.0",
+    "title": "Pacto de <covenant>Servicio.</covenant>",
+    "subtitle": "Nuestros términos son simples: Su dispositivo, sus datos, su control. Nosotros proporcionamos las herramientas; usted proporciona la soberanía.",
+    "boundTitle": "Soberanía Vinculada",
+    "boundSubtitle": "Aplicamos la misma lógica de cero compromiso a cada compromiso.",
+    "labels": [
+      {
+        "label": "Cumplimiento"
+      },
+      {
+        "label": "Legal"
+      },
+      {
+        "label": "Cifrado"
+      },
+      {
+        "label": "Seguridad"
+      }
+    ],
+    "cta": {
+      "title": "Consulta <consultation>Legal</consultation>",
+      "subtitle": "Para implementaciones empresariales o auditorías de seguridad especializadas, nuestro equipo técnico está disponible para consultas.",
+      "contactButton": "Contactar con Legal",
+      "archiveButton": "Archivo (v3.0)"
+    },
+    "sections": [
+      {
+        "title": "1. El Pacto Local-First",
+        "description": "Al usar SafeTools, usted comprende y acepta que esta es una plataforma de ejecución del lado del cliente. Nosotros proporcionamos el 'Plano Arquitectónico' (el código), pero la 'Construcción' (procesamiento de datos) ocurre completamente en su hardware local. No proporcionamos un servicio de alojamiento para sus datos; proporcionamos un entorno de ejecución local."
+      },
+      {
+        "title": "2. Soberanía absoluta de los datos",
+        "description": "Sus archivos siguen siendo de su propiedad y nunca salen de su máquina. SafeTools reclama cero derechos sobre sus activos. Debido a que nunca vemos sus datos, no podemos cumplir con las solicitudes de 'Eliminación de datos', ya que no tenemos nada que eliminar. Usted es el único custodio de sus activos digitales."
+      },
+      {
+        "title": "3. Ejecución y límites del hardware",
+        "description": "El procesamiento de medios pesados consume su CPU, GPU y RAM locales. El rendimiento depende de las capacidades de su dispositivo. SafeTools no se hace responsable de bloqueos del navegador, desbordamientos de memoria o estrangulamiento térmico resultante del procesamiento local intensivo."
+      },
+      {
+        "title": "4. Sin persistencia ni recuperación",
+        "description": "Esta es una aplicación sin estado. No mantenemos cuentas de usuario, bases de datos ni almacenamiento en la nube. Una vez que cierra la pestaña de su navegador, su progreso se pierde permanentemente. Es su responsabilidad descargar sus activos inmediatamente después del procesamiento."
+      },
+      {
+        "title": "5. Seguridad y transparencia",
+        "description": "Fomentamos la auditoría de nuestra lógica del lado del cliente. Se le prohíbe utilizar nuestras herramientas con fines maliciosos, que incluyen pero no se limitan a: generar contenido ilegal, inyección de metadatos no autorizada o intentar realizar ingeniería inversa en la lógica de nuestro motor."
+      },
+      {
+        "title": "6. Limitación de responsabilidad",
+        "description": "SafeTools se proporciona 'tal cual'. No garantizamos el 100% de precisión en la conversión de archivos o la eliminación de metadatos. No somos responsables de ninguna pérdida de datos, corrupción o daños consecuentes que surjan del uso de nuestras utilidades locales del navegador."
+      }
+    ]
+  }
+}

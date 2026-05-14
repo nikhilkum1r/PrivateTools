@@ -1,0 +1,424 @@
+{
+  "iconStudio": {
+    "seo": {
+      "title": "Icon Studio | Generador de Iconos Pro | SafeTools",
+      "description": "Genera iconos profesionales para iOS, Android y Web. Soporte multicapa, vista previa en tiempo real y exportación por lotes.",
+      "keywords": "generador de iconos, creador de iconos de aplicaciones, generador de iconos ios, generador de iconos android, creador de iconos web",
+      "slugs": {
+        "png-to-ico": {
+          "title": "Convertir PNG a ICO - Generador de Favicon Gratis",
+          "description": "Herramienta profesional de PNG a ICO. Genera favicons de 16x16, 32x32 localmente en tu navegador. 100% privado."
+        },
+        "svg-to-favicon": {
+          "title": "Convertidor de SVG a Favicon - Alta Calidad",
+          "description": "Herramienta profesional de SVG a Favicon. Genera favicons escalables localmente en tu navegador. 100% privado."
+        },
+        "generate-android-icons": {
+          "title": "Generar Iconos de Aplicaciones Android (MDPI a XXXHDPI)",
+          "description": "Herramienta profesional de iconos para Android. Genera iconos de lanzamiento para Android localmente en tu navegador. 100% privado."
+        },
+        "ios-icon-generator": {
+          "title": "Generador de Iconos de Aplicaciones iOS - Compatible con iOS 17",
+          "description": "Herramienta profesional de iconos para iOS. Genera iconos de aplicaciones para iOS localmente en tu navegador. 100% privado."
+        },
+        "convert-image-to-favicon": {
+          "title": "Convertir Cualquier Imagen a Favicon Online",
+          "description": "Herramienta profesional de favicons. Genera favicons a partir de cualquier imagen localmente en tu navegador. 100% privado."
+        },
+        "pwa-icon-architect": {
+          "title": "Generador de Iconos PWA y Creador de Manifiesto",
+          "description": "Herramienta profesional de iconos PWA. Genera iconos PWA localmente en tu navegador. 100% privado."
+        }
+      }
+    },
+    "hero": {
+      "title": "Empieza tu Design",
+      "description": "Arrastra y suelta tu logo o haz clic para subirlo. <br></br> <highlight>Recomendado: recurso cuadrado de 1024x1024.</highlight>",
+      "choose_image": "Elegir Imagen",
+      "device": "Procesamiento en Dispositivo",
+      "engine": "Acelerado por GPU",
+      "badge": "Estudio de Privacidad Primero"
+    },
+    "dropzone": {
+      "title": "Suelta tu Recurso de Icono",
+      "description": "Arrastra y suelta un PNG, SVG o JPEG para comenzar."
+    },
+    "benefits": {
+      "local": "Procesamiento 100% Local",
+      "zero": "Cero Cargas al Servidor",
+      "noTracking": "Sin Seguimiento de Datos",
+      "fast": "Generación Instantánea",
+      "browser": "Funciona en cualquier navegador"
+    },
+    "sidebar": {
+      "title": "Personalizador",
+      "design_tools": "Herramientas de Diseño",
+      "basic": "Básico",
+      "style": "Estilo",
+      "filters": "Filtros",
+      "ai": "Opciones de IA",
+      "svg": "Estudio SVG",
+      "zoom": "Zoom de Recurso",
+      "radius": "Radio de Esquina",
+      "background": "Fondo",
+      "solid": "Sólido",
+      "gradient": "Degradado",
+      "color": "Color",
+      "shadow": "Suavizado de Sombra",
+      "brightness": "Brillo",
+      "contrast": "Contraste",
+      "live_context": "Contexto en Vivo",
+      "preview_matrix": "Matriz de Vista Previa",
+      "home": "Pantalla de Inicio",
+      "settings": "Ajustes",
+      "notifications": "Notificaciones",
+      "theme": "Tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "export": "Centro de Exportación",
+      "generate": "Generar iconos",
+      "download": "Descargar Paquete",
+      "secure_protocol": "Protocolo Seguro",
+      "on_device": "Cifrado 100% en el Dispositivo",
+      "ai_enhancer": "Mejorador de Iconos por IA",
+      "enhancer_desc": "Procesamiento inteligente con un solo clic para corregir recursos borrosos, eliminar espacios en blanco sobrantes y asegurar un centrado geométrico perfecto.",
+      "start_enhancement": "Iniciar Mejora Inteligente",
+      "svg_optimizer": "Optimizador Pro de SVG",
+      "svg_optimizer_desc": "Limpia metadatos, minifica rutas e inyecta atributos viewBox responsivos para recursos vectoriales listos para SEO.",
+      "start_svg_optimization": "Optimizar Recurso Vectorial",
+      "optimized_payload": "Carga Optimizada",
+      "download_svg": "Descargar SVG Optimizado",
+      "imagePalette": "Paleta de Logo",
+      "ready_generation": "Listo para Generación",
+      "ready_desc": "Genera tu recurso maestro para poblar la matriz",
+      "adaptive": "Estudio Adaptativo de Android",
+      "adaptive_desc": "Los iconos modernos de Android requieren capas separadas para el primer plano, el fondo y los iconos temáticos (monocromáticos). Genera aquí el paquete completo listo para XML.",
+      "web_manifest": "Manifiesto Web",
+      "pwa_hardening": "Reforzamiento PWA / SEO",
+      "html_embed": "Incrustación HTML",
+      "head_integration": "Integración de Etiquetas Head",
+      "copy_json": "Copiar JSON",
+      "copy_tags": "Copiar Etiquetas",
+      "json": "JSON",
+      "html": "HTML",
+      "smart_fill": "Llenado Inteligente",
+      "smart_auto": "Auto Inteligente",
+      "manual_override": "Anulación manual activa",
+      "format_recs": "Eligiendo el mejor formato por plataforma (PNG/WebP/ICO/JPG)",
+      "ios_preview": "Contexto Móvil (iOS)",
+      "export_format": "Formato de Exportación",
+      "gradient_presets": "Degradados Preestablecidos",
+      "preview_bg": "Tema de Fondo de Vista Previa",
+      "macos_dock": "Dock de macOS",
+      "windows_taskbar": "Windows Taskbar",
+      "ai_coming": "Motor de IA Próximamente",
+      "ai_desc": "Estamos entrenando un modelo personalizado para la reconstrucción de iconos en el dispositivo.",
+      "ai_ops": {
+        "sharpen": "Enfocar",
+        "sharpen_desc": "Reducción de desenfoque",
+        "center": "Centrar",
+        "center_desc": "Corrección geométrica",
+        "trim": "Recortar",
+        "trim_desc": "Bordes limpios",
+        "upscale": "Escalar",
+        "upscale_desc": "Aumento de densidad"
+      },
+      "platforms": {
+        "all": "Todo",
+        "web": "Web",
+        "android": "Android",
+        "ios": "iOS",
+        "social": "Social",
+        "pwa": "PWA"
+      },
+      "clear_history": "Limpiar resultados"
+    },
+    "messages": {
+      "layerAdded": "Capa añadida con éxito",
+      "layerRemoved": "Capa eliminada",
+      "exportStarted": "Generando recursos...",
+      "exportComplete": "Iconos exportados con éxito",
+      "invalidImage": "Por favor, sube un archivo de imagen válido."
+    },
+    "landing": {
+      "hero": {
+        "badge": "Motor de Branding Definitivo",
+        "title": "Generador de Iconos Gratis y <br></br> <highlight>Creador de Favicons</highlight> Online",
+        "description": "Crea favicons profesionales, iconos de aplicaciones, iconos PWA y recursos de branding para sitios web al instante usando nuestro generador de iconos basado en navegador con prioridad en la privacidad."
+      },
+      "intro": {
+        "title": "Crea Iconos Profesionales al Instante",
+        "description": "Los iconos son uno de los elementos de branding más importantes para sitios web, aplicaciones móviles, plataformas SaaS y startups. Un icono limpio y optimizado mejora el reconocimiento de marca, la confianza y la experiencia del usuario en todos los dispositivos y plataformas.",
+        "security": "Todo el procesamiento de imágenes ocurre localmente en tu dispositivo para máxima velocidad y seguridad."
+      },
+      "features": {
+        "title": "Soluciones de Iconos Profesionales",
+        "badge": "Generación de Recursos Multiplataforma",
+        "items": [
+          {
+            "title": "Generar Favicons para Sitios Web",
+            "content": "Los favicons son pequeños iconos que se muestran en las pestañas del navegador, marcadores y resultados de búsqueda. Nuestro creador de favicons genera automáticamente favicon.ico, favicons PNG/SVG e iconos táctiles de Apple para blogs, portafolios y paneles SaaS.",
+            "list": [
+              "Pestañas del Navegador",
+              "Marcadores",
+              "Accesos Directos Móviles",
+              "Resultados de Búsqueda"
+            ]
+          },
+          {
+            "title": "Crear Iconos de Apps para Android e iOS",
+            "content": "Genera iconos de aplicaciones móviles optimizados para aplicaciones Android, aplicaciones iPhone, proyectos Flutter y React Native. Crea automáticamente iconos adaptativos de Android y recursos de iOS de alta resolución compatibles con la App Store.",
+            "list": [
+              "Iconos Adaptativos de Android",
+              "Compatible con iOS 17",
+              "Pantallas de Inicio",
+              "Recursos de Lanzamiento"
+            ]
+          },
+          {
+            "title": "Generador de Iconos PWA",
+            "content": "Las plataformas SaaS modernas utilizan Progressive Web Apps para experiencias instalables. Nuestro generador crea iconos enmascarables, recursos listos para manifiesto y gráficos para pantallas de instalación compatibles con Next.js, React y Vue.",
+            "list": [
+              "Iconos Enmascarables",
+              "Listo para manifest.json",
+              "Pantallas de Instalación",
+              "Soporte Nuxt/Next"
+            ]
+          },
+          {
+            "title": "Procesamiento de Privacidad Primero",
+            "content": "A diferencia de muchas herramientas en línea, tus archivos nunca se cargan en servidores. Todo se ejecuta localmente dentro de tu navegador utilizando la API Canvas y WebAssembly para máxima privacidad y cero seguimiento.",
+            "list": [
+              "Renderizado del Lado del Cliente",
+              "Aceleración por GPU",
+              "Cero Cargas al Servidor",
+              "Amigable con el Modo Offline"
+            ]
+          }
+        ]
+      },
+      "specs": {
+        "title": "Formatos y Tamaños Soportados",
+        "description": "Diferentes plataformas requieren diferentes tamaños de icono. Nuestra herramienta genera automáticamente todas las resoluciones de iconos principales al instante para asegurar la compatibilidad en Chrome, Safari, Firefox, Android e iOS.",
+        "inputFormats": "Formatos de Entrada",
+        "outputAssets": "Recursos de Salida"
+      },
+      "seo_value": {
+        "title": "Por qué los Iconos Importan para el SEO",
+        "description": "Los iconos profesionales mejoran las tasas de clic, el reconocimiento de marca, la confianza del usuario y la identidad visual. Los motores de búsqueda y los navegadores favorecen cada vez más los sitios web con recursos de branding completos y metadatos optimizados.",
+        "items": [
+          {
+            "l": "Confianza"
+          },
+          {
+            "l": "Autoridad"
+          },
+          {
+            "l": "Retención"
+          },
+          {
+            "l": "Visibilidad SEO"
+          }
+        ]
+      },
+      "tech_guide": {
+        "badge": "Guía Técnica",
+        "title": "Guía Completa de Formatos <br></br> y Extensiones de Iconos",
+        "description": "Nuestro generador de iconos en línea soporta todos los formatos principales de favicons, iconos de aplicaciones, iconos PWA e imágenes de branding. Genera iconos optimizados para sitios web, Android, iOS y redes sociales al instante.",
+        "browser": {
+          "title": "Suite de Favicon para Navegador",
+          "subtitle": "Compatibilidad con Estándares Web",
+          "headers": [
+            "Formato",
+            "Extensión",
+            "Uso"
+          ],
+          "rows": [
+            {
+              "f": "Icono de Microsoft",
+              "e": ".ico",
+              "u": "Favicon Tradicional"
+            },
+            {
+              "f": "PNG",
+              "e": ".png",
+              "u": "Soporte Moderno"
+            },
+            {
+              "f": "SVG",
+              "e": ".svg",
+              "u": "Alta Calidad"
+            },
+            {
+              "f": "WebP",
+              "e": ".webp",
+              "u": "Ligero"
+            },
+            {
+              "f": "AVIF",
+              "e": ".avif",
+              "u": "Ultra Comprimido"
+            }
+          ]
+        },
+        "mobile": {
+          "title": "Ecosistema de Apps Móviles",
+          "subtitle": "Especificaciones de iOS y Android",
+          "headers": [
+            "Tipo",
+            "Dimensiones",
+            "Plataforma"
+          ],
+          "rows": [
+            {
+              "t": "Notificación",
+              "d": "20x20 - 48x48",
+              "p": "iOS / Android"
+            },
+            {
+              "t": "Ajustes",
+              "d": "29x29 - 87x87",
+              "p": "iOS"
+            },
+            {
+              "t": "Icono de Lanzamiento",
+              "d": "60x60 - 512x512",
+              "p": "Todo Móvil"
+            },
+            {
+              "t": "Pantalla de Inicio",
+              "d": "2732x2732",
+              "p": "iOS / Android"
+            },
+            {
+              "t": "Icono App Store",
+              "d": "1024x1024",
+              "p": "iOS / Play Store"
+            }
+          ]
+        },
+        "recs": {
+          "title": "Recomendaciones de Mejores Prácticas",
+          "description": "Nuestros expertos recomiendan un enfoque híbrido para la máxima compatibilidad entre navegadores y sistemas operativos.",
+          "items": [
+            {
+              "u": "Favicon de Sitio Web",
+              "f": "ICO + PNG",
+              "d": "Compatibilidad universal de navegadores"
+            },
+            {
+              "u": "Web Apps Modernas",
+              "f": "SVG",
+              "d": "Escalabilidad vectorial lista para retina"
+            },
+            {
+              "u": "Nativo Móvil",
+              "f": "PNG (24 bits)",
+              "d": "Estándares de Apple y Google"
+            },
+            {
+              "u": "SEO de Rendimiento",
+              "f": "WebP / AVIF",
+              "d": "Carga de archivo más pequeña posible"
+            }
+          ]
+        },
+        "index": {
+          "title": "Índice Técnico y Palabras Clave",
+          "keywords": [
+            "Formatos de Favicon",
+            "Extensiones de Iconos",
+            "Tamaños de Iconos de Apps",
+            "Generador de ICO",
+            "Favicon SVG",
+            "Creador de Iconos PNG",
+            "Iconos Adaptativos de Android",
+            "Iconos Táctiles de Apple",
+            "Formatos de Iconos PWA",
+            "Tamaños de Favicon de Navegador"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes de Icon Studio",
+        "items": [
+          {
+            "q": "¿Cuál es el mejor formato para un favicon de sitio web?",
+            "a": "Para máxima compatibilidad, recomendamos proporcionar tanto un archivo .ico de 32x32 como un archivo .png de 192x192. Los navegadores modernos también soportan .svg para iconos escalables de alta calidad."
+          },
+          {
+            "q": "¿Es gratis el generador de iconos?",
+            "a": "Sí. Todas las herramientas principales de generación de iconos son completamente gratuitas, sin cargos ocultos."
+          },
+          {
+            "q": "¿Se cargan mis imágenes en servidores?",
+            "a": "No. Los archivos se procesan localmente dentro de tu navegador utilizando la GPU. Tu privacidad es nuestra prioridad."
+          },
+          {
+            "q": "¿Puedo crear iconos para aplicaciones Android e iOS?",
+            "a": "Sí. Nuestro generador crea paquetes completos multiplataforma que incluyen iconos de ajustes de iPhone, iconos de lanzamiento de Android y pantallas de inicio."
+          },
+          {
+            "q": "¿El herramienta soporta iconos SVG?",
+            "a": "Sí. El ingreso y la optimización de SVG son totalmente soportados para un branding independiente de la resolución."
+          }
+        ]
+      },
+      "cta": {
+        "badge": "Empieza a Crear",
+        "title": "Perfecto para Desarrolladores y Startups",
+        "description": "Genera recursos profesionales sin Photoshop. Ahorra tiempo mientras mantienes la consistencia visual en todas las plataformas.",
+        "button": "Crea tus Iconos"
+      },
+      "manifesto": {
+        "title": "¿Por qué SafeTools Icon Studio?",
+        "badge": "Diseño con Prioridad en la Privacidad",
+        "typical": {
+          "title": "Generadores de Iconos Tradicionales",
+          "items": [
+            "Cargan imágenes en servidores remotos",
+            "Requieren suscripciones pagas",
+            "Soporte de formatos limitado",
+            "Sin procesamiento por lotes",
+            "Políticas de retención de datos"
+          ]
+        },
+        "safetools": {
+          "title": "SafeTools Icon Studio",
+          "items": [
+            "Procesamiento 100% local en el navegador",
+            "Completamente gratis para siempre",
+            "Más de 30 formatos y tamaños de exportación",
+            "Generación completa por lotes",
+            "Cero retención de datos"
+          ]
+        }
+      }
+    },
+    "results": {
+      "title": "Matriz de Activos Maestros",
+      "subtitle": "Exportaciones de alta fidelidad para todas las plataformas",
+      "download_all": "Descargar todos los activos",
+      "back": "Limpiar resultados"
+    },
+    "toasts": {
+      "svg_optimized": "SVG Optimizado: Minificado y Responsivo",
+      "svg_failed": "Fallo en la optimización de SVG",
+      "no_transparency": "No se detectó transparencia. Los resultados pueden variar.",
+      "ai_success": "Mejora de IA Completada: Enfocado, Recortado y Centrado",
+      "ai_failed": "Fallo en la mejora",
+      "gen_success": "¡Iconos generados con éxito!",
+      "gen_failed": "Fallo al generar iconos",
+      "adaptive_success": "¡Iconos adaptativos generados!",
+      "adaptive_failed": "Fallo en la generación adaptativa",
+      "exported": "¡Paquete de iconos exportado con éxito!",
+      "copied": "Copiado",
+      "manifest_copied": "¡Manifiesto copiado!",
+      "tags_copied": "¡Etiquetas HTML copiadas!"
+    },
+    "manifest": {
+      "app_name": "SafeTools",
+      "short_name": "Herramientas"
+    }
+  }
+}

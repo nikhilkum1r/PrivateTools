@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Studio Penukar Imej | 150+ Format Disokong | SafeTools",
+      "description": "Tukarkan imej antara 150+ format secara lokal dalam pelayar anda. Sokongan untuk HEIC, WebP, AVIF, RAW, PDF dan banyak lagi. 100% peribadi."
+    },
+    "hero": {
+      "title": "Penukar Imej Universal.",
+      "titleSpecific": "Tukarkan {from} kepada {to}.",
+      "description": "Tukarkan imej antara 150+ format secara lokal dalam pelayar anda. Sifar muat naik pelayan.",
+      "descriptionSpecific": "Tukarkan {from} kepada {to} secara instan. Pemprosesan lokal yang mengutamakan privasi dengan sifar muat naik.",
+      "engine": "Pemprosesan Perkakasan Lokal",
+      "privateConverter": "Enjin Pelayar Peribadi"
+    },
+    "benefits": {
+      "local": "Enjin Lokal",
+      "zero": "Sifar Muat Naik",
+      "no_tracking": "Tiada Penjejakan",
+      "fast": "Sangat Pantas",
+      "browser": "Dalam Pelayar"
+    },
+    "performance": {
+      "title": "Enjin Berprestasi Tinggi",
+      "subtitle": "Pemprosesan Pelayar Dipercepat GPU",
+      "items": [
+        {
+          "title": "150+ Format",
+          "description": "Sokongan untuk segalanya daripada HEIC dan RAW kepada format bitmap lama."
+        },
+        {
+          "title": "Pemprosesan Batch",
+          "description": "Tukarkan ratusan imej secara serentak tanpa mencapai had pelayan."
+        },
+        {
+          "title": "Kualiti Tanpa Rugi",
+          "description": "Algoritma pensampelan semula yang canggih mengekalkan setiap piksel data asal anda."
+        },
+        {
+          "title": "OCR Lokal",
+          "description": "Ekstrak lapisan teks semasa penukaran menggunakan enjin pengecaman terbina dalam."
+        },
+        {
+          "title": "Kawalan Metadata",
+          "description": "Pilih untuk membuang atau mengekalkan lapisan data EXIF, GPS, dan IPTC."
+        },
+        {
+          "title": "Privasi Pelayar",
+          "description": "Fail anda tidak pernah meninggalkan peranti anda. Seni bina 100% selamat yang sedia luar talian."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Ruang Kerja Penukaran",
+      "assets": "{count} Aset",
+      "telemetry": "Pemprosesan Perkakasan Lokal",
+      "savings": "Penjimatan Semasa",
+      "smaller": "{size} lebih kecil",
+      "impact": "Impak Global",
+      "saved": "{size} dijimatkan",
+      "clear": "Kosongkan Ruang Kerja",
+      "addMore": "Tambah Fail",
+      "exportAll": "Eksport Semua (ZIP)"
+    },
+    "config": {
+      "title": "Tetapan Global",
+      "format": "Format Sasaran",
+      "selectFormat": "Pilih Format",
+      "search": "Cari 150+ format...",
+      "quality": "Kualiti & Pemampatan",
+      "resizeW": "Ubah Saiz Lebar",
+      "resizeH": "Ubah Saiz Tinggi",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Kawalan Metadata",
+      "strip": "Buang EXIF/GPS (Aktif)",
+      "wasm": "Enjin WASM",
+      "accelerated": "Perkakasan Dipercepat",
+      "targetSize": "Saiz Fail Sasaran",
+      "limit": "Had kepada {size}KB",
+      "optimized": "Kualiti Dioptimumkan"
+    },
+    "categories": {
+      "regular": "Format Standard",
+      "web": "Dioptimumkan Web",
+      "modern": "Format Generasi Seterusnya",
+      "print": "Cetakan Profesional",
+      "design": "Aset Reka Bentuk",
+      "game": "Tekstur Permainan",
+      "raw": "Data Kamera RAW",
+      "scientific": "Pengimejan Saintifik",
+      "vector": "Grafik Vektor",
+      "hdr": "Julat Dinamik Tinggi",
+      "document": "Pejabat & Dokumen",
+      "legacy": "Format Lama"
+    },
+    "queue": {
+      "title": "Barisan Penukaran",
+      "converted": "Ditukar",
+      "in": "MASUK",
+      "out": "KELUAR",
+      "smaller": "{percent}% Lebih Kecil",
+      "download": "Muat Turun",
+      "convert": "Tukar",
+      "convert_all": "Tukar Semua Fail"
+    },
+    "toast": {
+      "noProcessed": "Tiada fail yang diproses untuk dimuat turun.",
+      "copied": "Imej disalin ke papan keratan!",
+      "clipboardFailed": "Gagal menyalin imej ke papan keratan."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Enjin Lokal",
+        "zero": "Sifar Muat Naik",
+        "no_tracking": "Tiada Penjejakan",
+        "fast": "Sangat Pantas",
+        "browser": "Dalam Pelayar"
+      },
+      "performance": {
+        "title": "Enjin Berprestasi Tinggi",
+        "subtitle": "Pemprosesan Pelayar Dipercepat GPU",
+        "items": [
+          {
+            "title": "150+ Format",
+            "description": "Sokongan untuk segalanya daripada HEIC dan RAW kepada format bitmap lama."
+          },
+          {
+            "title": "Pemprosesan Batch",
+            "description": "Tukarkan ratusan imej secara serentak tanpa mencapai had pelayan."
+          },
+          {
+            "title": "Kualiti Tanpa Rugi",
+            "description": "Algoritma pensampelan semula yang canggih mengekalkan setiap piksel data asal anda."
+          },
+          {
+            "title": "OCR Lokal",
+            "description": "Ekstrak lapisan teks semasa penukaran menggunakan enjin pengecaman terbina dalam."
+          },
+          {
+            "title": "Kawalan Metadata",
+            "description": "Pilih untuk membuang atau mengekalkan lapisan data EXIF, GPS, dan IPTC."
+          },
+          {
+            "title": "Privasi Pelayar",
+            "description": "Fail anda tidak pernah meninggalkan peranti anda. Seni bina 100% selamat yang sedia luar talian."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Format Disokong",
+        "compatibility": "Matriks Keserasian Universal",
+        "input": "Format Input",
+        "output": "Format Output",
+        "freeTitle": "100% Percuma Selamanya",
+        "freeDesc": "SafeTools adalah suite utiliti percuma. Tiada langganan, tiada yuran tersembunyi, tiada kad kredit diperlukan.",
+        "optimizedTitle": "Pengoptimuman Tanpa Rugi",
+        "optimizedDesc": "Enjin kami menggunakan pensampelan semula canggih untuk memastikan imej anda kekal tajam walaupun selepas penukaran.",
+        "precisionTitle": "Ketepatan Pelayar",
+        "precisionDesc": "Dengan berjalan secara lokal, kami menghapuskan artifak yang disebabkan oleh pemprosesan imej berasaskan rangkaian.",
+        "popularTitle": "Penukaran Popular",
+        "popularSubtitle": "Pemprosesan lokal segera untuk tugas web biasa",
+        "moreFormats": "150+ Format Lain",
+        "moreDesc": "Mencari sesuatu yang lain? SafeTools menyokong hampir setiap format imej yang wujud.",
+        "start": "Kembali ke Atas"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Berapa banyak format yang boleh saya tukarkan?",
+            "a": "Anda boleh menukar antara 150+ format imej, termasuk yang moden seperti WebP, AVIF dan HEIC, serta format profesional seperti fail PSD, TIFF dan RAW."
+          },
+          {
+            "q": "Adakah saya akan kehilangan kualiti imej semasa penukaran?",
+            "a": "Kami menggunakan enjin pengekodan berkualiti tinggi. Anda boleh melaraskan tetapan kualiti/pemampatan secara manual untuk memastikan output anda kelihatan tepat seperti yang anda inginkan, sama ada anda mengoptimumkan untuk web atau cetakan."
+          },
+          {
+            "q": "Bolehkah saya menukar foto HEIC dari iPhone saya kepada JPG?",
+            "a": "Ya! Penukar kami sangat sesuai untuk mengubah fail HEIC kepada format JPG atau PNG yang serasi secara meluas terus dalam pelayar anda tanpa memuat naiknya ke pelayan."
+          },
+          {
+            "q": "Adakah terdapat had kepada bilangan fail yang boleh saya tukarkan?",
+            "a": "Tidak. Anda boleh menukar seberapa banyak fail yang anda mahu, satu demi satu atau dalam kelompok, secara percuma sepenuhnya."
+          }
+        ],
+        "title": "Soalan Lazim",
+        "description": "Segala-galanya yang anda perlu tahu tentang alat privasi-diutamakan kami."
+      }
+    }
+  }
+}

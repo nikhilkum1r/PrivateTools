@@ -1,0 +1,101 @@
+{
+  "wordToPdf": {
+    "title": "Word 转",
+    "subtitle": "PDF。",
+    "description": "立即将 Word 文档（DOC, DOCX）转换为高质量的 PDF 文件。快速、安全且完全基于浏览器转换，无需上传任何文件。",
+    "dropzoneTitle": "将 Word 文档拖放到此处",
+    "dropzoneDescription": "支持 .doc 和 .docx 文件",
+    "toast": {
+      "errorFile": "请上传有效的 Word 文档（.doc 或 .docx）。",
+      "success": "成功转换为 PDF。",
+      "error": "转换失败：{message}"
+    },
+    "stats": {
+      "privacy": "隐私优先",
+      "noUploads": "无需上传",
+      "highQuality": "高质量",
+      "noWatermark": "无水印",
+      "converting": "正在转换...",
+      "localProcessing": "浏览器本地处理"
+    },
+    "buttons": {
+      "convert": "转换为 PDF",
+      "converting": "正在转换...",
+      "cancel": "取消"
+    },
+    "content": {
+      "mainTitle": "在线将 Word 文档转换为 PDF",
+      "mainDesc1": "我们的 Word 转 PDF 转换器允许您将 DOC 和 DOCX 文件转换为专业的 PDF 文档，而无需在质量或隐私上妥协。无论是简历、报告还是法律文件，我们的工具都能确保您的格式保持不变。",
+      "mainDesc2": "转换完全在您的浏览器中进行，这意味着您的敏感文档永远不会离开您的计算机。",
+      "featuresTitle": "为什么要使用我们的 Word 转 PDF 转换器？",
+      "featuresSubtitle": "专业转换功能",
+      "feature1Title": "格式保留",
+      "feature1Desc": "在最终的 PDF 输出中保持原始 Word 文档的准确布局、字体和图像。",
+      "feature2Title": "安全第一",
+      "feature2Desc": "文档在本地处理。我们不存储或查看您的文件，确保 100% 的数据机密性。",
+      "feature3Title": "极速转换",
+      "feature3Desc": "得益于我们优化的客户端处理引擎，几秒钟内即可将大型 Word 文件转换为 PDF。",
+      "feature4Title": "全方位访问",
+      "feature4Desc": "兼容 Windows、macOS、Linux、iOS 和 Android 设备上的所有现代浏览器。",
+      "feature5Title": "无文件限制",
+      "feature5Desc": "转换任意数量的文档，没有每日限制或严格的文件大小限制。",
+      "feature6Title": "干净的输出",
+      "feature6Desc": "专业级 PDF，没有任何添加的水印、品牌标识或不必要的广告。",
+      "useCasesTitle": "满足各种专业需求",
+      "useCasesDesc": "将 Word 转换为 PDF 对于确保您的文档对每个打开它们的人看起来都一样至关重要。这是安全共享重要信息的行业标准。",
+      "useCasesList": [
+        "发送简历和履历",
+        "定稿商业报告",
+        "分享法律合同",
+        "创建只读文档",
+        "准备大学作业",
+        "存档重要信函",
+        "电子书分发",
+        "专业发票"
+      ],
+      "howTitle": "如何将 Word 转换为 PDF",
+      "step1Title": "上传",
+      "step1Desc": "上传或拖动您的 .doc 或 .docx 文件",
+      "step2Title": "分析",
+      "step2Desc": "工具分析文档结构",
+      "step3Title": "转换",
+      "step3Desc": "文档在本地转换为 PDF",
+      "step4Title": "下载",
+      "step4Desc": "立即保存您的专业 PDF"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "如何在线免费将 Word 转换为 PDF？",
+          "a": "上传您的 DOC 或 DOCX 文档，等待转换过程结束，然后立即下载生成的 PDF 文件。"
+        },
+        {
+          "q": "这个 Word 转 PDF 转换器安全吗？",
+          "a": "是的。基于浏览器的处理有助于在转换过程中保持文档的私密和安全。"
+        },
+        {
+          "q": "我可以在不丢失格式的情况下将 DOCX 转换为 PDF 吗？",
+          "a": "是的。转换器旨在尽可能准确地保留字体、布局、间距、标题和文档结构。"
+        },
+        {
+          "q": "转换器会添加水印吗？",
+          "a": "不会。导出的 PDF 文件保持干净，没有不必要的品牌或水印。"
+        },
+        {
+          "q": "我可以在移动设备上使用此工具吗？",
+          "a": "是的。该转换器适用于 Android 手机、iPhone、平板电脑和桌面浏览器。"
+        },
+        {
+          "q": "需要注册吗？",
+          "a": "不需要。您无需创建帐户即可将 Word 文档转换为 PDF。"
+        },
+        {
+          "q": "DOC 和 DOCX 有什么区别？",
+          "a": "DOC 是较旧的 Microsoft Word 格式，而 DOCX 是较新的基于 XML 的格式，具有更好的兼容性和更小的文件大小。"
+        }
+      ],
+      "title": "常见问题解答",
+      "description": "关于我们隐私优先工具您需要了解的一切。"
+    }
+  }
+}

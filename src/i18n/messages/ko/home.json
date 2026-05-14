@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150개 이상의 프라이버시 우선 온라인 파일 도구",
+      "description": "브라우저에서 안전하게 파일을 변환, 압축, 편집, 암호화 및 관리하세요. 업로드 없음, 추적 없음, 서버 저장 없음."
+    },
+    "hero": {
+      "title": "프라이버시는 기능이 아닙니다. 그것은 <studio>권리</studio>입니다.",
+      "subtitle": "프라이버시와 속도를 위해 구축된 강력한 도구",
+      "description": "SafeTools는 파일을 장치에서 직접 처리하여 프라이버시, 제어 또는 평화로운 마음을 희생하지 않고 강력한 도구를 제공합니다.",
+      "getStarted": "도구 탐색",
+      "browseAll": "SafeTools를 만든 이유",
+      "exploreButton": "150개 이상의 도구 탐색",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "100% 로컬 처리",
+      "recent": "최근",
+      "favorites": "즐겨찾기"
+    },
+    "trustBar": [
+      {
+        "name": "GDPR 준수",
+        "desc": "데이터 수집 없음"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "군용 등급 암호화"
+      },
+      {
+        "name": "샌드박스",
+        "desc": "격리된 브라우저 실행"
+      },
+      {
+        "name": "WASM 네이티브",
+        "desc": "지연 시간 없는 성능"
+      },
+      {
+        "name": "오픈 코어",
+        "desc": "투명한 처리"
+      }
+    ],
+    "whyWeExist": {
+      "title": "SafeTools가 존재하는 이유",
+      "story": "몇 년 전, 우리와 가까운 누군가가 개인 문서를 위해 온라인 유틸리티 플랫폼을 사용했습니다. 몇 달 후, 그 데이터가 온라인에 나타났습니다. 그 사건은 인터넷 전반에 걸친 숨겨진 문제를 드러냈습니다. 많은 유틸리티 플랫폼이 투명성 없이 원격 서버에서 민감한 사용자 파일을 수집, 저장 또는 처리한다는 것입니다.",
+      "mission": "SafeTools는 그것을 바꾸기 위해 만들어졌습니다.",
+      "solution": "대부분의 현대적 도구는 외부 서버로 파일을 업로드할 필요가 없습니다. 이것이 SafeTools가 가능할 때마다 처리가 장치에서 직접 이루어지는 프라이버시 우선 아키텍처를 기반으로 구축된 이유입니다.",
+      "points": [
+        "불필요한 업로드 없음.",
+        "숨겨진 저장소 없음.",
+        "사용자 데이터 판매 없음.",
+        "당신의 데이터는 당신의 것으로 남습니다."
+      ]
+    },
+    "infra": [
+      {
+        "title": "WebAssembly 엔진",
+        "description": "브라우저에서 네이티브로 실행되는 고성능 처리 로직. 서버 오버헤드 없음."
+      },
+      {
+        "title": "Zero-Knowledge 아키텍처",
+        "description": "데이터가 제3자에 의해 복호화되거나 보여지지 않습니다. 순수 로컬 컴퓨팅."
+      },
+      {
+        "title": "즉각적인 처리",
+        "description": "업로드 및 다운로드 대기 시간을 없앱니다. 수 GB의 데이터를 수 초 만에 처리합니다."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "핵심 프라이버시",
+        "title": "Zero-Knowledge 아키텍처",
+        "description": "\"로컬 우선\" 철학은 파일이 원격 서버에 업로드, 스캔 또는 저장되지 않도록 보장합니다."
+      },
+      "performance": {
+        "badge": "성능",
+        "title": "1초 미만의 지연 시간",
+        "security": "샌드박스 실행",
+        "status": {
+          "ready": "준비됨",
+          "blocked": "차단됨",
+          "success": "성공"
+        },
+        "description": "SafeTools는 업로드/다운로드 주기를 없애 대용량 파일도 거의 즉각적으로 처리합니다."
+      },
+      "crossPlatform": {
+        "title": "교차 플랫폼",
+        "description": "데스크톱, 모바일, 태블릿. 모든 장치에서 완벽한 동기화."
+      },
+      "offlineFirst": {
+        "title": "오프라인 우선",
+        "description": "한 번 로드하면 영원히 사용. 대부분의 도구에 인터넷이 필요하지 않습니다."
+      }
+    },
+    "workflow": {
+      "title": "전문적인 워크플로우를 위한 설계",
+      "subtitle": "SafeTools는 단순한 유틸리티 모음이 아닙니다. 속도와 프라이버시를 위해 설계된 전문 작업 공간입니다.",
+      "items": [
+        {
+          "title": "일괄 처리",
+          "description": "수백 개의 파일을 동시에 처리하세요."
+        },
+        {
+          "title": "스마트 파일 라우팅",
+          "description": "파일을 드롭하면 최적의 도구를 자동으로 제안합니다."
+        },
+        {
+          "title": "오프라인 기능",
+          "description": "인터넷 연결 없이도 어디서나 작업하세요."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "개발자 우선",
+      "title": "성능을 위한 구축",
+      "description": "SafeTools는 깨끗하고 통합된 엔진 아키텍처를 통해 고성능 로컬 처리 모듈을 노출합니다.",
+      "stats": {
+        "latency": "인메모리 지연 시간",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// 처리 완료. 0바이트 업로드됨."
+    },
+    "toolsSection": {
+      "title": "도구 찾기",
+      "searchPlaceholder": "150개 이상의 도구 검색...",
+      "openTool": "도구 열기"
+    },
+    "privacyEngine": {
+      "badge": "시스템 상태: 활성",
+      "title": "절대적인 프라이버시를 위한 설계",
+      "description": "SafeTools 프라이버시 엔진은 100% 로컬에서 실행됩니다.",
+      "stats": [
+        {
+          "label": "데이터 전송",
+          "value": "0.00%"
+        },
+        {
+          "label": "로컬 암호화",
+          "value": "AES-256"
+        },
+        {
+          "label": "워커 상태",
+          "value": "샌드박스"
+        },
+        {
+          "label": "클라우드 의존성",
+          "value": "없음"
+        }
+      ],
+      "heartbeat": "보안 노드 활성",
+      "wasmHeartbeat": "WASM 엔진 하트비트",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "보안 확인됨",
+        "logs": [
+          "WASM 보안 샌드박스 초기화 중... 준비됨",
+          "네트워크 요청 차단됨: 차단됨 (로컬 전용 모드 활성화)",
+          "버퍼 할당: 256MB 보안 클라이언트 측 메모리... 성공",
+          "AES-256 GCM 키 로테이션 완료. 로컬 파일 이벤트 대기 중..."
+        ]
+      },
+      "sovereignty": {
+        "title": "데이터는 당신의 것입니다",
+        "description": "클라우드 기반 도구와 달리 SafeTools는 브라우저의 프라이빗 샌드박스 내에서만 작동합니다.",
+        "button": "아키텍처 확인"
+      }
+    },
+    "featuredCats": {
+      "title": "하나의 보안 플랫폼에서 필요한 모든 것",
+      "subtitle": "5개 핵심 카테고리의 전문가급 유틸리티.",
+      "items": [
+        {
+          "title": "이미지 도구",
+          "description": "이미지 도구",
+          "points": [
+            "PNG to JPG",
+            "WebP",
+            "AVIF",
+            "배경 제거",
+            "AI 향상",
+            "압축",
+            "메타데이터 제거"
+          ]
+        },
+        {
+          "title": "PDF 도구",
+          "description": "PDF 도구",
+          "points": [
+            "병합",
+            "분할",
+            "압축",
+            "잠금 해제",
+            "OCR",
+            "Word 변환",
+            "디지털 서명"
+          ]
+        },
+        {
+          "title": "파일 변환",
+          "description": "파일 변환",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "스프레드시트",
+            "비디오",
+            "오디오",
+            "뷰어"
+          ]
+        },
+        {
+          "title": "프라이버시 & 보안",
+          "description": "보안 도구",
+          "points": [
+            "암호화",
+            "메타데이터",
+            "QR 코드",
+            "해시",
+            "보안 공유",
+            "비밀번호 보호",
+            "Base64"
+          ]
+        },
+        {
+          "title": "개발자 유틸리티",
+          "description": "개발 도구",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "컬러 스튜디오",
+            "Cron",
+            "CSV to JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "간단한 프로세스",
+      "title": "작동 방식",
+      "steps": [
+        {
+          "step": "01",
+          "title": "파일 드롭",
+          "description": "파일을 선택하세요. 업로드 없이 즉시 감지합니다."
+        },
+        {
+          "step": "02",
+          "title": "로컬 처리",
+          "description": "브라우저 내에서 직접 처리합니다."
+        },
+        {
+          "step": "03",
+          "title": "보안 결과",
+          "description": "즉시 다운로드하세요."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "서버 지연 시간"
+      },
+      {
+        "val": "100%",
+        "label": "로컬 처리"
+      },
+      {
+        "val": "150+",
+        "label": "보안 도구"
+      },
+      {
+        "val": "∞",
+        "label": "사용 자유"
+      }
+    ],
+    "manifesto": {
+      "badge": "선언문",
+      "title": "프라이버시는 <br/> 기능이 아닙니다.",
+      "description": "그것은 근본적인 인권입니다."
+    },
+    "sovereignty": {
+      "badge": "데이터 주권",
+      "title": "데이터는 <br/> 당신의 것입니다.",
+      "description": "우리는 당신의 데이터를 보지 않습니다.",
+      "points": [
+        "클라우드 업로드 없음",
+        "인메모리 암호화",
+        "추적 없음",
+        "클라이언트 측 처리"
+      ],
+      "foundation": {
+        "title": "신뢰의 기초",
+        "description": "프라이버시는 기본이어야 합니다.",
+        "badge": "기초 확인됨",
+        "verified": "보안 감사 통과"
+      }
+    },
+    "performance": {
+      "badge": "고성능",
+      "title": "속도를 위한 구축",
+      "subtitle": "브라우저에서 네이티브로 실행되는 고성능 처리 로직.",
+      "items": [
+        {
+          "title": "즉각적인 렌더링",
+          "description": "네트워크 지연 시간을 없앱니다."
+        },
+        {
+          "title": "WASM 네이티브",
+          "description": "하드웨어 속도로 실행됩니다."
+        },
+        {
+          "title": "모바일 최적화",
+          "description": "모바일에서도 부드러운 성능."
+        },
+        {
+          "title": "하드웨어 가속",
+          "description": "CPU와 GPU를 활용합니다."
+        },
+        {
+          "title": "효율적인 메모리",
+          "description": "메모리 할당 최적화."
+        },
+        {
+          "title": "오프라인 준비",
+          "description": "서버 의존성 없음."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "SafeTools를 선택하는 이유?",
+      "subtitle": "로컬 처리의 아키텍처적 이점.",
+      "table": {
+        "feature": "기능",
+        "safe": "SafeTools",
+        "trad": "기존 도구"
+      },
+      "items": [
+        {
+          "f": "프라이버시 모델",
+          "s": true,
+          "c": "클라우드 기반"
+        },
+        {
+          "f": "처리 위치",
+          "s": "로컬 하드웨어",
+          "c": "원격 서버"
+        },
+        {
+          "f": "추적 스크립트",
+          "s": "없음",
+          "c": "다수"
+        },
+        {
+          "f": "파일 보관",
+          "s": "0ms (RAM 전용)",
+          "c": "가변적"
+        },
+        {
+          "f": "지연 시간",
+          "s": "즉각적",
+          "c": "높음 (업로드 필요)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "로컬 처리 가이드",
+      "subtitle": "SafeTools가 데이터를 안전하게 지키는 방법",
+      "steps": [
+        {
+          "title": "제로 클라우드 샌드박스",
+          "description": "브라우저 RAM 내에서 처리됩니다."
+        },
+        {
+          "title": "하드웨어 가속",
+          "description": "업로드 없이 하드웨어를 사용합니다."
+        },
+        {
+          "title": "휘발성 세션",
+          "description": "탭을 닫으면 즉시 지워집니다."
+        }
+      ],
+      "architecturalAdvantage": "아키텍처적 이점",
+      "vulnerabilityEliminated": "업로드 취약점을 완전히 제거합니다.",
+      "cloud": "클라우드",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "설계부터 안전합니다.",
+      "subtitle": "파일이 장치를 떠나지 않습니다.",
+      "items": [
+        "100% 클라이언트 측 처리",
+        "AES-256 GCM 로컬 암호화",
+        "제로 서버 데이터 전송",
+        "샌드박스 브라우저 실행"
+      ],
+      "zeroTrust": {
+        "title": "Zero-Trust 보안.",
+        "description": "각 도구는 격리된 샌드박스에서 실행됩니다.",
+        "encryption": "암호화",
+        "protocol": "프로토콜"
+      }
+    },
+    "faq": {
+      "badge": "도움말 센터",
+      "title": "자주 묻는 질문",
+      "items": [
+        {
+          "q": "파일이 서버로 업로드되나요?",
+          "a": "아니요. 모든 작업은 브라우저에서 로컬로 이루어집니다."
+        },
+        {
+          "q": "SafeTools는 무료인가요?",
+          "a": "네, 핵심 기능은 100% 무료입니다."
+        },
+        {
+          "q": "처리 후 데이터는 어떻게 되나요?",
+          "a": "탭을 닫으면 즉시 삭제됩니다."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "SafeTools를 선택하는 이유?",
+      "subtitle": "로컬 처리의 아키텍처적 이점.",
+      "table": {
+        "feature": "기능",
+        "safe": "SafeTools",
+        "trad": "기존 도구"
+      },
+      "items": [
+        {
+          "title": "100% 로컬 처리",
+          "description": "모든 작업은 당신의 하드웨어에서 실행됩니다."
+        },
+        {
+          "title": "데이터 수집 제로",
+          "description": "우리는 아무것도 추적하거나 저장하지 않습니다."
+        },
+        {
+          "title": "군용 등급 암호화",
+          "description": "로컬 암호화가 적용됩니다."
+        },
+        {
+          "title": "즉각적인 성능",
+          "description": "지연 시간 없이 즉시 처리됩니다."
+        },
+        {
+          "title": "오프라인 가능",
+          "description": "대부분의 도구가 오프라인에서 작동합니다."
+        },
+        {
+          "title": "교차 플랫폼",
+          "description": "설치 없이 모든 기기에서 사용 가능합니다."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "사용 사례",
+      "title": "전문가를 위한 구축",
+      "subtitle": "데이터 주권을 우선시하는 리더들의 선택.",
+      "items": [
+        {
+          "title": "보안 문서 관리",
+          "description": "민감한 문서를 클라우드 노출 없이 처리하세요."
+        },
+        {
+          "title": "크리에이티브 프로덕션",
+          "description": "워크스테이션에서 직접 미디어를 처리하세요."
+        },
+        {
+          "title": "개발자 워크플로우",
+          "description": "데이터 변환 및 보안 체크를 위한 도구."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "사용자 피드백",
+      "title": "프라이버시 옹호자들의 신뢰",
+      "items": [
+        {
+          "quote": "제로 업로드 아키텍처는 웹에 꼭 필요한 것입니다.",
+          "name": "보안 전문가",
+          "role": "아키텍트"
+        },
+        {
+          "quote": "클라우드 도구보다 빠릅니다.",
+          "name": "디자이너",
+          "role": "크리에이티브 리드"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "네이티브 성능",
+      "status": "준비됨",
+      "title": "이동성을 위한 구축.",
+      "subtitle": "모든 기기에서 네이티브 등급의 성능을 경험하세요.",
+      "desktop": {
+        "title": "데스크톱 성능",
+        "description": "전문가용 풀 기능 스튜디오 스위트."
+      },
+      "mobile": {
+        "title": "모바일 속도",
+        "description": "빠른 처리를 위해 최적화된 로컬 엔진."
+      },
+      "waitlist": "베타 참여"
+    },
+    "securityArchitecture": {
+      "badge": "보안 강화",
+      "title": "하드웨어 격리.",
+      "subtitle": "SafeTools는 현대적인 WASM 샌드박싱을 활용합니다.",
+      "button": "보안 확인"
+    },
+    "communityStats": {
+      "title": "글로벌 채택",
+      "subtitle": "전 세계 수천 명이 SafeTools를 사용합니다.",
+      "processedCount": "100%",
+      "processed": "프라이빗 & 로컬",
+      "usersCount": "500K+",
+      "users": "활성 사용자"
+    },
+    "finalCta": {
+      "title": "데이터를 제어하세요.",
+      "subtitle": "정체성을 업로드하지 마세요.",
+      "launch": "스튜디오 시작",
+      "allTools": "150개 이상의 도구 탐색"
+    },
+    "pricingSection": {
+      "badge": "영원히 무료",
+      "title": "모두를 위한 프라이버시.",
+      "description": "SafeTools는 개인에게 100% 무료입니다.",
+      "button": "처리 시작"
+    },
+    "smartRouting": {
+      "title": "스마트 파일 라우팅"
+    },
+    "techMarquee": {
+      "badge": "네이티브 성능",
+      "title": "차세대 로컬 엔진 구동",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "네이티브 성능"
+        },
+        {
+          "name": "GPU",
+          "desc": "하드웨어 가속"
+        },
+        {
+          "name": "AES",
+          "desc": "보안 암호화"
+        },
+        {
+          "name": "OCR",
+          "desc": "뉴럴 추출"
+        },
+        {
+          "name": "워커",
+          "desc": "멀티스레드 컴퓨팅"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "colorLab": {
+    "seo": {
+      "title": "Color Lab | Farben aus Bild extrahieren | SafeTools",
+      "description": "Extrahieren Sie professionelle Farbpaletten, HEX, RGB und HSL aus jedem Bild lokal in Ihrem Browser. 100% privat.",
+      "keywords": [
+        "Farbextraktor",
+        "Bildpaletten-Generator",
+        "Hex aus Bild",
+        "Farben extrahieren",
+        "Design-Tool"
+      ],
+      "ogTitle": "SafeTools Color Lab | Paletten lokal extrahieren",
+      "ogDescription": "Extrahieren Sie professionelle Farbpaletten aus Ihren Bildern ohne Server-Uploads.",
+      "structuredName": "SafeTools Color Lab",
+      "structuredDesc": "Ein professionelles Studio zur Farbextraktion und Palettengenerierung."
+    },
+    "badge": "Neural Color Engine",
+    "title": "Farben",
+    "titleSecondary": "Labor",
+    "description": "Extrahieren Sie professionelle Farbpaletten, Kontrastverhältnisse und Design-Harmonien direkt aus Ihren Bildern. 100% privat.",
+    "extractNow": "Palette extrahieren",
+    "uploadImage": "Asset laden",
+    "heroBadges": [
+      "100% Privat",
+      "Lokale Verarbeitung",
+      "Null Tracking",
+      "Sofortiges Laden",
+      "Plattformübergreifend"
+    ],
+    "features": {
+      "title": "Studio-Funktionen",
+      "items": [
+        {
+          "title": "Neurale Extraktion",
+          "desc": "Fortschrittliche Pixel-Clustering-Algorithmen zum Finden dominanter Farben."
+        },
+        {
+          "title": "Harmonische Logik",
+          "desc": "Erzeugen Sie triadische, analoge und komplementäre Harmonien."
+        },
+        {
+          "title": "Kontrastanalyse",
+          "desc": "WCAG 2.1 Barrierefreiheitsprüfungen für die Textlesbarkeit."
+        },
+        {
+          "title": "Massenexport",
+          "desc": "Exportieren Sie Ihre Paletten als CSS-, SCSS- oder JSON-Bundles."
+        }
+      ]
+    },
+    "tool": {
+      "title": "Paletten-Arbeitsbereich",
+      "engine": "WASM 128-Bit SIMD Beschleunigung",
+      "dropzoneTitle": "Bild zur Analyse ablegen",
+      "dropzoneDesc": "JPEG, PNG, WebP, AVIF unterstützt",
+      "precision": "Abtastdichte",
+      "mood": "Erkannte Stimmung",
+      "pickCustom": "Eigene Farbe wählen",
+      "regenerate": "Palette neu generieren",
+      "paletteTitle": "Farb-Stack",
+      "swatches": "Extrahierte Farbfelder",
+      "export": "Palette exportieren",
+      "harmony": "Harmonien",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "types": {
+        "dominant": "Dominant",
+        "vibrant": "Lebhaft",
+        "muted": "Gedämpft",
+        "accent": "Akzent"
+      },
+      "noEyeDropper": "Ihr Browser unterstützt die EyeDropper API nicht.",
+      "alreadyInPalette": "Diese Farbe befindet sich bereits in Ihrer Palette.",
+      "addedCustom": "{hex} zur Palette hinzugefügt",
+      "exportedAs": "Palette als {format} exportiert"
+    },
+    "contrast": {
+      "title": "WCAG",
+      "white": "W",
+      "black": "S",
+      "pass": "BESTANDEN",
+      "fail": "FEHLGESCHLAGEN"
+    },
+    "harmonies": {
+      "comp": "Komp",
+      "triadicA": "Tri A",
+      "triadicB": "Tri B",
+      "analogous": "Analog"
+    },
+    "moods": {
+      "ethereal": "Ätherisch",
+      "moody": "Stimmungsvoll",
+      "balanced": "Ausgewogen"
+    },
+    "personas": {
+      "title": "Für wen ist es?",
+      "subtitle": "Professionelle Tools für jeden kreativen Workflow.",
+      "items": [
+        {
+          "title": "UI/UX Designer",
+          "points": [
+            "Barrierefreiheitsprüfungen",
+            "Tailwind-Integration",
+            "Kontrastverhältnisse"
+          ]
+        },
+        {
+          "title": "Markenidentität",
+          "points": [
+            "Stimmungserkennung",
+            "Palettenexporte",
+            "Harmonische Skalen"
+          ]
+        },
+        {
+          "title": "Entwickler",
+          "points": [
+            "CSS/SCSS-Variablen",
+            "JSON-Bundles",
+            "HEX/RGB/HSL"
+          ]
+        }
+      ]
+    },
+    "educational": {
+      "howTo": {
+        "title": "Wie man Farben extrahiert",
+        "description": "Laden Sie Ihr Bild einfach in unser Studio hoch. Unsere lokale Engine analysiert jeden Pixel, um sie zu einer aussagekräftigen Palette zu gruppieren.",
+        "description2": "Sie können dann die Abtastdichte anpassen, um subtilere Akzente zu finden oder bei dominanten Themen zu bleiben.",
+        "steps": [
+          "Hochauflösendes Asset laden",
+          "Neurale Abtastung anpassen",
+          "Eigene Akzente wählen",
+          "Für Produktion exportieren"
+        ],
+        "precisionTitle": "Neurale Präzision",
+        "precisionDesc": "Unsere Engine verwendet einen proprietären Clustering-Algorithmus, der Leistung und Genauigkeit ausbalanciert."
+      },
+      "formats": {
+        "title": "Farbformate",
+        "subtitle": "Wir unterstützen alle wichtigen Industriestandard-Formate.",
+        "items": [
+          {
+            "title": "HEX-Codes",
+            "desc": "Standardmäßige 6-stellige Hexadezimalcodes für Web und Design."
+          },
+          {
+            "title": "RGB-Werte",
+            "desc": "Rot-, Grün-, Blau-Kanalwerte für die Bildschirmdarstellung."
+          },
+          {
+            "title": "HSL-Skalen",
+            "desc": "Farbton, Sättigung und Helligkeit für intuitive Anpassungen."
+          },
+          {
+            "title": "CMYK",
+            "desc": "Cyan, Magenta, Gelb und Key für professionellen Druck."
+          }
+        ]
+      },
+      "accessibility": {
+        "title": "Barrierefreiheit zuerst",
+        "description": "Wir berechnen automatisch WCAG 2.1 Kontrastverhältnisse, um sicherzustellen, dass Ihre Designs inklusiv und lesbar sind.",
+        "labels": [
+          "Inklusives Design",
+          "WCAG 2.1",
+          "Hoher Kontrast"
+        ],
+        "aaPassed": "AA Bestanden",
+        "standard": "Richtlinien für barrierefreie Webinhalte"
+      },
+      "gradients": {
+        "title": "Dynamische Verläufe",
+        "description": "Konvertieren Sie Ihre extrahierte Palette mit einem Klick in lineare und radiale CSS-Verläufe."
+      }
+    },
+    "tailwind": {
+      "title": "Tailwind Engine",
+      "subtitle": "Entwicklererlebnis",
+      "badge": "Next.js Ready",
+      "description": "Perfekt formatierte Farbobjekte für Ihre tailwind.config.js.",
+      "items": [
+        "Konfiguration fertig",
+        "Theme-Erweiterung",
+        "Variablen-Mapping"
+      ]
+    },
+    "comparison": {
+      "title": "Warum Color Lab?",
+      "subtitle": "Das privateste Farb-Tool im Web.",
+      "header": [
+        "Funktion",
+        "SafeTools",
+        "Online-Tools"
+      ],
+      "rows": [
+        [
+          "Datenschutz",
+          "100% Lokal",
+          "Cloud-Upload"
+        ],
+        [
+          "Barrierefreiheit",
+          "Integrierte WCAG",
+          "Keine"
+        ],
+        [
+          "Geschwindigkeit",
+          "Sofort",
+          "Latenz"
+        ]
+      ]
+    },
+    "useCases": {
+      "items": [
+        {
+          "title": "Webdesign",
+          "desc": "UI/UX Farbschemata"
+        },
+        {
+          "title": "Branding",
+          "desc": "Markenidentitäts-Paletten"
+        },
+        {
+          "title": "Entwicklung",
+          "desc": "Tailwind-Konfiguration"
+        },
+        {
+          "title": "Printmedien",
+          "desc": "CMYK druckfertig"
+        },
+        {
+          "title": "Fotografie",
+          "desc": "Moodboards"
+        },
+        {
+          "title": "Illustration",
+          "desc": "Künstlerische Harmonien"
+        }
+      ]
+    },
+    "dynamicBackgrounds": "Dynamischer Hub",
+    "faq": {
+      "title": "Color Lab FAQ",
+      "subtitle": "Häufige Fragen zu unserer lokalen Extraktions-Engine.",
+      "items": [
+        {
+          "q": "Ist der Bild-Farbpicker kostenlos?",
+          "a": "Ja, das Tool ist völlig kostenlos und ohne versteckte Kosten oder Einschränkungen nutzbar."
+        },
+        {
+          "q": "Werden meine Bilder auf Server hochgeladen?",
+          "a": "Nein. Die gesamte Verarbeitung findet lokal in Ihrem Browser über die Canvas API statt. Ihre Bilder verlassen niemals Ihr Gerät."
+        },
+        {
+          "q": "Welche Bildformate werden unterstützt?",
+          "a": "Wir unterstützen PNG, JPG, JPEG, WEBP, GIF, SVG, AVIF, BMP, ICO und mehr."
+        },
+        {
+          "q": "Kann ich Tailwind CSS-Farben exportieren?",
+          "a": "Ja. Unser Tool ermöglicht es Ihnen, generierte Paletten sofort in Tailwind-fertige Konfigurationsobjekte oder CSS-Variablen zu exportieren."
+        },
+        {
+          "q": "Funktioniert das Tool auf mobilen Geräten?",
+          "a": "Ja. Das Tool ist voll responsive und für mobile Browser optimiert, sodass Sie Farben aus Ihrer Galerie oder Kameraaufnahme extrahieren können."
+        },
+        {
+          "q": "Kann ich die extrahierten Paletten kommerziell nutzen?",
+          "a": "Absolut. Jede mit SafeTools generierte Farbpalette kann ohne Quellenangabe in persönlichen oder kommerziellen Projekten verwendet werden."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Extraktion starten",
+      "description": "Laden Sie Ihr erstes Bild hoch, um seine verborgene Farbpalette zu entdecken.",
+      "button": "Studio starten"
+    }
+  }
+}

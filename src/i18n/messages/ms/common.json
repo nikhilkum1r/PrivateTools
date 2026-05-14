@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Selamat datang ke SafeTools",
+    "tagline": "150+ Alat Fail Atas Talian Utamakan Privasi yang Berjalan Secara Tempatan",
+    "upload": "Muat Naik Fail",
+    "download": "Muat Turun",
+    "compress": "Mampat",
+    "convert": "Tukar",
+    "edit": "Edit",
+    "search": "Cari di 150+ alat...",
+    "privacy": "Utamakan Privasi",
+    "speed": "Sangat Pantas",
+    "security": "Gred Perusahaan",
+    "systemHealth": {
+      "title": "Kesihatan Sistem",
+      "localEngine": "Enjin Tempatan",
+      "localEngineDesc": "Pemprosesan berlaku 100% secara tempatan pada peranti anda.",
+      "secureSession": "Sesi Selamat",
+      "secureSessionDesc": "Persekitaran pelayar yang terasing untuk privasi maksimum.",
+      "online": "Bersambung",
+      "onlineDesc": "Atas talian untuk kemas kini alat terkini.",
+      "offlineReady": "Sedia Luar Talian",
+      "offlineReadyDesc": "Alat ini berfungsi dengan sempurna tanpa sambungan internet.",
+      "zeroTracking": "Sifar Penjejakan",
+      "zeroTrackingDesc": "Tiada data dihantar ke pelayan kami untuk penjejakan."
+    },
+    "securityTools": "Alat Keselamatan",
+    "privacyTools": "Alat Privasi",
+    "tools": {
+      "vault": "Bilik Kebal Selamat",
+      "metadataCleaner": "Pembersih Metadata",
+      "fileShredder": "Pencarik Fail",
+      "secureNotes": "Nota Selamat",
+      "passwordGenerator": "Penjana Kata Laluan",
+      "passwordChecker": "Penyemak Kekuatan Kata Laluan",
+      "ocr": "Ekstrak OCR",
+      "steganography": "Steganografi Imej",
+      "imageEditor": "Editor Imej",
+      "imageCompressor": "Pemampat Imej",
+      "formatConverter": "Penukar Format",
+      "backgroundRemover": "Pembuang Latar Belakang",
+      "colorLab": "Makmal Warna",
+      "pdfToImage": "PDF ke Imej"
+    },
+    "toolsLabel": "Alat",
+    "features": "Ciri-ciri",
+    "developers": "Pembangun",
+    "pricing": "Harga",
+    "about": "Tentang SafeTools",
+    "whyAds": "Mengapa Kami Paparkan Iklan",
+    "privacyPolicy": "Dasar Privasi",
+    "termsOfService": "Syarat Perkhidmatan",
+    "contact": "Hubungi Kami",
+    "home": "Laman Utama",
+    "faqLabel": "Soalan Lazim",
+    "blog": "Blog",
+    "changelog": "Log Perubahan",
+    "light": "Cerah",
+    "dark": "Gelap",
+    "system": "Sistem",
+    "startFree": "Mula Percuma",
+    "systemStatus": "Status Sistem",
+    "updates": "Kemas Kini",
+    "feedback": "Maklum Balas",
+    "contents": "Kandungan",
+    "imageTools": "Alat Imej",
+    "openTools": "Buka Alat",
+    "ready": "Sedia untuk mengambil alih kawalan?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "SEDIA",
+      "blocked": "DISEKAT",
+      "success": "BERJAYA",
+      "error": "RALAT"
+    },
+    "getStarted": "Bermula",
+    "forever": "selamanya",
+    "step": "Langkah",
+    "dropzone": {
+      "title": "Muat Naik Fail",
+      "description": "Seret dan lepaskan fail anda di sini",
+      "secure": "Pemprosesan Tempatan Selamat",
+      "processedLocally": "Diproses secara tempatan",
+      "maxSize": "Maks {size}MB",
+      "noFileChosen": "Tiada fail dipilih"
+    },
+    "export": {
+      "ready": "Sedia untuk dimuat turun",
+      "download": "Muat Turun",
+      "copy": "Salin",
+      "copied": "Disalin!",
+      "share": "Kongsi",
+      "reset": "Set Semula"
+    },
+    "faq": {
+      "title": "Soalan Lazim",
+      "description": "Segala-galanya yang anda perlu tahu tentang alat ini dan bagaimana ia melindungi privasi anda."
+    },
+    "related": {
+      "title": "Alat Profesional Berkaitan",
+      "subtitle": "Teroka lebih banyak utiliti utamakan privasi untuk aliran kerja anda."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Pilih Bahasa"
+    },
+    "relatedTools": "Alat Kreatif Berkaitan",
+    "relatedToolsDesc": "Teroka lebih banyak utiliti utamakan privasi.",
+    "all": "Semua",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Iklan",
+    "system_health": {
+      "title": "Kesihatan Sistem",
+      "localEngine": "Enjin Tempatan",
+      "localEngineDesc": "Pemprosesan pada perkakasan anda",
+      "secureSession": "Sesi Selamat",
+      "secureSessionDesc": "Konteks pelayar yang terasing",
+      "online": "Bersambung",
+      "onlineDesc": "Dioptimumkan untuk kelajuan",
+      "offlineReady": "Sedia Luar Talian",
+      "offlineReadyDesc": "Berfungsi sepenuhnya di luar talian",
+      "zeroTracking": "Sifar Penjejakan",
+      "zeroTrackingDesc": "Seni bina utamakan privasi"
+    },
+    "values": {
+      "yes": "Ya",
+      "no": "Tidak",
+      "limited": "Terhad"
+    },
+    "pro": {
+      "comingSoon": "Pro – Akan Datang",
+      "unlockPower": "Buka Lebih Banyak Kuasa",
+      "features": [
+        "Fail sehingga 10× lebih besar",
+        "Pemprosesan kelompok tanpa had",
+        "Barisan pemprosesan pelayan keutamaan",
+        "Pautan boleh kongsi (tamat tempoh 72j)",
+        "Sejarah fail – 50 kerja terakhir",
+        "Pemprosesan sisi pelayan untuk fail berat"
+      ],
+      "waitlist": "Sertai senarai menunggu – $8/bulan semasa pelancaran",
+      "successTitle": "Anda dalam senarai! 🎉",
+      "successDesc": "Kami akan menghantar e-mel kepada anda apabila Pro dilancarkan.",
+      "continueFree": "Teruskan dengan versi percuma",
+      "emailPlaceholder": "anda@email.com",
+      "join": "Sertai",
+      "validEmail": "Sila masukkan alamat e-mel yang sah.",
+      "waitlistSuccess": "Anda berada dalam senarai menunggu! Kami akan memaklumkan anda apabila Pro dilancarkan.",
+      "freeLimit": "Had percuma: {limit}",
+      "proLimit": "Had Pro: {limit}",
+      "yourFile": "Fail anda: {size}"
+    },
+    "disclaimer": {
+      "understand": "Saya Faham – Teruskan",
+      "responsibility": "Dengan meneruskan, anda menerima tanggungjawab penuh atas penggunaan alat ini."
+    },
+    "toast": {
+      "linkCopied": "Pautan disalin ke papan klip"
+    },
+    "seo": {
+      "browserReqs": "Memerlukan JavaScript dan WebAssembly"
+    },
+    "aria": {
+      "goHome": "Kembali ke Laman Utama",
+      "toggleTheme": "Tukar tema",
+      "faq": "Soalan Lazim",
+      "changeLanguage": "Tukar bahasa",
+      "close": "Tutup",
+      "menu": "Menu",
+      "openTools": "Buka menu alat",
+      "exploreTools": "Teroka Semua Alat",
+      "platformFeatures": "Ciri Platform",
+      "privacyCommitment": "Komitmen Privasi",
+      "developerApi": "API Pembangun & Dokumen",
+      "pricingPlans": "Pelan Harga"
+    },
+    "shareTool": {
+      "title": "Sebarkan Privasi",
+      "subtitle": "Sokong pengkomputeran local-first",
+      "copyLink": "Salin Pautan",
+      "copied": "Disalin",
+      "twitter": "Lihat alat tanpa muat naik yang peribadi ini untuk {title}:",
+      "telegram": "Pemprosesan fail selamat dengan SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Penyelesaian PDF",
+        "image": "Studio Imej",
+        "privacy": "Alat Privasi",
+        "developer": "Alat Pembangun",
+        "pdfMerge": "Gabung PDF",
+        "pdfSplit": "Pisah PDF",
+        "pdfUnlock": "Buka Kunci PDF",
+        "pdfProtect": "Lindungi PDF",
+        "pdfToImage": "PDF ke Imej",
+        "securityFileShredder": "Pencarik Fail"
+      }
+    },
+    "error": "Ralat"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% Pemprosesan Tempatan",
+      "noUploads": "Sifar Muat Naik Pelayan",
+      "noTracking": "Sifar Penjejakan Data",
+      "privacyFirst": "UX Utamakan Privasi",
+      "worksOffline": "Berfungsi Luar Talian"
+    }
+  }
+}

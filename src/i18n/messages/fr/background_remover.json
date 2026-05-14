@@ -1,0 +1,334 @@
+{
+  "backgroundRemover": {
+    "title": "Détourage IA | Édition locale et privée",
+    "description": "Détourage de qualité professionnelle propulsé par une IA locale. Aucun téléchargement cloud, aucun stockage, aucun suivi. Rapide, sécurisé et privé.",
+    "seo": {
+      "title": "Détourage IA | Édition locale et privée",
+      "description": "Détourage de qualité professionnelle propulsé par une IA locale. Aucun téléchargement cloud, aucun stockage, aucun suivi. Rapide, sécurisé et privé.",
+      "keywords": "enlever fond en ligne, suppresseur de fond gratuit, suppression fond IA, éditeur photo privé, traitement image local, détoureur isnet, créateur fond transparent, détoureur par lots, retouche photo professionnelle, détoureur dans le navigateur"
+    },
+    "engineBadge": "MOTEUR ISNET-QUINT8 EN LIGNE",
+    "badge": "Segmentation IA Professionnelle — 100% Sécurisé",
+    "dropzone": {
+      "title": "Télécharger l'image",
+      "description": "Glissez-déposez des images ou cliquez pour parcourir. Prend en charge PNG, JPG, WebP, HEIC."
+    },
+    "status": {
+      "segmented": "Segmenté",
+      "pending": "En attente de scan"
+    },
+    "tools": {
+      "closeMagicEraser": "Fermer la Gomme Magique",
+      "magicEraser": "Gomme Magique",
+      "eraserTool": "Outil Gomme",
+      "restoreTool": "Outil Restaurer",
+      "brushSize": "Taille du Pinceau",
+      "saveEdits": "Enregistrer",
+      "removeBackground": "Supprimer le fond",
+      "allProcessed": "Toutes les images traitées",
+      "errorPreparing": "Erreur lors de la préparation locale de l'IA.",
+      "comparison": {
+        "headers": [
+          "Fonctionnalité",
+          "Traditionnel",
+          "SafeTools"
+        ]
+      },
+      "maskUpdated": "Masque mis à jour avec succès.",
+      "copySuccess": "Sujet copié dans le presse-papiers.",
+      "copyFailed": "Accès au presse-papiers refusé.",
+      "download": "Télécharger",
+      "copy": "Copier"
+    },
+    "worker": {
+      "loading": "Chargement du moteur IA...",
+      "removing": "Suppression du fond...",
+      "processing": "Traitement...",
+      "processing_file": "Traitement de {name}...",
+      "error_svg": "Les fichiers SVG ne sont pas pris en charge ({name})",
+      "error_invalid": "Type de fichier invalide ({name})",
+      "latency": "Latence : {time}ms",
+      "aiNode": "Nœud IA : isnet_quint8",
+      "privacyNote": "Traitement local sur votre appareil. Aucune donnée ne quitte votre navigateur."
+    },
+    "comparison": {
+      "before": "Avant",
+      "after": "Après"
+    },
+    "settings": {
+      "title": "Configuration",
+      "engine": "Nœud de Traitement Neuronal",
+      "background": "Fond de la Zone",
+      "alpha": "Matrice de Transparence",
+      "resizer": "Dimensions pour Réseaux",
+      "realism": "Profondeur & Bords",
+      "shadow": "Ombre Portée",
+      "trim": "Découpe Automatique",
+      "format": "Format d'Exportation",
+      "visualPolish": "Finition Visuelle",
+      "autoTrim": "Recadrage Auto",
+      "autoTrimDesc": "Ajuster au sujet",
+      "dropShadow": "Ombre Portée",
+      "shadowDesc": "Ajouter de la profondeur"
+    },
+    "bgPresets": {
+      "transparent": "Transparent",
+      "white": "Blanc",
+      "black": "Noir",
+      "blue": "Bleu",
+      "gray": "Gris",
+      "corporate": "Corporatif"
+    },
+    "aspectRatios": {
+      "original": "Orig",
+      "1:1": "1:1",
+      "4:5": "4:5",
+      "9:16": "9:16"
+    },
+    "landing": {
+      "aiDetails": {
+        "title": "Architecture IA Nouvelle Génération",
+        "subtitle": "Traitement de sujets haute fidélité directement dans le moteur V8 de votre navigateur.",
+        "items": [
+          {
+            "title": "Détection Neuronale",
+            "desc": "Segmentation parfaite au pixel près utilisant des transformateurs visuels avancés."
+          },
+          {
+            "title": "Moteur WASM Local",
+            "desc": "Traitement accéléré par le matériel sans latence serveur."
+          },
+          {
+            "title": "Zéro Fuite de Données",
+            "desc": "Vos images ne quittent jamais la mémoire de votre appareil."
+          }
+        ]
+      },
+      "education": {
+        "title": "L'évolution de la suppression de fond",
+        "description": "SafeTools utilise les dernières percées en vision par ordinateur pour effectuer des suppressions de fond complexes entièrement côté client. En déplaçant les modèles d'IA du cloud vers votre matériel local, nous éliminons les risques de confidentialité et les temps d'attente associés aux éditeurs en ligne traditionnels.",
+        "privacy": {
+          "title": "Souveraineté Absolue des Données",
+          "description": "Contrairement aux outils traditionnels qui téléchargent vos photos privées sur des serveurs distants, SafeTools fonctionne dans un bac à sable sécurisé du navigateur. Nous ne nous contentons pas de protéger vos données, nous ne les voyons jamais.",
+          "tags": [
+            "Bac à Sable",
+            "WASM Natif",
+            "Zéro Suivi"
+          ]
+        }
+      },
+      "formats": {
+        "title": "Formats Professionnels",
+        "description": "Notre moteur prend en charge les exports haute résolution et une compatibilité universelle.",
+        "items": [
+          "PNG (Alpha)",
+          "WebP (Sans perte)",
+          "JPEG (Standard)"
+        ],
+        "export": {
+          "title": "Logique d'Exportation",
+          "items": [
+            "Conservation fidèle du canal alpha",
+            "Compression sans perte pour une qualité maximale",
+            "Rendu précis des couleurs pour l'impression et le web"
+          ]
+        }
+      },
+      "howItWorks": {
+        "title": "Le Processus",
+        "steps": [
+          {
+            "step": "01",
+            "title": "Importer",
+            "desc": "Ajoutez votre image. Nous supportons la plupart des formats."
+          },
+          {
+            "step": "02",
+            "title": "Scan Neuronal",
+            "desc": "Notre IA identifie le sujet et calcule le masque."
+          },
+          {
+            "step": "03",
+            "title": "Retouche",
+            "desc": "Utilisez la Gomme Magique pour parfaire les détails."
+          },
+          {
+            "step": "04",
+            "title": "Export Sécurisé",
+            "desc": "Téléchargez le résultat instantanément sur votre appareil."
+          }
+        ],
+        "note": "TOUT LE TRAITEMENT SE FAIT SUR VOTRE MATÉRIEL LOCAL"
+      },
+      "useCases": {
+        "title": "Cas d'Utilisation",
+        "items": [
+          "Photos E-commerce",
+          "Portraits Réseaux Sociaux",
+          "Assets Marketing Digital",
+          "Immobilier",
+          "Photos de Profil",
+          "Design Graphique",
+          "Présentations Visuelles",
+          "Photos d'Identité"
+        ]
+      },
+      "comparisonLong": {
+        "title": "Pourquoi SafeTools ?",
+        "header": [
+          "Fonctionnalité",
+          "Éditeurs Traditionnels",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "Risque pour la Vie Privée",
+            "Élevé (Upload Cloud)",
+            "Zéro (Local)"
+          ],
+          [
+            "Vitesse",
+            "Dépend du Réseau",
+            "Dépend du Matériel"
+          ],
+          [
+            "Conservation",
+            "30-90 Jours sur Serveur",
+            "Supprimé à la Fermeture"
+          ],
+          [
+            "Coût",
+            "10-20$/mois",
+            "Toujours Gratuit"
+          ],
+          [
+            "Données",
+            "Suivies et Stockées",
+            "Aucun Suivi / Zéro Stockage"
+          ]
+        ]
+      },
+      "tips": {
+        "title": "Astuces de Pro",
+        "subtitle": "Obtenez les meilleurs résultats de notre IA côté client.",
+        "items": [
+          {
+            "title": "Le Contraste est Clé",
+            "desc": "Un fort contraste entre le sujet et le fond donne les meilleurs résultats."
+          },
+          {
+            "title": "Cheveux Complexes",
+            "desc": "Les cheveux très fins sur fonds complexes peuvent nécessiter l'aide de la Gomme Magique."
+          },
+          {
+            "title": "Images Haute Résolution",
+            "desc": "Une meilleure résolution permet à l'IA d'identifier les détails plus finement."
+          },
+          {
+            "title": "Traitement par Lots",
+            "desc": "Glissez plusieurs images à la fois pour utiliser la puissance du traitement local parallèle."
+          }
+        ]
+      },
+      "techSpecs": {
+        "title": "Spécifications Techniques",
+        "subtitle": "Paramètres du Moteur Neuronal SafeTools.",
+        "engine": {
+          "title": "Architecture du Modèle",
+          "items": [
+            {
+              "label": "Modèle",
+              "value": "ISNet-v2 (Quantifié)"
+            },
+            {
+              "label": "Runtime",
+              "value": "ONNX / WebAssembly"
+            },
+            {
+              "label": "Précision",
+              "value": "int8 / fp16"
+            },
+            {
+              "label": "Parallélisme",
+              "value": "Web Workers"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Prérequis Locaux",
+          "items": [
+            {
+              "label": "Navigateur",
+              "value": "Récent (Chrome/Safari/Edge)"
+            },
+            {
+              "label": "Matériel",
+              "value": "Support WASM / SharedBuffer"
+            },
+            {
+              "label": "Internet",
+              "value": "Seulement au chargement"
+            },
+            {
+              "label": "RAM",
+              "value": "2Go+ Recommandé"
+            }
+          ]
+        }
+      }
+    },
+    "features": {
+      "ai_engine": "Moteur Neuronal IA",
+      "ai_engine_desc": "Le modèle ISNet de pointe s'exécute entièrement dans votre navigateur via WebAssembly pour une isolation parfaite.",
+      "batch": "Traitement par Lots",
+      "batch_desc": "Déposez plusieurs images et traitez-les en parallèle via les Web Workers locaux — sans file d'attente ni limite.",
+      "privacy": "Confidentialité Absolue",
+      "privacy_desc": "Vos images ne quittent jamais votre appareil. Zéro upload, zéro log serveur, zéro suivi. Le traitement est 100% local."
+    },
+    "manifesto": {
+      "title": "Créativité Souveraine",
+      "quote": "Votre créativité ne devrait pas se faire au détriment de votre vie privée. SafeTools vous permet d'éditer sans exposition.",
+      "pro_workflow": "Flux de Travail Pro",
+      "pro_workflow_desc": "Intégration avec des exports par lots, des fonds personnalisés et des ombres — sans aucun abonnement.",
+      "seo": "Optimisé pour le Web",
+      "seo_desc": "Exportez en PNG transparent, WebP sans perte et JPEG prêts pour l'impression ou les réseaux sociaux.",
+      "social": "Prêt pour les Réseaux",
+      "social_desc": "Générez instantanément des photos de profil et des visuels produits avec des ratios optimisés et des fonds transparents."
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "Comment l'IA fonctionne-t-elle sans uploader mes photos ?",
+          "a": "Notre outil utilise un modèle d'IA de pointe (RMBG-1.4/MODNet) qui s'exécute entièrement dans votre navigateur grâce à WebAssembly. Le modèle est téléchargé une fois dans la mémoire de votre navigateur et traite les pixels localement. Aucune donnée ne quitte votre appareil."
+        },
+        {
+          "q": "Est-ce vraiment gratuit ?",
+          "a": "Oui, c'est 100% gratuit sans limite d'utilisation, sans filigrane et sans inscription. Les outils de qualité respectueux de la vie privée devraient être accessibles à tous."
+        },
+        {
+          "q": "Quels formats sont pris en charge ?",
+          "a": "Nous supportons la plupart des formats courants (PNG, JPG, JPEG, WebP, HEIC). L'export se fait toujours en PNG transparent."
+        },
+        {
+          "q": "Puis-je traiter des images haute résolution ?",
+          "a": "Absolument. Contrairement à de nombreux outils qui réduisent vos images, SafeTools traite à la résolution originale (selon votre RAM) pour des résultats professionnels."
+        },
+        {
+          "q": "Ma vie privée est-elle garantie ?",
+          "a": "Oui. Le traitement se faisant sur votre machine locale, nous ne voyons jamais vos photos. Même sans internet après le chargement, l'outil fonctionne."
+        },
+        {
+          "q": "Est-ce que ça fonctionne sur mobile ?",
+          "a": "Oui, sur les navigateurs mobiles modernes. Cependant, l'IA nécessitant de la puissance, un appareil avec au moins 4Go de RAM est recommandé."
+        }
+      ],
+      "title": "Questions Fréquentes",
+      "description": "Tout ce qu'il faut savoir sur notre outil respectueux de la vie privée."
+    },
+    "hero": {
+      "title": "Détourage IA | Édition locale et privée",
+      "description": "Détourage de qualité professionnelle propulsé par une IA locale. Aucun téléchargement cloud, aucun stockage, aucun suivi. Rapide, sécurisé et privé.",
+      "badge": "Segmentation IA Professionnelle — 100% Sécurisé"
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "imageToPptx": {
+    "seo": {
+      "title": "画像からPPTXへの変換 オンライン無料 – JPG、PNG、画像をPowerPointスライドに変換",
+      "description": "JPG、PNG、WebPをオンラインで無料でPowerPoint PPTXプレゼンテーションに変換します。アップロード不要で高速、安全なブラウザベースの画像からPPTXへの変換ツール。",
+      "keywords": "画像をpptxに変換, 写真をパワーポイントに, 画像スライド変換, JPGからPPTX, PNGからパワーポイント, WEBPからPPTX, BMPからPPTX, GIFからPPTX, TIFFからPPTX",
+      "ogTitle": "画像PPTX変換ツール – 無料オンラインJPG、PNG、WEBPからPowerPointへ",
+      "ogDescription": "SafeToolsの無料画像PPTX変換ツールを使用して、画像を即座にプロフェッショナルなPowerPointプレゼンテーションに変換します。サーバーへのアップロードなし、100%プライベート。"
+    },
+    "hero": {
+      "title": "画像をPPTXに。",
+      "description": "画像を即座にプロフェッショナルなPowerPointプレゼンテーションに変換します。高速、安全、そして100%プライベート。",
+      "dropzone": {
+        "title": "ここに画像をドロップ",
+        "subtitle": "JPG、PNG、WEBP、SVG、TIFFなどをサポート"
+      },
+      "badges": {
+        "privacy": "プライバシー第一",
+        "noUploads": "アップロードなし",
+        "instant": "即時書き出し",
+        "noWatermark": "透かしなし"
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "主な機能",
+        "subtitle": "プロフェッショナルがSafeToolsを選ぶ理由",
+        "items": [
+          {
+            "title": "即時変換",
+            "desc": "1枚または複数の画像から、完全に互換性のあるPPTXプレゼンテーションファイルを数秒で作成します。"
+          },
+          {
+            "title": "プライバシー第一",
+            "desc": "ファイルはデバイス内に残ります。画像はアップロードされることなく、ブラウザ内でローカルに処理されます。"
+          },
+          {
+            "title": "バッチ処理",
+            "desc": "複数の画像をアップロードして、マルチスライドのPowerPointプレゼンテーションを自動的に生成します。"
+          },
+          {
+            "title": "高品質",
+            "desc": "PPTX生成中も画像の鮮明さ、解像度、色を維持します。"
+          },
+          {
+            "title": "マルチデバイス",
+            "desc": "Windows、macOS、Linux、Android、iOSのブラウザで直接動作します。"
+          },
+          {
+            "title": "透かしなし",
+            "desc": "生成されたプレゼンテーションはクリーンでプロフェッショナル、そのまま使用可能です。"
+          }
+        ]
+      },
+      "formats": {
+        "title": "サポートされている形式",
+        "subtitle": "ほぼすべての画像形式を変換可能"
+      },
+      "useCases": {
+        "title": "主な活用シーン",
+        "items": [
+          {
+            "title": "教育",
+            "desc": "講義ノート、スキャンしたページ、図表を授業用のスライドに変換します。"
+          },
+          {
+            "title": "ビジネス",
+            "desc": "スクリーンショットからレポート、分析資料、製品紹介を作成します。"
+          },
+          {
+            "title": "デザイナー",
+            "desc": "ポートフォリオやモックアップをクライアント向けのプレゼンテーションに変換します。"
+          },
+          {
+            "title": "マーケティング",
+            "desc": "キャンペーンクリエイティブやバナーを編集可能なピッチ資料に変換します。"
+          }
+        ]
+      },
+      "faq": {
+        "title": "よくある質問",
+        "subtitle": "知っておくべきすべてのこと",
+        "items": [
+          {
+            "q": "画像からPPTXへの変換は無料ですか？",
+            "a": "はい。このツールは完全に無料で使用でき、隠れた費用や透かしはありません。"
+          },
+          {
+            "q": "ソフトウェアをインストールする必要がありますか？",
+            "a": "いいえ。すべて最新のWebブラウザ（Chrome、Firefox、Safari、Edge）で直接動作します。"
+          },
+          {
+            "q": "ファイルはサーバーにアップロードされますか？",
+            "a": "いいえ。SafeToolsはブラウザベースの処理を優先します。画像がデバイスから離れることはありません。"
+          },
+          {
+            "q": "複数の画像を1つのPPTXファイルに変換できますか？",
+            "a": "はい。複数の画像をアップロードでき、それらはマルチスライドのPowerPointプレゼンテーションに変換されます。"
+          },
+          {
+            "q": "モバイルデバイスに対応していますか？",
+            "a": "はい。変換ツールはAndroid、iPhone、タブレット、デスクトップデバイスでシームレスに動作します。"
+          },
+          {
+            "q": "画質は低下しますか？",
+            "a": "生成プロセス中、画像の鮮明さと解像度を可能な限り維持するように最適化されています。"
+          }
+        ]
+      }
+    },
+    "studio": {
+      "assetMatrix": "アセットマトリックス",
+      "slidesInitialized": "{count} 枚のスライドを初期化しました",
+      "generate": "PPTXを作成する",
+      "slideIndicator": "スライド {current} / {total}",
+      "reset": "リセット",
+      "secureBrowser": "安全なブラウザスレッド",
+      "workspaceInitialized": "ワークスペースを初期化しました",
+      "studioConfig": "スタジオ設定",
+      "localSynthesis": "ローカル合成モード",
+      "presentationName": "プレゼンテーション名",
+      "placeholder": "DECK_2024",
+      "optimization": "最適化",
+      "layoutEngine": "レイアウトエンジン",
+      "imageFit": "画像フィット",
+      "workerStatus": "ワーカー状況",
+      "privacyShield": "プライバシーシールド",
+      "privacyDesc": "すべてのスライド構築は、ブラウザのサンドボックス環境内で行われます。データが当社のインフラに送信、キャッシュ、または保存されることはありません。",
+      "systemReady": "システム準備完了",
+      "noPreview": "プレビューなし",
+      "pro": "プロ",
+      "layoutValue": "HD 16:9",
+      "fitValue": "収める",
+      "workerIdle": "待機中"
+    },
+    "messages": {
+      "processing": "{count} 個のファイルを処理中...",
+      "slidesAdded": "{count} 枚のスライドを追加しました",
+      "processFailed": "一部のファイルの処理に失敗しました",
+      "exportSuccess": "プレゼンテーションの書き出しに成功しました",
+      "exportFailed": "書き出しに失敗しました。すべての画像が有効であることを確認してください。"
+    }
+  }
+}

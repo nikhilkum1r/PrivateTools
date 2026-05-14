@@ -1,0 +1,103 @@
+{
+  "pdfToTxt": {
+    "title": "Convertir PDF en",
+    "subtitle": "TXT.",
+    "description": "Extrayez instantanément du texte brut et propre de vos documents PDF avec un convertisseur PDF vers TXT rapide et respectueux de la vie privée. Aucun téléchargement, aucune inscription, et un traitement entièrement basé sur le navigateur.",
+    "dropzoneTitle": "Déposez le PDF ici",
+    "dropzoneDescription": "Prend en charge les PDF standard et textuels",
+    "toast": {
+      "errorFile": "Veuillez télécharger un fichier PDF valide.",
+      "success": "{count} lignes de texte extraites.",
+      "error": "L'extraction a échoué : {message}"
+    },
+    "stats": {
+      "privacy": "Vie privée d'abord",
+      "noUploads": "Aucun upload",
+      "instant": "Exportation instantanée",
+      "noWatermark": "Zéro filigrane",
+      "extractedText": "Texte extrait",
+      "localProcessing": "Traitement local dans le navigateur"
+    },
+    "buttons": {
+      "extract": "EXTRAIRE LE TEXTE",
+      "extracting": "EXTRACTION DU TEXTE... {progress}%",
+      "cancel": "Annuler"
+    },
+    "content": {
+      "mainTitle": "Convertissez des fichiers PDF en texte brut en ligne",
+      "mainDesc1": "Le convertisseur PDF vers TXT vous aide à extraire rapidement du texte brut lisible à partir de documents PDF tout en préservant le contenu écrit important. Que vous ayez besoin de texte pour l'édition, la recherche, la prise de notes, le codage, l'accessibilité ou le traitement de documents, cet outil rend l'extraction de texte PDF simple et efficace.",
+      "mainDesc2": "Le convertisseur fonctionne directement dans votre navigateur pour une vitesse, une confidentialité et une sécurité accrues.",
+      "featuresTitle": "Pourquoi utiliser ce convertisseur PDF vers TXT ?",
+      "featuresSubtitle": "Fonctionnalités de l'outil PDF vers TXT",
+      "feature1Title": "Extraction de texte précise",
+      "feature1Desc": "Extrayez du texte lisible à partir de PDF, y compris les paragraphes, les titres, les listes et le contenu des documents avec une grande précision.",
+      "feature2Title": "Traitement axé sur la confidentialité",
+      "feature2Desc": "Vos fichiers PDF restent sur votre appareil pendant le traitement, ce qui aide à protéger les documents confidentiels ou sensibles.",
+      "feature3Title": "Moteur de conversion rapide",
+      "feature3Desc": "Convertissez des fichiers PDF au format TXT en quelques secondes sans longs temps d'attente.",
+      "feature4Title": "Sortie minimale et propre",
+      "feature4Desc": "Générez des fichiers TXT légers, faciles à éditer, copier, rechercher, archiver ou importer dans d'autres systèmes.",
+      "feature5Title": "Compatibilité multiplateforme",
+      "feature5Desc": "Utilisez l'outil sur Windows, macOS, Linux, Android, iPhone, iPad et Chromebook.",
+      "feature6Title": "Gratuit et sans filigrane",
+      "feature6Desc": "Convertisseur de texte PDF en ligne gratuit, sans filigrane ajouté et sans inscription requise.",
+      "useCasesTitle": "Cas d'utilisation courants et avantages",
+      "useCasesDesc": "Les fichiers TXT sont légers, universels et faciles à traiter sur presque tous les appareils et systèmes d'exploitation. Convertir un PDF en TXT aide à réduire la taille des fichiers, à simplifier l'édition, à améliorer la compatibilité, à permettre des flux de travail d'automatisation et à accélérer le traitement du texte.",
+      "useCasesList": [
+        "Recherche et extraction de données",
+        "Copie de contenu à partir de PDF",
+        "Traitement de texte IA et NLP",
+        "Outils d'accessibilité",
+        "Prise de notes et résumés",
+        "Extraction de texte d'ebooks",
+        "Codage et scripting",
+        "Indexation et recherche de texte"
+      ],
+      "howTitle": "Comment convertir un PDF en TXT",
+      "step1Title": "Télécharger",
+      "step1Desc": "Téléchargez ou faites glisser votre document PDF",
+      "step2Title": "Traiter",
+      "step2Desc": "L'outil extrait le texte automatiquement",
+      "step3Title": "Aperçu",
+      "step3Desc": "Prévisualisez le contenu extrait",
+      "step4Title": "Télécharger",
+      "step4Desc": "Téléchargez le fichier TXT instantanément"
+    },
+    "landing": {
+      "faq": {
+        "items": [
+          {
+            "q": "Comment convertir un PDF en TXT gratuitement en ligne ?",
+            "a": "Téléchargez votre fichier PDF, laissez l'outil traiter le document et téléchargez instantanément le fichier TXT extrait."
+          },
+          {
+            "q": "Ce convertisseur PDF vers TXT est-il sûr ?",
+            "a": "Oui. Le traitement basé sur le navigateur aide à garder les fichiers privés sans nécessiter de téléchargement sur des serveurs externes."
+          },
+          {
+            "q": "Puis-je extraire du texte à partir de PDF numérisés ?",
+            "a": "Si le support OCR est activé, les PDF numérisés et les PDF basés sur des images peuvent également être traités pour l'extraction de texte."
+          },
+          {
+            "q": "Le convertisseur préserve-t-il la mise en forme ?",
+            "a": "Les fichiers TXT ne stockent que du texte brut, donc la mise en forme avancée telle que les images, les tableaux et les styles peut ne pas être préservée."
+          },
+          {
+            "q": "Puis-je utiliser ce convertisseur sur des appareils mobiles ?",
+            "a": "Oui. Le convertisseur fonctionne sur les téléphones Android, les iPhones, les tablettes et les systèmes de bureau."
+          },
+          {
+            "q": "L'inscription est-elle obligatoire ?",
+            "a": "Non. Vous pouvez convertir des fichiers PDF en TXT sans créer de compte."
+          },
+          {
+            "q": "Cet outil ajoute-t-il des filigranes ?",
+            "a": "Non. Les fichiers TXT téléchargés restent propres et sans filigrane."
+          }
+        ],
+        "title": "Foire aux questions",
+        "description": "Tout ce que vous devez savoir sur notre outil respectueux de la vie privée."
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "La Politique d'Accès Équitable",
+      "title": "Gratuit pour <br></br> Tous.",
+      "subtitle": "Nous pensons que la vie privée ne devrait pas être une fonctionnalité premium. Elle devrait être l'état par défaut du web."
+    },
+    "plan": {
+      "title": "Le Plan Souverain",
+      "price": "0 €",
+      "forever": "/ à vie",
+      "description": "Accédez à toute l'infrastructure SafeTools sans aucun compromis. Pas d'abonnement, pas de limites cachées et pas de carte de crédit requise.",
+      "button": "Commencer gratuitement",
+      "included": "Ce qui est inclus",
+      "features": [
+        "150+ Outils Professionnels",
+        "Traitement de fichiers illimité",
+        "Aucune limite de taille de fichier",
+        "Vitesse accélérée par le matériel",
+        "100 % Privé & Local",
+        "Aucun compte requis",
+        "Sans publicités ni traceurs",
+        "Accès complet au moteur local"
+      ]
+    },
+    "comparison": {
+      "title": "Pourquoi est-ce gratuit ?",
+      "subtitle": "Les outils traditionnels ont des serveurs. Les serveurs coûtent de l'argent. SafeTools utilise votre matériel pour faire le travail.",
+      "cloud": {
+        "title": "Outils Cloud \"Gratuits\"",
+        "features": [
+          "Limité à des fichiers de 10 Mo",
+          "Temps d'attente et listes d'attente",
+          "Filigranes sur les exports",
+          "Marketing par e-mail agressif"
+        ],
+        "unlimited_strike": "Traitement illimité"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100 % Gratuit à vie",
+          "Aucune limite de taille de fichier",
+          "Zéro attente / Local instantané",
+          "Sans filigrane / Qualité totale",
+          "Sans compte / Anonymat total"
+        ]
+      }
+    },
+    "final": {
+      "title": "L'Écosystème <br></br> Privacy-First.",
+      "subtitle": "Pas d'abonnement. Pas de suivi. Pure puissance locale.",
+      "independent": "Financement indépendant",
+      "zeroServer": "Infrastructure sans serveur"
+    },
+    "seo": {
+      "title": "Tarifs & Support | Boîte à outils de confidentialité gratuite SafeTools",
+      "description": "SafeTools est 100 % gratuit à vie. Découvrez pourquoi nous ne facturons pas la vie privée et comment vous pouvez soutenir notre mission pour un web local-first."
+    }
+  }
+}

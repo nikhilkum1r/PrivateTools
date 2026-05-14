@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "ابزارهای مرورگر در سطح حرفه‌ای که برای حریم خصوصی و سرعت طراحی شده‌اند. بیش از ۱۵۰ ابزار کاربردی که کاملاً روی دستگاه شما اجرا می‌شوند.",
+    "tagline": "داده‌های شما متعلق به شماست.",
+    "localEngineActive": "موتور محلی فعال است",
+    "isolatedContextVerified": "محیط ایزوله تایید شد",
+    "verifiedSupport": "پشتیبانی مرورگر تایید شد",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "محصول",
+    "resources": "منابع",
+    "community": "انجمن",
+    "copyright": "© ۲۰۲۶ SafeTools. Space.",
+    "systemsLocal": "تمام سیستم‌ها محلی هستند",
+    "faq": "سوالات متداول"
+  }
+}

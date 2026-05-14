@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "SafeTools에 오신 것을 환영합니다",
+    "tagline": "로컬에서 실행되는 150개 이상의 프라이버시 우선 온라인 파일 도구",
+    "upload": "파일 업로드",
+    "download": "다운로드",
+    "compress": "압축",
+    "convert": "변환",
+    "edit": "편집",
+    "search": "150개 이상의 도구 검색...",
+    "privacy": "프라이버시 우선",
+    "speed": "초고속",
+    "security": "기업급 보안",
+    "systemHealth": {
+      "title": "시스템 상태",
+      "localEngine": "로컬 엔진",
+      "localEngineDesc": "처리는 당신의 기기에서 100% 로컬로 이루어집니다.",
+      "secureSession": "보안 세션",
+      "secureSessionDesc": "최대한의 프라이버시를 위한 격리된 브라우저 환경.",
+      "online": "연결됨",
+      "onlineDesc": "최신 도구 업데이트를 위해 온라인 상태입니다.",
+      "offlineReady": "오프라인 준비 완료",
+      "offlineReadyDesc": "이 도구는 인터넷 연결 없이도 완벽하게 작동합니다.",
+      "zeroTracking": "추적 없음",
+      "zeroTrackingDesc": "추적을 위해 서버로 전송되는 데이터가 없습니다."
+    },
+    "securityTools": "보안 도구",
+    "privacyTools": "프라이버시 도구",
+    "tools": {
+      "vault": "보안 금고",
+      "metadataCleaner": "메타데이터 제거",
+      "fileShredder": "파일 파쇄기",
+      "secureNotes": "보안 노트",
+      "passwordGenerator": "비밀번호 생성기",
+      "passwordChecker": "비밀번호 강도 검사",
+      "ocr": "OCR 추출",
+      "steganography": "이미지 스테가노그래피",
+      "imageEditor": "이미지 편집기",
+      "imageCompressor": "이미지 압축기",
+      "formatConverter": "포맷 변환기",
+      "backgroundRemover": "배경 제거",
+      "colorLab": "컬러 랩",
+      "pdfToImage": "PDF를 이미지로"
+    },
+    "toolsLabel": "도구",
+    "features": "기능",
+    "developers": "개발자",
+    "pricing": "가격",
+    "about": "SafeTools 소개",
+    "whyAds": "광고를 표시하는 이유",
+    "privacyPolicy": "개인정보 처리방침",
+    "termsOfService": "서비스 약관",
+    "contact": "문의하기",
+    "home": "홈",
+    "faqLabel": "FAQ",
+    "blog": "블로그",
+    "changelog": "변경 로그",
+    "light": "라이트",
+    "dark": "다크",
+    "system": "시스템",
+    "startFree": "무료로 시작",
+    "systemStatus": "시스템 상태",
+    "updates": "업데이트",
+    "feedback": "피드백",
+    "contents": "콘텐츠",
+    "imageTools": "이미지 도구",
+    "openTools": "도구 열기",
+    "ready": "제어할 준비가 되셨나요?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "준비됨",
+      "blocked": "차단됨",
+      "success": "성공",
+      "error": "오류"
+    },
+    "getStarted": "시작하기",
+    "forever": "영원히",
+    "step": "단계",
+    "dropzone": {
+      "title": "파일 업로드",
+      "description": "여기에 파일을 드래그 앤 드롭하세요",
+      "secure": "보안 로컬 처리",
+      "processedLocally": "로컬에서 처리됨",
+      "maxSize": "최대 {size}MB",
+      "noFileChosen": "선택된 파일 없음"
+    },
+    "export": {
+      "ready": "다운로드 준비 완료",
+      "download": "다운로드",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "share": "공유",
+      "reset": "초기화"
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "description": "이 도구와 프라이버시 보호 방식에 대해 알아야 할 모든 것."
+    },
+    "related": {
+      "title": "관련 전문 도구",
+      "subtitle": "워크플로우를 위한 더 많은 프라이버시 우선 유틸리티를 탐색하세요."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools 데스크톱",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "언어 선택"
+    },
+    "relatedTools": "관련 크리에이티브 도구",
+    "relatedToolsDesc": "더 많은 프라이버시 우선 유틸리티를 탐색하세요.",
+    "all": "전체",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "광고",
+    "system_health": {
+      "title": "시스템 상태",
+      "localEngine": "로컬 엔진",
+      "localEngineDesc": "당신의 하드웨어에서 처리",
+      "secureSession": "보안 세션",
+      "secureSessionDesc": "격리된 브라우저 컨텍스트",
+      "online": "온라인",
+      "onlineDesc": "속도 최적화됨",
+      "offlineReady": "오프라인 준비 완료",
+      "offlineReadyDesc": "오프라인에서 완벽하게 작동",
+      "zeroTracking": "추적 없음",
+      "zeroTrackingDesc": "프라이버시 우선 아키텍처"
+    },
+    "values": {
+      "yes": "예",
+      "no": "아니요",
+      "limited": "제한됨"
+    },
+    "pro": {
+      "comingSoon": "Pro - 곧 출시 예정",
+      "unlockPower": "더 강력한 기능 잠금 해제",
+      "features": [
+        "최대 10배 더 큰 파일",
+        "무제한 일괄 처리",
+        "우선 서버 처리 대기열",
+        "공유 가능한 링크 (72시간 만료)",
+        "파일 기록 - 최근 50개 작업",
+        "대용량 파일을 위한 서버 측 처리"
+      ],
+      "waitlist": "대기 명단에 등록하세요 - 출시 시 월 $8",
+      "successTitle": "명단에 등록되었습니다! 🎉",
+      "successDesc": "Pro가 출시되면 이메일을 보내드리겠습니다.",
+      "continueFree": "무료 버전으로 계속하기",
+      "emailPlaceholder": "your@email.com",
+      "join": "등록",
+      "validEmail": "유효한 이메일 주소를 입력해주세요.",
+      "waitlistSuccess": "대기 명단에 등록되었습니다! Pro가 출시되면 알려드리겠습니다.",
+      "freeLimit": "무료 제한: {limit}",
+      "proLimit": "Pro 제한: {limit}",
+      "yourFile": "당신의 파일: {size}"
+    },
+    "disclaimer": {
+      "understand": "이해함 - 계속하기",
+      "responsibility": "계속 진행함으로써 이 도구 사용에 대한 모든 책임을 수락하게 됩니다."
+    },
+    "toast": {
+      "linkCopied": "링크가 클립보드에 복사되었습니다"
+    },
+    "seo": {
+      "browserReqs": "JavaScript 및 WebAssembly 필요"
+    },
+    "aria": {
+      "goHome": "홈으로 이동",
+      "toggleTheme": "테마 전환",
+      "faq": "자주 묻는 질문",
+      "changeLanguage": "언어 변경",
+      "close": "닫기",
+      "menu": "메뉴",
+      "openTools": "도구 메뉴 열기",
+      "exploreTools": "모든 도구 탐색",
+      "platformFeatures": "플랫폼 기능",
+      "privacyCommitment": "프라이버시 약속",
+      "developerApi": "개발자 API 및 문서",
+      "pricingPlans": "가격 요금제"
+    },
+    "shareTool": {
+      "title": "프라이버시 알리기",
+      "subtitle": "로컬 우선 컴퓨팅 지원",
+      "copyLink": "링크 복사",
+      "copied": "복사됨",
+      "twitter": "{title}을 위한 이 프라이버시 보호, 제로 업로드 도구를 확인해보세요:",
+      "telegram": "SafeTools를 사용한 안전한 파일 처리: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF 솔루션",
+        "image": "이미지 스튜디오",
+        "privacy": "프라이버시 도구",
+        "developer": "개발자 도구",
+        "pdfMerge": "PDF 병합",
+        "pdfSplit": "PDF 분할",
+        "pdfUnlock": "PDF 잠금 해제",
+        "pdfProtect": "PDF 보호",
+        "pdfToImage": "PDF를 이미지로",
+        "securityFileShredder": "파일 파쇄기"
+      }
+    },
+    "error": "오류"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% 로컬 처리",
+      "noUploads": "서버 업로드 제로",
+      "noTracking": "데이터 추적 제로",
+      "privacyFirst": "프라이버시 우선 UX",
+      "worksOffline": "오프라인 작동"
+    }
+  }
+}

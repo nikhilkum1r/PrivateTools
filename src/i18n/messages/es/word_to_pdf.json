@@ -1,0 +1,101 @@
+{
+  "wordToPdf": {
+    "title": "Word a",
+    "subtitle": "PDF.",
+    "description": "Convierta documentos de Word (DOC, DOCX) en archivos PDF de alta calidad al instante. Conversión rápida, segura y totalmente basada en el navegador sin necesidad de cargar archivos.",
+    "dropzoneTitle": "Suelte el documento de Word aquí",
+    "dropzoneDescription": "Admite archivos .doc y .docx",
+    "toast": {
+      "errorFile": "Cargue un documento de Word válido (.doc o .docx).",
+      "success": "Convertido a PDF con éxito.",
+      "error": "La conversión falló: {message}"
+    },
+    "stats": {
+      "privacy": "Privacidad primero",
+      "noUploads": "Sin subidas",
+      "highQuality": "Alta calidad",
+      "noWatermark": "Sin marca de agua",
+      "converting": "Convirtiendo...",
+      "localProcessing": "Procesamiento local en el navegador"
+    },
+    "buttons": {
+      "convert": "CONVERTIR A PDF",
+      "converting": "CONVIRTIENDO...",
+      "cancel": "Cancelar"
+    },
+    "content": {
+      "mainTitle": "Convierta documentos de Word a PDF en línea",
+      "mainDesc1": "Nuestro convertidor de Word a PDF le permite transformar sus archivos DOC y DOCX en documentos PDF profesionales sin comprometer la calidad o la privacidad. Ya sea un currículum, un informe o un documento legal, nuestra herramienta garantiza que su formato permanezca intacto.",
+      "mainDesc2": "La conversión ocurre completamente en su navegador, lo que significa que sus documentos sensibles nunca salen de su computadora.",
+      "featuresTitle": "¿Por qué usar nuestro convertidor de Word a PDF?",
+      "featuresSubtitle": "Funciones de conversión profesional",
+      "feature1Title": "Preservación del formato",
+      "feature1Desc": "Mantenga el diseño exacto, las fuentes y las imágenes de su documento de Word original en el archivo PDF final.",
+      "feature2Title": "Seguridad ante todo",
+      "feature2Desc": "Los documentos se procesan localmente. No almacenamos ni vemos sus archivos, lo que garantiza el 100% de confidencialidad de los datos.",
+      "feature3Title": "Súper rápido",
+      "feature3Desc": "Convierta archivos grandes de Word a PDF en segundos gracias a nuestro motor de procesamiento optimizado en el lado del cliente.",
+      "feature4Title": "Acceso universal",
+      "feature4Desc": "Compatible con todos los navegadores modernos en dispositivos Windows, macOS, Linux, iOS y Android.",
+      "feature5Title": "Sin límites de archivos",
+      "feature5Desc": "Convierta tantos documentos como necesite sin límites diarios ni restricciones de tamaño de archivo.",
+      "feature6Title": "Salida limpia",
+      "feature6Desc": "PDF de calidad profesional sin marcas de agua añadidas, branding o anuncios no deseados.",
+      "useCasesTitle": "Perfecto para cada necesidad profesional",
+      "useCasesDesc": "Convertir Word a PDF es esencial para asegurar que sus documentos se vean iguales para todos los que los abran. Es el estándar de la industria para compartir información importante de forma segura.",
+      "useCasesList": [
+        "Envío de currículums y CV",
+        "Finalización de informes comerciales",
+        "Intercambio de contratos legales",
+        "Creación de documentos de solo lectura",
+        "Preparación de tareas universitarias",
+        "Archivado de cartas importantes",
+        "Distribución de libros electrónicos",
+        "Facturas profesionales"
+      ],
+      "howTitle": "Cómo convertir Word a PDF",
+      "step1Title": "Subir",
+      "step1Desc": "Cargue o arrastre su archivo .doc o .docx",
+      "step2Title": "Analizar",
+      "step2Desc": "La herramienta analiza la estructura del documento",
+      "step3Title": "Convertir",
+      "step3Desc": "El documento se convierte a PDF localmente",
+      "step4Title": "Descargar",
+      "step4Desc": "Guarde su PDF profesional al instante"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "¿Cómo convierto Word a PDF en línea gratis?",
+          "a": "Cargue su documento DOC o DOCX, espere a que termine el proceso de conversión y descargue el archivo PDF generado al instante."
+        },
+        {
+          "q": "¿Es seguro este convertidor de Word a PDF?",
+          "a": "Sí. El procesamiento basado en el navegador ayuda a mantener sus documentos privados y seguros durante la conversión."
+        },
+        {
+          "q": "¿Puedo convertir DOCX a PDF sin perder el formato?",
+          "a": "Sí. El convertidor está diseñado para preservar las fuentes, el diseño, el espaciado, los encabezados y la estructura del documento con la mayor precisión posible."
+        },
+        {
+          "q": "¿El convertidor añade marcas de agua?",
+          "a": "No. Los archivos PDF exportados permanecen limpios sin branding ni marcas de agua no deseadas."
+        },
+        {
+          "q": "¿Puedo usar esta herramienta en dispositivos móviles?",
+          "a": "Sí. El convertidor funciona en teléfonos Android, iPhones, tabletas y navegadores de escritorio."
+        },
+        {
+          "q": "¿Se requiere registro?",
+          "a": "No. Puede convertir documentos de Word a PDF sin crear una cuenta."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre DOC y DOCX?",
+          "a": "DOC es el formato antiguo de Microsoft Word, mientras que DOCX es el formato más nuevo basado en XML con compatibilidad mejorada y tamaños de archivo más pequeños."
+        }
+      ],
+      "title": "Preguntas frecuentes",
+      "description": "Todo lo que necesita saber sobre nuestra herramienta que prioriza la privacidad."
+    }
+  }
+}

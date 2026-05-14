@@ -1,0 +1,10 @@
+{
+  "CommandPalette": {
+    "searchPlaceholder": "ابحث عن الأدوات والإجراءات والأوامر...",
+    "favorites": "المفضلة",
+    "searchResults": "نتائج البحث",
+    "noResults": "لا توجد نتائج لـ \"{search}\"",
+    "navigate": "تنقل",
+    "launch": "إطلاق"
+  }
+}

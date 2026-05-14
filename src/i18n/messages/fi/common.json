@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Tervetuloa SafeToolsiin",
+    "tagline": "150+ Yksityisyyttä kunnioittavaa Online-työkalua, jotka toimivat paikallisesti",
+    "upload": "Lataa tiedosto",
+    "download": "Lataa",
+    "compress": "Pakkaa",
+    "convert": "Muunna",
+    "edit": "Muokkaa",
+    "search": "Hae yli 150 työkalun joukosta...",
+    "privacy": "Yksityisyys ensin",
+    "speed": "Erittäin nopeat",
+    "security": "Yritystaso",
+    "systemHealth": {
+      "title": "Järjestelmän tila",
+      "localEngine": "Paikallinen moottori",
+      "localEngineDesc": "Käsittely tapahtuu 100 % paikallisesti laitteellasi.",
+      "secureSession": "Turvallinen istunto",
+      "secureSessionDesc": "Eristetty selainympäristö maksimaalisen yksityisyyden takaamiseksi.",
+      "online": "Yhdistetty",
+      "onlineDesc": "Online-tilassa uusimpia työkalupäivityksiä varten.",
+      "offlineReady": "Offline-valmius",
+      "offlineReadyDesc": "Tämä työkalu toimii täydellisesti ilman internetyhteyttä.",
+      "zeroTracking": "Nolla seurantaa",
+      "zeroTrackingDesc": "Tietoja ei lähetetä palvelimillemme seurantaa varten."
+    },
+    "securityTools": "Turvatyökalut",
+    "privacyTools": "Yksityisyystyökalut",
+    "tools": {
+      "vault": "Turvallinen holvi",
+      "metadataCleaner": "Metatietojen puhdistaja",
+      "fileShredder": "Tiedostojen silppuri",
+      "secureNotes": "Turvalliset muistiinpanot",
+      "passwordGenerator": "Salasanageneraattori",
+      "passwordChecker": "Salasanan vahvuuden tarkistus",
+      "ocr": "OCR-tekstintunnistus",
+      "steganography": "Kuvan steganografia",
+      "imageEditor": "Kuvankäsittelyohjelma",
+      "imageCompressor": "Kuvan pakkaaja",
+      "formatConverter": "Muodonmuunnin",
+      "backgroundRemover": "Taustan poistaja",
+      "colorLab": "Värilaboratorio",
+      "pdfToImage": "PDF kuvaksi"
+    },
+    "toolsLabel": "Työkalut",
+    "features": "Ominaisuudet",
+    "developers": "Kehittäjät",
+    "pricing": "Hinnoittelu",
+    "about": "Tietoa SafeToolsista",
+    "whyAds": "Miksi näytämme mainoksia",
+    "privacyPolicy": "Tietosuojaseloste",
+    "termsOfService": "Käyttöehdot",
+    "contact": "Ota yhteyttä",
+    "home": "Koti",
+    "faqLabel": "UKK",
+    "blog": "Blogi",
+    "changelog": "Muutosloki",
+    "light": "Vaalea",
+    "dark": "Tumma",
+    "system": "Järjestelmä",
+    "startFree": "Aloita ilmaiseksi",
+    "systemStatus": "Järjestelmän tila",
+    "updates": "Päivitykset",
+    "feedback": "Palaute",
+    "contents": "Sisältö",
+    "imageTools": "Kuvatyökalut",
+    "openTools": "Avaa työkalut",
+    "ready": "Valmis ottamaan ohjat käsiisi?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "VALMIS",
+      "blocked": "ESTETTY",
+      "success": "VALMIS",
+      "error": "VIRHE"
+    },
+    "getStarted": "Aloita",
+    "forever": "ikuisesti",
+    "step": "Vaihe",
+    "dropzone": {
+      "title": "Lataa tiedosto",
+      "description": "Vedä ja pudota tiedostosi tähän",
+      "secure": "Turvallinen paikallinen käsittely",
+      "processedLocally": "Käsitelty paikallisesti",
+      "maxSize": "Maks. {size}MB",
+      "noFileChosen": "Ei tiedostoa valittuna"
+    },
+    "export": {
+      "ready": "Valmis ladattavaksi",
+      "download": "Lataa",
+      "copy": "Kopioi",
+      "copied": "Kopioitu!",
+      "share": "Jaa",
+      "reset": "Nollaa"
+    },
+    "faq": {
+      "title": "Usein kysytyt kysymykset",
+      "description": "Kaikki mitä sinun tarvitsee tietää tästä työkalusta ja siitä, miten se suojaa yksityisyyttäsi."
+    },
+    "related": {
+      "title": "Aiheeseen liittyvät ammattilaistyökalut",
+      "subtitle": "Tutustu muihin yksityisyyttä kunnioittaviin apuohjelmiin."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Valitse kieli"
+    },
+    "relatedTools": "Aiheeseen liittyvät luovat työkalut",
+    "relatedToolsDesc": "Tutustu muihin yksityisyyttä kunnioittaviin apuohjelmiin.",
+    "all": "Kaikki",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Mainos",
+    "system_health": {
+      "title": "Järjestelmän tila",
+      "localEngine": "Paikallinen moottori",
+      "localEngineDesc": "Käsittely laitteistollasi",
+      "secureSession": "Turvallinen istunto",
+      "secureSessionDesc": "Eristetty selainkonteksti",
+      "online": "Online",
+      "onlineDesc": "Optimoitu nopeudelle",
+      "offlineReady": "Offline-valmius",
+      "offlineReadyDesc": "Täysin toimiva offline-tilassa",
+      "zeroTracking": "Nolla seurantaa",
+      "zeroTrackingDesc": "Yksityisyys edellä -arkkitehtuuri"
+    },
+    "values": {
+      "yes": "Kyllä",
+      "no": "Ei",
+      "limited": "Rajoitettu"
+    },
+    "pro": {
+      "comingSoon": "Pro – Tulossa pian",
+      "unlockPower": "Avaa lisää tehoa",
+      "features": [
+        "Jopa 10 kertaa suuremmat tiedostot",
+        "Rajoittamaton eräkäsittely",
+        "Ensisijainen palvelinkäsittelyjono",
+        "Jaettavat linkit (voimassa 72 h)",
+        "Tiedostohistoria – viimeiset 50 työtä",
+        "Palvelinpuolen käsittely raskaille tiedostoille"
+      ],
+      "waitlist": "Liity odotuslistalle – 8 $/kk julkaisun yhteydessä",
+      "successTitle": "Olet listalla! 🎉",
+      "successDesc": "Lähetämme sinulle sähköpostia, kun Pro julkaistaan.",
+      "continueFree": "Jatka ilmaisversiolla",
+      "emailPlaceholder": "sinun@email.fi",
+      "join": "Liity",
+      "validEmail": "Anna voimassa oleva sähköpostiosoite.",
+      "waitlistSuccess": "Olet odotuslistalla! Ilmoitamme sinulle, kun Pro julkaistaan.",
+      "freeLimit": "Ilmainen rajoitus: {limit}",
+      "proLimit": "Pro-rajoitus: {limit}",
+      "yourFile": "Tiedostosi: {size}"
+    },
+    "disclaimer": {
+      "understand": "Ymmärrän – Jatka",
+      "responsibility": "Jatkamalla hyväksyt täyden vastuun tämän työkalun käytöstä."
+    },
+    "toast": {
+      "linkCopied": "Linkki kopioitu leikepöydälle"
+    },
+    "seo": {
+      "browserReqs": "Vaatii JavaScriptin ja WebAssemblyn"
+    },
+    "aria": {
+      "goHome": "Siirry kotiin",
+      "toggleTheme": "Vaihda teemaa",
+      "faq": "Usein kysytyt kysymykset",
+      "changeLanguage": "Vaihda kieli",
+      "close": "Sulje",
+      "menu": "Valikko",
+      "openTools": "Avaa työkaluvalikko",
+      "exploreTools": "Tutustu kaikkiin työkaluihin",
+      "platformFeatures": "Alustan ominaisuudet",
+      "privacyCommitment": "Sitoutuminen yksityisyyteen",
+      "developerApi": "Kehittäjä-API & dokumentaatio",
+      "pricingPlans": "Hinnoittelusuunnitelmat"
+    },
+    "shareTool": {
+      "title": "Levitä yksityisyyttä",
+      "subtitle": "Tue paikallista tietojenkäsittelyä",
+      "copyLink": "Kopioi linkki",
+      "copied": "Kopioitu",
+      "twitter": "Katso tämä yksityinen, nolla-latausta vaativa työkalu kohteelle {title}:",
+      "telegram": "Turvallinen tiedostojen käsittely SafeToolsilla: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF-ratkaisut",
+        "image": "Kuvastudio",
+        "privacy": "Yksityisyystyökalut",
+        "developer": "Kehittäjätyökalut",
+        "pdfMerge": "Yhdistä PDF",
+        "pdfSplit": "Jaa PDF",
+        "pdfUnlock": "Avaa PDF:n lukitus",
+        "pdfProtect": "Suojaa PDF",
+        "pdfToImage": "PDF kuvaksi",
+        "securityFileShredder": "Tiedostojen silppuri"
+      }
+    },
+    "error": "Virhe"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100 % paikallinen käsittely",
+      "noUploads": "Nolla palvelimelle latausta",
+      "noTracking": "Nolla tietojen seurantaa",
+      "privacyFirst": "Yksityisyys edellä -käyttökokemus",
+      "worksOffline": "Toimii offline-tilassa"
+    }
+  }
+}

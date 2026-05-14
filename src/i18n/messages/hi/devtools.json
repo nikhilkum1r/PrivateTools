@@ -1,0 +1,85 @@
+{
+  "devtools": {
+    "seo": {
+      "title": "डेवलपर हब | प्रोफेशनल और प्राइवेट देवटूल्स | SafeTools",
+      "description": "पेशेवर-ग्रेड डेवलपर उपयोगिताएँ जो पूरी तरह से आपके ब्राउज़र में चलती हैं। JSON फ़ॉर्मेटर, JWT डिबगर, Base64 कोडेक और बहुत कुछ।",
+      "ogTitle": "SafeTools डेवलपर हब | 100% प्राइवेट",
+      "ogDescription": "शून्य सर्वर इंटरैक्शन के साथ संप्रभु डेवलपर टूलकिट।",
+      "seoName": "SafeTools डेवलपर हब",
+      "seoDescription": "स्थानीय-प्रथम डेवलपर उपयोगिताओं का एक पेशेवर सुइट।"
+    },
+    "matrix": "उपयोगिता मैट्रिक्स",
+    "toolkit": "संप्रभु देव टूलकिट",
+    "local": "स्थानीय निष्पादन",
+    "wasm_optimized": "WASM अनुकूलित",
+    "buffered_stream": "बफ़र्ड स्ट्रीम",
+    "input_buffer": "इनपुट बफ़र",
+    "source": "स्रोत",
+    "input_placeholder": "अपना डेटा स्ट्रीम यहाँ पेस्ट करें...",
+    "characters": "{count} वर्ण",
+    "processed_output": "संसाधित आउटपुट",
+    "copy_result": "परिणाम कॉपी करें",
+    "copied": "कॉपी किया गया",
+    "synthesizing": "संश्लेषण कर रहा है...",
+    "output_placeholder": "आउटपुट यहाँ दिखाई देगा...",
+    "clear": "साफ़ करें",
+    "re_execute": "फिर से निष्पादित करें",
+    "bit_inspector": "बिट इंस्पेक्टर",
+    "telemetry": "सत्र टेलीमेट्री",
+    "metadata_matrix": "मेटाडेटा मैट्रिक्स",
+    "execution_time": "निष्पादन समय",
+    "memory_pressure": "मेमोरी प्रेशर",
+    "bit_entropy": "बिट एन्ट्रापी",
+    "sovereign_guard": "संप्रभु गार्ड",
+    "privacy_notice": "SafeTools देव उपयोगिताएँ केवल स्थानीय प्रसंस्करण के सिद्धांत पर बनाई गई हैं। आपका डेटा कभी भी हमारे सर्वर को नहीं छूता है।",
+    "quick_actions": "त्वरित क्रियाएं",
+    "minify": "मिनिफाई",
+    "beautify": "ब्यूटिफाई",
+    "escape": "एस्केप",
+    "unescape": "अनएस्केप",
+    "secured_session": "सुरक्षित सत्र",
+    "tools": {
+      "json": {
+        "name": "JSON फ़ॉर्मेटर",
+        "desc": "JSON डेटा को सुंदर बनाएं और मान्य करें।"
+      },
+      "base64": {
+        "name": "Base64 कोडेक",
+        "desc": "टेक्स्ट और इमेज को एन्कोड/डिकोड करें।"
+      },
+      "hash": {
+        "name": "हैश जेनरेटर",
+        "desc": "SHA-256 हस्ताक्षर जेनरेट करें।"
+      },
+      "jwt": {
+        "name": "JWT डिबगर",
+        "desc": "JSON वेब टोकन डिकोड करें।"
+      },
+      "url": {
+        "name": "URL एनकोडर",
+        "desc": "सुरक्षित URL एन्कोडिंग/डिकोडिंग।"
+      },
+      "uuid": {
+        "name": "UUID जेनरेटर",
+        "desc": "सुरक्षित v4 UUID जेनरेट करें।"
+      },
+      "timestamp": {
+        "name": "यूनिक्स टाइमस्टैम्प",
+        "desc": "एपॉक को ISO डेट में बदलें।"
+      },
+      "lorem": {
+        "name": "लोरम इप्सम",
+        "desc": "प्लेसहोल्डर टेक्स्ट जेनरेटर।"
+      }
+    },
+    "messages": {
+      "copySuccess": "क्लिपबोर्ड पर कॉपी किया गया!",
+      "invalidJson": "त्रुटि: अमान्य JSON पेलोड।",
+      "base64Error": "त्रुटि: Base64 ऑपरेशन विफल रहा।",
+      "invalidJwt": "त्रुटि: अमान्य JWT संरचना।",
+      "urlError": "त्रुटि: URL कोडेक विफलता।",
+      "processingError": "घातक: निष्पादन इंजन दोष।",
+      "loremContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

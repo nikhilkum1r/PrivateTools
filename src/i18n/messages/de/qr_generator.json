@@ -1,0 +1,210 @@
+{
+  "qrGenerator": {
+    "seo": {
+      "title": "Professioneller QR-Code-Generator - Kostenlos & Privat | SafeTools",
+      "description": "Erstellen Sie benutzerdefinierte, hochauflösende QR-Codes lokal in Ihrem Browser. Fügen Sie Logos, Farben und Designs ohne Server-Tracking oder Weiterleitungen hinzu.",
+      "ogTitle": "Professioneller QR-Code-Generator - Kostenlos & Privat | SafeTools",
+      "ogDescription": "Erstellen Sie benutzerdefinierte, hochauflösende QR-Codes lokal in Ihrem Browser.",
+      "structuredName": "SafeTools QR-Studio",
+      "structuredDesc": "Professioneller lokaler QR-Generator.",
+      "keywords": "qr-code, qr-generator, lokaler qr"
+    },
+    "hero": {
+      "title": "QR Identity Studio.",
+      "subtitle": "Professionelle QR-Code-Generierung direkt in Ihrem Browser. Null Tracking, null Server-Uploads.",
+      "badge": "Privacy-First QR-Engine"
+    },
+    "badges": {
+      "instant": "Sofortige Generierung",
+      "local": "Lokale Logik",
+      "noTracking": "Kein Tracking",
+      "browser": "Browser-basiert",
+      "mobile": "Mobile-Ready"
+    },
+    "identity": {
+      "title": "Identitätskonfiguration",
+      "status": "LIVE-ENGINE",
+      "protocol": "Protokoll auswählen",
+      "uriLabel": "Ziel-URI / URL",
+      "uriPlaceholder": "https://example.com",
+      "uriInvalid": "Ungültiges URI-Format erkannt",
+      "ssid": "WLAN-Netzwerk (SSID)",
+      "ssidPlaceholder": "Mein Netzwerk",
+      "password": "WLAN-Passwort",
+      "passwordPlaceholder": "Netzwerkpasswort",
+      "contact": "Kontaktname",
+      "contactPlaceholder": "Max Mustermann",
+      "text": "Einfacher Text",
+      "textPlaceholder": "Geben Sie hier Ihre Nachricht ein...",
+      "brand": "Identitäts-Branding",
+      "centerLogo": "Zentrales Logo / Icon",
+      "remove": "Entfernen",
+      "dropIcon": "Icon / Logo hier ablegen",
+      "logoAlt": "Logo-Vorschau"
+    },
+    "preview": {
+      "title": "Echtzeit-Vorschau",
+      "status": "Aktuelle Nutzlast: {bytes} Bytes",
+      "copy": "Nutzlast kopieren",
+      "copied": "Erfolgreich kopiert!"
+    },
+    "design": {
+      "title": "Styling & Design",
+      "chromatic": "Farbsteuerung",
+      "foreground": "Vordergrundfarbe",
+      "background": "Hintergrundfarbe",
+      "presets": "Branding-Vorlagen",
+      "config": "Matrix-Konfiguration",
+      "errorCorrection": "Fehlerkorrektur",
+      "margin": "Rand einschließen",
+      "secured": "GESICHERTE SITZUNG"
+    },
+    "export": {
+      "png": "PNG-Datei herunterladen",
+      "svg": "SVG-Vektor exportieren",
+      "toastPng": "QR-Code als PNG heruntergeladen!",
+      "toastSvg": "QR-Code als SVG exportiert!"
+    },
+    "landing": {
+      "features": {
+        "title": "Studio-Funktionen",
+        "subtitle": "Leistungsstarke Steuerelemente für professionelle QR-Generierung.",
+        "url": "URL / URI-Unterstützung",
+        "wifi": "WLAN-Netzwerke",
+        "vcard": "vCard-Kontakte",
+        "text": "Einfacher Text",
+        "colors": "Eigene Farben",
+        "logo": "Markenlogos",
+        "export": "Hochauflösender Export",
+        "offline": "Offline verfügbar"
+      },
+      "educational": {
+        "whatIs": {
+          "title": "Was sind QR-Codes?",
+          "description": "Quick Response (QR) Codes sind zweidimensionale Barcodes, die Daten in einer Matrix aus schwarzen und weißen Quadraten speichern. Sie können URLs, Kontaktinformationen, WLAN-Zugangsdaten und mehr speichern. SafeTools generiert diese Codes lokal mithilfe von <link>WASM-Engines</link>, um sicherzustellen, dass Ihre Daten niemals einen Server berühren."
+        },
+        "privacy": {
+          "title": "Datenschutz-Architektur",
+          "items": [
+            "Keine Server-Speicherung Ihrer QR-Daten",
+            "Keine Tracking-Pixel oder Analyse-Weiterleitungen",
+            "Lokal generiert im RAM Ihres Browsers",
+            "Reine Client-Side Verarbeitungslogik"
+          ],
+          "footer": "Erfahren Sie mehr über unsere <link>Sicherheitsphilosophie</link>."
+        },
+        "supported": {
+          "title": "Unterstützte Datentypen",
+          "basic": "Basisprotokolle",
+          "basic_items": [
+            "URL",
+            "Text",
+            "E-Mail",
+            "Telefon",
+            "SMS"
+          ],
+          "advanced": "Erweiterte Module",
+          "advanced_items": [
+            "WLAN-Konfiguration",
+            "vCard (Kontakt)",
+            "MeCard",
+            "Event",
+            "Standort"
+          ]
+        },
+        "cases": {
+          "title": "Professionelle Anwendungsfälle",
+          "items": [
+            "Sicheres Teilen von Dokumenten",
+            "Kontaktloses Bezahlen",
+            "Marketingkampagnen",
+            "Persönliche Portfolios",
+            "Restaurant-Speisekarten",
+            "Event-Registrierungen"
+          ]
+        },
+        "security": {
+          "title": "Sicherheitswarnung",
+          "description": "QR-Codes können für Phishing verwendet werden, wenn sie auf bösartige URLs verweisen. Überprüfen Sie immer das Ziel eines QR-Codes, bevor Sie ihn scannen. SafeTools bietet eine saubere, lokale Umgebung, um vertrauenswürdige Codes zu generieren.",
+          "footer": "Entdecken Sie unseren <vault>Dateitresor</vault> oder unsere <notes>Sicheren Notizen</notes> für mehr Schutz."
+        },
+        "correction": {
+          "title": "Fehlerkorrekturstufen",
+          "description": "Die Fehlerkorrektur ermöglicht es, dass ein QR-Code auch dann noch gescannt werden kann, wenn er teilweise beschädigt oder verdeckt ist. Höhere Stufen erlauben mehr Schaden, erhöhen aber die Komplexität des Codes.",
+          "l": "Stufe L: 7% Schadenswiederherstellung",
+          "m": "Stufe M: 15% Schadenswiederherstellung",
+          "q": "Stufe Q: 25% Schadenswiederherstellung",
+          "h": "Stufe H: 30% Schadenswiederherstellung"
+        },
+        "static": {
+          "title": "Statischer vs. Dynamischer QR",
+          "description": "SafeTools generiert statische QR-Codes, die für datenschutzbewusste Benutzer im Allgemeinen sicherer sind.",
+          "static": "Statisch: Daten sind direkt in das QR-Muster hartcodiert.",
+          "dynamic": "Dynamisch: Verweist auf eine URL-Weiterleitung und ermöglicht so Tracking und Analysen."
+        }
+      },
+      "comparison": {
+        "title": "Der SafeTools-Vorteil",
+        "headers": [
+          "Funktion",
+          "Herkömmliche Generatoren",
+          "SafeTools Studio"
+        ],
+        "rows": [
+          [
+            "Verarbeitungsort",
+            "Serverseitig",
+            "Lokaler Browser"
+          ],
+          [
+            "Datenschutz",
+            "Protokolliert / Verfolgt",
+            "Kein Tracking"
+          ],
+          [
+            "Weiterleitung",
+            "Weiterleitungen (Dynamisch)",
+            "Direkt (Statisch)"
+          ],
+          [
+            "Kosten",
+            "Oft im Abonnement",
+            "100% Kostenlos"
+          ],
+          [
+            "Branding",
+            "Basis",
+            "Erweitertes Studio"
+          ]
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Werden meine QR-Codes auf Ihren Servern gespeichert?",
+            "a": "Nein. Alle QR-Codes werden lokal auf Ihrem Gerät generiert. Wir speichern oder sehen die von Ihnen eingegebenen Daten nicht."
+          },
+          {
+            "q": "Kann ich mein Firmenlogo zum QR-Code hinzufügen?",
+            "a": "Ja! Sie können ein Logo hochladen, das in der Mitte des QR-Codes platziert wird. Dies wird ebenfalls lokal verarbeitet."
+          },
+          {
+            "q": "Welche Fehlerkorrekturstufe sollte ich am besten verwenden?",
+            "a": "Stufe H (Hoch) wird empfohlen, wenn Sie ein Logo hinzufügen, da sie die größte Widerstandsfähigkeit gegen Datenverlust bietet."
+          },
+          {
+            "q": "Sind die QR-Codes dauerhaft?",
+            "a": "Ja. Da es sich um statische QR-Codes handelt, funktionieren sie für immer, solange die Ziel-URL oder die Daten gültig bleiben."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Datenschutz-Manifest",
+        "description": "Wir glauben, dass Identitätswerkzeuge dem Benutzer dienen sollten, nicht dem Anbieter. SafeTools basiert auf dem Prinzip der souveränen Daten - wobei Sie der einzige Kurator Ihrer digitalen Fußabdrücke sind."
+      },
+      "related": {
+        "title": "Verwandte digitale Werkzeuge"
+      }
+    }
+  }
+}

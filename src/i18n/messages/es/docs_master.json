@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "title": "Docs <highlight>Master</highlight> Pro",
+    "subtitle": "Abra, vea y edite cualquier formato de documento de forma privada en su navegador. Sin cargas. Sin cuentas. 100% potenciado por WebAssembly.",
+    "dropzone": "Soporta DOCX, XLSX, PDF, PPTX, CSV, JSON, XML, HTML, MD, TXT, RTF, ODT y más",
+    "badges": {
+      "privacy": "Privacidad sin Carga",
+      "engine": "Motor WASM",
+      "formats": "20+ Formatos"
+    }
+  },
+  "landing": {
+    "formats": {
+      "title": "Soporte de Formato Universal",
+      "subtitle": "Cada formato de documento importante, renderizado con fidelidade de píxel perfeito",
+      "groups": [
+        "Procesamiento de Textos",
+        "Hojas de Cálculo",
+        "Presentaciones",
+        "Documentos y Código"
+      ]
+    },
+    "features": {
+      "title": "¿Por qué elegir Docs Master?",
+      "subtitle": "Inteligência documental de nível profissional sem sacrificar a privacidade.",
+      "items": [
+        {
+          "title": "Privacidad sin Carga",
+          "desc": "Os documentos são processados 100% localmente no seu navegador usando WebAssembly. Seus arquivos nunca saem do seu dispositivo."
+        },
+        {
+          "title": "Motor WASM ultrarrápido",
+          "desc": "Renderização WebAssembly acelerada por hardware para análise instantânea de documentos, mesmo para arquivos grandes e complexos."
+        },
+        {
+          "title": "Vista previa de alta fidelidade",
+          "desc": "Renderização de pixel perfeita para tabelas DOCX, XLSX, slides PPTX e incorporação de PDF nativo com controles de zoom."
+        },
+        {
+          "title": "Edição de folhas de cálculo em vivo",
+          "desc": "Edite células XLSX e CSV diretamente no navegador e exporte o arquivo atualizado sem precisar do Microsoft Office."
+        },
+        {
+          "title": "Limpieza de metadatos",
+          "desc": "Remova autor, histórico do editor e metadados pessoais dos documentos antes de compartilhar para máxima privacidade."
+        },
+        {
+          "title": "Extraer y Exportar",
+          "desc": "Extraia páginas PDF individuais, exporte planilhas editadas e baixe arquivos originais — tudo offline."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "subtitle": "Abra qualquer documento em três etapas simples",
+      "steps": [
+        {
+          "title": "Suelte su archivo",
+          "desc": "Arraste e solte ou clique para carregar qualquer formato de documento suportado."
+        },
+        {
+          "title": "Análisis instantáneo",
+          "desc": "O motor WASM analisa e renderiza seu documento com total fidelidade."
+        },
+        {
+          "title": "Ver, editar y exportar",
+          "desc": "Navegue, pesquise, edite células e exporte — tudo no navegador, tudo privado."
+        }
+      ]
+    },
+    "professional": {
+      "title": "Creado para cada profesional",
+      "desc": "Esteja você revisando contratos legais, analisando planilhas financeiras ou apresentando para clientes — o Docs Master cuida de tudo sem nunca enviar seus dados confidenciais para um servidor de terceiros.",
+      "useCases": [
+        "Revisión de documentos legales",
+        "Análise de planilhas financeiras",
+        "Leitura de artigos acadêmicos",
+        "Preparação de apresentações para clientes",
+        "Inspeção de arquivos de código",
+        "Exportação e conversão de dados",
+        "Archivado con prioridad de privacidad",
+        "Remoção segura de metadatos"
+      ],
+      "stats": [
+        {
+          "title": "Funciona en todas partes",
+          "desc": "Qualquer navegador moderno, qualquer sistema operacional, sem necessidade de instalação."
+        },
+        {
+          "title": "Los datos se quedan localmente",
+          "desc": "O processamento WASM sem servidor mantém os arquivos no dispositivo."
+        },
+        {
+          "title": "Carga instantánea",
+          "desc": "Os motores WASM iniciam em milissegundos."
+        },
+        {
+          "title": "Renderizado enriquecido",
+          "desc": "Imagens, tabelas, fontes — tudo reproduzido fielmente."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Tudo o que você precisa saber sobre o Docs Master Pro",
+      "items": [
+        {
+          "q": "¿Mi documento se carga en un servidor?",
+          "a": "Não. O Docs Master Pro usa motores WebAssembly (WASM) para processar tudo localmente na memória do seu navegador. Seus arquivos nunca saem do seu dispositivo — não há uploads para o servidor."
+        },
+        {
+          "q": "¿Qué formatos de archivo son compatibles?",
+          "a": "A ferramenta suporta arquivos DOCX, DOC, RTF, ODT, TXT, MD (Word), XLSX, XLS, CSV, ODS (Planilhas), PPTX, PPT, ODP (Apresentações), PDF, JSON, XML e HTML."
+        },
+        {
+          "q": "¿Puedo editar documentos directamente en el navegador?",
+          "a": "Sim! Arquivos XLSX e CSV podem ser editados célula por célula com um editor de planilhas integrado. Documentos DOCX possuem um modo de edição de texto rico que permite modificar o conteúdo e imprimir ou salvar."
+        },
+        {
+          "q": "¿Cómo funciona la limpieza de metadatos?",
+          "a": "Quando você ativa o botão 'Limpar Metadados', a ferramenta substitui nomes de autores, carimbos de data/hora de criação, histórico do editor e outros identificadores pessoais do arquivo exportado."
+        },
+        {
+          "q": "¿Puedo extraer páginas específicas de um PDF?",
+          "a": "Sim. Use o Extrator de Páginas PDF na barra lateral para especificar qual página você deseja, e a ferramenta exportará um PDF de página única usando o motor WASM pdf-lib."
+        },
+        {
+          "q": "¿Funciona esto en dispositivos móviles?",
+          "a": "Sim. O Docs Master é totalmente responsivo e funciona em navegadores Android e iOS modernos, embora o editor de planilhas seja melhor visualizado em uma tela maior."
+        }
+      ]
+    }
+  },
+  "inspector": {
+    "title": "Inspector de Documentos",
+    "version": "Motor Universal v2.0",
+    "engine": "MOTOR {type}",
+    "identity": {
+      "title": "Identidad del Archivo",
+      "name": "Nombre",
+      "size": "Tamaño"
+    },
+    "controls": {
+      "title": "Controles Maestros",
+      "saveSpreadsheet": "Guardar Hoja de Cálculo",
+      "saveText": "Guardar Texto Extraído",
+      "enableEdit": "Habilitar Modo Edición",
+      "disableEdit": "Deshabilitar Modo Edición",
+      "print": "Imprimir / Guardar como PDF",
+      "exportOriginal": "Exportar Original",
+      "loadDifferent": "Cargar Diferente"
+    }
+  },
+  "manipulation": {
+    "pdf": {
+      "title": "Manipulación de PDF",
+      "target": "Página Objetivo",
+      "extract": "EXTRAER",
+      "tip": "CONSEJO PRO: Esta herramienta crea un PDF nuevo de 1 página usando solo el búfer seleccionado."
+    },
+    "docx": {
+      "title": "Núcleo de Renderizado de Word",
+      "legacy": "Soporte Heredado",
+      "enabled": "HABILITADO",
+      "disabled": "DESHABILITADO",
+      "tip": "Habilite esto si el documento no se renderiza o contiene elementos estructurales complejos."
+    }
+  },
+  "config": {
+    "title": "Configuración del Estudio",
+    "scrub": {
+      "title": "Limpieza de Privacidad",
+      "desc": "Eliminar EXIF e Identidad"
+    },
+    "dark": {
+      "title": "Estudio Oscuro",
+      "desc": "Cambiar Tema del Visor"
+    },
+    "guard": {
+      "title": "Protección de Privacidad",
+      "desc": "El documento se procesa completamente en su navegador. Ningún dato llega a ningún servidor."
+    }
+  },
+  "viewer": {
+    "tabs": {
+      "preview": "Vista Previa Visual",
+      "data": "Estructura Raw"
+    },
+    "processing": "Procesamiento 100% Local",
+    "stats": {
+      "size": "Tamaño del Archivo",
+      "format": "Formato",
+      "stability": "Estabilidad",
+      "engine": "Motor",
+      "verified": "Verificado",
+      "wasm": "WASM v2.0"
+    },
+    "subtitles": {
+      "sheet": "Hoja: {name}",
+      "pdf": "Vista de Documento",
+      "universal": "Vista Previa Universal"
+    },
+    "controls": {
+      "search": "Buscar documento...",
+      "visual": "Modo Visual",
+      "structural": "Modo Estructural"
+    },
+    "fallback": {
+      "active": "Respaldo Inteligente Activo: Este documento se renderiza utilizando un analizador semántico para manejar estructuras complejas.",
+      "switch": "Cambiado al motor de renderizado secundario por compatibilidade.",
+      "failure": "Fallo Crítico del Motor: Este documento está encriptado o fundamentalmente dañado.",
+      "totalFailure": "Todos os motores de renderização falharam ao analisar este documento."
+    },
+    "pptxFailure": "Fallo del Motor Visual: No se pudieron renderizar las diapositivas. Revise la pestaña Estructura Raw.",
+    "pptxTotalFailure": "Error al renderizar la presentación visualmente.",
+    "initialized": "Motor {type} Inicializado",
+    "placeholder": "Ingrese el contenido aquí...",
+    "structuralHeader": "Análisis de Metadatos Estructurales",
+    "structuralFooter": "Análisis del motor completado. Dirección de memoria: {address}"
+  }
+}

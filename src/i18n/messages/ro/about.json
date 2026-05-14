@@ -1,0 +1,96 @@
+{
+  "about": {
+    "seo": {
+      "title": "About SafeTools | Our Mission for Digital Privacy",
+      "description": "Learn about the mission, manifesto, and technology behind SafeToolsthe zero-server toolkit built to protect your digital sovereignty."
+    },
+    "toc": {
+      "manifesto": "The Manifesto",
+      "trust": "Trust Signals",
+      "pillars": "Core Pillars",
+      "tech": "Tech Stack"
+    },
+    "manifesto": {
+      "badge": "Our Manifesto",
+      "title": "Privacy is a Human Right.",
+      "description": "SafeTools was built to bridge the gap between powerful professional utilities and absolute data sovereignty. We believe you shouldn't have to sacrifice your identity for a PDF conversion or video transcode."
+    },
+    "trustSignals": [
+      {
+        "label": "GDPR Compliant",
+        "value": "By Architecture"
+      },
+      {
+        "label": "Security Verified",
+        "value": "Local-Only"
+      },
+      {
+        "label": "Open Standards",
+        "value": "Verified Engines"
+      },
+      {
+        "label": "Threat Model",
+        "value": "Zero-Access"
+      }
+    ],
+    "pillars": {
+      "zeroServer": {
+        "title": "Zero-Server Policy",
+        "description": "Your files are never uploaded. We process everything locally in your browser using WebAssembly and Client-side JS. This ensures true data sovereignty."
+      },
+      "noPersistence": {
+        "title": "No Data Persistence",
+        "description": "Once you close the tab, your session and files are purged from memory. We don't use databases or server-side logs. Your workspace is temporary and secure."
+      },
+      "identityProtection": {
+        "title": "Identity Protection",
+        "description": "No tracking, no analytics, and no fingerprinting. We don't even know you're hereand we like it that way. We prioritize anonymity over metrics."
+      }
+    },
+    "engine": {
+      "badge": "The Engine",
+      "title": "Hardware Performance. Zero Server Latency.",
+      "description": "We utilize cutting-edge browser technologies to move processing power from the cloud to your local CPU and GPU. Using WebAssembly (WASM), we run high-performance C++ and Rust binaries directly in your browser's V8 engine.",
+      "items": [
+        {
+          "name": "ffmpeg.wasm",
+          "desc": "Professional video & audio encoding in-browser."
+        },
+        {
+          "name": "pdf-lib",
+          "desc": "High-fidelity document manipulation."
+        },
+        {
+          "name": "ONNX Runtime",
+          "desc": "Client-side AI for image upscaling and OCR."
+        },
+        {
+          "name": "WebAssembly",
+          "desc": "Native performance via high-speed binaries."
+        }
+      ]
+    },
+    "metrics": {
+      "title": "Performance Metrics",
+      "subtitle": "Local Computing Engine v4.0",
+      "items": [
+        {
+          "label": "Data Leak Risk",
+          "value": "0%"
+        },
+        {
+          "label": "Processing Speed",
+          "value": "Native"
+        },
+        {
+          "label": "Cloud Dependency",
+          "value": "None"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to take control?",
+      "description": "Explore our full suite of professional utilities and experience the power of private, localized file processing."
+    }
+  }
+}

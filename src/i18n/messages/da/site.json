@@ -1,0 +1,426 @@
+{
+  "feedback": {
+    "hero": {
+      "badge": "Community Voice",
+      "title": "Shape the <br></br> <span class=\"text-emerald-500 italic\">Future.",
+      "subtitle": "Your feedback is our primary roadmap driver. Tell us what you love, what you hate, and what you want to see next."
+    },
+    "status": {
+      "success": "Feedback Sent!",
+      "successDesc": "Thank you for helping us build a better SafeTools."
+    },
+    "form": {
+      "title": "Send Us Feedback",
+      "subtitle": "Help us improve SafeTools with your suggestions.",
+      "fields": {
+        "name": "Your Name",
+        "email": "Your Email",
+        "type": {
+          "label": "Feedback Type",
+          "options": {
+            "bug": "Bug Report",
+            "feature": "Feature Request",
+            "improvement": "Improvement",
+            "other": "Other",
+            "praise": "Praise"
+          }
+        },
+        "message": "Your Message"
+      },
+      "placeholders": {
+        "message": "Tell us what's on your mind..."
+      },
+      "button": {
+        "submit": "Send Feedback",
+        "sending": "Sending..."
+      },
+      "mood": {
+        "title": "How was your session?",
+        "subtitle": "Select your impression of our local-first engine.",
+        "poor": "Poor",
+        "average": "Average",
+        "excellent": "Excellent"
+      },
+      "details": {
+        "title": "The Details",
+        "subtitle": "What specific features should we prioritize for v2.5?",
+        "placeholder": "I want more video formats... The UI could be faster... I love the privacy manifesto...",
+        "tags": [
+          "UI/UX",
+          "New Tools",
+          "Performance",
+          "Security",
+          "Other"
+        ]
+      },
+      "submit": "Submit Feedback"
+    },
+    "roadmap": {
+      "badge": "What's Next",
+      "title": "Product Roadmap",
+      "subtitle": "See how your feedback translates into our future development cycles.",
+      "button": "View Progress",
+      "status": {
+        "progress": "In Progress",
+        "planning": "Planning",
+        "done": "Shipped"
+      },
+      "items": {
+        "ai": {
+          "title": "AI-Powered Processing",
+          "desc": "Local neural engines for advanced image and document intelligence."
+        },
+        "mobile": {
+          "title": "Mobile-First Studio",
+          "desc": "Native-grade performance on iOS and Android browsers."
+        },
+        "enterprise": {
+          "title": "Enterprise Features",
+          "desc": "Team workspaces, audit logs, and compliance reports."
+        }
+      },
+      "openSource": {
+        "title": "Open Source Core",
+        "subtitle": "Our processing engine is open-source and auditable.",
+        "button": "View on GitHub"
+      }
+    },
+    "stats": {
+      "privacy": {
+        "label": "Privacy Score",
+        "value": "100%"
+      },
+      "community": {
+        "label": "Community",
+        "value": "50K+"
+      },
+      "updates": {
+        "label": "Updates",
+        "value": "Weekly"
+      }
+    }
+  },
+  "status": {
+    "hero": {
+      "badge": "Infrastructure Audit",
+      "title": "System <br></br> <span class=\"text-emerald-500 italic\">Integrity.",
+      "subtitle": "Since SafeTools runs entirely on your hardware, this dashboard verifies your browser's capability to execute our high-performance engine."
+    },
+    "badge": {
+      "operational": "All Systems Operational"
+    },
+    "systems": {
+      "wasm": {
+        "name": "WebAssembly Engine",
+        "desc": "High-performance local compute via compiled WASM modules."
+      },
+      "privacy": {
+        "name": "Privacy Sandbox",
+        "desc": "Isolated browser context with zero external data transmission."
+      },
+      "storage": {
+        "name": "Ephemeral Storage",
+        "desc": "In-memory only. All data purged on tab close."
+      },
+      "rendering": {
+        "name": "GPU Rendering",
+        "desc": "Hardware-accelerated canvas and WebGL pipelines."
+      }
+    },
+    "checks": {
+      "title": "Security Audit",
+      "subtitle": "Real-time verification of your browser's security posture.",
+      "refresh": "Refresh",
+      "integrity": {
+        "label": "Data Integrity",
+        "status": "Verified",
+        "desc": "All processing runs in an isolated, sandboxed environment."
+      },
+      "lastChecked": "Last checked: {time}",
+      "identity": {
+        "label": "Identity Protection",
+        "status": "Verified",
+        "desc": "No tracking cookies or fingerprinting detected."
+      },
+      "encryption": {
+        "label": "Encryption Status",
+        "status": "AES-256 GCM",
+        "desc": "Military-grade encryption available for vault operations."
+      }
+    },
+    "offline": {
+      "title": "Offline Ready",
+      "subtitle": "SafeTools is designed to work offline for most operations. No internet required after initial load.",
+      "button": "Test Offline Mode"
+    },
+    "stats": {
+      "uptime": {
+        "label": "Uptime",
+        "value": "99.99%"
+      },
+      "latency": {
+        "label": "API Latency",
+        "value": "0ms"
+      },
+      "privacy": {
+        "label": "Privacy Score",
+        "value": "100%"
+      },
+      "nodes": {
+        "label": "Global CDN",
+        "value": "Online"
+      }
+    },
+    "grid": {
+      "capability": "Capability Check",
+      "operational": "Operational",
+      "degraded": "Degraded",
+      "unsupported": "Unsupported",
+      "labels": {
+        "wasm": "WebAssembly Support",
+        "workers": "Web Workers",
+        "sab": "SharedArrayBuffer (COOP/COEP)",
+        "opfs": "Origin Private File System",
+        "webgpu": "WebGPU (Acceleration)",
+        "crypto": "Web Crypto API"
+      }
+    },
+    "global": {
+      "title": "Sanctuary <br></br> <span class=\"text-emerald-500\">Status.",
+      "subtitle": "Our global nodes are operational. No server-side maintenance required.",
+      "uptime": "Uptime",
+      "latency": "API Latency",
+      "cdn": "Global CDN: Online",
+      "wasm": "WASM Delivery: Online"
+    },
+    "support": {
+      "title": "Having Issues?",
+      "subtitle": "If your system check failed, ensure you are using the latest version of Chrome, Edge, or Firefox.",
+      "button": "Report Issue"
+    }
+  },
+  "updates": {
+    "hero": {
+      "badge": "Product Announcements",
+      "title": "Latest <br></br> <span class=\"text-primary italic\">Updates.",
+      "subtitle": "Stay informed about new tools, architectural breakthroughs, and our ongoing mission to decentralize file processing."
+    },
+    "controls": {
+      "subscribe": "Subscribe",
+      "share": "Share"
+    },
+    "filters": {
+      "all": "All Updates",
+      "feature": "Features",
+      "performance": "Performance",
+      "security": "Security"
+    },
+    "feed": {
+      "readMore": "Read Full Story",
+      "items": {
+        "v2": {
+          "date": "May 8, 2026",
+          "title": "The Zero-Server AI Engine is Live",
+          "desc": "We've successfully integrated Transformers.js v3 into our production core. You can now perform background removal and image upscaling with 100% local compute.",
+          "category": "Architecture"
+        },
+        "security": {
+          "date": "May 5, 2026",
+          "title": "New PDF Mastering Suite Launched",
+          "desc": "A comprehensive update to our document engine, supporting AES-256 encryption, bulk merging, and professional-grade compression.",
+          "category": "Product"
+        },
+        "wasm": {
+          "date": "May 2, 2026",
+          "title": "SafeTools 2.0 Architectural Pivot",
+          "desc": "We have officially removed all server-side endpoints. SafeTools is now a pure-edge platform, ensuring your data sovereignty by default.",
+          "category": "Security"
+        }
+      }
+    },
+    "milestones": {
+      "title": "Key Milestones",
+      "subtitle": "The journey from idea to the world's most private file processing platform.",
+      "items": {
+        "users": {
+          "label": "Active Users",
+          "value": "50K+"
+        },
+        "tools": {
+          "label": "Secure Tools",
+          "value": "150+"
+        },
+        "privacy": {
+          "label": "Data Leaked",
+          "value": "0 Bytes"
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Stay in <br></br> the Loop.",
+      "subtitle": "Join 5,000+ developers and privacy enthusiasts getting the latest engine updates delivered to their sanctuary.",
+      "placeholder": "email@example.com",
+      "button": "Subscribe"
+    }
+  },
+  "features": {
+    "hero": {
+      "badge": "Architecture Deep Dive",
+      "title": "Built for the <br></br> <span class=\"text-primary\">Privacy Era",
+      "subtitle": "SafeTools is a complete departure from traditional cloud utilities. Explore the engineering that puts you back in control."
+    },
+    "pillars": {
+      "privacy": {
+        "title": "Zero-Knowledge Privacy",
+        "desc": "Your files never leave your device. All processing happens in a sandboxed, isolated environment.",
+        "f1": "No cloud uploads",
+        "f2": "Zero tracking scripts",
+        "f3": "Ephemeral sessions"
+      },
+      "performance": {
+        "title": "Native-Speed Performance",
+        "desc": "WebAssembly engines deliver near-native processing speed directly in your browser.",
+        "f1": "0ms server latency",
+        "f2": "GPU acceleration",
+        "f3": "Multi-threaded workers"
+      },
+      "tech": {
+        "title": "Modern Architecture",
+        "desc": "Built on cutting-edge web standards for maximum compatibility and future-proofing.",
+        "f1": "Progressive Web App",
+        "f2": "Offline-first design",
+        "f3": "Cross-platform support"
+      }
+    },
+    "comparison": {
+      "title": "The SafeTools Advantage",
+      "subtitle": "See why local processing beats cloud-based tools in every metric that matters.",
+      "headers": {
+        "feature": "Feature",
+        "others": "Cloud Tools"
+      },
+      "rows": {
+        "processing": {
+          "label": "Local Processing"
+        },
+        "data": {
+          "label": "Zero Data Collection"
+        },
+        "speed": {
+          "label": "Fast Processing"
+        },
+        "tracking": {
+          "label": "Tracking Scripts"
+        },
+        "cost": {
+          "label": "Cost",
+          "valueSafe": "Free",
+          "valueOthers": "$10-50/mo"
+        }
+      }
+    },
+    "architecture": {
+      "title": "Inside the <br></br> <span class=\"text-primary\">Safe Engine",
+      "subtitle": "Most tools send your data to a server. We send the code to your data.",
+      "items": {
+        "wasm": {
+          "title": "WebAssembly Core",
+          "desc": "Native-speed execution compiled from Rust and C++ for maximum performance."
+        },
+        "encryption": {
+          "title": "AES-256-GCM Encryption",
+          "desc": "Industry-standard encryption that runs entirely in your browser's memory."
+        },
+        "pwa": {
+          "title": "Progressive Web App",
+          "desc": "Install once, use forever. Full offline support with zero server dependency."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Switch?",
+      "description": "Join thousands of professionals who have ditched cloud-based security risks for SafeTools.",
+      "button": "Explore All Tools"
+    },
+    "grid": {
+      "badge": "Deep Tech Info",
+      "items": [
+        {
+          "title": "Zero-Server Architecture",
+          "desc": "Your files never touch our servers. All processing happens locally in your browser's secure sandbox using high-performance WebAssembly.",
+          "detail": "By moving the compute to the client, we eliminate the biggest security risk: data in transit and storage."
+        },
+        {
+          "title": "Military-Grade Privacy",
+          "desc": "No tracking pixels, no analytics cookies, and zero data collection. SafeTools is built for anonymity by design.",
+          "detail": "We don't just protect your data; we never see it. Your session is entirely private and non-persistent."
+        },
+        {
+          "title": "Sub-Second Latency",
+          "desc": "Experience near-instant processing. Without the need for large file uploads or network round-trips, tools feel like native apps.",
+          "detail": "Process multi-gigabyte files instantly because the data never has to leave your RAM."
+        },
+        {
+          "title": "150+ Specialized Tools",
+          "desc": "A comprehensive suite of utilities for images, PDFs, security, and developmentall in one unified, high-speed workspace.",
+          "detail": "From HEIC conversion to JWT decoding, everything you need is one click away."
+        },
+        {
+          "title": "Command Palette (Cmd+K)",
+          "desc": "Navigate the entire platform with lightning speed using our keyboard-driven command interface. Instant access to any tool.",
+          "detail": "Stop clicking through menus. Just hit Cmd+K and type what you need."
+        },
+        {
+          "title": "Local Retention System",
+          "desc": "Personalize your workspace with local-first favorites and recently used tools. Your preferences stay on your device.",
+          "detail": "We use encrypted localStorage to remember what you love without ever knowing who you are."
+        }
+      ]
+    },
+    "engine": {
+      "title": "Inside the <br></br> <span class=\"text-primary\">Safe Engine",
+      "subtitle": "Most tools send your data to a server. We send the code to your data.",
+      "stack": [
+        {
+          "name": "WebAssembly",
+          "desc": "Native-speed execution in the browser"
+        },
+        {
+          "name": "Transformers.js",
+          "desc": "Local AI & Machine Learning"
+        },
+        {
+          "name": "FFmpeg.wasm",
+          "desc": "Professional video/audio engine"
+        },
+        {
+          "name": "AES-256-GCM",
+          "desc": "Industry-standard local encryption"
+        }
+      ]
+    },
+    "comparison_legacy": {
+      "title": "Better for You. <br></br> <span class=\"text-primary\">Better for Security.",
+      "cloud": {
+        "label": "Cloud Tools",
+        "items": [
+          "Uploads private files to unknown servers",
+          "Sells usage data to advertisers",
+          "Data exists in backups forever",
+          "Slow upload/download cycles",
+          "Vulnerable to server-side breaches"
+        ]
+      },
+      "safe": {
+        "label": "SafeTools",
+        "items": [
+          "Data never leaves your browser",
+          "Zero tracking. Zero cookies.",
+          "Processed in RAM. Deleted instantly.",
+          "Near-zero latency performance",
+          "Client-side sandboxing protection"
+        ]
+      }
+    }
+  }
+}

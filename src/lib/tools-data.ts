@@ -11,7 +11,8 @@ import {
    Presentation, StickyNote, Trash, Unlock,
    Monitor, Smartphone, WifiOff, MousePointer2,
    Check, Info, ChevronDown, Rocket, Users,
-   UploadCloud, Download, ScanText, Heart, History, Command, Wand2
+   UploadCloud, Download, ScanText, Heart, History, Command, Wand2,
+   Braces, Link as LinkIcon, Type, Layout
 } from "lucide-react";
 
 export const CATEGORIES = ["All", "Creative", "Documents", "Media", "Security", "Dev"] as const;
@@ -28,7 +29,7 @@ export interface Tool {
 }
 
 export const tools: Tool[] = [
-   {
+   /* {
       title: "Edit Images",
       desc: "Pro editor with OCR, filters, crop, and batch export.",
       href: "/image/editor",
@@ -36,16 +37,17 @@ export const tools: Tool[] = [
       color: "from-blue-500 to-cyan-500",
       cat: "Creative",
       tags: ["crop", "resize", "filters", "ocr", "text", "editor", "photo", "batch"]
-   },
+   }, */
    {
-      title: "AI Background Remover",
-      desc: "Remove image backgrounds instantly in-browser using local neural engines.",
+      title: "Remove Background",
+      desc: "Instant, local-first background removal using browser-based AI.",
       href: "/image/remove-background",
-      icon: Sparkles,
-      color: "from-emerald-500 to-teal-500",
+      icon: Wand2,
+      color: "from-blue-600 to-indigo-700",
       cat: "Creative",
-      tags: ["background", "remover", "ai", "transparent", "image", "edit"]
+      tags: ["background", "remove", "ai", "magic", "erase", "transparent"]
    },
+
    {
       title: "Extract Text from Image (OCR)",
       desc: "Extract text from images using neural recognition.",
@@ -94,7 +96,7 @@ export const tools: Tool[] = [
    {
       title: "App Icon & Favicon Studio",
       desc: "Generate professional iOS, Android, and PWA icon bundles instantly.",
-      href: "/image/icons",
+      href: "/devtools/icons",
       icon: FileCode,
       color: "from-indigo-500 to-purple-500",
       cat: "Dev",
@@ -162,6 +164,15 @@ export const tools: Tool[] = [
       color: "from-teal-600 to-cyan-600",
       cat: "Documents",
       tags: ["pdf", "text", "extract", "ocr", "txt", "convert"]
+   },
+   {
+      title: "Docs Master (Universal Viewer)",
+      desc: "View and edit PDF, DOCX, XLSX, PPTX, and CSV files privately.",
+      href: "/document/master",
+      icon: Layout,
+      color: "from-blue-600 to-indigo-700",
+      cat: "Documents",
+      tags: ["docx", "xlsx", "pptx", "pdf", "viewer", "editor", "office"]
    },
    {
       title: "Case Converter",
@@ -279,5 +290,77 @@ export const tools: Tool[] = [
       color: "from-blue-600 to-indigo-700",
       cat: "Dev",
       tags: ["base64", "encode", "decode", "binary", "image", "string", "developer"]
+   },
+   {
+      title: "JSON Formatter & Validator",
+      desc: "Beautify, minify, and validate JSON data locally.",
+      href: "/devtools/json",
+      icon: Braces,
+      color: "from-amber-500 to-orange-600",
+      cat: "Dev",
+      tags: ["json", "format", "beautify", "minify", "validate", "developer"]
+   },
+   {
+      title: "Hash Generator",
+      desc: "Generate SHA-256, SHA-512, and MD5 hashes locally.",
+      href: "/devtools/hash",
+      icon: Hash,
+      color: "from-slate-500 to-slate-700",
+      cat: "Dev",
+      tags: ["hash", "sha256", "sha512", "md5", "security", "crypto"]
+   },
+   {
+      title: "JWT Debugger",
+      desc: "Decode and inspect JWT tokens without sending them to any server.",
+      href: "/devtools/jwt",
+      icon: Database,
+      color: "from-indigo-500 to-blue-600",
+      cat: "Dev",
+      tags: ["jwt", "decode", "token", "auth", "security", "developer"]
+   },
+   {
+      title: "URL Encoder & Decoder",
+      desc: "Safely encode and decode URLs and URI components.",
+      href: "/devtools/url",
+      icon: LinkIcon,
+      color: "from-cyan-500 to-blue-500",
+      cat: "Dev",
+      tags: ["url", "encode", "decode", "uri", "percent-encoding"]
+   },
+   {
+      title: "UUID v4 Factory",
+      desc: "Generate cryptographically secure Version 4 UUIDs.",
+      href: "/devtools/uuid",
+      icon: Fingerprint,
+      color: "from-purple-500 to-indigo-500",
+      cat: "Dev",
+      tags: ["uuid", "guid", "generator", "random", "id", "developer"]
+   },
+   {
+      title: "Unix Timestamp Converter",
+      desc: "Convert between Unix Epoch time and human-readable dates.",
+      href: "/devtools/timestamp",
+      icon: Clock,
+      color: "from-rose-500 to-pink-600",
+      cat: "Dev",
+      tags: ["epoch", "timestamp", "unix", "time", "converter", "date"]
+   },
+   {
+      title: "Lorem Ipsum Generator",
+      desc: "Generate placeholder text for your designs and layouts.",
+      href: "/devtools/lorem",
+      icon: Type,
+      color: "from-gray-400 to-gray-600",
+      cat: "Dev",
+      tags: ["lorem", "ipsum", "placeholder", "text", "generator", "design"]
+   },
+   {
+      title: "Privacy Scanner",
+      desc: "Audit your browser and system for common privacy leaks.",
+      href: "/privacy/privacy-scanner",
+      icon: ShieldCheck,
+      color: "from-emerald-600 to-teal-700",
+      cat: "Security",
+      tags: ["privacy", "scanner", "audit", "leak", "security", "browser"]
    }
 ];

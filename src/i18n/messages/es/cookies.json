@@ -1,0 +1,53 @@
+{
+  "cookies": {
+    "hero": {
+      "badge": "Manifiesto de rastreo",
+      "title": "Cero <br></br> <span class=\"text-amber-500\">Cookies.",
+      "subtitle": "Minimizamos las cookies a lo absolutamente esencial. <br></br> SafeTools solo utiliza cookies publicitarias estándar para mantener nuestras herramientas gratuitas para todos."
+    },
+    "sections": [
+      {
+        "title": "1. La Política Fantasma",
+        "content": "SafeTools no utiliza cookies de rastreo para análisis internos o recolección de datos. No rastreamos su sesión a través de la web para nuestros propios fines. Para nosotros, usted es un fantasma, y así es exactamente como debe ser."
+      },
+      {
+        "title": "2. Persistencia local (Almacenamiento)",
+        "content": "Utilizamos el LocalStorage de su navegador solo para recordar sus preferencias de IU, como el Modo Oscuro o su historial de herramientas reciente. Estos datos nunca salen de su dispositivo y nunca se envían a nuestros servidores."
+      },
+      {
+        "title": "3. Cookies publicitarias",
+        "content": "Utilizamos Google AdSense para mostrar anuncios. Google puede utilizar cookies para mostrar anuncios basados en sus intereses. Puede gestionar sus preferencias o rechazar estas cookies a través del banner de consentimiento que aparece la primera vez que visita nuestro sitio."
+      }
+    ],
+    "metrics": {
+      "title": "Métricas de privacidad",
+      "items": [
+        {
+          "label": "Rastreadores activos",
+          "val": "0"
+        },
+        {
+          "label": "Píxeles de marketing",
+          "val": "Ninguno"
+        },
+        {
+          "label": "Revendedores de datos",
+          "val": "0%"
+        },
+        {
+          "label": "Calificación de privacidad",
+          "val": "A+"
+        }
+      ]
+    },
+    "final": {
+      "title": "Seguro y <br></br> libre de rastreadores",
+      "subtitle": "No necesita 'Aceptar' nada aquí. Su privacidad ya fue aceptada por nuestra arquitectura antes incluso de que llegara.",
+      "button": "Volver a Herramientas"
+    },
+    "seo": {
+      "title": "Política de cookies | Manifiesto de cero rastreo | SafeTools",
+      "description": "Lea nuestra política de cookies. Spoiler: No utilizamos cookies de rastreo. Conozca cómo SafeTools protege su privacidad eliminando todos los rastreadores de terceros."
+    }
+  }
+}

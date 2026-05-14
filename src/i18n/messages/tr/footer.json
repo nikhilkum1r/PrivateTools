@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Gizlilik ve hız için tasarlanmış profesyonel düzeyde tarayıcı araçları. Tamamen cihazınızda çalışan 150'den fazla yardımcı program.",
+    "tagline": "Verileriniz size aittir.",
+    "localEngineActive": "Yerel Motor Aktif",
+    "isolatedContextVerified": "İzole Bağlam Doğrulandı",
+    "verifiedSupport": "Doğrulanmış Tarayıcı Uyumluluğu",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Ürün",
+    "resources": "Kaynaklar",
+    "community": "Topluluk",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Tüm Sistemler Yerel",
+    "faq": "SSS"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "security": {
+    "seo": {
+      "title": "Arquitectura de seguridad | SafeTools",
+      "description": "SafeTools implementa protocolos de seguridad locales de grado militar para garantizar que sus datos nunca queden expuestos."
+    },
+    "hero": {
+      "title": "Defensa industrial.",
+      "description": "SafeTools implementa protocolos de seguridad locales de grado militar para garantizar que sus datos nunca queden expuestos."
+    },
+    "comparison": {
+      "trad": {
+        "title": "Procesamiento en la nube",
+        "items": [
+          "Datos enviados a través de internet abierta",
+          "Riesgo de filtraciones de datos en el servidor",
+          "Sujeto a vigilancia de terceros",
+          "Registros persistentes de sus actividades"
+        ]
+      },
+      "safe": {
+        "title": "Lógica soberana",
+        "items": [
+          "Los datos nunca salen de su máquina",
+          "Sin riesgo de brechas en el servidor",
+          "Inmune a la vigilancia de red",
+          "Cero rastros de datos persistentes"
+        ]
+      }
+    },
+    "deepDive": [
+      {
+        "title": "Ejecución WASM",
+        "desc": "Herramientas de alto rendimiento que se ejecutan en entornos aislados de WebAssembly para una velocidad y seguridad casi nativas."
+      },
+      {
+        "title": "AES-256 GCM",
+        "desc": "Los estándares de cifrado autenticado garantizan que sus datos no solo sean privados sino también a prueba de manipulaciones."
+      },
+      {
+        "title": "Aislamiento seguro",
+        "desc": "Los encabezados de aislamiento de origen cruzado garantizan que su sesión esté protegida contra ataques de canal lateral."
+      }
+    ],
+    "policy": {
+      "title": "Nuestra filosofía de seguridad",
+      "content": "SafeTools se basa en el principio de <strong>Seguridad Soberana</strong>. Creemos que la seguridad no es algo en lo que deba confiar en un proveedor; es algo que usted mismo debería poder verificar.",
+      "noServers": {
+        "title": "SIN SERVIDORES DE PROCESAMIENTO",
+        "desc": "Mantenemos una infraestructura de servidores cero para procesar sus datos. Nuestros servidores solo proporcionan el código estático necesario para ejecutar herramientas en su navegador."
+      },
+      "noAccounts": {
+        "title": "SIN CUENTAS DE USUARIO",
+        "desc": "Al eliminar las cuentas, eliminamos el objetivo principal para el robo de identidad y la correlación de datos."
+      }
+    }
+  }
+}

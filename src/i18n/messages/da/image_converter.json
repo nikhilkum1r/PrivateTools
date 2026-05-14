@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Billedkonverteringsstudie | 150+ formater understøttet | SafeTools",
+      "description": "Konverter billeder mellem 150+ formater lokalt i din browser. Understøttelse af HEIC, WebP, AVIF, RAW, PDF og mere. 100 % privat."
+    },
+    "hero": {
+      "title": "Universel billedkonverter.",
+      "titleSpecific": "Konverter {from} til {to}.",
+      "description": "Konverter billeder mellem 150+ formater lokalt i din browser. Ingen server-uploads.",
+      "descriptionSpecific": "Konverter {from} til {to} øjeblikkeligt. Privatlivs-først lokal behandling uden uploads.",
+      "engine": "Lokal hardwarebehandling",
+      "privateConverter": "Privat browser-motor"
+    },
+    "benefits": {
+      "local": "Lokal motor",
+      "zero": "Ingen upload",
+      "no_tracking": "Ingen sporing",
+      "fast": "Ultrahurtig",
+      "browser": "I browseren"
+    },
+    "performance": {
+      "title": "Højtydende motor",
+      "subtitle": "GPU-accelereret browserbehandling",
+      "items": [
+        {
+          "title": "150+ formater",
+          "description": "Understøttelse af alt fra HEIC og RAW til ældre bitmap-formater."
+        },
+        {
+          "title": "Batchbehandling",
+          "description": "Konverter hundredvis af billeder samtidigt uden at ramme serverbegrænsninger."
+        },
+        {
+          "title": "Tabsfri kvalitet",
+          "description": "Avancerede resampling-algoritmer bevarer hver eneste pixel af dine originale data."
+        },
+        {
+          "title": "Lokal OCR",
+          "description": "Udtræk tekstlag under konvertering ved hjælp von indbyggede genkendelsesmotorer."
+        },
+        {
+          "title": "Metadatakontrol",
+          "description": "Vælg at fjerne eller bevare EXIF-, GPS- og IPTC-datalag."
+        },
+        {
+          "title": "Browser-privatliv",
+          "description": "Dine filer forlader aldrig din enhed. 100 % sikker offline-klar arkitektur."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Konverteringsarbejdsområde",
+      "assets": "{count} aktiver",
+      "telemetry": "Lokal hardwarebehandling",
+      "savings": "Nuværende besparelse",
+      "smaller": "{size} mindre",
+      "impact": "Global effekt",
+      "saved": "{size} sparet",
+      "clear": "Ryd arbejdsområde",
+      "addMore": "Tilføj filer",
+      "exportAll": "Eksporter alle (ZIP)"
+    },
+    "config": {
+      "title": "Globale indstillinger",
+      "format": "Målformat",
+      "selectFormat": "Vælg format",
+      "search": "Søg i 150+ formater...",
+      "quality": "Kvalitet og komprimering",
+      "resizeW": "Skift bredde",
+      "resizeH": "Skift højde",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Metadatakontrol",
+      "strip": "Fjern EXIF/GPS (Aktiveret)",
+      "wasm": "WASM-motor",
+      "accelerated": "Hardware-accelereret",
+      "targetSize": "Målfilstørrelse",
+      "limit": "Begræns til {size}KB",
+      "optimized": "Optimeret kvalitet"
+    },
+    "categories": {
+      "regular": "Standardformater",
+      "web": "Web-optimeret",
+      "modern": "Næste generations formater",
+      "print": "Professionelt tryk",
+      "design": "Design-aktiver",
+      "game": "Spil-teksturer",
+      "raw": "RAW-kameradata",
+      "scientific": "Videnskabelig billedbehandling",
+      "vector": "Vektorgrafik",
+      "hdr": "High Dynamic Range",
+      "document": "Kontor og dokumenter",
+      "legacy": "Ældre formater"
+    },
+    "queue": {
+      "title": "Konverteringskø",
+      "converted": "Konverteret",
+      "in": "IND",
+      "out": "UD",
+      "smaller": "{percent}% mindre",
+      "download": "Download",
+      "convert": "Konverter",
+      "convert_all": "Konverter alle filer"
+    },
+    "toast": {
+      "noProcessed": "Ingen behandlede filer at downloade.",
+      "copied": "Billede kopieret til udklipsholder!",
+      "clipboardFailed": "Kunne ikke kopiere billede til udklipsholder."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Lokal motor",
+        "zero": "Ingen upload",
+        "no_tracking": "Ingen sporing",
+        "fast": "Ultrahurtig",
+        "browser": "I browseren"
+      },
+      "performance": {
+        "title": "Højtydende motor",
+        "subtitle": "GPU-accelereret browserbehandling",
+        "items": [
+          {
+            "title": "150+ formater",
+            "description": "Understøttelse af alt fra HEIC og RAW til ældre bitmap-formater."
+          },
+          {
+            "title": "Batchbehandling",
+            "description": "Konverter hundredvis af billeder samtidigt ohne at ramme serverbegrænsninger."
+          },
+          {
+            "title": "Tabsfri kvalitet",
+            "description": "Avancerede resampling-algoritmer bevarer hver eneste pixel af dine originale data."
+          },
+          {
+            "title": "Lokal OCR",
+            "description": "Udtræk tekstlag under konvertering ved hjælp von indbyggede genkendelsesmotorer."
+          },
+          {
+            "title": "Metadatakontrol",
+            "description": "Vælg at fjerne eller bevare EXIF-, GPS- og IPTC-datalag."
+          },
+          {
+            "title": "Browser-privatliv",
+            "description": "Dine filer forlader aldrig din enhed. 100 % sikker offline-klar arkitektur."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Understøttede formater",
+        "compatibility": "Universel kompatibilitetsmatrix",
+        "input": "Inputformater",
+        "output": "Outputformater",
+        "freeTitle": "100 % gratis for evigt",
+        "freeDesc": "SafeTools er en gratis hjælpeværktøjspakke. Ingen abonnementer, ingen skjulte gebyrer, intet kreditkort påkrævet.",
+        "optimizedTitle": "Tabsfri optimering",
+        "optimizedDesc": "Vores motor bruger avanceret resampling til at sikre, at dine billeder forbliver skarpe selv efter konvertering.",
+        "precisionTitle": "Browserpræcision",
+        "precisionDesc": "Ved at køre lokalt eliminerer vi de artefakter, der forårsages af netværksbaseret billedbehandling.",
+        "popularTitle": "Populære konverteringer",
+        "popularSubtitle": "Øjeblikkelig lokal behandling til almindelige webopgaver",
+        "moreFormats": "150+ andre formater",
+        "moreDesc": "Leder du efter noget andet? SafeTools understøtter næsten alle eksisterende billedformater.",
+        "start": "Tilbage til toppen"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Hvor mange formater kan jeg konvertere mellem?",
+            "a": "Du kan konvertere mellem 150+ billedformater, herunder moderne formater som WebP, AVIF og HEIC, samt professionelle formater som PSD, TIFF og RAW-filer."
+          },
+          {
+            "q": "Vil jeg miste billedkvalitet under konvertering?",
+            "a": "Vi bruger kodningsmotorer af høj kvalitet. Du kan manuelt justere kvalitets-/komprimeringsindstillingerne for at sikre, at dit output ser præcis ud, som du ønsker det, uanset om du optimerer til web eller tryk."
+          },
+          {
+            "q": "Kan jeg konvertere HEIC-billeder fra min iPhone til JPG?",
+            "a": "Ja! Vores konverter er perfekt til at omdanne HEIC-filer til bredt kompatible JPG- eller PNG-formater direkte i din browser uden at uploade dem til en server."
+          },
+          {
+            "q": "Er der en grænse for, hvor mange filer jeg kan konvertere?",
+            "a": "Nej. Du kan konvertere så mange filer, du vil, en efter en eller i partier, helt gratis."
+          }
+        ],
+        "title": "Ofte stillede spørgsmål",
+        "description": "Alt hvad du behøver at vide om vores privatlivs-først værktøj."
+      }
+    }
+  }
+}

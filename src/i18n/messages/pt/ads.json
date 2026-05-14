@@ -1,0 +1,53 @@
+{
+  "ads": {
+    "title": "Porquê Exibimos Anúncios",
+    "seo": {
+      "title": "Porquê Exibimos Anúncios | SafeTools",
+      "description": "No SafeTools, a privacidade não é um slogan de marketing. Saiba por que exibimos anúncios e o nosso compromisso com a confiança do utilizador."
+    },
+    "intro": [
+      "No SafeTools, a privacidade não é um slogan de marketing. É a base de tudo o que construímos.",
+      "Criámos o SafeTools porque muitas plataformas de utilitários modernas monetizam silenciosamente os dados dos utilizadores nos bastidores. Os ficheiros são carregados para servidores remotos, o comportamento de navegação é rastreado e as informações pessoais são frequentemente utilizadas para análises, perfis ou redes publicitárias sem que os utilizadores se apercebam totalmente.",
+      "Queríamos construir algo diferente.",
+      "O nosso objetivo é simples: os seus ficheiros, os seus dados e a sua atividade devem permanecer sob o seu controlo. É por isso que o SafeTools é concebido com uma forte filosofia de privacidade em primeiro lugar, incluindo processamento baseado no navegador sempre que possível, recolha mínima de dados e práticas transparentes."
+    ],
+    "sections": [
+      {
+        "heading": "Então por que exibimos anúncios?",
+        "content": [
+          "Operar uma plataforma global ainda acarreta custos operacionais reais, incluindo:",
+          "• Servidores e infraestrutura",
+          "• Despesas de CDN e largura de banda",
+          "• Serviços de domínio e segurança",
+          "• Desenvolvimento e manutenção",
+          "• Sistemas de monitorização de desempenho e tempo de atividade",
+          "Ao contrário de muitas plataformas, optámos por não depender de modelos de monetização agressivos, sistemas de rastreio ocultos ou venda de dados de utilizadores a terceiros.",
+          "Também decidimos não angariar fundos de formas que pudessem pressionar-nos a comprometer a privacidade do utilizador em prol do lucro rápido.",
+          "Em vez disso, a publicidade leve ajuda-nos a cobrir de forma sustentável os custos operacionais, mantendo a maioria das ferramentas acessíveis gratuitamente a todos."
+        ]
+      },
+      {
+        "heading": "A Nossa Promessa sobre Anúncios e Privacidade",
+        "content": [
+          "Acreditamos que a publicidade nunca deve ser feita à custa da confiança do utilizador.",
+          "Isso significa:",
+          "• Não vendemos os seus ficheiros pessoais.",
+          "• Não criamos perfis comportamentais invasivos.",
+          "• Minimizamos o rastreio tanto quanto possível.",
+          "• Muitas ferramentas processam dados diretamente no seu navegador.",
+          "• O seu conteúdo continua a ser seu.",
+          "Os anúncios no SafeTools existem para apoiar a plataforma, não para explorar os utilizadores."
+        ]
+      },
+      {
+        "heading": "Privacidade Primeiro. Sempre.",
+        "content": [
+          "Cada decisão que tomamos é guiada por um princípio fundamental:",
+          "A tecnologia deve capacitar as pessoas sem se apropriar da sua privacidade.",
+          "O SafeTools existe para provar que ferramentas online úteis podem respeitar os utilizadores, a transparência e a liberdade digital.",
+          "Obrigado por apoiar uma web mais privada."
+        ]
+      }
+    ]
+  }
+}

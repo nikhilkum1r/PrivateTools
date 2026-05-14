@@ -1,0 +1,334 @@
+{
+  "backgroundRemover": {
+    "title": "AI 抠图工具 | 隐私优先的本地编辑",
+    "description": "由本地 AI 驱动的专业级背景移除工具。无云端上传，无存储，无追踪。快速、安全且私密。",
+    "seo": {
+      "title": "AI 抠图工具 | 隐私优先的本地编辑",
+      "description": "由本地 AI 驱动的专业级背景移除工具。无云端上传，无存储，无追踪。快速、安全且私密。",
+      "keywords": "在线抠图, 免费背景移除, AI 背景移除, 隐私图片编辑器, 本地图片处理, ISNET 引擎抠图, 透明背景生成器, 批量抠图, 专业图片编辑, 浏览器端抠图"
+    },
+    "engineBadge": "ISNET-QUINT8 引擎运行中",
+    "badge": "专业 AI 分割 — 100% 安全",
+    "dropzone": {
+      "title": "上传图片",
+      "description": "拖放图片或点击浏览。支持 PNG、JPG、WebP、HEIC。"
+    },
+    "status": {
+      "segmented": "已分割",
+      "pending": "等待扫描"
+    },
+    "tools": {
+      "closeMagicEraser": "关闭魔术橡皮擦",
+      "magicEraser": "魔术橡皮擦",
+      "eraserTool": "橡皮擦工具",
+      "restoreTool": "恢复工具",
+      "brushSize": "画笔大小",
+      "saveEdits": "保存编辑",
+      "removeBackground": "移除背景",
+      "allProcessed": "所有资源已处理",
+      "errorPreparing": "在本地准备 AI 引擎时出错。",
+      "comparison": {
+        "headers": [
+          "功能",
+          "传统工具",
+          "SafeTools"
+        ]
+      },
+      "maskUpdated": "蒙版更新成功。",
+      "copySuccess": "主体已复制到剪贴板。",
+      "copyFailed": "剪贴板访问被拒绝。",
+      "download": "下载结果",
+      "copy": "复制到剪贴板"
+    },
+    "worker": {
+      "loading": "加载 AI 引擎中...",
+      "removing": "正在移除背景...",
+      "processing": "处理中...",
+      "processing_file": "正在处理 {name}...",
+      "error_svg": "不支持 SVG 文件 ({name})",
+      "error_invalid": "无效的文件类型 ({name})",
+      "latency": "{time} 毫秒延迟",
+      "aiNode": "AI 节点: isnet_quint8",
+      "privacyNote": "在您的设备上本地处理。任何数据都不会离开您的浏览器。"
+    },
+    "comparison": {
+      "before": "处理前",
+      "after": "处理后"
+    },
+    "settings": {
+      "title": "场景配置",
+      "engine": "神经处理节点",
+      "background": "画布填充",
+      "alpha": "透明度矩阵",
+      "resizer": "社交媒体画布",
+      "realism": "深度与边缘逻辑",
+      "shadow": "投影",
+      "trim": "自动裁剪边缘",
+      "format": "导出格式",
+      "visualPolish": "视觉润色",
+      "autoTrim": "自动裁剪",
+      "autoTrimDesc": "裁剪至主体大小",
+      "dropShadow": "投影",
+      "shadowDesc": "增加深度感"
+    },
+    "bgPresets": {
+      "transparent": "透明",
+      "white": "白色",
+      "black": "黑色",
+      "blue": "蓝色",
+      "gray": "灰色",
+      "corporate": "商务风格"
+    },
+    "aspectRatios": {
+      "original": "原图",
+      "1:1": "1:1",
+      "4:5": "4:5",
+      "9:16": "9:16"
+    },
+    "landing": {
+      "aiDetails": {
+        "title": "下一代 AI 架构",
+        "subtitle": "直接在您浏览器的 V8 引擎中处理高保真主体。",
+        "items": [
+          {
+            "title": "神经边缘检测",
+            "desc": "使用先进的视觉 Transformer 进行像素级完美分割。"
+          },
+          {
+            "title": "本地 WASM 引擎",
+            "desc": "硬件加速处理，无服务器延迟。"
+          },
+          {
+            "title": "零数据泄露",
+            "desc": "您的图片永远不会离开您的本地设备内存。"
+          }
+        ]
+      },
+      "education": {
+        "title": "抠图技术的演进",
+        "description": "SafeTools 利用计算机视觉的最新突破，完全在客户端执行复杂的背景移除。通过将 AI 模型从云端转移到您的本地硬件，我们消除了与传统在线编辑器相关的隐私风险和等待时间。",
+        "privacy": {
+          "title": "绝对的数据主权",
+          "description": "传统工具会将您的私人照片上传到远程服务器进行处理，而 SafeTools 不同，它在安全的浏览器沙盒中运行。我们不仅仅是保护您的数据——我们根本看不到它。",
+          "tags": [
+            "沙盒环境",
+            "原生 WASM",
+            "零追踪"
+          ]
+        }
+      },
+      "formats": {
+        "title": "支持专业格式",
+        "description": "我们的引擎支持高分辨率导出，并兼容所有现代创意平台。",
+        "items": [
+          "PNG (含 Alpha 通道)",
+          "WebP (无损)",
+          "JPEG (标准)"
+        ],
+        "export": {
+          "title": "导出逻辑",
+          "items": [
+            "高保真 Alpha 通道保留",
+            "无损压缩以获得最高质量",
+            "色彩准确的渲染，适用于印刷和 Web"
+          ]
+        }
+      },
+      "howItWorks": {
+        "title": "工作流程",
+        "steps": [
+          {
+            "step": "01",
+            "title": "拖入资源",
+            "desc": "在本地上传您的图片。我们支持大多数主要格式。"
+          },
+          {
+            "step": "02",
+            "title": "神经扫描",
+            "desc": "我们的 AI 模型会识别主体并计算蒙版。"
+          },
+          {
+            "step": "03",
+            "title": "完善与编辑",
+            "desc": "使用魔术橡皮擦完善边缘或更换背景。"
+          },
+          {
+            "step": "04",
+            "title": "安全导出",
+            "desc": "将干净的主体瞬间下载到您的设备。"
+          }
+        ],
+        "note": "所有处理都在您的本地硬件上进行"
+      },
+      "useCases": {
+        "title": "创意使用场景",
+        "items": [
+          "电子商务产品图",
+          "社交媒体肖像",
+          "数字营销资产",
+          "房地产图像增强",
+          "清理个人资料照片",
+          "平面设计工作流",
+          "演示文稿视觉效果",
+          "证件照准备"
+        ]
+      },
+      "comparisonLong": {
+        "title": "为什么选择 SafeTools 背景移除？",
+        "header": [
+          "功能",
+          "传统编辑器",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "隐私泄露风险",
+            "高 (云端上传)",
+            "零 (本地优先)"
+          ],
+          [
+            "处理速度",
+            "取决于网络",
+            "取决于硬件"
+          ],
+          [
+            "文件保留时间",
+            "服务器上 30-90 天",
+            "关闭后即清除"
+          ],
+          [
+            "订阅费用",
+            "每月 10-20 美元",
+            "永久免费"
+          ],
+          [
+            "数据留存",
+            "被记录和存储",
+            "无日志 / 无存储"
+          ]
+        ]
+      },
+      "tips": {
+        "title": "完美边缘的专业技巧",
+        "subtitle": "从我们的客户端 AI 引擎中获得最佳效果。",
+        "items": [
+          {
+            "title": "对比度很重要",
+            "desc": "主体与背景对比度高，生成的蒙版最锐利。"
+          },
+          {
+            "title": "避免复杂的头发",
+            "desc": "虽然我们的引擎很强大，但在复杂背景上极细的头发可能需要用魔术橡皮擦手动微调。"
+          },
+          {
+            "title": "使用高分辨率原图",
+            "desc": "较高的输入分辨率允许神经网络识别更细微的边缘细节。"
+          },
+          {
+            "title": "批量优化",
+            "desc": "同时拖入多张图片以利用并行的本地处理队列。"
+          }
+        ]
+      },
+      "techSpecs": {
+        "title": "技术规格",
+        "subtitle": "SafeTools 神经引擎的底层参数。",
+        "engine": {
+          "title": "模型架构",
+          "items": [
+            {
+              "label": "模型名称",
+              "value": "ISNet-v2 (量化)"
+            },
+            {
+              "label": "运行环境",
+              "value": "ONNX / WebAssembly"
+            },
+            {
+              "label": "精度",
+              "value": "int8 / fp16"
+            },
+            {
+              "label": "并发",
+              "value": "Web Workers"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "本地要求",
+          "items": [
+            {
+              "label": "浏览器",
+              "value": "现代浏览器 (Chrome/Safari/Edge)"
+            },
+            {
+              "label": "硬件",
+              "value": "支持 WASM / SharedBuffer"
+            },
+            {
+              "label": "网络",
+              "value": "仅用于初始加载"
+            },
+            {
+              "label": "内存 (RAM)",
+              "value": "推荐 2GB 以上"
+            }
+          ]
+        }
+      }
+    },
+    "features": {
+      "ai_engine": "神经 AI 引擎",
+      "ai_engine_desc": "最先进的 ISNet 模型通过 WebAssembly 完全在您的浏览器中运行，实现像素级完美的主体分离。",
+      "batch": "批量处理",
+      "batch_desc": "一次拖入多张图片，并使用本地 Web Workers 并行处理它们——无需排队，没有限制。",
+      "privacy": "绝对隐私",
+      "privacy_desc": "您的图片永远不会离开您的设备。零上传，零服务器日志，零追踪。处理过程 100% 本地化。"
+    },
+    "manifesto": {
+      "title": "主权创意",
+      "quote": "您的创造力不应以牺牲隐私为代价。SafeTools 让您能够无风险地进行编辑。",
+      "pro_workflow": "专业工作流",
+      "pro_workflow_desc": "通过批量导出、自定义背景、长宽比预设和投影效果集成到您的创意流程中——全部无需订阅。",
+      "seo": "专为 Web 优化",
+      "seo_desc": "导出针对电子商务、社交媒体和专业演示文稿优化的透明 PNG、无损 WebP 和可随时打印的 JPEG。",
+      "social": "社交媒体就绪",
+      "social_desc": "使用社交媒体优化的长宽比和透明背景，即时生成个人资料照片、产品图和营销资产。"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "AI 抠图工具如何在不上传我的照片的情况下工作？",
+          "a": "我们的工具使用最先进的 AI 模型 (RMBG-1.4/MODNet)，该模型使用 WebAssembly 完全在您的 Web 浏览器内运行。当您选择图片时，该模型会一次性下载到您的浏览器内存中，并在本地处理像素。任何数据都不会离开您的设备。"
+        },
+        {
+          "q": "这个抠图工具真的是免费的吗？",
+          "a": "是的，它 100% 免费，没有使用限制，没有水印，也不需要注册。我们认为，高质量、隐私优先的工具应该让每个人都能使用。"
+        },
+        {
+          "q": "去除背景支持哪些图片格式？",
+          "a": "我们支持大多数常见的图片格式，包括 PNG、JPG、JPEG、WebP 和 HEIC。输出的始终是透明的 PNG，以保留移除的背景。"
+        },
+        {
+          "q": "我可以去除高分辨率图片的背景吗？",
+          "a": "绝对可以。与许多会降低图片分辨率的在线工具不同，SafeTools 以原始分辨率（取决于您设备的 RAM）处理您的图片，以确保专业级的结果。"
+        },
+        {
+          "q": "我的隐私有保障吗？",
+          "a": "是的。因为处理发生在您的本地机器上，我们永远看不到您的照片。即使您在初始模型加载后断开网络连接，该工具仍能完美运行。"
+        },
+        {
+          "q": "它可以在移动设备上使用吗？",
+          "a": "是的，它适用于现代移动浏览器。但是，由于 AI 模型需要一定的处理能力和 RAM，因此在具有至少 4GB 内存的设备上性能最佳。"
+        }
+      ],
+      "title": "常见问题解答",
+      "description": "您需要了解的关于我们隐私优先工具的所有信息。"
+    },
+    "hero": {
+      "title": "AI 抠图工具 | 隐私优先的本地编辑",
+      "description": "由本地 AI 驱动的专业级背景移除工具。无云端上传，无存储，无追踪。快速、安全且私密。",
+      "badge": "专业 AI 分割 — 100% 安全"
+    }
+  }
+}

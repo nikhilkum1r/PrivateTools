@@ -26,7 +26,7 @@ export function ProBadge({ className, variant = "inline" }: ProBadgeProps) {
       className={cn("gap-1.5 bg-violet-500/10 text-violet-600 border-violet-500/20 font-bold", className)}
     >
       <Server className="w-3 h-3" />
-      Pro — Server Processing
+      Pro  Server Processing
     </Badge>
   );
 }

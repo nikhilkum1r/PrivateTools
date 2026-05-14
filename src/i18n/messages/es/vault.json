@@ -1,0 +1,453 @@
+{
+  "vault": {
+    "metadata": {
+      "title": "Bóveda Segura | Cifrado de Archivos AES-256 | SafeTools",
+      "description": "Almacene y proteja información sensible con tecnología de bóveda cifrada basada en el navegador. 100% local, cero cargas, seguridad de grado militar.",
+      "ogTitle": "Bóveda Segura | Cifrado de Archivos AES-256 | SafeTools",
+      "ogDescription": "Almacene y proteja información sensible con tecnología de bóveda cifrada basada en el navegador. 100% local, cero cargas, seguridad de grado militar.",
+      "keywords": "bóveda segura, cifrado de archivos, bóveda aes-256, almacenamiento privado, bóveda de navegador, cifrado fuera de línea, almacenamiento seguro de archivos, herramienta de bóveda local"
+    },
+    "hero": {
+      "badge": "Arquitectura de Seguridad Avanzada",
+      "title": "Bóveda Segura",
+      "description": "Almacene y proteja información sensible con tecnología de bóveda cifrada basada en el navegador diseñada para la privacidad y la seguridad.",
+      "badges": {
+        "privacy": "Privacidad de Extremo a Extremo",
+        "local": "Cifrado Local del Navegador",
+        "zero": "Cero Cargas",
+        "noTracking": "Sin Seguimiento",
+        "offline": "Capacidad Fuera de Línea"
+      },
+      "footer": "Protección AES-256-GCM de grado militar. Todo el procesamiento es 100% local."
+    },
+    "engine": {
+      "steps": [
+        {
+          "s": "01",
+          "t": "Cargar Archivos Sensibles",
+          "d": "Seleccione sus documentos privados, contraseñas o frases de recuperación.",
+          "i": "HardDrive"
+        },
+        {
+          "s": "02",
+          "t": "Establecer Clave de Seguridad Maestra",
+          "d": "Aplique cifrado AES-256 de grado industrial con una clave personalizada.",
+          "i": "Key"
+        },
+        {
+          "s": "03",
+          "t": "Descargar Bóveda Segura",
+          "d": "Recupere su contenedor .vault cifrado para almacenamiento local seguro.",
+          "i": "Download"
+        }
+      ],
+      "mode": {
+        "secure": "ASEGURAR",
+        "extract": "EXTRAER"
+      },
+      "dropzone": {
+        "title": {
+          "encrypt": "Asegurar Nuevo Archivo",
+          "decrypt": "Extraer Bóveda"
+        },
+        "desc": {
+          "encrypt": "Sellar archivos con AES-256",
+          "decrypt": "Desbloquear contenedores .vault"
+        }
+      },
+      "ready": "Listo para Asegurar",
+      "label": {
+        "key": "Clave de Seguridad Maestra",
+        "keyLoaded": "Clave Cargada",
+        "placeholder": "Introduzca la contraseña de la bóveda..."
+      },
+      "entropy": {
+        "label": "Entropía de Cifrado",
+        "vulnerable": "Vulnerable",
+        "secure": "Seguro"
+      },
+      "processing": {
+        "encrypting": "Sellando Bóveda",
+        "decrypting": "Extrayendo Datos"
+      },
+      "button": {
+        "encrypt": "Cifrar a la Bóveda",
+        "decrypt": "Extraer Original",
+        "download": "Descargar",
+        "vault": "Bóveda",
+        "file": "Archivo",
+        "newSession": "Iniciar Nueva Sesión"
+      }
+    },
+    "status": {
+      "title": "Estado de Privacidad",
+      "items": [
+        {
+          "l": "Procesamiento Local",
+          "s": "Activo"
+        },
+        {
+          "l": "Almacenamiento en la Nube",
+          "s": "Desactivado"
+        },
+        {
+          "l": "Protección HTTPS",
+          "s": "Verificado"
+        },
+        {
+          "l": "Criptografía del Lado del Cliente",
+          "s": "AES-256"
+        },
+        {
+          "l": "Scripts de Seguimiento",
+          "s": "Limpio"
+        }
+      ],
+      "verified": "Verificado",
+      "localDev": "Desarrollo Local",
+      "warning": "Advertencia",
+      "blocked": {
+        "title": "Motores de Seguimiento Bloqueados",
+        "note": "SafeTools es una zona libre de rastreadores. No inyectamos ningún script de terceros que pueda comprometer su sesión.",
+        "trackers": [
+          "Google Analytics",
+          "FB Pixel",
+          "Hotjar",
+          "Mixpanel",
+          "Segment",
+          "Intercom"
+        ]
+      },
+      "snapshot": {
+        "title": "Instantánea de Seguridad",
+        "items": [
+          {
+            "l": "Cifrado",
+            "v": "AES-256"
+          },
+          {
+            "l": "Autenticación",
+            "v": "GCM"
+          },
+          {
+            "l": "KDF",
+            "v": "PBKDF2"
+          },
+          {
+            "l": "Sal",
+            "v": "128 bits"
+          }
+        ]
+      },
+      "zeroServer": {
+        "title": "Estado de Cero Servidores",
+        "desc": "SafeTools Vault nunca carga sus archivos o contraseñas. El cifrado ocurre dentro del entorno de memoria aislado de su navegador."
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Características de Bóveda Profesional",
+        "subtitle": "Herramientas modernas diseñadas para la máxima privacidad y protección de grado industrial.",
+        "items": [
+          {
+            "i": "HardDrive",
+            "t": "Almacenamiento Local",
+            "d": "Sus datos cifrados permanecen en su dispositivo, nunca en la nube."
+          },
+          {
+            "i": "Key",
+            "t": "Contraseña Maestra",
+            "d": "Protección de clave maestra única mediante derivación PBKDF2 industrial."
+          },
+          {
+            "i": "FileText",
+            "t": "Notas Seguras",
+            "d": "Cifre texto sensible, frases de recuperación y detalles de inicio de sesión."
+          },
+          {
+            "i": "Lock",
+            "t": "Protección de Archivos",
+            "d": "Asegure cualquier tipo de archivo, desde PDFs hasta imágenes privadas con AES-256."
+          },
+          {
+            "i": "History",
+            "t": "Soporte de Recuperación",
+            "d": "Los nombres de archivos originales y los tipos MIME se preservan dentro de la bóveda."
+          },
+          {
+            "i": "Globe",
+            "t": "Acceso Fuera de Línea",
+            "d": "Funciona 100% fuera de línea una vez cargado, perfecto para sistemas aislados."
+          },
+          {
+            "i": "Share2",
+            "t": "Portapapeles Seguro",
+            "d": "Exportación e importación con un solo clic de contenedores de bóveda cifrados."
+          },
+          {
+            "i": "Code2",
+            "t": "Criptografía del Navegador",
+            "d": "Impulsado por la API nativa Web Crypto para aceleración por hardware."
+          }
+        ]
+      },
+      "architecture": {
+        "badge": "Grado Militar",
+        "title": "Arquitectura de Seguridad Avanzada",
+        "description": "SafeTools Vault utiliza los mismos estándares de cifrado en los que confían gobiernos e instituciones financieras de todo el mundo.",
+        "items": [
+          {
+            "t": "Cifrado AES-256-GCM",
+            "d": "El estándar de oro del cifrado simétrico, proporcionando tanto privacidad como integridad de datos."
+          },
+          {
+            "t": "Derivación de Claves PBKDF2",
+            "d": "Más de 100,000 iteraciones de HMAC-SHA256 aseguran que su contraseña esté protegida contra fuerza bruta."
+          },
+          {
+            "t": "IVs Aleatorios de 96 bits",
+            "d": "Cada operación de cifrado utiliza un Vector de Inicialización único para prevenir el análisis de patrones."
+          }
+        ],
+        "localCrypto": "Criptografía Local"
+      },
+      "useCases": {
+        "title": "¿Qué Puedes Proteger?",
+        "subtitle": "Desde frases de recuperación hasta secretos comerciales, mantén todo privado.",
+        "items": [
+          {
+            "i": "Key",
+            "c": "text-yellow-400",
+            "t": "Copias de Seguridad de Contraseñas"
+          },
+          {
+            "i": "History",
+            "c": "text-emerald-400",
+            "t": "Frases de Recuperación"
+          },
+          {
+            "i": "Shield",
+            "c": "text-blue-400",
+            "t": "Documentos Financieros"
+          },
+          {
+            "i": "Code2",
+            "c": "text-purple-400",
+            "t": "Claves de API y Desarrollo"
+          },
+          {
+            "i": "FileText",
+            "c": "text-cyan-400",
+            "t": "Identificaciones Legales"
+          },
+          {
+            "i": "Lock",
+            "c": "text-pink-400",
+            "t": "Medios Privados"
+          },
+          {
+            "i": "History",
+            "c": "text-orange-400",
+            "t": "Herencia Digital"
+          },
+          {
+            "i": "Lock",
+            "c": "text-red-400",
+            "t": "Secretos Comerciales"
+          }
+        ]
+      },
+      "threats": {
+        "title": "Protección contra Amenazas",
+        "items": [
+          "Protege contra violaciones de datos de proveedores de nube",
+          "Elimina el seguimiento del lado del servidor y la recolección de metadatos",
+          "Previene el acceso no autorizado en dispositivos compartidos",
+          "Refuerza los datos contra la interceptación a nivel de tránsito",
+          "Exposición cero a vulnerabilidades de almacenamiento en texto plano"
+        ],
+        "risk": {
+          "title": "Reducir Riesgos de Exposición de Datos",
+          "desc": "Las bóvedas tradicionales almacenan sus datos en la nube, creando un punto central de falla. SafeTools Vault elimina este riesgo manteniendo sus datos descentralizados y locales.",
+          "button": "Conozca nuestro modelo de Cero Confianza"
+        }
+      },
+      "comparison": {
+        "title": "¿Por qué elegir SafeTools Vault?",
+        "subtitle": "Vea cómo nuestro enfoque de lo local primero se compara con las bóvedas de nube tradicionales.",
+        "headers": [
+          "Característica",
+          "Bóvedas en la Nube",
+          "SafeTools"
+        ],
+        "rows": [
+          {
+            "feat": "Almacenamiento en la Nube",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Cifrado Local",
+            "trad": "Parcial",
+            "safe": "Total"
+          },
+          {
+            "feat": "Scripts de Seguimiento",
+            "trad": "A veces",
+            "safe": "Ninguno"
+          },
+          {
+            "feat": "Cuenta Requerida",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Procesamiento en el Navegador",
+            "trad": "Limitado",
+            "safe": "Completo"
+          },
+          {
+            "feat": "Enfoque en Privacidad",
+            "trad": "Varía",
+            "safe": "Máximo"
+          }
+        ]
+      },
+      "enterprise": {
+        "badge": "Listo para Empresas",
+        "title": "Integración de Flujo de Trabajo de Cero Conocimiento",
+        "description": "Los equipos de seguridad de TI prefieren SafeTools Vault porque elimina el vector de \"Riesgo SaaS\". Ningún dato llega nunca a nuestra infraestructura, lo que lo hace compatible con políticas de privacidad internas estrictas y estándares GDPR/HIPAA.",
+        "items": [
+          "Sin Dependencia de Proveedor: Los datos se almacenan en formatos binarios estándar",
+          "Compatible con Entornos Aislados: Úselo en redes internas fuera de línea",
+          "Despliegue Instantáneo: No se requiere aprovisionamiento de cuenta ni configuración de TI",
+          "Seguridad de Memoria: Cifrado manejado en el entorno aislado del navegador"
+        ],
+        "audit": {
+          "label": "Registro de Auditoría de Seguridad",
+          "status": "APROBADO",
+          "validated": "SafeTools Estándar V2.0 Validado"
+        }
+      },
+      "specs": {
+        "title": "Especificaciones Técnicas",
+        "subtitle": "Detalles técnicos profundos para auditorías criptográficas e investigadores de seguridad.",
+        "items": [
+          {
+            "l": "Algoritmo de Cifrado",
+            "v": "AES-GCM (Autenticado)"
+          },
+          {
+            "l": "Fuerza de la Clave",
+            "v": "256 bits (AES-256)"
+          },
+          {
+            "l": "Derivación de Clave",
+            "v": "PBKDF2-HMAC-SHA256"
+          },
+          {
+            "l": "Iteraciones PBKDF2",
+            "v": "100,000 rondas"
+          },
+          {
+            "l": "Longitud de la Sal",
+            "v": "128 bits (Aleatoria)"
+          },
+          {
+            "l": "Vector de Inicialización",
+            "v": "96 bits (Único por op)"
+          },
+          {
+            "l": "Etiqueta de Autenticación",
+            "v": "128 bits (GCM incorporado)"
+          },
+          {
+            "l": "Formato Binario",
+            "v": ".vault personalizado (PVLT Mágico)"
+          }
+        ]
+      },
+      "offline": {
+        "badge": "100% Capacidad Fuera de Línea",
+        "title": "Almacenamiento Seguro, en Todas Partes",
+        "description": "SafeTools Vault es una Aplicación Web Progresiva (PWA). Una vez cargada, funciona completamente fuera de línea, asegurando que pueda extraer sus datos críticos incluso sin una conexión a internet.",
+        "badges": {
+          "noNetwork": "Sin Necesidad de Red",
+          "secureRuntime": "Entorno de Ejecución Seguro"
+        }
+      },
+      "bestPractices": {
+        "title": "Mejores Prácticas de Seguridad de la Bóveda",
+        "items": [
+          {
+            "t": "Contraseña Maestra Fuerte",
+            "d": "Use más de 16 caracteres con una mezcla de símbolos. Su contraseña es la única clave para sus datos."
+          },
+          {
+            "t": "Copias de Seguridad Regulares",
+            "d": "Mantenga múltiples copias de sus archivos .vault en diferentes unidades cifradas."
+          },
+          {
+            "t": "Cerrar Sesiones Inactivas",
+            "d": "Cierre la pestaña del navegador inmediatamente después de extraer archivos sensibles."
+          }
+        ]
+      },
+      "commitment": {
+        "title": "Sus Datos Permanecen Bajo su Control",
+        "description": "\"SafeTools Vault está diseñado utilizando principios de privacidad primero. Sus datos cifrados permanecen protegidos localmente y nunca se cargan sin su permiso.\""
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes de la Bóveda",
+        "subtitle": "Todo lo que necesita saber sobre nuestro protocolo de cifrado local.",
+        "items": [
+          {
+            "q": "¿Se carga mi bóveda a los servidores?",
+            "a": "No. Todo el cifrado y procesamiento ocurren localmente en su navegador. Sus datos nunca abandonan su dispositivo."
+          },
+          {
+            "q": "¿Puede SafeTools leer mis datos?",
+            "a": "Imposible. No tenemos cuentas, no almacenamos sus claves y no tenemos acceso a la memoria de su navegador."
+          },
+          {
+            "q": "¿Qué pasa si olvido mi contraseña?",
+            "a": "Debido a que esta es una herramienta de cero conocimiento, no podemos recuperar sus datos. Por favor, use una contraseña fuerte que no olvide."
+          },
+          {
+            "q": "¿Se requiere registro de cuenta?",
+            "a": "No. SafeTools está diseñado para la privacidad y la utilidad inmediata. No se necesita registro."
+          },
+          {
+            "q": "¿Puedo usar la bóveda fuera de línea?",
+            "a": "Sí. Una vez que la página está cargada, funciona completamente fuera de línea como una PWA."
+          },
+          {
+            "q": "¿Qué tan seguro es AES-256-GCM?",
+            "a": "Es el estándar de la industria para comunicaciones seguras, confiado por la NSA y las redes financieras globales."
+          }
+        ]
+      },
+      "related": {
+        "title": "Ecosistema de Privacidad",
+        "subtitle": "Explore nuestras otras utilidades de seguridad de lo local primero."
+      },
+      "manifesto": {
+        "title": "La privacidad es un derecho, no una característica.",
+        "description": "La privacidad es un derecho digital fundamental. Nuestras herramientas están diseñadas para minimizar la exposición de datos y maximizar el control del usuario. Sin cuentas. Sin seguimiento. Sin almacenamiento en la nube. Solo protección segura de privacidad primero.",
+        "button": "Explorar Centro de Privacidad"
+      }
+    },
+    "footer": {
+      "text": "La bóveda más segura es la que nunca abandona su máquina.",
+      "noTracking": "SafeTools es una zona libre de rastreadores. 100% privado, 100% local."
+    },
+    "toast": {
+      "secured": "¡Archivo asegurado con éxito!",
+      "extracted": "¡Archivo extraído con éxito!",
+      "failed": "Clave de seguridad inválida o bóveda corrupta.",
+      "invalidPassword": "Contraseña incorrecta. Por favor, compruebe e inténtelo de nuevo.",
+      "legacyVersion": "Esta es una versión antigua de la bóveda. Por favor, use el extractor heredado.",
+      "invalidFile": "No es un archivo de bóveda de SafeTools válido."
+    }
+  }
+}

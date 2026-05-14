@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Bienvenue sur SafeTools",
+    "tagline": "Plus de 150 outils de fichiers en ligne privilégiant la confidentialité, exécutés localement",
+    "upload": "Télécharger un fichier",
+    "download": "Télécharger",
+    "compress": "Compresser",
+    "convert": "Convertir",
+    "edit": "Modifier",
+    "search": "Rechercher parmi plus de 150 outils...",
+    "privacy": "Confidentialité d'abord",
+    "speed": "Ultra rapide",
+    "security": "Qualité entreprise",
+    "systemHealth": {
+      "title": "Santé du système",
+      "localEngine": "Moteur local",
+      "localEngineDesc": "Le traitement s'effectue à 100 % localement sur votre appareil.",
+      "secureSession": "Session sécurisée",
+      "secureSessionDesc": "Environnement de navigateur isolé pour une confidentialité maximale.",
+      "online": "Connecté",
+      "onlineDesc": "En ligne pour les dernières mises à jour d'outils.",
+      "offlineReady": "Prêt pour le mode hors ligne",
+      "offlineReadyDesc": "Cet outil fonctionne parfaitement sans connexion Internet.",
+      "zeroTracking": "Zéro suivi",
+      "zeroTrackingDesc": "Aucune donnée n'est envoyée à nos serveurs pour le suivi."
+    },
+    "securityTools": "Outils de sécurité",
+    "privacyTools": "Outils de confidentialité",
+    "tools": {
+      "vault": "Coffre-fort sécurisé",
+      "metadataCleaner": "Nettoyeur de métadonnées",
+      "fileShredder": "Broyeur de fichiers",
+      "secureNotes": "Notes sécurisées",
+      "passwordGenerator": "Générateur de mots de passe",
+      "passwordChecker": "Vérificateur de force de mot de passe",
+      "ocr": "Extraction OCR",
+      "steganography": "Stéganographie d'image",
+      "imageEditor": "Éditeur d'image",
+      "imageCompressor": "Compresseur d'image",
+      "formatConverter": "Convertisseur de format",
+      "backgroundRemover": "Suppression d'arrière-plan",
+      "colorLab": "Laboratoire de couleur",
+      "pdfToImage": "PDF en image"
+    },
+    "toolsLabel": "Outils",
+    "features": "Fonctionnalités",
+    "developers": "Développeurs",
+    "pricing": "Tarification",
+    "about": "À propos de SafeTools",
+    "whyAds": "Pourquoi nous affichons des publicités",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "contact": "Contactez-nous",
+    "home": "Accueil",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Journal des modifications",
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système",
+    "startFree": "Commencer gratuitement",
+    "systemStatus": "Statut du système",
+    "updates": "Mises à jour",
+    "feedback": "Commentaires",
+    "contents": "Contenu",
+    "imageTools": "Outils d'image",
+    "openTools": "Ouvrir les outils",
+    "ready": "Prêt à prendre le contrôle ?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "PRÊT",
+      "blocked": "BLOQUÉ",
+      "success": "SUCCÈS",
+      "error": "ERREUR"
+    },
+    "getStarted": "Commencer",
+    "forever": "pour toujours",
+    "step": "Étape",
+    "dropzone": {
+      "title": "Télécharger un fichier",
+      "description": "Glissez et déposez votre fichier ici",
+      "secure": "Traitement local sécurisé",
+      "processedLocally": "Traité localement",
+      "maxSize": "Max {size} Mo",
+      "noFileChosen": "Aucun fichier choisi"
+    },
+    "export": {
+      "ready": "Prêt pour le téléchargement",
+      "download": "Télécharger",
+      "copy": "Copier",
+      "copied": "Copié !",
+      "share": "Partager",
+      "reset": "Réinitialiser"
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "description": "Tout ce que vous devez savoir sur cet outil et comment il protège votre vie privée."
+    },
+    "related": {
+      "title": "Outils professionnels connexes",
+      "subtitle": "Explorez d'autres utilitaires privilégiant la confidentialité pour votre flux de travail."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Bureau",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Choisir la langue"
+    },
+    "relatedTools": "Outils créatifs connexes",
+    "relatedToolsDesc": "Explorez d'autres utilitaires privilégiant la confidentialité.",
+    "all": "Tout",
+    "units": {
+      "px": "px",
+      "mb": "Mo",
+      "kb": "Ko",
+      "s": "s"
+    },
+    "advertisement": "Publicité",
+    "system_health": {
+      "title": "Santé du système",
+      "localEngine": "Moteur local",
+      "localEngineDesc": "Traitement sur votre matériel",
+      "secureSession": "Session sécurisée",
+      "secureSessionDesc": "Contexte de navigateur isolé",
+      "online": "En ligne",
+      "onlineDesc": "Optimisé pour la vitesse",
+      "offlineReady": "Prêt pour le mode hors ligne",
+      "offlineReadyDesc": "Entièrement fonctionnel hors ligne",
+      "zeroTracking": "Zéro suivi",
+      "zeroTrackingDesc": "Architecture privilégiant la confidentialité"
+    },
+    "values": {
+      "yes": "Oui",
+      "no": "Non",
+      "limited": "Limité"
+    },
+    "pro": {
+      "comingSoon": "Pro - Bientôt disponible",
+      "unlockPower": "Débloquez plus de puissance",
+      "features": [
+        "Fichiers jusqu'à 10 fois plus volumineux",
+        "Traitement par lots illimité",
+        "File d'attente de traitement serveur prioritaire",
+        "Liens partageables (expiration 72h)",
+        "Historique des fichiers - 50 derniers travaux",
+        "Traitement côté serveur pour les fichiers lourds"
+      ],
+      "waitlist": "Rejoindre la liste d'attente - 8 $/mois au lancement",
+      "successTitle": "Vous êtes sur la liste ! 🎉",
+      "successDesc": "Nous vous enverrons un e-mail lors du lancement de Pro.",
+      "continueFree": "Continuer avec la version gratuite",
+      "emailPlaceholder": "votre@email.com",
+      "join": "Rejoindre",
+      "validEmail": "Veuillez entrer une adresse e-mail valide.",
+      "waitlistSuccess": "Vous êtes sur la liste d'attente ! Nous vous préviendrons lors du lancement de Pro.",
+      "freeLimit": "Limite gratuite : {limit}",
+      "proLimit": "Limite Pro : {limit}",
+      "yourFile": "Votre fichier : {size}"
+    },
+    "disclaimer": {
+      "understand": "Je comprends - Continuer",
+      "responsibility": "En continuant, vous acceptez l'entière responsabilité de votre utilisation de cet outil."
+    },
+    "toast": {
+      "linkCopied": "Lien copié dans le presse-papiers"
+    },
+    "seo": {
+      "browserReqs": "Nécessite JavaScript et WebAssembly"
+    },
+    "aria": {
+      "goHome": "Aller à l'accueil",
+      "toggleTheme": "Changer de thème",
+      "faq": "Foire Aux Questions",
+      "changeLanguage": "Changer de langue",
+      "close": "Fermer",
+      "menu": "Menu",
+      "openTools": "Ouvrir le menu des outils",
+      "exploreTools": "Explorer tous les outils",
+      "platformFeatures": "Fonctionnalités de la plateforme",
+      "privacyCommitment": "Engagement de confidentialité",
+      "developerApi": "API développeur & Documentation",
+      "pricingPlans": "Plans tarifaires"
+    },
+    "shareTool": {
+      "title": "Partagez la confidentialité",
+      "subtitle": "Soutenez l'informatique locale d'abord",
+      "copyLink": "Copier le lien",
+      "copied": "Copié",
+      "twitter": "Découvrez cet outil privé, sans téléchargement pour {title} :",
+      "telegram": "Traitement de fichiers sécurisé avec SafeTools : {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Solutions PDF",
+        "image": "Studio d'image",
+        "privacy": "Outils de confidentialité",
+        "developer": "Outils développeur",
+        "pdfMerge": "Fusionner PDF",
+        "pdfSplit": "Diviser PDF",
+        "pdfUnlock": "Déverrouiller PDF",
+        "pdfProtect": "Protéger PDF",
+        "pdfToImage": "PDF en image",
+        "securityFileShredder": "Broyeur de fichiers"
+      }
+    },
+    "error": "Erreur"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "Traitement 100 % local",
+      "noUploads": "Zéro téléchargement serveur",
+      "noTracking": "Zéro suivi de données",
+      "privacyFirst": "UX privilégiant la confidentialité",
+      "worksOffline": "Fonctionne hors ligne"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "pdfHub": {
+    "seo": {
+      "title": "PDF Studio | Secure & Local PDF Tools | SafeTools",
+      "description": "Professional-grade local PDF tools. 100% privacy, zero uploads. Merge, split, compress, unlock, and protect PDFs securely in your browser.",
+      "keywords": "pdf tools, merge pdf, split pdf, compress pdf, unlock pdf, protect pdf, private pdf processing, local pdf tools",
+      "ogTitle": "SafeTools PDF Studio | 100% Private",
+      "ogDescription": "The full suite of professional PDF utilities. All running locally on your hardware.",
+      "structuredName": "SafeTools PDF Studio",
+      "structuredDesc": "A comprehensive suite of privacy-first PDF processing tools."
+    },
+    "hero": {
+      "badge": "Privacy-First Document Engine",
+      "title": "Document Powerhouse",
+      "description": "Professional-grade local PDF tools. 100% privacy, zero uploads, GPU-accelerated."
+    },
+    "tools": {
+      "merger": {
+        "title": "PDF Merger",
+        "desc": "Combine multiple PDFs and images into one document with ease.",
+        "tags": ["Most Popular", "High Speed"]
+      },
+      "splitter": {
+        "title": "PDF Splitter",
+        "desc": "Extract specific pages or split into separate files instantly.",
+        "tags": ["Universal", "Precise"]
+      },
+      "compressor": {
+        "title": "Compress PDF",
+        "desc": "Shrink PDF files locally without losing quality.",
+        "tags": ["Optimized", "WASM"]
+      },
+      "unlock": {
+        "title": "Unlock PDF",
+        "desc": "Remove password protection from PDFs securely.",
+        "tags": ["Fast", "Secure"]
+      },
+      "protect": {
+        "title": "Protect PDF",
+        "desc": "Add strong password protection to PDFs locally.",
+        "tags": ["Encrypted", "AES-256"]
+      },
+      "scrubber": {
+        "title": "Metadata Scrubber",
+        "desc": "Remove hidden data and tracking from PDF documents.",
+        "tags": ["Security", "Privacy"]
+      },
+      "cta": "Open Tool"
+    },
+    "features": {
+      "zk": {
+        "title": "Zero-Knowledge Architecture",
+        "desc": "Your documents never leave your browser. All processing is done locally on your machine."
+      },
+      "fidelity": {
+        "title": "High-Fidelity Output",
+        "desc": "Our engine ensures your PDFs maintain original quality and vector data."
+      }
+    },
+    "faq": {
+      "title": "SafeTools PDF Studio FAQ",
+      "desc": "Everything you need to know about our privacy-first document ecosystem.",
+      "q1": "Are my PDFs uploaded to any server?",
+      "a1": "Absolutely not. SafeTools uses WebAssembly (WASM) to process PDFs directly on your device. Your data never leaves your browser.",
+      "q2": "What engines do you use?",
+      "a2": "We use a combination of QPDF, MuPDF, and custom WASM binaries to ensure the highest performance and compatibility."
+    }
+  }
+}

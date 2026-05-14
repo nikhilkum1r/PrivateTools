@@ -1,0 +1,61 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "Politikken om fair adgang",
+      "title": "Gratis for <br></br> alle.",
+      "subtitle": "Vi mener ikke, at privatliv skal være en premium-funktion. Det bør være standardtilstanden på nettet."
+    },
+    "plan": {
+      "title": "Sovereign-planen",
+      "price": "0 kr.",
+      "forever": "/ for altid",
+      "description": "Få adgang til hele SafeTools-infrastrukturen uden kompromiser. Ingen abonnementer, ingen skjulte grænser og intet kreditkort kræves.",
+      "button": "Begynd gratis",
+      "included": "Hvad er inkluderet",
+      "features": [
+        "150+ professionelle værktøjer",
+        "Ubegrænset filbehandling",
+        "Ingen filstørrelsesgrænser",
+        "Hardware-accelereret fart",
+        "100% privat og lokalt",
+        "Ingen konto påkrævet",
+        "Ingen reklamer eller trackere",
+        "Fuld adgang til lokal motor"
+      ]
+    },
+    "comparison": {
+      "title": "Hvorfor er det gratis?",
+      "subtitle": "Traditionelle værktøjer har servere. Servere koster penge. SafeTools bruger din hardware til at gøre arbejdet.",
+      "cloud": {
+        "title": "Cloud \"gratis\" værktøjer",
+        "features": [
+          "Begrænset til 10MB filer",
+          "Køtider og ventelister",
+          "Vandmærker på eksport",
+          "Aggressiv e-mailmarketing"
+        ],
+        "unlimited_strike": "Ubegrænset behandling"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100% gratis for altid",
+          "Ingen filstørrelsesgrænser",
+          "Ingen køer / Øjeblikkeligt lokalt",
+          "Ingen vandmærker / Fuld kvalitet",
+          "Ingen konti / Total anonymitet"
+        ]
+      }
+    },
+    "final": {
+      "title": "Et Privacy-First <br></br> økosystem.",
+      "subtitle": "Ingen abonnementer. Ingen sporing. Ren lokal kraft.",
+      "independent": "Uafhængigt finansieret",
+      "zeroServer": "Zero-Server infrastruktur"
+    },
+    "seo": {
+      "title": "Priser og support | SafeTools gratis privatlivsværktøjssæt",
+      "description": "SafeTools er 100% gratis for altid. Læs hvorfor vi ikke tager betalt for privatliv, og hvordan du kan støtte vores mission for et local-first web."
+    }
+  }
+}

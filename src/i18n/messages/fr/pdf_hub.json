@@ -1,0 +1,87 @@
+{
+  "pdfHub": {
+    "seo": {
+      "title": "PDF Studio | Outils PDF sécurisés et locaux | SafeTools",
+      "description": "Outils PDF locaux de qualité professionnelle. 100 % de confidentialité, zéro téléchargement. Fusionnez, divisez, compressez, déverrouillez et protégez vos PDF en toute sécurité dans votre navigateur.",
+      "keywords": "outils pdf, fusionner pdf, diviser pdf, compresser pdf, déverrouiller pdf, protéger pdf, traitement pdf privé, outils pdf locaux",
+      "ogTitle": "SafeTools PDF Studio | 100 % Privé",
+      "ogDescription": "La suite complète d'utilitaires PDF professionnels. Tout fonctionne localement sur votre matériel.",
+      "structuredName": "SafeTools PDF Studio",
+      "structuredDesc": "Une suite complète d'outils de traitement PDF axés sur la confidentialité."
+    },
+    "hero": {
+      "badge": "Moteur de documents axé sur la confidentialité",
+      "title": "Puissance documentaire",
+      "description": "Outils PDF locaux de qualité professionnelle. 100 % de confidentialité, zéro téléchargement, accélération GPU."
+    },
+    "tools": {
+      "merger": {
+        "title": "Fusionneur PDF",
+        "desc": "Combinez facilement plusieurs PDF et images en un seul document.",
+        "tags": [
+          "Le plus populaire",
+          "Haute vitesse"
+        ]
+      },
+      "splitter": {
+        "title": "Diviseur PDF",
+        "desc": "Extrayez des pages spécifiques ou divisez instantanément en fichiers séparés.",
+        "tags": [
+          "Universel",
+          "Précis"
+        ]
+      },
+      "compressor": {
+        "title": "Compresser un PDF",
+        "desc": "Réduisez les fichiers PDF localement sans perte de qualité.",
+        "tags": [
+          "Optimisé",
+          "WASM"
+        ]
+      },
+      "unlock": {
+        "title": "Déverrouiller un PDF",
+        "desc": "Supprimez la protection par mot de passe des PDF en toute sécurité.",
+        "tags": [
+          "Rapide",
+          "Sécurisé"
+        ]
+      },
+      "protect": {
+        "title": "Protéger un PDF",
+        "desc": "Ajoutez une protection par mot de passe forte aux PDF localement.",
+        "tags": [
+          "Crypté",
+          "AES-256"
+        ]
+      },
+      "scrubber": {
+        "title": "Nettoyeur de métadonnées",
+        "desc": "Supprimez les données cachées et le traçage des documents PDF.",
+        "tags": [
+          "Sécurité",
+          "Confidentialité"
+        ]
+      },
+      "cta": "Ouvrir l'outil"
+    },
+    "features": {
+      "zk": {
+        "title": "Architecture Zero-Knowledge",
+        "desc": "Vos documents ne quittent jamais votre navigateur. Tout le traitement est effectué localement sur votre machine."
+      },
+      "fidelity": {
+        "title": "Sortie haute fidélité",
+        "desc": "Notre moteur garantit que vos PDF conservent leur qualité d'origine et leurs données vectorielles."
+      }
+    },
+    "faq": {
+      "title": "FAQ SafeTools PDF Studio",
+      "desc": "Tout ce que vous devez savoir sur notre écosystème documentaire axé sur la confidentialité.",
+      "q1": "Mes PDF sont-ils téléchargés sur un serveur ?",
+      "a1": "Absolument pas. SafeTools utilise WebAssembly (WASM) pour traiter les PDF directement sur votre appareil. Vos données ne quittent jamais votre navigateur.",
+      "q2": "Quels moteurs utilisez-vous ?",
+      "a2": "Nous utilisons une combinaison de QPDF, MuPDF et de binaires WASM personnalisés pour garantir les meilleures performances et compatibilité."
+    }
+  }
+}

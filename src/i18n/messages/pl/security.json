@@ -1,0 +1,58 @@
+{
+  "security": {
+    "seo": {
+      "title": "Security Architecture | SafeTools",
+      "description": "SafeTools implements military-grade local-first security protocols to ensure your data is never exposed."
+    },
+    "hero": {
+      "title": "Industrial Defense.",
+      "description": "SafeTools implements military-grade local-first security protocols to ensure your data is never exposed."
+    },
+    "comparison": {
+      "trad": {
+        "title": "Cloud Processing",
+        "items": [
+          "Data sent over the open internet",
+          "Risk of server-side data leaks",
+          "Subject to third-party surveillance",
+          "Persistent logs of your activities"
+        ]
+      },
+      "safe": {
+        "title": "Sovereign Logic",
+        "items": [
+          "Data never leaves your machine",
+          "No risk of server-side breaches",
+          "Immune to network surveillance",
+          "Zero persistent data trails"
+        ]
+      }
+    },
+    "deepDive": [
+      {
+        "title": "WASM Execution",
+        "desc": "High-performance tools run in isolated WebAssembly environments for near-native speed and security."
+      },
+      {
+        "title": "AES-256 GCM",
+        "desc": "Authenticated encryption standards ensure that your data is not only private but also tamper-proof."
+      },
+      {
+        "title": "Secure Isolation",
+        "desc": "Cross-Origin Isolation headers ensure that your session is protected from side-channel attacks."
+      }
+    ],
+    "policy": {
+      "title": "Our Security Philosophy",
+      "content": "SafeTools is built on the principle of <strong>Sovereign Security</strong>. We believe that security is not something you should have to trust a provider with; it's something you should be able to verify yourself.",
+      "noServers": {
+        "title": "NO PROCESSING SERVERS",
+        "desc": "We maintain zero server infrastructure for processing your data. Our servers only provide the static code required to run tools in your browser."
+      },
+      "noAccounts": {
+        "title": "NO USER ACCOUNTS",
+        "desc": "By eliminating accounts, we eliminate the primary target for identity theft and data correlation."
+      }
+    }
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "vault": {
+    "metadata": {
+      "title": "Coffre-fort Sécurisé | Chiffrement de Fichiers AES-256 | SafeTools",
+      "description": "Stockez et protégez vos informations sensibles grâce à la technologie de coffre-fort chiffré basé sur le navigateur. 100% local, aucun téléchargement vers le serveur, sécurité de niveau militaire.",
+      "ogTitle": "Coffre-fort Sécurisé | Chiffrement de Fichiers AES-256 | SafeTools",
+      "ogDescription": "Stockez et protégez vos informations sensibles grâce à la technologie de coffre-fort chiffré basé sur le navigateur. 100% local, aucun téléchargement vers le serveur, sécurité de niveau militaire.",
+      "keywords": "coffre-fort sécurisé, chiffrement de fichiers, coffre-fort aes-256, stockage privé, coffre-fort navigateur, chiffrement hors ligne, stockage de fichiers sécurisé, outil de coffre-fort local"
+    },
+    "hero": {
+      "badge": "Architecture de Sécurité Avancée",
+      "title": "Coffre-fort Sécurisé",
+      "description": "Stockez et protégez vos informations sensibles grâce à la technologie de coffre-fort chiffré basé sur le navigateur, conçue pour la confidentialité et la sécurité.",
+      "badges": {
+        "privacy": "Confidentialité de Bout en Bout",
+        "local": "Chiffrement Local du Navigateur",
+        "zero": "Zéro Téléchargement vers le Serveur",
+        "noTracking": "Aucun Suivi",
+        "offline": "Capable de Fonctionner Hors Ligne"
+      },
+      "footer": "Protection AES-256-GCM de niveau militaire. Tout le traitement est 100% local."
+    },
+    "engine": {
+      "steps": [
+        {
+          "s": "01",
+          "t": "Charger des Fichiers Sensibles",
+          "d": "Sélectionnez vos documents privés, mots de passe ou phrases de récupération.",
+          "i": "HardDrive"
+        },
+        {
+          "s": "02",
+          "t": "Définir la Clé de Sécurité Principale",
+          "d": "Appliquez un chiffrement AES-256 de qualité industrielle avec une clé personnalisée.",
+          "i": "Key"
+        },
+        {
+          "s": "03",
+          "t": "Télécharger le Coffre-fort Sécurisé",
+          "d": "Récupérez votre conteneur .vault chiffré pour un stockage local sécurisé.",
+          "i": "Download"
+        }
+      ],
+      "mode": {
+        "secure": "SÉCURISER",
+        "extract": "EXTRAIRE"
+      },
+      "dropzone": {
+        "title": {
+          "encrypt": "Sécuriser un Nouveau Fichier",
+          "decrypt": "Extraire le Coffre-fort"
+        },
+        "desc": {
+          "encrypt": "Sceller les fichiers avec AES-256",
+          "decrypt": "Déverrouiller les conteneurs .vault"
+        }
+      },
+      "ready": "Prêt à Sécuriser",
+      "label": {
+        "key": "Clé de Sécurité Principale",
+        "keyLoaded": "Clé Chargée",
+        "placeholder": "Entrez le mot de passe du coffre-fort..."
+      },
+      "entropy": {
+        "label": "Entropie de Chiffrement",
+        "vulnerable": "Vulnérable",
+        "secure": "Sécurisé"
+      },
+      "processing": {
+        "encrypting": "Scellement du Coffre-fort",
+        "decrypting": "Extraction des Données"
+      },
+      "button": {
+        "encrypt": "Chiffrer dans le Coffre-fort",
+        "decrypt": "Extraire l'Original",
+        "download": "Télécharger",
+        "vault": "Coffre-fort",
+        "file": "Fichier",
+        "newSession": "Démarrer une Nouvelle Session"
+      }
+    },
+    "status": {
+      "title": "État de la Confidentialité",
+      "items": [
+        {
+          "l": "Traitement Local",
+          "s": "Actif"
+        },
+        {
+          "l": "Stockage Cloud",
+          "s": "Désactivé"
+        },
+        {
+          "l": "Protégé par HTTPS",
+          "s": "Vérifié"
+        },
+        {
+          "l": "Cryptographie Côté Client",
+          "s": "AES-256"
+        },
+        {
+          "l": "Scripts de Suivi",
+          "s": "Propre"
+        }
+      ],
+      "verified": "Vérifié",
+      "localDev": "Dév Local",
+      "warning": "Avertissement",
+      "blocked": {
+        "title": "Moteurs de Suivi Bloqués",
+        "note": "SafeTools est une zone sans traqueur. Nous n'injectons aucun script tiers qui pourrait compromettre votre session.",
+        "trackers": [
+          "Google Analytics",
+          "FB Pixel",
+          "Hotjar",
+          "Mixpanel",
+          "Segment",
+          "Intercom"
+        ]
+      },
+      "snapshot": {
+        "title": "Instantané de Sécurité",
+        "items": [
+          {
+            "l": "Chiffre",
+            "v": "AES-256"
+          },
+          {
+            "l": "Auth",
+            "v": "GCM"
+          },
+          {
+            "l": "KDF",
+            "v": "PBKDF2"
+          },
+          {
+            "l": "Sel",
+            "v": "128-bit"
+          }
+        ]
+      },
+      "zeroServer": {
+        "title": "État Zéro Serveur",
+        "desc": "SafeTools Vault ne télécharge jamais vos fichiers ou vos mots de passe. Le chiffrement se produit à l'intérieur du bac à sable mémoire isolé de votre navigateur."
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Fonctionnalités de Coffre-fort Professionnel",
+        "subtitle": "Des outils modernes conçus pour une confidentialité maximale et une protection de qualité industrielle.",
+        "items": [
+          {
+            "i": "HardDrive",
+            "t": "Stockage Local",
+            "d": "Vos données chiffrées restent sur votre appareil, jamais dans le cloud."
+          },
+          {
+            "i": "Key",
+            "t": "Mot de Passe Maître",
+            "d": "Protection par clé maître unique utilisant la dérivation PBKDF2 industrielle."
+          },
+          {
+            "i": "FileText",
+            "t": "Notes Sécurisées",
+            "d": "Chiffrez les textes sensibles, les phrases de récupération et les détails de connexion."
+          },
+          {
+            "i": "Lock",
+            "t": "Protection de Fichiers",
+            "d": "Sécurisez n'importe quel type de fichier, des PDF aux images privées, avec AES-256."
+          },
+          {
+            "i": "History",
+            "t": "Aide à la Récupération",
+            "d": "Les noms de fichiers originaux et les types MIME sont préservés à l'intérieur du coffre-fort."
+          },
+          {
+            "i": "Globe",
+            "t": "Accès Hors Ligne",
+            "d": "Fonctionne à 100% hors ligne une fois chargé, parfait pour les systèmes isolés."
+          },
+          {
+            "i": "Share2",
+            "t": "Presse-papiers Sécurisé",
+            "d": "Exportation et importation en un clic des conteneurs de coffre-fort chiffrés."
+          },
+          {
+            "i": "Code2",
+            "t": "Crypto Navigateur",
+            "d": "Propulsé par l'API Web Crypto native pour une accélération matérielle."
+          }
+        ]
+      },
+      "architecture": {
+        "badge": "Qualité Militaire",
+        "title": "Architecture de Sécurité Avancée",
+        "description": "SafeTools Vault utilise les mêmes normes de chiffrement que celles auxquelles font confiance les gouvernements et les institutions financières du monde entier.",
+        "items": [
+          {
+            "t": "Chiffrement AES-256-GCM",
+            "d": "L'étalon-or du chiffrement symétrique, offrant à la fois confidentialité et intégrité des données."
+          },
+          {
+            "t": "Dérivation de Clé PBKDF2",
+            "d": "Plus de 100 000 itérations de HMAC-SHA256 garantissent que votre mot de passe est protégé contre la force brute."
+          },
+          {
+            "t": "IV Aléatoires de 96 bits",
+            "d": "Chaque opération de chiffrement utilise un vecteur d'initialisation unique pour empêcher l'analyse des motifs."
+          }
+        ],
+        "localCrypto": "Crypto Locale"
+      },
+      "useCases": {
+        "title": "Que Pouvez-vous Protéger ?",
+        "subtitle": "Des phrases de récupération aux secrets commerciaux, gardez tout privé.",
+        "items": [
+          {
+            "i": "Key",
+            "c": "text-yellow-400",
+            "t": "Sauvegardes de Mots de Passe"
+          },
+          {
+            "i": "History",
+            "c": "text-emerald-400",
+            "t": "Phrases de Récupération"
+          },
+          {
+            "i": "Shield",
+            "c": "text-blue-400",
+            "t": "Documents Financiers"
+          },
+          {
+            "i": "Code2",
+            "c": "text-purple-400",
+            "t": "Clés API et Dev"
+          },
+          {
+            "i": "FileText",
+            "c": "text-cyan-400",
+            "t": "Pièces d'Identité"
+          },
+          {
+            "i": "Lock",
+            "c": "text-pink-400",
+            "t": "Médias Privés"
+          },
+          {
+            "i": "History",
+            "c": "text-orange-400",
+            "t": "Héritage Numérique"
+          },
+          {
+            "i": "Lock",
+            "c": "text-red-400",
+            "t": "Secrets Commerciaux"
+          }
+        ]
+      },
+      "threats": {
+        "title": "Protection contre les Menaces",
+        "items": [
+          "Protège contre les violations de données des fournisseurs de cloud",
+          "Élimine le suivi côté serveur et la collecte de métadonnées",
+          "Empêche l'accès non autorisé sur les appareils partagés",
+          "Renforce les données contre l'interception au niveau du transit",
+          "Zéro exposition aux vulnérabilités de stockage en texte clair"
+        ],
+        "risk": {
+          "title": "Réduire les Risques d'Exposition des Données",
+          "desc": "Les coffres-forts traditionnels stockent vos données dans le cloud, créant un point de défaillance central. SafeTools Vault élimine ce risque en gardant vos données décentralisées et locales.",
+          "button": "En savoir plus sur notre modèle Zero-Trust"
+        }
+      },
+      "comparison": {
+        "title": "Pourquoi Choisir SafeTools Vault ?",
+        "subtitle": "Découvrez comment notre approche locale-first se compare aux coffres-forts cloud traditionnels.",
+        "headers": [
+          "Fonctionnalité",
+          "Coffres Cloud",
+          "SafeTools"
+        ],
+        "rows": [
+          {
+            "feat": "Stockage Cloud",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Chiffrement Local",
+            "trad": "Partiel",
+            "safe": "Complet"
+          },
+          {
+            "feat": "Scripts de Suivi",
+            "trad": "Parfois",
+            "safe": "Aucun"
+          },
+          {
+            "feat": "Compte Requis",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Traitement Navigateur",
+            "trad": "Limité",
+            "safe": "Complet"
+          },
+          {
+            "feat": "Axé Confidentialité",
+            "trad": "Varie",
+            "safe": "Maximum"
+          }
+        ]
+      },
+      "enterprise": {
+        "badge": "Prêt pour l'Entreprise",
+        "title": "Intégration du Flux de Travail Zero-Knowledge",
+        "description": "Les équipes de sécurité informatique préfèrent SafeTools Vault car il élimine le vecteur de « Risque SaaS ». Aucune donnée n'atteint jamais notre infrastructure, ce qui le rend conforme aux politiques de confidentialité internes strictes et aux normes RGPD/HIPAA.",
+        "items": [
+          "Pas de Verrouillage Fournisseur : Les données sont stockées dans des formats binaires standard",
+          "Compatible Air-Gapped : Utilisation sur des réseaux internes hors ligne",
+          "Déploiement Instantané : Aucun compte ni configuration informatique requis",
+          "Sécurité Mémoire : Chiffrement géré dans le bac à sable du navigateur"
+        ],
+        "audit": {
+          "label": "Journal d'Audit de Sécurité",
+          "status": "RÉUSSI",
+          "validated": "SafeTools Standard V2.0 Validé"
+        }
+      },
+      "specs": {
+        "title": "Spécifications Techniques",
+        "subtitle": "Détails techniques approfondis pour les audits cryptographiques et les chercheurs en sécurité.",
+        "items": [
+          {
+            "l": "Algorithme de Chiffrement",
+            "v": "AES-GCM (Authentifié)"
+          },
+          {
+            "l": "Force de la Clé",
+            "v": "256-bit (AES-256)"
+          },
+          {
+            "l": "Dérivation de Clé",
+            "v": "PBKDF2-HMAC-SHA256"
+          },
+          {
+            "l": "Itérations PBKDF2",
+            "v": "100 000 tours"
+          },
+          {
+            "l": "Longueur du Sel",
+            "v": "128-bit (Aléatoire)"
+          },
+          {
+            "l": "Vecteur d'Initialisation",
+            "v": "96-bit (Unique par op)"
+          },
+          {
+            "l": "Tag d'Authentification",
+            "v": "128-bit (GCM intégré)"
+          },
+          {
+            "l": "Format Binaire",
+            "v": ".vault personnalisé (Magic PVLT)"
+          }
+        ]
+      },
+      "offline": {
+        "badge": "100% Fonctionnel Hors Ligne",
+        "title": "Stockage Sécurisé, Partout",
+        "description": "SafeTools Vault est une Progressive Web App (PWA). Une fois chargé, il fonctionne entièrement hors ligne, garantissant que vous pouvez extraire vos données critiques même sans connexion Internet.",
+        "badges": {
+          "noNetwork": "Pas de Réseau Requis",
+          "secureRuntime": "Environnement d'Exécution Sécurisé"
+        }
+      },
+      "bestPractices": {
+        "title": "Meilleures Pratiques de Sécurité du Coffre-fort",
+        "items": [
+          {
+            "t": "Mot de Passe Maître Fort",
+            "d": "Utilisez 16+ caractères avec un mélange de symboles. Votre mot de passe est la seule clé de vos données."
+          },
+          {
+            "t": "Sauvegardes Régulières",
+            "d": "Gardez plusieurs copies de vos fichiers .vault sur différents disques chiffrés."
+          },
+          {
+            "t": "Verrouiller les Sessions Inactives",
+            "d": "Fermez l'onglet du navigateur immédiatement après l'extraction des fichiers sensibles."
+          }
+        ]
+      },
+      "commitment": {
+        "title": "Vos Données Restent Sous Votre Contrôle",
+        "description": "« SafeTools Vault est conçu selon des principes de confidentialité dès la conception. Vos données chiffrées restent protégées localement et ne sont jamais téléchargées sans votre permission. »"
+      },
+      "faq": {
+        "title": "FAQ du Coffre-fort",
+        "subtitle": "Tout ce que vous devez savoir sur notre protocole de chiffrement local.",
+        "items": [
+          {
+            "q": "Mon coffre-fort est-il téléchargé sur les serveurs ?",
+            "a": "Non. Tout le chiffrement et le traitement se font localement dans votre navigateur. Vos données ne quittent jamais votre appareil."
+          },
+          {
+            "q": "SafeTools peut-il lire mes données ?",
+            "a": "Impossible. Nous n'avons pas de comptes, nous ne stockons pas vos clés et nous n'avons pas accès à la mémoire de votre navigateur."
+          },
+          {
+            "q": "Que se passe-t-il si j'oublie mon mot de passe ?",
+            "a": "Puisqu'il s'agit d'un outil sans connaissance préalable, nous ne pouvons pas récupérer vos données. Veuillez utiliser un mot de passe fort que vous n'oublierez pas."
+          },
+          {
+            "q": "L'inscription à un compte est-elle requise ?",
+            "a": "Non. SafeTools est conçu pour la confidentialité et une utilité immédiate. Pas besoin de s'inscrire."
+          },
+          {
+            "q": "Puis-je utiliser le coffre-fort hors ligne ?",
+            "a": "Oui. Une fois la page chargée, il fonctionne entièrement hors ligne en tant que PWA."
+          },
+          {
+            "q": "Quelle est la sécurité d'AES-256-GCM ?",
+            "a": "C'est la norme industrielle pour les communications sécurisées, utilisée par la NSA et les réseaux financiers mondiaux."
+          }
+        ]
+      },
+      "related": {
+        "title": "Écosystème de Confidentialité",
+        "subtitle": "Explorez nos autres utilitaires de sécurité locale-first."
+      },
+      "manifesto": {
+        "title": "La confidentialité est un droit, pas une fonctionnalité.",
+        "description": "La confidentialité est un droit numérique fondamental. Nos outils sont conçus pour minimiser l'exposition des données et maximiser le contrôle de l'utilisateur. Pas de comptes. Pas de suivi. Pas de stockage cloud. Juste une protection sécurisée privilégiant la confidentialité.",
+        "button": "Explorer le Hub de Confidentialité"
+      }
+    },
+    "footer": {
+      "text": "Le coffre-fort le plus sûr est celui qui ne quitte jamais votre machine.",
+      "noTracking": "SafeTools est une zone sans traqueur. 100% privé, 100% local."
+    },
+    "toast": {
+      "secured": "Fichier sécurisé avec succès !",
+      "extracted": "Fichier extrait avec succès !",
+      "failed": "Clé de sécurité invalide ou coffre-fort corrompu.",
+      "invalidPassword": "Mot de passe incorrect. Veuillez vérifier et réessayer.",
+      "legacyVersion": "Il s'agit d'une ancienne version du coffre-fort. Veuillez utiliser l'extracteur hérité.",
+      "invalidFile": "Ce n'est pas un fichier de coffre-fort SafeTools valide."
+    }
+  }
+}

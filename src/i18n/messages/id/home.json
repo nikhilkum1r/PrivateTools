@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ Alat File Online yang Mengutamakan Privasi",
+      "description": "Konversi, kompres, edit, enkripsi, dan kelola file dengan aman di browser Anda. Tanpa unggahan, tanpa pelacakan."
+    },
+    "hero": {
+      "title": "Privasi bukanlah sebuah fitur. Ini adalah sebuah <studio>hak.</studio>",
+      "subtitle": "Alat canggih yang dibuat untuk privasi dan kecepatan",
+      "description": "SafeTools memproses file Anda langsung di perangkat Anda, memberi Anda alat yang canggih tanpa mengorbankan privasi, kontrol, atau ketenangan pikiran Anda.",
+      "getStarted": "Jelajahi alat",
+      "browseAll": "Mengapa kami membangun SafeTools",
+      "exploreButton": "Jelajahi 150+ alat",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "100% Pemrosesan Lokal",
+      "recent": "Terbaru",
+      "favorites": "Favorit"
+    },
+    "trustBar": [
+      {
+        "name": "Patuh GDPR",
+        "desc": "Tanpa pengumpulan data"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "Enkripsi tingkat militer"
+      },
+      {
+        "name": "Sandboxed",
+        "desc": "Eksekusi browser terisolasi"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "Performa latensi nol"
+      },
+      {
+        "name": "Open Core",
+        "desc": "Pemrosesan transparan"
+      }
+    ],
+    "whyWeExist": {
+      "title": "Mengapa SafeTools Ada",
+      "story": "Beberapa tahun yang lalu, seseorang yang dekat dengan kami menggunakan platform utilitas online untuk dokumen pribadi. Berbulan-bulan kemudian, data tersebut muncul online. Insiden tersebut mengungkap masalah tersembunyi di internet: banyak platform mengumpulkan, menyimpan, atau memproses file sensitif pengguna di server jarak jauh tanpa transparansi apa pun.",
+      "mission": "SafeTools diciptakan untuk mengubah hal itu.",
+      "solution": "Sebagian besar alat modern tidak perlu mengunggah file Anda ke server eksternal. Itulah sebabnya SafeTools dibangun dengan arsitektur yang mengutamakan privasi di mana pemrosesan terjadi langsung di perangkat Anda.",
+      "points": [
+        "Tanpa unggahan yang tidak perlu.",
+        "Tanpa penyimpanan tersembunyi.",
+        "Tanpa penjualan data pengguna.",
+        "Data Anda tetap menjadi milik Anda."
+      ]
+    },
+    "infra": [
+      {
+        "title": "Mesin WebAssembly",
+        "description": "Logika pemrosesan berperforma tinggi yang berjalan secara native di browser Anda. Tanpa overhead server."
+      },
+      {
+        "title": "Arsitektur Zero-Knowledge",
+        "description": "Data Anda tidak pernah didekripsi atau dilihat oleh pihak ketiga mana pun. Komputasi lokal murni."
+      },
+      {
+        "title": "Pemrosesan Instan",
+        "description": "Hilangkan waktu tunggu unggah dan unduh. Proses data berukuran GB dalam hitungan detik."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "Privasi Inti",
+        "title": "Arsitektur Zero-Knowledge",
+        "description": "Filosofi \"local-first\" kami menjamin file Anda tidak pernah diunggah, dipindai, atau disimpan di server jarak jauh mana pun."
+      },
+      "performance": {
+        "badge": "Performa",
+        "title": "Latensi di bawah satu detik",
+        "security": "Eksekusi dalam Sandbox",
+        "status": {
+          "ready": "SIAP",
+          "blocked": "DIBLOKIR",
+          "success": "SUKSES"
+        },
+        "description": "Dengan menghilangkan siklus unggah/unduh, SafeTools memberikan pemrosesan yang hampir instan bahkan untuk file besar."
+      },
+      "crossPlatform": {
+        "title": "Lintas Platform",
+        "description": "Desktop, Seluler, Tablet. Sinkronisasi sempurna di semua perangkat Anda."
+      },
+      "offlineFirst": {
+        "title": "Offline First",
+        "description": "Muat sekali, gunakan selamanya. Internet tidak diperlukan untuk sebagian besar alat."
+      }
+    },
+    "workflow": {
+      "title": "Dirancang untuk alur kerja profesional",
+      "subtitle": "SafeTools bukan sekadar kumpulan utilitas. Ini adalah ruang kerja profesional yang dirancang untuk kecepatan dan privasi.",
+      "items": [
+        {
+          "title": "Pemrosesan Batch",
+          "description": "Tangani ratusan file secara bersamaan tanpa kesulitan."
+        },
+        {
+          "title": "Perutean File Pintar",
+          "description": "Letakkan file apa pun dan kami akan secara otomatis menyarankan alat terbaik."
+        },
+        {
+          "title": "Kemampuan Offline",
+          "description": "Bekerja dari mana saja, bahkan tanpa koneksi internet aktif."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "Developer First",
+      "title": "Dibangun untuk performa",
+      "description": "SafeTools mengekspos modul pemrosesan lokal berperforma tinggi melalui arsitektur mesin yang bersih dan terpadu.",
+      "stats": {
+        "latency": "Latensi In-Memory",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// Pemrosesan selesai. 0 byte diunggah."
+    },
+    "toolsSection": {
+      "title": "Temukan alat Anda",
+      "searchPlaceholder": "Cari di 150+ alat...",
+      "openTool": "Buka alat"
+    },
+    "privacyEngine": {
+      "badge": "Status sistem: Aktif",
+      "title": "Dirancang untuk privasi mutlak",
+      "description": "Privacy Engine SafeTools berjalan 100% secara lokal.",
+      "stats": [
+        {
+          "label": "Transmisi Data",
+          "value": "0.00%"
+        },
+        {
+          "label": "Enkripsi Lokal",
+          "value": "AES-256"
+        },
+        {
+          "label": "Status Worker",
+          "value": "Sandboxed"
+        },
+        {
+          "label": "Ketergantungan Cloud",
+          "value": "Tidak Ada"
+        }
+      ],
+      "heartbeat": "Node aman aktif",
+      "wasmHeartbeat": "WASM Engine Heartbeat",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "Keamanan diverifikasi",
+        "logs": [
+          "Menginisialisasi WASM Security Sandbox... SIAP",
+          "Permintaan jaringan dicegat: DIBLOKIR (Mode lokal saja aktif)",
+          "Mengalokasikan buffer: 256MB memori sisi klien yang aman... SUKSES",
+          "Rotasi kunci AES-256 GCM selesai. Mendengarkan acara file lokal..."
+        ]
+      },
+      "sovereignty": {
+        "title": "Data Anda adalah kedaulatan Anda",
+        "description": "Berbeda dengan alat berbasis cloud, SafeTools beroperasi sepenuhnya di dalam sandbox pribadi browser Anda.",
+        "button": "Verifikasi arsitektur"
+      }
+    },
+    "featuredCats": {
+      "title": "Semua yang Anda butuhkan dalam satu platform yang aman",
+      "subtitle": "Utilitas tingkat profesional dalam lima kategori inti.",
+      "items": [
+        {
+          "title": "Alat Gambar",
+          "description": "Pemrosesan Gambar",
+          "points": [
+            "PNG ke JPG",
+            "WebP",
+            "AVIF",
+            "Hapus Latar Belakang",
+            "Peningkatan AI",
+            "Kompresi Batch",
+            "Hapus Metadata"
+          ]
+        },
+        {
+          "title": "Alat PDF",
+          "description": "Utilitas PDF",
+          "points": [
+            "Gabungkan",
+            "Pisahkan",
+            "Kompres",
+            "Buka Kunci",
+            "Pemrosesan OCR",
+            "PDF ke Word",
+            "Tanda Tangan Digital"
+          ]
+        },
+        {
+          "title": "Konversi File",
+          "description": "Konversi",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "Spreadsheet",
+            "Video",
+            "Audio",
+            "Penampil"
+          ]
+        },
+        {
+          "title": "Privasi & Keamanan",
+          "description": "Keamanan",
+          "points": [
+            "Enkripsi File",
+            "Pembersih Metadata",
+            "Kode QR",
+            "Hash",
+            "Berbagi Aman",
+            "Kata Sandi",
+            "Base64 Suite"
+          ]
+        },
+        {
+          "title": "Utilitas Developer",
+          "description": "Pengembangan",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV ke JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "Proses sederhana",
+      "title": "Cara kerjanya",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Letakkan file Anda",
+          "description": "Pilih file apa pun. Sistem kami mendeteksinya secara instan tanpa unggahan."
+        },
+        {
+          "step": "02",
+          "title": "Pemrosesan Lokal",
+          "description": "Pemrosesan langsung di dalam sandbox browser Anda."
+        },
+        {
+          "step": "03",
+          "title": "Hasil yang Aman",
+          "description": "Unduh file hasil pemrosesan Anda secara instan."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "Latensi Server"
+      },
+      {
+        "val": "100%",
+        "label": "Pemrosesan Lokal"
+      },
+      {
+        "val": "150+",
+        "label": "Alat yang Aman"
+      },
+      {
+        "val": "∞",
+        "label": "Penggunaan Gratis"
+      }
+    ],
+    "manifesto": {
+      "badge": "Manifesto",
+      "title": "Privasi bukanlah <br/> sebuah fitur.",
+      "description": "Ini adalah hak asasi manusia yang mendasar."
+    },
+    "sovereignty": {
+      "badge": "Kedaulatan Data",
+      "title": "Data Anda adalah <br/> kedaulatan Anda.",
+      "description": "Kami tidak pernah melihat data Anda.",
+      "points": [
+        "Tanpa Unggahan Cloud",
+        "Enkripsi In-Memory",
+        "Tanpa Pelacakan",
+        "Pemrosesan Sisi Klien"
+      ],
+      "foundation": {
+        "title": "Fondasi Kepercayaan",
+        "description": "Privasi harus menjadi setelan bawaan.",
+        "badge": "Yayasan Terverifikasi",
+        "verified": "Audit Keamanan Lulus"
+      }
+    },
+    "performance": {
+      "badge": "Performa Tinggi",
+      "title": "Dibangun untuk kecepatan",
+      "subtitle": "Logika pemrosesan berperforma tinggi yang berjalan secara native di browser Anda.",
+      "items": [
+        {
+          "title": "Rendering Instan",
+          "description": "Pemrosesan lokal menghilangkan latensi jaringan."
+        },
+        {
+          "title": "WASM Native",
+          "description": "Logika berjalan pada kecepatan perangkat keras."
+        },
+        {
+          "title": "Optimasi Seluler",
+          "description": "Performa lancar di semua perangkat."
+        },
+        {
+          "title": "Akselerasi Perangkat Keras",
+          "description": "Manfaatkan CPU dan GPU lokal."
+        },
+        {
+          "title": "Memori Efisien",
+          "description": "Optimasi buffer untuk file besar."
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "Tanpa ketergantungan server."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "Mengapa memilih SafeTools?",
+      "subtitle": "Keunggulan arsitektural dari pemrosesan lokal.",
+      "table": {
+        "feature": "Fitur",
+        "safe": "SafeTools",
+        "trad": "Alat Tradisional"
+      },
+      "items": [
+        {
+          "f": "Model Privasi",
+          "s": true,
+          "c": "Berbasis Cloud"
+        },
+        {
+          "f": "Lokasi Pemrosesan",
+          "s": "Perangkat Keras Lokal",
+          "c": "Server Jarak Jauh"
+        },
+        {
+          "f": "Skrip Pelacakan",
+          "s": "Tidak Ada",
+          "c": "Ekstensif"
+        },
+        {
+          "f": "Retensi File",
+          "s": "0ms (Hanya RAM)",
+          "c": "Bervariasi"
+        },
+        {
+          "f": "Latensi",
+          "s": "Seketika",
+          "c": "Tinggi (Unggah)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "Panduan Pemrosesan Lokal",
+      "subtitle": "Bagaimana SafeTools menjaga keamanan data Anda",
+      "steps": [
+        {
+          "title": "Zero-Cloud Sandbox",
+          "description": "File diproses dalam RAM browser."
+        },
+        {
+          "title": "Akselerasi Perangkat Keras",
+          "description": "Kami menggunakan perangkat keras Anda tanpa unggahan."
+        },
+        {
+          "title": "Sesi Efemeral",
+          "description": "Data dihapus saat tab ditutup."
+        }
+      ],
+      "architecturalAdvantage": "Keunggulan Arsitektural",
+      "vulnerabilityEliminated": "Menghilangkan kerentanan 'Cloud Upload' sepenuhnya.",
+      "cloud": "Cloud",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "Aman secara desain.",
+      "subtitle": "File Anda tidak pernah meninggalkan perangkat.",
+      "items": [
+        "Pemrosesan 100% sisi klien",
+        "Enkripsi lokal AES-256 GCM",
+        "Tanpa transmisi data ke server",
+        "Eksekusi browser sandboxed"
+      ],
+      "zeroTrust": {
+        "title": "Keamanan Zero-Trust.",
+        "description": "Setiap alat berjalan di sandbox terisolasi.",
+        "encryption": "Enkripsi",
+        "protocol": "Protokol"
+      }
+    },
+    "faq": {
+      "badge": "Pusat Bantuan",
+      "title": "Pertanyaan Umum",
+      "items": [
+        {
+          "q": "Apakah file saya diunggah ke server?",
+          "a": "Tidak. SafeTools memproses semuanya secara lokal di browser."
+        },
+        {
+          "q": "Apakah SafeTools gratis untuk digunakan?",
+          "a": "Ya, semua fitur inti 100% gratis."
+        },
+        {
+          "q": "Apa yang terjadi pada data setelah pemrosesan?",
+          "a": "Segera dihapus saat menutup tab."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "Mengapa memilih SafeTools?",
+      "subtitle": "Keunggulan arsitektural dari pemrosesan lokal.",
+      "table": {
+        "feature": "Fitur",
+        "safe": "SafeTools",
+        "trad": "Alat Tradisional"
+      },
+      "items": [
+        {
+          "title": "100% Pemrosesan lokal",
+          "description": "Setiap operasi berjalan di perangkat keras Anda."
+        },
+        {
+          "title": "Tanpa Pengumpulan Data",
+          "description": "Kami tidak melacak atau menyimpan apa pun."
+        },
+        {
+          "title": "Enkripsi Tingkat Militer",
+          "description": "Enkripsi AES-256 GCM lokal."
+        },
+        {
+          "title": "Performa Instan",
+          "description": "Tanpa latensi unggah/unduh."
+        },
+        {
+          "title": "Mampu Offline",
+          "description": "Sebagian besar alat berfungsi tanpa internet."
+        },
+        {
+          "title": "Lintas Platform",
+          "description": "Berfungsi di browser modern apa pun."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "Kasus Penggunaan",
+      "title": "Dibangun untuk profesional",
+      "subtitle": "Pilihan mereka yang memprioritaskan kedaulatan data.",
+      "items": [
+        {
+          "title": "Manajemen dokumen aman",
+          "description": "Proses dokumen sensitif tanpa eksposur cloud."
+        },
+        {
+          "title": "Produksi kreatif",
+          "description": "Pemrosesan media berkecepatan tinggi langsung di workstation Anda."
+        },
+        {
+          "title": "Alur kerja pengembang",
+          "description": "Utilitas sandboxed untuk transformasi data."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Umpan Balik Pengguna",
+      "title": "Dipercaya oleh para pendukung privasi",
+      "items": [
+        {
+          "quote": "Arsitektur zero-upload adalah yang dibutuhkan web.",
+          "name": "Security Pro",
+          "role": "Arsitek"
+        },
+        {
+          "quote": "Lebih cepat dari alat cloud mana pun yang pernah saya gunakan.",
+          "name": "Desainer",
+          "role": "Creative Lead"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "Performa Native",
+      "status": "Siap",
+      "title": "Dibangun untuk mobilitas.",
+      "subtitle": "Rasakan performa tingkat native di perangkat apa pun.",
+      "desktop": {
+        "title": "Desktop Power",
+        "description": "Suite studio fitur lengkap."
+      },
+      "mobile": {
+        "title": "Mobile Speed",
+        "description": "Mesin lokal yang dioptimalkan."
+      },
+      "waitlist": "Bergabung dengan Beta"
+    },
+    "securityArchitecture": {
+      "badge": "Keamanan yang Diperkuat",
+      "title": "Perangkat Keras Terisolasi.",
+      "subtitle": "Kami memanfaatkan sandboxing WASM modern.",
+      "button": "Verifikasi keamanan"
+    },
+    "communityStats": {
+      "title": "Adopsi Global",
+      "subtitle": "Digunakan oleh ribuan pengguna yang sadar.",
+      "processedCount": "100%",
+      "processed": "Pribadi & Lokal",
+      "usersCount": "500K+",
+      "users": "Pengguna Aktif"
+    },
+    "finalCta": {
+      "title": "Kendalikan data Anda.",
+      "subtitle": "Berhenti mengunggah identitas Anda.",
+      "launch": "Mulai Studio",
+      "allTools": "Jelajahi 150+ alat"
+    },
+    "pricingSection": {
+      "badge": "Gratis selamanya",
+      "title": "Privasi untuk semua orang.",
+      "description": "SafeTools 100% gratis untuk penggunaan individu.",
+      "button": "Mulai pemrosesan"
+    },
+    "smartRouting": {
+      "title": "Perutean File Pintar"
+    },
+    "techMarquee": {
+      "badge": "Performa Native",
+      "title": "Didukung oleh mesin lokal generasi berikutnya",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "Logika hampir native"
+        },
+        {
+          "name": "GPU",
+          "desc": "Akselerasi perangkat keras"
+        },
+        {
+          "name": "AES",
+          "desc": "Enkripsi aman"
+        },
+        {
+          "name": "OCR",
+          "desc": "Ekstraksi neural"
+        },
+        {
+          "name": "Worker",
+          "desc": "Komputasi multi-ulir"
+        }
+      ]
+    }
+  }
+}

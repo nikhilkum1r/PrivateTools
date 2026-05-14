@@ -1,0 +1,58 @@
+{
+  "title": "Scanner de Confidentialité",
+  "description": "Audit complet de la sécurité et de l'anonymat du navigateur. Identifiez les fuites, les empreintes traçables et les vulnérabilités de sécurité localement.",
+  "hero": {
+    "title": "Protocole",
+    "highlight": "Fantôme",
+    "subtitle": "Analysez votre ombre numérique. Découvrez ce que les sites web savent sur vous.",
+    "badge": "Vérification d'Anonymat",
+    "button": "Lancer le Scan de Confidentialité",
+    "scanning": "Scan de l'environnement du navigateur..."
+  },
+  "metrics": {
+    "ip": "Adresse IP",
+    "location": "Fuite Géographique",
+    "ua": "Agent Utilisateur",
+    "fingerprint": "Entropie de l'Empreinte",
+    "webrtc": "Fuite WebRTC",
+    "adblock": "Statut AdBlocker",
+    "cookies": "Cookies Tiers",
+    "tracking": "Protection contre le Pistage"
+  },
+  "status": {
+    "secure": "Protégé",
+    "vulnerable": "Vulnérable",
+    "active": "Activé",
+    "inactive": "Désactivé",
+    "detected": "Détecté",
+    "clean": "Aucune Fuite"
+  },
+  "sections": {
+    "network": "Couche Réseau",
+    "identity": "Identité & Empreinte",
+    "defenses": "Défenses de Sécurité"
+  },
+  "advice": {
+    "title": "Guide de Sécurisation",
+    "vpn": "Utilisez un VPN de confiance pour masquer votre IP et votre localisation.",
+    "brave": "Passez à un navigateur axé sur la confidentialité comme Brave ou Librewolf.",
+    "ublock": "Installez uBlock Origin pour un blocage avancé des trackers.",
+    "webrtc": "Désactivez WebRTC pour prévenir les fuites d'IP locale."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Comment fonctionne le Scanner de Confidentialité ?",
+        "a": "Il audite l'environnement de votre navigateur pour détecter les vulnérabilités courantes en matière de confidentialité. Cela inclut la vérification des fuites réseau (WebRTC), l'empreinte numérique du navigateur (Canvas API) et l'efficacité de votre protection contre le pistage."
+      },
+      {
+        "q": "Qu'est-ce qu'une fuite WebRTC ?",
+        "a": "WebRTC est une technologie de communication en temps réel. Cependant, elle peut parfois contourner les VPN et révéler votre véritable adresse IP locale. Notre scanner vérifie si votre navigateur laisse fuiter cette information."
+      },
+      {
+        "q": "Qu'est-ce que l'empreinte numérique du navigateur ?",
+        "a": "Le fingerprinting est une technique par laquelle les sites web collectent de petites informations sur votre navigateur (polices, résolution, matériel) pour créer un identifiant unique. Cela leur permet de vous suivre même sans cookies."
+      }
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "title": "Docs <highlight>Master</highlight> Pro",
+    "subtitle": "在您的浏览器中私密地打开、查看和编辑任何文档格式。无需上传。无需账户。100% 由 WebAssembly 驱动。",
+    "dropzone": "支持 DOCX、XLSX、PDF、PPTX、CSV、JSON、XML、HTML、MD、TXT、RTF、ODT 等格式",
+    "badges": {
+      "privacy": "零上传隐私保护",
+      "engine": "WASM 引擎",
+      "formats": "支持 20 多种格式"
+    }
+  },
+  "landing": {
+    "formats": {
+      "title": "通用格式支持",
+      "subtitle": "每种主流文档格式，均能实现像素级的完美呈现",
+      "groups": [
+        "文字处理",
+        "电子表格",
+        "演示文稿",
+        "文档与代码"
+      ]
+    },
+    "features": {
+      "title": "为什么选择 Docs Master？",
+      "subtitle": "在不牺牲隐私的情况下，提供专业级的文档智能处理。",
+      "items": [
+        {
+          "title": "零上传隐私保护",
+          "desc": "文档使用 WebAssembly 在您的浏览器中 100% 本地处理。您的文件永远不会离开您的设备。"
+        },
+        {
+          "title": "极速 WASM 引擎",
+          "desc": "硬件加速的 WebAssembly 渲染，可实现即时文档解析，即使是大而复杂的文档也不例外。"
+        },
+        {
+          "title": "高保真预览",
+          "desc": "为 DOCX、XLSX 表格、PPTX 幻灯片提供像素级完美的渲染，并提供带缩放控制的原生 PDF 嵌入。"
+        },
+        {
+          "title": "实时电子表格编辑",
+          "desc": "直接在浏览器中编辑 XLSX 和 CSV 单元格，并导出更新后的文件，无需 Microsoft Office。"
+        },
+        {
+          "title": "元数据清除",
+          "desc": "在共享前从文档中清除作者、编辑历史和个人元数据，以实现最大程度的隐私保护。"
+        },
+        {
+          "title": "提取与导出",
+          "desc": "提取单个 PDF 页面、导出编辑后的电子表格并下载原始文件——全部离线完成。"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "工作原理",
+      "subtitle": "只需三个简单的步骤即可打开任何文档",
+      "steps": [
+        {
+          "title": "放置文件",
+          "desc": "拖放或点击上传任何受支持的文档格式。"
+        },
+        {
+          "title": "即时分析",
+          "desc": "WASM 引擎以极高的保真度解析并渲染您的文档。"
+        },
+        {
+          "title": "查看、编辑和导出",
+          "desc": "浏览、搜索、编辑单元格并导出——全部在浏览器中完成，全程私密。"
+        }
+      ]
+    },
+    "professional": {
+      "title": "为每一位专业人士打造",
+      "desc": "无论您是在审查法律合同、分析财务电子表格还是向客户做演示——Docs Master 都能处理这一切，且绝不会将您的敏感数据发送到第三方服务器。",
+      "useCases": [
+        "法律文档审查",
+        "财务报表分析",
+        "学术论文阅读",
+        "客户演示准备",
+        "代码文件检查",
+        "数据导出与转换",
+        "隐私优先的存档",
+        "安全的元数据删除"
+      ],
+      "stats": [
+        {
+          "title": "随处可用",
+          "desc": "任何现代浏览器、任何操作系统，无需安装。"
+        },
+        {
+          "title": "数据保存在本地",
+          "desc": "无服务器 WASM 处理将文件保留在设备上。"
+        },
+        {
+          "title": "即时加载",
+          "desc": "WASM 引擎在毫秒内启动。"
+        },
+        {
+          "title": "丰富的渲染效果",
+          "desc": "图像、表格、字体——全部真实再现。"
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "subtitle": "您需要了解的关于 Docs Master Pro 的一切",
+      "items": [
+        {
+          "q": "我的文档会上传到服务器吗？",
+          "a": "不会。Docs Master Pro 使用 WebAssembly (WASM) 引擎在您的浏览器内存中本地处理所有内容。您的文件永远不会离开您的设备——零服务器上传。"
+        },
+        {
+          "q": "支持哪些文件格式？",
+          "a": "该工具支持 DOCX、DOC、RTF、ODT、TXT、MD (Word)、XLSX、XLS、CSV、ODS (电子表格)、PPTX、PPT、ODP (演示文稿)、PDF、JSON、XML 和 HTML 文件。"
+        },
+        {
+          "q": "我可以直接在浏览器中编辑文档吗？",
+          "a": "是的！XLSX 和 CSV 文件可以使用内置的电子表格编辑器逐单元格编辑。DOCX 文档具有富文本编辑模式，允许您修改内容并打印或保存。"
+        },
+        {
+          "q": "元数据清除是如何工作的？",
+          "a": "当您启用“清除元数据”开关时，该工具会从导出的文件中替换作者姓名、创建时间戳、编辑历史和其他个人识别信息。"
+        },
+        {
+          "q": "我可以从 PDF 中提取特定页面吗？",
+          "a": "是的。使用侧边栏中的 PDF 页面提取器指定您想要的页面，该工具将使用 pdf-lib WASM 引擎导出单页 PDF。"
+        },
+        {
+          "q": "这在移动设备上可以用吗？",
+          "a": "是的。Docs Master 完全采用响应式设计，可在现代 Android 和 iOS 浏览器上运行，不过电子表格编辑器的最佳体验是在大屏幕上。"
+        }
+      ]
+    }
+  },
+  "inspector": {
+    "title": "文档检查器",
+    "version": "通用引擎 v2.0",
+    "engine": "{type} 引擎",
+    "identity": {
+      "title": "文件身份",
+      "name": "名称",
+      "size": "大小"
+    },
+    "controls": {
+      "title": "主控制",
+      "saveSpreadsheet": "保存电子表格",
+      "saveText": "保存提取的文本",
+      "enableEdit": "启用编辑模式",
+      "disableEdit": "禁用编辑模式",
+      "print": "打印 / 保存为 PDF",
+      "exportOriginal": "导出原始文件",
+      "loadDifferent": "加载其他文件"
+    }
+  },
+  "manipulation": {
+    "pdf": {
+      "title": "PDF 操作",
+      "target": "目标页面",
+      "extract": "提取",
+      "tip": "专业提示：此工具仅使用选定的缓冲区创建一个新的 1 页 PDF。"
+    },
+    "docx": {
+      "title": "Word 渲染核心",
+      "legacy": "旧版支持",
+      "enabled": "已启用",
+      "disabled": "已禁用",
+      "tip": "如果文档渲染失败或包含复杂的结构元素，请启用此选项。"
+    }
+  },
+  "config": {
+    "title": "工作室配置",
+    "scrub": {
+      "title": "隐私清理",
+      "desc": "清除 EXIF 和身份信息"
+    },
+    "dark": {
+      "title": "工作室深色模式",
+      "desc": "切换查看器主题"
+    },
+    "guard": {
+      "title": "隐私卫士",
+      "desc": "文档完全在您的浏览器中处理。任何数据都不会到达任何服务器。"
+    }
+  },
+  "viewer": {
+    "tabs": {
+      "preview": "视觉预览",
+      "data": "原始结构"
+    },
+    "processing": "100% 本地处理",
+    "stats": {
+      "size": "文件大小",
+      "format": "格式",
+      "stability": "稳定性",
+      "engine": "引擎",
+      "verified": "已验证",
+      "wasm": "WASM v2.0"
+    },
+    "subtitles": {
+      "sheet": "表格：{name}",
+      "pdf": "文档视图",
+      "universal": "通用预览"
+    },
+    "controls": {
+      "search": "搜索文档...",
+      "visual": "视觉模式",
+      "structural": "结构模式"
+    },
+    "fallback": {
+      "active": "智能回退激活：此文档使用语义解析器渲染，以处理复杂的结构。",
+      "switch": "出于兼容性考虑，已切换到辅助渲染引擎。",
+      "failure": "关键引擎故障：此文档已加密或根本性损坏。",
+      "totalFailure": "所有渲染引擎均无法解析此文档。"
+    },
+    "pptxFailure": "视觉引擎故障：无法渲染幻灯片。请检查原始结构选项卡。",
+    "pptxTotalFailure": "视觉渲染演示文稿失败。",
+    "initialized": "{type} 引擎已初始化",
+    "placeholder": "在此输入内容...",
+    "structuralHeader": "结构元数据分析",
+    "structuralFooter": "引擎分析完成。内存地址：{address}"
+  }
+}

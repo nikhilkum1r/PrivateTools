@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ Yksityisyyttä kunnioittavaa online-työkalua tiedostoille",
+      "description": "Muunna, pakkaa, muokkaa, salaa ja hallitse tiedostoja turvallisesti selaimessasi. Ei latauksia palvelimelle, ei seurantaa."
+    },
+    "hero": {
+      "title": "Yksityisyys ei ole ominaisuus. Se on <studio>oikeus.</studio>",
+      "subtitle": "Tehokkaat työkalut rakennettu yksityisyyttä ja nopeutta varten",
+      "description": "SafeTools käsittelee tiedostosi suoraan laitteellasi, tarjoten tehokkaita työkaluja tinkimättä yksityisyydestäsi tai mielenrauhastasi.",
+      "getStarted": "Tutustu työkaluihin",
+      "browseAll": "Miksi rakensimme SafeToolsin",
+      "exploreButton": "Tutustu yli 150 työkaluun",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "100 % paikallinen käsittely",
+      "recent": "Viimeisimmät",
+      "favorites": "Suosikit"
+    },
+    "trustBar": [
+      {
+        "name": "GDPR-yhteensopiva",
+        "desc": "Ei tiedonkeruuta"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "Sotilastason salaus"
+      },
+      {
+        "name": "Hiekkalaatikko",
+        "desc": "Eristetty suoritus selaimessa"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "Viiveetön suorituskyky"
+      },
+      {
+        "name": "Open Core",
+        "desc": "Läpinäkyvä käsittely"
+      }
+    ],
+    "whyWeExist": {
+      "title": "Miksi SafeTools on olemassa",
+      "story": "Muutama vuosi sitten eräs läheisemme käytti online-palvelua henkilökohtaisten asiakirjojen käsittelyyn. Kuukausia myöhemmin nuo tiedot ilmestyivät verkkoon. Tuo tapaus paljasti internetin piilevän ongelman: monet palvelut keräävät tai käsittelevät arkaluonteisia tiedostoja etäpalvelimilla ilman läpinäkyvyyttä.",
+      "mission": "SafeTools luotiin muuttamaan tämä.",
+      "solution": "Useimmat nykyaikaiset työkalut eivät vaadi tiedostojesi lataamista ulkoisille palvelimille. Siksi SafeTools on rakennettu paikallisuus edellä -arkkitehtuuriin.",
+      "points": [
+        "Ei turhia latauksia palvelimelle.",
+        "Ei piilotettua tallennusta.",
+        "Ei käyttäjätietojen myyntiä.",
+        "Tiedostosi pysyvät sinulla."
+      ]
+    },
+    "infra": [
+      {
+        "title": "WebAssembly-moottori",
+        "description": "Tehokas käsittelylogiikka, joka toimii natiivisti selaimessasi. Ei palvelinkuormaa."
+      },
+      {
+        "title": "Zero-Knowledge-arkkitehtuuri",
+        "description": "Kolmannet osapuolet eivät koskaan näe tai pura tietojasi. Puhdasta paikallista laskentaa."
+      },
+      {
+        "title": "Välitön käsittely",
+        "description": "Poista odotusajat. Käsittele gigatavuja tietoa sekunneissa."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "Ydinyksityisyys",
+        "title": "Zero-Knowledge-arkkitehtuuri",
+        "description": "Paikallisuus edellä -filosofiamme varmistaa, ettei tiedostojasi koskaan ladata tai tallenneta etäpalvelimille."
+      },
+      "performance": {
+        "badge": "Suorituskyky",
+        "title": "Alle sekunnin viive",
+        "security": "Eristetty suoritus",
+        "status": {
+          "ready": "VALMIS",
+          "blocked": "ESTETTY",
+          "success": "VALMIS"
+        },
+        "description": "Poistamalla lataussyklin SafeTools tarjoaa lähes välittömän käsittelyn suurillekin tiedostoille."
+      },
+      "crossPlatform": {
+        "title": "Monialustainen",
+        "description": "Työpöytä, Mobiili, Tabletti. Täydellinen synkronointi kaikilla laitteillasi."
+      },
+      "offlineFirst": {
+        "title": "Offline First",
+        "description": "Lataa kerran, käytä ikuisesti. Useimmat työkalut eivät vaadi internetiä."
+      }
+    },
+    "workflow": {
+      "title": "Suunniteltu ammattilaisille",
+      "subtitle": "SafeTools ei ole vain kokoelma työkaluja, vaan ammattilaistason työtila.",
+      "items": [
+        {
+          "title": "Eräkäsittely",
+          "description": "Käsittele satoja tiedostoja kerralla vaivatta."
+        },
+        {
+          "title": "Älykäs reititys",
+          "description": "Pudota tiedosto, niin ehdotamme parhaita työkaluja."
+        },
+        {
+          "title": "Offline-ominaisuudet",
+          "description": "Työskentele mistä tahansa, jopa ilman nettiyhteyttä."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "Kehittäjä edellä",
+      "title": "Rakennettu suorituskykyä varten",
+      "description": "SafeTools tarjoaa tehokkaita paikallisia käsittelymoduuleja selkeän arkkitehtuurin kautta.",
+      "stats": {
+        "latency": "In-Memory Latency",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// Käsittely valmis. 0 tavua ladattu palvelimelle."
+    },
+    "toolsSection": {
+      "title": "Löydä työkalusi",
+      "searchPlaceholder": "Hae yli 150 työkalusta...",
+      "openTool": "Avaa työkalu"
+    },
+    "privacyEngine": {
+      "badge": "Järjestelmän tila: Aktiivinen",
+      "title": "Suunniteltu täydellistä yksityisyyttä varten",
+      "description": "SafeTools Privacy Engine toimii 100 % paikallisesti.",
+      "stats": [
+        {
+          "label": "Tiedonsiirto",
+          "value": "0.00 %"
+        },
+        {
+          "label": "Paikallinen salaus",
+          "value": "AES-256"
+        },
+        {
+          "label": "Workerin tila",
+          "value": "Hiekkalaatikko"
+        },
+        {
+          "label": "Pilviriippuvuus",
+          "value": "Ei ole"
+        }
+      ],
+      "heartbeat": "Suojattu solmu aktiivinen",
+      "wasmHeartbeat": "WASM Engine Heartbeat",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "Turvallisuus varmistettu",
+        "logs": [
+          "Alustetaan WASM Security Sandbox... VALMIS",
+          "Verkkopyyntö estetty: ESTETTY (Vain paikallinen tila päällä)",
+          "Varataan puskuri: 256MB suojattua muistia... VALMIS",
+          "AES-256 GCM -avainten vaihto valmis. Kuunnellaan paikallisia tapahtumia..."
+        ]
+      },
+      "sovereignty": {
+        "title": "Tietosi ovat omiasi",
+        "description": "Toisin kuin pilvityökalut, SafeTools toimii kokonaan selaimesi yksityisessä hiekkalaatikossa.",
+        "button": "Varmista arkkitehtuuri"
+      }
+    },
+    "featuredCats": {
+      "title": "Kaikki tarvitsemasi yhdellä alustalla",
+      "subtitle": "Ammattilaistason työkalut viidessä kategoriassa.",
+      "items": [
+        {
+          "title": "Kuvatyökalut",
+          "description": "Kuvankäsittely",
+          "points": [
+            "PNG -> JPG",
+            "WebP",
+            "AVIF",
+            "Taustan poisto",
+            "AI-parannus",
+            "Eräpakkaus",
+            "Metatiedot"
+          ]
+        },
+        {
+          "title": "PDF-työkalut",
+          "description": "PDF-työkalut",
+          "points": [
+            "Yhdistä",
+            "Jaa",
+            "Pakkaa",
+            "Avaa lukitus",
+            "OCR",
+            "PDF -> Word",
+            "Allekirjoitus"
+          ]
+        },
+        {
+          "title": "Tiedostomuunnokset",
+          "description": "Muunnokset",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "Taulukot",
+            "Video",
+            "Audio",
+            "Katselu"
+          ]
+        },
+        {
+          "title": "Yksityisyys & Turva",
+          "description": "Turvallisuus",
+          "points": [
+            "Salaus",
+            "Metatietojen puhdistus",
+            "QR-koodi",
+            "Hash",
+            "Turvallinen jako",
+            "Salasana",
+            "Base64"
+          ]
+        },
+        {
+          "title": "Kehittäjän työkalut",
+          "description": "Kehitys",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV -> JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "Yksinkertainen prosessi",
+      "title": "Kuinka se toimii",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Pudota tiedosto",
+          "description": "Valitse tiedosto. Järjestelmämme havaitsee sen heti ilman latausta."
+        },
+        {
+          "step": "02",
+          "title": "Paikallinen käsittely",
+          "description": "Käsittely tapahtuu suoraan selaimesi hiekkalaatikossa."
+        },
+        {
+          "step": "03",
+          "title": "Turvallinen tulos",
+          "description": "Lataa käsitelty tiedosto välittömästi."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "Palvelinviive"
+      },
+      {
+        "val": "100 %",
+        "label": "Paikallinen käsittely"
+      },
+      {
+        "val": "150+",
+        "label": "Turvallista työkalua"
+      },
+      {
+        "val": "∞",
+        "label": "Käyttövapaus"
+      }
+    ],
+    "manifesto": {
+      "badge": "Manifesti",
+      "title": "Yksityisyys ei ole <br/> ominaisuus.",
+      "description": "Se on perustavanlaatuinen ihmisoikeus."
+    },
+    "sovereignty": {
+      "badge": "Tietosouvereniteetti",
+      "title": "Tietosi ovat <br/> omiasi.",
+      "description": "Emme koskaan näe tietojasi.",
+      "points": [
+        "Ei pilvilatauksia",
+        "Muistinsisäinen salaus",
+        "Nollaseuranta",
+        "Asiakaspuolen käsittely"
+      ],
+      "foundation": {
+        "title": "Luottamuksen perusta",
+        "description": "Yksityisyyden tulee olla oletusarvo.",
+        "badge": "Säätiö varmistettu",
+        "verified": "Turvatarkastus läpäisty"
+      }
+    },
+    "performance": {
+      "badge": "Suuri suorituskyky",
+      "title": "Rakennettu nopeutta varten",
+      "subtitle": "Tehokas käsittelylogiikka, joka toimii natiivisti selaimessasi.",
+      "items": [
+        {
+          "title": "Välitön renderöinti",
+          "description": "Paikallinen käsittely poistaa verkkoviiveet."
+        },
+        {
+          "title": "WASM Native",
+          "description": "Logiikka toimii laitteiston nopeudella."
+        },
+        {
+          "title": "Mobiilioptimoitu",
+          "description": "Sujuva suorituskyky kaikilla laitteilla."
+        },
+        {
+          "title": "Laitteistokiihdytys",
+          "description": "Hyödynnä paikallista CPU:ta ja GPU:ta."
+        },
+        {
+          "title": "Tehokas muisti",
+          "description": "Optimoitu muistinhallinta suurille tiedostoille."
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "Ei palvelinriippuvuutta."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "Miksi valita SafeTools?",
+      "subtitle": "Paikallisen käsittelyn arkkitehtuurinen etu.",
+      "table": {
+        "feature": "Ominaisuus",
+        "safe": "SafeTools",
+        "trad": "Perinteiset työkalut"
+      },
+      "items": [
+        {
+          "f": "Yksityisyysmalli",
+          "s": true,
+          "c": "Pilvipohjainen"
+        },
+        {
+          "f": "Käsittelypaikka",
+          "s": "Paikallinen laite",
+          "c": "Etäpalvelimet"
+        },
+        {
+          "f": "Seurantaskriptit",
+          "s": "Ei ole",
+          "c": "Laajat"
+        },
+        {
+          "f": "Tiedostojen säilytys",
+          "s": "0ms (Vain RAM)",
+          "c": "Vaihteleva"
+        },
+        {
+          "f": "Viive",
+          "s": "Välitön",
+          "c": "Suuri (Lataus)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "Paikallisen käsittelyn opas",
+      "subtitle": "Kuinka SafeTools pitää tietosi turvassa",
+      "steps": [
+        {
+          "title": "Zero-Cloud Sandbox",
+          "description": "Tiedostot käsitellään selaimen RAM-muistissa."
+        },
+        {
+          "title": "Laitteistokiihdytys",
+          "description": "Käytämme laitteistoasi ilman latauksia."
+        },
+        {
+          "title": "Väliaikaiset istunnot",
+          "description": "Tiedot pyyhitään heti, kun välilehti suljetaan."
+        }
+      ],
+      "architecturalAdvantage": "Arkkitehtuurinen etu",
+      "vulnerabilityEliminated": "Poistaa pilvilatauksen haavoittuvuuden kokonaan.",
+      "cloud": "Pilvi",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "Turvallinen jo suunnitteluvaiheessa.",
+      "subtitle": "Tiedostosi eivät koskaan lähde laitteeltasi.",
+      "items": [
+        "100 % asiakaspuolen käsittely",
+        "Paikallinen AES-256 GCM -salaus",
+        "Nolla tiedonsiirtoa palvelimelle",
+        "Eristetty suoritus selaimessa"
+      ],
+      "zeroTrust": {
+        "title": "Zero-Trust-turvallisuus.",
+        "description": "Jokainen työkalu toimii eristetyssä hiekkalaatikossa.",
+        "encryption": "Salaus",
+        "protocol": "Protokolla"
+      }
+    },
+    "faq": {
+      "badge": "Help Center",
+      "title": "Usein kysytyt kysymykset",
+      "items": [
+        {
+          "q": "Ladataanko tiedostoni palvelimelle?",
+          "a": "Ei. SafeTools käsittelee kaiken paikallisesti selaimessa."
+        },
+        {
+          "q": "Onko SafeTools ilmainen?",
+          "a": "Kyllä, kaikki ydinominaisuudet ovat 100 % ilmaisia."
+        },
+        {
+          "q": "Mitä tiedoille tapahtuu käsittelyn jälkeen?",
+          "a": "Ne pyyhitään heti, kun suljet välilehden."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "Miksi valita SafeTools?",
+      "subtitle": "Paikallisen käsittelyn arkkitehtuurinen etu.",
+      "table": {
+        "feature": "Ominaisuus",
+        "safe": "SafeTools",
+        "trad": "Perinteiset työkalut"
+      },
+      "items": [
+        {
+          "title": "100 % paikallinen käsittely",
+          "description": "Jokainen toiminto suoritetaan laitteistollasi."
+        },
+        {
+          "title": "Ei tiedonkeruuta",
+          "description": "Emme seuraa tai tallenna mitään."
+        },
+        {
+          "title": "Sotilastason salaus",
+          "description": "Paikallinen AES-256 GCM -salaus."
+        },
+        {
+          "title": "Välitön suorituskyky",
+          "description": "Ei latausviiveitä palvelimelle."
+        },
+        {
+          "title": "Offline-valmius",
+          "description": "Useimmat työkalut toimivat ilman internetiä."
+        },
+        {
+          "title": "Monialustainen",
+          "description": "Toimii millä tahansa nykyaikaisella selaimella."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "Käyttökohteet",
+      "title": "Rakennettu ammattilaisille",
+      "subtitle": "Valinta niille, jotka arvostavat tietosouvereniteettia.",
+      "items": [
+        {
+          "title": "Turvallinen asiakirjahallinta",
+          "description": "Käsittele arkaluonteisia asiakirjoja ilman pilvialttiutta."
+        },
+        {
+          "title": "Luova tuotanto",
+          "description": "Nopea median käsittely suoraan työasemallasi."
+        },
+        {
+          "title": "Kehittäjän työnkulut",
+          "description": "Eristetyt työkalut datan muuntamiseen."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Käyttäjäpalaute",
+      "title": "Yksityisyyden puolustajien luottama",
+      "items": [
+        {
+          "quote": "Zero-upload-arkkitehtuuri on juuri sitä, mitä verkko tarvitsee.",
+          "name": "Security Pro",
+          "role": "Arkkitehti"
+        },
+        {
+          "quote": "Nopeampi kuin mikään käyttämäni pilvityökalu.",
+          "name": "Suunnittelija",
+          "role": "Creative Lead"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "Natiivi suorituskyky",
+      "status": "Valmis",
+      "title": "Rakennettu liikkuvuutta varten.",
+      "subtitle": "Koe natiivitason suorituskyky kaikilla laitteilla.",
+      "desktop": {
+        "title": "Työpöytäteho",
+        "description": "Täysi studio-ohjelmisto."
+      },
+      "mobile": {
+        "title": "Mobiilinopeus",
+        "description": "Optimoidut paikalliset moottorit."
+      },
+      "waitlist": "Liity Betaan"
+    },
+    "securityArchitecture": {
+      "badge": "Turvallisuusvahvistettu",
+      "title": "Laitteistoeristetty.",
+      "subtitle": "Hyödynnämme modernia WASM-hiekkalaatikointia.",
+      "button": "Varmista turvallisuus"
+    },
+    "communityStats": {
+      "title": "Globaali käyttö",
+      "subtitle": "Tuhansien tietoisuutta arvostavien käyttämien.",
+      "processedCount": "100 %",
+      "processed": "Yksityinen & Paikallinen",
+      "usersCount": "500K+",
+      "users": "Aktiivisia käyttäjiä"
+    },
+    "finalCta": {
+      "title": "Hallitse tietojasi.",
+      "subtitle": "Lopeta identiteettisi lataaminen palvelimille.",
+      "launch": "Käynnistä Studio",
+      "allTools": "Tutustu yli 150 työkaluun"
+    },
+    "pricingSection": {
+      "badge": "Ilmainen ikuisesti",
+      "title": "Yksityisyys kaikille.",
+      "description": "SafeTools on 100 % ilmainen yksityiskäyttöön.",
+      "button": "Aloita käsittely"
+    },
+    "smartRouting": {
+      "title": "Älykäs reititys"
+    },
+    "techMarquee": {
+      "badge": "Natiivi suorituskyky",
+      "title": "Seuraavan sukupolven paikallisten moottoreiden vauhdittama",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "Lähes natiivi logiikka"
+        },
+        {
+          "name": "GPU",
+          "desc": "Laitteistokiihdytys"
+        },
+        {
+          "name": "AES",
+          "desc": "Turvallinen salaus"
+        },
+        {
+          "name": "OCR",
+          "desc": "Hermoverkkouutto"
+        },
+        {
+          "name": "Worker",
+          "desc": "Monisäikeinen laskenta"
+        }
+      ]
+    }
+  }
+}

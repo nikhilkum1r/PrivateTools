@@ -1,0 +1,343 @@
+{
+  "metadataCleaner": {
+    "metadata": {
+      "title": "Nettoyeur de Métadonnées | Supprimer EXIF & GPS | SafeTools",
+      "description": "Supprimez les métadonnées cachées des images, documents et fichiers en toute sécurité grâce au traitement local dans le navigateur. 100% local, aucun téléchargement.",
+      "og_title": "Nettoyeur de Métadonnées | Supprimer EXIF & GPS | SafeTools",
+      "og_description": "Supprimez les métadonnées cachées des images, documents et fichiers en toute sécurité grâce au traitement local dans le navigateur. 100% local, aucun téléchargement.",
+      "keywords": "nettoyeur de métadonnées, suppresseur exif, supprimer données gps, confidentialité photos, nettoyeur de documents, outil métadonnées navigateur, nettoyeur exif local, suppression sécurisée métadonnées",
+      "ogTitle": "Nettoyeur de Métadonnées | SafeTools",
+      "ogDescription": "Nettoyez localement les métadonnées cachées des fichiers avant de les partager."
+    },
+    "hero": {
+      "badge": "Nettoyage de Métadonnées de Qualité Industrielle",
+      "title": "Nettoyeur de Métadonnées",
+      "description": "Supprimez les métadonnées cachées des images, documents et fichiers en toute sécurité grâce à un traitement axé sur la confidentialité depuis le navigateur.",
+      "badges": {
+        "local": "Traitement Local",
+        "zero": "Zéro Téléchargement",
+        "no_tracking": "Aucun Suivi",
+        "instant": "Nettoyage Instantané",
+        "browser": "Basé sur Navigateur"
+      },
+      "footer": "Protégez votre vie privée en supprimant les métadonnées cachées des fichiers avant de les partager."
+    },
+    "engine": {
+      "init": {
+        "title": "Initialiser la Séquence d'Actifs",
+        "desc": "Déposez des fichiers pour détecter et supprimer les données de suivi intégrées."
+      },
+      "dropzone": {
+        "title": "Télécharger des Fichiers pour le Nettoyage",
+        "desc": "Images, Vidéos, PDFs, Audio"
+      },
+      "queue": {
+        "title": "File d'Attente des Actifs",
+        "add_more": "Ajouter Plus d'Actifs",
+        "scrub_all": "NETTOYER TOUS LES ACTIFS",
+        "status": {
+          "clean": "PROPRE",
+          "risk": "RISQUE {score}%"
+        }
+      },
+      "inspector": {
+        "download": "TÉLÉCHARGEMENT SÉCURISÉ",
+        "binary_restricted": "Aperçu du Flux Binaire Restreint"
+      },
+      "logic": {
+        "title": "Matrice Logique",
+        "wasm_active": "WASM ACTIF",
+        "detected_label": "Métadonnées Détectées",
+        "no_markers": "Aucun Marqueur Détecté",
+        "protocol": "Protocole de Nettoyage",
+        "options": {
+          "gps": "Supprimer GPS/Emplacement",
+          "camera": "Supprimer Specs Caméra",
+          "software": "Supprimer Signature Logiciel"
+        }
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Fonctionnalités de Protection des Métadonnées",
+        "subtitle": "Des contrôles de confidentialité de qualité industrielle intégrés directement dans votre navigateur.",
+        "items": [
+          {
+            "title": "Suppression EXIF",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Nettoyage GPS",
+            "icon": "Globe"
+          },
+          {
+            "title": "Infos Caméra",
+            "icon": "Camera"
+          },
+          {
+            "title": "Purge Documents",
+            "icon": "FileText"
+          },
+          {
+            "title": "Côté Navigateur",
+            "icon": "Cpu"
+          },
+          {
+            "title": "Traitement par Lots",
+            "icon": "Layers"
+          },
+          {
+            "title": "Local Sécurisé",
+            "icon": "Shield"
+          },
+          {
+            "title": "Téléchargement Instantané",
+            "icon": "Download"
+          }
+        ]
+      },
+      "educational": {
+        "whatIs": {
+          "badge": "Guide Éducatif",
+          "title": "Que sont les Métadonnées ?",
+          "description": "Les métadonnées sont des informations cachées stockées dans des fichiers, des images et des documents qui peuvent révéler des détails sensibles tels que les informations sur l'appareil, les données de localisation, les horodatages, les versions de logiciels et les détails de l'auteur.",
+          "matters": {
+            "title": "Pourquoi C'est Important",
+            "desc": "Chaque fois que vous prenez une photo ou enregistrez un document, votre appareil intègre silencieusement des empreintes personnelles dans le fichier. Ces données cachées voyagent avec le fichier partout où il va."
+          },
+          "payload": {
+            "title": "Exemple de Charge Utile Cachée",
+            "items": [
+              {
+                "k": "Latitude",
+                "v": "40.7128° N"
+              },
+              {
+                "k": "Longitude",
+                "v": "74.0060° W"
+              },
+              {
+                "k": "Appareil",
+                "v": "iPhone 15 Pro"
+              },
+              {
+                "k": "Auteur",
+                "v": "John Doe"
+              }
+            ]
+          }
+        },
+        "risks": {
+          "title": "Pourquoi les Métadonnées Peuvent Être Dangereuses",
+          "subtitle": "La menace silencieuse de l'exposition des données lors du partage de fichiers.",
+          "items": [
+            {
+              "title": "Fuites de Localisation GPS",
+              "desc": "Les photos prises sur des smartphones intègrent les coordonnées GPS exactes de votre domicile ou lieu de travail."
+            },
+            {
+              "title": "Empreinte Digitale de l'Appareil",
+              "desc": "Les modèles d'appareils photo, les numéros de série et les versions du système d'exploitation peuvent être utilisés pour vous suivre à travers les téléchargements."
+            },
+            {
+              "title": "Identification de l'Auteur",
+              "desc": "Les documents PDF et Word stockent le nom du créateur et l'organisation par défaut."
+            }
+          ]
+        },
+        "formats": {
+          "title": "Formats de Fichiers Pris en Charge",
+          "subtitle": "Couverture complète pour tous vos médias et documents.",
+          "groups": [
+            {
+              "cat": "Images",
+              "formats": [
+                "JPG / JPEG",
+                "PNG",
+                "WEBP",
+                "TIFF"
+              ]
+            },
+            {
+              "cat": "Documents",
+              "formats": [
+                "PDF",
+                "DOCX",
+                "XLSX",
+                "PPTX"
+              ]
+            },
+            {
+              "cat": "Médias",
+              "formats": [
+                "MP3",
+                "MP4",
+                "MOV",
+                "WAV"
+              ]
+            }
+          ]
+        },
+        "types": {
+          "title": "Données Cachées que Nous Pouvons Supprimer",
+          "items": [
+            "Coordonnées GPS",
+            "Modèle de Caméra",
+            "Fabricant de l'Appareil",
+            "Horodatages",
+            "Noms d'Auteur",
+            "Logiciel d'Édition",
+            "Métadonnées de Droit d'Auteur",
+            "Historique des Fichiers",
+            "Miniatures Intégrées",
+            "Historique de Localisation"
+          ]
+        },
+        "how_it_works": {
+          "title": "Comment Fonctionne le Nettoyage des Métadonnées",
+          "steps": [
+            {
+              "s": "01",
+              "t": "Télécharger des fichiers localement",
+              "d": "Sélectionnez des fichiers par glisser-déposer. Ils ne quittent jamais votre appareil."
+            },
+            {
+              "s": "02",
+              "t": "Détecter les métadonnées cachées",
+              "d": "Notre moteur WASM scanne la structure binaire à la recherche de balises connues."
+            },
+            {
+              "s": "03",
+              "t": "Supprimer les métadonnées sélectionnées",
+              "d": "Les balises sont supprimées ou randomisées selon les paramètres de votre matrice logique."
+            },
+            {
+              "s": "04",
+              "t": "Télécharger en toute sécurité",
+              "d": "Enregistrez instantanément le fichier propre sur votre système."
+            }
+          ],
+          "localNote": "Les fichiers sont traités localement dans votre navigateur et ne sont jamais téléchargés sur des serveurs."
+        },
+        "privacy": {
+          "title": "Traitement des Fichiers Axé sur la Confidentialité",
+          "items": [
+            "Nettoyage Côté Navigateur",
+            "Pas de Téléchargement sur le Cloud",
+            "Aucune Rétention de Fichiers",
+            "Traitement Local Sécurisé",
+            "Capacité Hors Ligne",
+            "Zéro Suivi"
+          ]
+        },
+        "use_cases": {
+          "title": "Cas d'Utilisation Courants de Confidentialité",
+          "items": [
+            "Téléchargements sur les Réseaux Sociaux",
+            "Protection du Journalisme",
+            "Partage de Documents Commerciaux",
+            "Assainissement de Documents Légaux",
+            "Enquêtes de Cybersécurité",
+            "Confidentialité de la Recherche",
+            "Partage Anonyme",
+            "Confidentialité de la Photographie"
+          ]
+        },
+        "comparison": {
+          "title": "Pourquoi Utiliser le Nettoyeur de Métadonnées SafeTools ?",
+          "headers": [
+            "Caractéristique",
+            "Outils Traditionnels",
+            "SafeTools"
+          ],
+          "rows": [
+            {
+              "f": "Traitement Local",
+              "t": "Rare",
+              "s": "Oui"
+            },
+            {
+              "f": "Téléchargement de Fichier Requis",
+              "t": "Habituellement",
+              "s": "Non"
+            },
+            {
+              "f": "Scripts de Suivi",
+              "t": "Parfois",
+              "s": "Non"
+            },
+            {
+              "f": "Basé sur Navigateur",
+              "t": "Partiel",
+              "s": "Complet"
+            },
+            {
+              "f": "Axé sur la Confidentialité",
+              "t": "Varie",
+              "s": "Oui"
+            }
+          ]
+        },
+        "warning": {
+          "badge": "Rappel Important de Confidentialité",
+          "title": "Limites des Métadonnées",
+          "items": [
+            "Certaines plateformes peuvent ajouter de nouvelles métadonnées après le téléchargement.",
+            "Vérifiez toujours les fichiers nettoyés localement si l'anonymat est critique.",
+            "La suppression des métadonnées améliore la confidentialité mais ne garantit pas un anonymat absolu."
+          ]
+        }
+      },
+      "faq": {
+        "title": "Questions Fréquemment Posées",
+        "description": "Tout ce que vous devez savoir sur la protection de votre identité numérique en supprimant les métadonnées.",
+        "items": [
+          {
+            "q": "Quels types de métadonnées peuvent être supprimés de mes fichiers ?",
+            "a": "Notre Nettoyeur de Métadonnées peut supprimer les données EXIF (modèle d'appareil photo, paramètres), les coordonnées de localisation GPS, les informations sur l'auteur et les propriétés cachées des documents et PDF."
+          },
+          {
+            "q": "Pourquoi devrais-je supprimer les métadonnées avant de partager des photos ?",
+            "a": "Les photos contiennent souvent des coordonnées GPS cachées et des horodatages qui peuvent révéler votre emplacement exact. La suppression de ces métadonnées est une étape cruciale pour protéger votre vie privée en ligne."
+          }
+        ]
+      },
+      "related": {
+        "title": "Outils de Sécurité Associés",
+        "subtitle": "Complétez votre flux de travail de confidentialité avec notre suite sécurisée.",
+        "items": [
+          {
+            "n": "File Vault",
+            "d": "Chiffrement de fichiers de qualité militaire."
+          },
+          {
+            "n": "Steganography",
+            "d": "Cacher des messages dans des images."
+          },
+          {
+            "n": "Secure Notes",
+            "d": "Notes chiffrées dans le navigateur."
+          },
+          {
+            "n": "Password Generator",
+            "d": "Générer des mots de passe hors ligne forts."
+          },
+          {
+            "n": "Strength Checker",
+            "d": "Auditer la sécurité de votre mot de passe."
+          },
+          {
+            "n": "File Shredder",
+            "d": "Supprimer définitivement les traces numériques."
+          }
+        ]
+      },
+      "manifesto": {
+        "badge": "Confidentialité par Défaut",
+        "title": "La Confidentialité est un Droit.",
+        "description": "\"SafeTools crée des outils de confidentialité basés sur le navigateur conçus pour minimiser l'exposition des données et maximiser le contrôle des utilisateurs.\""
+      },
+      "cta": "Supprimez les données cachées. Protégez votre vie privée. Gardez le contrôle de votre empreinte numérique."
+    }
+  }
+}

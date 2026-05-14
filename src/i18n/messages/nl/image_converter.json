@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Image Converter Studio | 150+ formaten ondersteund | SafeTools",
+      "description": "Converteer afbeeldingen tussen 150+ formaten lokaal in uw browser. Ondersteuning voor HEIC, WebP, AVIF, RAW, PDF en meer. 100% privé."
+    },
+    "hero": {
+      "title": "Universele afbeelding-converteerder.",
+      "titleSpecific": "Converteer {from} naar {to}.",
+      "description": "Converteer afbeeldingen tussen 150+ formaten lokaal in uw browser. Geen server-uploads.",
+      "descriptionSpecific": "Converteer {from} naar {to} direct. Privacy-eerst lokale verwerking zonder uploads.",
+      "engine": "Lokale hardwareverwerking",
+      "privateConverter": "Private Browser Engine"
+    },
+    "benefits": {
+      "local": "Lokale Engine",
+      "zero": "Geen Upload",
+      "no_tracking": "Geen Tracking",
+      "fast": "Ultrasnel",
+      "browser": "In de browser"
+    },
+    "performance": {
+      "title": "High-Performance Engine",
+      "subtitle": "GPU-versnelde browserverwerking",
+      "items": [
+        {
+          "title": "150+ Formaten",
+          "description": "Ondersteuning voor alles van HEIC und RAW tot legacy bitmapformaten."
+        },
+        {
+          "title": "Batchverwerking",
+          "description": "Converteer honderden afbeeldingen tegelijkertijd zonder serverlimieten te bereiken."
+        },
+        {
+          "title": "Verliesvrije kwaliteit",
+          "description": "Geavanceerde resampling-algoritmen behouden elke pixel van uw originele gegevens."
+        },
+        {
+          "title": "Lokale OCR",
+          "description": "Extraheer tekstlagen tijdens de conversie met ingebouwde herkenningsengines."
+        },
+        {
+          "title": "Metagegevenscontrole",
+          "description": "Kies ervoor om EXIF-, GPS- en IPTC-gegevenslagen te verwijderen of te behouden."
+        },
+        {
+          "title": "Browserprivacy",
+          "description": "Uw bestanden verlaten nooit uw apparaat. 100% veilige offline-ready architectuur."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Conversiewerkruimte",
+      "assets": "{count} Assets",
+      "telemetry": "Lokale hardwareverwerking",
+      "savings": "Huidige besparing",
+      "smaller": "{size} kleiner",
+      "impact": "Wereldwijde impact",
+      "saved": "{size} bespaard",
+      "clear": "Werkruimte wissen",
+      "addMore": "Bestanden toevoegen",
+      "exportAll": "Alles exporteren (ZIP)"
+    },
+    "config": {
+      "title": "Globale instellingen",
+      "format": "Doelformaat",
+      "selectFormat": "Selecteer formaat",
+      "search": "Zoek in 150+ formaten...",
+      "quality": "Kwaliteit & Compressie",
+      "resizeW": "Breedte wijzigen",
+      "resizeH": "Hoogte wijzigen",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Metagegevenscontrole",
+      "strip": "EXIF/GPS verwijderen (Ingeschakeld)",
+      "wasm": "WASM Engine",
+      "accelerated": "Hardwareversneld",
+      "targetSize": "Doelbestandsgrootte",
+      "limit": "Beperk tot {size}KB",
+      "optimized": "Geoptimaliseerde kwaliteit"
+    },
+    "categories": {
+      "regular": "Standaardformaten",
+      "web": "Web-geoptimaliseerd",
+      "modern": "Next-Gen formaten",
+      "print": "Professionele druk",
+      "design": "Design-assets",
+      "game": "Game-texturen",
+      "raw": "RAW-cameragegevens",
+      "scientific": "Wetenschappelijke beeldvorming",
+      "vector": "Vectorgrafieken",
+      "hdr": "High Dynamic Range",
+      "document": "Kantoor & Documenten",
+      "legacy": "Legacy formaten"
+    },
+    "queue": {
+      "title": "Conversiewachtrij",
+      "converted": "Geconverteerd",
+      "in": "IN",
+      "out": "UIT",
+      "smaller": "{percent}% kleiner",
+      "download": "Download",
+      "convert": "Converteer",
+      "convert_all": "Converteer alle bestanden"
+    },
+    "toast": {
+      "noProcessed": "Geen verwerkte bestanden om te downloaden.",
+      "copied": "Afbeelding naar klembord gekopieerd!",
+      "clipboardFailed": "Afbeelding naar klembord kopiëren mislukt."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Lokale Engine",
+        "zero": "Geen Upload",
+        "no_tracking": "Geen Tracking",
+        "fast": "Ultrasnel",
+        "browser": "In de browser"
+      },
+      "performance": {
+        "title": "High-Performance Engine",
+        "subtitle": "GPU-versnelde browserverwerking",
+        "items": [
+          {
+            "title": "150+ Formaten",
+            "description": "Ondersteuning voor alles van HEIC und RAW tot legacy bitmapformaten."
+          },
+          {
+            "title": "Batchverwerking",
+            "description": "Converteer honderden afbeeldingen tegelijkertijd zonder serverlimieten te bereiken."
+          },
+          {
+            "title": "Verliesvrije kwaliteit",
+            "description": "Geavanceerde resampling-algoritmen behouden elke pixel van uw originele gegevens."
+          },
+          {
+            "title": "Lokale OCR",
+            "description": "Extraheer tekstlagen tijdens de conversie met ingebouwde herkenningsengines."
+          },
+          {
+            "title": "Metagegevenscontrole",
+            "description": "Kies ervoor om EXIF-, GPS- en IPTC-gegevenslagen te verwijderen of te behouden."
+          },
+          {
+            "title": "Browserprivacy",
+            "description": "Uw bestanden verlaten nooit uw apparaat. 100% veilige offline-ready architectuur."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Ondersteunde formaten",
+        "compatibility": "Universele compatibiliteitsmatrix",
+        "input": "Inputformaten",
+        "output": "Outputformaten",
+        "freeTitle": "100% voor altijd gratis",
+        "freeDesc": "SafeTools is een gratis utility suite. Geen abonnementen, geen verborgen kosten, geen creditcard vereist.",
+        "optimizedTitle": "Verliesvrije optimalisatie",
+        "optimizedDesc": "Onze engine maakt gebruik van geavanceerde resampling om ervoor te zorgen dat uw afbeeldingen scherp blijven, zelfs na conversie.",
+        "precisionTitle": "Browserprecisie",
+        "precisionDesc": "Door lokaal te draaien, elimineren we de artefacten veroorzaakt door netwerkgebaseerde beeldverwerking.",
+        "popularTitle": "Populaire conversies",
+        "popularSubtitle": "Directe lokale verwerking voor veelvoorkomende webtaken",
+        "moreFormats": "150+ andere formaten",
+        "moreDesc": "Op zoek naar iets anders? SafeTools ondersteunt bijna elk bestaand afbeeldingsformaat.",
+        "start": "Terug naar boven"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Tussen hoeveel formaten kan ik converteren?",
+            "a": "U kunt converteren tussen 150+ afbeeldingsformaten, waaronder moderne formaten zoals WebP, AVIF en HEIC, evenals professionele formaten zoals PSD-, TIFF- en RAW-bestanden."
+          },
+          {
+            "q": "Verlies ik beeldkwaliteit tijdens de conversie?",
+            "a": "Wij maken gebruik van hoogwaardige encoding engines. U kunt handmatig de kwaliteits-/compressie-instellingen aanpassen om ervoor te zorgen dat uw output er precies zo uitziet als u wilt, of u nu optimaliseert voor web of print."
+          },
+          {
+            "q": "Kan ik HEIC-foto's van mijn iPhone naar JPG converteren?",
+            "a": "Ja! Onze converteerder is perfect voor het omzetten van HEIC-bestanden naar breed compatibele JPG- of PNG-formaten direct in uw browser zonder ze naar een server te uploaden."
+          },
+          {
+            "q": "Is er een limiet aan het aantal bestanden dat ik kan converteren?",
+            "a": "Nee. U kunt zoveel bestanden converteren als u wilt, één voor één of in batches, volledig gratis."
+          }
+        ],
+        "title": "Veelgestelde vragen",
+        "description": "Alles wat u moet weten over onze privacy-eerst tool."
+      }
+    }
+  }
+}

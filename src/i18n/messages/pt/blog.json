@@ -1,0 +1,63 @@
+{
+  "blog": {
+    "hero": {
+      "badge": "Privacy Intelligence",
+      "title": "The SafeTools <br></br> <span class=\"text-primary\">Journal.",
+      "subtitle": "Deep dives into browser security, WebAssembly, and the future of local-first computing.",
+      "searchPlaceholder": "Search intelligence reports..."
+    },
+    "posts": [
+      {
+        "slug": "why-local-first-matters",
+        "title": "Why Local-First Computing is the Future of Privacy",
+        "excerpt": "Traditional cloud processing introduces unnecessary risk. Discover how moving logic to the browser eliminates entire classes of data breaches.",
+        "date": "2026-05-01",
+        "readTime": "6 min read",
+        "category": "Security"
+      },
+      {
+        "slug": "mastering-webassembly",
+        "title": "Mastering WebAssembly for High-Performance Media",
+        "excerpt": "How we leverage FFmpeg and WASM to process gigabytes of video data directly in your browser without ever hitting a server.",
+        "date": "2026-04-20",
+        "readTime": "8 min read",
+        "category": "Engineering"
+      },
+      {
+        "slug": "steganography-basics",
+        "title": "Hidden in Plain Sight: A Guide to LSB Steganography",
+        "excerpt": "The mathematics of pixel mutation. Learn how we hide encrypted payloads inside image data using least significant bit encoding.",
+        "date": "2026-04-15",
+        "readTime": "5 min read",
+        "category": "Technology"
+      }
+    ],
+    "topics": [
+      {
+        "label": "WebAssembly"
+      },
+      {
+        "label": "Cryptography"
+      },
+      {
+        "label": "UX Design"
+      },
+      {
+        "label": "Edge Computing"
+      }
+    ],
+    "sections": {
+      "topics": "Explore Intelligence Hub",
+      "mission": "Our Mission",
+      "missionDesc": "We are building the world's most comprehensive suite of privacy-first browser utilities. No accounts, no tracking, just pure performance.",
+      "contactButton": "Contribute to the Project"
+    },
+    "readMore": "Read Full Intelligence",
+    "backToBlog": "Back to Blog",
+    "seo": {
+      "title": "SafeTools Journal | Browser Security & WASM Insights",
+      "description": "Explore the latest insights on privacy-first computing, local-file processing, and secure web engineering from the SafeTools team."
+    },
+    "keywords": "browser security, webassembly insights, local-first computing, privacy journal, safetools blog"
+  }
+}

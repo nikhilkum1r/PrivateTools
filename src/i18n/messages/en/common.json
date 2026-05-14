@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Welcome to SafeTools",
+    "tagline": "150+ Privacy-First Online File Tools That Run Locally",
+    "upload": "Upload File",
+    "download": "Download",
+    "compress": "Compress",
+    "convert": "Convert",
+    "edit": "Edit",
+    "search": "Search across 150+ tools...",
+    "privacy": "Privacy-First",
+    "speed": "Ultra Fast",
+    "security": "Enterprise Grade",
+    "systemHealth": {
+      "title": "System Health",
+      "localEngine": "Local Engine",
+      "localEngineDesc": "Processing is happening 100% locally on your device.",
+      "secureSession": "Secure Session",
+      "secureSessionDesc": "Isolated browser environment for maximum privacy.",
+      "online": "Connected",
+      "onlineDesc": "Online for latest tool updates.",
+      "offlineReady": "Offline Ready",
+      "offlineReadyDesc": "This tool works perfectly without an internet connection.",
+      "zeroTracking": "Zero Tracking",
+      "zeroTrackingDesc": "No data is sent to our servers for tracking."
+    },
+    "securityTools": "Security Tools",
+    "privacyTools": "Privacy Tools",
+    "tools": {
+      "vault": "Secure Vault",
+      "metadataCleaner": "Metadata Scrubber",
+      "fileShredder": "File Shredder",
+      "secureNotes": "Secure Notes",
+      "passwordGenerator": "Password Generator",
+      "passwordChecker": "Password Strength Checker",
+      "ocr": "OCR Extract",
+      "steganography": "Image Steganography",
+      "imageEditor": "Image Editor",
+      "imageCompressor": "Image Compressor",
+      "formatConverter": "Format Converter",
+      "backgroundRemover": "Background Remover",
+      "colorLab": "Color Lab",
+      "pdfToImage": "PDF to Image"
+    },
+    "toolsLabel": "Tools",
+    "features": "Features",
+    "developers": "Developers",
+    "pricing": "Pricing",
+    "about": "About SafeTools",
+    "whyAds": "Why We Show Ads",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contact": "Contact Us",
+    "home": "Home",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "startFree": "Start Free",
+    "systemStatus": "System Status",
+    "updates": "Updates",
+    "feedback": "Feedback",
+    "contents": "Contents",
+    "imageTools": "Image Tools",
+    "openTools": "Open Tools",
+    "ready": "Ready to take control?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "READY",
+      "blocked": "BLOCKED",
+      "success": "SUCCESS",
+      "error": "ERROR"
+    },
+    "getStarted": "Get Started",
+    "forever": "forever",
+    "step": "Step",
+    "dropzone": {
+      "title": "Upload File",
+      "description": "Drag and drop your file here",
+      "secure": "Secure Local Processing",
+      "processedLocally": "Processed locally",
+      "maxSize": "Max {size}MB",
+      "noFileChosen": "No file chosen"
+    },
+    "export": {
+      "ready": "Ready to download",
+      "download": "Download",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "share": "Share",
+      "reset": "Reset"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know about this tool and how it protects your privacy."
+    },
+    "related": {
+      "title": "Related Professional Tools",
+      "subtitle": "Explore more privacy-first utilities for your workflow."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Select Language"
+    },
+    "relatedTools": "Related Creative Tools",
+    "relatedToolsDesc": "Explore more privacy-first utilities.",
+    "all": "All",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Advertisement",
+    "system_health": {
+      "title": "System Health",
+      "localEngine": "Local Engine",
+      "localEngineDesc": "Processing on your hardware",
+      "secureSession": "Secure Session",
+      "secureSessionDesc": "Isolated browser context",
+      "online": "Online",
+      "onlineDesc": "Optimized for speed",
+      "offlineReady": "Offline Ready",
+      "offlineReadyDesc": "Fully functional offline",
+      "zeroTracking": "Zero Tracking",
+      "zeroTrackingDesc": "Privacy-first architecture"
+    },
+    "values": {
+      "yes": "Yes",
+      "no": "No",
+      "limited": "Limited"
+    },
+    "pro": {
+      "comingSoon": "Pro  Coming Soon",
+      "unlockPower": "Unlock More Power",
+      "features": [
+        "Files up to 10× larger",
+        "Unlimited batch processing",
+        "Priority server processing queue",
+        "Shareable links (72h expiry)",
+        "File history  last 50 jobs",
+        "Server-side processing for heavy files"
+      ],
+      "waitlist": "Join the waitlist  $8/mo at launch",
+      "successTitle": "You're on the list! 🎉",
+      "successDesc": "We'll email you when Pro launches.",
+      "continueFree": "Continue with free version",
+      "emailPlaceholder": "your@email.com",
+      "join": "Join",
+      "validEmail": "Please enter a valid email address.",
+      "waitlistSuccess": "You're on the waitlist! We'll notify you when Pro launches.",
+      "freeLimit": "Free limit: {limit}",
+      "proLimit": "Pro limit: {limit}",
+      "yourFile": "Your file: {size}"
+    },
+    "disclaimer": {
+      "understand": "I Understand  Continue",
+      "responsibility": "By continuing you accept full responsibility for your use of this tool."
+    },
+    "toast": {
+      "linkCopied": "Link copied to clipboard"
+    },
+    "seo": {
+      "browserReqs": "Requires JavaScript and WebAssembly"
+    },
+    "aria": {
+      "goHome": "Go to Home",
+      "toggleTheme": "Toggle theme",
+      "faq": "Frequently Asked Questions",
+      "changeLanguage": "Change language",
+      "close": "Close",
+      "menu": "Menu",
+      "openTools": "Open Tools menu",
+      "exploreTools": "Explore All Tools",
+      "platformFeatures": "Platform Features",
+      "privacyCommitment": "Privacy Commitment",
+      "developerApi": "Developer API & Docs",
+      "pricingPlans": "Pricing Plans"
+    },
+    "shareTool": {
+      "title": "Spread the Privacy",
+      "subtitle": "Support local-first computing",
+      "copyLink": "Copy Link",
+      "copied": "Copied",
+      "twitter": "Check out this private, zero-upload tool for {title}:",
+      "telegram": "Secure file processing with SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF Solutions",
+        "image": "Image Studio",
+        "privacy": "Privacy Tools",
+        "developer": "Developer Tools",
+        "pdfMerge": "Merge PDF",
+        "pdfSplit": "Split PDF",
+        "pdfUnlock": "Unlock PDF",
+        "pdfProtect": "Protect PDF",
+        "pdfToImage": "PDF to Image",
+        "securityFileShredder": "File Shredder"
+      }
+    },
+    "error": "Error"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% Local Processing",
+      "noUploads": "Zero Server Uploads",
+      "noTracking": "Zero Data Tracking",
+      "privacyFirst": "Privacy-First UX",
+      "worksOffline": "Works Offline"
+    }
+  }
+}

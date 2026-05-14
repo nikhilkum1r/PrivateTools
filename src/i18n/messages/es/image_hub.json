@@ -1,0 +1,65 @@
+{
+  "imageHub": {
+    "seo": {
+      "title": "Centro de herramientas de imagen | Procesamiento de imágenes profesional y privado | SafeTools",
+      "description": "Acceda a herramientas de imagen locales de grado profesional. 100% de privacidad, cero cargas, acelerado por GPU. Comprima, convierta, edite y elimine fondos de forma segura en su navegador.",
+      "keywords": "herramientas de imagen, comprimir imagen, convertir imagen, eliminar fondo, editor de imágenes en línea, procesamiento de imágenes privado, herramientas de imagen locales",
+      "ogTitle": "SafeTools Image Studio | 100% Privado",
+      "ogDescription": "La suite completa de utilidades de imagen profesionales. Todo funcionando localmente en su hardware.",
+      "structuredName": "SafeTools Image Studio",
+      "structuredDesc": "Una suite completa de herramientas de procesamiento de imágenes que priorizan la privacidad."
+    },
+    "hero": {
+      "badge": "Procesamiento de imágenes de próxima generación",
+      "title": "Potencia de imagen",
+      "description": "Herramientas de imagen locales de grado profesional. 100% de privacidad, cero cargas, acelerado por GPU."
+    },
+    "tools": {
+      "compress": {
+        "title": "Comprimir imagen (KB/MB)",
+        "desc": "Reduzca el tamaño del archivo hasta un 90% sin pérdida de calidad visible. Optimización por lotes para la web.",
+        "tags": [
+          "Más popular",
+          "Alta velocidad"
+        ]
+      },
+      "convert": {
+        "title": "Convertir formato de imagen",
+        "desc": "Convierta entre más de 10 formatos, incluidos HEIC, AVIF, WebP y PDF en modo por lotes.",
+        "tags": [
+          "Universal",
+          "Más de 10 formatos"
+        ]
+      },
+      "edit": {
+        "title": "Editar imágenes",
+        "desc": "Toda la potencia: cambie el tamaño, recorte, rote, ponga marcas de agua, filtros y extracción OCR.",
+        "tags": [
+          "Todo en uno",
+          "Funciones Pro"
+        ]
+      },
+      "remove_bg": {
+        "title": "AI Background Remover",
+        "desc": "Elimine fondos de imágenes al instante con IA. Segmentación 100% privada y local-primera.",
+        "tags": [
+          "Nuevo",
+          "Impulsado por IA"
+        ]
+      },
+      "cta": "Abrir herramienta"
+    },
+    "privacy": {
+      "title": "Privacidad garantizada",
+      "desc": "Todo el procesamiento se realiza en su navegador mediante WASM. Sus imágenes nunca llegan a nuestros servidores."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes de SafeTools Image Studio",
+      "desc": "Todo lo que necesita saber sobre nuestro ecosistema de procesamiento de imágenes centrado en la privacidad.",
+      "q1": "¿Mis imágenes se cargan en algún servidor?",
+      "a1": "Absolutamente no. SafeTools utiliza WebAssembly (WASM) y aceleración de GPU local para procesar imágenes directamente en su dispositivo. Sus datos nunca salen de su navegador.",
+      "q2": "¿Qué formatos son compatibles?",
+      "a2": "Nuestro estudio admite JPEG, PNG, WebP, AVIF, SVG, GIF, HEIC, TIFF e incluso conversiones de PDF a imagen. La mayoría de las herramientas admiten el procesamiento por lotes."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "changelog": {
+    "hero": {
+      "badge": "Evolutions-Protokoll",
+      "title": "System- <br></br> <span class=\"text-primary\">Updates.",
+      "subtitle": "Verfolgung der kontinuierlichen Verbesserung der SafeTools Local-First-Engine und der Studio-Suite."
+    },
+    "data": [
+      {
+        "date": "10. MAI 2026",
+        "version": "v0.4.1",
+        "title": "Die modulare Ära",
+        "desc": "Eine komplette architektonische Überholung der Lokalisierungs-Engine, die ein granulares, funktionsspezifisches Laden von Assets für maximale Leistung ermöglicht.",
+        "highlights": [
+          {
+            "type": "Neu",
+            "text": "Modulares i18n-Framework mit Namespace-Isolierung auf Funktionsebene."
+          },
+          {
+            "type": "Verbessert",
+            "text": "Optimierte Zero-Server-Integrität für alle kryptografischen Tools."
+          },
+          {
+            "type": "Sicherheit",
+            "text": "Gehärtete LSB-Mutations-Engine für Bild-Steganographie."
+          }
+        ],
+        "color": "from-primary to-blue-600"
+      },
+      {
+        "date": "28. APRIL 2026",
+        "version": "v0.4.0",
+        "title": "WASM Engine v2",
+        "desc": "Upgrade der Kernverarbeitungs-Engine mit Multi-Thread-WebAssembly-Unterstützung für Dateiverarbeitungsgeschwindigkeiten nahe am nativen Bereich.",
+        "highlights": [
+          {
+            "type": "Neu",
+            "text": "Fortschrittlicher Metadaten-Scrubber mit Unterstützung für Stapelverarbeitung."
+          },
+          {
+            "type": "Verbessert",
+            "text": "FFmpeg WASM-Ladezeiten um 40 % optimiert."
+          },
+          {
+            "type": "Fix",
+            "text": "Speicherlecks bei rechenintensiven Bildkonvertierungsaufträgen behoben."
+          }
+        ],
+        "color": "from-purple-500 to-pink-600"
+      },
+      {
+        "date": "12. APRIL 2026",
+        "version": "v0.3.8",
+        "title": "Sicherheitshärtung",
+        "desc": "Fokus auf die absolute Privatsphäre der Nutzerdaten mit verbesserten Sicherheits-Headern und Sandbox-Ausführungsumgebungen.",
+        "highlights": [
+          {
+            "type": "Neu",
+            "text": "Industrietauglicher Dateishredder mit Multi-Pass-Überschreibung."
+          },
+          {
+            "type": "Sicherheit",
+            "text": "Implementierung von COOP/COEP-Isolations-Headern."
+          },
+          {
+            "type": "Verbessert",
+            "text": "Verfeinertes Datenschutz-Manifest und Verifizierungsleitfaden."
+          }
+        ],
+        "color": "from-emerald-500 to-teal-600"
+      }
+    ],
+    "timeline": {
+      "visual": "Versions-Signatur",
+      "moreUpdates": "Kontinuierliche Entwicklung"
+    },
+    "cta": {
+      "title": "Gestalten Sie die Zukunft.",
+      "subtitle": "SafeTools wurde für die Community entwickelt. Melden Sie Fehler, schlagen Sie Funktionen vor oder tragen Sie zu unserer offenen Architektur bei.",
+      "github": "GitHub-Repository anzeigen",
+      "follow": "Fortschritt verfolgen"
+    },
+    "seo": {
+      "title": "SafeTools Changelog | Neueste Funktionen & Sicherheitsupdates",
+      "description": "Bleiben Sie auf dem Laufenden über die neuesten Versionen, Leistungsverbesserungen und Sicherheitspatches für das SafeTools Studio-Ökosystem."
+    }
+  }
+}

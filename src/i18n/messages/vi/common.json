@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Chào mừng bạn đến với SafeTools",
+    "tagline": "Hơn 150 công cụ tệp trực tuyến ưu tiên quyền riêng tư và chạy cục bộ",
+    "upload": "Tải tệp lên",
+    "download": "Tải xuống",
+    "compress": "Nén",
+    "convert": "Chuyển đổi",
+    "edit": "Chỉnh sửa",
+    "search": "Tìm kiếm trong hơn 150 công cụ...",
+    "privacy": "Quyền riêng tư là trên hết",
+    "speed": "Siêu nhanh",
+    "security": "Cấp độ doanh nghiệp",
+    "systemHealth": {
+      "title": "Tình trạng hệ thống",
+      "localEngine": "Công cụ cục bộ",
+      "localEngineDesc": "Việc xử lý diễn ra 100% cục bộ trên thiết bị của bạn.",
+      "secureSession": "Phiên bảo mật",
+      "secureSessionDesc": "Môi trường trình duyệt biệt lập để đảm bảo quyền riêng tư tối đa.",
+      "online": "Đã kết nối",
+      "onlineDesc": "Trực tuyến để cập nhật công cụ mới nhất.",
+      "offlineReady": "Sẵn sàng ngoại tuyến",
+      "offlineReadyDesc": "Công cụ này hoạt động hoàn hảo mà không cần kết nối internet.",
+      "zeroTracking": "Không theo dõi",
+      "zeroTrackingDesc": "Không có dữ liệu nào được gửi đến máy chủ của chúng tôi để theo dõi."
+    },
+    "securityTools": "Công cụ bảo mật",
+    "privacyTools": "Công cụ quyền riêng tư",
+    "tools": {
+      "vault": "Kho lưu trữ an toàn",
+      "metadataCleaner": "Xóa siêu dữ liệu",
+      "fileShredder": "Máy hủy tệp",
+      "secureNotes": "Ghi chú bảo mật",
+      "passwordGenerator": "Trình tạo mật khẩu",
+      "passwordChecker": "Kiểm tra độ mạnh mật khẩu",
+      "ocr": "Trích xuất OCR",
+      "steganography": "Ẩn tin trong ảnh",
+      "imageEditor": "Trình chỉnh sửa ảnh",
+      "imageCompressor": "Trình nén ảnh",
+      "formatConverter": "Trình chuyển đổi định dạng",
+      "backgroundRemover": "Xóa nền",
+      "colorLab": "Phòng thí nghiệm màu sắc",
+      "pdfToImage": "Chuyển PDF sang ảnh"
+    },
+    "toolsLabel": "Công cụ",
+    "features": "Tính năng",
+    "developers": "Nhà phát triển",
+    "pricing": "Bảng giá",
+    "about": "Giới thiệu về SafeTools",
+    "whyAds": "Tại sao chúng tôi hiển thị quảng cáo",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ",
+    "contact": "Liên hệ với chúng tôi",
+    "home": "Trang chủ",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Nhật ký thay đổi",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống",
+    "startFree": "Bắt đầu miễn phí",
+    "systemStatus": "Trạng thái hệ thống",
+    "updates": "Cập nhật",
+    "feedback": "Phản hồi",
+    "contents": "Nội dung",
+    "imageTools": "Công cụ hình ảnh",
+    "openTools": "Mở công cụ",
+    "ready": "Sẵn sàng để kiểm soát?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "SẴN SÀNG",
+      "blocked": "ĐÃ CHẶN",
+      "success": "THÀNH CÔNG",
+      "error": "LỖI"
+    },
+    "getStarted": "Bắt đầu",
+    "forever": "mãi mãi",
+    "step": "Bước",
+    "dropzone": {
+      "title": "Tải tệp lên",
+      "description": "Kéo và thả tệp của bạn vào đây",
+      "secure": "Xử lý cục bộ an toàn",
+      "processedLocally": "Đã xử lý cục bộ",
+      "maxSize": "Tối đa {size}MB",
+      "noFileChosen": "Chưa chọn tệp"
+    },
+    "export": {
+      "ready": "Sẵn sàng tải xuống",
+      "download": "Tải xuống",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép!",
+      "share": "Chia sẻ",
+      "reset": "Đặt lại"
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "description": "Mọi thứ bạn cần biết về công cụ này và cách nó bảo vệ quyền riêng tư của bạn."
+    },
+    "related": {
+      "title": "Công cụ chuyên nghiệp liên quan",
+      "subtitle": "Khám phá thêm các tiện ích ưu tiên quyền riêng tư cho quy trình làm việc của bạn."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Chọn ngôn ngữ"
+    },
+    "relatedTools": "Công cụ sáng tạo liên quan",
+    "relatedToolsDesc": "Khám phá thêm các tiện ích ưu tiên quyền riêng tư.",
+    "all": "Tất cả",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Quảng cáo",
+    "system_health": {
+      "title": "Tình trạng hệ thống",
+      "localEngine": "Công cụ cục bộ",
+      "localEngineDesc": "Xử lý trên phần cứng của bạn",
+      "secureSession": "Phiên bảo mật",
+      "secureSessionDesc": "Ngữ cảnh trình duyệt biệt lập",
+      "online": "Trực tuyến",
+      "onlineDesc": "Tối ưu hóa cho tốc độ",
+      "offlineReady": "Sẵn sàng ngoại tuyến",
+      "offlineReadyDesc": "Hoạt động đầy đủ ngoại tuyến",
+      "zeroTracking": "Không theo dõi",
+      "zeroTrackingDesc": "Kiến trúc ưu tiên quyền riêng tư"
+    },
+    "values": {
+      "yes": "Có",
+      "no": "Không",
+      "limited": "Hạn chế"
+    },
+    "pro": {
+      "comingSoon": "Pro – Sắp ra mắt",
+      "unlockPower": "Mở khóa thêm sức mạnh",
+      "features": [
+        "Tệp lớn hơn tới 10 lần",
+        "Xử lý hàng loạt không giới hạn",
+        "Hàng đợi xử lý máy chủ ưu tiên",
+        "Liên kết có thể chia sẻ (hết hạn sau 72 giờ)",
+        "Lịch sử tệp – 50 công việc gần nhất",
+        "Xử lý phía máy chủ cho các tệp nặng"
+      ],
+      "waitlist": "Tham gia danh sách chờ – $8/tháng khi ra mắt",
+      "successTitle": "Bạn đã có tên trong danh sách! 🎉",
+      "successDesc": "Chúng tôi sẽ gửi email cho bạn khi Pro ra mắt.",
+      "continueFree": "Tiếp tục với phiên bản miễn phí",
+      "emailPlaceholder": "email@cua-ban.com",
+      "join": "Tham gia",
+      "validEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "waitlistSuccess": "Bạn đã có tên trong danh sách chờ! Chúng tôi sẽ thông báo cho bạn khi Pro ra mắt.",
+      "freeLimit": "Giới hạn miễn phí: {limit}",
+      "proLimit": "Giới hạn Pro: {limit}",
+      "yourFile": "Tệp của bạn: {size}"
+    },
+    "disclaimer": {
+      "understand": "Tôi đã hiểu – Tiếp tục",
+      "responsibility": "Bằng cách tiếp tục, bạn chấp nhận toàn bộ trách nhiệm đối với việc sử dụng công cụ này."
+    },
+    "toast": {
+      "linkCopied": "Đã sao chép liên kết vào khay nhớ tạm"
+    },
+    "seo": {
+      "browserReqs": "Yêu cầu JavaScript và WebAssembly"
+    },
+    "aria": {
+      "goHome": "Về trang chủ",
+      "toggleTheme": "Chuyển đổi giao diện",
+      "faq": "Câu hỏi thường gặp",
+      "changeLanguage": "Thay đổi ngôn ngữ",
+      "close": "Đóng",
+      "menu": "Menu",
+      "openTools": "Mở menu công cụ",
+      "exploreTools": "Khám phá tất cả công cụ",
+      "platformFeatures": "Tính năng nền tảng",
+      "privacyCommitment": "Cam kết bảo mật",
+      "developerApi": "API cho nhà phát triển & Tài liệu",
+      "pricingPlans": "Gói giá"
+    },
+    "shareTool": {
+      "title": "Lan tỏa quyền riêng tư",
+      "subtitle": "Hỗ trợ tính toán ưu tiên cục bộ",
+      "copyLink": "Sao chép liên kết",
+      "copied": "Đã sao chép",
+      "twitter": "Xem công cụ riêng tư, không cần tải lên này cho {title}:",
+      "telegram": "Xử lý tệp an toàn với SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Giải pháp PDF",
+        "image": "Xử lý hình ảnh",
+        "privacy": "Công cụ riêng tư",
+        "developer": "Công cụ nhà phát triển",
+        "pdfMerge": "Gộp PDF",
+        "pdfSplit": "Tách PDF",
+        "pdfUnlock": "Mở khóa PDF",
+        "pdfProtect": "Bảo vệ PDF",
+        "pdfToImage": "Chuyển PDF sang ảnh",
+        "securityFileShredder": "Máy hủy tệp"
+      }
+    },
+    "error": "Lỗi"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "Xử lý cục bộ 100%",
+      "noUploads": "Không tải lên máy chủ",
+      "noTracking": "Không theo dõi dữ liệu",
+      "privacyFirst": "Trải nghiệm ưu tiên quyền riêng tư",
+      "worksOffline": "Hoạt động ngoại tuyến"
+    }
+  }
+}

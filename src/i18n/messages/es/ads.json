@@ -1,0 +1,53 @@
+{
+  "ads": {
+    "title": "Por qué mostramos anuncios",
+    "seo": {
+      "title": "Por qué mostramos anuncios | SafeTools",
+      "description": "En SafeTools, la privacidad no es un eslogan de marketing. Conozca por qué mostramos anuncios y nuestro compromiso con la confianza del usuario."
+    },
+    "intro": [
+      "En SafeTools, la privacidad no es un eslogan de marketing. Es la base de todo lo que construimos.",
+      "Creamos SafeTools porque muchas plataformas de utilidades modernas monetizan silenciosamente los datos de los usuarios entre bastidores. Los archivos se cargan en servidores remotos, se rastrea el comportamiento de navegación y la información personal a menudo se usa para análisis, perfiles o redes publicitarias sin que los usuarios se den cuenta por completo.",
+      "Queríamos construir algo diferente.",
+      "Nuestro objetivo es simple: sus archivos, sus datos y su actividad deben permanecer bajo su control. Es por eso que SafeTools está diseñado con una fuerte filosofía de privacidad primero, que incluye procesamiento basado en el navegador siempre que sea posible, recolección mínima de datos y prácticas transparentes."
+    ],
+    "sections": [
+      {
+        "heading": "¿Entonces por qué mostramos anuncios?",
+        "content": [
+          "Dirigir una plataforma global todavía conlleva costos operativos reales, que incluyen:",
+          "• Servidores e infraestructura",
+          "• Gastos de CDN y ancho de banda",
+          "• Servicios de dominio y seguridad",
+          "• Desarrollo y mantenimiento",
+          "• Sistemas de monitoreo de rendimiento y tiempo de actividad",
+          "A diferencia de muchas plataformas, elegimos no depender de modelos de monetización agresivos, sistemas de seguimiento ocultos o la venta de datos de usuarios a terceros.",
+          "También decidimos no recaudar dinero de formas que pudieran presionarnos a comprometer la privacidad del usuario para obtener ganancias rápidas.",
+          "En cambio, la publicidad ligera nos ayuda a cubrir de manera sostenible los costos operativos mientras mantenemos la mayoría de las herramientas de acceso gratuito para todos."
+        ]
+      },
+      {
+        "heading": "Nuestra promesa sobre anuncios y privacidad",
+        "content": [
+          "Creemos que la publicidad nunca debe producirse a costa de la confianza del usuario.",
+          "Eso significa:",
+          "• No vendemos sus archivos personales.",
+          "• No creamos perfiles de comportamiento invasivos.",
+          "• Minimizamos el seguimiento tanto como sea posible.",
+          "• Muchas herramientas procesan datos directamente dentro de su navegador.",
+          "• Su contenido sigue siendo suyo.",
+          "Los anuncios en SafeTools existen para apoyar la plataforma, no para explotar a los usuarios."
+        ]
+      },
+      {
+        "heading": "Privacidad primero. Siempre.",
+        "content": [
+          "Cada decisión que tomamos está guiada por un principio básico:",
+          "La tecnología debe empoderar a las personas sin apropiarse de su privacidad.",
+          "SafeTools existe para demostrar que las herramientas en línea útiles aún pueden respetar a los usuarios, la transparencia y la libertad digital.",
+          "Gracias por apoyar una web más privada."
+        ]
+      }
+    ]
+  }
+}

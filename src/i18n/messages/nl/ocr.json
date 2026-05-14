@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Gratis Online OCR Tool | Tekst extraheren uit afbeeldingen & PDF's | SafeTools",
+      "description": "Extraheer direct tekst uit afbeeldingen, screenshots en PDF's met onze gratis privacy-eerst OCR tool. Snelle AI-gestuurde tekstherkenning zonder uploads.",
+      "keywords": "OCR online gratis, afbeelding naar tekst converter, tekst extraheren uit afbeelding, OCR PDF tool, screenshot tekst extractor, handschrift OCR, gescande document OCR, gratis OCR software, AI OCR tool, browser gebaseerde OCR, optische tekenherkenning, afbeelding naar bewerkbare tekst, PDF OCR online, meertalige OCR, OCR zonder upload",
+      "ogTitle": "SafeTools OCR | Gratis Online OCR Tool - Extraheer direct tekst uit afbeeldingen",
+      "ogDescription": "Converteer afbeeldingen, gescande documenten, screenshots, handgeschreven notities en PDF's naar bewerkbare tekst met onze privacy-eerst browser-gebaseerde OCR tool. Snel, nauwkeurig en volledig gratis."
+    },
+    "hero": {
+      "badge": "Privacy-eerst AI Intelligentie",
+      "title": "Gratis Online OCR Tool - Extraheer direct tekst",
+      "description": "Converteer afbeeldingen, gescande documenten, screenshots, handgeschreven notities en PDF's naar bewerkbare tekst met onze privacy-eerst browser-gebaseerde OCR tool. Snel, nauwkeurig en volledig gratis.",
+      "extractNow": "Extraheer tekst nu",
+      "uploadImage": "Afbeelding uploaden",
+      "tryDemo": "Probeer OCR demo",
+      "badges": {
+        "private": "100% Privé",
+        "browser": "Browser-gebaseerd",
+        "noUpload": "Geen upload nodig",
+        "ai": "AI-gestuurd",
+        "free": "Altijd gratis"
+      }
+    },
+    "workspace": {
+      "source": "Bronbestand",
+      "sourceSubtitle": "Afbeelding, PDF of screenshot",
+      "clearQueue": "Wachtrij wissen",
+      "dropzone": {
+        "title": "Sleep bestand hierheen",
+        "subtitle": "JPEG, PNG, PDF, HEIC ondersteund"
+      },
+      "engine": "Herkenningsengine",
+      "start": "Start extractie",
+      "active": "{progress}% Actief",
+      "history": "Recente geschiedenis",
+      "clearAll": "Alles wissen",
+      "copyHistory": "Gekopieerd uit geschiedenis!",
+      "detected": "{lang} gedetecteerd",
+      "matrix": "Geëxtraheerde matrix",
+      "matrixSubtitle": "Bewerkbare digitale tekst",
+      "words": "Woorden",
+      "chars": "Tekens",
+      "waiting": "Wachten op neurale feed",
+      "processing": "Neurale gewichten verwerken",
+      "handwriting_active": "Handschrift AI actief",
+      "detected_string": "Gedetecteerde reeks:",
+      "neural_v3": "Neurale tekstextractie v3.0",
+      "config": "Configuratie",
+      "configDesc": "Selecteer uw taal & voer uit",
+      "clear": "Wissen",
+      "changeFile": "Bestand wijzigen",
+      "extracting": "Tekst extraheren...",
+      "language": "Taal",
+      "run": "OCR uitvoeren",
+      "result": "Extractieresultaat",
+      "extractionComplete": "Extractie voltooid",
+      "awaitingExtraction": "Wachten op extractie",
+      "placeholder": "Geëxtraheerde tekst verschijnt hier...",
+      "copy": "Tekst kopiëren",
+      "copied": "Gekopieerd!"
+    },
+    "messages": {
+      "analyzing": "Analyseren via multi-script engine...",
+      "extractionSuccess": "Tekst succesvol geëxtraheerd uit {count} bestanden!",
+      "extractionFailed": "Extractie mislukt. Probeer een duidelijkere afbeelding.",
+      "copySuccess": "Gekopieerd naar klembord!",
+      "invalidFile": "Ongeldig bestandstype ({name})",
+      "svgNotSupported": "SVG-bestanden worden niet ondersteund ({name})"
+    },
+    "languages": {
+      "auto": "✨ Taal automatisch detecteren",
+      "eng": "Engels",
+      "hin": "Hindi",
+      "spa": "Spaans",
+      "fra": "Frans",
+      "deu": "Duits",
+      "ara": "Arabisch",
+      "chi_sim": "Chinees (Simp)",
+      "jpn": "Japans",
+      "kor": "Koreaans",
+      "ita": "Italiaans",
+      "por": "Portugees",
+      "rus": "Russisch",
+      "eng_hin": "Engels + Hindi",
+      "eng_spa": "Engels + Spaans",
+      "eng_fra": "Engels + Frans"
+    },
+    "landing": {
+      "intro": {
+        "title": "Extraheer gratis online tekst uit afbeeldingen",
+        "content": "Optical Character Recognition (OCR) technologie converteert gedrukte of handgeschreven tekst in afbeeldingen naar bewerkbare digitale tekst. Onze gratis online OCR tool helpt gebruikers bij het digitaliseren van documenten, het kopiëren van tekst uit screenshots, het scannen van gedrukte pagina's en het direct converteren van handgeschreven notities naar bewerkbare bestanden."
+      },
+      "features": {
+        "extraction": {
+          "title": "Neurale extractie",
+          "description": "Eigen AI-modellen ontworpen om tekst te detecteren in complexe achtergronden."
+        },
+        "multilingual": {
+          "title": "Wereldwijde ondersteuning",
+          "description": "Herken tekst in 100+ talen, inclusief CJK- en Indic-scripts."
+        },
+        "secure": {
+          "title": "Enterprise Secure",
+          "description": "Privacy van militaire kwaliteit met gegarandeerd nul serverinteractie."
+        },
+        "offline": {
+          "title": "Klaar voor offline",
+          "description": "De volledige OCR engine draait in uw browser zonder internet."
+        },
+        "title": "OCR Extractie Kracht",
+        "title2": "Krachtige AI OCR-functies",
+        "subtitle": "Professionele tekstherkenning voor elke workflow.",
+        "items": [
+          "Fysieke documenten digitaliseren",
+          "Tekst kopiëren van YouTube/Social Media",
+          "Handgeschreven opdrachten converteren",
+          "Gegevens extraheren uit zakelijke bonnetjes",
+          "Juridische en medische dossiers verwerken",
+          "Inhoud opslaan als Word- of tekstbestanden"
+        ]
+      },
+      "formats": {
+        "title": "Ondersteunde bestandsformaten",
+        "image": "Afbeeldingsformaten",
+        "doc": "Documentformaten",
+        "optimized": "Geoptimaliseerd voor",
+        "standard": "Standaard kantoordocumenten",
+        "mobileReady": "Klaar voor mobiel",
+        "socialMedia": "Social media screenshots",
+        "highPrecision": "Hoge precisie"
+      },
+      "privacy": {
+        "title": "Privacy-eerst OCR verwerking",
+        "content": "In tegenstelling naar veel online OCR tools worden uw bestanden niet permanent op onze servers opgeslagen. We maken gebruik van client-side verwerking via WebAssembly, wat betekent dat de OCR engine direct in uw browser draait.",
+        "execution": {
+          "title": "Lokale uitvoering",
+          "content": "Verwerking gebeurt op uw RAM, niet op onze cloud."
+        },
+        "tracking": {
+          "title": "Geen tracking",
+          "content": "We loggen uw bestanden of extractieresultaten niet."
+        },
+        "registration": {
+          "title": "Geen registratie",
+          "content": "Gebruik de volledige kracht van AI zonder account."
+        }
+      },
+      "ai": {
+        "title": "AI-gestuurde herkenning",
+        "content": "Geavanceerde neurale netwerken verbeteren de tekstnauwkeurigheid, het behoud van de lay-out en de meertalige ondersteuning. Onze engine werkt effectief, zelfs op korrelige, wazige of lage-resolutie afbeeldingen.",
+        "items": [
+          "Handschriftherkenning en conversie",
+          "Multi-kolom en tabeldetectie",
+          "Automatische rotatie en scheefstandcorrectie",
+          "Herstel van korrelige afbeeldingen en de-blurring"
+        ]
+      },
+      "whatIs": {
+        "title": "Wat is OCR?",
+        "content": "OCR staat voor Optical Character Recognition (Optische Tekenherkenning). Het is een technologie waarmee software afbeeldingen kan analyseren en letters, cijfers en symbolen kan detecteren om ze om te zetten in doorzoekbare en bewerkbare digitale inhoud.",
+        "how": {
+          "title": "Hoe het werkt",
+          "content": "OCR software scant de pixelpatronen van een afbeelding, identificeert vormen als tekens en gebruikt taalmodellen om zinnen en paragrafen te reconstrueren."
+        },
+        "apps": {
+          "title": "Toepassingen",
+          "content": "Veelgebruikt in bedrijfsautomatisering, digitalisering van archieven en ondersteunende technologieën voor slechtzienden."
+        }
+      },
+      "useCases": {
+        "badge": "Workflow integratie",
+        "title": "Populaire gebruiksscenario's",
+        "subtitle": "SafeTools OCR is ontworpen voor diverse workflows en professionele behoeften.",
+        "items": [
+          {
+            "title": "Studenten",
+            "desc": "Converteer collegenotities, studieboeken en onderzoeksverslagen naar bewerkbare studiegidsen."
+          },
+          {
+            "title": "Bedrijven",
+            "desc": "Digitaliseer contracten, facturen en fysieke dossiers voor snellere digitale workflows."
+          },
+          {
+            "title": "Ontwikkelaars",
+            "desc": "Extraheer gestructureerde tekst uit UI-mockups, code-screenshots en documentatie."
+          },
+          {
+            "title": "Onderzoekers",
+            "desc": "Transformeer oude gescande archieven in doorzoekbare PDF-documenten met selecteerbare tekst."
+          },
+          {
+            "title": "Content Creators",
+            "desc": "Hergebruik snel tekst uit YouTube-screenshots, infographics en memes."
+          },
+          {
+            "title": "Juridische professionals",
+            "desc": "Digitaliseer gevoelige dossiers veilig zonder risico op gegevensblootstelling."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Screenshot intelligentie",
+        "title": "Tekst extraheren uit screenshots",
+        "content": "Kopieer direct tekst van YouTube-captures, Instagram-berichten of Zoom-presentaties. Geen handmatig overtypen of opnieuw maken van inhoud meer.",
+        "tags": [
+          "Social Media",
+          "Webinars",
+          "UI/UX Design"
+        ]
+      },
+      "handwriting": {
+        "badge": "Van pen naar pixel",
+        "title": "Handschriftherkenning",
+        "content": "Converteer handgeschreven notities, dagboekaantekeningen en whiteboards naar digitale tekst. Onze AI is getraind om verschillende handschriftstijlen en cursieve schriften te begrijpen.",
+        "handwritingActive": "Handschrift AI actief",
+        "tags": [
+          "Dagboeken",
+          "Opdrachten",
+          "Whiteboards"
+        ]
+      },
+      "export": {
+        "title": "Exporteren in meerdere formaten",
+        "content": "Zodra uw tekst is geëxtraheerd, slaat u deze op in het formaat dat het beste bij uw workflow past. Kopieer direct of download bestanden van hoge kwaliteit.",
+        "items": [
+          "Platte tekst (.TXT)",
+          "Document (.DOCX)",
+          "Gestructureerd (.JSON)",
+          "Tabulair (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Ultrasnelle neurale engine",
+        "content": "Geoptimaliseerd met behulp van WebAssembly en GPU-acceleratie om snelle herkenning te garanderen, zelfs op assets met een hoge resolutie.",
+        "optimization": "Browser optimalisatie",
+        "accuracy": "Tekennauwkeurigheid",
+        "wasm": "WebAssembly",
+        "gpu": "GPU-geaccelereerd"
+      },
+      "manifesto": {
+        "title": "Privacy First Manifesto",
+        "description": "Wij geloven dat uw gegevens uw eigendom zijn. Onze OCR engine respecteert dat door ontwerp.",
+        "points": [
+          "Geen gegevens verlaat uw machine",
+          "Geen account nodig",
+          "Geen tracking cookies",
+          "Geen verborgen logging"
+        ],
+        "others": {
+          "title": "Andere OCR tools",
+          "points": [
+            "Verkopen uw gegevens aan adverteerders",
+            "Vereisen cloud-uploads",
+            "Injecteren tracking pixels",
+            "Slaan uw gevoelige documenten op"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Waarom kiezen voor SafeTools OCR",
+        "subtitle": "Vergelijk ons met traditionele cloud-gebaseerde OCR tools.",
+        "headers": [
+          "Functie",
+          "SafeTools OCR",
+          "Traditionele tools"
+        ],
+        "rows": [
+          {
+            "f": "Browser-gebaseerd",
+            "s": "Ja",
+            "t": "Beperkt"
+          },
+          {
+            "f": "Geen upload nodig",
+            "s": "Ja",
+            "t": "Nee"
+          },
+          {
+            "f": "AI-gestuurde engine",
+            "s": "Ja",
+            "t": "Soms"
+          },
+          {
+            "f": "Handschriftdetectie",
+            "s": "Ja",
+            "t": "Beperkt"
+          },
+          {
+            "f": "Mobielvriendelijk",
+            "s": "Ja",
+            "t": "Vaak slecht"
+          },
+          {
+            "f": "Privacygericht",
+            "s": "Ja",
+            "t": "Nee"
+          },
+          {
+            "f": "Altijd gratis",
+            "s": "Ja",
+            "t": "Vaak beperkt"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Geavanceerde OCR-hulpprogramma's",
+        "subtitle": "Professionele functies voor complexe documentverwerking.",
+        "items": [
+          {
+            "title": "Tabeldetectie",
+            "desc": "Extraheer gestructureerde tabellen uit complexe financiële documenten."
+          },
+          {
+            "title": "Multi-kolom scan",
+            "desc": "Behoud de lay-out voor kranten en tijdschriften met meerdere kolommen."
+          },
+          {
+            "title": "Ruisverwijdering",
+            "desc": "Schoon korrelige scans automatisch op voor een hogere nauwkeurigheid."
+          },
+          {
+            "title": "Automatische rotatie",
+            "desc": "Herstel schuine documentscans direct tijdens de herkenning."
+          },
+          {
+            "title": "Batch OCR",
+            "desc": "Verwerk meerdere afbeeldingen tegelijkertijd in uw browser."
+          },
+          {
+            "title": "Metadata opschonen",
+            "desc": "Verwijder verborgen trackingmetadata van verwerkte afbeeldingen."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Converteer afbeeldingen direct naar bewerkbare tekst",
+        "description": "Extraheer tekst uit screenshots, gescande documenten, handgeschreven notities en PDF's direct in uw browser met snelle privacy-eerst OCR technologie.",
+        "button": "Start nu met OCR",
+        "upload": "Afbeelding uploaden"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Is de OCR tool gratis?",
+            "a": "Ja. De OCR tool is volledig gratis te gebruiken zonder verborgen kosten, watermerken of abonnementsvereisten."
+          },
+          {
+            "q": "Worden mijn bestanden geüpload naar servers?",
+            "a": "Nee. Alle OCR verwerking vindt lokaal plaats in uw browser met behulp van WebAssembly. Uw afbeeldingen verlaten nooit uw apparaat, wat zorgt voor maximale privacy en beveiliging."
+          },
+          {
+            "q": "Welke talen worden ondersteund?",
+            "a": "Onze tool ondersteunt meerdere wereldwijde talen, waaronder Engels, Hindi, Spaans, Frans, Duits, Arabisch, Chinees, Japans, Koreaans en nog veel meer."
+          },
+          {
+            "q": "Kan ik tekst extraheren uit handgeschreven notities?",
+            "a": "Ja. Onze AI-gestuurde OCR engine ondersteunt handschriftherkenning voor notities, opdrachten, dagboeken en whiteboardinhoud."
+          },
+          {
+            "q": "Werkt OCR op PDF's?",
+            "a": "Ja. U kunt tekst extraheren uit gescande PDF's en op afbeeldingen gebaseerde documenten door ze om te zetten in digitale, bewerkbare tekst."
+          },
+          {
+            "q": "Kan ik OCR gebruiken op mobiele apparaten?",
+            "a": "Ja. De tool is volledig responsief en werkt op moderne smartphones en tablets direct via uw webbrowser."
+          },
+          {
+            "q": "Is registratie vereist?",
+            "a": "Nee. U kunt direct beginnen met het extraheren van tekst zonder een account aan te maken of persoonlijke informatie te verstrekken."
+          }
+        ],
+        "title": "OCR FAQ",
+        "description": "Veelgestelde vragen over onze AI-gestuurde OCR tool."
+      },
+      "related": {
+        "title": "Ontdek meer tools",
+        "items": [
+          {
+            "name": "Afbeeldingseditor",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Afbeeldingscompressor",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Afbeeldingsconverter",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF naar tekst",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Sleep bestand hierheen",
+      "description": "JPEG, PNG, PDF, HEIC ondersteund. Max 20MB."
+    },
+    "history": {
+      "title": "Recente geschiedenis",
+      "subtitle": "Toegang tot uw eerdere extracties",
+      "clearAll": "Alles wissen",
+      "restore": "Resultaat herstellen"
+    }
+  }
+}

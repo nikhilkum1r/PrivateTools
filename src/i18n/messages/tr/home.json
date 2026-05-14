@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ Gizlilik Öncelikli Çevrimiçi Dosya Aracı",
+      "description": "Dosyaları tarayıcınızda güvenli bir şekilde dönüştürün, sıkıştırın, düzenleyin, şifreleyin ve yönetin. Yükleme yok, takip yok."
+    },
+    "hero": {
+      "title": "Gizlilik bir özellik değildir. Bu bir <studio>haktır.</studio>",
+      "subtitle": "Gizlilik ve Hız İçin Oluşturulmuş Güçlü Araçlar",
+      "description": "SafeTools, dosyalarınızı doğrudan cihazınızda işleyerek gizlilikten, kontrolden veya gönül rahatlığından ödün vermeden size güçlü araçlar sunar.",
+      "getStarted": "Araçları Keşfedin",
+      "browseAll": "SafeTools'u Neden Oluşturduk",
+      "exploreButton": "150'den Fazla Aracı Keşfedin",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "%100 Yerel İşleme",
+      "recent": "Son",
+      "favorites": "Favoriler"
+    },
+    "trustBar": [
+      {
+        "name": "GDPR Uyumlu",
+        "desc": "Veri toplama yok"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "Askeri düzeyde şifreleme"
+      },
+      {
+        "name": "Sandboxed",
+        "desc": "İzole edilmiş tarayıcı yürütmesi"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "Sıfır gecikmeli performans"
+      },
+      {
+        "name": "Open Core",
+        "desc": "Şeffaf işleme"
+      }
+    ],
+    "whyWeExist": {
+      "title": "SafeTools Neden Var",
+      "story": "Birkaç yıl önce, yakınımızdaki biri kişisel belgeleri için çevrimiçi bir yardımcı program platformu kullandı. Aylar sonra, bu veriler çevrimiçi ortamda ortaya çıktı. Bu olay, internet genelinde gizli bir sorunu ortaya çıkardı: birçok yardımcı program platformu, şeffaflık olmaksızın hassas kullanıcı dosyalarını uzak sunucularda toplar, saklar veya işler.",
+      "mission": "SafeTools bunu değiştirmek için oluşturuldu.",
+      "solution": "Modern araçların çoğunun dosyalarınızı harici sunuculara yüklemesine gerek yoktur. Bu nedenle SafeTools, işlemenin mümkün olduğunda doğrudan cihazınızda gerçekleştiği gizlilik öncelikli bir mimari etrafında inşa edilmiştir.",
+      "points": [
+        "Gereksiz yükleme yok.",
+        "Gizli depolama yok.",
+        "Kullanıcı verilerini satmak yok.",
+        "Verileriniz sizde kalır."
+      ]
+    },
+    "infra": [
+      {
+        "title": "WebAssembly Motoru",
+        "description": "Tarayıcınızda yerel olarak çalışan yüksek performanslı işleme mantığı. Sunucu yükü yok."
+      },
+      {
+        "title": "Sıfır Bilgi Mimarisi",
+        "description": "Verileriniz hiçbir üçüncü tarafça çözülmez veya görüntülenmez. Saf yerel hesaplama."
+      },
+      {
+        "title": "Anında İşleme",
+        "description": "Yükleme ve indirme bekleme sürelerini ortadan kaldırın. GB'larca veriyi saniyeler içinde işleyin."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "Temel Gizlilik",
+        "title": "Sıfır Bilgi Mimarisi",
+        "description": "\"Önce yerel\" felsefemiz, dosyalarınızın hiçbir uzak sunucuya yüklenmemesini, taranmamasını veya saklanmamasını sağlar."
+      },
+      "performance": {
+        "badge": "Performans",
+        "title": "Saniye Altı Gecikme",
+        "security": "Korumalı Alan Yürütmesi",
+        "status": {
+          "ready": "HAZIR",
+          "blocked": "ENGELENDİ",
+          "success": "BAŞARILI"
+        },
+        "description": "Yükleme/indirme döngüsünü ortadan kaldıran SafeTools, büyük dosyalar için bile neredeyse anında işleme sunar."
+      },
+      "crossPlatform": {
+        "title": "Çoklu Platform",
+        "description": "Masaüstü, Mobil, Tablet. Tüm cihazlarınızda mükemmel senkronizasyon."
+      },
+      "offlineFirst": {
+        "title": "Önce Çevrimdışı",
+        "description": "Bir kez yükle, sonsuza dek kullan. Çoğu araç için internet gerekmez."
+      }
+    },
+    "workflow": {
+      "title": "Profesyonel İş Akışları İçin Tasarlandı",
+      "subtitle": "SafeTools sadece bir araç koleksiyonu değildir. Hız ve gizlilik için tasarlanmış profesyonel bir çalışma alanıdır.",
+      "items": [
+        {
+          "title": "Toplu İşleme",
+          "description": "Yüzlerce dosyayı ter dökmeden aynı anda yönetin."
+        },
+        {
+          "title": "Akıllı Dosya Yönlendirme",
+          "description": "Herhangi bir dosyayı bırakın, size en iyi araçları otomatik olarak önerelim."
+        },
+        {
+          "title": "Çevrimdışı Yetenekler",
+          "description": "Aktif bir internet bağlantısı olmasa bile her yerden çalışın."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "Önce Geliştirici",
+      "title": "Performans İçin İnşa Edildi",
+      "description": "SafeTools, temiz ve birleşik bir motor mimarisi aracılığıyla yüksek performanslı yerel işleme modüllerini sunar.",
+      "stats": {
+        "latency": "Bellek İçi Gecikme",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// İşlem tamamlandı. 0 bayt yüklendi."
+    },
+    "toolsSection": {
+      "title": "Aracınızı Bulun",
+      "searchPlaceholder": "150'den fazla araçta ara...",
+      "openTool": "Aracı Aç"
+    },
+    "privacyEngine": {
+      "badge": "Sistem Durumu: Aktif",
+      "title": "Mutlak Gizlilik İçin Tasarlandı",
+      "description": "SafeTools Gizlilik Motoru %100 yerel olarak çalışır.",
+      "stats": [
+        {
+          "label": "Veri İletimi",
+          "value": "0.00%"
+        },
+        {
+          "label": "Yerel Şifreleme",
+          "value": "AES-256"
+        },
+        {
+          "label": "Çalışan Durumu",
+          "value": "Sandboxed"
+        },
+        {
+          "label": "Bulut Bağımlılığı",
+          "value": "Yok"
+        }
+      ],
+      "heartbeat": "Güvenli Düğüm Aktif",
+      "wasmHeartbeat": "WASM Motor Kalp Atışı",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Canlı Akış",
+        "verified": "Güvenlik Doğrulandı",
+        "logs": [
+          "WASM Güvenlik Korumalı Alanı Başlatılıyor... HAZIR",
+          "Ağ İsteği Kesildi: ENGELENDİ (Yalnızca Yerel Mod Etkin)",
+          "Tampon Bellek Atanıyor: 256MB Güvenli İstemci Tarafı Bellek... BAŞARILI",
+          "AES-256 GCM Anahtar Döndürme Tamamlandı. Yerel dosya olayları dinleniyor..."
+        ]
+      },
+      "sovereignty": {
+        "title": "Verileriniz Sizin Egemenliğinizdedir",
+        "description": "Bulut tabanlı araçların aksine SafeTools, tamamen tarayıcınızın özel korumalı alanı içinde çalışır.",
+        "button": "Mimariyi Doğrula"
+      }
+    },
+    "featuredCats": {
+      "title": "İhtiyacınız Olan Her Şey Tek Bir Güvenli Platformda",
+      "subtitle": "Beş temel kategoride profesyonel düzeyde yardımcı programlar.",
+      "items": [
+        {
+          "title": "Görüntü Araçları",
+          "description": "Görüntü işleme",
+          "points": [
+            "PNG to JPG",
+            "WebP",
+            "AVIF",
+            "Arka Plan Kaldırıcı",
+            "AI Görüntü İyileştirme",
+            "Toplu Sıkıştırma",
+            "Meta Veri Kaldırma"
+          ]
+        },
+        {
+          "title": "PDF Araçları",
+          "description": "PDF yardımcı programları",
+          "points": [
+            "Birleştir",
+            "Ayır",
+            "Sıkıştır",
+            "Kilidi Aç",
+            "OCR",
+            "PDF'den Word'e",
+            "Dijital İmza"
+          ]
+        },
+        {
+          "title": "Dosya Dönüştürme",
+          "description": "Dönüştürme",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "Elektronik Tablo",
+            "Video",
+            "Ses",
+            "Görüntüleyici"
+          ]
+        },
+        {
+          "title": "Gizlilik & Güvenlik",
+          "description": "Güvenlik",
+          "points": [
+            "Dosya Şifreleme",
+            "Meta Veri Temizleyici",
+            "QR Kod",
+            "Hash",
+            "Güvenli Paylaşım",
+            "Şifre Koruması",
+            "Base64"
+          ]
+        },
+        {
+          "title": "Geliştirici Araçları",
+          "description": "Geliştirme",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV to JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "Basit Süreç",
+      "title": "Nasıl Çalışır",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Dosyanızı Bırakın",
+          "description": "Herhangi bir dosyayı seçin. Yüklemeden anında algılarız."
+        },
+        {
+          "step": "02",
+          "title": "Yerel İşleme",
+          "description": "Doğrudan tarayıcı korumalı alanınızda işleme."
+        },
+        {
+          "step": "03",
+          "title": "Güvenli Sonuç",
+          "description": "İşlenen dosyanızı anında indirin."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "Sunucu Gecikmesi"
+      },
+      {
+        "val": "%100",
+        "label": "Yerel İşleme"
+      },
+      {
+        "val": "150+",
+        "label": "Güvenli Araçlar"
+      },
+      {
+        "val": "∞",
+        "label": "Kullanım Özgürlüğü"
+      }
+    ],
+    "manifesto": {
+      "badge": "Manifesto",
+      "title": "Gizlilik bir <br/> Özellik Değildir.",
+      "description": "Bu temel bir insan hakkıdır."
+    },
+    "sovereignty": {
+      "badge": "Veri Egemenliği",
+      "title": "Verileriniz <br/> Egemenliğinizdedir.",
+      "description": "Verilerinizi asla görmüyoruz.",
+      "points": [
+        "Bulut Yüklemesi Yok",
+        "Bellek İçi Şifreleme",
+        "Sıfır Takip",
+        "İstemci Tarafı İşleme"
+      ],
+      "foundation": {
+        "title": "Güvenin Temeli",
+        "description": "Gizlilik bir seçenek değil, varsayılan olmalıdır.",
+        "badge": "Vakıf Doğrulandı",
+        "verified": "Güvenlik Denetimi Geçildi"
+      }
+    },
+    "performance": {
+      "badge": "Yüksek Performans",
+      "title": "Hız İçin İnşa Edildi",
+      "subtitle": "Tarayıcınızda yerel olarak çalışan yüksek performanslı işleme mantığı.",
+      "items": [
+        {
+          "title": "Anında İşleme",
+          "description": "Yerel işleme ağ gecikmesini ortadan kaldırır."
+        },
+        {
+          "title": "WASM Native",
+          "description": "Donanım hızında çalışan yerel mantık."
+        },
+        {
+          "title": "Mobil Uyumlu",
+          "description": "Tüm mobil cihazlarda akıcı performans."
+        },
+        {
+          "title": "Donanım Hızlandırma",
+          "description": "Yerel CPU ve GPU'dan yararlanın."
+        },
+        {
+          "title": "Verimli Bellek",
+          "description": "Büyük dosyalar için optimize edilmiş bellek."
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "Sunucu bağımlılığı yok."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "Neden SafeTools'u Seçmelisiniz?",
+      "subtitle": "Yerel işlemenin mimari avantajı.",
+      "table": {
+        "feature": "Özellik",
+        "safe": "SafeTools",
+        "trad": "Geleneksel Araçlar"
+      },
+      "items": [
+        {
+          "f": "Gizlilik Modeli",
+          "s": true,
+          "c": "Bulut Tabanlı"
+        },
+        {
+          "f": "İşleme Konumu",
+          "s": "Yerel Donanım",
+          "c": "Uzak Sunucular"
+        },
+        {
+          "f": "Takip Scriptleri",
+          "s": "Yok",
+          "c": "Kapsamlı"
+        },
+        {
+          "f": "Dosya Tutma",
+          "s": "0ms (Yalnızca RAM)",
+          "c": "Değişken"
+        },
+        {
+          "f": "Gecikme",
+          "s": "Anında",
+          "c": "Yüksek (Yükleme)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "Yerel İşleme Kılavuzu",
+      "subtitle": "SafeTools verilerinizi nasıl güvende tutar?",
+      "steps": [
+        {
+          "title": "Bulutsuz Korumalı Alan",
+          "description": "Dosyalar tarayıcı RAM'inde işlenir."
+        },
+        {
+          "title": "Donanım Hızlandırma",
+          "description": "Yükleme olmadan donanımınızı kullanıyoruz."
+        },
+        {
+          "title": "Geçici Oturumlar",
+          "description": "Sekme kapatıldığında veriler silinir."
+        }
+      ],
+      "architecturalAdvantage": "Mimari Avantaj",
+      "vulnerabilityEliminated": "Bulut yükleme güvenlik açığını tamamen ortadan kaldırır.",
+      "cloud": "Bulut",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "Tasarım Gereği Güvenli.",
+      "subtitle": "Dosyalarınız cihazınızdan asla ayrılmaz.",
+      "items": [
+        "%100 İstemci Tarafı İşleme",
+        "AES-256 GCM Yerel Şifreleme",
+        "Sıfır Sunucu Veri İletimi",
+        "Korumalı Alan Tarayıcı Yürütmesi"
+      ],
+      "zeroTrust": {
+        "title": "Sıfır Güven Güvenliği.",
+        "description": "Her araç izole bir korumalı alanda çalışır.",
+        "encryption": "Şifreleme",
+        "protocol": "Protokol"
+      }
+    },
+    "faq": {
+      "badge": "Yardım Merkezi",
+      "title": "Sıkça Sorulan Sorular",
+      "items": [
+        {
+          "q": "Dosyalarım bir sunucuya yükleniyor mu?",
+          "a": "Hayır. SafeTools tüm işlemleri tarayıcıda yerel olarak yapar."
+        },
+        {
+          "q": "SafeTools kullanımı ücretsiz mi?",
+          "a": "Evet, tüm temel özellikler %100 ücretsizdir."
+        },
+        {
+          "q": "İşlemden sonra verilerime ne olur?",
+          "a": "Sekme kapatıldığında anında temizlenir."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "Neden SafeTools'u Seçmelisiniz?",
+      "subtitle": "Yerel işlemenin mimari avantajı.",
+      "table": {
+        "feature": "Özellik",
+        "safe": "SafeTools",
+        "trad": "Geleneksel Araçlar"
+      },
+      "items": [
+        {
+          "title": "%100 Yerel İşleme",
+          "description": "Her işlem donanımınızda çalışır."
+        },
+        {
+          "title": "Sıfır Veri Toplama",
+          "description": "Hiçbir şeyi izlemiyoruz veya saklamıyoruz."
+        },
+        {
+          "title": "Askeri Düzeyde Şifreleme",
+          "description": "Yerel AES-256 GCM şifrelemesi."
+        },
+        {
+          "title": "Anında Performans",
+          "description": "Yükleme gecikmesi yok."
+        },
+        {
+          "title": "Çevrimdışı Çalışabilir",
+          "description": "Çoğu araç internet olmadan çalışır."
+        },
+        {
+          "title": "Çoklu Platform",
+          "description": "Herhangi bir modern tarayıcıda çalışır."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "Kullanım Örnekleri",
+      "title": "Profesyoneller İçin İnşa Edildi",
+      "subtitle": "Veri egemenliğine öncelik verenlerin tercihi.",
+      "items": [
+        {
+          "title": "Güvenli Belge Yönetimi",
+          "description": "Hassas belgeleri bulut riski olmadan işleyin."
+        },
+        {
+          "title": "Yaratıcı Prodüksiyon",
+          "description": "İş istasyonunuzda doğrudan medya işleme."
+        },
+        {
+          "title": "Geliştirici İş Akışları",
+          "description": "Veri dönüştürme için korumalı alan araçları."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Kullanıcı Geri Bildirimi",
+      "title": "Gizlilik Savunucuları Tarafından Güveniliyor",
+      "items": [
+        {
+          "quote": "Sıfır yükleme mimarisi tam da webin ihtiyacı olan şey.",
+          "name": "Güvenlik Uzmanı",
+          "role": "Mimar"
+        },
+        {
+          "quote": "Kullandığım her bulut aracından daha hızlı.",
+          "name": "Tasarımcı",
+          "role": "Yaratıcı Lider"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "Yerel Performans",
+      "status": "Hazır",
+      "title": "Mobilite İçin İnşa Edildi.",
+      "subtitle": "Her cihazda yerel düzeyde performansı deneyimleyin.",
+      "desktop": {
+        "title": "Masaüstü Gücü",
+        "description": "Tam özellikli stüdyo paketi."
+      },
+      "mobile": {
+        "title": "Mobil Hız",
+        "description": "Optimize edilmiş yerel motorlar."
+      },
+      "waitlist": "Beta'ya Katıl"
+    },
+    "securityArchitecture": {
+      "badge": "Güvenlik Güçlendirilmiş",
+      "title": "Donanım İzole Edilmiş.",
+      "subtitle": "Modern WASM korumalı alanını kullanıyoruz.",
+      "button": "Güvenliği Doğrula"
+    },
+    "communityStats": {
+      "title": "Küresel Benimseme",
+      "subtitle": "Binlerce bilinçli kullanıcı tarafından kullanılıyor.",
+      "processedCount": "%100",
+      "processed": "Özel & Yerel",
+      "usersCount": "500K+",
+      "users": "Aktif Kullanıcı"
+    },
+    "finalCta": {
+      "title": "Verilerinizin Kontrolünü Elinize Alın.",
+      "subtitle": "Kimliğinizi yüklemeyi bırakın.",
+      "launch": "Stüdyoyu Başlat",
+      "allTools": "150'den Fazla Aracı Keşfedin"
+    },
+    "pricingSection": {
+      "badge": "Sonsuza Dek Ücretsiz",
+      "title": "Herkes İçin Gizlilik.",
+      "description": "SafeTools bireysel kullanım için %100 ücretsizdir.",
+      "button": "İşlemeye Başla"
+    },
+    "smartRouting": {
+      "title": "Akıllı Dosya Yönlendirme"
+    },
+    "techMarquee": {
+      "badge": "Yerel Performans",
+      "title": "Yeni Nesil Yerel Motorlar Tarafından Desteklenmektedir",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "Yerel yakın mantık"
+        },
+        {
+          "name": "GPU",
+          "desc": "Donanım hızlandırma"
+        },
+        {
+          "name": "AES",
+          "desc": "Güvenli şifreleme"
+        },
+        {
+          "name": "OCR",
+          "desc": "Nöral çıkarma"
+        },
+        {
+          "name": "Worker",
+          "desc": "Çok izlekli hesaplama"
+        }
+      ]
+    }
+  }
+}

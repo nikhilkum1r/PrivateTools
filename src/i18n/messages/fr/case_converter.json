@@ -1,0 +1,116 @@
+{
+  "caseConverter": {
+    "title": "Convertisseur",
+    "subtitle": "de Casse.",
+    "description": "Transformez instantanément du texte avec un convertisseur de casse en ligne rapide et axé sur la confidentialité. Convertissez en majuscules, minuscules, casse de titre, casse de phrase, camelCase, snake_case, kebab-case et plus directement dans votre navigateur.",
+    "inputPlaceholder": "Tapez ou collez votre texte ici...",
+    "textInput": "Entrée de texte",
+    "moreFormats": "Plus de formats :",
+    "toast": {
+      "success": "Conversion appliquée !",
+      "copy": "Copié dans le presse-papiers !"
+    },
+    "modes": {
+      "upper": "MAJUSCULES",
+      "lower": "minuscules",
+      "title": "Casse de Titre",
+      "sentence": "Phrase",
+      "camel": "camelCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case",
+      "pascal": "PascalCase",
+      "capitalized": "Capitalisé",
+      "screaming_snake": "SCREAMING_SNAKE",
+      "train": "Train-Case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "toggle": "tOGGLE cASE"
+    },
+    "stats": {
+      "privacy": "Confidentialité d'abord",
+      "instant": "Résultat instantané",
+      "noUploads": "Pas d'uploads",
+      "devReady": "Prêt pour les dévs"
+    },
+    "content": {
+      "mainTitle": "Outil gratuit de conversion de casse en ligne",
+      "mainDesc1": "L'outil Convertisseur de Casse vous aide à modifier rapidement le formatage du texte en différents styles d'écriture et formats de capitalisation. Que vous soyez développeur, étudiant, écrivain, marketeur, créateur de contenu ou professionnel de bureau, cet outil rend le formatage du texte plus facile et plus rapide.",
+      "mainDesc2": "Convertissez du texte instantanément sans installer de logiciel ni uploader de fichiers sur des serveurs externes.",
+      "formatsTitle": "Formats de casse pris en charge",
+      "formatsSubtitle": "Styles et conventions",
+      "standardTitle": "Écriture standard",
+      "standardList": [
+        "MAJUSCULES",
+        "minuscules",
+        "Casse de Titre",
+        "Casse de Phrase",
+        "Capitalisé",
+        "Inverser la casse"
+      ],
+      "devTitle": "Développeur et codage",
+      "devList": [
+        "camelCase",
+        "PascalCase",
+        "snake_case",
+        "SCREAMING_SNAKE_CASE",
+        "kebab-case",
+        "Train-Case",
+        "dot.case",
+        "path/case"
+      ],
+      "featuresTitle": "Caractéristiques du convertisseur de casse en ligne",
+      "featuresSubtitle": "Pourquoi utiliser ce convertisseur ?",
+      "feature1Title": "Multiples transformations",
+      "feature1Desc": "Convertissez du texte en divers styles de capitalisation en un clic.",
+      "feature2Title": "Adapté aux développeurs",
+      "feature2Desc": "Parfait pour les programmeurs ayant besoin de noms de variables, classes CSS, noms d'API, etc.",
+      "feature3Title": "SEO et rédaction de contenu",
+      "feature3Desc": "Les écrivains et les marketeurs peuvent rapidement optimiser les titres, en-têtes et métadonnées.",
+      "feature4Title": "Sécurité basée sur le navigateur",
+      "feature4Desc": "Tout le traitement se fait localement dans votre navigateur pour aider à protéger le texte sensible.",
+      "howTitle": "Comment utiliser le convertisseur",
+      "step1": "Coller",
+      "step1Desc": "Collez ou tapez votre texte",
+      "step2": "Sélectionner",
+      "step2Desc": "Sélectionnez le format souhaité",
+      "step3": "Convertir",
+      "step3Desc": "L'outil convertit le texte instantanément",
+      "step4": "Copier",
+      "step4Desc": "Copiez le résultat formaté"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "Qu'est-ce qu'un convertisseur de casse ?",
+          "a": "Un convertisseur de casse est un outil qui modifie le formatage du texte en différents styles de capitalisation tels que les majuscules, les minuscules, la casse de titre, le camelCase ou le snake_case."
+        },
+        {
+          "q": "Ce convertisseur de casse est-il gratuit ?",
+          "a": "Oui. L'outil est entièrement gratuit à utiliser en ligne sans inscription."
+        },
+        {
+          "q": "L'outil fonctionne-t-il hors ligne ?",
+          "a": "La plupart des traitements basés sur le navigateur peuvent fonctionner localment après le chargement de la page, selon les capacités de votre navigateur."
+        },
+        {
+          "q": "Mon texte est-il sécurisé ?",
+          "a": "Oui. Le traitement du texte se fait directement dans votre navigateur pour une meilleure confidentialité et sécurité."
+        },
+        {
+          "q": "Les développeurs peuvent-ils utiliser cet outil ?",
+          "a": "Oui. L'outil prend en charge les conventions de nommage de programmation courantes, notamment camelCase, PascalCase, snake_case et kebab-case."
+        },
+        {
+          "q": "Puis-je utiliser l'outil sur des appareils mobiles ?",
+          "a": "Oui. Le convertisseur de casse fonctionne sur les téléphones, les tablettes, les ordinateurs portables et les systèmes de bureau."
+        },
+        {
+          "q": "L'outil prend-il en charge les textes volumineux ?",
+          "a": "Oui. Vous pouvez convertir efficacement des paragraphes, des articles, des extraits de code ou de gros blocs de texte."
+        }
+      ],
+      "title": "Foire aux questions",
+      "description": "Tout ce que vous devez savoir sur notre outil respectueux de la vie privée."
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "about": {
+    "seo": {
+      "title": "Sobre SafeTools | Nuestra misión por la privacidad digital",
+      "description": "Conozca la misión, el manifiesto y la tecnología detrás de SafeTools: el kit de herramientas sin servidor creado para proteger su soberanía digital."
+    },
+    "toc": {
+      "manifesto": "El Manifiesto",
+      "trust": "Señales de confianza",
+      "pillars": "Pilares fundamentales",
+      "tech": "Stack tecnológico"
+    },
+    "manifesto": {
+      "badge": "Nuestro Manifiesto",
+      "title": "La privacidad es un derecho humano.",
+      "description": "SafeTools fue creado para cerrar la brecha entre las utilidades profesionales potentes y la soberanía absoluta de los datos. Creemos que no debería tener que sacrificar su identidad por una conversión de PDF o una transcodificación de vídeo."
+    },
+    "trustSignals": [
+      {
+        "label": "Cumple con el RGPD",
+        "value": "Por arquitectura"
+      },
+      {
+        "label": "Seguridad verificada",
+        "value": "Solo local"
+      },
+      {
+        "label": "Estándares abiertos",
+        "value": "Motores verificados"
+      },
+      {
+        "label": "Modelo de amenaza",
+        "value": "Acceso cero"
+      }
+    ],
+    "pillars": {
+      "zeroServer": {
+        "title": "Política de cero servidor",
+        "description": "Sus archivos nunca se suben. Procesamos todo localmente en su navegador utilizando WebAssembly y JS del lado del cliente. Esto garantiza una verdadera soberanía de los datos."
+      },
+      "noPersistence": {
+        "title": "Sin persistencia de datos",
+        "description": "Una vez que cierra la pestaña, su sesión y sus archivos se eliminan de la memoria. No utilizamos bases de datos ni registros del lado del servidor. Su espacio de trabajo es temporal y seguro."
+      },
+      "identityProtection": {
+        "title": "Protección de identidad",
+        "description": "Sin rastreo, sin analíticas y sin huellas digitales. Ni siquiera sabemos que está aquí, y nos gusta que sea así. Priorizamos el anonimato sobre las métricas."
+      }
+    },
+    "engine": {
+      "badge": "El Motor",
+      "title": "Rendimiento del hardware. Latencia de servidor cero.",
+      "description": "Utilizamos tecnologías de navegador de vanguardia para trasladar la potencia de procesamiento de la nube a su CPU y GPU local. Mediante WebAssembly (WASM), ejecutamos binarios de C++ y Rust de alto rendimiento directamente en el motor V8 de su navegador.",
+      "items": [
+        {
+          "name": "ffmpeg.wasm",
+          "desc": "Codificación profesional de vídeo y audio en el navegador."
+        },
+        {
+          "name": "pdf-lib",
+          "desc": "Manipulación de documentos de alta fidelidad."
+        },
+        {
+          "name": "ONNX Runtime",
+          "desc": "IA del lado del cliente para escalado de imágenes y OCR."
+        },
+        {
+          "name": "WebAssembly",
+          "desc": "Rendimiento nativo mediante binarios de alta velocidad."
+        }
+      ]
+    },
+    "metrics": {
+      "title": "Métricas de rendimiento",
+      "subtitle": "Motor de computación local v4.0",
+      "items": [
+        {
+          "label": "Riesgo de fuga de datos",
+          "value": "0%"
+        },
+        {
+          "label": "Velocidad de procesamiento",
+          "value": "Nativa"
+        },
+        {
+          "label": "Dependencia de la nube",
+          "value": "Ninguna"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para tomar el control?",
+      "description": "Explore nuestra suite completa de utilidades profesionales y experimente el poder del procesamiento de archivos privado y localizado."
+    }
+  }
+}

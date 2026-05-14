@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "أدوات متصفح من الدرجة الاحترافية مصممة للخصوصية والسرعة. أكثر من 150 أداة مساعدة تعمل بالكامل على جهازك.",
+    "tagline": "بياناتك ملك لك.",
+    "localEngineActive": "المحرك المحلي نشط",
+    "isolatedContextVerified": "تم التحقق من السياق المعزول",
+    "verifiedSupport": "توافق المتصفح المعتمد",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "المنتج",
+    "resources": "الموارد",
+    "community": "المجتمع",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "جميع الأنظمة محلية",
+    "faq": "الأسئلة الشائعة"
+  }
+}

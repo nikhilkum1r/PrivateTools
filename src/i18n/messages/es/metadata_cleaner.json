@@ -1,0 +1,343 @@
+{
+  "metadataCleaner": {
+    "metadata": {
+      "title": "Limpiador de Metadatos | Eliminar EXIF y GPS | SafeTools",
+      "description": "Elimine metadatos ocultos de imágenes, documentos y archivos de forma segura utilizando procesamiento local en el navegador. 100% local, cero subidas.",
+      "og_title": "Limpiador de Metadatos | Eliminar EXIF y GPS | SafeTools",
+      "og_description": "Elimine metadatos ocultos de imágenes, documentos y archivos de forma segura utilizando procesamiento local en el navegador. 100% local, cero subidas.",
+      "keywords": "limpiador de metadatos, eliminar exif, borrar datos gps, privacidad de fotos, limpiador de documentos, herramienta de metadatos, limpieza exif local, eliminación segura de metadatos",
+      "ogTitle": "Limpiador de Metadatos | SafeTools",
+      "ogDescription": "Elimine metadatos ocultos de archivos localmente antes de compartirlos."
+    },
+    "hero": {
+      "badge": "Limpieza de Metadatos de Grado Industrial",
+      "title": "Limpiador de Metadatos",
+      "description": "Elimine metadatos ocultos de imágenes, documentos y archivos de forma segura mediante un procesamiento centrado en la privacidad desde el navegador.",
+      "badges": {
+        "local": "Procesamiento Local",
+        "zero": "Cero Subidas",
+        "no_tracking": "Sin Rastreo",
+        "instant": "Limpieza Instantánea",
+        "browser": "Basado en Navegador"
+      },
+      "footer": "Proteja su privacidad eliminando los metadatos ocultos de los archivos antes de compartirlos."
+    },
+    "engine": {
+      "init": {
+        "title": "Inicializar Secuencia de Activos",
+        "desc": "Suelte archivos para detectar y eliminar datos de rastreo incrustados."
+      },
+      "dropzone": {
+        "title": "Subir Archivos para Limpiar",
+        "desc": "Imágenes, Videos, PDFs, Audio"
+      },
+      "queue": {
+        "title": "Cola de Activos",
+        "add_more": "Agregar Más Activos",
+        "scrub_all": "LIMPIAR TODOS LOS ACTIVOS",
+        "status": {
+          "clean": "LIMPIO",
+          "risk": "RIESGO {score}%"
+        }
+      },
+      "inspector": {
+        "download": "DESCARGAR SEGURO",
+        "binary_restricted": "Vista Previa de Flujo Binario Restringida"
+      },
+      "logic": {
+        "title": "Matriz de Lógica",
+        "wasm_active": "WASM ACTIVO",
+        "detected_label": "Metadatos Detectados",
+        "no_markers": "No Se Detectaron Marcadores",
+        "protocol": "Protocolo de Limpieza",
+        "options": {
+          "gps": "Eliminar GPS/Ubicación",
+          "camera": "Eliminar Especificaciones de Cámara",
+          "software": "Eliminar Firma de Software"
+        }
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Características de Protección de Metadatos",
+        "subtitle": "Controles de privacidad de grado industrial integrados directamente en su navegador.",
+        "items": [
+          {
+            "title": "Eliminación de EXIF",
+            "icon": "MapPin"
+          },
+          {
+            "title": "Eliminación de GPS",
+            "icon": "Globe"
+          },
+          {
+            "title": "Info de Cámara",
+            "icon": "Camera"
+          },
+          {
+            "title": "Limpieza de Documentos",
+            "icon": "FileText"
+          },
+          {
+            "title": "En Navegador",
+            "icon": "Cpu"
+          },
+          {
+            "title": "Procesamiento por Lotes",
+            "icon": "Layers"
+          },
+          {
+            "title": "Local y Seguro",
+            "icon": "Shield"
+          },
+          {
+            "title": "Descarga Instantánea",
+            "icon": "Download"
+          }
+        ]
+      },
+      "educational": {
+        "whatIs": {
+          "badge": "Guía Educativa",
+          "title": "¿Qué son los metadatos?",
+          "description": "Los metadatos son información oculta almacenada dentro de archivos, imágenes y documentos que puede revelar detalles confidenciales como información del dispositivo, datos de ubicación, marcas de tiempo, versiones de software y detalles del autor.",
+          "matters": {
+            "title": "Por Qué Importa",
+            "desc": "Cada vez que toma una foto o guarda un documento, su dispositivo incrusta silenciosamente huellas personales en el archivo. Estos datos ocultos viajan con el archivo a donde quiera que vaya."
+          },
+          "payload": {
+            "title": "Ejemplo de Carga Oculta",
+            "items": [
+              {
+                "k": "Latitud",
+                "v": "40.7128° N"
+              },
+              {
+                "k": "Longitud",
+                "v": "74.0060° W"
+              },
+              {
+                "k": "Dispositivo",
+                "v": "iPhone 15 Pro"
+              },
+              {
+                "k": "Autor",
+                "v": "John Doe"
+              }
+            ]
+          }
+        },
+        "risks": {
+          "title": "Por Qué los Metadatos Pueden Ser Peligrosos",
+          "subtitle": "La amenaza silenciosa de la exposición de datos al compartir archivos.",
+          "items": [
+            {
+              "title": "Fugas de Ubicación GPS",
+              "desc": "Las fotos tomadas en teléfonos inteligentes incrustan las coordenadas GPS exactas de su hogar o lugar de trabajo."
+            },
+            {
+              "title": "Huellas Dactilares del Dispositivo",
+              "desc": "Los modelos de cámara, los números de serie y las versiones del sistema operativo pueden utilizarse para rastrearlo en diferentes cargas."
+            },
+            {
+              "title": "Identificación de Autor",
+              "desc": "Los documentos PDF y Word almacenan el nombre del creador y la organización de forma predeterminada."
+            }
+          ]
+        },
+        "formats": {
+          "title": "Formatos de Archivo Soportados",
+          "subtitle": "Cobertura integral para todos sus medios y documentos.",
+          "groups": [
+            {
+              "cat": "Imágenes",
+              "formats": [
+                "JPG / JPEG",
+                "PNG",
+                "WEBP",
+                "TIFF"
+              ]
+            },
+            {
+              "cat": "Documentos",
+              "formats": [
+                "PDF",
+                "DOCX",
+                "XLSX",
+                "PPTX"
+              ]
+            },
+            {
+              "cat": "Medios",
+              "formats": [
+                "MP3",
+                "MP4",
+                "MOV",
+                "WAV"
+              ]
+            }
+          ]
+        },
+        "types": {
+          "title": "Datos Ocultos Que Podemos Eliminar",
+          "items": [
+            "Coordenadas GPS",
+            "Modelo de Cámara",
+            "Fabricante del Dispositivo",
+            "Marcas de Tiempo",
+            "Nombres de Autor",
+            "Software de Edición",
+            "Metadatos de Derechos de Autor",
+            "Historial de Archivos",
+            "Miniaturas Incrustadas",
+            "Historial de Ubicación"
+          ]
+        },
+        "how_it_works": {
+          "title": "Cómo Funciona la Limpieza de Metadatos",
+          "steps": [
+            {
+              "s": "01",
+              "t": "Cargue archivos localmente",
+              "d": "Seleccione archivos arrastrando y soltando. Nunca salen de su dispositivo."
+            },
+            {
+              "s": "02",
+              "t": "Detecte metadatos ocultos",
+              "d": "Nuestro motor WASM escanea la estructura binaria en busca de etiquetas conocidas."
+            },
+            {
+              "s": "03",
+              "t": "Elimine metadatos seleccionados",
+              "d": "Las etiquetas se eliminan o aleatorizan según la configuración de su matriz lógica."
+            },
+            {
+              "s": "04",
+              "t": "Descargue de forma segura",
+              "d": "Guarde el archivo limpio en su sistema al instante."
+            }
+          ],
+          "localNote": "Los archivos se procesan localmente dentro de su navegador y nunca se suben a servidores."
+        },
+        "privacy": {
+          "title": "Procesamiento de Archivos con Prioridad de Privacidad",
+          "items": [
+            "Limpieza en Navegador",
+            "Sin Subidas a la Nube",
+            "Sin Retención de Archivos",
+            "Procesamiento Local Seguro",
+            "Capacidad Fuera de Línea",
+            "Cero Rastreo"
+          ]
+        },
+        "use_cases": {
+          "title": "Casos de Uso Comunes de Privacidad",
+          "items": [
+            "Subidas a Redes Sociales",
+            "Protección de Periodismo",
+            "Intercambio de Documentos Comerciales",
+            "Limpieza de Documentos Legales",
+            "Investigaciones de Ciberseguridad",
+            "Privacidad de Investigación",
+            "Intercambio Anónimo",
+            "Privacidad de Fotografía"
+          ]
+        },
+        "comparison": {
+          "title": "¿Por qué usar el Limpiador de Metadatos SafeTools?",
+          "headers": [
+            "Característica",
+            "Herramientas Tradicionales",
+            "SafeTools"
+          ],
+          "rows": [
+            {
+              "f": "Procesamiento Local",
+              "t": "Raro",
+              "s": "Sí"
+            },
+            {
+              "f": "Requiere Cargar Archivos",
+              "t": "Normalmente",
+              "s": "No"
+            },
+            {
+              "f": "Scripts de Seguimiento",
+              "t": "A veces",
+              "s": "No"
+            },
+            {
+              "f": "Basado en Navegador",
+              "t": "Parcial",
+              "s": "Completo"
+            },
+            {
+              "f": "Enfocado en Privacidad",
+              "t": "Varía",
+              "s": "Sí"
+            }
+          ]
+        },
+        "warning": {
+          "badge": "Recordatorio Importante de Privacidad",
+          "title": "Limitaciones de los Metadatos",
+          "items": [
+            "Algunas plataformas pueden agregar nuevos metadatos después de la subida.",
+            "Siempre verifique los archivos limpios localmente si el anonimato es crítico.",
+            "La eliminación de metadatos mejora la privacidad pero no garantiza el anonimato absoluto."
+          ]
+        }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "description": "Todo lo que necesita saber sobre la protección de su identidad digital eliminando metadatos.",
+        "items": [
+          {
+            "q": "¿Qué tipo de metadatos se pueden eliminar de mis archivos?",
+            "a": "Nuestro Limpiador de Metadatos puede eliminar datos EXIF (modelo de cámara, configuraciones), coordenadas de ubicación GPS, información del autor y propiedades ocultas de documentos de imágenes y archivos PDF."
+          },
+          {
+            "q": "¿Por qué debo eliminar los metadatos antes de compartir fotos?",
+            "a": "Las fotos a menudo contienen coordenadas GPS ocultas y marcas de tiempo que pueden revelar su ubicación exacta. Eliminar estos metadatos es un paso crucial para proteger su privacidad en línea."
+          }
+        ]
+      },
+      "related": {
+        "title": "Herramientas de Seguridad Relacionadas",
+        "subtitle": "Complemente su flujo de trabajo de privacidad con nuestra suite segura.",
+        "items": [
+          {
+            "n": "File Vault",
+            "d": "Cifrado de archivos de grado militar."
+          },
+          {
+            "n": "Steganography",
+            "d": "Ocultar mensajes dentro de imágenes."
+          },
+          {
+            "n": "Secure Notes",
+            "d": "Notas cifradas en el navegador."
+          },
+          {
+            "n": "Password Generator",
+            "d": "Genere contraseñas fuertes sin conexión."
+          },
+          {
+            "n": "Strength Checker",
+            "d": "Audite su seguridad de contraseñas."
+          },
+          {
+            "n": "File Shredder",
+            "d": "Eliminar permanentemente rastros digitales."
+          }
+        ]
+      },
+      "manifesto": {
+        "badge": "Privacidad por Defecto",
+        "title": "La Privacidad es un Derecho.",
+        "description": "\"SafeTools crea herramientas de privacidad basadas en el navegador diseñadas para minimizar la exposición de datos y maximizar el control del usuario.\""
+      },
+      "cta": "Elimine datos ocultos. Proteja su privacidad. Mantenga el control de su huella digital."
+    }
+  }
+}

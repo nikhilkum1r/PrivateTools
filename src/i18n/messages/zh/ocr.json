@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "免费在线 OCR 工具 | 从图像和 PDF 中提取文本 | SafeTools",
+      "description": "使用我们免费、注重隐私的 OCR 工具，立即从图像、屏幕截图和 PDF 中提取文本。无需上传，由 AI 驱动的快速文本识别。",
+      "keywords": "免费在线 OCR, 图像转文本转换器, 从图像中提取文本, PDF OCR 工具, 屏幕截图文本提取器, 手写 OCR, 扫描文档 OCR, 免费 OCR 软件, AI OCR 工具, 基于浏览器的 OCR, 光学字符识别, 图像转可编辑文本, PDF 在线 OCR, 多语言 OCR, 无上传 OCR",
+      "ogTitle": "SafeTools OCR | 免费在线 OCR 工具 - 立即从图像中提取文本",
+      "ogDescription": "使用我们注重隐私、基于浏览器的 OCR 工具，将图像、扫描文档、屏幕截图、手写笔记和 PDF 转换为可编辑文本。快速、准确且完全免费。"
+    },
+    "hero": {
+      "badge": "注重隐私的 AI 智能",
+      "title": "免费在线 OCR 工具 - 立即提取文本",
+      "description": "使用我们注重隐私、基于浏览器的 OCR 工具，将图像、扫描文档、屏幕截图、手写笔记 e PDF 转换为可编辑文本。快速、准确且完全免费。",
+      "extractNow": "立即提取文本",
+      "uploadImage": "上传图像",
+      "tryDemo": "尝试 OCR 演示",
+      "badges": {
+        "private": "100% 私密",
+        "browser": "基于浏览器",
+        "noUpload": "无需上传",
+        "ai": "AI 驱动",
+        "free": "永久免费"
+      }
+    },
+    "workspace": {
+      "source": "源资源",
+      "sourceSubtitle": "图像、PDF 或屏幕截图",
+      "clearQueue": "清空队列",
+      "dropzone": {
+        "title": "拖放资源",
+        "subtitle": "支持 JPEG, PNG, PDF, HEIC"
+      },
+      "engine": "识别引擎",
+      "start": "开始提取",
+      "active": "正在运行 {progress}%",
+      "history": "最近历史",
+      "clearAll": "全部清除",
+      "copyHistory": "已从历史记录中复制！",
+      "detected": "检测到 {lang}",
+      "matrix": "提取矩阵",
+      "matrixSubtitle": "可编辑数字文本",
+      "words": "字数",
+      "chars": "字符",
+      "waiting": "等待神经反馈",
+      "processing": "处理神经权重",
+      "handwriting_active": "手写 AI 已启用",
+      "detected_string": "检测到的字符串：",
+      "neural_v3": "神经文本提取 v3.0",
+      "config": "配置",
+      "configDesc": "选择您的语言并执行",
+      "clear": "清除",
+      "changeFile": "更改文件",
+      "extracting": "正在提取文本...",
+      "language": "语言",
+      "run": "运行 OCR",
+      "result": "提取结果",
+      "extractionComplete": "提取完成",
+      "awaitingExtraction": "等待提取",
+      "placeholder": "提取的文本将显示在这里...",
+      "copy": "复制文本",
+      "copied": "已复制！"
+    },
+    "messages": {
+      "analyzing": "正在通过多脚本引擎分析...",
+      "extractionSuccess": "成功从 {count} 个文件中提取文本！",
+      "extractionFailed": "提取失败。请尝试更清晰的图像。",
+      "copySuccess": "已复制到剪贴板！",
+      "invalidFile": "无效的文件类型 ({name})",
+      "svgNotSupported": "不支持 SVG 文件 ({name})"
+    },
+    "languages": {
+      "auto": "✨ 自动检测语言",
+      "eng": "英语",
+      "hin": "印地语",
+      "spa": "西班牙语",
+      "fra": "法语",
+      "deu": "德语",
+      "ara": "阿拉伯语",
+      "chi_sim": "中文 (简体)",
+      "jpn": "日语",
+      "kor": "韩语",
+      "ita": "意大利语",
+      "por": "葡萄牙语",
+      "rus": "俄语",
+      "eng_hin": "英语 + 印地语",
+      "eng_spa": "英语 + 西班牙语",
+      "eng_fra": "英语 + 法语"
+    },
+    "landing": {
+      "intro": {
+        "title": "免费在线从图像中提取文本",
+        "content": "光学字符识别 (OCR) 技术将图像中的打印或手写文本转换为可编辑的数字文本。我们的免费在线 OCR 工具可帮助用户数字化文档、从屏幕截图复制文本、扫描打印页面，并立即将手写笔记转换为可编辑文件。"
+      },
+      "features": {
+        "extraction": {
+          "title": "神经提取",
+          "description": "专为在复杂背景下检测文本而设计的专有 AI 模型。"
+        },
+        "multilingual": {
+          "title": "全球支持",
+          "description": "支持 100 多种语言的文本识别，包括中日韩 (CJK) 和印度语系脚本。"
+        },
+        "secure": {
+          "title": "企业级安全",
+          "description": "军用级隐私保护，保证零服务器交互。"
+        },
+        "offline": {
+          "title": "离线可用",
+          "description": "整个 OCR 引擎在您的浏览器中运行，无需联网。"
+        },
+        "title": "OCR 提取能力",
+        "title2": "强大的 AI OCR 功能",
+        "subtitle": "适用于各种工作流程的专业级文本识别。",
+        "items": [
+          "数字化纸质文档",
+          "从 YouTube/社交媒体复制文本",
+          "转换手写作业",
+          "从业务收据中提取数据",
+          "处理法律和医疗记录",
+          "将内容保存为 Word 或文本文件"
+        ]
+      },
+      "formats": {
+        "title": "支持的文件格式",
+        "image": "图像格式",
+        "doc": "文档格式",
+        "optimized": "优化于",
+        "standard": "标准办公文档",
+        "mobileReady": "移动端支持",
+        "socialMedia": "社交媒体屏幕截图",
+        "highPrecision": "高精度"
+      },
+      "privacy": {
+        "title": "注重隐私的 OCR 处理",
+        "content": "与许多其他在线 OCR 工具不同，您的文件不会永久存储在我们的服务器上。我们利用 WebAssembly 进行客户端处理，这意味着 OCR 引擎直接在您的浏览器中运行。",
+        "execution": {
+          "title": "本地执行",
+          "content": "处理发生在您的 RAM 中，而不是我们的云端。"
+        },
+        "tracking": {
+          "title": "无跟踪",
+          "content": "我们不记录您的文件或提取结果。"
+        },
+        "registration": {
+          "title": "无需注册",
+          "content": "无需账号即可使用 AI 的全部功能。"
+        }
+      },
+      "ai": {
+        "title": "AI 驱动的识别",
+        "content": "先进的神经网络提高了文本准确性、布局保留和多语言支持。我们的引擎即使在噪点、模糊或低分辨率图像上也能有效工作。",
+        "items": [
+          "手写体识别与转换",
+          "多栏和表格检测",
+          "自动旋转和倾斜校正",
+          "噪点图像恢复和去模糊"
+        ]
+      },
+      "whatIs": {
+        "title": "什么是 OCR？",
+        "content": "OCR 代表光学字符识别 (Optical Character Recognition)。它是一种允许软件分析图像并检测字母、数字和符号，将其转化为可搜索和可编辑的数字内容的技术。",
+        "how": {
+          "title": "工作原理",
+          "content": "OCR 软件扫描图像的像素图案，将形状识别为字符，并利用语言模型重建句子和段落。"
+        },
+        "apps": {
+          "title": "应用场景",
+          "content": "广泛应用于业务自动化、档案数字化以及为视力障碍人士提供的辅助技术。"
+        }
+      },
+      "useCases": {
+        "badge": "工作流集成",
+        "title": "热门使用场景",
+        "subtitle": "SafeTools OCR 专为各种工作流程和专业需求而设计。",
+        "items": [
+          {
+            "title": "学生",
+            "desc": "将讲座笔记、教科书和研究论文转换为可编辑的学习指南。"
+          },
+          {
+            "title": "企业",
+            "desc": "将合同、发票和纸质记录数字化，以实现更快的数字工作流程。"
+          },
+          {
+            "title": "开发人员",
+            "desc": "从 UI 模型、代码屏幕截图和文档中提取结构化文本。"
+          },
+          {
+            "title": "研究人员",
+            "desc": "将旧的扫描档案转化为具有可选文本的可搜索 PDF 文档。"
+          },
+          {
+            "title": "内容创作者",
+            "desc": "快速重复利用来自 YouTube 屏幕截图、信息图表和表情包的文本。"
+          },
+          {
+            "title": "法律专业人士",
+            "desc": "安全地数字化敏感案件文件，无数据泄露风险。"
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "屏幕截图智能",
+        "title": "从屏幕截图提取文本",
+        "content": "立即复制 YouTube 截图、Instagram 贴子或 Zoom 演示文稿中的文本。不再需要手动输入或从头开始重新制作内容。",
+        "tags": [
+          "社交媒体",
+          "网络研讨会",
+          "UI/UX 设计"
+        ]
+      },
+      "handwriting": {
+        "badge": "从画笔到像素",
+        "title": "手写体识别",
+        "content": "将手写笔记、日志条目和白板内容转换为数字文本。我们的 AI 经过训练，可以理解各种手写风格和草体脚本。",
+        "handwritingActive": "手写 AI 已启用",
+        "tags": [
+          "日志",
+          "作业",
+          "白板"
+        ]
+      },
+      "export": {
+        "title": "以多种格式导出",
+        "content": "提取文本后，以最适合您工作流程的格式保存。立即复制或下载高质量文件。",
+        "items": [
+          "纯文本 (.TXT)",
+          "文档 (.DOCX)",
+          "结构化数据 (.JSON)",
+          "表格 (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "超快神经引擎",
+        "content": "使用 WebAssembly 和 GPU 加速进行了优化，以确保即使在高清资源上也能快速识别。",
+        "optimization": "浏览器优化",
+        "accuracy": "字符准确度",
+        "wasm": "WebAssembly",
+        "gpu": "GPU 加速"
+      },
+      "manifesto": {
+        "title": "隐私优先宣言",
+        "description": "我们相信您的数据属于您自己。我们的 OCR 引擎在设计上尊重这一点。",
+        "points": [
+          "数据不会离开您的机器",
+          "无需账号",
+          "无跟踪 Cookie",
+          "无隐藏日志记录"
+        ],
+        "others": {
+          "title": "其他 OCR 工具",
+          "points": [
+            "将您的数据出售给广告商",
+            "需要云端上传",
+            "注入跟踪像素",
+            "存储您的敏感文档"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "为什么选择 SafeTools OCR",
+        "subtitle": "将我们与传统的基于云的 OCR 工具进行比较。",
+        "headers": [
+          "功能",
+          "SafeTools OCR",
+          "传统工具"
+        ],
+        "rows": [
+          {
+            "f": "基于浏览器",
+            "s": "是",
+            "t": "有限"
+          },
+          {
+            "f": "无需上传",
+            "s": "是",
+            "t": "否"
+          },
+          {
+            "f": "AI 驱动引擎",
+            "s": "是",
+            "t": "有时"
+          },
+          {
+            "f": "手写检测",
+            "s": "是",
+            "t": "有限"
+          },
+          {
+            "f": "移动端友好",
+            "s": "是",
+            "t": "通常较差"
+          },
+          {
+            "f": "注重隐私",
+            "s": "是",
+            "t": "否"
+          },
+          {
+            "f": "永久免费",
+            "s": "是",
+            "t": "通常有限"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "高级 OCR 实用程序",
+        "subtitle": "用于复杂文档处理的专业功能。",
+        "items": [
+          {
+            "title": "表格检测",
+            "desc": "从复杂的财务文档中提取结构化表格。"
+          },
+          {
+            "title": "多栏扫描",
+            "desc": "保留报纸和多栏杂志的布局。"
+          },
+          {
+            "title": "噪点消除",
+            "desc": "自动清洁颗粒状扫描件，以获得更高的准确度。"
+          },
+          {
+            "title": "自动旋转",
+            "desc": "在识别过程中立即纠正倾斜的文档扫描件。"
+          },
+          {
+            "title": "批量 OCR",
+            "desc": "在浏览器中同时处理多个图像资源。"
+          },
+          {
+            "title": "元数据清理",
+            "desc": "从处理后的图像中删除隐藏的跟踪元数据。"
+          }
+        ]
+      },
+      "cta": {
+        "title": "立即将图像转换为可编辑文本",
+        "description": "通过快速、注重隐私的 OCR 技术，直接在浏览器中从屏幕截图、扫描文档、手写笔记和 PDF 中提取文本。",
+        "button": "立即开始 OCR",
+        "upload": "上传图像"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "OCR 工具免费吗？",
+            "a": "是的。OCR 工具完全免费使用，没有隐藏费用、水印或订阅要求。"
+          },
+          {
+            "q": "我的文件会上传到服务器吗？",
+            "a": "不会。所有 OCR 处理都使用 WebAssembly 在您的浏览器本地进行。您的图像永远不会离开您的设备，确保了最大的隐私和安全。"
+          },
+          {
+            "q": "支持哪些语言？",
+            "a": "我们的工具支持多种全球语言，包括英语、印地语、西班牙语、法语、德语、阿拉伯语、中文、日语、韩语等。"
+          },
+          {
+            "q": "我可以从手写笔记中提取文本吗？",
+            "a": "可以。我们由 AI 驱动的 OCR 引擎支持笔记、作业、日志和白板内容的手写体识别。"
+          },
+          {
+            "q": "OCR 可以在 PDF 上运行吗？",
+            "a": "可以。您可以通过将扫描的 PDF 和基于图像的文档转换为数字、可编辑的文本来从中提取文本。"
+          },
+          {
+            "q": "我可以在移动设备上使用 OCR 吗？",
+            "a": "可以。该工具完全响应，可以直接通过 Web 浏览器在现代智能手机和平板电脑上运行。"
+          },
+          {
+            "q": "需要注册吗？",
+            "a": "不需要。您可以立即开始提取文本，无需创建账号或提供任何个人信息。"
+          }
+        ],
+        "title": "OCR 常见问题",
+        "description": "关于我们 AI 驱动的 OCR 工具的常见问题。"
+      },
+      "related": {
+        "title": "探索更多工具",
+        "items": [
+          {
+            "name": "图像编辑器",
+            "href": "/image/editor"
+          },
+          {
+            "name": "图像压缩",
+            "href": "/image/compress"
+          },
+          {
+            "name": "图像转换器",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF 转文本",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "拖放资源",
+      "description": "支持 JPEG, PNG, PDF, HEIC。最大 20MB。"
+    },
+    "history": {
+      "title": "最近历史",
+      "subtitle": "访问您之前的提取记录",
+      "clearAll": "全部清除",
+      "restore": "恢复结果"
+    }
+  }
+}

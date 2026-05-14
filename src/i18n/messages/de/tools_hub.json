@@ -1,0 +1,178 @@
+{
+  "hero": {
+    "badge": "Unendlicher Utility-Hub",
+    "title": "Das Tool- <br></br> <span>Verzeichnis.</span>",
+    "search": "Durchsuchen Sie über 150 lokale Tools..."
+  },
+  "categories": {
+    "ai": {
+      "name": "KI-Intelligenz",
+      "subtitle": "Lokale Neuronale Verarbeitungs-Engine",
+      "tools": {
+        "lab": {
+          "name": "KI-Labor",
+          "desc": "Zugriff auf experimentelle lokale KI-Modelle für verschiedene Aufgaben."
+        },
+        "background": {
+          "name": "Motiv-Extraktor",
+          "desc": "Präzise Hintergrundentfernung mit lokalen ONNX-Modellen."
+        },
+        "ocr": {
+          "name": "Optische Zeichenerkennung",
+          "desc": "Extrahiere Text aus jedem Bild oder Dokument sofort."
+        },
+        "upscale": {
+          "name": "Neuraler Upscaler",
+          "desc": "Super-Resolution-Skalierung für qualitativ minderwertige Assets."
+        },
+        "restore": {
+          "name": "Gesichts-Restaurierung",
+          "desc": "Alte oder verschwommene Porträts lokal verbessern und korrigieren."
+        }
+      }
+    },
+    "security": {
+      "name": "Sicherheitstresor",
+      "subtitle": "Schutz auf militärischem Niveau",
+      "tools": {
+        "vault": {
+          "name": "Sicherer Tresor",
+          "desc": "Privater Dateispeicher mit Hardware-gebundenen Schlüsseln."
+        },
+        "steganography": {
+          "name": "Geheimbild",
+          "desc": "Verstecke sensible Daten in harmlos aussehenden Bildern."
+        },
+        "shredder": {
+          "name": "Dateischredder",
+          "desc": "Dateien dauerhaft und unwiederbringlich überschreiben."
+        },
+        "generator": {
+          "name": "Key-Generator",
+          "desc": "Erstelle Passwörter und Sicherheitsschlüssel mit hoher Entropie."
+        }
+      }
+    },
+    "dev": {
+      "name": "Entwickler-Suite",
+      "subtitle": "Hocheffiziente Engineering-Tools",
+      "tools": {
+        "json": {
+          "name": "JSON-Studio",
+          "desc": "JSON-Daten formatieren, validieren und minifizieren."
+        },
+        "base64": {
+          "name": "Base64-Engine",
+          "desc": "Dateien und Zeichenfolgen sicher kodieren und dekodieren."
+        },
+        "case": {
+          "name": "Case-Konverter",
+          "desc": "Transformiere Text über alle Programmierkonventionen hinweg."
+        },
+        "qr": {
+          "name": "QR-Generator",
+          "desc": "Erstelle sichere, trackless QR-Codes für beliebige Daten."
+        }
+      }
+    },
+    "creative": {
+      "name": "Bild-Studio",
+      "subtitle": "Professionelle visuelle Workflows",
+      "tools": {
+        "editor": {
+          "name": "Bildbearbeitung",
+          "desc": "Professionelle Local-First-Editing-Suite mit Ebenen."
+        },
+        "converter": {
+          "name": "Format-Konverter",
+          "desc": "Batch-Konvertierung zwischen HEIC, WEBP, PNG und mehr."
+        },
+        "compress": {
+          "name": "Bildkomprimierung",
+          "desc": "Dateigröße reduzieren bei gleichbleibender visueller Qualität."
+        },
+        "pptx": {
+          "name": "Bild zu PPTX",
+          "desc": "Professionelle Präsentationen aus Bildersätzen erstellen."
+        },
+        "stripper": {
+          "name": "Privacy-Stripper",
+          "desc": "Versteckte EXIF-, GPS- und Kamera-Metadaten entfernen."
+        }
+      }
+    },
+    "documents": {
+      "name": "PDF-Master",
+      "subtitle": "Erweiterte Dokumentenverarbeitung",
+      "tools": {
+        "compressor": {
+          "name": "PDF-Komprimierer",
+          "desc": "Dokumentengröße für E-Mail und Speicher optimieren."
+        },
+        "merger": {
+          "name": "PDF-Zusammenführung",
+          "desc": "Mehrere Dokumente zu einer einzigen Datei kombinieren."
+        },
+        "splitter": {
+          "name": "PDF-Splitter",
+          "desc": "Seiten extrahieren oder Dokumente in separate Dateien aufteilen."
+        },
+        "protect": {
+          "name": "PDF-Verschlüsselung",
+          "desc": "Sichern Sie Ihre Dokumente mit lokaler AES-Verschlüsselung."
+        },
+        "unlock": {
+          "name": "PDF-Entsperrer",
+          "desc": "Passwörter von autorisierten Dokumenten entfernen."
+        }
+      }
+    },
+    "media": {
+      "name": "Video-Studio",
+      "subtitle": "Hochleistungs-Media-Engine",
+      "tools": {
+        "studio": {
+          "name": "Video-Studio",
+          "desc": "Eine umfassende lokale Videobearbeitungsumgebung."
+        },
+        "compress": {
+          "name": "Video-Komprimierer",
+          "desc": "Videodateien für das Websharing lokal optimieren."
+        },
+        "gif": {
+          "name": "GIF-Creator",
+          "desc": "Videosegmente in optimierte GIFs umwandeln."
+        },
+        "audio": {
+          "name": "Audio-Studio",
+          "desc": "Audiodateien lokal mastern, schneiden und konvertieren."
+        },
+        "video": {
+          "name": "Video-Studio",
+          "desc": "Eine umfassende lokale Videobearbeitungsumgebung."
+        }
+      }
+    }
+  },
+  "stats": {
+    "toolsAvailable": "{count} aktive Tools",
+    "launch": "Studio starten"
+  },
+  "noResults": {
+    "title": "Suche fehlgeschlagen: \"{search}\"",
+    "subtitle": "Unsere neuronale Engine konnte in diesem Bereich kein passendes Tool finden.",
+    "button": "Implementierung anfordern"
+  },
+  "cta": {
+    "title": "Engine erweitern?",
+    "description": "SafeTools wird von der Community aufgebaut. Wenn Sie ein spezielles Local-First-Utility benötigen, hört unser Engineering-Team gerne zu.",
+    "button": "An der Entwicklung teilnehmen"
+  },
+  "seo": {
+    "title": "Tool-Verzeichnis | 150+ Local-First Privacy Utilities | SafeTools",
+    "description": "Das vollständige Verzeichnis der SafeTools-Dienstprogramme. Professionelle Bild-, Video-, PDF- und Sicherheitstools, die zu 100 % in Ihrem Browser laufen.",
+    "keywords": "lokale Tools, private Web-Apps, WASM-Utilities, sichere Bildbearbeitung, Video-Studio lokal, PDF-Tools ohne Upload",
+    "ogTitle": "Tool-Verzeichnis | 150+ Local-First Privacy Utilities | SafeTools",
+    "ogDescription": "Das vollständige Verzeichnis der SafeTools-Dienstprogramme. Professionelle Bild-, Video-, PDF- und Sicherheitstools, die zu 100 % in Ihrem Browser laufen."
+  }
+}

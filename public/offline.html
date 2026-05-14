@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Offline — SafeTools</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --surface: #0f172a;
+      --border: rgba(99,102,241,0.25);
+      --primary: #818cf8;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --green: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2.5rem 2rem;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(99,102,241,0.08);
+    }
+    .icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.25rem;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(129,140,248,0.4));
+    }
+    h1 { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+    p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; }
+    .tools {
+      background: rgba(99,102,241,0.06);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      margin-bottom: 1.75rem;
+    }
+    .tools-title { font-size: 0.78rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
+    .tools ul { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .tools li { font-size: 0.88rem; color: var(--text); display: flex; align-items: center; gap: 0.5rem; }
+    .tools li::before { content: "✓"; color: var(--green); font-weight: 700; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #020617;
+      border: none;
+      border-radius: 0.625rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.15s;
+      text-decoration: none;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .status {
+      margin-top: 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #ef4444;
+      margin-right: 0.3rem;
+      animation: pulse 1.5s infinite;
+    }
+    .dot.online { background: var(--green); animation: none; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .brand {
+      position: fixed;
+      top: 1.25rem; left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+  </style>
+</head>
+<body>
+  <span class="brand">SafeTools</span>
+  <div class="card">
+    <span class="icon">📡</span>
+    <h1>You're Offline</h1>
+    <p>No internet connection detected. Many SafeTools features still work locally in your browser — no server needed.</p>
+
+    <div class="tools">
+      <div class="tools-title">Available Offline</div>
+      <ul>
+        <li>Image Compressor &amp; Converter</li>
+        <li>Base64 Encode / Decode</li>
+        <li>Password Generator</li>
+        <li>QR Code Generator</li>
+        <li>PDF Protector &amp; Merger (cached)</li>
+        <li>Security Vault (local encryption)</li>
+        <li>File Shredder</li>
+        <li>Text Case Converter</li>
+      </ul>
+    </div>
+
+    <button class="btn" onclick="retry()">
+      ↻ Try Again
+    </button>
+
+    <div class="status">
+      <span class="dot" id="statusDot"></span>
+      <span id="statusText">Checking connection…</span>
+    </div>
+  </div>
+
+  <script>
+    function retry() {
+      window.location.reload();
+    }
+
+    function updateStatus() {
+      const dot = document.getElementById('statusDot');
+      const text = document.getElementById('statusText');
+      if (navigator.onLine) {
+        dot.className = 'dot online';
+        text.textContent = 'Back online — reloading…';
+        setTimeout(() => window.location.reload(), 800);
+      } else {
+        dot.className = 'dot';
+        text.textContent = 'Still offline. Retrying in 5 s…';
+      }
+    }
+
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    updateStatus();
+
+    // Auto-retry every 5 seconds
+    setInterval(() => {
+      if (navigator.onLine) window.location.reload();
+    }, 5000);
+  </script>
+</body>
+</html>

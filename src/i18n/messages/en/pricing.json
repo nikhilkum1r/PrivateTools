@@ -1,0 +1,62 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "The Fair Access Policy",
+      "title": "Free for <br></br> Everyone.",
+      "subtitle": "We believe privacy shouldn't be a premium feature. It should be the default state of the web."
+    },
+    "plan": {
+      "title": "The Sovereign Plan",
+      "price": "$0",
+      "forever": "/ forever",
+      "description": "Access the entire SafeTools infrastructure with zero compromises. No subscriptions, no hidden limits, and no credit card required.",
+      "button": "Start Using Free",
+      "included": "What's Included",
+      "features": [
+        "150+ Professional Tools",
+        "Unlimited File Processing",
+        "Zero File Size Limits",
+        "Hardware-Accelerated Speed",
+        "100% Private & Local",
+        "No Account Required",
+        "No Ads or Trackers",
+        "Full Local Engine Access"
+      ]
+    },
+    "comparison": {
+      "title": "Why is it Free?",
+      "subtitle": "Traditional tools have servers. Servers cost money. SafeTools uses your hardware to do the work.",
+      "cloud": {
+        "title": "Cloud \"Free\" Tools",
+        "features": [
+          "Limited to 10MB files",
+          "Queue times & waitlists",
+          "Watermarks on exports",
+          "Aggressive email marketing"
+        ],
+        "unlimited_strike": "Unlimited processing"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100% Free Forever",
+          "No file size limits",
+          "Zero queue / Instant local",
+          "No watermarks / Full quality",
+          "No accounts / Total anonymity"
+        ]
+      }
+    },
+
+    "final": {
+      "title": "The Privacy-First <br></br> Ecosystem.",
+      "subtitle": "No subscriptions. No tracking. Pure local power.",
+      "independent": "Independently Funded",
+      "zeroServer": "Zero-Server Infrastructure"
+    },
+    "seo": {
+      "title": "Pricing & Support | SafeTools Free Privacy Toolkit",
+      "description": "SafeTools is 100% free forever. Learn why we don't charge for privacy and how you can support our mission for a local-first web."
+    }
+  }
+}

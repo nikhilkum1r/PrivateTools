@@ -1,0 +1,334 @@
+{
+  "backgroundRemover": {
+    "title": "Eliminador de fondo con IA | Edición local y privada",
+    "description": "Eliminación de fondo de nivel profesional mediante IA local. Sin subidas a la nube, sin almacenamiento, sin rastreo. Rápido, seguro y privado.",
+    "seo": {
+      "title": "Eliminador de fondo con IA | Edición local y privada",
+      "description": "Eliminación de fondo de nivel profesional mediante IA local. Sin subidas a la nube, sin almacenamiento, sin rastreo. Rápido, seguro y privado.",
+      "keywords": "eliminar fondo online, eliminador de fondo gratis, eliminación de fondo ia, editor de fotos privado, procesamiento local de imágenes, eliminador de fondo motor isnet, creador de fondos transparentes, eliminador de fondos por lotes, edición de fotos profesional, eliminador de fondo en navegador"
+    },
+    "engineBadge": "MOTOR ISNET-QUINT8 EN LÍNEA",
+    "badge": "Segmentación Profesional de IA — 100% Seguro",
+    "dropzone": {
+      "title": "Subir imagen",
+      "description": "Arrastra y suelta imágenes o haz clic para explorar. Compatible con PNG, JPG, WebP, HEIC."
+    },
+    "status": {
+      "segmented": "Segmentado",
+      "pending": "Esperando Escaneo"
+    },
+    "tools": {
+      "closeMagicEraser": "Cerrar Borrador Mágico",
+      "magicEraser": "Borrador Mágico",
+      "eraserTool": "Herramienta Borrador",
+      "restoreTool": "Herramienta Restaurar",
+      "brushSize": "Tamaño del Pincel",
+      "saveEdits": "Guardar Ediciones",
+      "removeBackground": "Eliminar Fondo",
+      "allProcessed": "Todos los recursos procesados",
+      "errorPreparing": "Error al preparar el motor de IA localmente.",
+      "comparison": {
+        "headers": [
+          "Característica",
+          "Tradicional",
+          "SafeTools"
+        ]
+      },
+      "maskUpdated": "Máscara actualizada con éxito.",
+      "copySuccess": "Sujeto copiado al portapapeles.",
+      "copyFailed": "Acceso al portapapeles denegado.",
+      "download": "Descargar Resultado",
+      "copy": "Copiar al Portapapeles"
+    },
+    "worker": {
+      "loading": "Cargando motor de IA...",
+      "removing": "Eliminando fondo...",
+      "processing": "Procesando...",
+      "processing_file": "Procesando {name}...",
+      "error_svg": "No se admiten archivos SVG ({name})",
+      "error_invalid": "Tipo de archivo inválido ({name})",
+      "latency": "Latencia de {time}ms",
+      "aiNode": "Nodo de IA: isnet_quint8",
+      "privacyNote": "Procesando localmente en tu dispositivo. Ningún dato sale de tu navegador."
+    },
+    "comparison": {
+      "before": "Antes",
+      "after": "Después"
+    },
+    "settings": {
+      "title": "Configuración de Escena",
+      "engine": "Nodo de Procesamiento Neuronal",
+      "background": "Relleno del Lienzo",
+      "alpha": "Matriz de Transparencia",
+      "resizer": "Matriz de Lienzo Social",
+      "realism": "Lógica de Profundidad y Borde",
+      "shadow": "Sombra Proyectada",
+      "trim": "Recorte Automático de Bordes",
+      "format": "Identidad de Exportación",
+      "visualPolish": "Pulido Visual",
+      "autoTrim": "Recorte Automático",
+      "autoTrimDesc": "Recortar al sujeto",
+      "dropShadow": "Sombra",
+      "shadowDesc": "Añadir profundidad"
+    },
+    "bgPresets": {
+      "transparent": "Transparente",
+      "white": "Blanco",
+      "black": "Negro",
+      "blue": "Azul",
+      "gray": "Gris",
+      "corporate": "Corporativo"
+    },
+    "aspectRatios": {
+      "original": "Orig",
+      "1:1": "1:1",
+      "4:5": "4:5",
+      "9:16": "9:16"
+    },
+    "landing": {
+      "aiDetails": {
+        "title": "Arquitectura de IA de Nueva Generación",
+        "subtitle": "Procesamiento de sujetos de alta fidelidad directamente en el motor V8 de tu navegador.",
+        "items": [
+          {
+            "title": "Detección Neuronal de Bordes",
+            "desc": "Segmentación perfecta a nivel de píxel utilizando transformadores de visión avanzados."
+          },
+          {
+            "title": "Motor WASM Local",
+            "desc": "Procesamiento acelerado por hardware sin latencia de servidor."
+          },
+          {
+            "title": "Cero Fuga de Datos",
+            "desc": "Tus imágenes nunca salen de la memoria de tu dispositivo local."
+          }
+        ]
+      },
+      "education": {
+        "title": "La Evolución de la Eliminación de Fondos",
+        "description": "SafeTools utiliza los últimos avances en visión por computadora para realizar eliminaciones de fondos complejas completamente del lado del cliente. Al trasladar los modelos de IA de la nube a tu hardware local, eliminamos los riesgos de privacidad y los tiempos de espera asociados con los editores en línea tradicionales.",
+        "privacy": {
+          "title": "Soberanía Absoluta de Datos",
+          "description": "A diferencia de las herramientas tradicionales que suben tus fotos privadas a servidores remotos para su procesamiento, SafeTools opera dentro de una caja de arena de navegador segura. No solo protegemos tus datos, nunca los vemos.",
+          "tags": [
+            "Caja de Arena",
+            "Nativo WASM",
+            "Cero Rastreo"
+          ]
+        }
+      },
+      "formats": {
+        "title": "Soporte de Formatos Profesionales",
+        "description": "Nuestro motor soporta exportaciones de alta resolución y compatibilidad universal con todas las plataformas creativas modernas.",
+        "items": [
+          "PNG (Alfa)",
+          "WebP (Sin pérdida)",
+          "JPEG (Estándar)"
+        ],
+        "export": {
+          "title": "Lógica de Exportación",
+          "items": [
+            "Retención del canal alfa de alta fidelidad",
+            "Compresión sin pérdida para máxima calidad",
+            "Renderizado con colores precisos para impresión y web"
+          ]
+        }
+      },
+      "howItWorks": {
+        "title": "El Flujo de Trabajo",
+        "steps": [
+          {
+            "step": "01",
+            "title": "Soltar Recurso",
+            "desc": "Sube tu imagen localmente. Soportamos la mayoría de formatos principales."
+          },
+          {
+            "step": "02",
+            "title": "Escaneo Neuronal",
+            "desc": "Nuestro modelo de IA identifica al sujeto y calcula la máscara."
+          },
+          {
+            "step": "03",
+            "title": "Refinar y Editar",
+            "desc": "Usa el Borrador Mágico para perfeccionar los bordes o cambiar fondos."
+          },
+          {
+            "step": "04",
+            "title": "Exportación Segura",
+            "desc": "Descarga tu sujeto limpio al instante en tu dispositivo."
+          }
+        ],
+        "note": "TODO EL PROCESAMIENTO OCURRE EN TU HARDWARE LOCAL"
+      },
+      "useCases": {
+        "title": "Casos de Uso Creativos",
+        "items": [
+          "Fotos de Productos para E-commerce",
+          "Retratos para Redes Sociales",
+          "Recursos de Marketing Digital",
+          "Mejoras Inmobiliarias",
+          "Saneamiento de Fotos de Perfil",
+          "Flujo de Trabajo de Diseño Gráfico",
+          "Imágenes para Presentaciones",
+          "Preparación de Fotos de Identificación"
+        ]
+      },
+      "comparisonLong": {
+        "title": "¿Por qué el Eliminador de Fondo de SafeTools?",
+        "header": [
+          "Característica",
+          "Editores Tradicionales",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "Riesgo de Fuga de Privacidad",
+            "Alto (Subida a Nube)",
+            "Cero (Primero Local)"
+          ],
+          [
+            "Velocidad de Procesamiento",
+            "Depende de la Red",
+            "Depende del Hardware"
+          ],
+          [
+            "Persistencia del Archivo",
+            "30-90 Días en Servidor",
+            "Purgado al Cerrar"
+          ],
+          [
+            "Costo de Suscripción",
+            "$10-20/mes",
+            "Gratis para Siempre"
+          ],
+          [
+            "Retención de Datos",
+            "Registrado y Almacenado",
+            "Sin Registros / Sin Almacenamiento"
+          ]
+        ]
+      },
+      "tips": {
+        "title": "Consejos Pro para Bordes Perfectos",
+        "subtitle": "Obtén los mejores resultados de nuestro motor de IA del lado del cliente.",
+        "items": [
+          {
+            "title": "El Contraste Importa",
+            "desc": "Los sujetos con alto contraste respecto al fondo producen las máscaras más nítidas."
+          },
+          {
+            "title": "Evita Cabellos Complejos",
+            "desc": "Aunque nuestro motor es potente, los cabellos extremadamente finos sobre fondos complejos pueden beneficiarse del refinamiento manual con el Borrador Mágico."
+          },
+          {
+            "title": "Usa Originales de Alta Resolución",
+            "desc": "Una mayor resolución de entrada permite a la red neuronal identificar más detalles finos de los bordes."
+          },
+          {
+            "title": "Optimización por Lotes",
+            "desc": "Arrastra múltiples imágenes a la vez para aprovechar las colas de procesamiento local en paralelo."
+          }
+        ]
+      },
+      "techSpecs": {
+        "title": "Especificaciones Técnicas",
+        "subtitle": "Parámetros de bajo nivel del Motor Neuronal de SafeTools.",
+        "engine": {
+          "title": "Arquitectura del Modelo",
+          "items": [
+            {
+              "label": "Nombre del Modelo",
+              "value": "ISNet-v2 (Cuantizado)"
+            },
+            {
+              "label": "Tiempo de Ejecución",
+              "value": "ONNX / WebAssembly"
+            },
+            {
+              "label": "Precisión",
+              "value": "int8 / fp16"
+            },
+            {
+              "label": "Concurrencia",
+              "value": "Web Workers"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Requisitos Locales",
+          "items": [
+            {
+              "label": "Navegador",
+              "value": "Moderno (Chrome/Safari/Edge)"
+            },
+            {
+              "label": "Hardware",
+              "value": "Soporte WASM / SharedBuffer"
+            },
+            {
+              "label": "Internet",
+              "value": "Solo Carga Inicial"
+            },
+            {
+              "label": "RAM",
+              "value": "2GB+ Recomendado"
+            }
+          ]
+        }
+      }
+    },
+    "features": {
+      "ai_engine": "Motor Neuronal de IA",
+      "ai_engine_desc": "El modelo ISNet de última generación se ejecuta completamente en tu navegador mediante WebAssembly para un aislamiento del sujeto a nivel de píxel perfecto.",
+      "batch": "Procesamiento por Lotes",
+      "batch_desc": "Suelta múltiples imágenes a la vez y procésalas en paralelo usando Web Workers locales: sin cola, sin límites.",
+      "privacy": "Privacidad Absoluta",
+      "privacy_desc": "Tus imágenes nunca salen de tu dispositivo. Cero subidas, cero registros del servidor, cero rastreo. El procesamiento es 100% local."
+    },
+    "manifesto": {
+      "title": "Creatividad Soberana",
+      "quote": "Tu creatividad no debería costarte tu privacidad. SafeTools te empodera para editar sin exposición.",
+      "pro_workflow": "Flujo de Trabajo Profesional",
+      "pro_workflow_desc": "Intégrate en tu pipeline creativo con exportaciones por lotes, fondos personalizados, ajustes preestablecidos de relación de aspecto y efectos de sombra, todo sin suscripciones.",
+      "seo": "Optimizado para la Web",
+      "seo_desc": "Exporta archivos PNG transparentes, WebP sin pérdida y JPEG listos para impresión optimizados para e-commerce, redes sociales y presentaciones profesionales.",
+      "social": "Listo para Redes Sociales",
+      "social_desc": "Genera al instante fotos de perfil, imágenes de productos y recursos de marketing con proporciones optimizadas para redes sociales y fondos transparentes."
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "¿Cómo funciona el eliminador de fondos con IA sin subir mis fotos?",
+          "a": "Nuestra herramienta utiliza un modelo de IA de vanguardia (RMBG-1.4/MODNet) que se ejecuta completamente dentro de tu navegador web usando WebAssembly. Cuando seleccionas una imagen, el modelo se descarga una vez en la memoria de tu navegador y procesa los píxeles localmente. Ningún dato sale de tu dispositivo."
+        },
+        {
+          "q": "¿Es este eliminador de fondos realmente gratuito?",
+          "a": "Sí, es 100% gratuito, sin límites de uso, sin marcas de agua y no requiere registro. Creemos que las herramientas de alta calidad centradas en la privacidad deben ser accesibles para todos."
+        },
+        {
+          "q": "¿Qué formatos de imagen son compatibles para eliminar fondos?",
+          "a": "Soportamos la mayoría de los formatos de imagen comunes, incluidos PNG, JPG, JPEG, WebP y HEIC. El resultado es siempre un PNG transparente para preservar el fondo eliminado."
+        },
+        {
+          "q": "¿Puedo eliminar fondos de imágenes de alta resolución?",
+          "a": "Absolutamente. A diferencia de muchas herramientas en línea que reducen la resolución de tus imágenes, SafeTools procesa tus imágenes a su resolución original (dependiendo de la RAM de tu dispositivo) para garantizar resultados de calidad profesional."
+        },
+        {
+          "q": "¿Está garantizada mi privacidad?",
+          "a": "Sí. Dado que el procesamiento ocurre en tu máquina local, nunca vemos tus fotos. Incluso si te desconectas de internet después de la carga inicial del modelo, la herramienta seguirá funcionando perfectamente."
+        },
+        {
+          "q": "¿Funciona en dispositivos móviles?",
+          "a": "Sí, funciona en navegadores móviles modernos. Sin embargo, dado que el modelo de IA requiere cierta potencia de procesamiento y RAM, funciona mejor en dispositivos con al menos 4 GB de memoria."
+        }
+      ],
+      "title": "Preguntas Frecuentes",
+      "description": "Todo lo que necesitas saber sobre nuestra herramienta centrada en la privacidad."
+    },
+    "hero": {
+      "title": "Eliminador de fondo con IA | Edición local y privada",
+      "description": "Eliminación de fondo de nivel profesional mediante IA local. Sin subidas a la nube, sin almacenamiento, sin rastreo. Rápido, seguro y privado.",
+      "badge": "Segmentación Profesional de IA — 100% Seguro"
+    }
+  }
+}

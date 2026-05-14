@@ -1,0 +1,53 @@
+{
+  "cookies": {
+    "hero": {
+      "badge": "Tracking-Manifest",
+      "title": "Null <br></br> <span class=\"text-amber-500\">Cookies.",
+      "subtitle": "Wir reduzieren Cookies auf das absolut Notwendige. <br></br> SafeTools verwendet nur Standard-Werbecookies, um unsere Tools für alle kostenlos zu halten."
+    },
+    "sections": [
+      {
+        "title": "1. Die Ghost-Policy",
+        "content": "SafeTools verwendet keine Tracking-Cookies für interne Analysen oder Datenerfassung. Wir verfolgen Ihre Sitzung nicht für eigene Zwecke im Internet. Für uns sind Sie ein Geist – und genau so sollte es sein."
+      },
+      {
+        "title": "2. Lokale Persistenz (Speicherung)",
+        "content": "Wir nutzen das LocalStorage Ihres Browsers nur, um Ihre UI-Einstellungen zu speichern, wie den Dark Mode oder Ihren Verlauf. Diese Daten verlassen niemals Ihr Gerät und werden nie an unsere Server gesendet."
+      },
+      {
+        "title": "3. Werbe-Cookies",
+        "content": "Wir nutzen Google AdSense zur Anzeigenschaltung. Google kann Cookies verwenden, um Anzeigen basierend auf Ihren Interessen zu schalten. Sie können Ihre Einstellungen über das Consent-Banner verwalten, das bei Ihrem ersten Besuch erscheint."
+      }
+    ],
+    "metrics": {
+      "title": "Datenschutz-Metriken",
+      "items": [
+        {
+          "label": "Aktive Tracker",
+          "val": "0"
+        },
+        {
+          "label": "Marketing-Pixel",
+          "val": "Keine"
+        },
+        {
+          "label": "Daten-Wiederverkäufer",
+          "val": "0%"
+        },
+        {
+          "label": "Privatsphäre-Rating",
+          "val": "A+"
+        }
+      ]
+    },
+    "final": {
+      "title": "Sicher & <br></br> Tracker-frei",
+      "subtitle": "Sie müssen hier nichts 'akzeptieren'. Ihre Privatsphäre wurde bereits durch unsere Architektur akzeptiert, bevor Sie gelandet sind.",
+      "button": "Zurück zu den Tools"
+    },
+    "seo": {
+      "title": "Cookie-Richtlinie | Zero-Tracking-Manifest | SafeTools",
+      "description": "Lesen Sie unsere Cookie-Richtlinie. Spoiler: Wir verwenden keine Tracking-Cookies. Erfahren Sie, wie SafeTools Ihre Privatsphäre schützt."
+    }
+  }
+}

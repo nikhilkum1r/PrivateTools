@@ -1,0 +1,178 @@
+{
+  "hero": {
+    "badge": "Infinite Utility Hub",
+    "title": "The Tool <br></br> <span>Directory.</span>",
+    "search": "Search 150+ local tools..."
+  },
+  "categories": {
+    "ai": {
+      "name": "AI Intelligence",
+      "subtitle": "Local Neural Processing Engine",
+      "tools": {
+        "lab": {
+          "name": "AI Lab",
+          "desc": "Access experimental local AI models for various tasks."
+        },
+        "background": {
+          "name": "Subject Extractor",
+          "desc": "Precision background removal using local ONNX models."
+        },
+        "ocr": {
+          "name": "Optical Character Recognition",
+          "desc": "Extract text from any image or document instantly."
+        },
+        "upscale": {
+          "name": "Neural Upscaler",
+          "desc": "Super-resolution scaling for low-quality assets."
+        },
+        "restore": {
+          "name": "Face Restoration",
+          "desc": "Enhance and fix old or blurred portraits locally."
+        }
+      }
+    },
+    "security": {
+      "name": "Security Vault",
+      "subtitle": "Military-Grade Protection",
+      "tools": {
+        "vault": {
+          "name": "Secure Vault",
+          "desc": "Private file storage with hardware-locked keys."
+        },
+        "steganography": {
+          "name": "Secret Image",
+          "desc": "Hide sensitive data inside innocent-looking images."
+        },
+        "shredder": {
+          "name": "File Shredder",
+          "desc": "Permanently overwrite files beyond recovery."
+        },
+        "generator": {
+          "name": "Key Generator",
+          "desc": "Create high-entropy passwords and security keys."
+        }
+      }
+    },
+    "dev": {
+      "name": "Developer Suite",
+      "subtitle": "High-Efficiency Engineering Tools",
+      "tools": {
+        "json": {
+          "name": "JSON Studio",
+          "desc": "Format, validate, and minify JSON data."
+        },
+        "base64": {
+          "name": "Base64 Engine",
+          "desc": "Encode and decode files and strings securely."
+        },
+        "case": {
+          "name": "Case Converter",
+          "desc": "Transform text across all programming conventions."
+        },
+        "qr": {
+          "name": "QR Generator",
+          "desc": "Create secure, trackless QR codes for any data."
+        }
+      }
+    },
+    "creative": {
+      "name": "Image Studio",
+      "subtitle": "Professional Visual Workflows",
+      "tools": {
+        "editor": {
+          "name": "Image Editor",
+          "desc": "Professional local-first editing suite with layers."
+        },
+        "converter": {
+          "name": "Format Converter",
+          "desc": "Bulk convert between HEIC, WEBP, PNG, and more."
+        },
+        "compress": {
+          "name": "Image Compressor",
+          "desc": "Reduce file size while preserving visual fidelity."
+        },
+        "pptx": {
+          "name": "Image to PPTX",
+          "desc": "Create professional presentations from image sets."
+        },
+        "stripper": {
+          "name": "Privacy Stripper",
+          "desc": "Remove hidden EXIF, GPS, and camera metadata."
+        }
+      }
+    },
+    "documents": {
+      "name": "PDF Master",
+      "subtitle": "Advanced Document Processing",
+      "tools": {
+        "compressor": {
+          "name": "PDF Compressor",
+          "desc": "Optimize document size for email and storage."
+        },
+        "merger": {
+          "name": "PDF Merger",
+          "desc": "Combine multiple documents into a single file."
+        },
+        "splitter": {
+          "name": "PDF Splitter",
+          "desc": "Extract pages or split docs into separate files."
+        },
+        "protect": {
+          "name": "PDF Encryption",
+          "desc": "Secure your documents with local AES encryption."
+        },
+        "unlock": {
+          "name": "PDF Unlocker",
+          "desc": "Remove passwords from authorized documents."
+        }
+      }
+    },
+    "media": {
+      "name": "Video Studio",
+      "subtitle": "High-Performance Media Engine",
+      "tools": {
+        "studio": {
+          "name": "Video Studio",
+          "desc": "A comprehensive local video editing environment."
+        },
+        "compress": {
+          "name": "Video Compressor",
+          "desc": "Optimize video files for web sharing locally."
+        },
+        "gif": {
+          "name": "GIF Creator",
+          "desc": "Convert video segments into optimized GIFs."
+        },
+        "audio": {
+          "name": "Audio Studio",
+          "desc": "Master, trim, and convert audio files locally."
+        },
+        "video": {
+          "name": "Video Studio",
+          "desc": "A comprehensive local video editing environment."
+        }
+      }
+    }
+  },
+  "stats": {
+    "toolsAvailable": "{count} Active Tools",
+    "launch": "Launch Studio"
+  },
+  "noResults": {
+    "title": "Search Failure: \"{search}\"",
+    "subtitle": "Our neural engine couldn't find a matching tool in this sector.",
+    "button": "Request Implementation"
+  },
+  "cta": {
+    "title": "Expand the Engine?",
+    "description": "SafeTools is built by the community. If you need a specific local-first utility, our engineering team is ready to listen.",
+    "button": "Join Development"
+  },
+  "seo": {
+    "title": "Tools Directory | 150+ Local-First Privacy Utilities | SafeTools",
+    "description": "The complete directory of SafeTools utilities. Professional image, video, PDF, and security tools running 100% in your browser.",
+    "keywords": "local tools, private web apps, wasm utilities, secure image editor, video studio local, pdf tools no upload",
+    "ogTitle": "Tools Directory | 150+ Local-First Privacy Utilities | SafeTools",
+    "ogDescription": "The complete directory of SafeTools utilities. Professional image, video, PDF, and security tools running 100% in your browser."
+  }
+}

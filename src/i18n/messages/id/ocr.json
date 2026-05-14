@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Alat OCR Online Gratis | Ekstrak Teks dari Gambar & PDF | SafeTools",
+      "description": "Ekstrak teks dari gambar, tangkapan layar, dan PDF secara instan dengan alat OCR kami yang mengutamakan privasi dan gratis. Pengenalan teks bertenaga AI yang cepat tanpa unggahan.",
+      "keywords": "OCR online gratis, konverter gambar ke teks, ekstrak teks dari gambar, alat OCR PDF, pengekstrak teks tangkapan layar, OCR tulisan tangan, OCR dokumen pindaian, perangkat lunak OCR gratis, alat AI OCR, OCR berbasis browser, pengenalan karakter optik, gambar ke teks yang dapat diedit, OCR PDF online, OCR multibahasa, OCR tanpa unggahan",
+      "ogTitle": "SafeTools OCR | Alat OCR Online Gratis - Ekstrak Teks dari Gambar Secara Instan",
+      "ogDescription": "Ubah gambar, dokumen pindaian, tangkapan layar, catatan tulisan tangan, dan PDF menjadi teks yang dapat diedit menggunakan alat OCR berbasis browser kami yang mengutamakan privasi. Cepat, akurat, dan sepenuhnya gratis."
+    },
+    "hero": {
+      "badge": "Kecerdasan AI yang Mengutamakan Privasi",
+      "title": "Alat OCR Online Gratis - Ekstrak Teks Secara Instan",
+      "description": "Ubah gambar, dokumen pindaian, tangkapan layar, catatan tulisan tangan, dan PDF menjadi teks yang dapat diedit menggunakan alat OCR berbasis browser kami yang mengutamakan privasi. Cepat, akurat, dan sepenuhnya gratis.",
+      "extractNow": "Ekstrak Teks Sekarang",
+      "uploadImage": "Unggah Gambar",
+      "tryDemo": "Coba Demo OCR",
+      "badges": {
+        "private": "100% Privat",
+        "browser": "Berbasis Browser",
+        "noUpload": "Tidak Perlu Unggah",
+        "ai": "Bertenaga AI",
+        "free": "Gratis Selamanya"
+      }
+    },
+    "workspace": {
+      "source": "Aset Sumber",
+      "sourceSubtitle": "Gambar, PDF, atau Tangkapan Layar",
+      "clearQueue": "Bersihkan Antrean",
+      "dropzone": {
+        "title": "Letakkan Aset",
+        "subtitle": "Mendukung JPEG, PNG, PDF, HEIC"
+      },
+      "engine": "Mesin Pengenalan",
+      "start": "Mulai Ekstraksi",
+      "active": "{progress}% Aktif",
+      "history": "Riwayat Terbaru",
+      "clearAll": "Bersihkan Semua",
+      "copyHistory": "Disalin dari riwayat!",
+      "detected": "{lang} Terdeteksi",
+      "matrix": "Matriks Ekstraksi",
+      "matrixSubtitle": "Teks Digital yang Dapat Diedit",
+      "words": "Kata",
+      "chars": "Karakter",
+      "waiting": "Menunggu Feed Neural",
+      "processing": "Memproses Bobot Neural",
+      "handwriting_active": "AI Tulisan Tangan Aktif",
+      "detected_string": "String Terdeteksi:",
+      "neural_v3": "Ekstraksi Teks Neural v3.0",
+      "config": "Konfigurasi",
+      "configDesc": "Pilih bahasa & jalankan",
+      "clear": "Bersihkan",
+      "changeFile": "Ubah File",
+      "extracting": "Mengekstrak Teks...",
+      "language": "Bahasa",
+      "run": "Jalankan OCR",
+      "result": "Hasil Ekstraksi",
+      "extractionComplete": "Ekstraksi Selesai",
+      "awaitingExtraction": "Menunggu Ekstraksi",
+      "placeholder": "Teks yang diekstrak akan muncul di sini...",
+      "copy": "Salin teks",
+      "copied": "Disalin!"
+    },
+    "messages": {
+      "analyzing": "Menganalisis melalui mesin multi-skrip...",
+      "extractionSuccess": "Berhasil mengekstrak teks dari {count} file!",
+      "extractionFailed": "Ekstraksi gagal. Coba gambar yang lebih jelas.",
+      "copySuccess": "Disalin ke papan klip!",
+      "invalidFile": "Jenis file tidak valid ({name})",
+      "svgNotSupported": "File SVG tidak didukung ({name})"
+    },
+    "languages": {
+      "auto": "✨ Deteksi Bahasa Otomatis",
+      "eng": "Inggris",
+      "hin": "Hindi",
+      "spa": "Spanyol",
+      "fra": "Prancis",
+      "deu": "Jerman",
+      "ara": "Arab",
+      "chi_sim": "Mandarin (Simp)",
+      "jpn": "Jepang",
+      "kor": "Korea",
+      "ita": "Italia",
+      "por": "Portugis",
+      "rus": "Rusia",
+      "eng_hin": "Inggris + Hindi",
+      "eng_spa": "Inggris + Spanyol",
+      "eng_fra": "Inggris + Prancis"
+    },
+    "landing": {
+      "intro": {
+        "title": "Ekstrak Teks dari Gambar Online Gratis",
+        "content": "Teknologi Optical Character Recognition (OCR) mengubah teks cetak atau tulisan tangan di dalam gambar menjadi teks digital yang dapat diedit. Alat OCR online gratis kami membantu pengguna mendigitalkan dokumen, menyalin teks dari tangkapan layar, memindai halaman cetak, dan mengubah catatan tulisan tangan menjadi file yang dapat diedit secara instan."
+      },
+      "features": {
+        "extraction": {
+          "title": "Ekstraksi Neural",
+          "description": "Model AI milik kami yang dirancang untuk mendeteksi teks di latar belakang yang kompleks."
+        },
+        "multilingual": {
+          "title": "Dukungan Global",
+          "description": "Mengenali teks dalam 100+ bahasa termasuk aksara CJK dan Indik."
+        },
+        "secure": {
+          "title": "Keamanan Perusahaan",
+          "description": "Privasi tingkat militer dengan jaminan nol interaksi server."
+        },
+        "offline": {
+          "title": "Siap Offline",
+          "description": "Seluruh mesin OCR berjalan di browser Anda tanpa internet."
+        },
+        "title": "Kekuatan Ekstraksi OCR",
+        "title2": "Fitur AI OCR yang Kuat",
+        "subtitle": "Pengenalan teks tingkat profesional untuk setiap alur kerja.",
+        "items": [
+          "Digitalkan dokumen fisik",
+          "Salin teks dari YouTube/Media Sosial",
+          "Ubah tugas tulisan tangan",
+          "Ekstrak data dari tanda terima bisnis",
+          "Proses catatan hukum dan medis",
+          "Simpan konten sebagai file Word atau Teks"
+        ]
+      },
+      "formats": {
+        "title": "Format File yang Didukung",
+        "image": "Format Gambar",
+        "doc": "Format Dokumen",
+        "optimized": "Dioptimalkan Untuk",
+        "standard": "Dokumen Kantor Standar",
+        "mobileReady": "Siap Mobile",
+        "socialMedia": "Tangkapan Layar Media Sosial",
+        "highPrecision": "Presisi Tinggi"
+      },
+      "privacy": {
+        "title": "Pemrosesan OCR yang Mengutamakan Privasi",
+        "content": "Berbeda dengan banyak alat OCR online lainnya, file Anda tidak disimpan secara permanen di server kami. Kami memanfaatkan pemrosesan sisi klien menggunakan WebAssembly, yang berarti mesin OCR berjalan langsung di dalam browser Anda.",
+        "execution": {
+          "title": "Eksekusi Lokal",
+          "content": "Pemrosesan terjadi di RAM Anda, bukan di cloud kami."
+        },
+        "tracking": {
+          "title": "Tanpa Pelacakan",
+          "content": "Kami tidak mencatat file atau hasil ekstraksi Anda."
+        },
+        "registration": {
+          "title": "Tanpa Registrasi",
+          "content": "Gunakan kekuatan penuh AI tanpa memerlukan akun."
+        }
+      },
+      "ai": {
+        "title": "Pengenalan Bertenaga AI",
+        "content": "Jaringan saraf canggih meningkatkan akurasi teks, pelestarian tata letak, dan dukungan multibahasa. Mesin kami bekerja efektif bahkan pada gambar yang berisik, buram, atau beresolusi rendah.",
+        "items": [
+          "Pengenalan dan konversi tulisan tangan",
+          "Deteksi multi-kolom dan tabel",
+          "Koreksi rotasi dan kemiringan otomatis",
+          "Pemulihan gambar berisik dan penghilang keburaman"
+        ]
+      },
+      "whatIs": {
+        "title": "Apa itu OCR?",
+        "content": "OCR singkatan dari Optical Character Recognition. Ini adalah teknologi yang memungkinkan perangkat lunak menganalisis gambar dan mendeteksi huruf, angka, dan simbol untuk mengubahnya menjadi konten digital yang dapat dicari dan diedit.",
+        "how": {
+          "title": "Cara kerjanya",
+          "content": "Perangkat lunak OCR memindai pola piksel suatu gambar, mengidentifikasi bentuk sebagai karakter, dan menggunakan model bahasa untuk merekonstruksi kalimat dan paragraf."
+        },
+        "apps": {
+          "title": "Aplikasi",
+          "content": "Banyak digunakan dalam otomatisasi bisnis, digitalisasi arsip, dan teknologi bantu bagi tunanetra."
+        }
+      },
+      "useCases": {
+        "badge": "Integrasi Alur Kerja",
+        "title": "Kasus Penggunaan Populer",
+        "subtitle": "SafeTools OCR dirancang untuk beragam alur kerja dan kebutuhan profesional.",
+        "items": [
+          {
+            "title": "Mahasiswa",
+            "desc": "Ubah catatan kuliah, buku teks, dan makalah penelitian menjadi panduan belajar yang dapat diedit."
+          },
+          {
+            "title": "Bisnis",
+            "desc": "Digitalkan kontrak, faktur, dan catatan fisik untuk alur kerja digital yang lebih cepat."
+          },
+          {
+            "title": "Pengembang",
+            "desc": "Ekstrak teks terstruktur dari mockup UI, tangkapan layar kode, dan dokumentasi."
+          },
+          {
+            "title": "Peneliti",
+            "desc": "Ubah arsip pindaian lama menjadi dokumen PDF yang dapat dicari dengan teks yang dapat dipilih."
+          },
+          {
+            "title": "Pembuat Konten",
+            "desc": "Gunakan kembali teks dari tangkapan layar YouTube, infografis, dan meme dengan cepat."
+          },
+          {
+            "title": "Profesional Hukum",
+            "desc": "Digitalkan file kasus sensitif dengan aman tanpa risiko paparan data."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Kecerdasan Tangkapan Layar",
+        "title": "Ekstrak Teks dari Tangkapan Layar",
+        "content": "Salin teks secara instan dari tangkapan YouTube, postingan Instagram, atau presentasi Zoom. Tidak ada lagi pengetikan manual atau pembuatan ulang konten dari awal.",
+        "tags": [
+          "Media Sosial",
+          "Webinar",
+          "Desain UI/UX"
+        ]
+      },
+      "handwriting": {
+        "badge": "Dari Pena ke Piksel",
+        "title": "Pengenalan Tulisan Tangan",
+        "content": "Ubah catatan tulisan tangan, entri jurnal, dan papan tulis menjadi teks digital. AI kami dilatih untuk memahami berbagai gaya tulisan tangan dan naskah kursif.",
+        "handwritingActive": "AI Tulisan Tangan Aktif",
+        "tags": [
+          "Jurnal",
+          "Tugas",
+          "Papan Tulis"
+        ]
+      },
+      "export": {
+        "title": "Ekspor dalam Berbagai Format",
+        "content": "Setelah teks Anda diekstrak, simpan dalam format yang paling sesuai dengan alur kerja Anda. Salin secara instan atau unduh file berkualitas tinggi.",
+        "items": [
+          "Teks Polos (.TXT)",
+          "Dokumen (.DOCX)",
+          "Terstruktur (.JSON)",
+          "Tabular (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Mesin Neural Ultra Cepat",
+        "content": "Dioptimalkan menggunakan WebAssembly dan akselerasi GPU untuk memastikan pengenalan cepat bahkan pada aset beresolusi tinggi.",
+        "optimization": "Optimasi Browser",
+        "accuracy": "Akurasi Karakter",
+        "wasm": "WebAssembly",
+        "gpu": "Akselerasi GPU"
+      },
+      "manifesto": {
+        "title": "Manifes Utamakan Privasi",
+        "description": "Kami percaya data Anda adalah milik Anda. Mesin OCR kami menghormatinya berdasarkan desain.",
+        "points": [
+          "Tidak ada data yang keluar dari mesin Anda",
+          "Tidak perlu akun",
+          "Tidak ada cookie pelacakan",
+          "Tidak ada logging tersembunyi"
+        ],
+        "others": {
+          "title": "Alat OCR Lainnya",
+          "points": [
+            "Menjual data Anda ke pengiklan",
+            "Mewajibkan unggahan cloud",
+            "Menyisipkan piksel pelacakan",
+            "Menyimpan dokumen sensitif Anda"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Mengapa Memilih SafeTools OCR",
+        "subtitle": "Bandingkan kami dengan alat OCR berbasis cloud tradisional.",
+        "headers": [
+          "Fitur",
+          "SafeTools OCR",
+          "Alat Tradisional"
+        ],
+        "rows": [
+          {
+            "f": "Berbasis Browser",
+            "s": "Ya",
+            "t": "Terbatas"
+          },
+          {
+            "f": "Tidak Perlu Unggah",
+            "s": "Ya",
+            "t": "Tidak"
+          },
+          {
+            "f": "Mesin Bertenaga AI",
+            "s": "Ya",
+            "t": "Kadang-kadang"
+          },
+          {
+            "f": "Deteksi Tulisan Tangan",
+            "s": "Ya",
+            "t": "Terbatas"
+          },
+          {
+            "f": "Ramah Seluler",
+            "s": "Ya",
+            "t": "Seringkali Buruk"
+          },
+          {
+            "f": "Fokus pada Privasi",
+            "s": "Ya",
+            "t": "Tidak"
+          },
+          {
+            "f": "Gratis Selamanya",
+            "s": "Ya",
+            "t": "Sering Terbatas"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Utilitas OCR Lanjutan",
+        "subtitle": "Fitur profesional untuk pemrosesan dokumen yang kompleks.",
+        "items": [
+          {
+            "title": "Deteksi Tabel",
+            "desc": "Ekstrak tabel terstruktur dari dokumen keuangan yang kompleks."
+          },
+          {
+            "title": "Pemindaian Multi-Kolom",
+            "desc": "Pertahankan tata letak untuk surat kabar dan majalah multi-kolom."
+          },
+          {
+            "title": "Penghilang Derau",
+            "desc": "Bersihkan pemindaian kasar secara otomatis untuk akurasi yang lebih tinggi."
+          },
+          {
+            "title": "Rotasi Otomatis",
+            "desc": "Perbaiki pemindaian dokumen yang miring secara instan selama pengenalan."
+          },
+          {
+            "title": "OCR Batch",
+            "desc": "Proses beberapa aset gambar secara bersamaan di browser Anda."
+          },
+          {
+            "title": "Pembersihan Meta Data",
+            "desc": "Hapus metadata pelacakan tersembunyi dari gambar yang diproses."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Ubah Gambar Menjadi Teks yang Dapat Diedit Secara Instan",
+        "description": "Ekstrak teks dari tangkapan layar, dokumen pindaian, catatan tulisan tangan, dan PDF langsung di browser Anda dengan teknologi OCR yang mengutamakan privasi dan cepat.",
+        "button": "Mulai OCR Sekarang",
+        "upload": "Unggah Gambar"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Apakah alat OCR ini gratis?",
+            "a": "Ya. Alat OCR ini sepenuhnya gratis untuk digunakan tanpa biaya tersembunyi, tanda air, atau persyaratan langganan."
+          },
+          {
+            "q": "Apakah file saya diunggah ke server?",
+            "a": "Tidak. Semua pemrosesan OCR terjadi secara lokal di browser Anda menggunakan WebAssembly. Gambar Anda tidak pernah keluar dari perangkat Anda, memastikan privasi dan keamanan maksimum."
+          },
+          {
+            "q": "Bahasa apa saja yang didukung?",
+            "a": "Alat kami mendukung berbagai bahasa global termasuk Inggris, Hindi, Spanyol, Prancis, Jerman, Arab, Mandarin, Jepang, Korea, dan banyak lagi."
+          },
+          {
+            "q": "Bisakah saya mengekstrak teks dari catatan tulisan tangan?",
+            "a": "Ya. Mesin OCR bertenaga AI kami mendukung pengenalan tulisan tangan untuk catatan, tugas, jurnal, dan konten papan tulis."
+          },
+          {
+            "q": "Apakah OCR berfungsi pada PDF?",
+            "a": "Ya. Anda dapat mengekstrak teks dari PDF pindaian dan dokumen berbasis gambar dengan mengubahnya menjadi teks digital yang dapat diedit."
+          },
+          {
+            "q": "Bisakah saya menggunakan OCR di perangkat seluler?",
+            "a": "Ya. Alat ini sepenuhnya responsif dan berfungsi di ponsel pintar dan tablet modern langsung melalui browser web Anda."
+          },
+          {
+            "q": "Apakah registrasi diperlukan?",
+            "a": "Tidak. Anda dapat mulai mengekstrak teks segera tanpa membuat akun atau memberikan informasi pribadi apa pun."
+          }
+        ],
+        "title": "FAQ OCR",
+        "description": "Pertanyaan yang sering diajukan tentang alat OCR bertenaga AI kami."
+      },
+      "related": {
+        "title": "Jelajahi Alat Lainnya",
+        "items": [
+          {
+            "name": "Editor Gambar",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Kompresor Gambar",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Konverter Gambar",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF ke Teks",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Letakkan Aset",
+      "description": "Mendukung JPEG, PNG, PDF, HEIC. Maks 20MB."
+    },
+    "history": {
+      "title": "Riwayat Terbaru",
+      "subtitle": "Akses ekstraksi Anda sebelumnya",
+      "clearAll": "Bersihkan Semua",
+      "restore": "Pulihkan Hasil"
+    }
+  }
+}

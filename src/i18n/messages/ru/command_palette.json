@@ -1,0 +1,10 @@
+{
+  "CommandPalette": {
+    "searchPlaceholder": "Поиск инструментов, действий и команд...",
+    "favorites": "Избранное",
+    "searchResults": "Результаты поиска",
+    "noResults": "Нет результатов для \"{search}\"",
+    "navigate": "Перейти",
+    "launch": "Запустить"
+  }
+}

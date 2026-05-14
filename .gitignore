@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# testing
+/playwright-report/
+/test-results/
+/coverage/
+
+# scratch and temporary files
+/scratch/
+scratch.js
+*.log
+*.txt
+missing_keys.txt
+philosophy.txt
+dev_output.log
+lng.txt
+
+# generated assets
+public/assets/
+!public/assets/.gitkeep

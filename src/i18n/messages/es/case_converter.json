@@ -1,0 +1,116 @@
+{
+  "caseConverter": {
+    "title": "Convertidor",
+    "subtitle": "de Mayúsculas.",
+    "description": "Transforme texto al instante con un convertidor de mayúsculas y minúsculas en línea rápido y centrado en la privacidad. Convierta a mayúsculas, minúsculas, mayúsculas de título, de oración, camelCase, snake_case, kebab-case y más directamente en su navegador.",
+    "inputPlaceholder": "Escriba o pegue su texto aquí...",
+    "textInput": "Entrada de texto",
+    "moreFormats": "Más formatos:",
+    "toast": {
+      "success": "¡Conversión aplicada!",
+      "copy": "¡Copiado al portapapeles!"
+    },
+    "modes": {
+      "upper": "MAYÚSCULAS",
+      "lower": "minúsculas",
+      "title": "Mayúsculas de Título",
+      "sentence": "De oración",
+      "camel": "camelCase",
+      "snake": "snake_case",
+      "kebab": "kebab-case",
+      "pascal": "PascalCase",
+      "capitalized": "Capitalizado",
+      "screaming_snake": "SCREAMING_SNAKE",
+      "train": "Train-Case",
+      "dot": "dot.case",
+      "path": "path/case",
+      "toggle": "tOGGLE cASE"
+    },
+    "stats": {
+      "privacy": "Privacidad primero",
+      "instant": "Resultado instantáneo",
+      "noUploads": "Sin subidas",
+      "devReady": "Listo para devs"
+    },
+    "content": {
+      "mainTitle": "Herramienta gratuita de conversión de mayúsculas y minúsculas en línea",
+      "mainDesc1": "La herramienta Convertidor de Mayúsculas le ayuda a cambiar rápidamente el formato del texto a diferentes estilos de escritura y formatos de capitalización. Ya sea que sea desarrollador, estudiante, escritor, comercializador, creador de contenido o profesional de oficina, esta herramienta hace que el formato del texto sea más fácil y rápido.",
+      "mainDesc2": "Convierta texto al instante sin instalar software ni subir archivos a servidores externos.",
+      "formatsTitle": "Formatos de mayúsculas y minúsculas compatibles",
+      "formatsSubtitle": "Estilos y convenciones",
+      "standardTitle": "Escritura estándar",
+      "standardList": [
+        "MAYÚSCULAS",
+        "minúsculas",
+        "Mayúsculas de Título",
+        "De oración",
+        "Capitalizado",
+        "Cambiar mayúsculas/minúsculas"
+      ],
+      "devTitle": "Desarrollador y codificación",
+      "devList": [
+        "camelCase",
+        "PascalCase",
+        "snake_case",
+        "SCREAMING_SNAKE_CASE",
+        "kebab-case",
+        "Train-Case",
+        "dot.case",
+        "path/case"
+      ],
+      "featuresTitle": "Características del convertidor de mayúsculas en línea",
+      "featuresSubtitle": "¿Por qué usar este convertidor?",
+      "feature1Title": "Múltiples transformaciones",
+      "feature1Desc": "Convierta texto a varios estilos de capitalización con un solo clic.",
+      "feature2Title": "Amigable para desarrolladores",
+      "feature2Desc": "Perfecto para programadores que necesitan nombres de variables, clases CSS, nombres de API, etc.",
+      "feature3Title": "SEO y redacción de contenido",
+      "feature3Desc": "Los escritores y comercializadores pueden optimizar rápidamente encabezados, títulos y metadatos.",
+      "feature4Title": "Seguridad basada en el navegador",
+      "feature4Desc": "Todo el procesamiento ocurre localmente en su navegador para ayudar a proteger el texto sensible.",
+      "howTitle": "Cómo usar el convertidor",
+      "step1": "Pegar",
+      "step1Desc": "Pegue o escriba su texto",
+      "step2": "Seleccionar",
+      "step2Desc": "Seleccione el formato deseado",
+      "step3": "Convertir",
+      "step3Desc": "La herramienta convierte el texto al instante",
+      "step4": "Copiar",
+      "step4Desc": "Copie el resultado formateado"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "¿Qué es un convertidor de mayúsculas y minúsculas?",
+          "a": "Un convertidor de mayúsculas y minúsculas es una herramienta que cambia el formato del texto a diferentes estilos de capitalización, como mayúsculas, minúsculas, mayúsculas de título, camelCase o snake_case."
+        },
+        {
+          "q": "¿Es gratis este convertidor?",
+          "a": "Sí. La herramienta es completamente gratuita para usar en línea sin necesidad de registrarse."
+        },
+        {
+          "q": "¿Funciona la herramienta sin conexión?",
+          "a": "La mayoría del procesamiento basado en el navegador puede funcionar localmente una vez que la página se carga, dependiendo de las capacidades de su navegador."
+        },
+        {
+          "q": "¿Es seguro mi texto?",
+          "a": "Sí. El procesamiento de texto ocurre directamente en su navegador para mayor privacidad y seguridad."
+        },
+        {
+          "q": "¿Pueden los desarrolladores usar esta herramienta?",
+          "a": "Sí. La herramienta admite convenciones de nomenclatura de programación comunes, incluyendo camelCase, PascalCase, snake_case y kebab-case."
+        },
+        {
+          "q": "¿Puedo usar la herramienta en dispositivos móviles?",
+          "a": "Sí. El convertidor funciona en teléfonos, tabletas, computadoras portátiles y sistemas de escritorio."
+        },
+        {
+          "q": "¿Admite la herramienta entradas de texto grandes?",
+          "a": "Sí. Puede convertir párrafos, artículos, fragmentos de código o grandes bloques de texto de manera eficiente."
+        }
+      ],
+      "title": "Preguntas frecuentes",
+      "description": "Todo lo que necesita saber sobre nuestra herramienta centrada en la privacidad."
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "imageToPptx": {
+    "seo": {
+      "title": "图片转 PPTX 在线免费转换器 – 将 JPG、PNG 和图片转换为 PowerPoint 幻灯片",
+      "description": "免费在线将 JPG、PNG 和 WebP 转换为 PowerPoint PPTX 演示文稿。快速、安全、基于浏览器的图片转 PPTX 转换器，无需上传。",
+      "keywords": "图片转 pptx, 照片转 powerpoint, 图片转幻灯片转换器, JPG 转 PPTX, PNG 转 PowerPoint, WEBP 转 PPTX, BMP 转 PPTX, GIF 转 PPTX, TIFF 转 PPTX",
+      "ogTitle": "图片转 PPTX 转换器 – 免费在线 JPG、PNG 和 WEBP 转 PowerPoint 工具",
+      "ogDescription": "使用 SafeTools 的免费图片转 PPTX 转换器，立即将您的图片转换为专业的 PowerPoint 演示文稿。无需服务器上传，100% 私密。"
+    },
+    "hero": {
+      "title": "图片转 PPTX。",
+      "description": "立即将您的图片转换为专业的 PowerPoint 演示文稿。快速、安全且 100% 私密。",
+      "dropzone": {
+        "title": "将图片拖放到此处",
+        "subtitle": "支持 JPG、PNG、WEBP、SVG、TIFF 等"
+      },
+      "badges": {
+        "privacy": "隐私优先",
+        "noUploads": "无需上传",
+        "instant": "即时导出",
+        "noWatermark": "无水印"
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "主要功能",
+        "subtitle": "为什么专业人士选择 SafeTools",
+        "items": [
+          {
+            "title": "即时转换",
+            "desc": "在几秒钟内从单张或多张图片创建完全兼容的 PPTX 演示文件。"
+          },
+          {
+            "title": "隐私优先",
+            "desc": "您的文件保留在您的设备上。图片在浏览器中本地处理，无需上传。"
+          },
+          {
+            "title": "批量处理",
+            "desc": "上传多张图片，自动生成多页 PowerPoint 演示文稿。"
+          },
+          {
+            "title": "高质量",
+            "desc": "在生成 PPTX 期间保持图片的清晰度、分辨率和颜色。"
+          },
+          {
+            "title": "跨设备",
+            "desc": "直接在您的浏览器中在 Windows、macOS、Linux、Android 和 iOS 上运行。"
+          },
+          {
+            "title": "无水印",
+            "desc": "生成的演示文稿干净、专业，可随时使用。"
+          }
+        ]
+      },
+      "formats": {
+        "title": "支持的格式",
+        "subtitle": "转换几乎任何图片格式"
+      },
+      "useCases": {
+        "title": "常见使用场景",
+        "items": [
+          {
+            "title": "教育",
+            "desc": "将讲义、扫描页和图表转换为课堂幻灯片。"
+          },
+          {
+            "title": "商业",
+            "desc": "从屏幕截图创建报告、分析报告和产品展示。"
+          },
+          {
+            "title": "设计师",
+            "desc": "将作品集和模型转换为可供客户查看的演示文稿。"
+          },
+          {
+            "title": "市场营销",
+            "desc": "将营销创意和横幅转换为可编辑的推介文稿。"
+          }
+        ]
+      },
+      "faq": {
+        "title": "常见问题",
+        "subtitle": "您需要了解的一切",
+        "items": [
+          {
+            "q": "图片转 PPTX 转换器是免费的吗？",
+            "a": "是的。该工具完全免费使用，没有隐藏费用或水印。"
+          },
+          {
+            "q": "我需要安装软件吗？",
+            "a": "不需要。一切都直接在您的现代 Web 浏览器（Chrome、Firefox、Safari、Edge）中运行。"
+          },
+          {
+            "q": "我的文件会上传到服务器吗？",
+            "a": "不会。SafeTools 优先考虑基于浏览器的处理。您的图片永远不会离开您的设备。"
+          },
+          {
+            "q": "我可以将多张图片转换为一个 PPTX 文件吗？",
+            "a": "可以。您可以上传多张图片，它们将被转换为多页 PowerPoint 演示文稿。"
+          },
+          {
+            "q": "该工具支持移动设备吗？",
+            "a": "是的。该转换器可在 Android 手机、iPhone、平板电脑和桌面设备上无缝运行。"
+          },
+          {
+            "q": "图片质量会降低吗？",
+            "a": "该转换器经过优化，可在生成过程中尽可能保留图片的清晰度和分辨率。"
+          }
+        ]
+      }
+    },
+    "studio": {
+      "assetMatrix": "素材矩阵",
+      "slidesInitialized": "已初始化 {count} 张幻灯片",
+      "generate": "生成 PPTX 文稿",
+      "slideIndicator": "第 {current} / {total} 页",
+      "reset": "重置",
+      "secureBrowser": "安全浏览器线程",
+      "workspaceInitialized": "工作区已初始化",
+      "studioConfig": "工作室配置",
+      "localSynthesis": "本地合成模式",
+      "presentationName": "演示文稿名称",
+      "placeholder": "文稿_2024",
+      "optimization": "优化",
+      "layoutEngine": "布局引擎",
+      "imageFit": "图片适应",
+      "workerStatus": "工作状态",
+      "privacyShield": "隐私保护",
+      "privacyDesc": "所有幻灯片构建均在浏览器的沙箱环境中进行。任何数据都不会传输、缓存或存储在我们的基础设施中。",
+      "systemReady": "系统就绪",
+      "noPreview": "无可用预览",
+      "pro": "专业版",
+      "layoutValue": "高清 16:9",
+      "fitValue": "包含",
+      "workerIdle": "空闲"
+    },
+    "messages": {
+      "processing": "正在处理 {count} 个文件...",
+      "slidesAdded": "已添加 {count} 张幻灯片",
+      "processFailed": "部分文件处理失败",
+      "exportSuccess": "演示文稿导出成功",
+      "exportFailed": "导出失败。请确保所有图片均有效。"
+    }
+  }
+}

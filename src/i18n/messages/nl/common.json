@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Welkom bij SafeTools",
+    "tagline": "150+ Privacy-First online bestandshulpmiddelen die lokaal draaien",
+    "upload": "Bestand uploaden",
+    "download": "Downloaden",
+    "compress": "Comprimeren",
+    "convert": "Converteren",
+    "edit": "Bewerken",
+    "search": "Zoek in 150+ hulpmiddelen...",
+    "privacy": "Privacy eerst",
+    "speed": "Ultrasnel",
+    "security": "Enterprise-kwaliteit",
+    "systemHealth": {
+      "title": "Systeemstatus",
+      "localEngine": "Lokale motor",
+      "localEngineDesc": "Verwerking gebeurt 100% lokaal op uw apparaat.",
+      "secureSession": "Veilige sessie",
+      "secureSessionDesc": "Geïsoleerde browseromgeving voor maximale privacy.",
+      "online": "Verbonden",
+      "onlineDesc": "Online voor de nieuwste updates van hulpmiddelen.",
+      "offlineReady": "Klaar voor offline gebruik",
+      "offlineReadyDesc": "Dit hulpmiddel werkt perfect zonder internetverbinding.",
+      "zeroTracking": "Geen tracking",
+      "zeroTrackingDesc": "Er worden geen gegevens naar onze servers verzonden voor tracking."
+    },
+    "securityTools": "Beveiligingshulpmiddelen",
+    "privacyTools": "Privacyhulpmiddelen",
+    "tools": {
+      "vault": "Veilige kluis",
+      "metadataCleaner": "Metadatacleaner",
+      "fileShredder": "Bestandsvernietiger",
+      "secureNotes": "Veilige notities",
+      "passwordGenerator": "Wachtwoordgenerator",
+      "passwordChecker": "Wachtwoordsterktecontrole",
+      "ocr": "OCR-extractie",
+      "steganography": "Afbeeldingssteganografie",
+      "imageEditor": "Afbeeldingsbewerker",
+      "imageCompressor": "Afbeeldingscompressor",
+      "formatConverter": "Formaatconvertor",
+      "backgroundRemover": "Achtergrondverwijderaar",
+      "colorLab": "Kleurenlab",
+      "pdfToImage": "PDF naar afbeelding"
+    },
+    "toolsLabel": "Hulpmiddelen",
+    "features": "Kenmerken",
+    "developers": "Ontwikkelaars",
+    "pricing": "Prijzen",
+    "about": "Over SafeTools",
+    "whyAds": "Waarom we advertenties tonen",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Servicevoorwaarden",
+    "contact": "Neem contact op",
+    "home": "Home",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Wijzigingslogboek",
+    "light": "Licht",
+    "dark": "Donker",
+    "system": "Systeem",
+    "startFree": "Gratis aan de slag",
+    "systemStatus": "Systeemstatus",
+    "updates": "Updates",
+    "feedback": "Feedback",
+    "contents": "Inhoud",
+    "imageTools": "Afbeeldingshulpmiddelen",
+    "openTools": "Hulpmiddelen openen",
+    "ready": "Klaar om de controle te nemen?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "GEREED",
+      "blocked": "GEBLOKKEERD",
+      "success": "SUCCES",
+      "error": "FOUT"
+    },
+    "getStarted": "Aan de slag",
+    "forever": "voor altijd",
+    "step": "Stap",
+    "dropzone": {
+      "title": "Bestand uploaden",
+      "description": "Sleep uw bestand hierheen",
+      "secure": "Veilige lokale verwerking",
+      "processedLocally": "Lokaal verwerkt",
+      "maxSize": "Max {size}MB",
+      "noFileChosen": "Geen bestand gekozen"
+    },
+    "export": {
+      "ready": "Klaar om te downloaden",
+      "download": "Downloaden",
+      "copy": "Kopiëren",
+      "copied": "Gekopieerd!",
+      "share": "Delen",
+      "reset": "Resetten"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "description": "Alles wat u moet weten over dit hulpmiddel en hoe het uw privacy beschermt."
+    },
+    "related": {
+      "title": "Gerelateerde professionele hulpmiddelen",
+      "subtitle": "Ontdek meer privacy-first hulpmiddelen voor uw workflow."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Selecteer taal"
+    },
+    "relatedTools": "Gerelateerde creatieve hulpmiddelen",
+    "relatedToolsDesc": "Ontdek meer privacy-first hulpmiddelen.",
+    "all": "Alle",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Advertentie",
+    "system_health": {
+      "title": "Systeemstatus",
+      "localEngine": "Lokale motor",
+      "localEngineDesc": "Verwerking op uw hardware",
+      "secureSession": "Veilige sessie",
+      "secureSessionDesc": "Geïsoleerde browsercontext",
+      "online": "Online",
+      "onlineDesc": "Geoptimaliseerd voor snelheid",
+      "offlineReady": "Klaar voor offline gebruik",
+      "offlineReadyDesc": "Volledig functioneel offline",
+      "zeroTracking": "Geen tracking",
+      "zeroTrackingDesc": "Privacy-first architectuur"
+    },
+    "values": {
+      "yes": "Ja",
+      "no": "Nee",
+      "limited": "Beperkt"
+    },
+    "pro": {
+      "comingSoon": "Pro – Binnenkort beschikbaar",
+      "unlockPower": "Ontgrendel meer kracht",
+      "features": [
+        "Bestanden tot 10x groter",
+        "Onbeperkte batchverwerking",
+        "Prioritaire serververwerkingswachtrij",
+        "Deelbare links (72u geldig)",
+        "Bestandsgeschiedenis – laatste 50 taken",
+        "Server-side verwerking voor zware bestanden"
+      ],
+      "waitlist": "Word lid van de wachtlijst – $8/mnd bij lancering",
+      "successTitle": "U staat op de lijst! 🎉",
+      "successDesc": "We sturen u een e-mail wanneer Pro wordt gelanceerd.",
+      "continueFree": "Doorgaan met de gratis versie",
+      "emailPlaceholder": "uw@email.com",
+      "join": "Deelnemen",
+      "validEmail": "Voer een geldig e-mailadres in.",
+      "waitlistSuccess": "U staat op de wachtlijst! We laten u weten wanneer Pro wordt gelanceerd.",
+      "freeLimit": "Gratis limiet: {limit}",
+      "proLimit": "Pro limiet: {limit}",
+      "yourFile": "Uw bestand: {size}"
+    },
+    "disclaimer": {
+      "understand": "Ik begrijp het – Doorgaan",
+      "responsibility": "Door door te gaan accepteert u de volledige verantwoordelijkheid voor uw gebruik van dit hulpmiddel."
+    },
+    "toast": {
+      "linkCopied": "Link gekopieerd naar klembord"
+    },
+    "seo": {
+      "browserReqs": "Vereist JavaScript en WebAssembly"
+    },
+    "aria": {
+      "goHome": "Ga naar Home",
+      "toggleTheme": "Thema wisselen",
+      "faq": "Veelgestelde vragen",
+      "changeLanguage": "Taal wijzigen",
+      "close": "Sluiten",
+      "menu": "Menu",
+      "openTools": "Menu met hulpmiddelen openen",
+      "exploreTools": "Verken alle hulpmiddelen",
+      "platformFeatures": "Platformkenmerken",
+      "privacyCommitment": "Privacytoezegging",
+      "developerApi": "Developer API & Docs",
+      "pricingPlans": "Prijsplannen"
+    },
+    "shareTool": {
+      "title": "Verspreid de privacy",
+      "subtitle": "Ondersteun local-first computing",
+      "copyLink": "Link kopiëren",
+      "copied": "Gekopieerd",
+      "twitter": "Bekijk dit private, zero-upload hulpmiddel voor {title}:",
+      "telegram": "Veilige bestandsverwerking met SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF-oplossingen",
+        "image": "Afbeeldingsstudio",
+        "privacy": "Privacyhulpmiddelen",
+        "developer": "Ontwikkelaarshulpmiddelen",
+        "pdfMerge": "PDF samenvoegen",
+        "pdfSplit": "PDF splitsen",
+        "pdfUnlock": "PDF ontgrendelen",
+        "pdfProtect": "PDF beveiligen",
+        "pdfToImage": "PDF naar afbeelding",
+        "securityFileShredder": "Bestandsvernietiger"
+      }
+    },
+    "error": "Fout"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% lokale verwerking",
+      "noUploads": "Nul uploads naar de server",
+      "noTracking": "Nul datatracking",
+      "privacyFirst": "Privacy-first UX",
+      "worksOffline": "Werkt offline"
+    }
+  }
+}

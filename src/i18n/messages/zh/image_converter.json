@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "图片转换器工作室 | 支持 150+ 种格式 | SafeTools",
+      "description": "在浏览器中本地转换 150 多种格式的图片。支持 HEIC、WebP、AVIF、RAW、PDF 等。100% 隐私保护。"
+    },
+    "hero": {
+      "title": "通用图片转换器。",
+      "titleSpecific": "将 {from} 转换为 {to}。",
+      "description": "在浏览器中本地转换 150 多种格式的图片。零服务器上传。",
+      "descriptionSpecific": "立即将 {from} 转换为 {to}。隐私优先的本地处理，无需上传。",
+      "engine": "本地硬件处理",
+      "privateConverter": "私密浏览器引擎"
+    },
+    "benefits": {
+      "local": "本地引擎",
+      "zero": "无需上传",
+      "no_tracking": "无跟踪",
+      "fast": "极速",
+      "browser": "浏览器内"
+    },
+    "performance": {
+      "title": "高性能引擎",
+      "subtitle": "GPU 加速的浏览器处理",
+      "items": [
+        {
+          "title": "150+ 种格式",
+          "description": "支持从 HEIC 和 RAW 到传统位图格式的所有格式。"
+        },
+        {
+          "title": "批量处理",
+          "description": "同时转换数百张图片，不受服务器限制。"
+        },
+        {
+          "title": "无损质量",
+          "description": "先进的重采样算法可保留原始数据的每一个像素。"
+        },
+        {
+          "title": "本地 OCR",
+          "description": "使用内置识别引擎在转换过程中提取文本层。"
+        },
+        {
+          "title": "元数据控制",
+          "description": "选择剥离或保留 EXIF、GPS 和 IPTC 数据层。"
+        },
+        {
+          "title": "浏览器隐私",
+          "description": "您的文件永远不会离开您的设备。100% 安全的离线就绪架构。"
+        }
+      ]
+    },
+    "workspace": {
+      "title": "转换工作区",
+      "assets": "{count} 个资源",
+      "telemetry": "本地硬件处理",
+      "savings": "当前节省",
+      "smaller": "缩小了 {size}",
+      "impact": "全球影响",
+      "saved": "节省了 {size}",
+      "clear": "清空工作区",
+      "addMore": "添加文件",
+      "exportAll": "全部导出 (ZIP)"
+    },
+    "config": {
+      "title": "全局设置",
+      "format": "目标格式",
+      "selectFormat": "选择格式",
+      "search": "搜索 150+ 种格式...",
+      "quality": "质量与压缩",
+      "resizeW": "调整宽度",
+      "resizeH": "调整高度",
+      "auto": "自动",
+      "px": "像素",
+      "metadata": "元数据控制",
+      "strip": "剥离 EXIF/GPS（已启用）",
+      "wasm": "WASM 引擎",
+      "accelerated": "硬件加速",
+      "targetSize": "目标文件大小",
+      "limit": "限制为 {size}KB",
+      "optimized": "优化质量"
+    },
+    "categories": {
+      "regular": "标准格式",
+      "web": "网络优化",
+      "modern": "新一代格式",
+      "print": "专业打印",
+      "design": "设计资产",
+      "game": "游戏贴图",
+      "raw": "RAW 相机数据",
+      "scientific": "科学成像",
+      "vector": "矢量图形",
+      "hdr": "高动态范围",
+      "document": "办公与文档",
+      "legacy": "旧格式"
+    },
+    "queue": {
+      "title": "转换队列",
+      "converted": "已转换",
+      "in": "输入",
+      "out": "输出",
+      "smaller": "缩小了 {percent}%",
+      "download": "下载",
+      "convert": "转换",
+      "convert_all": "转换所有文件"
+    },
+    "toast": {
+      "noProcessed": "没有可下载的处理后文件。",
+      "copied": "图片已复制到剪贴板！",
+      "clipboardFailed": "无法将图片复制到剪贴板。"
+    },
+    "landing": {
+      "benefits": {
+        "local": "本地引擎",
+        "zero": "无需上传",
+        "no_tracking": "无跟踪",
+        "fast": "极速",
+        "browser": "浏览器内"
+      },
+      "performance": {
+        "title": "高性能引擎",
+        "subtitle": "GPU 加速的浏览器处理",
+        "items": [
+          {
+            "title": "150+ 种格式",
+            "description": "支持从 HEIC 和 RAW 到传统位图格式的所有格式。"
+          },
+          {
+            "title": "批量处理",
+            "description": "同时转换数百张图片，不受服务器限制。"
+          },
+          {
+            "title": "无损质量",
+            "description": "先进的重采样算法可保留原始数据的每一个像素。"
+          },
+          {
+            "title": "本地 OCR",
+            "description": "使用内置识别引擎在转换过程中提取文本层。"
+          },
+          {
+            "title": "元数据控制",
+            "description": "选择剥离或保留 EXIF、GPS 和 IPTC 数据层。"
+          },
+          {
+            "title": "浏览器隐私",
+            "description": "您的文件永远不会离开您的设备。100% 安全的离线就绪架构。"
+          }
+        ]
+      },
+      "footer": {
+        "formats": "支持的格式",
+        "compatibility": "通用兼容性矩阵",
+        "input": "输入格式",
+        "output": "输出格式",
+        "freeTitle": "永久 100% 免费",
+        "freeDesc": "SafeTools 是一个免费的实用工具套件。无订阅，无隐藏费用，无需信用卡。",
+        "optimizedTitle": "无损优化",
+        "optimizedDesc": "我们的引擎使用先进的重采样技术，确保您的图片在转换后依然清晰。",
+        "precisionTitle": "浏览器精度",
+        "precisionDesc": "通过本地运行，我们消除了由网络图片处理引起的伪影。",
+        "popularTitle": "热门转换",
+        "popularSubtitle": "针对常见网络任务的即时本地处理",
+        "moreFormats": "150+ 种其他格式",
+        "moreDesc": "在寻找其他格式？SafeTools 支持几乎所有存在的图片格式。",
+        "start": "返回顶部"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "我可以转换多少种格式？",
+            "a": "您可以转换 150 多种图片格式，包括 WebP、AVIF 和 HEIC 等现代格式，以及 PSD、TIFF 和 RAW 文件等专业格式。"
+          },
+          {
+            "q": "转换过程中图片质量会降低吗？",
+            "a": "我们使用高质量的编码引擎。您可以手动调整质量/压缩设置，以确保输出效果完全符合您的要求，无论是针对网页还是打印进行优化。"
+          },
+          {
+            "q": "我可以将 iPhone 中的 HEIC 照片转换为 JPG 吗？",
+            "a": "可以！我们的转换器非常适合直接在浏览器中将 HEIC 文件转换为广泛兼容的 JPG 或 PNG 格式，无需上传到服务器。"
+          },
+          {
+            "q": "转换文件的数量有限制吗？",
+            "a": "没有。您可以根据需要转换任意数量的文件，无论是单个转换还是批量转换，完全免费。"
+          }
+        ],
+        "title": "常见问题解答",
+        "description": "关于我们隐私优先工具的所有信息。"
+      }
+    }
+  }
+}

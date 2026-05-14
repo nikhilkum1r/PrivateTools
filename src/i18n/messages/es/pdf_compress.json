@@ -1,0 +1,197 @@
+{
+  "pdfCompress": {
+    "seo": {
+      "title": "Compress PDF Online - Shrink PDF Size Locally & Securely | SafeTools",
+      "description": "Reduce PDF file size online without uploading to any server. Our free PDF compressor works locally in your browser for maximum privacy. Shrink PDF files instantly while maintaining high quality.",
+      "keywords": "compress pdf, compress pdf online, shrink pdf file size, reduce pdf size, free pdf compressor, compress pdf 200kb, secure pdf compression, local pdf shrinker, how to compress pdf, pdf size reducer"
+    },
+    "title": "Comprimir PDF",
+    "description": "Reduce el tamaño de tu archivo PDF sin perder calidad.",
+    "engine_badge": "QPDF-WASM Engine Powered",
+    "settings": {
+      "title": "Compression Matrix",
+      "mode_label": "Compression Level",
+      "recommended": "Recommended",
+      "extreme": "Extreme",
+      "recommended_desc": "Balanced compression. Maintains full image quality and vector paths.",
+      "extreme_desc": "Maximum compression. May slightly reduce image resolution for smaller size.",
+      "button": "Compress PDF",
+      "processing": "Compressing...",
+      "success": "PDF Successfully Compressed"
+    },
+    "engine": "Local V8 Sandbox",
+    "landing": {
+      "features": {
+        "title": "Professional PDF Optimization",
+        "subtitle": "Industrial-grade compression algorithms running directly in your browser.",
+        "items": [
+          "Local Processing",
+          "Stream Compression",
+          "Object Cleanup",
+          "Linearization",
+          "Zero Uploads",
+          "Privacy First",
+          "Instant Export",
+          "Cross-Platform",
+          "No Tracking",
+          "Secure Sandbox"
+        ]
+      },
+      "educational": {
+        "what_is": {
+          "title": "What is PDF Compression?",
+          "description": "PDF compression reduces the file size of your documents by optimizing internal object streams, stripping unreferenced resources, and re-encoding images without compromising readability."
+        },
+        "privacy": {
+          "title": "Why Local Processing Matters",
+          "description": "SafeTools processes your sensitive documents entirely within your browser's secure sandbox. No data ever reaches our servers, ensuring 100% privacy and compliance with data sovereignty regulations.",
+          "points": [
+            "Documents never leave your device",
+            "No risk of data interception",
+            "Works entirely in the browser",
+            "No file retention on servers"
+          ]
+        },
+        "modes": {
+          "title": "Optimization Modes",
+          "items": [
+            "Object Stream Generation",
+            "Resource Deduplication",
+            "Image Subsampling",
+            "Font Subset Optimization"
+          ]
+        },
+        "smart": {
+          "title": "Smart Compression Technology",
+          "points": [
+            "Intelligent object detection",
+            "Stream-data compression (Deflate)",
+            "Cross-reference table optimization",
+            "Web-linearization for fast viewing"
+          ]
+        },
+        "how_it_works": {
+          "title": "How to Compress PDF Files Online",
+          "steps": [
+            "Select the PDF document you want to compress from your computer or mobile device.",
+            "Adjust the compression level between 'Recommended' (best quality) or 'Extreme' (smallest size) to shrink your PDF file size.",
+            "Wait a moment for our secure browser-based tool to compress the PDF locally without any server uploads.",
+            "Instantly download and save your optimized, smaller PDF document once the process is complete."
+          ],
+          "note": "All processing happens in your browser's memory for maximum security."
+        },
+        "performance": {
+          "title": "Performance Engine",
+          "subtitle": "High-performance WASM binaries ensure desktop-class speed.",
+          "points": [
+            "Multi-threaded execution",
+            "Linearized output streams",
+            "Optimized memory usage"
+          ]
+        },
+        "use_cases": {
+          "title": "Common Use Cases",
+          "items": [
+            "Email Attachments",
+            "Gov Portal Uploads",
+            "Storage Optimization",
+            "Fast Web Loading"
+          ]
+        },
+        "secure": {
+          "title": "Military-Grade Security",
+          "description": "SafeTools uses a sandboxed WASM environment to ensure your files are processed in isolation, preventing any data leaks or external access."
+        },
+        "offline": {
+          "title": "Works Everywhere, Offline",
+          "items": [
+            "No Internet Needed",
+            "Mobile Friendly",
+            "PWA Optimized",
+            "Instant Load"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Why SafeTools is Better",
+        "headers": [
+          "Feature",
+          "Online Converters",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "Processing Location",
+            "Cloud Server",
+            "Local Browser"
+          ],
+          [
+            "Privacy Risk",
+            "High (Upload Required)",
+            "Zero (No Upload)"
+          ],
+          [
+            "File Security",
+            "Stored on Server",
+            "Memory Only"
+          ]
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "How to compress PDF files without uploading them?",
+            "a": "SafeTools uses WebAssembly technology to process your files directly in your browser. This means your PDF never leaves your computer, providing the most secure way to shrink PDF size."
+          },
+          {
+            "q": "Is this PDF compressor free to use?",
+            "a": "Yes, our PDF compression tool is completely free. You can reduce PDF size as many times as you want without any hidden costs or subscriptions."
+          },
+          {
+            "q": "Does compressing a PDF reduce its quality?",
+            "a": "Our 'Recommended' mode uses intelligent optimization to reduce file size while maintaining visual quality. The 'Extreme' mode provides maximum compression by slightly reducing image resolution, ideal for email attachments."
+          },
+          {
+            "q": "What is the maximum file size I can compress?",
+            "a": "Since processing happens in your browser's memory, we recommend files up to 100MB for the best experience, though larger files may work depending on your device's RAM."
+          },
+          {
+            "q": "Are my documents safe with SafeTools?",
+            "a": "Absolutely. Privacy is our core mission. Unlike other online converters, we do not have a backend server that stores your files. Everything is processed in a secure local sandbox."
+          }
+        ]
+      },
+      "related": {
+        "title": "Related PDF Tools"
+      },
+      "manifesto": {
+        "title": "Privacy is a Right",
+        "description": "SafeTools is committed to building tools that respect user privacy and data sovereignty."
+      }
+    },
+    "messages": {
+      "success": "PDF successfully compressed",
+      "error": "PDF compression failed. Please try a different level.",
+      "upload_error": "Please upload a valid PDF file.",
+      "invalidPdf": "Please upload a valid PDF file.",
+      "processingError": "PDF compression failed. Check engine logs.",
+      "alreadyOptimized": "This file is already highly optimized.",
+      "genericError": "Compression failed: {error}"
+    },
+    "dropzone": {
+      "title": "Suelta el PDF para comprimir aquí",
+      "description": "o haz clic para seleccionar un archivo",
+      "secure": "Procesamiento local seguro"
+    },
+    "controls": {
+      "compress": "Comprimir PDF",
+      "quality": "Nivel de compresión",
+      "download": "Descargar PDF comprimido"
+    },
+    "levels": {
+      "low": "Compresión baja (mejor calidad)",
+      "medium": "Compresión media",
+      "high": "Compresión alta (tamaño más pequeño)"
+    }
+  }
+}

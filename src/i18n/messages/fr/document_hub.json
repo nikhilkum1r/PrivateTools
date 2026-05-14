@@ -1,0 +1,44 @@
+{
+  "documentHub": {
+    "seo": {
+      "title": "Hub de documents | Outils de texte et de documents axés sur la confidentialité | SafeTools",
+      "description": "Utilitaires de documents professionnels fonctionnant entièrement dans votre navigateur. Word vers PDF, PDF vers texte et outils sécurisés de manipulation de texte.",
+      "keywords": "outils de document, word vers pdf, pdf vers texte, éditeur de documents en ligne, traitement de documents privé, outils de documents locaux",
+      "ogTitle": "SafeTools Document Studio | 100 % Privé",
+      "ogDescription": "Transformez et traitez vos documents sans aucun téléchargement sur un serveur.",
+      "structuredName": "SafeTools Document Studio",
+      "structuredDesc": "Une suite professionnelle d'utilitaires de traitement de documents local-first."
+    },
+    "hero": {
+      "title": "Studio Documentaire",
+      "subtitle": "Traitement de documents de qualité professionnelle sans interaction avec un serveur."
+    },
+    "tools": {
+      "wordToPdf": {
+        "name": "Word vers PDF",
+        "desc": "Convertissez vos fichiers DOCX en documents PDF professionnels en toute sécurité."
+      },
+      "pdfToText": {
+        "name": "PDF vers Texte",
+        "desc": "Extrayez les couches de texte de n'importe quel document PDF localement."
+      },
+      "textTools": {
+        "name": "Studio de Texte",
+        "desc": "Conversion de casse, comptage de mots et utilitaires de texte avancés."
+      },
+      "compressPdf": {
+        "name": "Compresser un PDF",
+        "desc": "Réduisez la taille des fichiers PDF localement sans perte de qualité."
+      },
+      "openTool": "Ouvrir l'outil"
+    },
+    "faq": {
+      "title": "FAQ Studio Documentaire",
+      "desc": "Questions fréquemment posées sur notre suite de traitement de documents privée, basée sur le navigateur.",
+      "q1": "Mes données textuelles sont-elles en sécurité ?",
+      "a1": "Oui. SafeTools traite toutes les données des documents localement. Rien n'est jamais envoyé à un serveur pour traitement ou stockage.",
+      "q2": "Quels formats sont pris en charge ?",
+      "a2": "Nous prenons actuellement en charge les formats PDF, DOCX, TXT et MD pour diverses tâches de conversion et d'extraction."
+    }
+  }
+}

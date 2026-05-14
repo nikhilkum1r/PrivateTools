@@ -1,0 +1,210 @@
+{
+  "qrGenerator": {
+    "seo": {
+      "title": "Générateur de Code QR Professionnel - Gratuit et Privé | SafeTools",
+      "description": "Générez des codes QR personnalisés de haute fidélité localement dans votre navigateur. Ajoutez des logos, des couleurs et des styles sans aucun suivi de serveur ni redirection.",
+      "ogTitle": "Générateur de Code QR Professionnel - Gratuit et Privé | SafeTools",
+      "ogDescription": "Générez des codes QR personnalisés de haute fidélité localement dans votre navigateur.",
+      "structuredName": "SafeTools QR Studio",
+      "structuredDesc": "Générateur de QR local professionnel.",
+      "keywords": "code qr, générateur qr, qr local"
+    },
+    "hero": {
+      "title": "QR Identity Studio.",
+      "subtitle": "Génération de codes QR de qualité professionnelle directement dans votre navigateur. Zéro suivi, zéro téléchargement sur le serveur.",
+      "badge": "Moteur QR axé sur la confidentialité"
+    },
+    "badges": {
+      "instant": "Génération Instantanée",
+      "local": "Logique Locale",
+      "noTracking": "Aucun Suivi",
+      "browser": "Côté Navigateur",
+      "mobile": "Prêt pour Mobile"
+    },
+    "identity": {
+      "title": "Configuration de l'Identité",
+      "status": "MOTEUR ACTIF",
+      "protocol": "Sélectionner le Protocole",
+      "uriLabel": "URI / URL de Destination",
+      "uriPlaceholder": "https://exemple.com",
+      "uriInvalid": "Format d'URI Invalide Détecté",
+      "ssid": "Réseau WiFi (SSID)",
+      "ssidPlaceholder": "Mon Réseau",
+      "password": "Mot de passe WiFi",
+      "passwordPlaceholder": "Mot de passe réseau",
+      "contact": "Nom du Contact",
+      "contactPlaceholder": "Jean Dupont",
+      "text": "Message Texte Brut",
+      "textPlaceholder": "Tapez votre message ici...",
+      "brand": "Branding de l'Identité",
+      "centerLogo": "Logo Central / Icône",
+      "remove": "Supprimer",
+      "dropIcon": "Déposer l'Icône / Logo",
+      "logoAlt": "Aperçu du Logo"
+    },
+    "preview": {
+      "title": "Aperçu en Temps Réel",
+      "status": "Charge Utile Actuelle : {bytes} Octets",
+      "copy": "Copier la Charge Utile",
+      "copied": "Copié avec Succès !"
+    },
+    "design": {
+      "title": "Style et Design",
+      "chromatic": "Contrôle Chromatique",
+      "foreground": "Couleur de Premier Plan",
+      "background": "Couleur de Fond",
+      "presets": "Préréglages de Branding",
+      "config": "Configuration de la Matrice",
+      "errorCorrection": "Correction d'Erreur",
+      "margin": "Inclure une Marge",
+      "secured": "SESSION SÉCURISÉE"
+    },
+    "export": {
+      "png": "Télécharger l'Atout PNG",
+      "svg": "Exporter le Vecteur SVG",
+      "toastPng": "Code QR téléchargé en PNG !",
+      "toastSvg": "Code QR exporté en SVG !"
+    },
+    "landing": {
+      "features": {
+        "title": "Fonctionnalités du Studio",
+        "subtitle": "Des commandes puissantes pour une génération de QR professionnelle.",
+        "url": "Support URL / URI",
+        "wifi": "Réseaux WiFi",
+        "vcard": "Contacts vCard",
+        "text": "Texte Brut",
+        "colors": "Couleurs Personnalisées",
+        "logo": "Logos de Marque",
+        "export": "Export Haute Résolution",
+        "offline": "Prêt pour le Hors-ligne"
+      },
+      "educational": {
+        "whatIs": {
+          "title": "Qu'est-ce qu'un code QR ?",
+          "description": "Les codes QR (Quick Response) sont des codes-barres bidimensionnels qui stockent des données dans une matrice de carrés noirs et blancs. Ils peuvent stocker des URL, des informations de contact, des identifiants WiFi, et plus encore. SafeTools génère ces codes localement à l'aide de <link>moteurs WASM</link> pour garantir que vos données ne touchent jamais un serveur."
+        },
+        "privacy": {
+          "title": "Architecture de Confidentialité",
+          "items": [
+            "Zéro stockage de vos données QR sur le serveur",
+            "Pas de pixels de suivi ni de redirections analytiques",
+            "Génération locale dans la RAM de votre navigateur",
+            "Logique de traitement purement côté client"
+          ],
+          "footer": "En savoir plus sur notre <link>Philosophie de Sécurité</link>."
+        },
+        "supported": {
+          "title": "Types de Données Supportés",
+          "basic": "Protocoles de Base",
+          "basic_items": [
+            "URL",
+            "Texte",
+            "Email",
+            "Téléphone",
+            "SMS"
+          ],
+          "advanced": "Modules Avancés",
+          "advanced_items": [
+            "Config WiFi",
+            "vCard (Contact)",
+            "MeCard",
+            "Événement",
+            "Localisation"
+          ]
+        },
+        "cases": {
+          "title": "Cas d'Utilisation Professionnels",
+          "items": [
+            "Partage Sécurisé de Documents",
+            "Paiements sans Contact",
+            "Campagnes Marketing",
+            "Portfolios Personnels",
+            "Menus de Restaurant",
+            "Inscriptions à des Événements"
+          ]
+        },
+        "security": {
+          "title": "Avertissement de Sécurité",
+          "description": "Les codes QR peuvent être utilisés pour le phishing s'ils pointent vers des URL malveillantes. Vérifiez toujours la destination d'un code QR avant de le scanner. SafeTools offre un environnement propre et local pour générer des codes de confiance.",
+          "footer": "Explorez notre <vault>Coffre-fort de fichiers</vault> ou nos <notes>Notes sécurisées</notes> pour plus de protection."
+        },
+        "correction": {
+          "title": "Niveaux de Correction d'Erreur",
+          "description": "La correction d'erreur permet à un code QR de rester scannable même s'il est partiellement endommagé ou masqué. Des niveaux plus élevés permettent une meilleure récupération mais augmentent la complexité du code.",
+          "l": "Niveau L : 7 % de récupération",
+          "m": "Niveau M : 15 % de récupération",
+          "q": "Niveau Q : 25 % de récupération",
+          "h": "Niveau H : 30 % de récupération"
+        },
+        "static": {
+          "title": "QR Statique vs Dynamique",
+          "description": "SafeTools génère des codes QR statiques, qui sont généralement plus sûrs pour les utilisateurs soucieux de leur confidentialité.",
+          "static": "Statique : Les données sont codées directement dans le motif QR.",
+          "dynamic": "Dynamique : Pointe vers une redirection d'URL, permettant le suivi et l'analyse."
+        }
+      },
+      "comparison": {
+        "title": "L'avantage SafeTools",
+        "headers": [
+          "Fonctionnalité",
+          "Générateurs Traditionnels",
+          "SafeTools Studio"
+        ],
+        "rows": [
+          [
+            "Lieu de traitement",
+            "Côté Serveur",
+            "Navigateur Local"
+          ],
+          [
+            "Confidentialité des données",
+            "Enregistré / Suivi",
+            "Zéro Suivi"
+          ],
+          [
+            "Redirection",
+            "Redirections (Dynamique)",
+            "Direct (Statique)"
+          ],
+          [
+            "Coût",
+            "Souvent sur abonnement",
+            "100 % Gratuit"
+          ],
+          [
+            "Branding",
+            "Basique",
+            "Studio Avancé"
+          ]
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Mes codes QR sont-ils enregistrés sur vos serveurs ?",
+            "a": "Non. Tous les codes QR sont générés localement sur votre appareil. Nous ne stockons ni ne voyons les données que vous saisissez."
+          },
+          {
+            "q": "Puis-je ajouter mon logo d'entreprise au code QR ?",
+            "a": "Oui ! Vous pouvez télécharger un logo pour qu'il soit placé au centre du code QR. Cela est également traité localement."
+          },
+          {
+            "q": "Quel est le meilleur niveau de correction d'erreur à utiliser ?",
+            "a": "Le niveau H (Haut) est recommandé si vous ajoutez un logo, car il offre la meilleure résilience contre la perte de données."
+          },
+          {
+            "q": "Les codes QR sont-ils permanents ?",
+            "a": "Oui. Comme ce sont des codes QR statiques, ils fonctionneront indéfiniment tant que l'URL de destination ou les données restent valides."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Manifeste de Confidentialité",
+        "description": "Nous pensons que les outils d'identité doivent servir l'utilisateur, pas le fournisseur. SafeTools repose sur le principe de la souveraineté des données - où vous êtes le seul curateur de vos empreintes numériques."
+      },
+      "related": {
+        "title": "Outils Numériques Associés"
+      }
+    }
+  }
+}

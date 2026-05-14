@@ -1,0 +1,47 @@
+{
+  "faq": {
+    "badge": "Inteligência de Autoatendimento",
+    "title": "Perguntas <br></br> <inquiries>Frequentes.</inquiries>",
+    "subtitle": "Tudo o que precisa de saber sobre a arquitetura do SafeTools e o protocolo de privacidade.",
+    "searchPlaceholder": "Pesquisar perguntas (ex: 'privacidade', 'WASM')...",
+    "noResults": "Não conseguimos encontrar nenhuma informação correspondente à sua pesquisa.",
+    "faqs": [
+      {
+        "category": "Segurança e Arquitetura",
+        "questions": [
+          {
+            "q": "Como pode uma ferramenta processar ficheiros sem os carregar?",
+            "a": "O SafeTools utiliza WebAssembly (WASM) e JavaScript de alto desempenho para correr a lógica de processamento diretamente no seu navegador. Quando 'carrega' um ficheiro, ele está, na verdade, apenas a ser carregado na RAM local do seu navegador."
+          },
+          {
+            "q": "Os meus dados são realmente 100% privados?",
+            "a": "Sim. Como o código corre no seu hardware, nenhuns pacotes de dados contendo o conteúdo do seu ficheiro são alguma vez enviados para um servidor remoto. Pode verificar isto consultando o separador 'Rede' (Network) do seu navegador enquanto utiliza qualquer ferramenta."
+          }
+        ]
+      },
+      {
+        "category": "Desempenho e Compatibilidade",
+        "questions": [
+          {
+            "q": "Quais são os limites de tamanho de ficheiro?",
+            "a": "Tecnicamente, não há limites impostos pelo SafeTools. O único limite é a RAM disponível no seu dispositivo e a capacidade de alocação de memória do seu navegador."
+          },
+          {
+            "q": "Funciona em dispositivos móveis?",
+            "a": "Absolutamente. O SafeTools é totalmente responsivo e muitas ferramentas estão otimizadas para processadores móveis, proporcionando uma experiência profissional em qualquer lugar."
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ainda tem <right>Dúvidas?</right>",
+      "subtitle": "Contacte diretamente a equipa de engenharia para questões técnicas.",
+      "button": "Contactar Suporte"
+    },
+    "seo": {
+      "name": "FAQ de Inteligência SafeTools",
+      "title": "SafeTools FAQ | Arquitetura Local-First Explicada",
+      "description": "Encontre respostas para perguntas comuns sobre a segurança do SafeTools, a arquitetura focada na privacidade e as capacidades de processamento local de ficheiros."
+    }
+  }
+}

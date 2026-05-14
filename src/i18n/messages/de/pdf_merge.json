@@ -1,0 +1,233 @@
+{
+  "pdfMerge": {
+    "seo": {
+      "title": "Merge PDF | Combine PDF Files Locally | SafeTools",
+      "description": "Combine multiple PDF files securely in your browser. Local processing, no server uploads, drag-and-drop reordering.",
+      "keywords": "merge pdf, combine pdf, join pdf files, local pdf merger, secure pdf merge"
+    },
+    "hero": {
+      "title": "Merge PDF Files",
+      "description": "Combine multiple PDF files securely using browser-based local processing with privacy-first protection.",
+      "disclaimer": "Combine PDF documents securely without uploading files to external servers.",
+      "badges": {
+        "local": "Local Processing",
+        "zero": "Zero Upload",
+        "no_tracking": "No Tracking",
+        "fast": "Fast PDF Merging",
+        "browser": "Browser-Based"
+      }
+    },
+    "studio": {
+      "title": "Assembly Studio",
+      "badge": "WASM ACTIVE",
+      "reorder_desc": "Drag and drop files to rearrange their order.",
+      "add_more": "Add More",
+      "pages": "{count} pages",
+      "image": "Image",
+      "initializing": "Initializing WASM engine...",
+      "processing": "Processing {name}...",
+      "finalizing": "Finalizing document...",
+      "complete": "Complete!",
+      "merge_button": "MERGE PDF",
+      "merging_button": "M E R G I N G . . .",
+      "add_more_button": "A D D   M O R E   F I L E S"
+    },
+    "common": {
+      "advertisement": "ADVERTISEMENT",
+      "processedLocally": "PROCESSED LOCALLY"
+    },
+    "landing": {
+      "features": {
+        "title": "PDF Merge Features",
+        "subtitle": "Enterprise-grade local document assembly.",
+        "items": [
+          "Merge unlimited PDFs",
+          "Drag-and-drop",
+          "Reorder visually",
+          "Browser processing",
+          "Instant downloads",
+          "Batch merging",
+          "Offline capable",
+          "Secure local handling",
+          "Fast performance",
+          "Mobile-friendly"
+        ]
+      },
+      "what_is": {
+        "title": "What Is PDF Merging?",
+        "description": "PDF merging combines multiple PDF documents into a single organized file for easier sharing, printing, and document management. SafeTools allows you to arrange pages exactly how you need them."
+      },
+      "privacy": {
+        "title": "Privacy-First PDF Processing",
+        "items": [
+          "Local browser processing",
+          "No cloud uploads",
+          "No stored documents",
+          "Secure temporary memory usage",
+          "Zero tracking"
+        ]
+      },
+      "how_it_works": {
+        "title": "How PDF Merging Works",
+        "steps": [
+          "Upload PDF files locally",
+          "Arrange document order",
+          "Merge PDFs securely",
+          "Download combined PDF instantly"
+        ],
+        "note": "Files are processed entirely inside your browser."
+      },
+      "organize": {
+        "title": "Organize PDFs Before Merging",
+        "subtitle": "Prepare your perfect document with our visual studio tools:",
+        "items": [
+          "Drag-and-drop ordering",
+          "Page arrangement",
+          "File previews",
+          "Remove unwanted files"
+        ]
+      },
+      "use_cases": {
+        "title": "Common Use Cases",
+        "items": [
+          "Business reports",
+          "Research papers",
+          "Legal documents",
+          "Student assignments",
+          "Contracts",
+          "Invoices",
+          "Portfolio creation",
+          "Presentation packaging"
+        ]
+      },
+      "performance": {
+        "title": "Fast Browser Processing",
+        "items": [
+          "Lightweight architecture",
+          "No upload waiting",
+          "Instant merging",
+          "Optimized performance",
+          "Mobile compatibility"
+        ]
+      },
+      "secure": {
+        "title": "Secure PDF Handling",
+        "description": "We strictly enforce local memory processing. There is no server retention, meaning temporary handling ensures automatic cleanup the moment you close the tab."
+      },
+      "educational": {
+        "privacy": {
+          "description": "Your files never leave your device. All merging and processing happen entirely in your browser using local resources, ensuring absolute privacy for your sensitive documents."
+        }
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "SafeTools features comprehensive PWA support. Experience true offline PDF merging with zero internet dependency and reduced data exposure."
+      },
+      "formats": {
+        "title": "Supported Formats",
+        "description": "We don't just merge PDF files. SafeTools supports embedding various image formats directly into your document. Currently supported formats include <strong>PDF, PNG, JPG, JPEG, and WEBP</strong>. Images are automatically fitted to the page layout for a seamless reading experience."
+      },
+      "limits": {
+        "title": "Zero File Size Limits",
+        "description": "Because everything happens in your local browser environment, there are no artificial file size limits. Merge 10MB or 1GB files without encountering paywalls or upload restrictions—your only limitation is your device's RAM capacity."
+      },
+      "roadmap": {
+        "title": "Advanced Future Features",
+        "items": [
+          "Page-level merge editing",
+          "Compression during merge",
+          "OCR integration",
+          "AI document sorting",
+          "Split & merge workflows",
+          "Encrypted merging",
+          "Thumbnail previews",
+          "Collaborative workflows"
+        ]
+      },
+      "comparison": {
+        "title": "Why Use SafeTools PDF Merge?",
+        "headers": [
+          "Feature",
+          "Traditional PDF Sites",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "Upload Required",
+            "Usually",
+            "No"
+          ],
+          [
+            "Local Processing",
+            "Rare",
+            "Yes"
+          ],
+          [
+            "Tracking Scripts",
+            "Often",
+            "No"
+          ],
+          [
+            "Browser-Based",
+            "Partial",
+            "Full"
+          ],
+          [
+            "Privacy Focused",
+            "Limited",
+            "Yes"
+          ]
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Is it safe to upload sensitive PDF documents?",
+            "a": "With SafeTools, you never 'upload' your documents. All PDF operations—merging, splitting, compressing, or converting—happen locally on your computer. Your sensitive legal or financial documents stay private."
+          },
+          {
+            "q": "Can I merge different file types into a single PDF?",
+            "a": "Yes, our PDF Merger allows you to combine multiple PDFs and various image formats (JPG, PNG, etc.) into one professional PDF document."
+          },
+          {
+            "q": "Does the PDF compressor reduce text quality?",
+            "a": "Our compression engine is designed to optimize images and fonts within the PDF while keeping the text sharp and searchable. You can choose different compression levels based on your needs."
+          }
+        ],
+        "title": "Frequently Asked Questions",
+        "description": "Everything you need to know about our privacy-first tool."
+      },
+      "related": {
+        "title": "Related Privacy Tools"
+      },
+      "manifesto": {
+        "title": "Privacy-First Document Processing",
+        "description": "SafeTools develops browser-based document tools designed to maximize privacy, speed, and user control. Fast, privacy-first PDF tools designed for secure browser-based document workflows."
+      }
+    },
+    "messages": {
+      "filesAdded": "{count} {count, plural, one {file} other {files}} added",
+      "filesMerged": "{count} files merged successfully",
+      "mergingFailed": "Merging failed. Please try again.",
+      "fileSkipped": "Skipped corrupted file: {name}",
+      "encrypted_file": "The file \"{name}\" is encrypted. Please unlock it using our PDF Unlock tool first."
+    },
+    "title": "PDF zusammenfügen",
+    "description": "Fügen Sie mehrere PDF-Dateien in ein einziges sicheres Dokument zusammen.",
+    "dropzone": {
+      "title": "PDF-Dateien hierher ziehen",
+      "description": "oder klicken, um Dateien auszuwählen",
+      "secure": "Sichere lokale Verarbeitung"
+    },
+    "controls": {
+      "merge": "PDF zusammenfügen",
+      "clear": "Alle löschen",
+      "download": "Zusammengefügtes PDF herunterladen"
+    },
+    "status": {
+      "merging": "Zusammenfügen...",
+      "success": "Erfolgreich zusammengefügt!",
+      "error": "Fehler beim Zusammenfügen"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "privacy": {
+    "seo": {
+      "title": "Privacy Manifesto | SafeTools - Zero Data Policy",
+      "description": "Our Privacy Manifesto: SafeTools never collects, stores, or transmits your files. All processing is 100% local and browser-based.",
+      "keywords": "privacy policy, zero data collection, local processing privacy, safe tools privacy, browser security manifesto",
+      "ogTitle": "Privacy Manifesto | SafeTools",
+      "ogDescription": "Your data stays on your device. Always."
+    },
+    "hero": {
+      "badge": "Privacy Sovereign Manifesto",
+      "title": "Privacy is Sovereign.",
+      "subtitle": "SafeTools is a zero-server privacy ecosystem designed to return full digital control to the user."
+    },
+    "pillars": [
+      {
+        "title": "Air-Gapped Design",
+        "desc": "Logic runs entirely in the browser. No data ever crosses the network boundary."
+      },
+      {
+        "title": "Zero Persistent State",
+        "desc": "We don't use cookies, databases, or local storage for your sensitive data."
+      },
+      {
+        "title": "Open Architecture",
+        "desc": "Every tool is built with transparent web standards that you can audit yourself."
+      }
+    ],
+    "verification": {
+      "title": "Don't Trust. Verify.",
+      "subtitle": "We believe in radical transparency. Here is how you can prove our privacy claims in 10 seconds.",
+      "steps": [
+        {
+          "title": "Open DevTools",
+          "desc": "Right-click anywhere on the page and select 'Inspect' or press F12."
+        },
+        {
+          "title": "Toggle Network Tab",
+          "desc": "Switch to the 'Network' tab to monitor all outgoing traffic."
+        },
+        {
+          "title": "Execute Any Tool",
+          "desc": "Upload a file or encrypt a note. You will see zero network requests being sent."
+        }
+      ],
+      "card": {
+        "network": "Network Audit",
+        "system": "System:",
+        "initializing": "Initializing Engine...",
+        "active": "Processing Active",
+        "blocked": "Network Traffic: BLOCKED",
+        "success": "SUCCESS:",
+        "complete": "Local Operation Complete",
+        "label": "Verified Privacy",
+        "sublabel": "Sovereign Engine Active"
+      }
+    },
+    "commitments": {
+      "badge": "Our Core Commitments",
+      "title": "Engineering Trust.",
+      "items": [
+        {
+          "title": "Zero Server Knowledge",
+          "desc": "We don't just 'encrypt' your files; we never see them. Our servers only serve static code. Your data stays in your RAM, exactly where it belongs."
+        },
+        {
+          "title": "No Surveillance Capitalism",
+          "desc": "We use no analytics, no cookies, and no trackers. We don't want to know who you are, where you are, or what you're processing."
+        },
+        {
+          "title": "Ephemeral by Default",
+          "desc": "Your data is processed in volatile memory. Once you close the tab, the state is wiped. There are no backups, because there is no storage."
+        },
+        {
+          "title": "Verified Isolation",
+          "desc": "SafeTools uses the highest browser security headers (COOP/COEP) to ensure that your processing session is strictly isolated from other web content."
+        }
+      ]
+    },
+    "protection": {
+      "title": "Protected Data Streams",
+      "subtitle": "Your sensitive information is always handled with industrial-grade local isolation.",
+      "items": [
+        {
+          "label": "Biometric Data"
+        },
+        {
+          "label": "Legal Files"
+        },
+        {
+          "label": "Private Keys"
+        },
+        {
+          "label": "Health Records"
+        }
+      ]
+    },
+    "final": {
+      "title": "Ready to Reclaim <br></br> Your Digital Rights?",
+      "subtitle": "Join thousands of users who trust SafeTools for their most sensitive operations.",
+      "button": "Explore Tools"
+    },
+    "badge": "Strict Privacy Protocol",
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日：2026年5月12日",
+    "sections": [
+      {
+        "title": "データ処理",
+        "content": "当社のサービスのほとんどは、お客様のデバイス上でローカルにファイルを処理します。これは、お客様のファイルが当社のサーバーにアップロードされることは決してないことを意味します。"
+      },
+      {
+        "title": "トラッキングなし",
+        "content": "当社はユーザーの個人情報を追跡しません。広告を表示するために最小限のクッキーを使用する場合がありますが、お客様のファイルの内容を分析することは決してありません。"
+      },
+      {
+        "title": "データセキュリティ",
+        "content": "データがお客様のデバイスから離れることがないため、転送中のデータ盗難のリスクは排除されます。"
+      }
+    ],
+    "audit": {
+      "title": "Network Audit Verified",
+      "description": "Open your browser Developer Tools (F12) and check the Network tab. You will see zero outbound data transfers during tool usage."
+    },
+    "introduction": "SafeToolsでは、お客様のプライバシーを最優先事項としています。このポリシーでは、お客様のデータをどのように保護しているか、また当社のプラットフォームがなぜクライアントサイドの処理を使用しているのかについて説明します。"
+  }
+}

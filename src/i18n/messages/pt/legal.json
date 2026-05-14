@@ -1,0 +1,150 @@
+{
+  "privacy": {
+    "hero": {
+      "badge": "O Manifesto de Privacidade",
+      "title": "A privacidade é um <br></br> <span class='text-primary'>Direito Humano.</span>",
+      "subtitle": "Software profissional não deve exigir a sua identidade. O SafeTools foi construído para provar que pode ter ferramentas de classe mundial sem a vigilância."
+    },
+    "pillars": [
+      {
+        "title": "100% Capaz de funcionar Offline",
+        "desc": "Uma vez que a ferramenta esteja carregada, pode desligar a sua internet. O motor é agora inteiramente seu."
+      },
+      {
+        "title": "Zero Residência de Dados",
+        "desc": "Não possuímos bases de dados para conteúdo de utilizadores. Os seus ficheiros nunca tocam num disco rígido fora do seu."
+      },
+      {
+        "title": "Computação Apenas em RAM",
+        "desc": "Todo o processamento acontece em memória volátil de alta velocidade. Fechar o separador equivale a uma limpeza segura."
+      }
+    ],
+    "verification": {
+      "title": "A Verificação de <br></br> <span class='text-primary'>10 Segundos.</span>",
+      "subtitle": "Não pedimos a sua confiança. Fornecemos as ferramentas para que verifique as nossas afirmações em segundos.",
+      "steps": [
+        {
+          "title": "Abra qualquer Ferramenta",
+          "desc": "Selecione qualquer utilitário de imagem ou PDF na página inicial."
+        },
+        {
+          "title": "Fique Offline",
+          "desc": "Ative o modo Avião ou desligue o seu cabo Ethernet."
+        },
+        {
+          "title": "Processe Ficheiros",
+          "desc": "Carregue e processe o seu ficheiro. Notará que funciona à velocidade nativa com zero atividade de rede."
+        }
+      ],
+      "card": {
+        "network": "Rede: 0.00 KB",
+        "system": "[Sistema]",
+        "initializing": "A inicializar WASM...",
+        "active": "Sandbox Segura Ativa",
+        "blocked": "Ligação de Rede: BLOQUEADA",
+        "success": "[Sucesso]",
+        "complete": "Tarefa Concluída (Local)",
+        "label": "Zero-Server Verificado",
+        "sublabel": "Isolamento ao nível do hardware"
+      }
+    },
+    "commitments": {
+      "badge": "Soberania de Dados",
+      "title": "Os Nossos Compromissos <br></br> <span class='text-primary'>Inabaláveis</span>",
+      "items": [
+        {
+          "title": "Zero Conhecimento do Servidor",
+          "desc": "Não apenas 'encriptamos' os seus ficheiros; nunca os vemos. Os nossos servidores servem apenas código estático. Os seus dados ficam na sua RAM, exatamente onde pertencem."
+        },
+        {
+          "title": "Sem Capitalismo de Vigilância",
+          "desc": "Não utilizamos análises, nem cookies, nem rastreadores. Não queremos saber quem é, onde está ou o que está a processar."
+        },
+        {
+          "title": "Efémero por Definição",
+          "desc": "Os seus dados são processados em memória volátil. Assim que fecha o separador, o estado é apagado. Não há cópias de segurança, porque não há armazenamento."
+        },
+        {
+          "title": "Isolamento Verificado",
+          "desc": "O SafeTools utiliza os cabeçalhos de segurança de navegador mais elevados (COOP/COEP) para garantir que a sua sessão de processamento está estritamente isolada de outro conteúdo web."
+        }
+      ]
+    },
+    "protection": {
+      "title": "Proteção Total",
+      "subtitle": "Aplicamos a mesma lógica de zero compromisso a cada tipo de dados.",
+      "items": [
+        {
+          "label": "Biometria"
+        },
+        {
+          "label": "Identidade"
+        },
+        {
+          "label": "Palavras-passe"
+        },
+        {
+          "label": "Metadados"
+        }
+      ]
+    },
+    "final": {
+      "title": "A Internet <br></br> deve ser privada.",
+      "subtitle": "O SafeTools não é apenas um produto; é uma afirmação. Num mundo que quer rastrear cada clique, fornecemos um santuário de produtividade. Sem contas. Sem rastreio. Sem compromissos.",
+      "button": "Voltar à Suite"
+    }
+  },
+  "terms": {
+    "badge": "Estrutura Legal v4.0",
+    "title": "Pacto de <covenant>Serviço.</covenant>",
+    "subtitle": "Os nossos termos são simples: O seu dispositivo, os seus dados, o seu controlo. Nós fornecemos as ferramentas; você fornece a soberania.",
+    "boundTitle": "Soberania Vinculada",
+    "boundSubtitle": "Aplicamos a mesma lógica de zero compromisso a cada interação.",
+    "labels": [
+      {
+        "label": "Conformidade"
+      },
+      {
+        "label": "Legal"
+      },
+      {
+        "label": "Encriptação"
+      },
+      {
+        "label": "Segurança"
+      }
+    ],
+    "cta": {
+      "title": "Consulta <consultation>Legal</consultation>",
+      "subtitle": "Para implementações empresariais ou auditorias de segurança especializadas, a nossa equipa técnica está disponível para consulta.",
+      "contactButton": "Contactar Jurídico",
+      "archiveButton": "Arquivo (v3.0)"
+    },
+    "sections": [
+      {
+        "title": "1. O Pacto Local-First",
+        "description": "Ao utilizar o SafeTools, compreende e aceita que esta é uma plataforma de execução do lado do cliente. Nós fornecemos o 'Plano Arquitetónico' (o código), mas a 'Construção' (processamento de dados) acontece inteiramente no seu hardware local. Não fornecemos um serviço de alojamento para os seus dados; fornecemos um ambiente de execução local."
+      },
+      {
+        "title": "2. Soberania Absoluta de Dados",
+        "description": "Os seus ficheiros permanecem sua propriedade e nunca saem da sua máquina. O SafeTools reivindica zero direitos sobre os seus ativos. Como nunca vemos os seus dados, não podemos cumprir pedidos de 'Eliminação de Dados', pois não temos nada para eliminar. Você é o único guardião dos seus ativos digitais."
+      },
+      {
+        "title": "3. Execução em Hardware e Limites",
+        "description": "O processamento de média pesada consome o seu CPU, GPU e RAM locais. O desempenho depende das capacidades do seu dispositivo. O SafeTools não é responsável por falhas do navegador, transbordamentos de memória ou estrangulamento térmico resultante de processamento local intensivo."
+      },
+      {
+        "title": "4. Sem Persistência e Recuperação",
+        "description": "Esta é uma aplicação sem estado (stateless). Não mantemos contas de utilizador, bases de dados ou armazenamento na nuvem. Assim que fecha o seu separador do navegador, o seu progresso é perdido permanentemente. É da sua responsabilidade descarregar os seus ativos imediatamente após o processamento."
+      },
+      {
+        "title": "5. Segurança e Transparência",
+        "description": "Encorajamos a auditoria da nossa lógica do lado do cliente. Está proibido de utilizar as nossas ferramentas para fins maliciosos, incluindo mas não limitado a: gerar conteúdo ilegal, injeção de metadados não autorizada ou tentar fazer engenharia reversa da nossa lógica de motor."
+      },
+      {
+        "title": "6. Limitação de Responsabilidade",
+        "description": "O SafeTools é fornecido 'tal como está'. Não garantimos 100% de precisão na conversão de ficheiros ou na remoção de metadados. Não somos responsáveis por qualquer perda de dados, corrupção ou danos consequentes resultantes do uso dos nossos utilitários locais de navegador."
+      }
+    ]
+  }
+}

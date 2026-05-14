@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ 隐私优先的在线文件工具",
+      "description": "在浏览器中安全地转换、压缩、编辑、加密和管理文件。无需上传，无需跟踪。"
+    },
+    "hero": {
+      "title": "隐私不是一项功能。它是一种<studio>权利。</studio>",
+      "subtitle": "为隐私和速度打造的强大工具",
+      "description": "SafeTools 直接在您的设备上处理文件，为您提供强大的工具，而无需牺牲隐私、控制权或安心。",
+      "getStarted": "探索工具",
+      "browseAll": "我们为什么要构建 SafeTools",
+      "exploreButton": "探索 150 多个工具",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "100% 本地处理",
+      "recent": "最近",
+      "favorites": "收藏"
+    },
+    "trustBar": [
+      {
+        "name": "符合 GDPR",
+        "desc": "无数据收集"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "军用级加密"
+      },
+      {
+        "name": "沙盒化",
+        "desc": "隔离的浏览器执行"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "零延迟性能"
+      },
+      {
+        "name": "Open Core",
+        "desc": "透明处理"
+      }
+    ],
+    "whyWeExist": {
+      "title": "SafeTools 为什么存在",
+      "story": "几年前，我们的一位亲人使用了一个在线实用程序平台处理个人文件。几个月后，这些数据出现在网上。那次事件暴露了互联网的一个隐患：许多平台在远程服务器上收集、存储或处理敏感的用户文件，却没有任何透明度。",
+      "mission": "SafeTools 的创立就是为了改变现状。",
+      "solution": "大多数现代工具不需要将您的文件上传到外部服务器。这就是为什么 SafeTools 构建在隐私优先的架构之上，处理过程直接在您的设备上进行。",
+      "points": [
+        "无不必要的上传。",
+        "无隐藏存储。",
+        "不出售用户数据。",
+        "您的数据始终属于您。"
+      ]
+    },
+    "infra": [
+      {
+        "title": "WebAssembly 引擎",
+        "description": "在浏览器中原生运行的高性能处理逻辑。无服务器开销。"
+      },
+      {
+        "title": "零知识架构",
+        "description": "您的数据永远不会被任何第三方解密或查看。纯本地计算。"
+      },
+      {
+        "title": "即时处理",
+        "description": "消除上传和下载的等待时间。在几秒钟内处理 GB 级数据。"
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "核心隐私",
+        "title": "零知识架构",
+        "description": "我们的“本地优先”理念确保您的文件永远不会被上传、扫描或存储在任何远程服务器上。"
+      },
+      "performance": {
+        "badge": "性能",
+        "title": "亚秒级延迟",
+        "security": "沙盒执行",
+        "status": {
+          "ready": "就绪",
+          "blocked": "拦截",
+          "success": "成功"
+        },
+        "description": "通过消除上传/下载循环，SafeTools 即使对于大文件也能提供近乎瞬时的处理速度。"
+      },
+      "crossPlatform": {
+        "title": "跨平台",
+        "description": "桌面、移动、平板。在您的所有设备上完美同步。"
+      },
+      "offlineFirst": {
+        "title": "离线优先",
+        "description": "一次加载，永久使用。大多数工具不需要互联网。"
+      }
+    },
+    "workflow": {
+      "title": "专为专业工作流程设计",
+      "subtitle": "SafeTools 不仅仅是一个实用工具集。它是一个专为速度和隐私设计的专业工作空间。",
+      "items": [
+        {
+          "title": "批量处理",
+          "description": "毫不费力地同时处理数百个文件。"
+        },
+        {
+          "title": "智能文件路由",
+          "description": "放置任何文件，我们将自动建议最佳工具。"
+        },
+        {
+          "title": "离线功能",
+          "description": "随处工作，即使没有激活的互联网连接。"
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "开发者优先",
+      "title": "为性能而生",
+      "description": "SafeTools 通过简洁、统一的引擎架构提供高性能的本地处理模块。",
+      "stats": {
+        "latency": "内存延迟",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// 处理完成。0 字节已上传。"
+    },
+    "toolsSection": {
+      "title": "查找您的工具",
+      "searchPlaceholder": "在 150 多个工具中搜索...",
+      "openTool": "打开工具"
+    },
+    "privacyEngine": {
+      "badge": "系统状态：激活",
+      "title": "专为绝对隐私设计",
+      "description": "SafeTools 隐私引擎 100% 在本地运行。",
+      "stats": [
+        {
+          "label": "数据传输",
+          "value": "0.00%"
+        },
+        {
+          "label": "本地加密",
+          "value": "AES-256"
+        },
+        {
+          "label": "Worker 状态",
+          "value": "沙盒化"
+        },
+        {
+          "label": "云依赖",
+          "value": "无"
+        }
+      ],
+      "heartbeat": "安全节点激活",
+      "wasmHeartbeat": "WASM Engine Heartbeat",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "安全已验证",
+        "logs": [
+          "正在初始化 WASM 安全沙盒... 就绪",
+          "网络请求被拦截：已拦截（已启用仅本地模式）",
+          "分配缓冲区：256MB 安全客户端内存... 成功",
+          "AES-256 GCM 密钥轮换完成。正在监听本地文件事件..."
+        ]
+      },
+      "sovereignty": {
+        "title": "您的数据拥有主权",
+        "description": "与云工具不同，SafeTools 完全在您浏览器的私有沙盒中运行。",
+        "button": "验证架构"
+      }
+    },
+    "featuredCats": {
+      "title": "在一个安全平台中满足您的一切需求",
+      "subtitle": "涵盖五个核心类别的专业级实用程序。",
+      "items": [
+        {
+          "title": "图像工具",
+          "description": "图像处理",
+          "points": [
+            "PNG 转 JPG",
+            "WebP",
+            "AVIF",
+            "背景移除",
+            "AI 增强",
+            "批量压缩",
+            "移除元数据"
+          ]
+        },
+        {
+          "title": "PDF 工具",
+          "description": "PDF 实用程序",
+          "points": [
+            "合并",
+            "分割",
+            "压缩",
+            "解锁",
+            "OCR 处理",
+            "PDF 转 Word",
+            "数字签名"
+          ]
+        },
+        {
+          "title": "文件转换",
+          "description": "转换",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "电子表格",
+            "视频",
+            "音频",
+            "查看器"
+          ]
+        },
+        {
+          "title": "隐私与安全",
+          "description": "安全",
+          "points": [
+            "文件加密",
+            "元数据清理",
+            "二维码",
+            "哈希",
+            "安全分享",
+            "密码",
+            "Base64 Suite"
+          ]
+        },
+        {
+          "title": "开发者工具",
+          "description": "开发",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV 转 JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "简单流程",
+      "title": "运作方式",
+      "steps": [
+        {
+          "step": "01",
+          "title": "放置文件",
+          "description": "选择任何文件。我们的系统会立即检测，无需上传。"
+        },
+        {
+          "step": "02",
+          "title": "本地处理",
+          "description": "直接在浏览器沙盒中处理。"
+        },
+        {
+          "step": "03",
+          "title": "安全结果",
+          "description": "立即下载处理后的文件。"
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "服务器延迟"
+      },
+      {
+        "val": "100%",
+        "label": "本地处理"
+      },
+      {
+        "val": "150+",
+        "label": "安全工具"
+      },
+      {
+        "val": "∞",
+        "label": "自由使用"
+      }
+    ],
+    "manifesto": {
+      "badge": "宣言",
+      "title": "隐私不是 <br/> 一项功能。",
+      "description": "这是一项基本人权。"
+    },
+    "sovereignty": {
+      "badge": "数据主权",
+      "title": "您的数据拥有 <br/> 主权。",
+      "description": "我们永远不会看到您的数据。",
+      "points": [
+        "无云上传",
+        "内存加密",
+        "零跟踪",
+        "客户端处理"
+      ],
+      "foundation": {
+        "title": "信任的基石",
+        "description": "隐私应该是默认设置。",
+        "badge": "基金会已验证",
+        "verified": "已通过安全审计"
+      }
+    },
+    "performance": {
+      "badge": "高性能",
+      "title": "为速度而生",
+      "subtitle": "在浏览器中原生运行的高性能处理逻辑。",
+      "items": [
+        {
+          "title": "即时渲染",
+          "description": "本地处理消除了网络延迟。"
+        },
+        {
+          "title": "WASM Native",
+          "description": "逻辑以硬件速度运行。"
+        },
+        {
+          "title": "移动优化",
+          "description": "在所有设备上提供流畅性能。"
+        },
+        {
+          "title": "硬件加速",
+          "description": "利用本地 CPU 和 GPU。"
+        },
+        {
+          "title": "高效内存",
+          "description": "为大文件优化缓冲区分配。"
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "无服务器依赖。"
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "为什么选择 SafeTools？",
+      "subtitle": "本地处理的架构优势。",
+      "table": {
+        "feature": "功能",
+        "safe": "SafeTools",
+        "trad": "传统工具"
+      },
+      "items": [
+        {
+          "f": "隐私模型",
+          "s": true,
+          "c": "基于云"
+        },
+        {
+          "f": "处理位置",
+          "s": "本地硬件",
+          "c": "远程服务器"
+        },
+        {
+          "f": "跟踪脚本",
+          "s": "无",
+          "c": "广泛存在"
+        },
+        {
+          "f": "文件保留",
+          "s": "0ms (仅 RAM)",
+          "c": "可变"
+        },
+        {
+          "f": "延迟",
+          "s": "即时",
+          "c": "高（由于上传）"
+        }
+      ]
+    },
+    "guide": {
+      "title": "本地处理指南",
+      "subtitle": "SafeTools 如何保护您的数据安全",
+      "steps": [
+        {
+          "title": "零云沙盒",
+          "description": "文件在浏览器 RAM 中处理。"
+        },
+        {
+          "title": "硬件加速",
+          "description": "我们使用您的硬件，无需上传。"
+        },
+        {
+          "title": "临时会话",
+          "description": "关闭标签页时数据即被清除。"
+        }
+      ],
+      "architecturalAdvantage": "架构优势",
+      "vulnerabilityEliminated": "完全消除了“云上传”漏洞。",
+      "cloud": "云端",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "设计安全。",
+      "subtitle": "您的文件永远不会离开设备。",
+      "items": [
+        "100% 客户端处理",
+        "AES-256 GCM 本地加密",
+        "零服务器数据传输",
+        "沙盒浏览器执行"
+      ],
+      "zeroTrust": {
+        "title": "零信任安全。",
+        "description": "每个工具都在隔离的沙盒中运行。",
+        "encryption": "加密",
+        "protocol": "协议"
+      }
+    },
+    "faq": {
+      "badge": "帮助中心",
+      "title": "常见问题",
+      "items": [
+        {
+          "q": "我的文件会被上传到服务器吗？",
+          "a": "不会。SafeTools 在浏览器中本地处理一切。"
+        },
+        {
+          "q": "SafeTools 免费吗？",
+          "a": "是的，所有核心功能 100% 免费。"
+        },
+        {
+          "q": "处理后数据会怎样？",
+          "a": "关闭标签页后立即清除。"
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "为什么选择 SafeTools？",
+      "subtitle": "本地处理的架构优势。",
+      "table": {
+        "feature": "功能",
+        "safe": "SafeTools",
+        "trad": "传统工具"
+      },
+      "items": [
+        {
+          "title": "100% 本地处理",
+          "description": "每个操作都在您的硬件上运行。"
+        },
+        {
+          "title": "零数据收集",
+          "description": "我们不跟踪或存储任何内容。"
+        },
+        {
+          "title": "军用级加密",
+          "description": "本地 AES-256 GCM 加密。"
+        },
+        {
+          "title": "即时性能",
+          "description": "无上传/下载延迟。"
+        },
+        {
+          "title": "支持离线",
+          "description": "大多数工具在没有互联网的情况下也能工作。"
+        },
+        {
+          "title": "跨平台",
+          "description": "可在任何现代浏览器上运行。"
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "使用场景",
+      "title": "为专业人士打造",
+      "subtitle": "那些优先考虑数据主权的人的选择。",
+      "items": [
+        {
+          "title": "安全文件管理",
+          "description": "处理敏感文件，无云端泄露风险。"
+        },
+        {
+          "title": "创意生产",
+          "description": "在您的工作站上进行高速媒体处理。"
+        },
+        {
+          "title": "开发者工作流",
+          "description": "用于数据转换的沙盒实用程序。"
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "用户反馈",
+      "title": "深受隐私倡导者的信任",
+      "items": [
+        {
+          "quote": "零上传架构正是网络所需要的。",
+          "name": "安全专家",
+          "role": "架构师"
+        },
+        {
+          "quote": "比我用过的任何云工具都快。",
+          "name": "设计师",
+          "role": "创意总监"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "原生性能",
+      "status": "就绪",
+      "title": "为移动办公而生。",
+      "subtitle": "在任何设备上体验原生级的性能。",
+      "desktop": {
+        "title": "桌面动力",
+        "description": "全功能工作室套件。"
+      },
+      "mobile": {
+        "title": "移动速度",
+        "description": "优化的本地引擎。"
+      },
+      "waitlist": "加入测试版"
+    },
+    "securityArchitecture": {
+      "badge": "安全加固",
+      "title": "硬件隔离。",
+      "subtitle": "我们利用现代 WASM 沙盒技术。",
+      "button": "验证安全性"
+    },
+    "communityStats": {
+      "title": "全球采用",
+      "subtitle": "成千上万有意识的用户在使用。",
+      "processedCount": "100%",
+      "processed": "隐私与本地",
+      "usersCount": "500K+",
+      "users": "活跃用户"
+    },
+    "finalCta": {
+      "title": "掌控您的数据。",
+      "subtitle": "停止上传您的身份信息。",
+      "launch": "启动 Studio",
+      "allTools": "探索 150 多个工具"
+    },
+    "pricingSection": {
+      "badge": "永久免费",
+      "title": "每个人的隐私。",
+      "description": "SafeTools 个人使用 100% 免费。",
+      "button": "开始处理"
+    },
+    "smartRouting": {
+      "title": "智能文件路由"
+    },
+    "techMarquee": {
+      "badge": "原生性能",
+      "title": "由下一代本地引擎驱动",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "近乎原生的逻辑"
+        },
+        {
+          "name": "GPU",
+          "desc": "硬件加速"
+        },
+        {
+          "name": "AES",
+          "desc": "安全加密"
+        },
+        {
+          "name": "OCR",
+          "desc": "神经提取"
+        },
+        {
+          "name": "Worker",
+          "desc": "多线程计算"
+        }
+      ]
+    }
+  }
+}

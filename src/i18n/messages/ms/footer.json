@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Alat pelayar gred profesional yang direka untuk privasi dan kelajuan. Lebih daripada 150 utiliti yang berjalan sepenuhnya pada peranti anda.",
+    "tagline": "Data anda milik anda.",
+    "localEngineActive": "Enjin Tempatan Aktif",
+    "isolatedContextVerified": "Konteks Terasing Disahkan",
+    "verifiedSupport": "Sokongan Pelayar Disahkan",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Produk",
+    "resources": "Sumber",
+    "community": "Komuniti",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Semua Sistem Tempatan",
+    "faq": "Soalan Lazim"
+  }
+}

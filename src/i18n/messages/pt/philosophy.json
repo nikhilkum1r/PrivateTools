@@ -1,0 +1,105 @@
+{
+  "philosophy": {
+    "title": "A filosofia por trás do SafeTools",
+    "seo": {
+      "description": "A privacidade deve ser o padrão, não um recurso premium. Leia por que criamos o SafeTools e nosso compromisso com o processamento local do lado do cliente.",
+      "title": "Nossa Filosofia | Ferramentas seguras"
+    },
+    "sections": [
+      {
+        "content": [
+          "A internet foi criada para capacitar as pessoas, para tornar a informação e a tecnologia acessíveis a todos. Mas em algum momento ao longo do caminho, a conveniência começou a substituir a privacidade. Lentamente, as pessoas se acostumaram a enviar seus arquivos pessoais, documentos, imagens, identidades e informações confidenciais para plataformas sobre as quais nada sabiam. A maioria dos usuários nunca para para perguntar o que acontece com seus dados depois que o botão de upload é pressionado.",
+          "Safetools foi criado porque fizemos essa pergunta.",
+          "Há alguns anos, alguém próximo a nós usou uma plataforma utilitária online para processar documentos pessoais. A princípio parecia um serviço normal e confiável. A tarefa era simples: fazer upload de um arquivo, convertê-lo e baixar o resultado. Mas meses depois, partes desses dados apareceram online. Esse incidente expôs algo profundamente preocupante: os utilizadores são muitas vezes forçados a confiar em sistemas que não podem verificar.",
+          "Esse momento se tornou o início do Safetools."
+        ],
+        "heading": "A privacidade deve ser o padrão, não um recurso premium"
+      },
+      {
+        "content": [
+          "Hoje, milhões de pessoas usam ferramentas utilitárias online todos os dias: conversores de PDF, compressores de imagens, editores de documentos, fusões de arquivos, processadores de texto, conversores de formato, utilitários de IA, geradores online.",
+          "A maioria das pessoas presume que essas plataformas processam arquivos apenas temporariamente. Mas a realidade muitas vezes não é clara.",
+          "Muitas plataformas exigem que os usuários carreguem arquivos confidenciais para servidores remotos, mesmo quando os navegadores modernos já são capazes de executar essas tarefas localmente. Depois de carregados, os usuários perdem visibilidade e controle sobre o que acontece a seguir.",
+          "Perguntas para as quais a maioria dos usuários nunca obtém respostas: O arquivo foi realmente excluído? Quanto tempo fica armazenado? É analisado? Os metadados são coletados? A atividade do usuário é rastreada? Os dados são partilhados com terceiros? Os dados são usados ​​para treinamento de IA? Os funcionários internos podem acessar os arquivos carregados? O que acontece se a plataforma for comprometida?",
+          "Na maioria dos casos, os usuários simplesmente não sabem.",
+          "Algumas empresas protegem genuinamente a privacidade do usuário. Outros podem armazenar dados silenciosamente, coletar análises excessivamente ou monetizar informações indiretamente. O problema maior não são apenas os maus atores. O problema é que o modelo atual da Internet muitas vezes normaliza a coleta desnecessária de dados como um comportamento aceitável.",
+          "Safetools existe para desafiar esse modelo."
+        ],
+        "heading": "O problema oculto das plataformas utilitárias modernas"
+      },
+      {
+        "content": [
+          "Safetools foi construído com base em uma crença simples: seus dados pertencem a você.",
+          "Não para anunciantes. Não para sistemas analíticos. Não para servidores desconhecidos. Não para empresas que criam perfis em torno do comportamento do usuário.",
+          "As pessoas não deveriam ter que sacrificar a propriedade de suas informações privadas apenas para usar uma ferramenta on-line básica.",
+          "É por isso que o Safetools foi projetado em torno de uma filosofia de privacidade em primeiro lugar e do lado do cliente, sempre que tecnicamente possível.",
+          "Em vez de forçar arquivos através da infraestrutura remota desnecessariamente, o Safetools visa processar tarefas diretamente no próprio dispositivo do usuário usando tecnologias modernas de navegador. Seus arquivos permanecem sob seu controle. Seu navegador se torna o ambiente de processamento.",
+          "Sem uploads desnecessários. Nenhuma coleção silenciosa de fundo. Nenhum sistema de vigilância oculto disfarçado de conveniência. Apenas ferramentas que funcionam respeitando o usuário."
+        ],
+        "heading": "Por que o Safetools existe"
+      },
+      {
+        "content": [
+          "Safetools não está tentando se tornar mais um site de ferramentas genéricas cheio de anúncios agressivos, rastreadores e permissões desnecessárias.",
+          "O objetivo é diferente. Queremos provar que podem existir ferramentas úteis sem explorar os usuários.",
+          "Os dispositivos modernos são poderosos o suficiente para lidar com muitas tarefas localmente: processamento de PDF, compactação de imagens, conversão de arquivos, utilitários de texto, criptografia, formatação de dados, geração de documentos, otimização de mídia, ferramentas de segurança.",
+          "Se o trabalho puder acontecer com segurança em seu próprio dispositivo, seus dados deverão permanecer lá.",
+          "Esta abordagem cria vários benefícios: Melhor privacidade, Processamento mais rápido, Menores riscos de segurança, Redução da dependência de servidores centralizados, Maior transparência, Mais confiança do usuário.",
+          "Safetools está sendo construído em torno desses princípios desde o início."
+        ],
+        "heading": "Uma abordagem diferente para ferramentas utilitárias"
+      },
+      {
+        "heading": "Privacidade não é apenas um recurso",
+        "content": [
+          "Muitas plataformas tratam a privacidade como um termo de marketing. Uma caixa de seleção. Uma bandeira. Uma página de configurações escondida nos menus.",
+          "Para Safetools, privacidade é infraestrutura.",
+          "Afeta como as ferramentas são projetadas, como os sistemas se comunicam, como os arquivos são processados, como os logs são tratados e como as decisões de arquitetura são tomadas.",
+          "Nossa filosofia é: Coletar menos, Armazenar menos, Rastrear menos, Depender menos de sistemas centralizados, Oferecer aos usuários mais visibilidade e controle.",
+          "Porque a verdadeira privacidade não é criada apenas por promessas. É criado reduzindo a necessidade de confiança em primeiro lugar.",
+          "Os dados mais seguros geralmente são aqueles que nunca saem do seu dispositivo."
+        ]
+      },
+      {
+        "content": [
+          "A confiança não pode existir sem transparência.",
+          "É por isso que a Safetools acredita que os usuários merecem entender: o que uma ferramenta faz, se os arquivos saem do dispositivo, quais dados são processados, quais tecnologias são usadas, quais limitações existem, quais compensações de privacidade estão envolvidas.",
+          "Os usuários não devem precisar de conhecimentos técnicos avançados para se manterem seguros online.",
+          "Com o tempo, a Safetools pretende tornar-se mais transparente através de: Explicações claras sobre privacidade, Indicadores de processamento local, Documentação técnica aberta, Arquitetura focada na segurança, Possivelmente componentes de código aberto quando for prático.",
+          "A transparência não se trata apenas de código. Trata-se de respeitar a inteligência e os direitos dos usuários."
+        ],
+        "heading": "Transparência é importante"
+      },
+      {
+        "heading": "Combatendo a Normalização da Vigilância",
+        "content": [
+          "A Internet moderna normalizou a recolha excessiva de dados a tal ponto que muitas pessoas acreditam que a privacidade é impossível.",
+          "Os aplicativos coletam permissões desnecessárias. Os sites rastreiam o comportamento continuamente. As plataformas criam perfis de usuário detalhados silenciosamente em segundo plano.",
+          "A Safetools rejeita a ideia de que a vigilância deva ser o modelo de negócios padrão da Internet.",
+          "A tecnologia deveria capacitar as pessoas e não monitorá-las.",
+          "Acreditamos que os usuários devem ser capazes de: Editar documentos sem renunciar à propriedade, Comprimir imagens sem fazer upload de mídia pessoal, Usar utilitários sem criar perfis comportamentais, Acessar ferramentas sem rastreamento invasivo.",
+          "O futuro da Internet não deve depender da quantidade de dados do usuário que podem ser extraídos."
+        ]
+      },
+      {
+        "content": [
+          "Safetools não é apenas uma coleção de utilitários. Faz parte de uma visão mais ampla:",
+          "Construir confiança digital, Incentivar o desenvolvimento que prioriza a privacidade, Promover a transparência, Educar os usuários sobre a propriedade dos dados, Criar experiências online mais seguras, Provar que modelos tecnológicos éticos são possíveis.",
+          "A missão não é simplesmente processar arquivos.",
+          "A missão é ajudar a criar uma Internet onde os usuários permaneçam no controle de suas próprias informações."
+        ],
+        "heading": "Mais do que apenas ferramentas"
+      },
+      {
+        "content": [
+          "Acreditamos que a tecnologia que respeita a privacidade deve voltar a ser normal. Acreditamos que os usuários merecem algo melhor do que a confiança cega. Acreditamos que segurança e conveniência podem coexistir. Acreditamos que a propriedade dos dados pessoais deve permanecer com o indivíduo, e não com sistemas ocultos que operam por trás de interfaces que as pessoas não podem inspecionar.",
+          "Safetools é o nosso passo em direção a esse futuro.",
+          "Um futuro onde as ferramentas respeitem as pessoas. Um futuro onde a tecnologia funcione a favor dos utilizadores e não contra eles. Um futuro onde a privacidade é protegida pelo design e não pela esperança.",
+          "Porque seus arquivos, documentos, identidade e dados devem permanecer exatamente onde pertencem:",
+          "Com você."
+        ],
+        "heading": "O futuro em que acreditamos"
+      }
+    ]
+  }
+}

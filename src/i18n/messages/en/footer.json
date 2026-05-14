@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Professional-grade browser tools designed for privacy and speed. 150+ utilities that run entirely on your device.",
+    "tagline": "Your data belongs to you.",
+    "localEngineActive": "Local Engine Active",
+    "isolatedContextVerified": "Isolated Context Verified",
+    "verifiedSupport": "Verified Browser Compatibility",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Product",
+    "resources": "Resources",
+    "community": "Community",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "All Systems Local",
+    "faq": "FAQ"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "about": {
+    "seo": {
+      "title": "Über SafeTools | Unsere Mission für digitale Privatsphäre",
+      "description": "Erfahren Sie mehr über die Mission, das Manifest und die Technologie hinter SafeTools – dem Zero-Server-Toolkit zum Schutz Ihrer digitalen Souveränität."
+    },
+    "toc": {
+      "manifesto": "Das Manifest",
+      "trust": "Vertrauenssignale",
+      "pillars": "Kernpfeiler",
+      "tech": "Tech Stack"
+    },
+    "manifesto": {
+      "badge": "Unser Manifest",
+      "title": "Privatsphäre ist ein Menschenrecht.",
+      "description": "SafeTools wurde entwickelt, um die Lücke zwischen leistungsstarken professionellen Utilities und absoluter Datensouveränität zu schließen. Wir glauben, dass Sie Ihre Identität nicht für eine PDF-Konvertierung oder eine Video-Transkodierung opfern sollten."
+    },
+    "trustSignals": [
+      {
+        "label": "DSGVO-konform",
+        "value": "Durch Architektur"
+      },
+      {
+        "label": "Sicherheit geprüft",
+        "value": "Nur lokal"
+      },
+      {
+        "label": "Offene Standards",
+        "value": "Geprüfte Engines"
+      },
+      {
+        "label": "Bedrohungsmodell",
+        "value": "Zero-Access"
+      }
+    ],
+    "pillars": {
+      "zeroServer": {
+        "title": "Zero-Server-Richtlinie",
+        "description": "Ihre Dateien werden niemals hochgeladen. Wir verarbeiten alles lokal in Ihrem Browser unter Verwendung von WebAssembly und Client-seitigem JS. Dies gewährleistet echte Datensouveränität."
+      },
+      "noPersistence": {
+        "title": "Keine Datenspeicherung",
+        "description": "Sobald Sie den Tab schließen, werden Ihre Sitzung und Ihre Dateien aus dem Speicher gelöscht. Wir verwenden keine Datenbanken oder Server-seitigen Logs. Ihr Arbeitsbereich ist temporär und sicher."
+      },
+      "identityProtection": {
+        "title": "Identitätsschutz",
+        "description": "Kein Tracking, keine Analysen und kein Fingerprinting. Wir wissen nicht einmal, dass Sie hier sind – und das ist uns auch recht so. Wir priorisieren Anonymität vor Metriken."
+      }
+    },
+    "engine": {
+      "badge": "Die Engine",
+      "title": "Hardware-Leistung. Null Server-Latenz.",
+      "description": "Wir nutzen modernste Browsertechnologien, um die Rechenleistung aus der Cloud auf Ihre lokale CPU und GPU zu verlagern. Mit WebAssembly (WASM) führen wir leistungsstarke C++ und Rust Binaries direkt in der V8-Engine Ihres Browsers aus.",
+      "items": [
+        {
+          "name": "ffmpeg.wasm",
+          "desc": "Professionelle Video- und Audio-Kodierung im Browser."
+        },
+        {
+          "name": "pdf-lib",
+          "desc": "Hochwertige Dokumentenmanipulation."
+        },
+        {
+          "name": "ONNX Runtime",
+          "desc": "Client-seitige KI für Bild-Upscaling und OCR."
+        },
+        {
+          "name": "WebAssembly",
+          "desc": "Native Leistung über Hochgeschwindigkeits-Binaries."
+        }
+      ]
+    },
+    "metrics": {
+      "title": "Leistungsmetriken",
+      "subtitle": "Lokale Computing-Engine v4.0",
+      "items": [
+        {
+          "label": "Datenleak-Risiko",
+          "value": "0%"
+        },
+        {
+          "label": "Verarbeitungsgeschwindigkeit",
+          "value": "Nativ"
+        },
+        {
+          "label": "Cloud-Abhängigkeit",
+          "value": "Keine"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, die Kontrolle zu übernehmen?",
+      "description": "Erkunden Sie unsere vollständige Suite professioneller Utilities und erleben Sie die Kraft der privaten, lokalisierten Dateiverarbeitung."
+    }
+  }
+}

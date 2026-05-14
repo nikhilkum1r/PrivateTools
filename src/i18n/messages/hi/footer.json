@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "गोपनीयता और गति के लिए डिज़ाइन किए गए पेशेवर-ग्रेड ब्राउज़र टूल। 150+ उपयोगिताएँ जो पूरी तरह से आपके डिवाइस पर चलती हैं।",
+    "tagline": "आपका डेटा आपका है।",
+    "localEngineActive": "स्थानीय इंजन सक्रिय",
+    "isolatedContextVerified": "पृथक संदर्भ सत्यापित",
+    "verifiedSupport": "सत्यापित ब्राउज़र संगतता",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "उत्पाद",
+    "resources": "संसाधन",
+    "community": "समुदाय",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "सभी प्रणालियाँ स्थानीय",
+    "faq": "सामान्य प्रश्न"
+  }
+}

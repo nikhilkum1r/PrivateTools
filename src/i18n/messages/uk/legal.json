@@ -1,0 +1,150 @@
+{
+  "privacy": {
+    "hero": {
+      "badge": "The Privacy Manifesto",
+      "title": "Privacy is a <br></br> <span class='text-primary'>Human Right.",
+      "subtitle": "Professional software shouldn't require your identity. SafeTools was built to prove that you can have world-class tools without the surveillance."
+    },
+    "pillars": [
+      {
+        "title": "100% Offline Capable",
+        "desc": "Once the tool is loaded, you can disconnect your internet. The engine is now entirely yours."
+      },
+      {
+        "title": "Zero Data Residency",
+        "desc": "We own no databases for user content. Your files never touch a hard drive outside your own."
+      },
+      {
+        "title": "RAM-Only Compute",
+        "desc": "All processing happens in high-speed, volatile memory. Closing the tab is equivalent to a secure wipe."
+      }
+    ],
+    "verification": {
+      "title": "The 10-Second <br></br> <span class='text-primary'>Verification.",
+      "subtitle": "We don't ask for your trust. We provide the tools for you to verify our claims in seconds.",
+      "steps": [
+        {
+          "title": "Open any Tool",
+          "desc": "Select any image or PDF utility from the home page."
+        },
+        {
+          "title": "Go Offline",
+          "desc": "Toggle your Airplane mode or disconnect your Ethernet."
+        },
+        {
+          "title": "Process Files",
+          "desc": "Upload and process your file. You'll notice it works at native speed with zero network activity."
+        }
+      ],
+      "card": {
+        "network": "Network: 0.00 KB",
+        "system": "[System]",
+        "initializing": "Initializing WASM...",
+        "active": "Secure Sandbox Active",
+        "blocked": "Network Connection: BLOCKED",
+        "success": "[Success]",
+        "complete": "Task Complete (Local)",
+        "label": "Verified Zero-Server",
+        "sublabel": "Hardware-level isolation"
+      }
+    },
+    "commitments": {
+      "badge": "Data Sovereignty",
+      "title": "Our Unbreakable <br></br> <span class='text-primary'>Commitments",
+      "items": [
+        {
+          "title": "Zero Server Knowledge",
+          "desc": "We don't just 'encrypt' your files; we never see them. Our servers only serve static code. Your data stays in your RAM, exactly where it belongs."
+        },
+        {
+          "title": "No Surveillance Capitalism",
+          "desc": "We use no analytics, no cookies, and no trackers. We don't want to know who you are, where you are, or what you're processing."
+        },
+        {
+          "title": "Ephemeral by Default",
+          "desc": "Your data is processed in volatile memory. Once you close the tab, the state is wiped. There are no backups, because there is no storage."
+        },
+        {
+          "title": "Verified Isolation",
+          "desc": "SafeTools uses the highest browser security headers (COOP/COEP) to ensure that your processing session is strictly isolated from other web content."
+        }
+      ]
+    },
+    "protection": {
+      "title": "Total Protection",
+      "subtitle": "We apply the same zero-compromise logic to every data type.",
+      "items": [
+        {
+          "label": "Biometrics"
+        },
+        {
+          "label": "Identity"
+        },
+        {
+          "label": "Passwords"
+        },
+        {
+          "label": "Metadata"
+        }
+      ]
+    },
+    "final": {
+      "title": "The Internet <br></br> Should be Private.",
+      "subtitle": "SafeTools is not just a product; it's a statement. In a world that wants to track every click, we provide a sanctuary of productivity. No accounts. No tracking. No compromise.",
+      "button": "Back to the Suite"
+    }
+  },
+  "terms": {
+    "badge": "Legal Framework v4.0",
+    "title": "Service <covenant>Covenant.</covenant>",
+    "subtitle": "Our terms are simple: Your device, your data, your control. We provide the tools; you provide the sovereignty.",
+    "boundTitle": "Sovereignty Bound",
+    "boundSubtitle": "We apply the same zero-compromise logic to every engagement.",
+    "labels": [
+      {
+        "label": "Compliance"
+      },
+      {
+        "label": "Legal"
+      },
+      {
+        "label": "Encryption"
+      },
+      {
+        "label": "Security"
+      }
+    ],
+    "cta": {
+      "title": "Legal <consultation>Consultation</consultation>",
+      "subtitle": "For enterprise deployments or specialized security audits, our technical team is available for consultation.",
+      "contactButton": "Contact Legal",
+      "archiveButton": "Archive (v3.0)"
+    },
+    "sections": [
+      {
+        "title": "1. The Local-First Covenant",
+        "description": "By using SafeTools, you understand and agree that this is a client-side execution platform. We provide the 'Architectural Blueprint' (the code), but the 'Construction' (data processing) happens entirely on your local hardware. We do not provide a hosting service for your data; we provide a local execution environment."
+      },
+      {
+        "title": "2. Absolute Data Sovereignty",
+        "description": "Your files remain your property and never leave your machine. SafeTools claims zero rights to your assets. Because we never see your data, we cannot fulfill 'Data Deletion' requestsas we have nothing to delete. You are the sole custodian of your digital assets."
+      },
+      {
+        "title": "3. Hardware Execution & Limits",
+        "description": "Processing heavy media consumes your local CPU, GPU, and RAM. Performance is dependent on your device's capabilities. SafeTools is not responsible for browser crashes, memory overflows, or thermal throttling resulting from intensive local processing."
+      },
+      {
+        "title": "4. No Persistence & Recovery",
+        "description": "This is a stateless application. We do not maintain user accounts, databases, or cloud storage. Once you close your browser tab, your progress is permanently lost. It is your responsibility to download your assets immediately after processing."
+      },
+      {
+        "title": "5. Security & Transparency",
+        "description": "We encourage the audit of our client-side logic. You are prohibited from using our tools for malicious purposes, including but not limited to: generating illegal content, unauthorized metadata injection, or attempting to reverse-engineer our engine logic."
+      },
+      {
+        "title": "6. Limitation of Liability",
+        "description": "SafeTools is provided 'as-is'. We do not guarantee 100% accuracy in file conversion or metadata stripping. We are not liable for any data loss, corruption, or consequential damages arising from the use of our browser-local utilities."
+      }
+    ]
+  }
+}

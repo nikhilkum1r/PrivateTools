@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Браузерные инструменты профессионального уровня, созданные для приватности и скорости. Более 150 утилит, работающих полностью на вашем устройстве.",
+    "tagline": "Ваши данные принадлежат вам.",
+    "localEngineActive": "Локальный движок активен",
+    "isolatedContextVerified": "Изолированный контекст проверен",
+    "verifiedSupport": "Подтвержденная совместимость с браузерами",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Продукт",
+    "resources": "Ресурсы",
+    "community": "Сообщество",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Все системы локальны",
+    "faq": "FAQ"
+  }
+}

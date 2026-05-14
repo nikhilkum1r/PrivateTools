@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Herramienta OCR en Línea Gratuita | Extraer Texto de Imágenes y PDF | SafeTools",
+      "description": "Extraiga texto de imágenes, capturas de pantalla y PDF al instante con nuestra herramienta OCR gratuita y centrada en la privacidad. Reconocimiento de texto rápido impulsado por IA sin cargas.",
+      "keywords": "OCR en línea gratis, convertidor de imagen a texto, extraer texto de imagen, herramienta OCR PDF, extractor de texto de captura de pantalla, OCR de escritura a mano, OCR de documentos escaneados, software OCR gratuito, herramienta AI OCR, OCR basado en navegador, reconocimiento óptico de caracteres, imagen a texto editable, PDF OCR en línea, OCR multilingüe, OCR sin carga",
+      "ogTitle": "SafeTools OCR | Herramienta OCR en Línea Gratuita - Extraiga Texto de Imágenes al Instante",
+      "ogDescription": "Convierta imágenes, documentos escaneados, capturas de pantalla, notas escritas a mano y PDF en texto editable utilizando nuestra herramienta OCR basada en navegador y centrada en la privacidad. Rápido, preciso y completamente gratis."
+    },
+    "hero": {
+      "badge": "Inteligencia Artificial Centrada en la Privacidad",
+      "title": "Herramienta OCR en Línea Gratuita - Extraiga Texto al Instante",
+      "description": "Convierta imágenes, documentos escaneados, capturas de pantalla, notas escritas a mano y PDF en texto editable utilizando nuestra herramienta OCR basada en navegador y centrada en la privacidad. Rápido, preciso y completamente gratis.",
+      "extractNow": "Extraer Texto Ahora",
+      "uploadImage": "Subir Imagen",
+      "tryDemo": "Probar Demo de OCR",
+      "badges": {
+        "private": "100% Privado",
+        "browser": "Basado en Navegador",
+        "noUpload": "Sin Necesidad de Carga",
+        "ai": "Impulsado por IA",
+        "free": "Gratis para Siempre"
+      }
+    },
+    "workspace": {
+      "source": "Archivo de Origen",
+      "sourceSubtitle": "Imagen, PDF o Captura de Pantalla",
+      "clearQueue": "Limpiar Cola",
+      "dropzone": {
+        "title": "Soltar Archivo",
+        "subtitle": "JPEG, PNG, PDF, HEIC soportados"
+      },
+      "engine": "Motor de Reconocimiento",
+      "start": "Iniciar Extracción",
+      "active": "{progress}% Activo",
+      "history": "Historial Reciente",
+      "clearAll": "Limpiar Todo",
+      "copyHistory": "¡Copiado del historial!",
+      "detected": "{lang} Detectado",
+      "matrix": "Matriz Extraída",
+      "matrixSubtitle": "Texto Digital Editable",
+      "words": "Palabras",
+      "chars": "Caracteres",
+      "waiting": "Esperando alimentación neuronal",
+      "processing": "Procesando pesos neuronales",
+      "handwriting_active": "IA de Escritura a Mano Activa",
+      "detected_string": "Cadena Detectada:",
+      "neural_v3": "Extracción de Texto Neuronal v3.0",
+      "config": "Configuración",
+      "configDesc": "Seleccione su idioma y ejecute",
+      "clear": "Limpiar",
+      "changeFile": "Cambiar Archivo",
+      "extracting": "Extrayendo Texto...",
+      "language": "Idioma",
+      "run": "Ejecutar OCR",
+      "result": "Resultado de la Extracción",
+      "extractionComplete": "Extracción Completada",
+      "awaitingExtraction": "Esperando Extracción",
+      "placeholder": "El texto extraído aparecerá aquí...",
+      "copy": "Copiar texto",
+      "copied": "¡Copiado!"
+    },
+    "messages": {
+      "analyzing": "Analizando a través del motor multi-script...",
+      "extractionSuccess": "¡Texto extraído con éxito de {count} archivos!",
+      "extractionFailed": "La extracción falló. Intente con una imagen más clara.",
+      "copySuccess": "¡Copiado al portapapeles!",
+      "invalidFile": "Tipo de archivo no válido ({name})",
+      "svgNotSupported": "Los archivos SVG no son compatibles ({name})"
+    },
+    "languages": {
+      "auto": "✨ Detectar Idioma Automáticamente",
+      "eng": "Inglés",
+      "hin": "Hindi",
+      "spa": "Español",
+      "fra": "Francés",
+      "deu": "Alemán",
+      "ara": "Árabe",
+      "chi_sim": "Chino (Simplificado)",
+      "jpn": "Japonés",
+      "kor": "Coreano",
+      "ita": "Italiano",
+      "por": "Portugués",
+      "rus": "Ruso",
+      "eng_hin": "Inglés + Hindi",
+      "eng_spa": "Inglés + Español",
+      "eng_fra": "Inglés + Francés"
+    },
+    "landing": {
+      "intro": {
+        "title": "Extraiga Texto de Imágenes en Línea Gratis",
+        "content": "La tecnología de Reconocimiento Óptico de Caracteres (OCR) convierte el texto impreso o escrito a mano dentro de las imágenes en texto digital editable. Nuestra herramienta OCR en línea gratuita ayuda a los usuarios a digitalizar documentos, copiar texto de capturas de pantalla, escanear páginas impresas y convertir notas escritas a mano en archivos editables al instante."
+      },
+      "features": {
+        "extraction": {
+          "title": "Extracción Neuronal",
+          "description": "Modelos de IA patentados diseñados para detectar texto en fondos complejos."
+        },
+        "multilingual": {
+          "title": "Soporte Global",
+          "description": "Reconozca texto en más de 100 idiomas, incluyendo escrituras CJK e índicas."
+        },
+        "secure": {
+          "title": "Seguridad Empresarial",
+          "description": "Privacidad de grado militar con garantía de cero interacción con el servidor."
+        },
+        "offline": {
+          "title": "Listo para usar sin conexión",
+          "description": "Todo el motor OCR se ejecuta en su navegador sin internet."
+        },
+        "title": "Poder de Extracción OCR",
+        "title2": "Potentes Funciones de IA OCR",
+        "subtitle": "Reconocimiento de texto de nivel profesional para cada flujo de trabajo.",
+        "items": [
+          "Digitalizar documentos físicos",
+          "Copiar texto de YouTube/Redes Sociales",
+          "Convertir tareas escritas a mano",
+          "Extraer datos de recibos comerciales",
+          "Procesar registros legales y médicos",
+          "Guardar contenido como archivos de Word o Texto"
+        ]
+      },
+      "formats": {
+        "title": "Formatos de Archivo Compatibles",
+        "image": "Formatos de Imagen",
+        "doc": "Formatos de Documento",
+        "optimized": "Optimizado Para",
+        "standard": "Documentos de Oficina Estándar",
+        "mobileReady": "Listo para Móvil",
+        "socialMedia": "Capturas de Pantalla de Redes Sociales",
+        "highPrecision": "Alta Precisión"
+      },
+      "privacy": {
+        "title": "Procesamiento OCR Centrado en la Privacidad",
+        "content": "A diferencia de muchas otras herramientas OCR en línea, sus archivos no se almacenan permanentemente en nuestros servidores. Aprovechamos el procesamiento del lado del cliente mediante WebAssembly, lo que significa que el motor OCR se ejecuta directamente dentro de su navegador.",
+        "execution": {
+          "title": "Ejecución Local",
+          "content": "El procesamiento ocurre en su RAM, no en nuestra nube."
+        },
+        "tracking": {
+          "title": "Sin Rastreo",
+          "content": "No registramos sus archivos ni los resultados de la extracción."
+        },
+        "registration": {
+          "title": "Sin Registro",
+          "content": "Utilice todo el poder de la IA sin una cuenta."
+        }
+      },
+      "ai": {
+        "title": "Reconocimiento Impulsado por IA",
+        "content": "Las redes neuronales avanzadas mejoran la precisión del texto, la preservación del diseño y el soporte multilingüe. Nuestro motor funciona de manera efectiva incluso en imágenes ruidosas, borrosas o de baja resolución.",
+        "items": [
+          "Reconocimiento y conversión de escritura a mano",
+          "Detección de tablas y múltiples columnas",
+          "Rotación automática y corrección de inclinación",
+          "Recuperación de imágenes ruidosas y eliminación de desenfoque"
+        ]
+      },
+      "whatIs": {
+        "title": "¿Qué es el OCR?",
+        "content": "OCR significa Optical Character Recognition (Reconocimiento Óptico de Caracteres). Es una tecnología que permite al software analizar imágenes y detectar letras, números y símbolos para transformarlos en contenido digital editable y con capacidad de búsqueda.",
+        "how": {
+          "title": "Cómo funciona",
+          "content": "El software OCR escanea los patrones de píxeles de una imagen, identifica formas como caracteres y utiliza modelos de lenguaje para reconstruir frases y párrafos."
+        },
+        "apps": {
+          "title": "Aplicaciones",
+          "content": "Ampliamente utilizado en la automatización de negocios, digitalización de archivos y tecnologías de asistencia para personas con discapacidad visual."
+        }
+      },
+      "useCases": {
+        "badge": "Integración del Flujo de Trabajo",
+        "title": "Casos de Uso Populares",
+        "subtitle": "SafeTools OCR está diseñado para diversos flujos de trabajo y necesidades profesionales.",
+        "items": [
+          {
+            "title": "Estudiantes",
+            "desc": "Convierta notas de clase, libros de texto y trabajos de investigación en guías de estudio editables."
+          },
+          {
+            "title": "Negocios",
+            "desc": "Digitalice contratos, facturas y registros físicos para flujos de trabajo digitales más rápidos."
+          },
+          {
+            "title": "Desarrolladores",
+            "desc": "Extraiga texto estructurado de maquetas de UI, capturas de pantalla de código y documentación."
+          },
+          {
+            "title": "Investigadores",
+            "desc": "Transforme archivos escaneados antiguos en documentos PDF con capacidad de búsqueda y texto seleccionable."
+          },
+          {
+            "title": "Creadores de Contenido",
+            "desc": "Reutilice rápidamente texto de capturas de pantalla de YouTube, infografías y memes."
+          },
+          {
+            "title": "Profesionales Legales",
+            "desc": "Digitalice archivos de casos sensibles de forma segura sin riesgo de exposición de datos."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Inteligencia de Captura de Pantalla",
+        "title": "Extraer Texto de Capturas de Pantalla",
+        "content": "Copie texto al instante de capturas de YouTube, publicaciones de Instagram o presentaciones de Zoom. No más escritura manual ni recreación de contenido desde cero.",
+        "tags": [
+          "Redes Sociales",
+          "Webinars",
+          "Diseño UI/UX"
+        ]
+      },
+      "handwriting": {
+        "badge": "De Pluma a Píxel",
+        "title": "Reconocimiento de Escritura a Mano",
+        "content": "Convierta notas escritas a mano, entradas de diario y pizarras en texto digital. Nuestra IA está entrenada para comprender diversos estilos de escritura a mano y escritura cursiva.",
+        "handwritingActive": "IA de Escritura a Mano Activa",
+        "tags": [
+          "Diarios",
+          "Tareas",
+          "Pizarras"
+        ]
+      },
+      "export": {
+        "title": "Exportar en Múltiples Formatos",
+        "content": "Una vez extraído el texto, guárdelo en el formato que mejor se adapte a su flujo de trabajo. Cópielo al instante o descargue archivos de alta calidad.",
+        "items": [
+          "Texto Plano (.TXT)",
+          "Documento (.DOCX)",
+          "Estructurado (.JSON)",
+          "Tabular (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Motor Neuronal Ultrarrápido",
+        "content": "Optimizado mediante WebAssembly y aceleración por GPU para garantizar un reconocimiento rápido incluso en archivos de alta resolución.",
+        "optimization": "Optimización del Navegador",
+        "accuracy": "Precisión de Caracteres",
+        "wasm": "WebAssembly",
+        "gpu": "Acelerado por GPU"
+      },
+      "manifesto": {
+        "title": "Manifiesto de Privacidad Primero",
+        "description": "Creemos que sus datos son su propiedad. Nuestro motor OCR respeta eso por diseño.",
+        "points": [
+          "Ningún dato sale de su máquina",
+          "Sin necesidad de cuenta",
+          "Sin cookies de rastreo",
+          "Sin registro oculto"
+        ],
+        "others": {
+          "title": "Otras Herramientas OCR",
+          "points": [
+            "Venden sus datos a anunciantes",
+            "Requieren cargas a la nube",
+            "Inyectan píxeles de rastreo",
+            "Almacenan sus documentos sensibles"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "¿Por qué elegir SafeTools OCR?",
+        "subtitle": "Compárenos con las herramientas OCR tradicionales basadas en la nube.",
+        "headers": [
+          "Característica",
+          "SafeTools OCR",
+          "Herramientas Tradicionales"
+        ],
+        "rows": [
+          {
+            "f": "Basado en Navegador",
+            "s": "Sí",
+            "t": "Limitado"
+          },
+          {
+            "f": "Sin Necesidad de Carga",
+            "s": "Sí",
+            "t": "No"
+          },
+          {
+            "f": "Motor Impulsado por IA",
+            "s": "Sí",
+            "t": "A veces"
+          },
+          {
+            "f": "Detección de Escritura",
+            "s": "Sí",
+            "t": "Limitado"
+          },
+          {
+            "f": "Compatible con Móviles",
+            "s": "Sí",
+            "t": "A menudo deficiente"
+          },
+          {
+            "f": "Enfoque en Privacidad",
+            "s": "Sí",
+            "t": "No"
+          },
+          {
+            "f": "Gratis para Siempre",
+            "s": "Sí",
+            "t": "A menudo limitado"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Utilidades de OCR Avanzadas",
+        "subtitle": "Funciones profesionales para el procesamiento de documentos complejos.",
+        "items": [
+          {
+            "title": "Detección de Tablas",
+            "desc": "Extraiga tablas estructuradas de documentos financieros complejos."
+          },
+          {
+            "title": "Escaneo de Múltiples Columnas",
+            "desc": "Mantenga el diseño para periódicos y revistas de múltiples columnas."
+          },
+          {
+            "title": "Eliminación de Ruido",
+            "desc": "Limpie automáticamente los escaneos granulosos para una mayor precisión."
+          },
+          {
+            "title": "Rotación Automática",
+            "desc": "Corrija escaneos de documentos inclinados al instante durante el reconocimiento."
+          },
+          {
+            "title": "OCR por Lotes",
+            "desc": "Procese múltiples imágenes simultáneamente en su navegador."
+          },
+          {
+            "title": "Limpieza de Metadatos",
+            "desc": "Elimine los metadatos de rastreo ocultos de las imágenes procesadas."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Convierta Imágenes en Texto Editable al Instante",
+        "description": "Extraiga texto de capturas de pantalla, documentos escaneados, notas escritas a mano y PDF directamente en su navegador con tecnología OCR rápida y centrada en la privacidad.",
+        "button": "Iniciar OCR Ahora",
+        "upload": "Subir Imagen"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "¿Es gratuita la herramienta OCR?",
+            "a": "Sí. La herramienta OCR es completamente gratuita, sin costos ocultos, marcas de agua ni requisitos de suscripción."
+          },
+          {
+            "q": "¿Se cargan mis archivos en los servidores?",
+            "a": "No. Todo el procesamiento de OCR ocurre localmente en su navegador mediante WebAssembly. Sus imágenes nunca salen de su dispositivo, lo que garantiza la máxima privacidad y seguridad."
+          },
+          {
+            "q": "¿Qué idiomas son compatibles?",
+            "a": "Nuestra herramienta admite múltiples idiomas globales, incluidos inglés, hindi, español, francés, alemán, árabe, chino, japonés, coreano y muchos más."
+          },
+          {
+            "q": "¿Puedo extraer texto de notas escritas a mano?",
+            "a": "Sí. Nuestro motor OCR impulsado por IA admite el reconocimiento de escritura a mano para notas, tareas, diarios y contenido de pizarras."
+          },
+          {
+            "q": "¿Funciona el OCR en archivos PDF?",
+            "a": "Sí. Puede extraer texto de archivos PDF escaneados y documentos basados en imágenes convirtiéndolos en texto digital editable."
+          },
+          {
+            "q": "¿Puedo usar OCR en dispositivos móviles?",
+            "a": "Sí. La herramienta es totalmente receptiva y funciona en teléfonos inteligentes y tabletas modernos directamente a través de su navegador web."
+          },
+          {
+            "q": "¿Es necesario registrarse?",
+            "a": "No. Puede comenzar a extraer texto de inmediato sin crear una cuenta ni proporcionar ninguna información personal."
+          }
+        ],
+        "title": "Preguntas Frecuentes sobre OCR",
+        "description": "Preguntas frecuentes sobre nuestra herramienta OCR impulsada por IA."
+      },
+      "related": {
+        "title": "Explore Más Herramientas",
+        "items": [
+          {
+            "name": "Editor de Imágenes",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Compresor de Imágenes",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Convertidor de Imágenes",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF a Texto",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Soltar Archivo",
+      "description": "JPEG, PNG, PDF, HEIC soportados. Máx. 20MB."
+    },
+    "history": {
+      "title": "Historial Reciente",
+      "subtitle": "Acceda a sus extracciones anteriores",
+      "clearAll": "Limpiar Todo",
+      "restore": "Restaurar Resultado"
+    }
+  }
+}

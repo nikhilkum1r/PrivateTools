@@ -1,25 +1,12 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: [
-          '/admin/', 
-          '/login/',
-          '/api/',
-          '/temp/',
-          '/_next/',
-          '/static/',
-        ],
-      },
-      {
-        userAgent: 'Mediapartners-Google',
-        allow: '/',
-      },
-    ],
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/', '/_next/', '/status/'],
+    },
     sitemap: 'https://safetools.space/sitemap.xml',
-  }
+  };
 }

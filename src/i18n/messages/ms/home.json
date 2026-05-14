@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ Alat File Atas Talian Utamakan Privasi",
+      "description": "Tukar, mampat, edit, enkripsi dan urus fail dengan selamat dalam pelayar anda. Tiada muat naik, tiada penjejakan."
+    },
+    "hero": {
+      "title": "Privasi bukan sekadar ciri. Ia adalah <studio>hak.</studio>",
+      "subtitle": "Alat berkuasa yang dibina untuk privasi dan kelajuan",
+      "description": "SafeTools memproses fail anda terus pada peranti anda, memberikan anda alat yang berkuasa tanpa mengorbankan privasi, kawalan atau ketenangan fikiran anda.",
+      "getStarted": "Teroka alat",
+      "browseAll": "Mengapa kami membina SafeTools",
+      "exploreButton": "Teroka 150+ alat",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "100% Pemprosesan Tempatan",
+      "recent": "Terbaru",
+      "favorites": "Kegemaran"
+    },
+    "trustBar": [
+      {
+        "name": "Patuh GDPR",
+        "desc": "Tiada pengumpulan data"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "Penyulitan gred tentera"
+      },
+      {
+        "name": "Sandboxed",
+        "desc": "Pelaksanaan pelayar terasing"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "Prestasi kependaman sifar"
+      },
+      {
+        "name": "Open Core",
+        "desc": "Pemprosesan telus"
+      }
+    ],
+    "whyWeExist": {
+      "title": "Mengapa SafeTools Wujud",
+      "story": "Beberapa tahun lalu, seseorang yang rapat dengan kami menggunakan platform utiliti atas talian untuk dokumen peribadi. Berbulan-bulan kemudian, data tersebut muncul di internet. Insiden tersebut mendedahkan masalah tersembunyi: banyak platform mengumpul, menyimpan atau memproses fail sensitif pengguna pada pelayan jauh tanpa ketelusan.",
+      "mission": "SafeTools dicipta untuk mengubah perkara itu.",
+      "solution": "Kebanyakan alat moden tidak perlu memuat naik fail anda ke pelayan luaran. Itulah sebabnya SafeTools dibina atas seni bina privacy-first di mana pemprosesan berlaku terus pada peranti anda.",
+      "points": [
+        "Tiada muat naik yang tidak perlu.",
+        "Tiada storan tersembunyi.",
+        "Tiada penjualan data pengguna.",
+        "Data anda tetap milik anda."
+      ]
+    },
+    "infra": [
+      {
+        "title": "Enjin WebAssembly",
+        "description": "Logik pemprosesan berprestasi tinggi yang berjalan secara native dalam pelayar anda. Tiada overhed pelayan."
+      },
+      {
+        "title": "Seni Bina Zero-Knowledge",
+        "description": "Data anda tidak pernah dinyahsulit atau dilihat oleh mana-mana pihak ketiga. Pengkomputeran tempatan tulen."
+      },
+      {
+        "title": "Pemprosesan Segera",
+        "description": "Hapuskan masa menunggu muat naik dan muat turun. Proses data bersaiz GB dalam beberapa saat."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "Privasi Teras",
+        "title": "Seni Bina Zero-Knowledge",
+        "description": "Falsafah \"local-first\" kami menjamin fail anda tidak pernah dimuat naik, diimbas atau disimpan pada mana-mana pelayan jauh."
+      },
+      "performance": {
+        "badge": "Prestasi",
+        "title": "Kependaman bawah satu saat",
+        "security": "Pelaksanaan dalam Sandbox",
+        "status": {
+          "ready": "SEDIA",
+          "blocked": "DIBLOK",
+          "success": "BERJAYA"
+        },
+        "description": "Dengan menghapuskan kitaran muat naik/muat turun, SafeTools menyediakan pemprosesan hampir serta-merta walaupun untuk fail besar."
+      },
+      "crossPlatform": {
+        "title": "Pelbagai Platform",
+        "description": "Desktop, Mudah Alih, Tablet. Segerak yang sempurna pada semua peranti anda."
+      },
+      "offlineFirst": {
+        "title": "Offline First",
+        "description": "Muat sekali, guna selamanya. Internet tidak diperlukan untuk kebanyakan alat."
+      }
+    },
+    "workflow": {
+      "title": "Direka untuk aliran kerja profesional",
+      "subtitle": "SafeTools bukan sekadar koleksi utiliti. Ia adalah ruang kerja profesional yang direka untuk kelajuan dan privasi.",
+      "items": [
+        {
+          "title": "Pemprosesan Kelompok",
+          "description": "Kendalikan beratus-ratus fail secara serentak tanpa usaha."
+        },
+        {
+          "title": "Penghalaan Fail Pintar",
+          "description": "Lepaskan sebarang fail dan kami akan mencadangkan alat terbaik secara automatik."
+        },
+        {
+          "title": "Keupayaan Luar Talian",
+          "description": "Bekerja dari mana-mana sahaja, walaupun tanpa sambungan internet aktif."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "Pembangun Diutamakan",
+      "title": "Dibina untuk prestasi",
+      "description": "SafeTools mendedahkan modul pemprosesan tempatan berprestasi tinggi melalui seni bina enjin yang bersih dan bersatu.",
+      "stats": {
+        "latency": "Kependaman Dalam Memori",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// Pemprosesan selesai. 0 bait dimuat naik."
+    },
+    "toolsSection": {
+      "title": "Cari alat anda",
+      "searchPlaceholder": "Cari dalam 150+ alat...",
+      "openTool": "Buka alat"
+    },
+    "privacyEngine": {
+      "badge": "Status sistem: Aktif",
+      "title": "Direka untuk privasi mutlak",
+      "description": "Enjin Privasi SafeTools berjalan 100% secara tempatan.",
+      "stats": [
+        {
+          "label": "Penghantaran Data",
+          "value": "0.00%"
+        },
+        {
+          "label": "Penyulitan Tempatan",
+          "value": "AES-256"
+        },
+        {
+          "label": "Status Worker",
+          "value": "Sandboxed"
+        },
+        {
+          "label": "Kebergantungan Awan",
+          "value": "Tiada"
+        }
+      ],
+      "heartbeat": "Nod selamat aktif",
+      "wasmHeartbeat": "WASM Engine Heartbeat",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "Keselamatan disahkan",
+        "logs": [
+          "Memulakan WASM Security Sandbox... SEDIA",
+          "Permintaan rangkaian dipintas: DIBLOK (Mod tempatan sahaja diaktifkan)",
+          "Memperuntukkan penimbal: 256MB memori sisi pelanggan yang selamat... BERJAYA",
+          "Putaran kunci AES-256 GCM selesai. Mendengar acara fail tempatan..."
+        ]
+      },
+      "sovereignty": {
+        "title": "Data anda adalah kedaulatan anda",
+        "description": "Tidak seperti alat awan, SafeTools beroperasi sepenuhnya dalam sandbox peribadi pelayar anda.",
+        "button": "Sahkan seni bina"
+      }
+    },
+    "featuredCats": {
+      "title": "Semua yang anda perlukan dalam satu platform selamat",
+      "subtitle": "Utiliti gred profesional dalam lima kategori teras.",
+      "items": [
+        {
+          "title": "Alat Imej",
+          "description": "Pemprosesan Imej",
+          "points": [
+            "PNG ke JPG",
+            "WebP",
+            "AVIF",
+            "Buang Latar Belakang",
+            "Peningkatan AI",
+            "Mampatan Kelompok",
+            "Buang Metadata"
+          ]
+        },
+        {
+          "title": "Alat PDF",
+          "description": "Utiliti PDF",
+          "points": [
+            "Gabung",
+            "Pisah",
+            "Mampat",
+            "Buka Kunci",
+            "Pemprosesan OCR",
+            "PDF ke Word",
+            "Tandatangan Digital"
+          ]
+        },
+        {
+          "title": "Penukaran Fail",
+          "description": "Penukaran",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "Hamparan",
+            "Video",
+            "Audio",
+            "Pelihat"
+          ]
+        },
+        {
+          "title": "Privasi & Keselamatan",
+          "description": "Keselamatan",
+          "points": [
+            "Penyulitan Fail",
+            "Pembersih Metadata",
+            "Kod QR",
+            "Hash",
+            "Perkongsian Selamat",
+            "Kata Laluan",
+            "Base64 Suite"
+          ]
+        },
+        {
+          "title": "Utiliti Pembangun",
+          "description": "Pembangunan",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV ke JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "Proses mudah",
+      "title": "Cara ia berfungsi",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Lepaskan fail anda",
+          "description": "Pilih mana-mana fail. Sistem kami mengesannya serta-merta tanpa muat naik."
+        },
+        {
+          "step": "02",
+          "title": "Pemprosesan Tempatan",
+          "description": "Pemprosesan terus dalam sandbox pelayar anda."
+        },
+        {
+          "step": "03",
+          "title": "Hasil Selamat",
+          "description": "Muat turun fail anda yang telah diproses serta-merta."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "Kependaman Pelayan"
+      },
+      {
+        "val": "100%",
+        "label": "Pemprosesan Tempatan"
+      },
+      {
+        "val": "150+",
+        "label": "Alat Selamat"
+      },
+      {
+        "val": "∞",
+        "label": "Kebebasan Penggunaan"
+      }
+    ],
+    "manifesto": {
+      "badge": "Manifesto",
+      "title": "Privasi bukan <br/> satu ciri.",
+      "description": "Ia adalah hak asasi manusia yang asas."
+    },
+    "sovereignty": {
+      "badge": "Kedaulatan Data",
+      "title": "Data anda adalah <br/> kedaulatan anda.",
+      "description": "Kami tidak pernah melihat data anda.",
+      "points": [
+        "Tiada Muat Naik Awan",
+        "Penyulitan Dalam Memori",
+        "Sifar Penjejakan",
+        "Pemprosesan Sisi Pelanggan"
+      ],
+      "foundation": {
+        "title": "Asas Kepercayaan",
+        "description": "Privasi harus menjadi lalai.",
+        "badge": "Yayasan Disahkan",
+        "verified": "Audit Keselamatan Lulus"
+      }
+    },
+    "performance": {
+      "badge": "Prestasi Tinggi",
+      "title": "Dibina untuk kelajuan",
+      "subtitle": "Logik pemprosesan berprestasi tinggi yang berjalan secara native dalam pelayar anda.",
+      "items": [
+        {
+          "title": "Rendering Segera",
+          "description": "Pemprosesan tempatan menghapuskan kependaman rangkaian."
+        },
+        {
+          "title": "WASM Native",
+          "description": "Logik berjalan pada kelajuan perkakasan."
+        },
+        {
+          "title": "Dioptimumkan Mudah Alih",
+          "description": "Prestasi lancar pada semua peranti."
+        },
+        {
+          "title": "Pecutan Perkakasan",
+          "description": "Manfaatkan CPU dan GPU tempatan."
+        },
+        {
+          "title": "Memori Cekap",
+          "description": "Pengoptimuman penimbal untuk fail besar."
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "Tiada kebergantungan pelayan."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "Mengapa memilih SafeTools?",
+      "subtitle": "Kelebihan seni bina pemprosesan tempatan.",
+      "table": {
+        "feature": "Ciri",
+        "safe": "SafeTools",
+        "trad": "Alat Tradisional"
+      },
+      "items": [
+        {
+          "f": "Model Privasi",
+          "s": true,
+          "c": "Berasaskan awan"
+        },
+        {
+          "f": "Lokasi Pemprosesan",
+          "s": "Perkakasan Tempatan",
+          "c": "Pelayan Jauh"
+        },
+        {
+          "f": "Skrip Penjejakan",
+          "s": "Tiada",
+          "c": "Ekstensif"
+        },
+        {
+          "f": "Pengekalan Fail",
+          "s": "0ms (RAM sahaja)",
+          "c": "Pelbagai"
+        },
+        {
+          "f": "Kependaman",
+          "s": "Serta-merta",
+          "c": "Tinggi (Muat Naik)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "Panduan Pemprosesan Tempatan",
+      "subtitle": "Bagaimana SafeTools memastikan data anda selamat",
+      "steps": [
+        {
+          "title": "Zero-Cloud Sandbox",
+          "description": "Fail diproses dalam RAM pelayar."
+        },
+        {
+          "title": "Pecutan Perkakasan",
+          "description": "Kami menggunakan perkakasan anda tanpa muat naik."
+        },
+        {
+          "title": "Sesi Efemeral",
+          "description": "Data dipadamkan apabila menutup tab."
+        }
+      ],
+      "architecturalAdvantage": "Kelebihan Seni Bina",
+      "vulnerabilityEliminated": "Menghapuskan sepenuhnya kerentanan 'Muat Naik Awan'.",
+      "cloud": "Awan",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "Selamat secara reka bentuk.",
+      "subtitle": "Fail anda tidak pernah meninggalkan peranti.",
+      "items": [
+        "100% Pemprosesan sisi pelanggan",
+        "Penyulitan tempatan AES-256 GCM",
+        "Sifar penghantaran data ke pelayan",
+        "Pelaksanaan pelayar sandboxed"
+      ],
+      "zeroTrust": {
+        "title": "Keselamatan Zero-Trust.",
+        "description": "Setiap alat berjalan dalam sandbox terasing.",
+        "encryption": "Penyulitan",
+        "protocol": "Protokol"
+      }
+    },
+    "faq": {
+      "badge": "Pusat Bantuan",
+      "title": "Soalan Lazim",
+      "items": [
+        {
+          "q": "Adakah fail saya dimuat naik ke pelayan?",
+          "a": "Tidak. SafeTools memproses semuanya secara tempatan dalam pelayar."
+        },
+        {
+          "q": "Adakah SafeTools percuma untuk digunakan?",
+          "a": "Ya, semua ciri teras adalah 100% percuma."
+        },
+        {
+          "q": "Apa yang berlaku kepada data selepas pemprosesan?",
+          "a": "Dipadamkan serta-merta apabila menutup tab."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "Mengapa memilih SafeTools?",
+      "subtitle": "Kelebihan seni bina pemprosesan tempatan.",
+      "table": {
+        "feature": "Ciri",
+        "safe": "SafeTools",
+        "trad": "Alat Tradisional"
+      },
+      "items": [
+        {
+          "title": "100% Pemprosesan tempatan",
+          "description": "Setiap operasi berjalan pada perkakasan anda."
+        },
+        {
+          "title": "Sifar Pengumpulan Data",
+          "description": "Kami tidak menjejak atau menyimpan apa-apa."
+        },
+        {
+          "title": "Penyulitan Gred Tentera",
+          "description": "Penyulitan AES-256 GCM tempatan."
+        },
+        {
+          "title": "Prestasi Segera",
+          "description": "Tiada kependaman muat naik/muat turun."
+        },
+        {
+          "title": "Keupayaan Luar Talian",
+          "description": "Kebanyakan alat berfungsi tanpa internet."
+        },
+        {
+          "title": "Pelbagai Platform",
+          "description": "Berfungsi pada mana-mana pelayar moden."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "Kes Penggunaan",
+      "title": "Dibina untuk profesional",
+      "subtitle": "Pilihan mereka yang mengutamakan kedaulatan data.",
+      "items": [
+        {
+          "title": "Pengurusan dokumen selamat",
+          "description": "Proses dokumen sensitif tanpa pendedahan awan."
+        },
+        {
+          "title": "Pengeluaran kreatif",
+          "description": "Pemprosesan media berkelajuan tinggi terus pada stesen kerja anda."
+        },
+        {
+          "title": "Aliran kerja pembangun",
+          "description": "Utiliti sandboxed untuk transformasi data."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Maklum Balas Pengguna",
+      "title": "Dipercayai oleh penyokong privasi",
+      "items": [
+        {
+          "quote": "Seni bina zero-upload adalah apa yang diperlukan oleh web.",
+          "name": "Security Pro",
+          "role": "Arkitek"
+        },
+        {
+          "quote": "Lebih pantas daripada mana-mana alat awan yang pernah saya gunakan.",
+          "name": "Pereka",
+          "role": "Creative Lead"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "Prestasi Native",
+      "status": "Sedia",
+      "title": "Dibina untuk mobiliti.",
+      "subtitle": "Alami prestasi tahap native pada mana-mana peranti.",
+      "desktop": {
+        "title": "Kuasa Desktop",
+        "description": "Suite studio ciri lengkap."
+      },
+      "mobile": {
+        "title": "Kelajuan Mudah Alih",
+        "description": "Enjin tempatan yang dioptimumkan."
+      },
+      "waitlist": "Sertai Beta"
+    },
+    "securityArchitecture": {
+      "badge": "Keselamatan Diperkukuh",
+      "title": "Perkakasan Terasing.",
+      "subtitle": "Kami memanfaatkan sandboxing WASM moden.",
+      "button": "Sahkan keselamatan"
+    },
+    "communityStats": {
+      "title": "Penggunaan Global",
+      "subtitle": "Digunakan oleh beribu-ribu pengguna yang sedar.",
+      "processedCount": "100%",
+      "processed": "Peribadi & Tempatan",
+      "usersCount": "500K+",
+      "users": "Pengguna Aktif"
+    },
+    "finalCta": {
+      "title": "Kawal data anda.",
+      "subtitle": "Berhenti memuat naik identiti anda.",
+      "launch": "Mula Studio",
+      "allTools": "Teroka 150+ alat"
+    },
+    "pricingSection": {
+      "badge": "Percuma selamanya",
+      "title": "Privasi untuk semua orang.",
+      "description": "SafeTools 100% percuma untuk kegunaan individu.",
+      "button": "Mula pemprosesan"
+    },
+    "smartRouting": {
+      "title": "Penghalaan Fail Pintar"
+    },
+    "techMarquee": {
+      "badge": "Prestasi Native",
+      "title": "Dikuasakan oleh enjin tempatan generasi seterusnya",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "Logik hampir native"
+        },
+        {
+          "name": "GPU",
+          "desc": "Pecutan perkakasan"
+        },
+        {
+          "name": "AES",
+          "desc": "Penyulitan selamat"
+        },
+        {
+          "name": "OCR",
+          "desc": "Pengekstrakan neural"
+        },
+        {
+          "name": "Worker",
+          "desc": "Pengiraan berbilang benang"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "documentHub": {
+    "seo": {
+      "title": "文档中心 | 隐私优先的文本和文档工具 | SafeTools",
+      "description": "完全在浏览器中运行的专业文档工具。Word 转 PDF、PDF 转文本以及安全的文本处理工具。",
+      "keywords": "文档工具, word 转 pdf, pdf 转文本, 在线文档编辑器, 私密文档处理, 本地文档工具",
+      "ogTitle": "SafeTools 文档工作室 | 100% 私密",
+      "ogDescription": "在零服务器上传的情况下转换和处理您的文档。",
+      "structuredName": "SafeTools 文档工作室",
+      "structuredDesc": "一套专业的本地优先文档处理工具。"
+    },
+    "hero": {
+      "title": "文档工作室",
+      "subtitle": "专业级的文档处理，零服务器交互。"
+    },
+    "tools": {
+      "wordToPdf": {
+        "name": "Word 转 PDF",
+        "desc": "安全地将 DOCX 转换为专业的 PDF 文档。"
+      },
+      "pdfToText": {
+        "name": "PDF 转文本",
+        "desc": "在本地从任何 PDF 文档中提取文本层。"
+      },
+      "textTools": {
+        "name": "文本工作室",
+        "desc": "大小写转换、字数统计和高级文本工具。"
+      },
+      "compressPdf": {
+        "name": "压缩 PDF",
+        "desc": "在本地缩小 PDF 文件大小而不损失质量。"
+      },
+      "openTool": "打开工具"
+    },
+    "faq": {
+      "title": "文档工作室常见问题",
+      "desc": "关于我们私密的、基于浏览器的文档处理套件的常见问题。",
+      "q1": "我的文本数据安全吗？",
+      "a1": "是的。SafeTools 在本地处理所有文档数据。任何内容都不会被发送到服务器进行处理或存储。",
+      "q2": "支持哪些格式？",
+      "a2": "我们目前支持 PDF、DOCX、TXT 和 MD 格式，用于各种转换和提取任务。"
+    }
+  }
+}

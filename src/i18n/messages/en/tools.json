@@ -1,0 +1,63 @@
+{
+  "tools": {
+    "seo": {
+      "title": "All Private Tools | SafeTools - Secure & Local Processing",
+      "description": "Access our full suite of privacy-first local tools. Image editing, PDF manipulation, file encryption, and dev utilities. 100% private, browser-based.",
+      "keywords": "private tools, local processing tools, secure online tools, image tools, pdf tools, dev utilities",
+      "ogTitle": "SafeTools | All Tools Hub",
+      "ogDescription": "Explore our full range of 100% private, browser-based tools."
+    },
+    "categories": {
+      "All": "All",
+      "Creative": "Creative",
+      "Documents": "Documents",
+      "Media": "Media",
+      "Security": "Security",
+      "Dev": "Dev"
+    },
+    "data": {
+      "/image/editor": { "title": "Edit Images", "desc": "Pro editor with OCR, filters, crop, and batch export." },
+      "/image/remove-background": { "title": "AI Background Remover", "desc": "Remove image backgrounds instantly in-browser using local neural engines." },
+      "/image/ocr": { "title": "Extract Text from Image (OCR)", "desc": "Extract text from images using neural recognition." },
+      "/image/convert": { "title": "Convert Image Format", "desc": "Convert 150+ formats: HEIC, WebP, AVIF, RAW, PDF." },
+      "/image/compress": { "title": "Compress Image (KB/MB)", "desc": "Shrink any image up to 90% with target-size control." },
+      "/image/colors": { "title": "Extract Colors from Image", "desc": "Palettes, HEX, RGB, and HSL from any image." },
+      "/image/to-pptx": { "title": "Image to PPTX", "desc": "Transform images into professional PowerPoint presentations." },
+      "/devtools/icons": { "title": "App Icon Studio", "desc": "Generate iOS, Android, and PWA icon bundles instantly." },
+      "/pdf/merge-pdf": { "title": "PDF Merger", "desc": "Combine multiple PDFs and images into one document." },
+      "/pdf/split-pdf": { "title": "PDF Splitter", "desc": "Extract specific pages or split into separate files." },
+      "/pdf/compress-pdf": { "title": "Compress PDF", "desc": "Shrink PDF files locally without losing quality." },
+      "/pdf/unlock-pdf": { "title": "Unlock PDF", "desc": "Remove password protection from PDFs." },
+      "/pdf/protect-pdf": { "title": "Protect PDF", "desc": "Add strong password protection to PDFs locally." },
+      "/document/word-to-pdf": { "title": "Word to PDF", "desc": "Convert DOCX to professional PDF documents." },
+      "/document/pdf-to-txt": { "title": "PDF to Text", "desc": "Extract text layers from any PDF." },
+      "/pdf/to-image": { "title": "PDF to Image", "desc": "Convert PDF documents to high-quality images." },
+      "/document/text-tools/case-converter": { "title": "Case Converter", "desc": "Transform text casing instantly." },
+      "/document/text-tools/word-counter": { "title": "Word Counter", "desc": "Real-time character and word analytics." },
+      "/security/metadata-cleaner": { "title": "Metadata Cleaner", "desc": "Remove hidden data, EXIF, and GPS tracking locally." },
+      "/image/metadata-cleaner": { "title": "Metadata Cleaner", "desc": "Remove hidden data, EXIF, and GPS tracking locally." },
+      "/security/vault": { "title": "Secure Vault", "desc": "AES-256 GCM client-side file encryption." },
+      "/privacy/password-generator": { "title": "Password Generator", "desc": "Generate high-entropy secure passwords." },
+      "/privacy/password-checker": { "title": "Password Checker", "desc": "Analyze password strength locally." },
+      "/privacy/privacy-scanner": { "title": "Privacy Scanner", "desc": "Audit your browser security and anonymity." },
+      "/privacy/secure-notes": { "title": "Secure Notes", "desc": "Create encrypted self-destructing notes locally." },
+      "/security/file-shredder": { "title": "File Shredder", "desc": "Permanently wipe sensitive files from memory." },
+      "/security/steganography": { "title": "Steganography", "desc": "Hide secret messages invisibly inside images." },
+      "/tools/qr-generator": { "title": "QR Generator", "desc": "Generate and scan QR codes with custom styling." },
+      "/privacy/qr-generator": { "title": "QR Generator", "desc": "Generate and scan QR codes with custom styling." },
+      "/devtools": { "title": "Dev Utilities", "desc": "JSON formatter, Base64, and more." },
+      "/devtools/data-converter": { "title": "Data Converter", "desc": "Convert JSON to CSV and back securely." },
+      "/devtools/base64": { "title": "Base64 Studio", "desc": "Encode and decode text and images securely." },
+      "/devtools/json": { "title": "JSON Formatter & Validator", "desc": "Beautify, minify, and validate JSON data locally." },
+      "/devtools/hash": { "title": "Hash Generator", "desc": "Generate SHA-256, SHA-512, and MD5 hashes locally." },
+      "/devtools/jwt": { "title": "JWT Debugger", "desc": "Decode and inspect JWT tokens securely." },
+      "/devtools/url": { "title": "URL Encoder & Decoder", "desc": "Safely encode and decode URLs and URI components." },
+      "/devtools/uuid": { "title": "UUID v4 Factory", "desc": "Generate cryptographically secure Version 4 UUIDs." },
+      "/devtools/timestamp": { "title": "Unix Timestamp Converter", "desc": "Convert between Unix Epoch time and dates." },
+      "/devtools/lorem": { "title": "Lorem Ipsum Generator", "desc": "Generate placeholder text for designs." },
+      "/ai": { "title": "AI Lab", "desc": "Experimental playground for local-first AI models." },
+      "/document/master": { "title": "Docs Master", "desc": "Universal document viewer & editor for Office files." }
+    },
+    "openTool": "Open Tool"
+  }
+}

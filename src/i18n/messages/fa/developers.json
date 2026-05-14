@@ -1,0 +1,84 @@
+{
+  "developers": {
+    "seo": {
+      "title": "SafeTools for Developers | Local-First Processing Engine",
+      "description": "Learn to build and contribute to SafeTools. Explore our local-first WebAssembly architecture, client-side AI, and privacy-preserving developer utilities."
+    },
+    "hero": {
+      "title": "Build Local-First. <br></br> Privacy by Default.",
+      "subtitle": "SafeTools exposes high-performance local processing modules via a clean, unified engine architecture.",
+      "github": "Explore Source"
+    },
+    "terminal": {
+      "label": "Dev Engine Node v4.2",
+      "install": "npm install @safetools/engine",
+      "installDesc": "Integrating local-first processing into your own apps.",
+      "verify": "safetools --verify-sandbox",
+      "wasm": "WASM Security Buffer: SECURE",
+      "policy": "Network Isolation: ENFORCED",
+      "sandbox": "Privacy Shield: ACTIVE"
+    },
+    "playground": {
+      "title": "The Playground. <br></br> Browser Native.",
+      "subtitle": "Test our local-first logic directly in the browser. Zero server latency, maximum power.",
+      "exampleLabel": "LOGIC MODULE",
+      "examples": [
+        {
+          "title": "Zero-Server PDF Merge",
+          "code": "// Processed entirely in browser via WASM\nimport { PDFDocument } from 'pdf-lib';\n\nasync function mergePDFs(files) {\n  const mergedPdf = await PDFDocument.create();\n  for (const file of files) {\n    const pdf = await PDFDocument.load(await file.arrayBuffer());\n    const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());\n    copiedPages.forEach((page) => mergedPdf.addPage(page));\n  }\n  return await mergedPdf.save();\n}"
+        },
+        {
+          "title": "Local Image Transform",
+          "code": "// Multi-threaded Sharp-like performance in browser\nconst canvas = document.createElement('canvas');\nconst ctx = canvas.getContext('2d');\n\nasync function resize(imageFile, width, height) {\n  const img = await createImageBitmap(imageFile);\n  canvas.width = width;\n  canvas.height = height;\n  ctx.drawImage(img, 0, 0, width, height);\n  return new Promise(r => canvas.toBlob(r, 'image/webp', 0.9));\n}"
+        },
+        {
+          "title": "Client-Side AI Inference",
+          "code": "// via Transformers.js v3 (WebGPU)\nimport { pipeline } from '@xenova/transformers';\n\nconst extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');\nconst output = await extractor('This text is processed locally!', {\n  pooling: 'mean',\n  normalize: true,\n});"
+        }
+      ]
+    },
+    "tools": {
+      "badge": "Developer Utilities",
+      "title": "Built for Productivity.",
+      "items": [
+        {
+          "name": "JSON Formatter",
+          "desc": "Validate and beautify large JSON datasets."
+        },
+        {
+          "name": "JWT Debugger",
+          "desc": "Decode and inspect local JSON Web Tokens."
+        },
+        {
+          "name": "Base64 Studio",
+          "desc": "Bidirectional encoding for binary data."
+        },
+        {
+          "name": "Regex Lab",
+          "desc": "Test complex expressions in isolation."
+        },
+        {
+          "name": "SQL Formatter",
+          "desc": "Clean up raw queries for production."
+        },
+        {
+          "name": "Hash Generator",
+          "desc": "MD5, SHA-256, and moreall local."
+        }
+      ]
+    },
+    "techBadges": [
+      "WASM",
+      "Rust",
+      "TypeScript",
+      "WebGPU",
+      "V8 Sandbox",
+      "WebWorkers"
+    ],
+    "cta": {
+      "title": "Open Source <br></br> Foundation",
+      "subtitle": "SafeTools is built on a foundation of transparency. Contribute to our local-first engine on GitHub.",
+      "button": "Join the Contributors"
+    }
+  }
+}

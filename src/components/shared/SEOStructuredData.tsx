@@ -2,8 +2,15 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 interface FAQItem {
-  question: string;
-  answer: string;
+  q: string;
+  a: string;
+}
+
+interface HowToStep {
+  name: string;
+  text: string;
+  url?: string;
+  image?: string;
 }
 
 interface SEOStructuredDataProps {
@@ -13,9 +20,15 @@ interface SEOStructuredDataProps {
   image?: string;
   faqItems?: FAQItem[];
   breadcrumbs?: { name: string; item: string }[];
+  howTo?: {
+    name: string;
+    description: string;
+    step: HowToStep[];
+  };
+  browserRequirements?: string;
 }
 
-export default function SEOStructuredData({ name, description, url, image, faqItems, breadcrumbs }: SEOStructuredDataProps) {
+export default function SEOStructuredData({ name, description, url, image, faqItems, breadcrumbs, howTo, browserRequirements }: SEOStructuredDataProps) {
   const schemas: any[] = [
     {
       "@context": "https://schema.org",
@@ -23,7 +36,7 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
       "name": name,
       "description": description,
       "url": url,
-      "applicationCategory": "MultimediaApplication",
+      "applicationCategory": "BrowserApplication",
       "operatingSystem": "Browser",
       "offers": {
         "@type": "Offer",
@@ -32,7 +45,7 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
       },
       "image": image || "https://safetools.space/android-chrome-512x512.webp",
       "permissions": "None (Client-side only)",
-      "browserRequirements": "Requires JavaScript and WebAssembly",
+      "browserRequirements": browserRequirements || "Requires modern browser with JavaScript and WebAssembly",
       "softwareVersion": "1.0.0",
       "publisher": {
         "@type": "Organization",
@@ -46,16 +59,16 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
     }
   ];
 
-  if (faqItems && faqItems.length > 0) {
+  if (Array.isArray(faqItems) && faqItems.length > 0) {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": faqItems.map(item => ({
         "@type": "Question",
-        "name": item.question,
+        "name": item.q,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": item.answer
+          "text": item.a
         }
       }))
     });
@@ -70,6 +83,23 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
         "position": i + 1,
         "name": crumb.name,
         "item": crumb.item
+      }))
+    });
+  }
+
+  if (howTo && Array.isArray(howTo.step) && howTo.step.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": howTo.name,
+      "description": howTo.description,
+      "step": howTo.step.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": index + 1,
+        "name": step.name,
+        "text": step.text,
+        ...(step.url && { "url": step.url }),
+        ...(step.image && { "image": step.image })
       }))
     });
   }

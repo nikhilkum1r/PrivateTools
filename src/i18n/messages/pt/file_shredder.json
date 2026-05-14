@@ -1,0 +1,130 @@
+{
+  "fileShredder": {
+    "seo": {
+      "title": "Triturador de Arquivos Seguro | Excluir Arquivos Permanentemente | SafeTools",
+      "description": "Remova arquivos sensíveis com segurança e reduza riscos de recuperação usando ferramentas de trituração de arquivos baseadas no navegador. Processamento local com zero uploads para o servidor."
+    },
+    "disclaimer": {
+      "title": "⚠️ Importante: Triturador de Arquivos",
+      "body": "Esta ferramenta substitui os dados do seu arquivo por bytes aleatórios na memória do navegador. NÃO exclui o arquivo original do seu disco rígido, SSD ou dispositivo de armazenamento - isso requer ferramentas de exclusão segura ao nível do sistema operacional. Baixe o arquivo triturado como prova de substituição em memória. Ao continuar, você confirma que entende esta limitação."
+    },
+    "hero": {
+      "title": "Triturador de Arquivos",
+      "subtitle": "Remova arquivos sensíveis com segurança e reduza riscos de recuperação com ferramentas de trituração de arquivos baseadas no navegador.",
+      "badge": "Proteja informações sensíveis removendo arquivos com segurança antes de compartilhar ou descartar."
+    },
+    "trust": [
+      {
+        "label": "Processamento Local"
+      },
+      {
+        "label": "Zero Upload"
+      },
+      {
+        "label": "Sem Rastreamento"
+      },
+      {
+        "label": "Limpeza Instantânea"
+      },
+      {
+        "label": "Baseado no Navegador"
+      }
+    ],
+    "terminal": {
+      "title": "TERMINAL DE TRITURAÇÃO SEGURA",
+      "engine": "ENTROPIA AES-256",
+      "warning": "SafeTools não pode evitar a análise física da unidade (forense) no nivelamento de desgaste de SSD/NVMe. Esta ferramenta substitui o conteúdo lógico do arquivo.",
+      "limitationLabel": "Limitação do Navegador:"
+    },
+    "protocols": {
+      "title": "Protocolo de Substituição",
+      "options": [
+        {
+          "label": "1 Passagem",
+          "desc": "Substituição aleatória única",
+          "risk": "Básico"
+        },
+        {
+          "label": "3 Passagens",
+          "desc": "Limpeza padrão recomendada",
+          "risk": "Médio"
+        },
+        {
+          "label": "7 Passagens",
+          "desc": "Estilo completo 5220.22-M",
+          "risk": "Alto"
+        }
+      ]
+    },
+    "status": {
+      "shredding": "Triturando... Passagem {pass}/{total}",
+      "success": "TRITURAÇÃO BEM-SUCEDIDA",
+      "failed": "Falha na trituração: {error}",
+      "desc": "O conteúdo do arquivo foi substituído várias vezes por padrões de bits aleatórios e entropia criptograficamente segura. Os dados originais agora são irrecuperáveis."
+    },
+    "buttons": {
+      "execute": "E X E C U T A R   T R I T U R A Ç Ã O   ({passes} PASSAGENS)",
+      "accept": "A C E I T A R   A V I S O",
+      "download": "B A I X A R   R E S Í D U O",
+      "another": "Triturar outro arquivo",
+      "overwriting": "S U B S T I T U I N D O"
+    },
+    "landing": {
+      "related": {
+        "title": "Ferramentas de Privacidade Relacionadas",
+        "tools": [
+          {
+            "name": "Limpador de Metadados",
+            "href": "/security/metadata-cleaner"
+          },
+          {
+            "name": "Cofre de Criptografia",
+            "href": "/security/vault"
+          },
+          {
+            "name": "Notas Seguras",
+            "href": "/privacy/secure-notes"
+          },
+          {
+            "name": "Esteganografia",
+            "href": "/security/steganography"
+          },
+          {
+            "name": "Gerador de Senhas",
+            "href": "/privacy/password-generator"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Filosofia de Privacidade Primeiro",
+        "content": "\"SafeTools cria ferramentas de privacidade baseadas no navegador projetadas para minimizar a exposição digital e maximizar o controle do usuário. Reduza a exposição digital com ferramentas de segurança de navegador focadas na privacidade.\""
+      },
+      "faq": {
+        "title": "FAQ do Triturador de Arquivos",
+        "description": "Perguntas comuns sobre limpeza segura de arquivos e proteção de dados locais.",
+        "items": [
+          {
+            "q": "Meus arquivos são carregados?",
+            "a": "Não. Todo o processamento de arquivos ocorre localmente dentro do seu navegador."
+          },
+          {
+            "q": "Arquivos excluídos ainda podem ser recuperados?",
+            "a": "O risco de recuperação pode variar dependendo do comportamento do sistema operacional, dispositivos de armazenamento e arquitetura de hardware."
+          },
+          {
+            "q": "Isso funciona em SSDs?",
+            "a": "Mecanismos modernos de armazenamento SSD podem afetar o comportamento de substituição devido a algoritmos de nivelamento de desgaste que gravam dados em novos blocos."
+          },
+          {
+            "q": "Esta ferramenta funciona offline?",
+            "a": "Sim. Uma vez carregada, a ferramenta funciona completamente offline, pois não precisa se comunicar com nenhum servidor."
+          },
+          {
+            "q": "SafeTools pode acessar meus arquivos?",
+            "a": "Não. Os arquivos permanecem processados localmente."
+          }
+        ]
+      }
+    }
+  }
+}

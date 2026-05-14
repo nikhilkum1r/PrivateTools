@@ -1,0 +1,252 @@
+{
+  "vault": {
+    "metadata": {
+      "title": "Secure Vault | AES-256 File Encryption | SafeTools",
+      "description": "Store and protect sensitive information with browser-based encrypted vault technology. 100% local, zero uploads, military-grade security.",
+      "ogTitle": "Secure Vault | AES-256 File Encryption | SafeTools",
+      "ogDescription": "Store and protect sensitive information with browser-based encrypted vault technology. 100% local, zero uploads, military-grade security.",
+      "keywords": "secure vault, file encryption, aes-256 vault, private storage, browser vault, offline encryption, secure file storage, local vault tool"
+    },
+    "hero": {
+      "badge": "Advanced Security Architecture",
+      "title": "Secure Vault",
+      "description": "Store and protect sensitive information with browser-based encrypted vault technology designed for privacy and security.",
+      "badges": {
+        "privacy": "End-to-End Privacy",
+        "local": "Local Browser Encryption",
+        "zero": "Zero Upload",
+        "noTracking": "No Tracking",
+        "offline": "Offline Capable"
+      },
+      "footer": "Military-grade AES-256-GCM protection. All processing is 100% local."
+    },
+    "engine": {
+      "steps": [
+        { "s": "01", "t": "Load Sensitive Files", "d": "Select your private documents, passwords, or recovery phrases.", "i": "HardDrive" },
+        { "s": "02", "t": "Set Master Security Key", "d": "Apply industrial-grade AES-256 encryption with a custom key.", "i": "Key" },
+        { "s": "03", "t": "Download Secure Vault", "d": "Retrieve your encrypted .vault container for secure local storage.", "i": "Download" }
+      ],
+      "mode": {
+        "secure": "SECURE",
+        "extract": "EXTRACT"
+      },
+      "dropzone": {
+        "title": {
+          "encrypt": "Secure New File",
+          "decrypt": "Extract Vault"
+        },
+        "desc": {
+          "encrypt": "Seal files with AES-256",
+          "decrypt": "Unlock .vault containers"
+        }
+      },
+      "ready": "Ready to Secure",
+      "label": {
+        "key": "Master Security Key",
+        "keyLoaded": "Key Loaded",
+        "placeholder": "Enter vault password..."
+      },
+      "entropy": {
+        "label": "Encryption Entropy",
+        "vulnerable": "Vulnerable",
+        "secure": "Secure"
+      },
+      "processing": {
+        "encrypting": "Sealing Vault",
+        "decrypting": "Extracting Data"
+      },
+      "button": {
+        "encrypt": "Encrypt to Vault",
+        "decrypt": "Extract Original",
+        "download": "Download",
+        "vault": "Vault",
+        "file": "File",
+        "newSession": "Start New Session"
+      }
+    },
+    "status": {
+      "title": "Privacy Status",
+      "items": [
+        { "l": "Local Processing", "s": "Active" },
+        { "l": "Cloud Storage", "s": "Disabled" },
+        { "l": "HTTPS Protected", "s": "Verified" },
+        { "l": "Client-Side Cryptography", "s": "AES-256" },
+        { "l": "Tracking Scripts", "s": "Clean" }
+      ],
+      "verified": "Verified",
+      "localDev": "Local Dev",
+      "warning": "Warning",
+      "blocked": {
+        "title": "Blocked Tracking Engines",
+        "note": "SafeTools is a tracker-free zone. We do not inject any 3rd party scripts that could potentially compromise your session.",
+        "trackers": ["Google Analytics", "FB Pixel", "Hotjar", "Mixpanel", "Segment", "Intercom"]
+      },
+      "snapshot": {
+        "title": "Security Snapshot",
+        "items": [
+          { "l": "Cipher", "v": "AES-256" },
+          { "l": "Auth", "v": "GCM" },
+          { "l": "KDF", "v": "PBKDF2" },
+          { "l": "Salt", "v": "128-bit" }
+        ]
+      },
+      "zeroServer": {
+        "title": "Zero-Server State",
+        "desc": "SafeTools Vault never uploads your files or passwords. Encryption happens inside your browser's isolated memory sandbox."
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Professional Vault Features",
+        "subtitle": "Modern tools designed for maximum privacy and industrial-grade protection.",
+        "items": [
+          { "i": "HardDrive", "t": "Local Storage", "d": "Your encrypted data stays on your device, never in the cloud." },
+          { "i": "Key", "t": "Master Password", "d": "Single master key protection using industrial PBKDF2 derivation." },
+          { "i": "FileText", "t": "Secure Notes", "d": "Encrypt sensitive text, recovery phrases, and login details." },
+          { "i": "Lock", "t": "File Protection", "d": "Secure any file type from PDFs to private images with AES-256." },
+          { "i": "History", "t": "Recovery Support", "d": "Original filenames and MIME types are preserved inside the vault." },
+          { "i": "Globe", "t": "Offline Access", "d": "Works 100% offline once loaded, perfect for air-gapped systems." },
+          { "i": "Share2", "t": "Clipboard Safe", "d": "One-click export and import of encrypted vault containers." },
+          { "i": "Code2", "t": "Browser Crypto", "d": "Powered by the native Web Crypto API for hardware acceleration." }
+        ]
+      },
+      "architecture": {
+        "badge": "Military Grade",
+        "title": "Advanced Security Architecture",
+        "description": "SafeTools Vault utilizes the same encryption standards trusted by governments and financial institutions worldwide.",
+        "items": [
+          { "t": "AES-256-GCM Encryption", "d": "The gold standard of symmetric encryption, providing both privacy and data integrity." },
+          { "t": "PBKDF2 Key Derivation", "d": "100,000+ iterations of HMAC-SHA256 ensures your password is hardened against brute-force." },
+          { "t": "96-bit Random IVs", "d": "Every encryption operation uses a unique Initialization Vector to prevent pattern analysis." }
+        ],
+        "localCrypto": "Local Crypto"
+      },
+      "useCases": {
+        "title": "What Can You Protect?",
+        "subtitle": "From recovery phrases to business secrets, keep everything private.",
+        "items": [
+          { "i": "Key", "c": "text-yellow-400", "t": "Password Backups" },
+          { "i": "History", "c": "text-emerald-400", "t": "Recovery Phrases" },
+          { "i": "Shield", "c": "text-blue-400", "t": "Financial Documents" },
+          { "i": "Code2", "c": "text-purple-400", "t": "API & Dev Keys" },
+          { "i": "FileText", "c": "text-cyan-400", "t": "Legal IDs" },
+          { "i": "Lock", "c": "text-pink-400", "t": "Private Media" },
+          { "i": "History", "c": "text-orange-400", "t": "Digital Inheritance" },
+          { "i": "Lock", "c": "text-red-400", "t": "Business Secrets" }
+        ]
+      },
+      "threats": {
+        "title": "Threat Protection",
+        "items": [
+          "Protects against cloud provider data breaches",
+          "Eliminates server-side tracking and metadata harvesting",
+          "Prevents unauthorized access on shared devices",
+          "Hardens data against transit-level interception",
+          "Zero exposure to plaintext storage vulnerabilities"
+        ],
+        "risk": {
+          "title": "Reduce Data Exposure Risks",
+          "desc": "Traditional vaults store your data in the cloud, creating a central point of failure. SafeTools Vault eliminates this risk by keeping your data decentralized and local.",
+          "button": "Learn about our Zero-Trust model"
+        }
+      },
+      "comparison": {
+        "title": "Why Choose SafeTools Vault?",
+        "subtitle": "See how our local-first approach compares to traditional cloud vaults.",
+        "headers": ["Feature", "Cloud Vaults", "SafeTools"],
+        "rows": [
+          { "feat": "Cloud Storage", "trad": true, "safe": false },
+          { "feat": "Local Encryption", "trad": "Partial", "safe": "Full" },
+          { "feat": "Tracking Scripts", "trad": "Sometimes", "safe": "None" },
+          { "feat": "Account Required", "trad": true, "safe": false },
+          { "feat": "Browser-Side Processing", "trad": "Limited", "safe": "Complete" },
+          { "feat": "Privacy Focused", "trad": "Varies", "safe": "Maximum" }
+        ]
+      },
+      "enterprise": {
+        "badge": "Enterprise Ready",
+        "title": "Zero-Knowledge Workflow Integration",
+        "description": "IT Security teams prefer SafeTools Vault because it eliminates the \"SaaS Risk\" vector. No data ever hits our infrastructure, making it compliant with strict internal privacy policies and GDPR/HIPAA standards.",
+        "items": [
+          "No Vendor Lock-in: Data is stored in standard binary formats",
+          "Air-Gapped Compatible: Use on internal offline networks",
+          "Instant Deployment: No account provisioning or IT setup required",
+          "Memory Safety: Encryption handled in browser sandbox"
+        ],
+        "audit": {
+          "label": "Security Audit Log",
+          "status": "PASSED",
+          "validated": "SafeTools Standard V2.0 Validated"
+        }
+      },
+      "specs": {
+        "title": "Technical Specifications",
+        "subtitle": "Deep technical details for cryptographic audits and security researchers.",
+        "items": [
+          { "l": "Encryption Algorithm", "v": "AES-GCM (Authenticated)" },
+          { "l": "Key Strength", "v": "256-bit (AES-256)" },
+          { "l": "Key Derivation", "v": "PBKDF2-HMAC-SHA256" },
+          { "l": "PBKDF2 Iterations", "v": "100,000 rounds" },
+          { "l": "Salt Length", "v": "128-bit (Random)" },
+          { "l": "Initialization Vector", "v": "96-bit (Unique per op)" },
+          { "l": "Authentication Tag", "v": "128-bit (Built-in GCM)" },
+          { "l": "Binary Format", "v": "Custom .vault (Magic PVLT)" }
+        ]
+      },
+      "offline": {
+        "badge": "100% Offline Capable",
+        "title": "Secure Storage, Everywhere",
+        "description": "SafeTools Vault is a Progressive Web App (PWA). Once loaded, it functions entirely offline, ensuring you can extract your critical data even without an internet connection.",
+        "badges": {
+          "noNetwork": "No Network Needed",
+          "secureRuntime": "Secure Runtime"
+        }
+      },
+      "bestPractices": {
+        "title": "Vault Security Best Practices",
+        "items": [
+          { "t": "Strong Master Password", "d": "Use 16+ characters with a mix of symbols. Your password is the only key to your data." },
+          { "t": "Regular Backups", "d": "Keep multiple copies of your .vault files on different encrypted drives." },
+          { "t": "Lock Inactive Sessions", "d": "Close the browser tab immediately after extracting sensitive files." }
+        ]
+      },
+      "commitment": {
+        "title": "Your Data Stays Under Your Control",
+        "description": "\"SafeTools Vault is designed using privacy-first principles. Your encrypted data remains locally protected and is never uploaded without your permission.\""
+      },
+      "faq": {
+        "title": "Vault FAQ",
+        "subtitle": "Everything you need to know about our local encryption protocol.",
+        "items": [
+          { "q": "Is my vault uploaded to servers?", "a": "No. All encryption and processing happen locally in your browser. Your data never leaves your device." },
+          { "q": "Can SafeTools read my data?", "a": "Impossible. We don't have accounts, we don't store your keys, and we don't have access to your browser's memory." },
+          { "q": "What if I forget my password?", "a": "Because this is a zero-knowledge tool, we cannot recover your data. Please use a strong password you won't forget." },
+          { "q": "Is account registration required?", "a": "No. SafeTools is designed for privacy and immediate utility. No signup needed." },
+          { "q": "Can I use the vault offline?", "a": "Yes. Once the page is loaded, it works entirely offline as a PWA." },
+          { "q": "How secure is AES-256-GCM?", "a": "It is the industry standard for secure communications, trusted by the NSA and global financial networks." }
+        ]
+      },
+      "related": {
+        "title": "Privacy Ecosystem",
+        "subtitle": "Explore our other local-first security utilities."
+      },
+      "manifesto": {
+        "title": "Privacy is a Right, Not a Feature.",
+        "description": "Privacy is a fundamental digital right. Our tools are designed to minimize data exposure and maximize user control. No accounts. No tracking. No cloud storage. Just secure privacy-first protection.",
+        "button": "Explore Privacy Hub"
+      }
+    },
+    "footer": {
+      "text": "The most secure vault is the one that never leaves your machine.",
+      "noTracking": "SafeTools is a tracker-free zone. 100% private, 100% local."
+    },
+    "toast": {
+      "secured": "File secured successfully!",
+      "extracted": "File extracted successfully!",
+      "failed": "Security key invalid or vault corrupted.",
+      "invalidPassword": "Wrong password. Please check and try again.",
+      "legacyVersion": "This is an older vault version. Please use the legacy extractor.",
+      "invalidFile": "Not a valid SafeTools Vault file."
+    }
+  }
+}

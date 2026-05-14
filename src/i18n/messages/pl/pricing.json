@@ -1,0 +1,61 @@
+{
+  "pricing": {
+    "hero": {
+      "badge": "Polityka sprawiedliwego dostępu",
+      "title": "Darmowe dla <br></br> każdego.",
+      "subtitle": "Wierzymy, że prywatność nie powinna być funkcją premium. Powinna być domyślnym stanem sieci."
+    },
+    "plan": {
+      "title": "Plan Suwerenny",
+      "price": "0 zł",
+      "forever": "/ na zawsze",
+      "description": "Uzyskaj dostęp do całej infrastruktury SafeTools bez żadnych kompromisów. Żadnych subskrypcji, ukrytych limitów i karty kredytowej.",
+      "button": "Zacznij korzystać za darmo",
+      "included": "Co zawiera plan",
+      "features": [
+        "150+ profesjonalnych narzędzi",
+        "Nieograniczone przetwarzanie plików",
+        "Brak limitów rozmiaru plików",
+        "Szybkość akcelerowana sprzętowo",
+        "100% prywatne i lokalne",
+        "Brak wymogu posiadania konta",
+        "Brak reklam i trackerów",
+        "Pełny dostęp do lokalnego silnika"
+      ]
+    },
+    "comparison": {
+      "title": "Dlaczego to jest darmowe?",
+      "subtitle": "Tradycyjne narzędzia mają serwery. Serwery kosztują. SafeTools wykorzystuje Twój sprzęt do wykonywania pracy.",
+      "cloud": {
+        "title": "Chmurowe „darmowe” narzędzia",
+        "features": [
+          "Ograniczenie do plików 10 MB",
+          "Czas oczekiwania i listy oczekujących",
+          "Znaki wodne na eksportach",
+          "Agresywny e-mail marketing"
+        ],
+        "unlimited_strike": "Nieograniczone przetwarzanie"
+      },
+      "safe": {
+        "title": "SafeTools",
+        "features": [
+          "100% darmowe na zawsze",
+          "Brak limitów rozmiaru plików",
+          "Brak kolejek / Natychmiast lokalnie",
+          "Brak znaków wodnych / Pełna jakość",
+          "Brak kont / Całkowita anonimowość"
+        ]
+      }
+    },
+    "final": {
+      "title": "Ekosystem <br></br> Privacy-First.",
+      "subtitle": "Żadnych subskrypcji. Żadnego śledzenia. Czysta lokalna moc.",
+      "independent": "Finansowane niezależnie",
+      "zeroServer": "Infrastruktura bezserwerowa"
+    },
+    "seo": {
+      "title": "Cennik i wsparcie | Darmowy zestaw narzędzi SafeTools",
+      "description": "SafeTools jest w 100% darmowe na zawsze. Dowiedz się, dlaczego nie pobieramy opłat za prywatność i jak możesz wesprzeć naszą misję local-first web."
+    }
+  }
+}

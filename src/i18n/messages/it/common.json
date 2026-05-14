@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Benvenuti su SafeTools",
+    "tagline": "Oltre 150 strumenti per file online che danno priorità alla privacy e funzionano localmente",
+    "upload": "Carica file",
+    "download": "Scarica",
+    "compress": "Comprimi",
+    "convert": "Converti",
+    "edit": "Modifica",
+    "search": "Cerca tra oltre 150 strumenti...",
+    "privacy": "Privacy al primo posto",
+    "speed": "Ultra veloce",
+    "security": "Grado aziendale",
+    "systemHealth": {
+      "title": "Stato del sistema",
+      "localEngine": "Motore locale",
+      "localEngineDesc": "L'elaborazione avviene al 100% localmente sul tuo dispositivo.",
+      "secureSession": "Sessione sicura",
+      "secureSessionDesc": "Ambiente browser isolato per la massima privacy.",
+      "online": "Connesso",
+      "onlineDesc": "Online per gli ultimi aggiornamenti degli strumenti.",
+      "offlineReady": "Pronto per l'uso offline",
+      "offlineReadyDesc": "Questo strumento funziona perfettamente senza connessione a Internet.",
+      "zeroTracking": "Nessun tracciamento",
+      "zeroTrackingDesc": "Nessun dato viene inviato ai nostri server per il tracciamento."
+    },
+    "securityTools": "Strumenti di sicurezza",
+    "privacyTools": "Strumenti di privacy",
+    "tools": {
+      "vault": "Caveau sicuro",
+      "metadataCleaner": "Pulitore metadati",
+      "fileShredder": "Distruggi documenti",
+      "secureNotes": "Note sicure",
+      "passwordGenerator": "Generatore di password",
+      "passwordChecker": "Controllo robustezza password",
+      "ocr": "Estrazione OCR",
+      "steganography": "Steganografia d'immagine",
+      "imageEditor": "Editor d'immagini",
+      "imageCompressor": "Compressore d'immagini",
+      "formatConverter": "Convertitore di formato",
+      "backgroundRemover": "Rimuovi sfondo",
+      "colorLab": "Laboratorio colori",
+      "pdfToImage": "Da PDF a immagine"
+    },
+    "toolsLabel": "Strumenti",
+    "features": "Caratteristiche",
+    "developers": "Sviluppatori",
+    "pricing": "Prezzi",
+    "about": "Informazioni su SafeTools",
+    "whyAds": "Perché mostriamo annunci",
+    "privacyPolicy": "Informativa sulla privacy",
+    "termsOfService": "Termini di servizio",
+    "contact": "Contattaci",
+    "home": "Home",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Registro modifiche",
+    "light": "Chiaro",
+    "dark": "Scuro",
+    "system": "Sistema",
+    "startFree": "Inizia gratuitamente",
+    "systemStatus": "Stato del sistema",
+    "updates": "Aggiornamenti",
+    "feedback": "Feedback",
+    "contents": "Contenuti",
+    "imageTools": "Strumenti immagine",
+    "openTools": "Apri strumenti",
+    "ready": "Pronto a prendere il controllo?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "PRONTO",
+      "blocked": "BLOCCATO",
+      "success": "SUCCESSO",
+      "error": "ERRORE"
+    },
+    "getStarted": "Inizia",
+    "forever": "per sempre",
+    "step": "Passaggio",
+    "dropzone": {
+      "title": "Carica file",
+      "description": "Trascina e rilascia il tuo file qui",
+      "secure": "Elaborazione locale sicura",
+      "processedLocally": "Elaborato localmente",
+      "maxSize": "Max {size}MB",
+      "noFileChosen": "Nessun file selezionato"
+    },
+    "export": {
+      "ready": "Pronto per il download",
+      "download": "Scarica",
+      "copy": "Copia",
+      "copied": "Copiato!",
+      "share": "Condividi",
+      "reset": "Ripristina"
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "description": "Tutto ciò che devi sapere su questo strumento e su come protegge la tua privacy."
+    },
+    "related": {
+      "title": "Strumenti professionali correlati",
+      "subtitle": "Esplora altri strumenti che danno priorità alla privacy per il tuo flusso di lavoro."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Seleziona lingua"
+    },
+    "relatedTools": "Strumenti creativi correlati",
+    "relatedToolsDesc": "Esplora altri strumenti che danno priorità alla privacy.",
+    "all": "Tutti",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Pubblicità",
+    "system_health": {
+      "title": "Stato del sistema",
+      "localEngine": "Motore locale",
+      "localEngineDesc": "Elaborazione sul tuo hardware",
+      "secureSession": "Sessione sicura",
+      "secureSessionDesc": "Contesto browser isolato",
+      "online": "Online",
+      "onlineDesc": "Ottimizzato per la velocità",
+      "offlineReady": "Pronto per l'uso offline",
+      "offlineReadyDesc": "Completamente funzionale offline",
+      "zeroTracking": "Nessun tracciamento",
+      "zeroTrackingDesc": "Architettura orientata alla privacy"
+    },
+    "values": {
+      "yes": "Sì",
+      "no": "No",
+      "limited": "Limitato"
+    },
+    "pro": {
+      "comingSoon": "Pro – Prossimamente",
+      "unlockPower": "Sblocca più potenza",
+      "features": [
+        "File fino a 10 volte più grandi",
+        "Elaborazione batch illimitata",
+        "Coda di elaborazione server prioritaria",
+        "Link condivisibili (scadenza 72 ore)",
+        "Cronologia file – ultimi 50 lavori",
+        "Elaborazione lato server per file pesanti"
+      ],
+      "waitlist": "Unisciti alla lista d'attesa – 8$/mese al lancio",
+      "successTitle": "Sei in lista! 🎉",
+      "successDesc": "Ti invieremo un'e-mail quando Pro verrà lanciato.",
+      "continueFree": "Continua con la versione gratuita",
+      "emailPlaceholder": "tua@email.com",
+      "join": "Unisciti",
+      "validEmail": "Inserisci un indirizzo e-mail valido.",
+      "waitlistSuccess": "Sei in lista d'attesa! Ti avviseremo quando Pro verrà lanciato.",
+      "freeLimit": "Limite gratuito: {limit}",
+      "proLimit": "Limite Pro: {limit}",
+      "yourFile": "Il tuo file: {size}"
+    },
+    "disclaimer": {
+      "understand": "Ho capito – Continua",
+      "responsibility": "Continuando, accetti la piena responsabilità per l'utilizzo di questo strumento."
+    },
+    "toast": {
+      "linkCopied": "Link copiato negli appunti"
+    },
+    "seo": {
+      "browserReqs": "Richiede JavaScript e WebAssembly"
+    },
+    "aria": {
+      "goHome": "Vai alla Home",
+      "toggleTheme": "Cambia tema",
+      "faq": "Domande frequenti",
+      "changeLanguage": "Cambia lingua",
+      "close": "Chiudi",
+      "menu": "Menu",
+      "openTools": "Apri il menu degli strumenti",
+      "exploreTools": "Esplora tutti gli strumenti",
+      "platformFeatures": "Caratteristiche della piattaforma",
+      "privacyCommitment": "Impegno per la privacy",
+      "developerApi": "API per sviluppatori e documenti",
+      "pricingPlans": "Piani tariffari"
+    },
+    "shareTool": {
+      "title": "Diffondi la privacy",
+      "subtitle": "Supporta l'informatica local-first",
+      "copyLink": "Copia link",
+      "copied": "Copiato",
+      "twitter": "Dai un'occhiata a questo strumento privato, senza caricamento, per {title}:",
+      "telegram": "Elaborazione file sicura con SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Soluzioni PDF",
+        "image": "Studio immagini",
+        "privacy": "Strumenti di privacy",
+        "developer": "Strumenti per sviluppatori",
+        "pdfMerge": "Unisci PDF",
+        "pdfSplit": "Dividi PDF",
+        "pdfUnlock": "Sblocca PDF",
+        "pdfProtect": "Proteggi PDF",
+        "pdfToImage": "Da PDF a immagine",
+        "securityFileShredder": "Distruggi documenti"
+      }
+    },
+    "error": "Errore"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "Elaborazione 100% locale",
+      "noUploads": "Zero caricamenti sul server",
+      "noTracking": "Zero tracciamento dati",
+      "privacyFirst": "UX orientata alla privacy",
+      "worksOffline": "Funziona offline"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "CommandPalette": {
+    "searchPlaceholder": "टूल्स, क्रियाएं और कमांड खोजें...",
+    "favorites": "पसंदीदा",
+    "searchResults": "खोज परिणाम",
+    "noResults": "\"{search}\" के लिए कोई परिणाम नहीं मिला",
+    "navigate": "नेविगेट",
+    "launch": "लॉन्च"
+  }
+}

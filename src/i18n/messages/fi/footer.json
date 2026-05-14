@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Ammattilaistason selaintyökalut, jotka on suunniteltu yksityisyyttä ja nopeutta varten. Yli 150 apuohjelmaa, jotka toimivat täysin laitteellasi.",
+    "tagline": "Tietosi kuuluvat sinulle.",
+    "localEngineActive": "Paikallinen moottori aktiivinen",
+    "isolatedContextVerified": "Eristetty konteksti vahvistettu",
+    "verifiedSupport": "Vahvistettu selainyhteensopivuus",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Tuote",
+    "resources": "Resurssit",
+    "community": "Yhteisö",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Kaikki järjestelmät paikallisia",
+    "faq": "UKK"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Studio Konwersji Obrazów | Obsługa 150+ formatów | SafeTools",
+      "description": "Konwertuj obrazy między ponad 150 formatami lokalnie w przeglądarce. Obsługa HEIC, WebP, AVIF, RAW, PDF i innych. 100% prywatności."
+    },
+    "hero": {
+      "title": "Uniwersalny konwerter obrazów.",
+      "titleSpecific": "Konwertuj {from} na {to}.",
+      "description": "Konwertuj obrazy między ponad 150 formatami lokalnie w przeglądarce. Zero wysyłania na serwer.",
+      "descriptionSpecific": "Konwertuj {from} na {to} natychmiast. Lokalne przetwarzanie z priorytetem prywatności bez wysyłania plików.",
+      "engine": "Lokalne przetwarzanie sprzętowe",
+      "privateConverter": "Prywatny silnik przeglądarki"
+    },
+    "benefits": {
+      "local": "Lokalny silnik",
+      "zero": "Zero wysyłania",
+      "no_tracking": "Brak śledzenia",
+      "fast": "Ultra szybki",
+      "browser": "W przeglądarce"
+    },
+    "performance": {
+      "title": "Silnik o wysokiej wydajności",
+      "subtitle": "Przetwarzanie w przeglądarce wspomagane przez GPU",
+      "items": [
+        {
+          "title": "150+ Formatów",
+          "description": "Obsługa wszystkiego, od HEIC i RAW po stare formaty bitmapowe."
+        },
+        {
+          "title": "Przetwarzanie wsadowe",
+          "description": "Konwertuj setki obrazów jednocześnie bez obciążania serwera."
+        },
+        {
+          "title": "Bezstratna jakość",
+          "description": "Zaawansowane algorytmy resamplingu zachowują każdy piksel oryginalnych danych."
+        },
+        {
+          "title": "Lokalny OCR",
+          "description": "Wyodrębniaj warstwy tekstowe podczas konwersji przy użyciu wbudowanych silników rozpoznawania."
+        },
+        {
+          "title": "Kontrola metadanych",
+          "description": "Wybierz, czy chcesz usunąć, czy zachować warstwy danych EXIF, GPS i IPTC."
+        },
+        {
+          "title": "Prywatność przeglądarki",
+          "description": "Twoje pliki nigdy nie opuszczają Twojego urządzenia. W 100% bezpieczna architektura gotowa do pracy offline."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Obszar roboczy konwersji",
+      "assets": "{count} Zasobów",
+      "telemetry": "Lokalne przetwarzanie sprzętowe",
+      "savings": "Aktualne oszczędności",
+      "smaller": "{size} mniejszy",
+      "impact": "Globalny wpływ",
+      "saved": "{size} zaoszczędzonych",
+      "clear": "Wyczyść obszar roboczy",
+      "addMore": "Dodaj pliki",
+      "exportAll": "Eksportuj wszystko (ZIP)"
+    },
+    "config": {
+      "title": "Ustawienia globalne",
+      "format": "Format docelowy",
+      "selectFormat": "Wybierz format",
+      "search": "Szukaj w 150+ formatach...",
+      "quality": "Jakość i kompresja",
+      "resizeW": "Zmień szerokość",
+      "resizeH": "Zmień wysokość",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Kontrola metadanych",
+      "strip": "Usuń EXIF/GPS (Włączone)",
+      "wasm": "Silnik WASM",
+      "accelerated": "Przyspieszenie sprzętowe",
+      "targetSize": "Docelowy rozmiar pliku",
+      "limit": "Ogranicz do {size}KB",
+      "optimized": "Zoptymalizowana jakość"
+    },
+    "categories": {
+      "regular": "Standardowe formaty",
+      "web": "Zoptymalizowane pod WWW",
+      "modern": "Formaty nowej generacji",
+      "print": "Profesjonalny druk",
+      "design": "Zasoby projektowe",
+      "game": "Tekstury do gier",
+      "raw": "Dane RAW z aparatu",
+      "scientific": "Obrazowanie naukowe",
+      "vector": "Grafika wektorowa",
+      "hdr": "Wysoka rozpiętość tonalna",
+      "document": "Biuro i dokumenty",
+      "legacy": "Stare formaty"
+    },
+    "queue": {
+      "title": "Kolejka konwersji",
+      "converted": "Skonwertowano",
+      "in": "WEJŚCIE",
+      "out": "WYJŚCIE",
+      "smaller": "{percent}% mniejszy",
+      "download": "Pobierz",
+      "convert": "Konwertuj",
+      "convert_all": "Konwertuj wszystkie pliki"
+    },
+    "toast": {
+      "noProcessed": "Brak przetworzonych plików do pobrania.",
+      "copied": "Obraz skopiowany do schowka!",
+      "clipboardFailed": "Nie udało się skopiować obrazu do schowka."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Lokalny silnik",
+        "zero": "Zero wysyłania",
+        "no_tracking": "Brak śledzenia",
+        "fast": "Ultra szybki",
+        "browser": "W przeglądarce"
+      },
+      "performance": {
+        "title": "Silnik o wysokiej wydajności",
+        "subtitle": "Przetwarzanie w przeglądarce wspomagane przez GPU",
+        "items": [
+          {
+            "title": "150+ Formatów",
+            "description": "Obsługa wszystkiego, od HEIC i RAW po stare formaty bitmapowe."
+          },
+          {
+            "title": "Przetwarzanie wsadowe",
+            "description": "Konwertuj setki obrazów jednocześnie bez obciążania serwera."
+          },
+          {
+            "title": "Bezstratna jakość",
+            "description": "Zaawansowane algorytmy resamplingu zachowują każdy piksel oryginalnych danych."
+          },
+          {
+            "title": "Lokalny OCR",
+            "description": "Wyodrębniaj warstwy tekstowe podczas konwersji przy użyciu wbudowanych silników rozpoznawania."
+          },
+          {
+            "title": "Kontrola metadanych",
+            "description": "Wybierz, czy chcesz usunąć, czy zachować warstwy danych EXIF, GPS i IPTC."
+          },
+          {
+            "title": "Prywatność przeglądarki",
+            "description": "Twoje pliki nigdy nie opuszczają Twojego urządzenia. W 100% bezpieczna architektura gotowa do pracy offline."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Obsługiwane formaty",
+        "compatibility": "Uniwersalna macierz kompatybilności",
+        "input": "Formaty wejściowe",
+        "output": "Formaty wyjściowe",
+        "freeTitle": "100% darmowe na zawsze",
+        "freeDesc": "SafeTools to bezpłatny pakiet narzędzi. Bez subskrypcji, bez ukrytych opłat, bez karty kredytowej.",
+        "optimizedTitle": "Bezstratna optymalizacja",
+        "optimizedDesc": "Nasz silnik wykorzystuje zaawansowany resampling, aby zapewnić ostrość obrazów nawet po konwersji.",
+        "precisionTitle": "Precyzja przeglądarki",
+        "precisionDesc": "Dzięki lokalnemu działaniu eliminujemy artefakty spowodowane sieciowym przetwarzaniem obrazu.",
+        "popularTitle": "Popularne konwersje",
+        "popularSubtitle": "Natychmiastowe lokalne przetwarzanie dla typowych zadań internetowych",
+        "moreFormats": "150+ innych formatów",
+        "moreDesc": "Szukasz czegoś innego? SafeTools obsługuje niemal każdy istniejący format obrazu.",
+        "start": "Powrót na górę"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Między iloma formatami mogę konwertować?",
+            "a": "Możesz konwertować między ponad 150 formatami obrazów, w tym nowoczesnymi, takimi jak WebP, AVIF i HEIC, a także profesjonalnymi formatami, takimi jak pliki PSD, TIFF i RAW."
+          },
+          {
+            "q": "Czy stracę jakość obrazu podczas konwersji?",
+            "a": "Używamy wysokiej jakości silników kodujących. Możesz ręcznie dostosować ustawienia jakości/kompresji, aby mieć pewność, że wynik będzie wyglądał dokładnie tak, jak chcesz, niezależnie od tego, czy optymalizujesz pod WWW, czy pod druk."
+          },
+          {
+            "q": "Czy mogę konwertować zdjęcia HEIC z iPhone'a na JPG?",
+            "a": "Tak! Nasz konwerter jest idealny do przekształcania plików HEIC w szeroko kompatybilne formaty JPG lub PNG bezpośrednio w przeglądarce, bez przesyłania ich na serwer."
+          },
+          {
+            "q": "Czy istnieje limit liczby konwertowanych plików?",
+            "a": "Nie. Możesz konwertować dowolną liczbę plików, pojedynczo lub wsadowo, całkowicie za darmo."
+          }
+        ],
+        "title": "Często zadawane pytania",
+        "description": "Wszystko, co musisz wiedzieć o naszym narzędziu dbającym o prywatność."
+      }
+    }
+  }
+}

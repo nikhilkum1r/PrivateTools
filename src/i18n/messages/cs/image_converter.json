@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Studio konverze obrázků | Podpora 150+ formátů | SafeTools",
+      "description": "Konvertujte obrázky mezi více než 150 formáty lokálně ve vašem prohlížeči. Podpora HEIC, WebP, AVIF, RAW, PDF a dalších. 100% soukromí."
+    },
+    "hero": {
+      "title": "Univerzální konvertor obrázků.",
+      "titleSpecific": "Konvertovat {from} na {to}.",
+      "description": "Konvertujte obrázky mezi více než 150 formáty lokálně ve vašem prohlížeči. Žádné nahrávání na server.",
+      "descriptionSpecific": "Okamžitě konvertujte {from} na {to}. Lokální zpracování s prioritou soukromí bez nahrávání.",
+      "engine": "Lokální hardwarové zpracování",
+      "privateConverter": "Soukromý engine prohlížeče"
+    },
+    "benefits": {
+      "local": "Lokální engine",
+      "zero": "Žádné nahrávání",
+      "no_tracking": "Žádné sledování",
+      "fast": "Ultra rychlé",
+      "browser": "V prohlížeči"
+    },
+    "performance": {
+      "title": "Vysoce výkonný engine",
+      "subtitle": "Zpracování v prohlížeči akcelerované pomocí GPU",
+      "items": [
+        {
+          "title": "150+ Formátů",
+          "description": "Podpora pro vše od HEIC a RAW až po staré bitmapové formáty."
+        },
+        {
+          "title": "Dávkové zpracování",
+          "description": "Konvertujte stovky obrázků současně bez omezení serveru."
+        },
+        {
+          "title": "Bezztrátová kvalita",
+          "description": "Pokročilé algoritmy resamplování zachovají každý pixel vašich původních dat."
+        },
+        {
+          "title": "Lokální OCR",
+          "description": "Extrahujte textové vrstvy během konverze pomocí vestavěných rozpoznávacích enginů."
+        },
+        {
+          "title": "Kontrola metadat",
+          "description": "Zvolte, zda chcete odstranit nebo zachovat datové vrstvy EXIF, GPS a IPTC."
+        },
+        {
+          "title": "Soukromí prohlížeče",
+          "description": "Vaše soubory nikdy neopustí vaše zařízení. 100% bezpečná architektura připravená pro offline použití."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Konverzní pracovní prostor",
+      "assets": "{count} Aktiv",
+      "telemetry": "Lokální hardwarové zpracování",
+      "savings": "Aktuální úspora",
+      "smaller": "o {size} menší",
+      "impact": "Globální dopad",
+      "saved": "ušetřeno {size}",
+      "clear": "Vymazat pracovní prostor",
+      "addMore": "Přidat soubory",
+      "exportAll": "Exportovat vše (ZIP)"
+    },
+    "config": {
+      "title": "Globální nastavení",
+      "format": "Cílový formát",
+      "selectFormat": "Vybrat formát",
+      "search": "Hledat v 150+ formátech...",
+      "quality": "Kvalita a komprese",
+      "resizeW": "Změnit šířku",
+      "resizeH": "Změnit výšku",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Kontrola metadat",
+      "strip": "Odstranit EXIF/GPS (Povoleno)",
+      "wasm": "WASM Engine",
+      "accelerated": "Hardwarově akcelerováno",
+      "targetSize": "Cílová velikost souboru",
+      "limit": "Omezit na {size}KB",
+      "optimized": "Optimalizovaná kvalita"
+    },
+    "categories": {
+      "regular": "Standardní formáty",
+      "web": "Optimalizováno pro web",
+      "modern": "Formáty nové generace",
+      "print": "Profesionální tisk",
+      "design": "Designové prvky",
+      "game": "Herní textury",
+      "raw": "RAW data z fotoaparátu",
+      "scientific": "Vědecké zobrazování",
+      "vector": "Vektorová grafika",
+      "hdr": "Vysoký dynamický rozsah (HDR)",
+      "document": "Kancelář a dokumenty",
+      "legacy": "Staré formáty"
+    },
+    "queue": {
+      "title": "Fronta konverze",
+      "converted": "Konvertováno",
+      "in": "VSTUP",
+      "out": "VÝSTUP",
+      "smaller": "o {percent}% menší",
+      "download": "Stáhnout",
+      "convert": "Konvertovat",
+      "convert_all": "Konvertovat všechny soubory"
+    },
+    "toast": {
+      "noProcessed": "Žádné zpracované soubory ke stažení.",
+      "copied": "Obrázek zkopírován do schránky!",
+      "clipboardFailed": "Nepodařilo se zkopírovat obrázek do schránky."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Lokální engine",
+        "zero": "Žádné nahrávání",
+        "no_tracking": "Žádné sledování",
+        "fast": "Ultra rychlé",
+        "browser": "V prohlížeči"
+      },
+      "performance": {
+        "title": "Vysoce výkonný engine",
+        "subtitle": "Zpracování v prohlížeči akcelerované pomocí GPU",
+        "items": [
+          {
+            "title": "150+ Formátů",
+            "description": "Podpora pro vše od HEIC a RAW až po staré bitmapové formáty."
+          },
+          {
+            "title": "Dávkové zpracování",
+            "description": "Konvertujte stovky obrázků současně bez omezení serveru."
+          },
+          {
+            "title": "Bezztrátová kvalita",
+            "description": "Pokročilé algoritmy resamplování zachovají každý pixel vašich původních dat."
+          },
+          {
+            "title": "Lokální OCR",
+            "description": "Extrahujte textové vrstvy během konverze pomocí vestavěných rozpoznávacích enginů."
+          },
+          {
+            "title": "Kontrola metadat",
+            "description": "Zvolte, zda chcete odstranit nebo zachovat datové vrstvy EXIF, GPS a IPTC."
+          },
+          {
+            "title": "Soukromí prohlížeče",
+            "description": "Vaše soubory nikdy neopustí vaše zařízení. 100% bezpečná architektura připravená pro offline použití."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Podporované formáty",
+        "compatibility": "Univerzální matice kompatibility",
+        "input": "Vstupní formáty",
+        "output": "Výstupní formáty",
+        "freeTitle": "100% zdarma navždy",
+        "freeDesc": "SafeTools je bezplatná sada nástrojů. Žádné předplatné, žádné skryté poplatky, není vyžadována platební karta.",
+        "optimizedTitle": "Bezztrátová optimalizace",
+        "optimizedDesc": "Náš engine využívá pokročilé resamplování, aby vaše obrázky zůstaly ostré i po konverzi.",
+        "precisionTitle": "Přesnost prohlížeče",
+        "precisionDesc": "Díky lokálnímu spuštění eliminujeme artefakty způsobené síťovým zpracováním obrazu.",
+        "popularTitle": "Populární konverze",
+        "popularSubtitle": "Okamžité lokální zpracování pro běžné webové úkoly",
+        "moreFormats": "150+ dalších formátů",
+        "moreDesc": "Hledáte něco jiného? SafeTools podporuje téměř každý existující formát obrázku.",
+        "start": "Zpět nahoru"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Mezi kolika formáty mohu konvertovat?",
+            "a": "Můžete konvertovat mezi více než 150 formáty obrázků, včetně moderních jako WebP, AVIF a HEIC, stejně jako profesionálních formátů jako PSD, TIFF a RAW soubory."
+          },
+          {
+            "q": "Ztratím během konverze kvalitu obrazu?",
+            "a": "Používáme vysoce kvalitní kódovací enginy. Nastavení kvality/komprese můžete upravit ručně, aby váš výstup vypadal přesně tak, jak chcete, ať už optimalizujete pro web nebo pro tisk."
+          },
+          {
+            "q": "Mohu konvertovat HEIC fotky z iPhonu na JPG?",
+            "a": "Ano! Náš konvertor je ideální pro transformaci HEIC souborů na široce kompatibilní formáty JPG nebo PNG přímo ve vašem prohlížeči bez nahrávání na server."
+          },
+          {
+            "q": "Existuje limit na počet souborů, které mohu konvertovat?",
+            "a": "Ne. Můžete konvertovat tolik souborů, kolik chcete, jeden po druhém nebo v dávkách, zcela zdarma."
+          }
+        ],
+        "title": "Často kladené otázky",
+        "description": "Vše, co potřebujete vědět o našem nástroji s prioritou soukromí."
+      }
+    }
+  }
+}

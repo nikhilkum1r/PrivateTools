@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import {
   Dialog,
   DialogContent,
@@ -16,12 +17,12 @@ interface DisclaimerModalProps {
   title: string;
   body: string;
   onAccept: () => void;
-  /** If true, user cannot close the dialog by clicking outside — they must accept */
+  /** If true, user cannot close the dialog by clicking outside  they must accept */
   blocking?: boolean;
 }
 
 /**
- * DisclaimerModal — blocking consent gate for Steganography, Metadata Injector, File Shredder.
+ * DisclaimerModal  blocking consent gate for Steganography, Metadata Injector, File Shredder.
  * The user MUST click "I Understand" to proceed. Closing without accepting = no tool access.
  */
 export function DisclaimerModal({
@@ -31,6 +32,7 @@ export function DisclaimerModal({
   onAccept,
   blocking = true,
 }: DisclaimerModalProps) {
+  const t = useTranslations("common.disclaimer");
   return (
     <Dialog
       open={open}
@@ -50,7 +52,7 @@ export function DisclaimerModal({
             <AlertTriangle className="w-6 h-6" />
           </div>
           <DialogHeader>
-            <DialogTitle className="text-lg font-black leading-tight text-yellow-700 dark:text-yellow-400">
+            <DialogTitle className="text-lg font-bold leading-tight text-yellow-700 dark:text-yellow-400">
               {title}
             </DialogTitle>
           </DialogHeader>
@@ -67,10 +69,10 @@ export function DisclaimerModal({
               className="w-full h-12 rounded-xl font-bold bg-yellow-500 hover:bg-yellow-600 text-foreground shadow-lg shadow-yellow-500/20"
               onClick={onAccept}
             >
-              I Understand — Continue
+              {t("understand")}
             </Button>
             <p className="text-center text-[10px] text-muted-foreground">
-              By continuing you accept full responsibility for your use of this tool.
+              {t("responsibility")}
             </p>
           </div>
         </div>

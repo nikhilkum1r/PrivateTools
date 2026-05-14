@@ -1,0 +1,65 @@
+{
+  "imageHub": {
+    "seo": {
+      "title": "Hub d'outils d'image | Traitement d'image professionnel et privé | SafeTools",
+      "description": "Accédez à des outils d'image locaux de qualité professionnelle. 100 % de confidentialité, zéro téléchargement, accélération GPU. Compressez, convertissez, éditez et supprimez les arrière-plans en toute sécurité dans votre navigateur.",
+      "keywords": "outils d'image, compresser l'image, convertir l'image, supprimer le fond, éditeur d'image en ligne, traitement d'image privé, outils d'image locaux",
+      "ogTitle": "SafeTools Image Studio | 100 % Privé",
+      "ogDescription": "La suite complète d'utilitaires d'image professionnels. Tout fonctionne localement sur votre matériel.",
+      "structuredName": "SafeTools Image Studio",
+      "structuredDesc": "Une suite complète d'outils de traitement d'image axés sur la confidentialité."
+    },
+    "hero": {
+      "badge": "Traitement d'image nouvelle génération",
+      "title": "Puissance d'image",
+      "description": "Outils d'image locaux de qualité professionnelle. 100 % de confidentialité, zéro téléchargement, accélération GPU."
+    },
+    "tools": {
+      "compress": {
+        "title": "Compresser l'image (Ko/Mo)",
+        "desc": "Réduisez la taille du fichier jusqu'à 90 % sans perte de qualité visible. Optimisation par lots pour le Web.",
+        "tags": [
+          "Le plus populaire",
+          "Haute vitesse"
+        ]
+      },
+      "convert": {
+        "title": "Convertir le format d'image",
+        "desc": "Convertissez entre plus de 10 formats, dont HEIC, AVIF, WebP et PDF en mode par lots.",
+        "tags": [
+          "Universel",
+          "Plus de 10 formats"
+        ]
+      },
+      "edit": {
+        "title": "Éditer des images",
+        "desc": "Toute la puissance : redimensionner, recadrer, faire pivoter, filigraner, filtres et extraction OCR.",
+        "tags": [
+          "Tout-en-un",
+          "Fonctions Pro"
+        ]
+      },
+      "remove_bg": {
+        "title": "Suppresseur de fond par IA",
+        "desc": "Supprimez les arrière-plans d'images instantanément avec l'IA. Segmentation 100 % privée, local-first.",
+        "tags": [
+          "Nouveau",
+          "Propulsé par l'IA"
+        ]
+      },
+      "cta": "Ouvrir l'outil"
+    },
+    "privacy": {
+      "title": "Confidentialité garantie",
+      "desc": "Tout le traitement est effectué dans votre navigateur à l'aide de WASM. Vos images ne touchent jamais nos serveurs."
+    },
+    "faq": {
+      "title": "FAQ SafeTools Image Studio",
+      "desc": "Tout ce que vous devez savoir sur notre écosystème de traitement d'image axé sur la confidentialité.",
+      "q1": "Mes images sont-elles téléchargées sur un serveur ?",
+      "a1": "Absolument pas. SafeTools utilise WebAssembly (WASM) et l'accélération GPU locale pour traiter les images directement sur votre appareil. Vos données ne quittent jamais votre navigateur.",
+      "q2": "Quels formats sont pris en charge ?",
+      "a2": "Notre studio prend en charge le JPEG, le PNG, le WebP, l'AVIF, le SVG, le GIF, le HEIC, le TIFF et même les conversions PDF-vers-image. La plupart des outils prennent en charge le traitement par lots."
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "devtools": {
+    "seo": {
+      "title": "開発者ハブ | プロフェッショナル ＆ プライベートな開発者ツール | SafeTools",
+      "description": "完全にブラウザ内で動作するプロフェッショナルグレードの開発者用ユーティリティ。JSONフォーマッタ、JWTデバッガ、Base64コーデックなどを提供。",
+      "ogTitle": "SafeTools 開発者ハブ | 100%プライベート",
+      "ogDescription": "サーバーとのやり取りを一切行わない、主権的な開発者向けツールキット。",
+      "seoName": "SafeTools 開発者ハブ",
+      "seoDescription": "プロフェッショナルなローカル完結型開発者ユーティリティスイート。"
+    },
+    "matrix": "ユーティリティ・マトリックス",
+    "toolkit": "主権的デブ・ツールキット",
+    "local": "ローカル実行",
+    "wasm_optimized": "WASM 最適化済み",
+    "buffered_stream": "バッファーストリーム",
+    "input_buffer": "入力バッファー",
+    "source": "ソース",
+    "input_placeholder": "ここにデータストリームを貼り付けてください...",
+    "characters": "{count} 文字",
+    "processed_output": "処理済み出力",
+    "copy_result": "結果をコピー",
+    "copied": "コピー完了",
+    "synthesizing": "合成中...",
+    "output_placeholder": "ここに出力が表示されます...",
+    "clear": "クリア",
+    "re_execute": "再実行",
+    "bit_inspector": "ビット・インスペクター",
+    "telemetry": "セッション・テレメトリ",
+    "metadata_matrix": "メタデータ・マトリックス",
+    "execution_time": "実行時間",
+    "memory_pressure": "メモリ負荷",
+    "bit_entropy": "ビット・エントロピー",
+    "sovereign_guard": "主権的ガード",
+    "privacy_notice": "SafeTools 開発者ユーティリティは、ローカル処理のみを行うという原則に基づいています。あなたのデータが当社のサーバーに触れることはありません。",
+    "quick_actions": "クイックアクション",
+    "minify": "縮小 (MINIFY)",
+    "beautify": "整形 (BEAUTIFY)",
+    "escape": "エスケープ",
+    "unescape": "アンエスケープ",
+    "secured_session": "保護されたセッション",
+    "tools": {
+      "json": {
+        "name": "JSONフォーマッタ",
+        "desc": "JSONデータの整形とバリデーション。"
+      },
+      "base64": {
+        "name": "Base64コーデック",
+        "desc": "テキストや画像のエンコード/デコード。"
+      },
+      "hash": {
+        "name": "ハッシュ生成",
+        "desc": "SHA-256シグネチャの生成。"
+      },
+      "jwt": {
+        "name": "JWTデバッガ",
+        "desc": "JSON Web Tokensのデコード。"
+      },
+      "url": {
+        "name": "URLエンコーダ",
+        "desc": "安全なURLエンコード/デコード。"
+      },
+      "uuid": {
+        "name": "UUID生成",
+        "desc": "安全な v4 UUIDの生成。"
+      },
+      "timestamp": {
+        "name": "Unixタイムスタンプ",
+        "desc": "EpochをISO日付に変換。"
+      },
+      "lorem": {
+        "name": "Lorem Ipsum",
+        "desc": "プレースホルダテキスト生成。"
+      }
+    },
+    "messages": {
+      "copySuccess": "クリップボードにコピーしました！",
+      "invalidJson": "エラー: 無効なJSONペイロードです。",
+      "base64Error": "エラー: Base64操作に失敗しました。",
+      "invalidJwt": "エラー: 無効なJWT構造です。",
+      "urlError": "エラー: URLコーデックの失敗。",
+      "processingError": "致命的: 実行エンジンの不具合。",
+      "loremContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

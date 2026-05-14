@@ -1,6 +1,6 @@
 /**
  * Password strength checker using the zxcvbn algorithm.
- * Fully offline — no network requests.
+ * Fully offline  no network requests.
  */
 
 export interface PasswordStrengthResult {

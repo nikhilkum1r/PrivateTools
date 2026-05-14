@@ -1,0 +1,201 @@
+{
+  "pdfUnlock": {
+    "seo": {
+      "title": "Unlock PDF | Remove PDF Password Locally | SafeTools",
+      "description": "Remove password protection from PDF files securely in your browser. 100% private, zero uploads, local decryption.",
+      "keywords": "unlock pdf, remove pdf password, decrypt pdf online, local pdf unlock, secure pdf decryption"
+    },
+    "hero": {
+      "title": "Unlock PDF Files",
+      "description": "Remove PDF password protection securely using browser-based local processing with privacy-first security.",
+      "security": "Unlock PDF documents securely without uploading files to external servers."
+    },
+    "badges": {
+      "local": "Local Processing",
+      "zero": "Zero Upload",
+      "tracking": "No Tracking",
+      "instant": "Instant Unlocking",
+      "browser": "Browser-Based"
+    },
+    "engine": {
+      "title": "Decryption Engine",
+      "active": "WASM ACTIVE"
+    },
+    "legal": {
+      "label": "Important Legal Notice:",
+      "text": "Only unlock PDF documents you own or are legally authorized to access. Unauthorized access to protected files may violate laws or agreements."
+    },
+    "form": {
+      "label": "PDF Encryption Key (Password)",
+      "placeholder": "Enter the PDF password…",
+      "note": "Leave blank if the PDF has no open password (permission restrictions only).",
+      "button": "U N L O C K   P D F",
+      "processing": "D E C R Y P T I N G . . ."
+    },
+    "landing": {
+      "features": {
+        "title": "PDF Unlock Features",
+        "subtitle": "Enterprise-grade local decryption tools.",
+        "items": [
+          "Remove open passwords",
+          "Unlock restricted PDFs",
+          "Browser-side processing",
+          "Fast local decryption",
+          "Drag-and-drop support",
+          "Offline capable",
+          "Zero cloud uploads",
+          "Secure file handling"
+        ]
+      },
+      "edu": {
+        "what": {
+          "title": "What Is PDF Unlocking?",
+          "content": "PDF unlocking removes password restrictions or access protections from PDF documents when {strong} are available. This grants permitted access to owned files that were previously restricted. Once unlocked, you can permanently secure the raw file in our {link}.",
+          "strong": "authorized credentials",
+          "vault": "Encryption Vault"
+        },
+        "privacy": {
+          "title": "Privacy-First Processing",
+          "items": [
+            "Local browser processing",
+            "No file uploads",
+            "No server-side storage",
+            "Secure in-browser handling",
+            "Temporary memory-only operations"
+          ]
+        }
+      },
+      "options": {
+        "title": "Supported Restrictions",
+        "subtitle": "We safely remove these restrictions when the master password is provided:",
+        "items": [
+          "Open password removal",
+          "Permission restrictions",
+          "Printing restrictions",
+          "Copy restrictions",
+          "Editing restrictions"
+        ],
+        "note": "Permission-only restrictions can be removed without a password."
+      },
+      "cases": {
+        "title": "Common Use Cases",
+        "items": [
+          "Remove forgotten restrictions",
+          "Enable printing",
+          "Enable text copying",
+          "Archive access",
+          "Document editing",
+          "Internal workflows",
+          "Educational documents",
+          "Personal file management"
+        ]
+      },
+      "modern": {
+        "title": "Modern PDF Encryption Support",
+        "content": "We natively support unlocking AES-encrypted PDFs, password-protected documents, and permission-based restrictions using highly optimized secure browser decryption workflows. All decryption is performed completely client-side."
+      },
+      "comparison": {
+        "title": "Why Use SafeTools PDF Unlock?",
+        "headers": [
+          "Feature",
+          "Typical Online Tools",
+          "SafeTools"
+        ],
+        "rows": [
+          {
+            "f": "Local Processing",
+            "t": "Rare",
+            "s": "Yes"
+          },
+          {
+            "f": "File Upload Required",
+            "t": "Usually",
+            "s": "No"
+          },
+          {
+            "f": "Privacy Focused",
+            "t": "Limited",
+            "s": "Yes"
+          },
+          {
+            "f": "Tracking Scripts",
+            "t": "Often",
+            "s": "No"
+          },
+          {
+            "f": "Browser-Based",
+            "t": "Partial",
+            "s": "Full"
+          }
+        ]
+      },
+      "faq": {
+        "title": "SafeTools PDF Unlock FAQ",
+        "items": [
+          {
+            "q": "Are PDF files uploaded to servers?",
+            "a": "No. All PDF processing happens locally inside your browser."
+          },
+          {
+            "q": "Can all PDFs be unlocked?",
+            "a": "Some PDFs require the correct password before restrictions can be removed."
+          },
+          {
+            "q": "Does this tool work offline?",
+            "a": "Yes. Offline support can be enabled through PWA functionality."
+          },
+          {
+            "q": "Can SafeTools access my PDFs?",
+            "a": "No. Files remain locally processed and are not stored."
+          },
+          {
+            "q": "Is unlocking PDFs legal?",
+            "a": "Only unlock files you own or are authorized to access."
+          }
+        ]
+      },
+      "related": {
+        "title": "Related Privacy Tools",
+        "tools": [
+          {
+            "name": "PDF Merge",
+            "href": "/pdf/merge-pdf"
+          },
+          {
+            "name": "PDF Split",
+            "href": "/pdf/split-pdf"
+          },
+          {
+            "name": "PDF Compress",
+            "href": "/pdf/compress-pdf"
+          },
+          {
+            "name": "PDF Encrypt",
+            "href": "/pdf/encrypt"
+          },
+          {
+            "name": "PDF to Image",
+            "href": "/pdf/to-image"
+          },
+          {
+            "name": "File Shredder",
+            "href": "/security/file-shredder"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Privacy-First Document Tools",
+        "quote": "SafeTools develops browser-based document tools designed to protect user privacy through local processing and minimal data exposure. Secure document tools designed with privacy-first browser processing."
+      }
+    },
+    "messages": {
+      "upload_error": "Please upload a valid PDF file.",
+      "incorrect_password": "Incorrect password or this PDF is not password-protected.",
+      "empty_file": "Decryption produced an empty file. The password may be incorrect.",
+      "still_encrypted": "Incorrect password. The PDF could not be decrypted.",
+      "success": "PDF unlocked successfully!",
+      "unexpected_error": "An unexpected error occurred. Please try again.",
+      "exit_error": "Process exited with code {code}."
+    }
+  }
+}

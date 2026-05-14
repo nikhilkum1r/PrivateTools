@@ -1,0 +1,453 @@
+{
+  "vault": {
+    "metadata": {
+      "title": "Cofre Seguro | Criptografia de Arquivos AES-256 | SafeTools",
+      "description": "Armazene e proteja informações confidenciais com tecnologia de cofre criptografado baseado em navegador. 100% local, zero uploads, segurança de nível militar.",
+      "ogTitle": "Cofre Seguro | Criptografia de Arquivos AES-256 | SafeTools",
+      "ogDescription": "Armazene e proteja informações confidenciais com tecnologia de cofre criptografado baseado em navegador. 100% local, zero uploads, segurança de nível militar.",
+      "keywords": "cofre seguro, criptografia de arquivos, cofre aes-256, armazenamento privado, cofre de navegador, criptografia offline, armazenamento seguro de arquivos, ferramenta de cofre local"
+    },
+    "hero": {
+      "badge": "Arquitetura de Segurança Avançada",
+      "title": "Cofre Seguro",
+      "description": "Armazene e proteja informações confidenciais com tecnologia de cofre criptografado baseado em navegador, projetada para privacidade e segurança.",
+      "badges": {
+        "privacy": "Privacidade de Ponta a Ponta",
+        "local": "Criptografia Local no Navegador",
+        "zero": "Zero Upload",
+        "noTracking": "Sem Rastreamento",
+        "offline": "Capaz de Operar Offline"
+      },
+      "footer": "Proteção AES-256-GCM de nível militar. Todo o processamento é 100% local."
+    },
+    "engine": {
+      "steps": [
+        {
+          "s": "01",
+          "t": "Carregar Arquivos Sensíveis",
+          "d": "Selecione seus documentos privados, senhas ou frases de recuperação.",
+          "i": "HardDrive"
+        },
+        {
+          "s": "02",
+          "t": "Definir Chave de Segurança Mestre",
+          "d": "Aplique criptografia AES-256 de nível industrial com uma chave personalizada.",
+          "i": "Key"
+        },
+        {
+          "s": "03",
+          "t": "Baixar Cofre Seguro",
+          "d": "Obtenha seu contêiner .vault criptografado para armazenamento local seguro.",
+          "i": "Download"
+        }
+      ],
+      "mode": {
+        "secure": "PROTEGER",
+        "extract": "EXTRAIR"
+      },
+      "dropzone": {
+        "title": {
+          "encrypt": "Proteger Novo Arquivo",
+          "decrypt": "Extrair Cofre"
+        },
+        "desc": {
+          "encrypt": "Selar arquivos com AES-256",
+          "decrypt": "Desbloquear contêineres .vault"
+        }
+      },
+      "ready": "Pronto para Proteger",
+      "label": {
+        "key": "Chave de Segurança Mestre",
+        "keyLoaded": "Chave Carregada",
+        "placeholder": "Digite a senha do cofre..."
+      },
+      "entropy": {
+        "label": "Entropia de Criptografia",
+        "vulnerable": "Vulnerável",
+        "secure": "Seguro"
+      },
+      "processing": {
+        "encrypting": "Selando o Cofre",
+        "decrypting": "Extraindo Dados"
+      },
+      "button": {
+        "encrypt": "Criptografar para o Cofre",
+        "decrypt": "Extrair Original",
+        "download": "Baixar",
+        "vault": "Cofre",
+        "file": "Arquivo",
+        "newSession": "Iniciar Nova Sessão"
+      }
+    },
+    "status": {
+      "title": "Status de Privacidade",
+      "items": [
+        {
+          "l": "Processamento Local",
+          "s": "Ativo"
+        },
+        {
+          "l": "Armazenamento em Nuvem",
+          "s": "Desativado"
+        },
+        {
+          "l": "Protegido por HTTPS",
+          "s": "Verificado"
+        },
+        {
+          "l": "Criptografia no Lado do Cliente",
+          "s": "AES-256"
+        },
+        {
+          "l": "Scripts de Rastreamento",
+          "s": "Limpo"
+        }
+      ],
+      "verified": "Verificado",
+      "localDev": "Dev Local",
+      "warning": "Aviso",
+      "blocked": {
+        "title": "Motores de Rastreamento Bloqueados",
+        "note": "O SafeTools é uma zona livre de rastreadores. Não injetamos nenhum script de terceiros que possa comprometer sua sessão.",
+        "trackers": [
+          "Google Analytics",
+          "FB Pixel",
+          "Hotjar",
+          "Mixpanel",
+          "Segment",
+          "Intercom"
+        ]
+      },
+      "snapshot": {
+        "title": "Instantâneo de Segurança",
+        "items": [
+          {
+            "l": "Cifra",
+            "v": "AES-256"
+          },
+          {
+            "l": "Autenticação",
+            "v": "GCM"
+          },
+          {
+            "l": "KDF",
+            "v": "PBKDF2"
+          },
+          {
+            "l": "Sal",
+            "v": "128 bits"
+          }
+        ]
+      },
+      "zeroServer": {
+        "title": "Status Zero Servidor",
+        "desc": "O SafeTools Vault nunca faz upload de seus arquivos ou senhas. A criptografia acontece dentro do sandbox de memória isolado do seu navegador."
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Recursos do Cofre Profissional",
+        "subtitle": "Ferramentas modernas projetadas para máxima privacidade e proteção de nível industrial.",
+        "items": [
+          {
+            "i": "HardDrive",
+            "t": "Armazenamento Local",
+            "d": "Seus dados criptografados permanecem no seu dispositivo, nunca na nuvem."
+          },
+          {
+            "i": "Key",
+            "t": "Senha Mestre",
+            "d": "Proteção de chave mestre única usando derivação PBKDF2 industrial."
+          },
+          {
+            "i": "FileText",
+            "t": "Notas Seguras",
+            "d": "Criptografe textos confidenciais, frases de recuperação e detalhes de login."
+          },
+          {
+            "i": "Lock",
+            "t": "Proteção de Arquivos",
+            "d": "Proteja qualquer tipo de arquivo, de PDFs a imagens privadas, com AES-256."
+          },
+          {
+            "i": "History",
+            "t": "Suporte à Recuperação",
+            "d": "Nomes de arquivos originais e tipos MIME são preservados dentro do cofre."
+          },
+          {
+            "i": "Globe",
+            "t": "Acesso Offline",
+            "d": "Funciona 100% offline após carregado, perfeito para sistemas isolados."
+          },
+          {
+            "i": "Share2",
+            "t": "Área de Transferência Segura",
+            "d": "Exportação e importação de contêineres de cofre criptografados com um clique."
+          },
+          {
+            "i": "Code2",
+            "t": "Crypto no Navegador",
+            "d": "Alimentado pela API Web Crypto nativa para aceleração de hardware."
+          }
+        ]
+      },
+      "architecture": {
+        "badge": "Nível Militar",
+        "title": "Arquitetura de Segurança Avançada",
+        "description": "O SafeTools Vault utiliza os mesmos padrões de criptografia confiados por governos e instituições financeiras em todo o mundo.",
+        "items": [
+          {
+            "t": "Criptografia AES-256-GCM",
+            "d": "O padrão ouro de criptografia simétrica, proporcionando privacidade e integridade de dados."
+          },
+          {
+            "t": "Derivação de Chave PBKDF2",
+            "d": "Mais de 100.000 iterações de HMAC-SHA256 garantem que sua senha seja protegida contra força bruta."
+          },
+          {
+            "t": "IVs Aleatórios de 96 bits",
+            "d": "Cada operação de criptografia usa um Vetor de Inicialização exclusivo para evitar a análise de padrões."
+          }
+        ],
+        "localCrypto": "Criptografia Local"
+      },
+      "useCases": {
+        "title": "O Que Você Pode Proteger?",
+        "subtitle": "De frases de recuperação a segredos comerciais, mantenha tudo privado.",
+        "items": [
+          {
+            "i": "Key",
+            "c": "text-yellow-400",
+            "t": "Backups de Senhas"
+          },
+          {
+            "i": "History",
+            "c": "text-emerald-400",
+            "t": "Frases de Recuperação"
+          },
+          {
+            "i": "Shield",
+            "c": "text-blue-400",
+            "t": "Documentos Financeiros"
+          },
+          {
+            "i": "Code2",
+            "c": "text-purple-400",
+            "t": "Chaves de API e Dev"
+          },
+          {
+            "i": "FileText",
+            "c": "text-cyan-400",
+            "t": "Identificações Legais"
+          },
+          {
+            "i": "Lock",
+            "c": "text-pink-400",
+            "t": "Mídia Privada"
+          },
+          {
+            "i": "History",
+            "c": "text-orange-400",
+            "t": "Herança Digital"
+          },
+          {
+            "i": "Lock",
+            "c": "text-red-400",
+            "t": "Segredos Comerciais"
+          }
+        ]
+      },
+      "threats": {
+        "title": "Proteção contra Ameaças",
+        "items": [
+          "Protege contra violações de dados de provedores de nuvem",
+          "Elimina o rastreamento no lado do servidor e a colheita de metadados",
+          "Previne o acesso não autorizado em dispositivos compartilhados",
+          "Reforça os dados contra interceptação no nível de trânsito",
+          "Exposição zero a vulnerabilidades de armazenamento em texto simples"
+        ],
+        "risk": {
+          "title": "Reduzir Riscos de Exposição de Dados",
+          "desc": "Cofres tradicionais armazenam seus dados na nuvem, criando um ponto central de falha. O SafeTools Vault elimina esse risco mantendo seus dados descentralizados e locais.",
+          "button": "Saiba mais sobre nosso modelo Zero-Trust"
+        }
+      },
+      "comparison": {
+        "title": "Por Que Escolher o SafeTools Vault?",
+        "subtitle": "Veja como nossa abordagem local-first se compara aos cofres de nuvem tradicionais.",
+        "headers": [
+          "Recurso",
+          "Cofres na Nuvem",
+          "SafeTools"
+        ],
+        "rows": [
+          {
+            "feat": "Armazenamento em Nuvem",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Criptografia Local",
+            "trad": "Parcial",
+            "safe": "Total"
+          },
+          {
+            "feat": "Scripts de Rastreamento",
+            "trad": "Às vezes",
+            "safe": "Nenhum"
+          },
+          {
+            "feat": "Conta Necessária",
+            "trad": true,
+            "safe": false
+          },
+          {
+            "feat": "Processamento no Navegador",
+            "trad": "Limitado",
+            "safe": "Completo"
+          },
+          {
+            "feat": "Focado em Privacidade",
+            "trad": "Varia",
+            "safe": "Máximo"
+          }
+        ]
+      },
+      "enterprise": {
+        "badge": "Pronto para Empresas",
+        "title": "Integração de Fluxo de Trabalho Zero-Knowledge",
+        "description": "Equipes de segurança de TI preferem o SafeTools Vault porque ele elimina o vetor de \"Risco SaaS\". Nenhum dado atinge nossa infraestrutura, tornando-o compatível com políticas de privacidade internas rígidas e padrões GDPR/HIPAA.",
+        "items": [
+          "Sem Dependência de Fornecedor: Dados são armazenados em formatos binários padrão",
+          "Compatível com Air-Gap: Use em redes internas offline",
+          "Implantação Instantânea: Sem necessidade de provisionamento de conta ou configuração de TI",
+          "Segurança de Memória: Criptografia tratada no sandbox do navegador"
+        ],
+        "audit": {
+          "label": "Log de Auditoria de Segurança",
+          "status": "APROVADO",
+          "validated": "SafeTools Standard V2.0 Validado"
+        }
+      },
+      "specs": {
+        "title": "Especificações Técnicas",
+        "subtitle": "Detalhes técnicos profundos para auditorias criptográficas e pesquisadores de segurança.",
+        "items": [
+          {
+            "l": "Algoritmo de Criptografia",
+            "v": "AES-GCM (Autenticado)"
+          },
+          {
+            "l": "Força da Chave",
+            "v": "256 bits (AES-256)"
+          },
+          {
+            "l": "Derivação de Chave",
+            "v": "PBKDF2-HMAC-SHA256"
+          },
+          {
+            "l": "Iterações PBKDF2",
+            "v": "100.000 rodadas"
+          },
+          {
+            "l": "Comprimento do Sal",
+            "v": "128 bits (Aleatório)"
+          },
+          {
+            "l": "Vetor de Inicialização",
+            "v": "96 bits (Único por op)"
+          },
+          {
+            "l": "Tag de Autenticação",
+            "v": "128 bits (GCM integrado)"
+          },
+          {
+            "l": "Formato Binário",
+            "v": ".vault personalizado (Magic PVLT)"
+          }
+        ]
+      },
+      "offline": {
+        "badge": "100% Capaz de Operar Offline",
+        "title": "Armazenamento Seguro, em Qualquer Lugar",
+        "description": "O SafeTools Vault é um Progressive Web App (PWA). Uma vez carregado, ele funciona inteiramente offline, garantindo que você possa extrair seus dados críticos mesmo sem uma conexão com a Internet.",
+        "badges": {
+          "noNetwork": "Nenhuma Rede Necessária",
+          "secureRuntime": "Ambiente de Execução Seguro"
+        }
+      },
+      "bestPractices": {
+        "title": "Melhores Práticas de Segurança do Cofre",
+        "items": [
+          {
+            "t": "Senha Mestre Forte",
+            "d": "Use mais de 16 caracteres com uma mistura de símbolos. Sua senha é a única chave para seus dados."
+          },
+          {
+            "t": "Backups Regulares",
+            "d": "Mantenha várias cópias de seus arquivos .vault em diferentes unidades criptografadas."
+          },
+          {
+            "t": "Bloquear Sessões Inativas",
+            "d": "Feche a aba do navegador imediatamente após extrair arquivos confidenciais."
+          }
+        ]
+      },
+      "commitment": {
+        "title": "Seus Dados Permanecem Sob Seu Controle",
+        "description": "\"O SafeTools Vault foi projetado usando princípios de privacidade em primeiro lugar. Seus dados criptografados permanecem protegidos localmente e nunca são carregados sem sua permissão.\""
+      },
+      "faq": {
+        "title": "Perguntas Frequentes do Cofre",
+        "subtitle": "Tudo o que você precisa saber sobre nosso protocolo de criptografia local.",
+        "items": [
+          {
+            "q": "Meu cofre é enviado para servidores?",
+            "a": "Não. Toda a criptografia e processamento acontecem localmente no seu navegador. Seus dados nunca saem do seu dispositivo."
+          },
+          {
+            "q": "O SafeTools pode ler meus dados?",
+            "a": "Impossível. Não temos contas, não armazenamos suas chaves e não temos acesso à memória do seu navegador."
+          },
+          {
+            "q": "E se eu esquecer minha senha?",
+            "a": "Como esta é uma ferramenta de conhecimento zero, não podemos recuperar seus dados. Por favor, use uma senha forte que você não esqueça."
+          },
+          {
+            "q": "O registro de conta é obrigatório?",
+            "a": "Não. O SafeTools foi projetado para privacidade e utilidade imediata. Não é necessário registro."
+          },
+          {
+            "q": "Posso usar o cofre offline?",
+            "a": "Sim. Uma vez que a página é carregada, ela funciona inteiramente offline como um PWA."
+          },
+          {
+            "q": "Qual a segurança do AES-256-GCM?",
+            "a": "É o padrão da indústria para comunicações seguras, confiado pela NSA e redes financeiras globais."
+          }
+        ]
+      },
+      "related": {
+        "title": "Ecossistema de Privacidade",
+        "subtitle": "Explore nossos outros utilitários de segurança local-first."
+      },
+      "manifesto": {
+        "title": "Privacidade é um direito, não um recurso.",
+        "description": "Privacidade é um direito digital fundamental. Nossas ferramentas são projetadas para minimizar a exposição de dados e maximizar o controle do usuário. Sem contas. Sem rastreamento. Sem armazenamento em nuvem. Apenas proteção segura com privacidade em primeiro lugar.",
+        "button": "Explorar o Hub de Privacidade"
+      }
+    },
+    "footer": {
+      "text": "O cofre mais seguro é aquele que nunca sai da sua máquina.",
+      "noTracking": "O SafeTools é uma zona livre de rastreadores. 100% privado, 100% local."
+    },
+    "toast": {
+      "secured": "Arquivo protegido com sucesso!",
+      "extracted": "Arquivo extraído com sucesso!",
+      "failed": "Chave de segurança inválida ou cofre corrompido.",
+      "invalidPassword": "Senha incorreta. Verifique e tente novamente.",
+      "legacyVersion": "Esta é uma versão antiga do cofre. Use o extrator legado.",
+      "invalidFile": "Não é um arquivo de cofre SafeTools válido."
+    }
+  }
+}

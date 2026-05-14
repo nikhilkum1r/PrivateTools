@@ -1,0 +1,88 @@
+{
+  "changelog": {
+    "hero": {
+      "badge": "进化协议",
+      "title": "系统 <br></br> <span class=\"text-primary\">更新。",
+      "subtitle": "追踪 SafeTools 本地优先引擎和工作室套件的持续改进。"
+    },
+    "data": [
+      {
+        "date": "2026年5月10日",
+        "version": "v0.4.1",
+        "title": "模块化时代",
+        "desc": "对本地化引擎进行了完整的架构翻新，实现了细粒度的、针对特定功能的资产加载，以获得最高性能。",
+        "highlights": [
+          {
+            "type": "新增",
+            "text": "具有功能级命名空间隔离的模块化 i18n 框架。"
+          },
+          {
+            "type": "改进",
+            "text": "增强了所有加密工具的零服务器完整性。"
+          },
+          {
+            "type": "安全",
+            "text": "强化了用于图像隐写术的 LSB 变异引擎。"
+          }
+        ],
+        "color": "from-primary to-blue-600"
+      },
+      {
+        "date": "2026年4月28日",
+        "version": "v0.4.0",
+        "title": "WASM 引擎 v2",
+        "desc": "升级了核心处理引擎，支持多线程 WebAssembly，实现接近原生的文件处理速度。",
+        "highlights": [
+          {
+            "type": "新增",
+            "text": "支持批量处理的高级元数据清除器。"
+          },
+          {
+            "type": "改进",
+            "text": "FFmpeg WASM 加载时间优化了 40%。"
+          },
+          {
+            "type": "修复",
+            "text": "解决了重型图像转换任务中的内存泄漏问题。"
+          }
+        ],
+        "color": "from-purple-500 to-pink-600"
+      },
+      {
+        "date": "2026年4月12日",
+        "version": "v0.3.8",
+        "title": "安全强化",
+        "desc": "通过增强的安全头和沙箱执行环境，专注于用户数据的绝对隐私。",
+        "highlights": [
+          {
+            "type": "新增",
+            "text": "工业级文件粉碎机，支持多遍覆盖。"
+          },
+          {
+            "type": "安全",
+            "text": "实施了 COOP/COEP 隔离头。"
+          },
+          {
+            "type": "改进",
+            "text": "完善了隐私宣言和验证指南。"
+          }
+        ],
+        "color": "from-emerald-500 to-teal-600"
+      }
+    ],
+    "timeline": {
+      "visual": "版本签名",
+      "moreUpdates": "持续演进"
+    },
+    "cta": {
+      "title": "塑造未来。",
+      "subtitle": "SafeTools 为社区而建。欢迎报告错误、建议功能或为我们的开放架构做出贡献。",
+      "github": "在 GitHub 上查看仓库",
+      "follow": "关注进度"
+    },
+    "seo": {
+      "title": "SafeTools 更新日志 | 最新功能与安全更新",
+      "description": "随时了解 SafeTools 工作室生态系统的最新发布、性能改进和安全补丁。"
+    }
+  }
+}

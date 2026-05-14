@@ -1,0 +1,88 @@
+{
+  "changelog": {
+    "hero": {
+      "badge": "Protocole d'évolution",
+      "title": "Mises à jour du <br></br> <span class=\"text-primary\">Système.",
+      "subtitle": "Suivi de l'amélioration continue du moteur local-first et de la suite studio de SafeTools."
+    },
+    "data": [
+      {
+        "date": "10 MAI 2026",
+        "version": "v0.4.1",
+        "title": "L'ère modulaire",
+        "desc": "Une refonte architecturale complète du moteur de localisation, permettant le chargement granulaire d'actifs spécifiques aux fonctionnalités pour des performances maximales.",
+        "highlights": [
+          {
+            "type": "Nouveau",
+            "text": "Framework i18n modulaire avec isolation des espaces de noms au niveau des fonctionnalités."
+          },
+          {
+            "type": "Amélioré",
+            "text": "Intégrité Zéro-Serveur renforcée pour tous les outils cryptographiques."
+          },
+          {
+            "type": "Sécurité",
+            "text": "Moteur de mutation LSB durci pour la stéganographie d'images."
+          }
+        ],
+        "color": "from-primary to-blue-600"
+      },
+      {
+        "date": "28 AVRIL 2026",
+        "version": "v0.4.0",
+        "title": "Moteur WASM v2",
+        "desc": "Mise à niveau du moteur de traitement principal avec le support WebAssembly multi-thread pour des vitesses de traitement de fichiers proches du natif.",
+        "highlights": [
+          {
+            "type": "Nouveau",
+            "text": "Nettoyeur de métadonnées avancé avec support du traitement par lots."
+          },
+          {
+            "type": "Amélioré",
+            "text": "Temps de chargement de FFmpeg WASM optimisés de 40 %."
+          },
+          {
+            "type": "Fix",
+            "text": "Résolution des fuites de mémoire dans les travaux de conversion d'images lourds."
+          }
+        ],
+        "color": "from-purple-500 to-pink-600"
+      },
+      {
+        "date": "12 AVRIL 2026",
+        "version": "v0.3.8",
+        "title": "Renforcement de la sécurité",
+        "desc": "Concentration sur la confidentialité absolue des données utilisateur avec des en-têtes de sécurité améliorés et des environnements d'exécution sandboxés.",
+        "highlights": [
+          {
+            "type": "Nouveau",
+            "text": "Destructeur de fichiers de qualité industrielle avec écrasement multi-passes."
+          },
+          {
+            "type": "Sécurité",
+            "text": "Implémentation des en-têtes d'isolation COOP/COEP."
+          },
+          {
+            "type": "Amélioré",
+            "text": "Manifeste de confidentialité et guide de vérification affinés."
+          }
+        ],
+        "color": "from-emerald-500 to-teal-600"
+      }
+    ],
+    "timeline": {
+      "visual": "Signature de version",
+      "moreUpdates": "Évolution continue"
+    },
+    "cta": {
+      "title": "Façonnez l'avenir.",
+      "subtitle": "SafeTools est construit pour la communauté. Signalez des bogues, suggérez des fonctionnalités ou contribuez à notre architecture ouverte.",
+      "github": "Voir le dépôt GitHub",
+      "follow": "Suivre l'avancement"
+    },
+    "seo": {
+      "title": "Journal des modifications SafeTools | Dernières fonctionnalités et mises à jour de sécurité",
+      "description": "Restez au courant des dernières versions, des améliorations de performance et des correctifs de sécurité pour l'écosystème studio SafeTools."
+    }
+  }
+}

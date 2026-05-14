@@ -1,0 +1,125 @@
+{
+  "wordCounter": {
+    "title": "Compteur",
+    "subtitle": "de Mots.",
+    "description": "Analysez instantanément votre texte avec un compteur de mots en ligne rapide et sécurisé. Comptez les mots, caractères, phrases, paragraphes, temps de lecture, temps de parole et plus encore, directement dans votre navigateur.",
+    "inputPlaceholder": "Tapez ou collez votre texte ici...",
+    "textInputArea": "Zone de saisie de texte",
+    "toast": {
+      "copy": "Copié dans le presse-papiers !"
+    },
+    "stats": {
+      "words": "Mots",
+      "chars": "Caractères",
+      "noSpaces": "Sans espaces",
+      "sentences": "Phrases",
+      "paragraphs": "Paragraphes",
+      "lines": "Lignes",
+      "readTime": "Temps lecture",
+      "speakTime": "Temps parole",
+      "privacy": "Vie privée d'abord",
+      "instant": "Stats en temps réel",
+      "noUploads": "Aucun upload",
+      "seo": "Optimisé SEO"
+    },
+    "content": {
+      "mainTitle": "Outil gratuit de compteur de mots en ligne",
+      "mainDesc1": "L'outil Compteur de Mots vous aide à analyser instantanément le contenu textuel pour la rédaction, le SEO, l'éducation, le codage, les réseaux sociaux et la communication professionnelle. Que vous écriviez des dissertations, des articles de blog, des légendes, des travaux de recherche, des e-mails, des scripts ou du contenu de site Web, cet outil fournit des statistiques textuelles précises en temps réel.",
+      "mainDesc2": "Tout fonctionne directement dans votre navigateur pour une vitesse, une confidentialité et une sécurité accrues.",
+      "measureTitle": "Que peut mesurer le compteur de mots ?",
+      "measureSubtitle": "Métriques complètes",
+      "textStatsTitle": "Statistiques textuelles",
+      "textStatsList": [
+        "Nombre de mots",
+        "Nombre de caractères",
+        "Nombre de caractères sans espaces",
+        "Nombre de phrases",
+        "Nombre de paragraphes",
+        "Nombre de lignes"
+      ],
+      "readingTitle": "Lecture & Parole",
+      "readingList": [
+        "Temps de lecture estimé",
+        "Temps de parole estimé",
+        "Longueur moyenne des mots",
+        "Longueur moyenne des phrases"
+      ],
+      "writingTitle": "Analyse de rédaction",
+      "writingList": [
+        "Densité des mots-clés",
+        "Mots les plus utilisés",
+        "Aperçus sur la lisibilité",
+        "Analyse de la longueur du contenu"
+      ],
+      "featuresTitle": "Fonctionnalités du compteur de mots en ligne",
+      "featuresSubtitle": "Pourquoi utiliser ce compteur de mots ?",
+      "feature1Title": "Comptage en temps réel",
+      "feature1Desc": "Obtenez des mises à jour instantanées pendant que vous tapez ou collez du texte, sans rafraîchir la page.",
+      "feature2Title": "Compteur de caractères",
+      "feature2Desc": "Suivez le nombre total de caractères avec et sans espaces pour les plateformes ayant des limites de caractères.",
+      "feature3Title": "Estimateur du temps de lecture",
+      "feature3Desc": "Estimez le temps que les lecteurs pourraient mettre à lire vos articles, dissertations, scripts ou posts de blog.",
+      "feature4Title": "Calculateur du temps de parole",
+      "feature4Desc": "Utile pour la préparation de discours, présentations, podcasts, scripts YouTube et prise de parole en public.",
+      "feature5Title": "Optimisation du contenu SEO",
+      "feature5Desc": "Les rédacteurs et marketeurs peuvent surveiller la longueur du contenu pour les blogs, les balises méta et les pages de destination.",
+      "feature6Title": "Confidentialité basée sur le navigateur",
+      "feature6Desc": "Votre texte reste sur votre appareil pendant le traitement sans être téléchargé sur des serveurs externes.",
+      "useCasesTitle": "Cas d'utilisation courants & avantages",
+      "useCasesDesc": "L'utilisation d'un outil d'analyse de texte aide à améliorer l'efficacité de la rédaction, à respecter les exigences de nombre de mots, à optimiser la lisibilité, à suivre la longueur du contenu, à améliorer les performances SEO et à réduire le temps d'édition.",
+      "useCasesList": [
+        "Rédaction de dissertations",
+        "Travaux académiques",
+        "Optimisation de blogs SEO",
+        "Rédaction de scripts YouTube",
+        "Légendes de réseaux sociaux",
+        "Limites de caractères Twitter",
+        "Rédaction de CV",
+        "Documentation de programmation"
+      ],
+      "howTitle": "Comment utiliser le compteur de mots",
+      "step1Title": "Coller",
+      "step1Desc": "Tapez ou collez votre texte",
+      "step2Title": "Analyser",
+      "step2Desc": "L'outil analyse le contenu automatiquement",
+      "step3Title": "Réviser",
+      "step3Desc": "Consultez les statistiques de mots et caractères en direct",
+      "step4Title": "Optimiser",
+      "step4Desc": "Copiez, modifiez ou optimisez votre contenu"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "Qu'est-ce qu'un compteur de mots ?",
+          "a": "Un compteur de mots est un outil qui calcule le nombre de mots, caractères, phrases, paragraphes et autres statistiques de rédaction dans un texte."
+        },
+        {
+          "q": "Ce compteur de mots est-il gratuit ?",
+          "a": "Oui. L'outil est complètement gratuit à utiliser en ligne sans inscription."
+        },
+        {
+          "q": "L'outil compte-t-il les caractères ?",
+          "a": "Oui. Il compte le nombre total de caractères, les caractères sans espaces, les mots, les phrases et les paragraphes."
+        },
+        {
+          "q": "Mon texte est-il sécurisé ?",
+          "a": "Oui. Le traitement du texte se fait directement dans votre navigateur pour une meilleure confidentialité et sécurité."
+        },
+        {
+          "q": "Puis-je utiliser cet outil pour la rédaction SEO ?",
+          "a": "Oui. L'outil aide à optimiser les articles de blog, les métadonnées et tout autre contenu SEO en suivant la longueur du texte et la lisibilité."
+        },
+        {
+          "q": "Le compteur de mots fonctionne-t-il sur les appareils mobiles ?",
+          "a": "Oui. L'outil fonctionne sur Android, iPhone, tablettes, ordinateurs portables et systèmes de bureau."
+        },
+        {
+          "q": "L'outil peut-il gérer de gros volumes de texte ?",
+          "a": "Oui. Vous pouvez analyser efficacement de longs articles, dissertations, scripts, rapports et documents."
+        }
+      ],
+      "title": "Foire Aux Questions",
+      "description": "Tout ce que vous devez savoir sur notre outil respectueux de la vie privée."
+    }
+  }
+}

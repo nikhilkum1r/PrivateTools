@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "SafeTools में आपका स्वागत है",
+    "tagline": "150+ प्राइवेसी-फर्स्ट ऑनलाइन फ़ाइल टूल जो स्थानीय रूप से चलते हैं",
+    "upload": "फ़ाइल अपलोड करें",
+    "download": "डाउनलोड",
+    "compress": "कंप्रेस",
+    "convert": "कन्वर्ट",
+    "edit": "एडिट",
+    "search": "150+ टूल में खोजें...",
+    "privacy": "प्राइवेसी-फर्स्ट",
+    "speed": "बेहद तेज़",
+    "security": "एंटरप्राइज ग्रेड",
+    "systemHealth": {
+      "title": "सिस्टम हेल्थ",
+      "localEngine": "लोकल इंजन",
+      "localEngineDesc": "प्रोसेसिंग आपके डिवाइस पर 100% स्थानीय रूप से हो रही है।",
+      "secureSession": "सुरक्षित सत्र",
+      "secureSessionDesc": "अधिकतम गोपनीयता के लिए अलग ब्राउज़र वातावरण।",
+      "online": "कनेक्टेड",
+      "onlineDesc": "नवीनतम टूल अपडेट के लिए ऑनलाइन।",
+      "offlineReady": "ऑफलाइन तैयार",
+      "offlineReadyDesc": "यह टूल बिना इंटरनेट कनेक्शन के पूरी तरह से काम करता है।",
+      "zeroTracking": "जीरो ट्रैकिंग",
+      "zeroTrackingDesc": "ट्रैकिंग के लिए हमारे सर्वर पर कोई डेटा नहीं भेजा जाता है।"
+    },
+    "securityTools": "सुरक्षा टूल",
+    "privacyTools": "प्राइवेसी टूल",
+    "tools": {
+      "vault": "सुरक्षित वॉल्ट",
+      "metadataCleaner": "मेटाडेटा क्लीनर",
+      "fileShredder": "फ़ाइल श्रेडर",
+      "secureNotes": "सुरक्षित नोट्स",
+      "passwordGenerator": "पासवर्ड जेनरेटर",
+      "passwordChecker": "पासवर्ड मजबूती चेकर",
+      "ocr": "OCR एक्सट्रैक्ट",
+      "steganography": "इमेज स्टेनोग्राफी",
+      "imageEditor": "इमेज एडिटर",
+      "imageCompressor": "इमेज कंप्रेसर",
+      "formatConverter": "फॉर्मेट कनवर्टर",
+      "backgroundRemover": "बैकग्राउंड रिमूवर",
+      "colorLab": "कलर लैब",
+      "pdfToImage": "PDF से इमेज"
+    },
+    "toolsLabel": "टूल",
+    "features": "विशेषताएं",
+    "developers": "डेवलपर्स",
+    "pricing": "कीमतें",
+    "about": "SafeTools के बारे में",
+    "whyAds": "हम विज्ञापन क्यों दिखाते हैं",
+    "privacyPolicy": "प्राइवेसी पॉलिसी",
+    "termsOfService": "सेवा की शर्तें",
+    "contact": "संपर्क करें",
+    "home": "होम",
+    "faqLabel": "FAQ",
+    "blog": "ब्लॉग",
+    "changelog": "चेंजलॉग",
+    "light": "लाइट",
+    "dark": "डार्क",
+    "system": "सिस्टम",
+    "startFree": "मुफ्त शुरू करें",
+    "systemStatus": "सिस्टम स्टेटस",
+    "updates": "अपडेट",
+    "feedback": "फीडबैक",
+    "contents": "सामग्री",
+    "imageTools": "इमेज टूल",
+    "openTools": "टूल खोलें",
+    "ready": "कंट्रोल लेने के लिए तैयार हैं?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "तैयार",
+      "blocked": "ब्लॉक",
+      "success": "सफल",
+      "error": "त्रुटि"
+    },
+    "getStarted": "शुरू करें",
+    "forever": "हमेशा के लिए",
+    "step": "कदम",
+    "dropzone": {
+      "title": "फ़ाइल अपलोड करें",
+      "description": "अपनी फ़ाइल यहाँ खींचें और छोड़ें",
+      "secure": "सुरक्षित स्थानीय प्रोसेसिंग",
+      "processedLocally": "स्थानीय रूप से प्रोसेस किया गया",
+      "maxSize": "अधिकतम {size}MB",
+      "noFileChosen": "कोई फ़ाइल नहीं चुनी गई"
+    },
+    "export": {
+      "ready": "डाउनलोड के लिए तैयार",
+      "download": "डाउनलोड",
+      "copy": "कॉपी",
+      "copied": "कॉपी किया गया!",
+      "share": "शेयर",
+      "reset": "रीसेट"
+    },
+    "faq": {
+      "title": "अक्सर पूछे जाने वाले प्रश्न",
+      "description": "इस टूल के बारे में वह सब कुछ जो आपको जानना चाहिए और यह आपकी प्राइवेसी की रक्षा कैसे करता है।"
+    },
+    "related": {
+      "title": "संबंधित प्रोफेशनल टूल",
+      "subtitle": "अपने वर्कफ़्लो के लिए और अधिक प्राइवेसी-फर्स्ट यूटिलिटीज एक्सप्लोर करें।"
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools डेस्कटॉप",
+      "build": "बिल्ड 0.4.1",
+      "app": "ऐप"
+    },
+    "languages": {
+      "select": "भाषा चुनें"
+    },
+    "relatedTools": "संबंधित क्रिएटिव टूल",
+    "relatedToolsDesc": "और अधिक प्राइवेसी-फर्स्ट यूटिलिटीज एक्सप्लोर करें।",
+    "all": "सभी",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "विज्ञापन",
+    "system_health": {
+      "title": "सिस्टम हेल्थ",
+      "localEngine": "लोकल इंजन",
+      "localEngineDesc": "आपके हार्डवेयर पर प्रोसेसिंग",
+      "secureSession": "सुरक्षित सत्र",
+      "secureSessionDesc": "अलग ब्राउज़र संदर्भ",
+      "online": "ऑनलाइन",
+      "onlineDesc": "गति के लिए अनुकूलित",
+      "offlineReady": "ऑफलाइन तैयार",
+      "offlineReadyDesc": "ऑफलाइन भी पूरी तरह कार्यात्मक",
+      "zeroTracking": "जीरो ट्रैकिंग",
+      "zeroTrackingDesc": "प्राइवेसी-फर्स्ट आर्किटेक्चर"
+    },
+    "values": {
+      "yes": "हाँ",
+      "no": "नहीं",
+      "limited": "सीमित"
+    },
+    "pro": {
+      "comingSoon": "Pro - जल्द आ रहा है",
+      "unlockPower": "और अधिक शक्ति अनलॉक करें",
+      "features": [
+        "10 गुना बड़ी फ़ाइलें",
+        "असीमित बैच प्रोसेसिंग",
+        "प्राथमिकता सर्वर प्रोसेसिंग कतार",
+        "साझा करने योग्य लिंक (72 घंटे की समाप्ति)",
+        "फ़ाइल इतिहास - पिछले 50 काम",
+        "भारी फ़ाइलों के लिए सर्वर-साइड प्रोसेसिंग"
+      ],
+      "waitlist": "वेटलिस्ट में शामिल हों - लॉन्च पर $8/माह",
+      "successTitle": "आप लिस्ट में हैं! 🎉",
+      "successDesc": "Pro लॉन्च होने पर हम आपको ईमेल करेंगे।",
+      "continueFree": "मुफ्त संस्करण के साथ जारी रखें",
+      "emailPlaceholder": "your@email.com",
+      "join": "शामिल हों",
+      "validEmail": "कृपया एक मान्य ईमेल पता दर्ज करें।",
+      "waitlistSuccess": "आप वेटलिस्ट में हैं! Pro लॉन्च होने पर हम आपको सूचित करेंगे।",
+      "freeLimit": "मुफ्त सीमा: {limit}",
+      "proLimit": "Pro सीमा: {limit}",
+      "yourFile": "आपकी फ़ाइल: {size}"
+    },
+    "disclaimer": {
+      "understand": "मैं समझता हूँ - जारी रखें",
+      "responsibility": "जारी रखकर आप इस टूल के उपयोग के लिए पूरी जिम्मेदारी स्वीकार करते हैं।"
+    },
+    "toast": {
+      "linkCopied": "लिंक क्लिपबोर्ड पर कॉपी किया गया"
+    },
+    "seo": {
+      "browserReqs": "JavaScript और WebAssembly की आवश्यकता है"
+    },
+    "aria": {
+      "goHome": "होम पर जाएं",
+      "toggleTheme": "थीम बदलें",
+      "faq": "अक्सर पूछे जाने वाले प्रश्न",
+      "changeLanguage": "भाषा बदलें",
+      "close": "बंद करें",
+      "menu": "मेन्यू",
+      "openTools": "टूल मेन्यू खोलें",
+      "exploreTools": "सभी टूल एक्सप्लोर करें",
+      "platformFeatures": "प्लेटफॉर्म विशेषताएं",
+      "privacyCommitment": "प्राइवेसी प्रतिबद्धता",
+      "developerApi": "डेवलपर API और दस्तावेज़",
+      "pricingPlans": "कीमत योजनाएं"
+    },
+    "shareTool": {
+      "title": "प्राइवेसी फैलाएं",
+      "subtitle": "लोकल-फर्स्ट कंप्यूटिंग का समर्थन करें",
+      "copyLink": "लिंक कॉपी करें",
+      "copied": "कॉपी किया गया",
+      "twitter": "{title} के लिए इस निजी, जीरो-अपलोड टूल को देखें:",
+      "telegram": "SafeTools के साथ सुरक्षित फ़ाइल प्रोसेसिंग: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "PDF समाधान",
+        "image": "इमेज स्टूडियो",
+        "privacy": "प्राइवेसी टूल",
+        "developer": "डेवलपर टूल",
+        "pdfMerge": "PDF मर्ज करें",
+        "pdfSplit": "PDF विभाजित करें",
+        "pdfUnlock": "PDF अनलॉक करें",
+        "pdfProtect": "PDF प्रोटेक्ट करें",
+        "pdfToImage": "PDF से इमेज",
+        "securityFileShredder": "फ़ाइल श्रेडर"
+      }
+    },
+    "error": "त्रुटि"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% स्थानीय प्रोसेसिंग",
+      "noUploads": "जीरो सर्वर अपलोड",
+      "noTracking": "जीरो डेटा ट्रैकिंग",
+      "privacyFirst": "प्राइवेसी-फर्स्ट UX",
+      "worksOffline": "ऑफलाइन काम करता है"
+    }
+  }
+}

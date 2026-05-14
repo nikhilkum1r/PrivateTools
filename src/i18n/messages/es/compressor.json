@@ -1,0 +1,353 @@
+{
+  "compressor": {
+    "seo": {
+      "title": "Comprimir Imágenes Online Gratis, Rápido y Privado | SafeTools",
+      "description": "Comprima JPG, PNG, WEBP, AVIF, SVG, GIF, HEIC y más formatos de imagen online gratis. Reduzca el tamaño del archivo de imagen sin subirlo a servidores. Compresión de imágenes rápida, segura y basada en el navegador.",
+      "keywords": "comprimir imagen, reducir tamaño imagen, encoger foto, compresor de imágenes online, compresión de imágenes privada, compresión por lotes, compresor webp, compresor png",
+      "ogTitle": "Estudio de Compresión de Imágenes | 100% Privado | SafeTools",
+      "ogDescription": "Comprima imágenes localmente en su navegador. Sin subidas al servidor. Optimización de activos por lotes para mayor velocidad.",
+      "seoName": "SafeTools Compresor de Imágenes",
+      "seoDescription": "El estudio de compresión de imágenes más privado del mundo. Todo el procesamiento ocurre en su dispositivo.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "parent": "Estudio de Imagen",
+        "current": "Compresor"
+      },
+      "features": [
+        {
+          "title": "Compresor de Imágenes Online Gratis",
+          "desc": "SafeTools le ayuda a comprimir imágenes grandes sin sacrificar la privacidad o la velocidad. A diferencia de muchos compresores online, sus imágenes se procesan directamente en su dispositivo, lo que hace que la compresión sea segura y extremadamente rápida."
+        },
+        {
+          "title": "Listo para Redes Sociales",
+          "desc": "Reduzca los tamaños de las imágenes para sitios web, blogs, correo electrónico, WhatsApp, Instagram, LinkedIn, portafolios y tiendas online para mejorar la velocidad de carga y ahorrar espacio de almacenamiento."
+        },
+        {
+          "title": "La Mejor Herramienta Basada en el Navegador",
+          "desc": "No requiere descarga de software ni creación de cuenta. SafeTools funciona en navegadores de Windows, Linux, macOS, Android e iPhone. Todo se ejecuta localmente en su navegador."
+        }
+      ]
+    },
+    "hero": {
+      "title": "Comprimir Imágenes Online",
+      "description": "Reduzca el tamaño de los archivos de imagen hasta en un 90% localmente en su navegador. Establezca límites de KB/MB con cero pérdida de calidad. 100% Privado.",
+      "badge": "Compresión con Privacidad Primero",
+      "device": "Matriz del Lado del Cliente",
+      "engine": "Núcleo WASM",
+      "titleSpecific": "Comprimir Imágenes {format} Online",
+      "descriptionSpecific": "Reduzca el tamaño de los archivos {format} hasta en un 90% localmente en su navegador. 100% Privado, cero subidas."
+    },
+    "header": {
+      "reset": "Reiniciar Estudio",
+      "space_saved": "Espacio Ahorrado",
+      "smaller": "{size} MÁS PEQUEÑO",
+      "lifetime_impact": "Impacto de Por Vida",
+      "saved": "{size} AHORRADO",
+      "add_more": "Añadir Más Archivos",
+      "download_all": "Descargar Todas las Imágenes"
+    },
+    "settings": {
+      "title": "Matriz del Estudio",
+      "saveAs": "Guardar Como",
+      "secure": "Seguro",
+      "quality": "Calidad de Fidelidad",
+      "strip": "Eliminar Metadatos EXIF",
+      "width": "Redimensionar (An)",
+      "height": "Redimensionar (Al)",
+      "target_size": "Tamaño Objetivo (KB)",
+      "rename": "Patrón de Renombrado",
+      "advanced": "Matriz Avanzada",
+      "brightness": "Brillo",
+      "contrast": "Contraste",
+      "saturation": "Saturación",
+      "presets": {
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "fullhd": "Full HD"
+      },
+      "resetOriginalSize": "Restablecer al Tamaño Original",
+      "units": {
+        "px": "PX",
+        "kb": "KB"
+      },
+      "smartOptimizer": "Optimizador Inteligente",
+      "smartActive": "Optimización Inteligente Activa",
+      "manualActive": "Matriz Manual Activa",
+      "automatic": "Automático",
+      "manual": "Manual",
+      "original": "Original",
+      "noLimit": "Sin Límite",
+      "privacyShield": "Escudo de Privacidad",
+      "deepClean": "Limpieza Profunda",
+      "metadataDeleted": "Metadatos Eliminados",
+      "metadataIncluded": "Metadatos Incluidos",
+      "bulkRename": "Renombrado Masivo",
+      "dynamic": "Dinámico",
+      "visualPolish": "Pulido Visual",
+      "sizePresets": "Ajustes de Tamaño"
+    },
+    "toast": {
+      "presetInstagram": "Ajuste de Instagram aplicado (1080x1080)",
+      "presetFacebook": "Ajuste de Facebook aplicado (1200x630)",
+      "presetTwitter": "Ajuste de Twitter aplicado (1600x900)",
+      "presetFullHD": "Ajuste Full HD aplicado (1920x1080)",
+      "error": "Error al comprimir la imagen",
+      "exported": "Activos exportados con éxito",
+      "copied": "Copiado al portapapeles",
+      "clipboardFailed": "Error al copiar al portapapeles",
+      "manualMode": "Cambiado a Modo Manual"
+    },
+    "queue": {
+      "title": "Cola de Activos y Telemetría en Vivo",
+      "optimized": "Optimizado",
+      "processing": "Procesando",
+      "savings": "Ahorro",
+      "fileSize": "Tamaño de Archivo",
+      "compress": "Comprimir",
+      "download": "Descargar Imagen",
+      "compress_all": "Comprimir Todo Ahora"
+    },
+    "benefits": {
+      "title": "Por qué Elegir SafeTools",
+      "subtitle": "Diseñado para la privacidad, la velocidad y una calidad sin compromisos.",
+      "noTracking": "Cero Seguimiento",
+      "fast": "Rápido como el Rayo",
+      "browser": "Motor en el Navegador",
+      "local": "Procesamiento Local",
+      "zero": "Cero Subidas"
+    },
+    "comparison": {
+      "title": "Comparar Calidad",
+      "subtitle": "Revise su imagen comprimida",
+      "originalSize": "Tamaño Original",
+      "newSize": "Nuevo Tamaño",
+      "original": "Original",
+      "optimized": "Optimizado",
+      "smaller": "Más Pequeño",
+      "smallerLabel": "{percent}% Más Pequeño",
+      "perfect": "Se Ve Perfecto",
+      "qualityCheck": "Control de Calidad",
+      "save": "Guardar y Descargar"
+    },
+    "dropzone": {
+      "title": "Suelte los Activos Aquí",
+      "description": "Sus archivos nunca se suben. La privacidad está garantizada matemáticamente."
+    },
+    "cta": {
+      "badge": "Rápido. Seguro. Basado en el Navegador.",
+      "title": "Comprimir Imágenes Ahora",
+      "description": "Únase a miles de usuarios que están optimizando sus activos con privacidad y velocidad.",
+      "button": "Subir Imágenes Ahora"
+    },
+    "landing": {
+      "features": {
+        "title": "Compresión de Alto Rendimiento",
+        "badge": "Motor de Navegador Avanzado",
+        "items": [
+          {
+            "title": "Compresión de Imágenes Rápida",
+            "description": "Comprima imágenes en segundos usando el procesamiento de alto rendimiento del navegador."
+          },
+          {
+            "title": "100% Privacidad Primero",
+            "description": "Sus archivos nunca salen de su dispositivo. Todo funciona localmente en su navegador."
+          },
+          {
+            "title": "Optimización de Calidad Inteligente",
+            "description": "Reduzca el tamaño del archivo manteniendo una calidad de imagen nítida."
+          },
+          {
+            "title": "Compresión por Lotes",
+            "description": "Comprima múltiples imágenes a la vez para un flujo de trabajo más rápido."
+          },
+          {
+            "title": "Soporta Formatos Modernos",
+            "description": "Funciona con JPG, PNG, WEBP, AVIF, HEIC y muchos otros formatos de imagen."
+          },
+          {
+            "title": "Sin Instalación Requerida",
+            "description": "Úselo directamente desde cualquier navegador moderno en escritorio o móvil."
+          }
+        ],
+        "vitals": {
+          "title": "Impacto en Core Web Vitals",
+          "label": "Puntuación de Lighthouse"
+        }
+      },
+      "performance": {
+        "title": "Por qué Importa la Compresión de Imágenes",
+        "badge": "Rendimiento Web",
+        "vitals": "Core Web Vitals",
+        "items": [
+          {
+            "t": "Tiempos de Carga más Rápidos",
+            "d": "Las imágenes comprimidas se cargan hasta 10 veces más rápido."
+          },
+          {
+            "t": "Mejor SEO",
+            "d": "Google posiciona los sitios web más rápidos en mejores lugares."
+          },
+          {
+            "t": "Menor Ancho de Banda",
+            "d": "Ahorre datos móviles y costes de alojamiento."
+          }
+        ]
+      },
+      "how_it_works": {
+        "title": "Cómo Funciona",
+        "subtitle": "Cuatro Pasos hacia la Eficiencia",
+        "steps": [
+          {
+            "title": "Cargar",
+            "description": "Subir imagen localmente"
+          },
+          {
+            "title": "Configurar",
+            "description": "Seleccionar ajustes de compresión"
+          },
+          {
+            "title": "Sincronizar",
+            "description": "Comprimir de forma segura en el navegador"
+          },
+          {
+            "title": "Exportar",
+            "description": "Descargar archivo optimizado al instante"
+          }
+        ]
+      },
+      "formats": {
+        "badge": "Compatibilidad Universal",
+        "title": "Formatos de Imagen Soportados",
+        "subtitle": "Compatibilidad Universal de Formatos",
+        "input": "Formatos de Entrada",
+        "output": "Formatos de Salida"
+      },
+      "manifesto": {
+        "title": "¿Por qué usar SafeTools?",
+        "subtitle": "Análisis de Arquitectura Competitiva",
+        "badge": "Comparación de Arquitectura",
+        "typical": {
+          "title": "Herramientas de Servidor Típicas",
+          "items": [
+            "Sube archivos a servidores externos",
+            "Riesgo de brechas y filtraciones de datos",
+            "Tiempos de procesamiento más lentos",
+            "Límites en el tamaño del archivo y uso diario"
+          ]
+        },
+        "safetools": {
+          "title": "Arquitectura SafeTools",
+          "items": [
+            "Cero subidas al servidor",
+            "Procesamiento local 100% privado",
+            "Ejecución instantánea basada en el navegador",
+            "Sin límites arbitrarios de tamaño de archivo"
+          ]
+        },
+        "table": {
+          "feature": "Característica",
+          "standard": "Herramientas Estándar",
+          "safeTools": "SafeTools Studio",
+          "rows": [
+            {
+              "f": "Subida Requerida",
+              "s": "Normalmente",
+              "t": "No"
+            },
+            {
+              "f": "Procesamiento Local",
+              "s": "Raro",
+              "t": "Sí"
+            },
+            {
+              "f": "Scripts de Seguimiento",
+              "s": "A menudo",
+              "t": "No"
+            },
+            {
+              "f": "Basado en el Navegador",
+              "s": "Parcial",
+              "t": "Completo"
+            },
+            {
+              "f": "Enfocado en Privacidad",
+              "s": "Limitado",
+              "t": "Sí"
+            }
+          ]
+        }
+      },
+      "audiences": {
+        "badge": "Para Todos",
+        "title": "Diseñado para cada Flujo de Trabajo",
+        "subtitle": "Segmentos de Audiencia Profesional",
+        "items": [
+          {
+            "title": "Desarrolladores",
+            "description": "Optimice activos para canales CI/CD."
+          },
+          {
+            "title": "Diseñadores",
+            "description": "Compresión por lotes de entregables para clientes."
+          },
+          {
+            "title": "Agencias",
+            "description": "Mantenga la calidad en grandes proyectos."
+          },
+          {
+            "title": "Fotógrafos",
+            "description": "Procesamiento local seguro para arte de alta resolución."
+          },
+          {
+            "title": "Blogueros",
+            "description": "Mejore el SEO y la velocidad de la página al instante."
+          },
+          {
+            "title": "E-commerce",
+            "description": "Reduzca el peso de las imágenes de productos para conversiones."
+          },
+          {
+            "title": "Creadores",
+            "description": "Activos listos para la web para redes sociales."
+          },
+          {
+            "title": "Estudiantes",
+            "description": "Archivos de pequeño tamaño para entregas de documentos."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "¿Es privada la compresión de imágenes de SafeTools?",
+            "a": "Sí. Toda la compresión ocurre localmente en su navegador. Sus archivos nunca se suben a servidores."
+          },
+          {
+            "q": "¿Qué formatos de imagen son compatibles?",
+            "a": "SafeTools soporta JPG, JPEG, PNG, WEBP, AVIF, GIF, SVG, HEIC, TIFF, BMP, ICO y más."
+          },
+          {
+            "q": "¿Puedo comprimir varias imágenes?",
+            "a": "Sí. La compresión por lotes es compatible para un procesamiento más rápido."
+          },
+          {
+            "q": "¿La compresión reduce la calidad de la imagen?",
+            "a": "Puede elegir entre compresión de alta calidad y reducción máxima del archivo mediante los controles de calidad."
+          },
+          {
+            "q": "¿Es gratuita esta herramienta?",
+            "a": "Sí. El compresor de imágenes es completamente gratuito."
+          }
+        ],
+        "title": "FAQ del Compresor",
+        "description": "Preguntas frecuentes sobre el compresor."
+      },
+      "popular": {
+        "title": "Optimizaciones de Imagen Populares",
+        "subtitle": "Manejado 100% localmente en su navegador",
+        "compress": "Comprimir {fmt}"
+      }
+    }
+  }
+}

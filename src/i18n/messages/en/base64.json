@@ -1,0 +1,76 @@
+{
+  "base64": {
+    "seo": {
+      "title": "Base64 Master | Secure Text & Image Codec | SafeTools",
+      "description": "Professional-grade Base64 encoding and decoding for text and images. 100% private, browser-based processing."
+    },
+    "hero": {
+      "badge": "Binary Identity Studio",
+      "title": "Base64 Master.",
+      "subtitle": "Professional-grade Base64 encoding and decoding for text and images. 100% private."
+    },
+    "modes": {
+      "text": "Text Mode",
+      "image": "Image Mode",
+      "encode": "Encode",
+      "decode": "Decode"
+    },
+    "labels": {
+      "input": "Input Source",
+      "result": "Result",
+      "preview": "Preview Rendering",
+      "area": "Area",
+      "offset": "Offset"
+    },
+    "placeholders": {
+      "text_encode": "Enter plain text...",
+      "text_decode": "Enter Base64 string...",
+      "awaiting_synthesis": "Awaiting synthesis...",
+      "awaiting_image": "Awaiting image string..."
+    },
+    "buttons": {
+      "execute": "EXECUTE {mode}",
+      "copy_string": "Copy String"
+    },
+    "guide": {
+      "title": "Why Base64?",
+      "content": "Base64 encoding is essential for embedding binary datalike images or fontsdirectly into HTML or CSS files without external requests.",
+      "list": [
+        "Text Encoding: Transform ASCII/Unicode into a 64-character safe string.",
+        "Image Data URIs: Convert photos into strings for faster CSS rendering.",
+        "Secure Identity: Process sensitive strings locally without telemetry."
+      ],
+      "precision_title": "Industrial Precision",
+      "precision_content": "Built for developers and security engineers. Handles large image strings and complex text encoding with native browser speed. Zero server overhead."
+    },
+    "messages": {
+      "text_empty": "Please provide input text.",
+      "success": "Processed successfully!",
+      "error": "Processing failed: Invalid Base64 or Text.",
+      "image_success": "Image encoded to Base64!",
+      "copied": "Copied to clipboard!"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "What is Base64 encoding?",
+          "a": "Base64 encoding is a method of converting binary data (like images or documents) into a text string format. This is commonly used to embed images directly into HTML/CSS or transmit data securely without corruption."
+        },
+        {
+          "q": "Is my data secure when using this tool?",
+          "a": "Yes! All encoding and decoding processes happen entirely locally in your browser. We never upload your text, images, or files to any external servers."
+        },
+        {
+          "q": "Can I convert images to Base64?",
+          "a": "Absolutely. You can drop JPG, PNG, SVG, or other image files into the tool, and it will generate a Data URI format string that you can use directly in your web projects."
+        },
+        {
+          "q": "What are the limitations?",
+          "a": "Because the tool runs in your browser, performance is dependent on your device. Very large files might take a moment to encode, but standard images and text strings process instantly."
+        }
+      ],
+      "title": "Frequently Asked Questions",
+      "description": "Learn more about Base64 encoding and our secure browser-based tool."
+    }
+  }
+}

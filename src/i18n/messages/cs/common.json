@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Vítejte v SafeTools",
+    "tagline": "Více než 150 online nástrojů pro soubory zaměřených na soukromí, které běží lokálně",
+    "upload": "Nahrát soubor",
+    "download": "Stáhnout",
+    "compress": "Komprimovat",
+    "convert": "Konvertovat",
+    "edit": "Upravit",
+    "search": "Hledat mezi více než 150 nástroji...",
+    "privacy": "Soukromí na prvním místě",
+    "speed": "Ultra rychlé",
+    "security": "Podniková úroveň",
+    "systemHealth": {
+      "title": "Stav systému",
+      "localEngine": "Lokální engine",
+      "localEngineDesc": "Zpracování probíhá 100% lokálně na vašem zařízení.",
+      "secureSession": "Zabezpečená relace",
+      "secureSessionDesc": "Izolované prostředí prohlížeče pro maximální soukromí.",
+      "online": "Připojeno",
+      "onlineDesc": "Online pro nejnovější aktualizace nástrojů.",
+      "offlineReady": "Připraveno pro offline",
+      "offlineReadyDesc": "Tento nástroj funguje perfektně bez připojení k internetu.",
+      "zeroTracking": "Nulové sledování",
+      "zeroTrackingDesc": "Žádná data nejsou odesílána na naše servery ke sledování."
+    },
+    "securityTools": "Zabezpečovací nástroje",
+    "privacyTools": "Nástroje pro soukromí",
+    "tools": {
+      "vault": "Zabezpečený trezor",
+      "metadataCleaner": "Čistič metadat",
+      "fileShredder": "Skartovačka souborů",
+      "secureNotes": "Zabezpečené poznámky",
+      "passwordGenerator": "Generátor hesel",
+      "passwordChecker": "Kontrola síly hesla",
+      "ocr": "OCR extrakce",
+      "steganography": "Steganografie obrázků",
+      "imageEditor": "Editor obrázků",
+      "imageCompressor": "Kompresor obrázků",
+      "formatConverter": "Konvertor formátů",
+      "backgroundRemover": "Odstraňovač pozadí",
+      "colorLab": "Barevná laboratoř",
+      "pdfToImage": "PDF do obrázku"
+    },
+    "toolsLabel": "Nástroje",
+    "features": "Funkce",
+    "developers": "Vývojáři",
+    "pricing": "Ceny",
+    "about": "O SafeTools",
+    "whyAds": "Proč zobrazujeme reklamy",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "termsOfService": "Podmínky služby",
+    "contact": "Kontaktujte nás",
+    "home": "Domů",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Seznam změn",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Systém",
+    "startFree": "Začněte zdarma",
+    "systemStatus": "Stav systému",
+    "updates": "Aktualizace",
+    "feedback": "Zpětná vazba",
+    "contents": "Obsah",
+    "imageTools": "Nástroje pro obrázky",
+    "openTools": "Otevřít nástroje",
+    "ready": "Jste připraveni převzít kontrolu?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "PŘIPRAVENO",
+      "blocked": "BLOKOVÁNO",
+      "success": "ÚSPĚCH",
+      "error": "CHYBA"
+    },
+    "getStarted": "Začít",
+    "forever": "navždy",
+    "step": "Krok",
+    "dropzone": {
+      "title": "Nahrát soubor",
+      "description": "Přetáhněte soubor sem",
+      "secure": "Zabezpečené lokální zpracování",
+      "processedLocally": "Zpracováno lokálně",
+      "maxSize": "Max {size}MB",
+      "noFileChosen": "Nebyl vybrán žádný soubor"
+    },
+    "export": {
+      "ready": "Připraveno ke stažení",
+      "download": "Stáhnout",
+      "copy": "Kopírovat",
+      "copied": "Zkopírováno!",
+      "share": "Sdílet",
+      "reset": "Resetovat"
+    },
+    "faq": {
+      "title": "Často kladené dotazy",
+      "description": "Vše, co potřebujete vědět o tomto nástroji a o tom, jak chrání vaše soukromí."
+    },
+    "related": {
+      "title": "Související profesionální nástroje",
+      "subtitle": "Prozkoumejte další utility zaměřené na soukromí pro váš pracovní postup."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Vybrat jazyk"
+    },
+    "relatedTools": "Související kreativní nástroje",
+    "relatedToolsDesc": "Prozkoumejte další utility zaměřené na soukromí.",
+    "all": "Vše",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Reklama",
+    "system_health": {
+      "title": "Stav systému",
+      "localEngine": "Lokální engine",
+      "localEngineDesc": "Zpracování na vašem hardwaru",
+      "secureSession": "Zabezpečená relace",
+      "secureSessionDesc": "Izolovaný kontext prohlížeče",
+      "online": "Online",
+      "onlineDesc": "Optimalizováno pro rychlost",
+      "offlineReady": "Připraveno pro offline",
+      "offlineReadyDesc": "Plně funkční offline",
+      "zeroTracking": "Nulové sledování",
+      "zeroTrackingDesc": "Architektura zaměřená na soukromí"
+    },
+    "values": {
+      "yes": "Ano",
+      "no": "Ne",
+      "limited": "Omezeno"
+    },
+    "pro": {
+      "comingSoon": "Pro – Již brzy",
+      "unlockPower": "Odemkněte více výkonu",
+      "features": [
+        "Soubory až 10× větší",
+        "Neomezené dávkové zpracování",
+        "Prioritní fronta zpracování na serveru",
+        "Sdílené odkazy (platnost 72h)",
+        "Historie souborů – posledních 50 úloh",
+        "Zpracování na straně serveru pro těžké soubory"
+      ],
+      "waitlist": "Připojte se k čekací listině – 8 $/měsíc při spuštění",
+      "successTitle": "Jste na seznamu! 🎉",
+      "successDesc": "Až bude Pro spuštěno, zašleme vám e-mail.",
+      "continueFree": "Pokračovat s bezplatnou verzí",
+      "emailPlaceholder": "vas@email.cz",
+      "join": "Připojit se",
+      "validEmail": "Zadejte prosím platnou e-mailovou adresu.",
+      "waitlistSuccess": "Jste na čekací listině! Dáme vám vědět, až bude Pro spuštěno.",
+      "freeLimit": "Bezplatný limit: {limit}",
+      "proLimit": "Pro limit: {limit}",
+      "yourFile": "Váš soubor: {size}"
+    },
+    "disclaimer": {
+      "understand": "Rozumím – Pokračovat",
+      "responsibility": "Pokračováním přijímáte plnou odpovědnost za používání tohoto nástroje."
+    },
+    "toast": {
+      "linkCopied": "Odkaz zkopírován do schránky"
+    },
+    "seo": {
+      "browserReqs": "Vyžaduje JavaScript a WebAssembly"
+    },
+    "aria": {
+      "goHome": "Přejít na úvodní stránku",
+      "toggleTheme": "Přepnout motiv",
+      "faq": "Často kladené dotazy",
+      "changeLanguage": "Změnit jazyk",
+      "close": "Zavřít",
+      "menu": "Menu",
+      "openTools": "Otevřít nabídku nástrojů",
+      "exploreTools": "Prozkoumat všechny nástroje",
+      "platformFeatures": "Funkce platformy",
+      "privacyCommitment": "Závazek k soukromí",
+      "developerApi": "Developer API a dokumentace",
+      "pricingPlans": "Cenové plány"
+    },
+    "shareTool": {
+      "title": "Šířit soukromí",
+      "subtitle": "Podpořte local-first computing",
+      "copyLink": "Kopírovat odkaz",
+      "copied": "Zkopírováno",
+      "twitter": "Podívejte se na tento soukromý nástroj bez nahrávání pro {title}:",
+      "telegram": "Zabezpečené zpracování souborů se SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Řešení PDF",
+        "image": "Image Studio",
+        "privacy": "Nástroje pro soukromí",
+        "developer": "Vývojářské nástroje",
+        "pdfMerge": "Sloučit PDF",
+        "pdfSplit": "Rozdělit PDF",
+        "pdfUnlock": "Odemknout PDF",
+        "pdfProtect": "Chránit PDF",
+        "pdfToImage": "PDF do obrázku",
+        "securityFileShredder": "Skartovačka souborů"
+      }
+    },
+    "error": "Chyba"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "100% lokální zpracování",
+      "noUploads": "Nulové nahrávání na server",
+      "noTracking": "Nulové sledování dat",
+      "privacyFirst": "UX zaměřené na soukromí",
+      "worksOffline": "Funguje offline"
+    }
+  }
+}

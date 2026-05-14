@@ -1,0 +1,186 @@
+{
+  "tools": {
+    "seo": {
+      "title": "すべてのプライベートツール | SafeTools - 安全なローカル処理",
+      "description": "プライバシー優先のローカルツールスイートの全機能にアクセス。画像編集、PDF操作、ファイル暗号化、開発者向けユーティリティ。100%プライベートなブラウザベースのツールです。",
+      "keywords": "プライベートツール, ローカル処理ツール, 安全なオンラインツール, 画像ツール, PDFツール, 開発ユーティリティ",
+      "ogTitle": "SafeTools | 全ツールハブ",
+      "ogDescription": "100%プライベートなブラウザベースのツールをすべてご覧ください。"
+    },
+    "categories": {
+      "All": "すべて",
+      "Creative": "クリエイティブ",
+      "Documents": "ドキュメント",
+      "Media": "メディア",
+      "Security": "セキュリティ",
+      "Dev": "開発"
+    },
+    "data": {
+      "/image/editor": {
+        "title": "画像を編集",
+        "desc": "OCR、フィルタ、切り抜き、一括書き出しを備えたプロ向けエディタ。"
+      },
+      "/image/remove-background": {
+        "title": "AI背景削除",
+        "desc": "ローカルのニューラルエンジンを使用して、ブラウザで即座に背景を削除。"
+      },
+      "/image/ocr": {
+        "title": "画像からテキスト抽出 (OCR)",
+        "desc": "ニューラル認識を使用して画像からテキストを抽出。"
+      },
+      "/image/convert": {
+        "title": "画像形式を変換",
+        "desc": "HEIC, WebP, AVIF, RAW, PDFなど150以上の形式を変換。"
+      },
+      "/image/compress": {
+        "title": "画像を圧縮 (KB/MB)",
+        "desc": "ターゲットサイズを指定して、画質を維持しつつ最大90%縮小。"
+      },
+      "/image/colors": {
+        "title": "画像から色を抽出",
+        "desc": "あらゆる画像からパレット、HEX、RGB、HSLを取得。"
+      },
+      "/image/to-pptx": {
+        "title": "画像からPPTX",
+        "desc": "画像をプロフェッショナルなPowerPointプレゼンテーションに変換。"
+      },
+      "/devtools/icons": {
+        "title": "アプリアイコン・スタジオ",
+        "desc": "iOS、Android、PWA用のアイコンバンドルを即座に生成。"
+      },
+      "/pdf/merge-pdf": {
+        "title": "PDF結合",
+        "desc": "複数のPDFや画像を1つのドキュメントに結合。"
+      },
+      "/pdf/split-pdf": {
+        "title": "PDF分割",
+        "desc": "特定のページを抽出したり、個別のファイルに分割したりします。"
+      },
+      "/pdf/compress-pdf": {
+        "title": "PDF圧縮",
+        "desc": "品質を落とさずにPDFファイルをローカルで軽量化。"
+      },
+      "/pdf/unlock-pdf": {
+        "title": "PDFロック解除",
+        "desc": "PDFからパスワード保護を解除。"
+      },
+      "/pdf/protect-pdf": {
+        "title": "PDF保護",
+        "desc": "PDFに強力なパスワード保護をローカルで追加。"
+      },
+      "/document/word-to-pdf": {
+        "title": "WordからPDF",
+        "desc": "DOCXをプロフェッショナルなPDFドキュメントに変換。"
+      },
+      "/document/pdf-to-txt": {
+        "title": "PDFからテキスト",
+        "desc": "PDFからテキストレイヤーを抽出。"
+      },
+      "/pdf/to-image": {
+        "title": "PDFから画像",
+        "desc": "PDFドキュメントを高品質な画像に変換。"
+      },
+      "/document/text-tools/case-converter": {
+        "title": "大文字・小文字変換",
+        "desc": "テキストの大文字・小文字を即座に変換。"
+      },
+      "/document/text-tools/word-counter": {
+        "title": "単語カウンター",
+        "desc": "文字数と単語数のリアルタイム分析。"
+      },
+      "/security/metadata-cleaner": {
+        "title": "メタデータ・クリーナー",
+        "desc": "隠しデータ、EXIF、GPSトラッキングをローカルで削除。"
+      },
+      "/image/metadata-cleaner": {
+        "title": "メタデータ・クリーナー",
+        "desc": "隠しデータ、EXIF、GPSトラッキング कोローカルで削除。"
+      },
+      "/security/vault": {
+        "title": "セキュア・ボルト",
+        "desc": "AES-256 GCM クライアントサイド・ファイル暗号化。"
+      },
+      "/privacy/password-generator": {
+        "title": "パスワード生成",
+        "desc": "高エントロピーな安全なパスワードを生成。"
+      },
+      "/privacy/password-checker": {
+        "title": "パスワードチェッカー",
+        "desc": "パスワードの強度をローカルで分析。"
+      },
+      "/privacy/privacy-scanner": {
+        "title": "プライバシー・スキャナー",
+        "desc": "ブラウザのセキュリティと匿名性を監査。"
+      },
+      "/privacy/secure-notes": {
+        "title": "セキュア・ノート",
+        "desc": "暗号化された自己破壊型のメモをローカルで作成。"
+      },
+      "/security/file-shredder": {
+        "title": "ファイル・シュレッダー",
+        "desc": "機密ファイルをメモリから完全に消去。"
+      },
+      "/security/steganography": {
+        "title": "ステガノグラフィ",
+        "desc": "画像の中に秘密のメッセージを不可視の状態で隠す。"
+      },
+      "/tools/qr-generator": {
+        "title": "QR生成",
+        "desc": "カスタムスタイルでQRコードを生成・スキャン。"
+      },
+      "/privacy/qr-generator": {
+        "title": "QR生成",
+        "desc": "カスタムスタイルでQRコードを生成・スキャン。"
+      },
+      "/devtools": {
+        "title": "開発者ツール",
+        "desc": "JSONフォーマッタ、Base64など。"
+      },
+      "/devtools/data-converter": {
+        "title": "データ変換",
+        "desc": "JSONとCSVを安全に相互変換。"
+      },
+      "/devtools/base64": {
+        "title": "Base64スタジオ",
+        "desc": "テキストや画像を安全にエンコード・デコード。"
+      },
+      "/devtools/json": {
+        "title": "JSONフォーマッタ＆バリデータ",
+        "desc": "JSONデータをローカルで整形、圧縮、検証します。"
+      },
+      "/devtools/hash": {
+        "title": "ハッシュジェネレーター",
+        "desc": "SHA-256、SHA-512、MD5ハッシュをローカルで生成します。"
+      },
+      "/devtools/jwt": {
+        "title": "JWTデバッガー",
+        "desc": "JWTトークンを安全にデコードして検査します。"
+      },
+      "/devtools/url": {
+        "title": "URLエンコーダー＆デコーダー",
+        "desc": "URLとURIコンポーネントを安全にエンコードおよびデコードします。"
+      },
+      "/devtools/uuid": {
+        "title": "UUID v4 ファクトリー",
+        "desc": "暗号学的に安全なバージョン4 UUIDを生成します。"
+      },
+      "/devtools/timestamp": {
+        "title": "Unixタイムスタンプコンバーター",
+        "desc": "Unixエポック時間と日付の間で変換します。"
+      },
+      "/devtools/lorem": {
+        "title": "ロレム・イプサム・ジェネレーター",
+        "desc": "デザイン用のプレースホルダーテキストを生成します。"
+      },
+      "/ai": {
+        "title": "AIラボ",
+        "desc": "ローカルファーストのAIモデル用の実験的な遊び场。"
+      },
+      "/document/master": {
+        "title": "ドキュメントマスター",
+        "desc": "Officeファイル用のユニバーサルドキュメントビューア＆エディタ。"
+      }
+    },
+    "openTool": "ツールを開く"
+  }
+}

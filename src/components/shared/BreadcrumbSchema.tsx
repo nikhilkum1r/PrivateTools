@@ -1,4 +1,5 @@
 import React from "react";
+import Script from "next/script";
 
 interface BreadcrumbItem {
   name: string;
@@ -22,7 +23,8 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   };
 
   return (
-    <script
+    <Script
+      id="breadcrumb-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

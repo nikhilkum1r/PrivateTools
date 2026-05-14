@@ -1,0 +1,563 @@
+{
+  "home": {
+    "seo": {
+      "title": "SafeTools.space | 150+ Herramientas de archivos en línea con prioridad en la privacidad",
+      "description": "Convierta, comprima, edite, encripte y gestione archivos de forma segura en su navegador. Sin cargas, sin rastreo."
+    },
+    "hero": {
+      "title": "La privacidad no es una característica. Es un <studio>derecho.</studio>",
+      "subtitle": "Herramientas potentes diseñadas para la privacidad y la velocidad",
+      "description": "SafeTools procesa sus archivos directamente en su dispositivo, ofreciéndole herramientas potentes sin sacrificar su privacidad, control o tranquilidad.",
+      "getStarted": "Explorar herramientas",
+      "browseAll": "Por qué construimos SafeTools",
+      "exploreButton": "Explorar más de 150 herramientas",
+      "badge": "Privacy Engine v2.5",
+      "engineStatus": "Engine v2.0 Live",
+      "localProcessing": "Procesamiento 100% local",
+      "recent": "Recientes",
+      "favorites": "Favoritos"
+    },
+    "trustBar": [
+      {
+        "name": "Cumple GDPR",
+        "desc": "Sin recopilación de datos"
+      },
+      {
+        "name": "AES-256 GCM",
+        "desc": "Encriptación de grado militar"
+      },
+      {
+        "name": "Sandboxed",
+        "desc": "Ejecución aislada en el navegador"
+      },
+      {
+        "name": "WASM Native",
+        "desc": "Rendimiento sin latencia"
+      },
+      {
+        "name": "Open Core",
+        "desc": "Procesamiento transparente"
+      }
+    ],
+    "whyWeExist": {
+      "title": "Por qué existe SafeTools",
+      "story": "Hace unos años, alguien cercano a nosotros utilizó una plataforma de utilidades en línea para documentos personales. Meses después, esos datos aparecieron en línea. Ese incidente reveló un problema oculto: muchas plataformas recopilan, almacenan o procesan archivos sensibles en servidores remotos sin transparencia.",
+      "mission": "SafeTools fue creado para cambiar eso.",
+      "solution": "La mayoría de las herramientas modernas no necesitan que sus archivos se carguen en servidores externos. Por eso SafeTools se construye sobre una arquitectura privacy-first donde el procesamiento ocurre directamente en su dispositivo.",
+      "points": [
+        "Sin cargas innecesarias.",
+        "Sin almacenamiento oculto.",
+        "Sin venta de datos de usuario.",
+        "Sus datos siguen siendo suyos."
+      ]
+    },
+    "infra": [
+      {
+        "title": "Motor WebAssembly",
+        "description": "Lógica de procesamiento de alto rendimiento que se ejecuta de forma nativa en su navegador. Sin sobrecarga de servidor."
+      },
+      {
+        "title": "Arquitectura Zero-Knowledge",
+        "description": "Sus datos nunca son desencriptados ni visualizados por terceros. Cálculo local puro."
+      },
+      {
+        "title": "Procesamiento instantáneo",
+        "description": "Elimine los tiempos de espera de carga y descarga. Procese GB de datos en segundos."
+      }
+    ],
+    "bento": {
+      "privacy": {
+        "badge": "Privacidad principal",
+        "title": "Arquitectura Zero-Knowledge",
+        "description": "Nuestra filosofía \"local-first\" garantiza que sus archivos nunca se carguen, escaneen ni almacenen en ningún servidor remoto."
+      },
+      "performance": {
+        "badge": "Rendimiento",
+        "title": "Latencia inferior al segundo",
+        "security": "Ejecución en Sandbox",
+        "status": {
+          "ready": "LISTO",
+          "blocked": "BLOQUEADO",
+          "success": "ÉXITO"
+        },
+        "description": "Al eliminar el ciclo de carga/descarga, SafeTools ofrece un procesamiento casi instantáneo incluso para archivos grandes."
+      },
+      "crossPlatform": {
+        "title": "Multiplataforma",
+        "description": "Escritorio, Móvil, Tablet. Sincronización perfecta en todos sus dispositivos."
+      },
+      "offlineFirst": {
+        "title": "Offline First",
+        "description": "Cargue una vez, use para siempre. No se requiere internet para la mayoría de las herramientas."
+      }
+    },
+    "workflow": {
+      "title": "Diseñado para flujos de trabajo profesionales",
+      "subtitle": "SafeTools no es solo una colección de utilidades. Es un espacio de trabajo profesional diseñado para la velocidad y la privacidad.",
+      "items": [
+        {
+          "title": "Procesamiento por lotes",
+          "description": "Maneje cientos de archivos simultáneamente sin esfuerzo."
+        },
+        {
+          "title": "Enrutamiento inteligente",
+          "description": "Suelte cualquier archivo y le sugeriremos automáticamente las mejores herramientas."
+        },
+        {
+          "title": "Capacidades sin conexión",
+          "description": "Trabaje desde cualquier lugar, incluso sin una conexión a internet activa."
+        }
+      ]
+    },
+    "devSection": {
+      "badge": "Desarrollador primero",
+      "title": "Construido para el rendimiento",
+      "description": "SafeTools expone módulos de procesamiento local de alto rendimiento a través de una arquitectura de motor limpia y unificada.",
+      "stats": {
+        "latency": "Latencia en memoria",
+        "engine": "JavaScript/WASM"
+      },
+      "codeComment": "// Procesamiento completado. 0 bytes cargados."
+    },
+    "toolsSection": {
+      "title": "Encuentre su herramienta",
+      "searchPlaceholder": "Buscar en más de 150 herramientas...",
+      "openTool": "Abrir herramienta"
+    },
+    "privacyEngine": {
+      "badge": "Estado del sistema: Activo",
+      "title": "Diseñado para una privacidad absoluta",
+      "description": "El motor de privacidad de SafeTools funciona 100% localmente.",
+      "stats": [
+        {
+          "label": "Transmisión de datos",
+          "value": "0.00%"
+        },
+        {
+          "label": "Encriptación local",
+          "value": "AES-256"
+        },
+        {
+          "label": "Estado del Worker",
+          "value": "Sandboxed"
+        },
+        {
+          "label": "Dependencia Cloud",
+          "value": "Ninguna"
+        }
+      ],
+      "heartbeat": "Nodo seguro activo",
+      "wasmHeartbeat": "WASM Engine Heartbeat",
+      "liveFeed": {
+        "label": "Privacy Engine v2.0 // Live Feed",
+        "verified": "Seguridad verificada",
+        "logs": [
+          "Inicializando WASM Security Sandbox... LISTO",
+          "Solicitud de red interceptada: BLOQUEADA (Modo local activado)",
+          "Asignando búfer: 256MB de memoria segura del cliente... ÉXITO",
+          "Rotación de claves AES-256 GCM completada. Escuchando eventos de archivos locales..."
+        ]
+      },
+      "sovereignty": {
+        "title": "Sus datos son soberanos",
+        "description": "A diferencia de las herramientas en la nube, SafeTools opera completamente dentro del sandbox privado de su navegador.",
+        "button": "Verificar arquitectura"
+      }
+    },
+    "featuredCats": {
+      "title": "Todo lo que necesita en una sola plataforma segura",
+      "subtitle": "Utilidades de nivel profesional en cinco categorías principales.",
+      "items": [
+        {
+          "title": "Herramientas de imagen",
+          "description": "Procesamiento de imagen",
+          "points": [
+            "PNG a JPG",
+            "WebP",
+            "AVIF",
+            "Eliminar fondo",
+            "Mejora AI",
+            "Compresión por lot",
+            "Eliminar metadatos"
+          ]
+        },
+        {
+          "title": "Herramientas PDF",
+          "description": "Utilidades PDF",
+          "points": [
+            "Unir PDF",
+            "Dividir PDF",
+            "Comprimir PDF",
+            "Desbloquear PDF",
+            "Procesamiento OCR",
+            "PDF a Word",
+            "Firma digital"
+          ]
+        },
+        {
+          "title": "Conversión de archivos",
+          "description": "Conversión",
+          "points": [
+            "DOCX",
+            "EPUB",
+            "ZIP",
+            "Hojas de cálculo",
+            "Vídeo",
+            "Audio",
+            "Visor"
+          ]
+        },
+        {
+          "title": "Privacidad y Seguridad",
+          "description": "Seguridad",
+          "points": [
+            "Encriptación",
+            "Limpieza metadatos",
+            "Código QR",
+            "Hash",
+            "Compartir seguro",
+            "Contraseña",
+            "Base64 Suite"
+          ]
+        },
+        {
+          "title": "Utilidades Desarrollador",
+          "description": "Desarrollo",
+          "points": [
+            "JSON",
+            "JWT",
+            "Regex",
+            "SQL",
+            "Color Studio",
+            "Cron",
+            "CSV a JSON"
+          ]
+        }
+      ]
+    },
+    "howItWorks": {
+      "badge": "Proceso simple",
+      "title": "Cómo funciona",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Suelte su archivo",
+          "description": "Seleccione cualquier archivo. Nuestro sistema lo detecta al instante sin carga."
+        },
+        {
+          "step": "02",
+          "title": "Procesamiento local",
+          "description": "Procesamiento directo dentro del sandbox del navegador."
+        },
+        {
+          "step": "03",
+          "title": "Resultado seguro",
+          "description": "Descargue su archivo procesado al instante."
+        }
+      ]
+    },
+    "statsBanner": [
+      {
+        "val": "0ms",
+        "label": "Latencia servidor"
+      },
+      {
+        "val": "100%",
+        "label": "Procesamiento local"
+      },
+      {
+        "val": "150+",
+        "label": "Herramientas seguras"
+      },
+      {
+        "val": "∞",
+        "label": "Libertad de uso"
+      }
+    ],
+    "manifesto": {
+      "badge": "El Manifiesto",
+      "title": "La privacidad no es <br/> una característica.",
+      "description": "Es un derecho humano fundamental."
+    },
+    "sovereignty": {
+      "badge": "Soberanía de datos",
+      "title": "Sus datos son <br/> soberanos.",
+      "description": "Nunca vemos sus datos.",
+      "points": [
+        "Sin cargas a la nube",
+        "Encriptación en memoria",
+        "Cero rastreo",
+        "Procesamiento del lado del cliente"
+      ],
+      "foundation": {
+        "title": "La base de la confianza",
+        "description": "La privacidad debe ser lo predeterminado.",
+        "badge": "Fundación verificada",
+        "verified": "Auditoría de seguridad superada"
+      }
+    },
+    "performance": {
+      "badge": "Alto rendimiento",
+      "title": "Construido para la velocidad",
+      "subtitle": "Lógica de procesamiento de alto rendimiento que se ejecuta de forma nativa en su navegador.",
+      "items": [
+        {
+          "title": "Renderizado instantáneo",
+          "description": "El procesamiento local elimina la latencia de red."
+        },
+        {
+          "title": "WASM Native",
+          "description": "La lógica se ejecuta a velocidad de hardware."
+        },
+        {
+          "title": "Optimizado para móviles",
+          "description": "Rendimiento fluido en todos los dispositivos."
+        },
+        {
+          "title": "Aceleración de hardware",
+          "description": "Utiliza CPU y GPU locales."
+        },
+        {
+          "title": "Memoria eficiente",
+          "description": "Asignación de búfer optimizada."
+        },
+        {
+          "title": "Offline-Ready",
+          "description": "Sin dependencia de servidor."
+        }
+      ]
+    },
+    "featureComparison": {
+      "title": "¿Por qué elegir SafeTools?",
+      "subtitle": "La ventaja arquitectónica del procesamiento local.",
+      "table": {
+        "feature": "Característica",
+        "safe": "SafeTools",
+        "trad": "Herramientas tradicionales"
+      },
+      "items": [
+        {
+          "f": "Modelo de privacidad",
+          "s": true,
+          "c": "Basado en la nube"
+        },
+        {
+          "f": "Ubicación procesamiento",
+          "s": "Hardware local",
+          "c": "Servidores remotos"
+        },
+        {
+          "f": "Scripts de rastreo",
+          "s": "Ninguno",
+          "c": "Extensos"
+        },
+        {
+          "f": "Retención de archivos",
+          "s": "0ms (Solo RAM)",
+          "c": "Variable"
+        },
+        {
+          "f": "Latencia",
+          "s": "Instantánea",
+          "c": "Alta (Carga)"
+        }
+      ]
+    },
+    "guide": {
+      "title": "Guía de procesamiento local",
+      "subtitle": "Cómo SafeTools mantiene sus datos seguros",
+      "steps": [
+        {
+          "title": "Sandbox Zero-Cloud",
+          "description": "Archivos procesados en la RAM del navegador."
+        },
+        {
+          "title": "Aceleración de hardware",
+          "description": "Usamos su hardware sin cargas."
+        },
+        {
+          "title": "Sesiones efímeras",
+          "description": "Datos borrados al cerrar la pestaña."
+        }
+      ],
+      "architecturalAdvantage": "Ventaja arquitectónica",
+      "vulnerabilityEliminated": "Elimina completamente la vulnerabilidad de 'Carga en la nube'.",
+      "cloud": "Nube",
+      "safeTools": "SafeTools"
+    },
+    "security": {
+      "title": "Seguro por diseño.",
+      "subtitle": "Sus archivos nunca salen del dispositivo.",
+      "items": [
+        "Procesamiento 100% del lado del cliente",
+        "Encriptación local AES-256 GCM",
+        "Cero transmisión de datos",
+        "Ejecución en sandbox"
+      ],
+      "zeroTrust": {
+        "title": "Seguridad Zero-Trust.",
+        "description": "Cada herramienta se ejecuta en un sandbox aislado.",
+        "encryption": "Encriptación",
+        "protocol": "Protocolo"
+      }
+    },
+    "faq": {
+      "badge": "Centro de ayuda",
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Se cargan mis archivos en un servidor?",
+          "a": "No. SafeTools procesa todo localmente en el navegador."
+        },
+        {
+          "q": "¿Es gratis usar SafeTools?",
+          "a": "Sí, todas las funciones principales son 100% gratuitas."
+        },
+        {
+          "q": "¿Qué pasa con los datos tras el procesamiento?",
+          "a": "Se borran al instante al cerrar la pestaña."
+        }
+      ]
+    },
+    "whySafeTools": {
+      "title": "¿Por qué elegir SafeTools?",
+      "subtitle": "La ventaja arquitectónica del procesamiento local.",
+      "table": {
+        "feature": "Característica",
+        "safe": "SafeTools",
+        "trad": "Herramientas tradicionales"
+      },
+      "items": [
+        {
+          "title": "Procesamiento 100% local",
+          "description": "Cada operación se ejecuta en su hardware."
+        },
+        {
+          "title": "Cero recopilación de datos",
+          "description": "No rastreamos ni almacenamos nada."
+        },
+        {
+          "title": "Encriptación militar",
+          "description": "Encriptación AES-256 GCM local."
+        },
+        {
+          "title": "Rendimiento instantáneo",
+          "description": "Sin latencia de carga/descarga."
+        },
+        {
+          "title": "Capacidad offline",
+          "description": "La mayoría de las herramientas funcionan sin internet."
+        },
+        {
+          "title": "Multiplataforma",
+          "description": "Funciona en cualquier navegador moderno."
+        }
+      ]
+    },
+    "useCases": {
+      "badge": "Casos de uso",
+      "title": "Construido para profesionales",
+      "subtitle": "La elección de quienes priorizan la soberanía de los datos.",
+      "items": [
+        {
+          "title": "Gestión segura de documentos",
+          "description": "Procese documentos sensibles sin exposición a la nube."
+        },
+        {
+          "title": "Producción creativa",
+          "description": "Procesamiento multimedia de alta velocidad en su estación."
+        },
+        {
+          "title": "Flujos de desarrolladores",
+          "description": "Utilidades en sandbox para transformación de datos."
+        }
+      ]
+    },
+    "testimonials": {
+      "badge": "Opiniones de usuarios",
+      "title": "Con la confianza de defensores de la privacidad",
+      "items": [
+        {
+          "quote": "La arquitectura zero-upload es exactamente lo que la web necesita.",
+          "name": "Pro Seguridad",
+          "role": "Arquitecto"
+        },
+        {
+          "quote": "Más rápido que cualquier herramienta en la nube.",
+          "name": "Diseñador",
+          "role": "Líder Creativo"
+        }
+      ]
+    },
+    "mobileExperience": {
+      "badge": "Rendimiento Nativo",
+      "status": "Listo",
+      "title": "Construido para la movilidad.",
+      "subtitle": "Experimente el rendimiento nativo en cualquier dispositivo.",
+      "desktop": {
+        "title": "Poder de escritorio",
+        "description": "Suite de estudio completa."
+      },
+      "mobile": {
+        "title": "Velocidad móvil",
+        "description": "Motores locales optimizados."
+      },
+      "waitlist": "Unirse a la Beta"
+    },
+    "securityArchitecture": {
+      "badge": "Seguridad reforzada",
+      "title": "Aislamiento de hardware.",
+      "subtitle": "Utilizamos sandboxing WASM moderno.",
+      "button": "Verificar seguridad"
+    },
+    "communityStats": {
+      "title": "Adopción global",
+      "subtitle": "Utilizado por miles de usuarios conscientes.",
+      "processedCount": "100%",
+      "processed": "Privado y Local",
+      "usersCount": "500K+",
+      "users": "Usuarios activos"
+    },
+    "finalCta": {
+      "title": "Tome el control de sus datos.",
+      "subtitle": "Deje de cargar su identidad.",
+      "launch": "Iniciar Studio",
+      "allTools": "Explorar más de 150 herramientas"
+    },
+    "pricingSection": {
+      "badge": "Gratis para siempre",
+      "title": "Privacidad para todos.",
+      "description": "SafeTools es 100% gratis para uso individual.",
+      "button": "Comenzar procesamiento"
+    },
+    "smartRouting": {
+      "title": "Enrutamiento inteligente de archivos"
+    },
+    "techMarquee": {
+      "badge": "Rendimiento Nativo",
+      "title": "Impulsado por motores locales de próxima generación",
+      "items": [
+        {
+          "name": "WASM",
+          "desc": "Lógica casi nativa"
+        },
+        {
+          "name": "GPU",
+          "desc": "Aceleración de hardware"
+        },
+        {
+          "name": "AES",
+          "desc": "Encriptación segura"
+        },
+        {
+          "name": "OCR",
+          "desc": "Extracción neural"
+        },
+        {
+          "name": "Worker",
+          "desc": "Cálculo multihilo"
+        }
+      ]
+    }
+  }
+}

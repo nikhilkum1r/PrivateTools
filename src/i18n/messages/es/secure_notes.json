@@ -1,0 +1,356 @@
+{
+  "secureNotes": {
+    "seo": {
+      "title": "Notas Seguras - Notas Privadas Basadas en Navegador | SafeTools",
+      "description": "Escriba y proteja notas privadas con cifrado AES-256 directamente en su navegador. Sin rastreo, sin almacenamiento en servidor, 100% privacidad."
+    },
+    "hero": {
+      "badge": "Arquitectura de Privacidad Primero",
+      "title": "Notas Seguras",
+      "description": "Escriba, guarde y proteja notas privadas de forma segura en su navegador con cifrado local y sin rastreo.",
+      "badges": {
+        "privacy": "Privacidad de Extremo a Extremo",
+        "browser": "Basado en Navegador",
+        "zero": "Cero Cargas",
+        "tracking": "Sin Rastreo",
+        "local": "Cifrado Local"
+      }
+    },
+    "editor": {
+      "encryptTab": "Cifrar Nota",
+      "decryptTab": "Descifrar Nota",
+      "plaintextLabel": "Su Nota Privada",
+      "plaintextPlaceholder": "Escriba su información sensible aquí... (contraseñas, claves, pensamientos)",
+      "ciphertextLabel": "Texto Cifrado (Base64)",
+      "ciphertextPlaceholder": "Pegue el bloque cifrado aquí...",
+      "passwordLabel": "Contraseña de Cifrado",
+      "passwordActive": "Escudo Activo",
+      "passwordPlaceholder": "Ingrese una contraseña fuerte...",
+      "strengthLabel": "Fuerza del Cifrado",
+      "strengthLevels": {
+        "weak": "Débil",
+        "medium": "Media",
+        "strong": "Fuerte"
+      },
+      "warning": "Su contraseña nunca se envía a nuestros servidores. Si la pierde, la nota se perderá para siempre. <span class=\"font-bold text-yellow-500/80\">No hay recuperación posible.",
+      "encryptButton": "Cifrar Nota Segura",
+      "decryptButton": "Descifrar Nota Segura",
+      "processing": "Procesando...",
+      "footer": "Sus notas nunca salen de su dispositivo. Todo el cifrado ocurre localmente dentro de su navegador."
+    },
+    "result": {
+      "encryptTitle": "Resultado Cifrado",
+      "decryptTitle": "Nota Descifrada",
+      "algorithm": "AES-256-GCM",
+      "copy": "Copiar al Portapapeles",
+      "copied": "¡Copiado con Éxito!",
+      "clear": "Limpiar Editor"
+    },
+    "status": {
+      "title": "Su Estado de Privacidad",
+      "items": {
+        "local": "Procesamiento Local Activo",
+        "cloud": "Sin Almacenamiento en la Nube",
+        "https": "Protegido por HTTPS",
+        "encryption": "Cifrado del Lado del Cliente",
+        "tracking": "Sin Scripts de Rastreo"
+      },
+      "statuses": {
+        "enabled": "Habilitado",
+        "active": "Activo",
+        "verified": "Verificado",
+        "localDev": "Desarrollo Local",
+        "warning": "Advertencia",
+        "aes": "AES-256",
+        "clean": "Limpio"
+      },
+      "snapshot": "Resumen de Seguridad",
+      "stats": {
+        "encryption": "Cifrado",
+        "auth": "Etiqueta de Autenticación",
+        "kdf": "KDF",
+        "library": "Biblioteca"
+      },
+      "zeroTrustTitle": "Notas de Cero Confianza",
+      "zeroTrustDesc": "SafeTools Secure Notes se basa en el principio de Cero Confianza. Incluso si nuestros servidores se vieran comprometidos, sus notas permanecerían seguras porque nunca las tenemos."
+    },
+    "features": {
+      "title": "Protección de Notas Privadas y Seguras",
+      "subtitle": "Funciones modernas diseñadas para máxima privacidad y facilidad de uso.",
+      "items": [
+        {
+          "title": "Cifrado Local",
+          "desc": "Todo el cifrado y descifrado ocurre dentro de su navegador, nunca en un servidor."
+        },
+        {
+          "title": "Sin Almacenamiento en Servidor",
+          "desc": "No guardamos sus notas. Una vez que cierra la pestaña, desaparecen de la memoria RAM."
+        },
+        {
+          "title": "Creación Instantánea",
+          "desc": "Genere notas cifradas y seguras en milisegundos sin necesidad de cuenta."
+        },
+        {
+          "title": "Amigable con el Modo Offline",
+          "desc": "Funciona sin conexión a internet como una Aplicación Web Progresiva (PWA)."
+        },
+        {
+          "title": "Protección por Contraseña",
+          "desc": "Protección AES-256 estándar de la industria impulsada por la API Web Crypto."
+        },
+        {
+          "title": "Seguro para el Portapapeles",
+          "desc": "Limpie datos sensibles de su portapapeles con un clic después de su uso."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Cómo Funcionan las Notas Seguras",
+      "subtitle": "Un proceso simple y transparente para máxima seguridad.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Escribir",
+          "desc": "Escriba su nota de forma segura en el editor del navegador."
+        },
+        {
+          "step": "02",
+          "title": "Cifrar",
+          "desc": "Cifre localmente usando su contraseña secreta."
+        },
+        {
+          "step": "03",
+          "title": "Guardar/Compartir",
+          "desc": "Copie el bloque cifrado para almacenamiento seguro o para compartir."
+        },
+        {
+          "step": "04",
+          "title": "Control",
+          "desc": "Usted mantiene la propiedad total de sus datos en todo momento."
+        }
+      ]
+    },
+    "standards": {
+      "title": "Construido con Estándares de Seguridad Modernos",
+      "subtitle": "SafeTools utiliza los más altos estándares de criptografía web para asegurar que sus datos permanezcan inaccesibles para todos excepto para usted.",
+      "items": [
+        {
+          "title": "Cifrado AES-256",
+          "desc": "El estándar de oro del cifrado simétrico utilizado por gobiernos en todo el mundo."
+        },
+        {
+          "title": "API Web Crypto",
+          "desc": "Criptografía nativa basada en el navegador que asegura que no haya vulnerabilidades de librerías JS de terceros."
+        },
+        {
+          "title": "Sandboxing Seguro",
+          "desc": "Las notas se procesan en un entorno de navegador aislado para máxima seguridad."
+        },
+        {
+          "title": "Cero Registro de Texto Plano",
+          "desc": "Nunca registramos, rastreamos ni vemos el contenido de sus datos sin cifrar."
+        }
+      ],
+      "badge": "100%",
+      "badgeText": "Basado en Navegador"
+    },
+    "useCases": {
+      "title": "Proteja su Información Sensible",
+      "subtitle": "Desde frases de recuperación hasta secretos de desarrollador, mantenga todo privado.",
+      "items": [
+        {
+          "title": "Contraseñas"
+        },
+        {
+          "title": "Claves de Recuperación"
+        },
+        {
+          "title": "Datos Financieros"
+        },
+        {
+          "title": "Secretos de Dev"
+        },
+        {
+          "title": "Notas Privadas"
+        },
+        {
+          "title": "Enlaces Seguros"
+        },
+        {
+          "title": "Investigación"
+        },
+        {
+          "title": "Información de Negocios"
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Por Qué Secure Notes es Más Seguro",
+      "subtitle": "Vea cómo nos comparamos con las aplicaciones tradicionales de toma de notas.",
+      "headers": [
+        "Característica",
+        "Apps Tradicionales",
+        "SafeTools"
+      ],
+      "rows": [
+        {
+          "feat": "Cifrado Local"
+        },
+        {
+          "feat": "Almacenamiento en la Nube"
+        },
+        {
+          "feat": "Rastreo"
+        },
+        {
+          "feat": "Procesamiento en Navegador"
+        },
+        {
+          "feat": "Enfocado en Privacidad"
+        }
+      ],
+      "trad": {
+        "often": "A Menudo",
+        "partial": "Parcial",
+        "limited": "Limitado"
+      },
+      "safe": {
+        "no": "No",
+        "full": "Total",
+        "yes": "Sí"
+      }
+    },
+    "offline": {
+      "badge": "Soporte Offline Completo",
+      "title": "Funciona en Todas Partes, Incluso Offline",
+      "desc": "SafeTools Secure Notes es una Aplicación Web Progresiva (PWA). Una vez cargada, puede usarla sin conexión a internet, asegurando que sus herramientas de privacidad estén siempre disponibles.",
+      "noNetwork": "No se Necesita Red",
+      "secureStorage": "Almacenamiento Seguro"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre nuestra herramienta de notas seguras.",
+      "items": [
+        {
+          "q": "¿Mis notas se suben a los servidores?",
+          "a": "No. Todas las notas se procesan localmente dentro de su navegador y nunca se suben a ninguna parte."
+        },
+        {
+          "q": "¿Puede SafeTools leer mi nota?",
+          "a": "No. Sus notas cifradas permanecen bajo su control total y no tenemos acceso a ellas."
+        },
+        {
+          "q": "¿Funciona Secure Notes sin conexión?",
+          "a": "Sí. La mayoría de las funcionalidades funcionan offline como una Aplicación Web Progresiva (PWA)."
+        },
+        {
+          "q": "¿El cifrado se realiza localmente?",
+          "a": "Sí. El cifrado y descifrado ocurren directamente dentro de su navegador usando la API Web Crypto."
+        },
+        {
+          "q": "¿Puedo usar Secure Notes en el móvil?",
+          "a": "Sí. La herramienta es totalmente receptiva y compatible con dispositivos móviles en todas las plataformas principales."
+        },
+        {
+          "q": "¿Qué pasa si olvido mi contraseña?",
+          "a": "Desafortunadamente, no hay forma de recuperar su nota sin la contraseña. Priorizamos la seguridad sobre la conveniencia."
+        }
+      ]
+    },
+    "bestPractices": {
+      "title": "Mejores Prácticas para Notas Seguras",
+      "items": [
+        {
+          "title": "Use Frases de Contraseña Fuertes",
+          "desc": "La seguridad de su nota depende totalmente de la fuerza de su contraseña. Use más de 12 caracteres."
+        },
+        {
+          "title": "Limpie el Portapapeles Después de Usar",
+          "desc": "Después de copiar su nota descifrada, limpie su portapapeles para evitar que otras aplicaciones la vean."
+        },
+        {
+          "title": "Evite Dispositivos Públicos",
+          "desc": "Nunca descifre notas sensibles en computadoras públicas o dispositivos compartidos donde puedan existir registradores de teclas (keyloggers)."
+        },
+        {
+          "title": "Guarde Bloques Cifrados",
+          "desc": "Guarde su texto cifrado en múltiples ubicaciones seguras. Sin él, no podrá recuperar sus datos."
+        }
+      ]
+    },
+    "technical": {
+      "badge": "Documentación Técnica",
+      "title": "Arquitectura de Seguridad y Criptografía",
+      "desc": "Para profesionales de seguridad y usuarios curiosos, aquí está exactamente cómo protegemos sus datos usando la API nativa Web Crypto.",
+      "steps": [
+        {
+          "title": "Derivación de Clave (PBKDF2)",
+          "desc": "Su contraseña no se usa directamente. Usamos PBKDF2 con HMAC-SHA256 y más de 100,000 iteraciones para derivar una clave de cifrado segura de 256 bits."
+        },
+        {
+          "title": "Cifrado Autenticado",
+          "desc": "Usamos AES-GCM (Galois/Counter Mode), que proporciona confidencialidad y autenticidad, asegurando que los datos no hayan sido manipulados."
+        },
+        {
+          "title": "Vectores de Inicialización (IV)",
+          "desc": "Cada cifrado utiliza un IV aleatorio de 96 bits único y criptográficamente fuerte, evitando el reconocimiento de patrones en el texto cifrado."
+        },
+        {
+          "title": "Estado de Cero Servidor",
+          "desc": "Ningún material de clave, sal o IV se almacena fuera de su dispositivo. Usted es el único custodio de su bóveda digital."
+        }
+      ]
+    },
+    "verification": {
+      "title": "Cómo Verificar Nuestras Afirmaciones",
+      "subtitle": "Creemos en \"No confíes, verifica\". Así es como puedes comprobar nuestra seguridad por ti mismo.",
+      "items": [
+        {
+          "title": "Auditoría de Red",
+          "desc": "Abra las Herramientas de Desarrollador del navegador (F12) -> pestaña Red. Realice un cifrado. Verá 0 solicitudes enviadas a cualquier servidor."
+        },
+        {
+          "title": "Lógica Solo Local",
+          "desc": "Apague su Wi-Fi y use la herramienta. Funciona 100% offline, demostrando que no se necesita servidor para el procesamiento."
+        },
+        {
+          "title": "Transparencia de Código",
+          "desc": "Inspeccione el código fuente de la página. Toda la lógica criptográfica se maneja a través de la API nativa window.crypto."
+        }
+      ]
+    },
+    "related": {
+      "title": "Explore Otras Herramientas de Privacidad",
+      "subtitle": "Mejore su seguridad digital con nuestra suite de herramientas de procesamiento local.",
+      "items": [
+        {
+          "name": "Generador de Contraseñas"
+        },
+        {
+          "name": "Comprobador de Pass"
+        },
+        {
+          "name": "Cifrado de Archivos"
+        },
+        {
+          "name": "Limpiador de Metadatos"
+        },
+        {
+          "name": "Esteganografía"
+        },
+        {
+          "name": "Centro de Privacidad"
+        }
+      ]
+    },
+    "manifesto": {
+      "title": "Filosofía de Privacidad Primero",
+      "desc": "SafeTools cree que la privacidad es un derecho digital fundamental. Nuestras herramientas están diseñadas para minimizar la exposición de datos y maximizar el control del usuario. Sin cuentas. Sin rastreo. Sin almacenamiento en la nube. Simplemente herramientas seguras con la privacidad primero.",
+      "button": "Explorar Todas las Herramientas"
+    },
+    "footer": {
+      "line1": "Proteja la información sensible con herramientas modernas de seguridad con la privacidad primero.",
+      "line2": "Herramientas de privacidad diseñadas para un internet más seguro. Construido con ❤️ para la web abierta."
+    }
+  }
+}

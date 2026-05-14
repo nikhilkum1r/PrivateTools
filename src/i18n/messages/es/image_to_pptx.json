@@ -1,0 +1,144 @@
+{
+  "imageToPptx": {
+    "seo": {
+      "title": "Convertidor de Imagen a PPTX Online Gratis – Convierte JPG, PNG e Imágenes a Diapositivas de PowerPoint",
+      "description": "Convierte JPG, PNG y WebP en presentaciones de PowerPoint PPTX online de forma gratuita. Convertidor de Imagen a PPTX rápido, seguro y basado en el navegador sin subidas.",
+      "keywords": "convertir imagen a pptx, fotos a powerpoint, convertidor de imagen a diapositivas, JPG a PPTX, PNG a PowerPoint, WEBP a PPTX, BMP a PPTX, GIF a PPTX, TIFF a PPTX",
+      "ogTitle": "Convertidor de Imagen a PPTX – Herramienta Online Gratis para JPG, PNG y WEBP a PowerPoint",
+      "ogDescription": "Convierte tus imágenes en presentaciones de PowerPoint profesionales al instante con el convertidor gratuito de Imagen a PPTX de SafeTools. Sin subidas al servidor, 100% privado."
+    },
+    "hero": {
+      "title": "Imagen a PPTX.",
+      "description": "Convierte tus imágenes en presentaciones de PowerPoint profesionales al instante. Rápido, seguro y 100% privado.",
+      "dropzone": {
+        "title": "Suelta las imágenes aquí",
+        "subtitle": "Soporta JPG, PNG, WEBP, SVG, TIFF y más"
+      },
+      "badges": {
+        "privacy": "Privacidad Primero",
+        "noUploads": "Sin Subidas",
+        "instant": "Exportación Instantánea",
+        "noWatermark": "Sin Marca de Agua"
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Características Principales",
+        "subtitle": "Por qué los profesionales eligen SafeTools",
+        "items": [
+          {
+            "title": "Conversión Instantánea",
+            "desc": "Crea archivos de presentación PPTX totalmente compatibles a partir de una o varias imágenes en segundos."
+          },
+          {
+            "title": "Privacidad Primero",
+            "desc": "Tus archivos se quedan en tu dispositivo. Las imágenes se procesan localmente en tu navegador sin subirse."
+          },
+          {
+            "title": "Procesamiento por Lotes",
+            "desc": "Sube varias imágenes y genera automáticamente presentaciones de PowerPoint con varias diapositivas."
+          },
+          {
+            "title": "Alta Calidad",
+            "desc": "Mantiene la claridad de la imagen, la resolución y los colores durante la generación del PPTX."
+          },
+          {
+            "title": "Multiplataforma",
+            "desc": "Funciona en Windows, macOS, Linux, Android e iOS directamente en tu navegador."
+          },
+          {
+            "title": "Sin Marcas de Agua",
+            "desc": "Las presentaciones generadas son limpias, profesionales y están listas para usar."
+          }
+        ]
+      },
+      "formats": {
+        "title": "Formatos Soportados",
+        "subtitle": "Convierte casi cualquier formato de imagen"
+      },
+      "useCases": {
+        "title": "Casos de Uso Comunes",
+        "items": [
+          {
+            "title": "Educación",
+            "desc": "Convierte notas de clase, páginas escaneadas y diagramas en diapositivas para el aula."
+          },
+          {
+            "title": "Negocios",
+            "desc": "Crea informes, presentaciones de análisis y catálogos de productos a partir de capturas de pantalla."
+          },
+          {
+            "title": "Diseñadores",
+            "desc": "Transforma portafolios y maquetas en presentaciones listas para los clientes."
+          },
+          {
+            "title": "Marketing",
+            "desc": "Convierte creatividades de campaña y banners en presentaciones de propuestas editables."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "subtitle": "Todo lo que necesitas saber",
+        "items": [
+          {
+            "q": "¿Es gratis el convertidor de Imagen a PPTX?",
+            "a": "Sí. La herramienta es completamente gratuita, sin costes ocultos ni marcas de agua."
+          },
+          {
+            "q": "¿Necesito instalar algún software?",
+            "a": "No. Todo funciona directamente en tu navegador moderno (Chrome, Firefox, Safari, Edge)."
+          },
+          {
+            "q": "¿Se suben mis archivos a los servidores?",
+            "a": "No. SafeTools prioriza el procesamiento en el navegador. Tus imágenes nunca salen de tu dispositivo."
+          },
+          {
+            "q": "¿Puedo convertir varias imágenes en un solo archivo PPTX?",
+            "a": "Sí. Puedes subir varias imágenes y se convertirán en una presentación de PowerPoint de varias diapositivas."
+          },
+          {
+            "q": "¿La herramienta es compatible con dispositivos móviles?",
+            "a": "Sí. El convertidor funciona perfectamente en teléfonos Android, iPhones, tablets y dispositivos de escritorio."
+          },
+          {
+            "q": "¿Se reducirá la calidad de la imagen?",
+            "a": "El convertidor está optimizado para preservar la claridad y resolución de la imagen tanto como sea posible durante el proceso de generación."
+          }
+        ]
+      }
+    },
+    "studio": {
+      "assetMatrix": "Matriz de Activos",
+      "slidesInitialized": "{count} diapositivas inicializadas",
+      "generate": "GENERAR PRESENTACIÓN PPTX",
+      "slideIndicator": "DIAPOSITIVA {current} / {total}",
+      "reset": "Restablecer",
+      "secureBrowser": "HILO DE NAVEGADOR SEGURO",
+      "workspaceInitialized": "Espacio de trabajo inicializado",
+      "studioConfig": "Configuración del Estudio",
+      "localSynthesis": "Modo de Síntesis Local",
+      "presentationName": "Nombre de la Presentación",
+      "placeholder": "PRESENTACION_2024",
+      "optimization": "Optimización",
+      "layoutEngine": "Motor de Diseño",
+      "imageFit": "Ajuste de Imagen",
+      "workerStatus": "Estado del Trabajador",
+      "privacyShield": "Escudo de Privacidad",
+      "privacyDesc": "Toda la construcción de las diapositivas ocurre dentro del entorno seguro de tu navegador. No se transmiten, almacenan ni guardan datos en nuestra infraestructura.",
+      "systemReady": "Sistema Listo",
+      "noPreview": "Vista previa no disponible",
+      "pro": "PRO",
+      "layoutValue": "HD 16:9",
+      "fitValue": "Contener",
+      "workerIdle": "Inactivo"
+    },
+    "messages": {
+      "processing": "Procesando {count} archivos...",
+      "slidesAdded": "{count} diapositivas añadidas",
+      "processFailed": "Error al procesar algunos archivos",
+      "exportSuccess": "Presentación exportada con éxito",
+      "exportFailed": "Error al exportar. Asegúrate de que todas las imágenes sean válidas."
+    }
+  }
+}

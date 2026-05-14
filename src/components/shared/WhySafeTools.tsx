@@ -1,75 +1,71 @@
 "use client";
 
 import React from "react";
-import { Shield, Zap, Globe, Lock, Smartphone, CloudOff } from "lucide-react";
+import { Shield, Zap, Globe, Lock, Smartphone, CloudOff, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { AdUnit } from "@/components/shared/AdUnit";
 
 export const WhySafeTools = () => {
-  const reasons = [
-    {
-      title: "Local Processing",
-      desc: "Files never leave your browser. All computations happen on your own hardware.",
-      icon: Smartphone,
-    },
-    {
-      title: "Zero Cloud Dependency",
-      desc: "No remote servers, no data storage, no tracking. Total data sovereignty.",
-      icon: CloudOff,
-    },
-    {
-      title: "Privacy-First Architecture",
-      desc: "Built with a security-first mindset using modern WebAssembly sandboxing.",
-      icon: Shield,
-    },
-    {
-      title: "Fast Performance",
-      desc: "Eliminate upload and download wait times with sub-second local rendering.",
-      icon: Zap,
-    },
-    {
-      title: "Modern Cyber Design",
-      desc: "A premium, distraction-free interface designed for efficiency and safety.",
-      icon: Lock,
-    },
-    {
-      title: "Cross-Platform",
-      desc: "Seamless experience across Desktop, Mobile, and Tablet with PWA support.",
-      icon: Globe,
-    },
-  ];
+  const t = useTranslations("home");
+  
+  const icons = [Smartphone, CloudOff, Shield, Zap, Lock, Globe];
+  const items = t.raw("whySafeTools.items");
+  
+  if (!Array.isArray(items)) {
+    return null;
+  }
 
   return (
-    <section className="py-24 space-y-16">
-      <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic font-heading text-foreground">
-          Why <span className="text-primary">SafeTools?</span>
+    <section className="py-20 space-y-14 cv-auto" aria-labelledby="why-safetools-heading">
+      <div className="text-center space-y-4 max-w-3xl mx-auto px-6">
+        <h2 id="why-safetools-heading" className="section-header text-3xl md:text-5xl">
+          {t.rich("whySafeTools.title", {
+            span: (chunks: React.ReactNode) => <span className="text-primary">{chunks}</span>,
+            br: () => <br />
+          })}
         </h2>
-        <p className="text-lg text-muted-foreground font-medium">
-          Traditional online tools are slow and insecure. SafeTools rebuilds the utility stack for the modern, private web.
+        <p className="section-subheader text-base mx-auto">
+          {t("whySafeTools.subtitle")}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto px-6">
-        {reasons.map((reason, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto px-6">
+        {items.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
-            className="p-8 rounded-[2.5rem] glass-card border border-border/50 hover:border-primary/30 transition-all group bg-secondary/5"
+            transition={{ delay: i * 0.08, duration: 0.4 }}
+            className="p-7 rounded-2xl surface-elevated hover:border-primary/20 transition-all group"
           >
-            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-              <reason.icon className="w-7 h-7 text-primary" />
+            <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
+              {React.createElement(icons[i % icons.length], { className: "w-5 h-5 text-primary" })}
             </div>
-            <h3 className="text-xl font-black uppercase italic tracking-tight mb-4 font-heading text-foreground">
-              {reason.title}
+            <h3 className="card-title text-base mb-2.5 text-foreground">
+              {item.title}
             </h3>
-            <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-              {reason.desc}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {item.description}
             </p>
           </motion.div>
         ))}
+      </div>
+
+      <div className="flex justify-center pt-4">
+        <Link href="/tools">
+          <Button size="lg" className="h-12 px-8 rounded-xl bg-primary text-primary-foreground font-semibold text-sm shadow-lg shadow-primary/15 hover:shadow-primary/25 group transition-all">
+            {t("hero.getStarted")} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </Button>
+        </Link>
+      </div>
+
+      {/* Ad Placement: Feature Context (Allowed) */}
+      <div className="container mx-auto px-6 pt-6">
+        <AdUnit type="in-article" />
       </div>
     </section>
   );

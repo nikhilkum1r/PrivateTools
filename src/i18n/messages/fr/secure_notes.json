@@ -1,0 +1,356 @@
+{
+  "secureNotes": {
+    "seo": {
+      "title": "Notes Sécurisées - Notes Privées Basées sur Navigateur | SafeTools",
+      "description": "Écrivez et protégez des notes privées avec le cryptage AES-256 directement dans votre navigateur. Zéro suivi, zéro stockage serveur, 100% confidentialité."
+    },
+    "hero": {
+      "badge": "Architecture axée sur la confidentialité",
+      "title": "Notes Sécurisées",
+      "description": "Écrivez, enregistrez et protégez des notes privées en toute sécurité dans votre navigateur avec un cryptage local et zéro suivi.",
+      "badges": {
+        "privacy": "Confidentialité de bout en bout",
+        "browser": "Basé sur navigateur",
+        "zero": "Zéro téléchargement",
+        "tracking": "Pas de suivi",
+        "local": "Cryptage local"
+      }
+    },
+    "editor": {
+      "encryptTab": "Crypter la Note",
+      "decryptTab": "Décrypter la Note",
+      "plaintextLabel": "Votre Note Privée",
+      "plaintextPlaceholder": "Écrivez vos informations sensibles ici... (mots de passe, clés, pensées)",
+      "ciphertextLabel": "Texte Crypté (Base64)",
+      "ciphertextPlaceholder": "Collez le bloc crypté ici...",
+      "passwordLabel": "Mot de Passe de Cryptage",
+      "passwordActive": "Bouclier Actif",
+      "passwordPlaceholder": "Entrez un mot de passe fort...",
+      "strengthLabel": "Force du Cryptage",
+      "strengthLevels": {
+        "weak": "Faible",
+        "medium": "Moyen",
+        "strong": "Fort"
+      },
+      "warning": "Votre mot de passe n'est jamais envoyé à nos serveurs. Si vous le perdez, la note est perdue à jamais. <span class=\"font-bold text-yellow-500/80\">Aucune récupération possible.",
+      "encryptButton": "Crypter la Note Sécurisée",
+      "decryptButton": "Décrypter la Note Sécurisée",
+      "processing": "Traitement...",
+      "footer": "Vos notes ne quittent jamais votre appareil. Tout le cryptage se produit localement dans votre navigateur."
+    },
+    "result": {
+      "encryptTitle": "Résultat Crypté",
+      "decryptTitle": "Note Décryptée",
+      "algorithm": "AES-256-GCM",
+      "copy": "Copier dans le Presse-papiers",
+      "copied": "Copié avec succès !",
+      "clear": "Effacer l'Éditeur"
+    },
+    "status": {
+      "title": "Votre Statut de Confidentialité",
+      "items": {
+        "local": "Traitement Local Actif",
+        "cloud": "Pas de Stockage Cloud",
+        "https": "Protégé par HTTPS",
+        "encryption": "Cryptage Côté Client",
+        "tracking": "Pas de Scripts de Suivi"
+      },
+      "statuses": {
+        "enabled": "Activé",
+        "active": "Actif",
+        "verified": "Vérifié",
+        "localDev": "Dév Local",
+        "warning": "Avertissement",
+        "aes": "AES-256",
+        "clean": "Propre"
+      },
+      "snapshot": "Aperçu de la Sécurité",
+      "stats": {
+        "encryption": "Cryptage",
+        "auth": "Tag d'Authentification",
+        "kdf": "KDF",
+        "library": "Bibliothèque"
+      },
+      "zeroTrustTitle": "Notes Zéro Confiance",
+      "zeroTrustDesc": "SafeTools Secure Notes est basé sur le principe du Zéro Confiance. Même si nos serveurs étaient compromis, vos notes resteraient en sécurité car nous ne les avons jamais."
+    },
+    "features": {
+      "title": "Protection des Notes Privées et Sécurisées",
+      "subtitle": "Fonctionnalités modernes conçues pour une confidentialité maximale et une facilité d'utilisation.",
+      "items": [
+        {
+          "title": "Cryptage Local",
+          "desc": "Tout le cryptage et décryptage se produit dans votre navigateur, jamais sur un serveur."
+        },
+        {
+          "title": "Pas de Stockage Serveur",
+          "desc": "Nous ne stockons pas vos notes. Une fois l'onglet fermé, elles disparaissent de la RAM."
+        },
+        {
+          "title": "Création Instantanée",
+          "desc": "Générez des notes sécurisées et cryptées en quelques millisecondes sans compte requis."
+        },
+        {
+          "title": "Compatible Hors Ligne",
+          "desc": "Fonctionne sans connexion internet en tant qu'Application Web Progressive (PWA)."
+        },
+        {
+          "title": "Protégé par Mot de Passe",
+          "desc": "Protection AES-256 standard de l'industrie alimentée par l'API Web Crypto."
+        },
+        {
+          "title": "Sécurisé pour le Presse-papiers",
+          "desc": "Effacez les données sensibles de votre presse-papiers en un clic après utilisation."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Comment Fonctionnent les Notes Sécurisées",
+      "subtitle": "Un processus simple et transparent pour une sécurité maximale.",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Écrire",
+          "desc": "Écrivez votre note en toute sécurité dans l'éditeur du navigateur."
+        },
+        {
+          "step": "02",
+          "title": "Crypter",
+          "desc": "Cryptez localement en utilisant votre mot de passe secret."
+        },
+        {
+          "step": "03",
+          "title": "Enregistrer/Partager",
+          "desc": "Copiez le bloc crypté pour un stockage sécurisé ou un partage."
+        },
+        {
+          "step": "04",
+          "title": "Contrôle",
+          "desc": "Vous gardez la pleine propriété de vos données à tout moment."
+        }
+      ]
+    },
+    "standards": {
+      "title": "Construit avec des Standards de Sécurité Modernes",
+      "subtitle": "SafeTools utilise les standards les plus élevés de cryptographie web pour garantir que vos données restent inaccessibles à tous sauf à vous.",
+      "items": [
+        {
+          "title": "Cryptage AES-256",
+          "desc": "Le standard d'or du cryptage symétrique utilisé par les gouvernements du monde entier."
+        },
+        {
+          "title": "API Web Crypto",
+          "desc": "Cryptographie native basée sur le navigateur garantissant l'absence de vulnérabilités liées aux bibliothèques JS tierces."
+        },
+        {
+          "title": "Sandboxing Sécurisé",
+          "desc": "Les notes sont traitées dans un environnement de navigateur isolé pour une sécurité maximale."
+        },
+        {
+          "title": "Zéro Journalisation Texte Brut",
+          "desc": "Nous ne journalisons, ne suivons ni même ne voyons jamais le contenu de vos données non cryptées."
+        }
+      ],
+      "badge": "100%",
+      "badgeText": "Basé sur Navigateur"
+    },
+    "useCases": {
+      "title": "Protégez vos Informations Sensibles",
+      "subtitle": "Des phrases de récupération aux secrets de développeur, gardez tout privé.",
+      "items": [
+        {
+          "title": "Mots de Passe"
+        },
+        {
+          "title": "Clés de Récupération"
+        },
+        {
+          "title": "Données Financières"
+        },
+        {
+          "title": "Secrets de Dév"
+        },
+        {
+          "title": "Notes Privées"
+        },
+        {
+          "title": "Liens Sécurisés"
+        },
+        {
+          "title": "Recherche"
+        },
+        {
+          "title": "Infos Business"
+        }
+      ]
+    },
+    "comparison": {
+      "title": "Pourquoi Secure Notes est plus Sûr",
+      "subtitle": "Découvrez comment nous nous comparons aux applications de prise de notes traditionnelles.",
+      "headers": [
+        "Fonctionnalité",
+        "Apps Traditionnelles",
+        "SafeTools"
+      ],
+      "rows": [
+        {
+          "feat": "Cryptage Local"
+        },
+        {
+          "feat": "Stockage Cloud"
+        },
+        {
+          "feat": "Suivi"
+        },
+        {
+          "feat": "Traitement Navigateur"
+        },
+        {
+          "feat": "Axé Confidentialité"
+        }
+      ],
+      "trad": {
+        "often": "Souvent",
+        "partial": "Partiel",
+        "limited": "Limité"
+      },
+      "safe": {
+        "no": "Non",
+        "full": "Total",
+        "yes": "Oui"
+      }
+    },
+    "offline": {
+      "badge": "Support Hors Ligne Complet",
+      "title": "Fonctionne Partout, Même Hors Ligne",
+      "desc": "SafeTools Secure Notes est une Application Web Progressive (PWA). Une fois chargée, vous pouvez l'utiliser sans connexion internet, garantissant que vos outils de confidentialité sont toujours disponibles.",
+      "noNetwork": "Pas de Réseau Requis",
+      "secureStorage": "Stockage Sécurisé"
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de notes sécurisées.",
+      "items": [
+        {
+          "q": "Mes notes sont-elles téléchargées sur des serveurs ?",
+          "a": "Non. Toutes les notes sont traitées localement dans votre navigateur et ne sont jamais téléchargées nulle part."
+        },
+        {
+          "q": "SafeTools peut-il lire mes notes ?",
+          "a": "Non. Vos notes cryptées restent sous votre contrôle total et nous n'y avons aucun accès."
+        },
+        {
+          "q": "Secure Notes fonctionne-t-il hors ligne ?",
+          "a": "Oui. La plupart des fonctionnalités fonctionnent hors ligne en tant qu'Application Web Progressive (PWA)."
+        },
+        {
+          "q": "Le cryptage est-il effectué localement ?",
+          "a": "Oui. Le cryptage et le décryptage se produisent directement dans votre navigateur via l'API Web Crypto."
+        },
+        {
+          "q": "Puis-je utiliser Secure Notes sur mobile ?",
+          "a": "Oui. L'outil est entièrement réactif et adapté aux mobiles sur toutes les plateformes majeures."
+        },
+        {
+          "q": "Et si j'oublie mon mot de passe ?",
+          "a": "Malheureusement, il n'y a aucun moyen de récupérer votre note sans le mot de passe. Nous privilégions la sécurité au confort."
+        }
+      ]
+    },
+    "bestPractices": {
+      "title": "Meilleures Pratiques pour les Notes Sécurisées",
+      "items": [
+        {
+          "title": "Utilisez des Phrases Secrètes Fortes",
+          "desc": "La sécurité de votre note dépend entièrement de la force de votre mot de passe. Utilisez plus de 12 caractères."
+        },
+        {
+          "title": "Effacez le Presse-papiers après Utilisation",
+          "desc": "Après avoir copié votre note décryptée, effacez votre presse-papiers pour empêcher d'autres applications de la voir."
+        },
+        {
+          "title": "Évitez les Appareils Publics",
+          "desc": "Ne décryptez jamais de notes sensibles sur des ordinateurs publics ou des appareils partagés où des keyloggers pourraient exister."
+        },
+        {
+          "title": "Stockez les Blocs Cryptés",
+          "desc": "Enregistrez votre texte crypté dans plusieurs endroits sûrs. Sans lui, vous ne pourrez pas récupérer vos données."
+        }
+      ]
+    },
+    "technical": {
+      "badge": "Documentation Technique",
+      "title": "Architecture de Sécurité & Cryptographie",
+      "desc": "Pour les professionnels de la sécurité et les utilisateurs curieux, voici exactement comment nous protégeons vos données via l'API native Web Crypto.",
+      "steps": [
+        {
+          "title": "Dérivation de Clé (PBKDF2)",
+          "desc": "Votre mot de passe n'est pas utilisé directement. Nous utilisons PBKDF2 avec HMAC-SHA256 et plus de 100 000 itérations pour dériver une clé de cryptage 256 bits sécurisée."
+        },
+        {
+          "title": "Cryptage Authentifié",
+          "desc": "Nous utilisons AES-GCM (Galois/Counter Mode), qui offre à la fois confidentialité et authenticité, garantissant que les données n'ont pas été altérées."
+        },
+        {
+          "title": "Vecteurs d'Initialisation (IV)",
+          "desc": "Chaque cryptage utilise un IV aléatoire de 96 bits unique et fort sur le plan cryptographique, empêchant la reconnaissance de motifs dans le texte crypté."
+        },
+        {
+          "title": "État Zéro-Serveur",
+          "desc": "Aucun matériel de clé, sel ou IV n'est jamais stocké en dehors de votre appareil. Vous êtes le seul gardien de votre coffre-fort numérique."
+        }
+      ]
+    },
+    "verification": {
+      "title": "Comment Vérifier nos Affirmations",
+      "subtitle": "Nous croyons au principe \"Ne faites pas confiance, vérifiez\". Voici comment vous pouvez vérifier notre sécurité vous-même.",
+      "items": [
+        {
+          "title": "Audit Réseau",
+          "desc": "Ouvrez les Browser DevTools (F12) -> onglet Réseau. Effectuez un cryptage. Vous verrez 0 requête envoyée à un serveur."
+        },
+        {
+          "title": "Logique Locale Uniquement",
+          "desc": "Coupez votre Wi-Fi et utilisez l'outil. Il fonctionne à 100% hors ligne, prouvant qu'aucun serveur n'est nécessaire pour le traitement."
+        },
+        {
+          "title": "Transparence du Code",
+          "desc": "Inspectez la source de la page. Toute la logique cryptographique est gérée via l'API native window.crypto."
+        }
+      ]
+    },
+    "related": {
+      "title": "Explorer d'Autres Outils de Confidentialité",
+      "subtitle": "Améliorez votre sécurité numérique avec notre suite d'outils locaux.",
+      "items": [
+        {
+          "name": "Générateur de MDP"
+        },
+        {
+          "name": "Vérificateur de MDP"
+        },
+        {
+          "name": "Cryptage de Fichiers"
+        },
+        {
+          "name": "Nettoyeur de Métadonnées"
+        },
+        {
+          "name": "Stéganographie"
+        },
+        {
+          "name": "Hub Confidentialité"
+        }
+      ]
+    },
+    "manifesto": {
+      "title": "Philosophie de la Confidentialité d'Abord",
+      "desc": "SafeTools croit que la confidentialité est un droit numérique fondamental. Nos outils sont conçus pour minimiser l'exposition de données et maximiser le contrôle de l'utilisateur. Pas de comptes. Pas de suivi. Pas de stockage cloud. Juste des outils sécurisés axés sur la confidentialité.",
+      "button": "Explorer tous les outils"
+    },
+    "footer": {
+      "line1": "Protégez les informations sensibles avec des outils de sécurité modernes axés sur la confidentialité.",
+      "line2": "Des outils axés sur la confidentialité conçus pour un internet plus sûr. Construit avec ❤️ pour le web ouvert."
+    }
+  }
+}

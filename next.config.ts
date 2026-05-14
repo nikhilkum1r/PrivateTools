@@ -1,11 +1,15 @@
 import type { NextConfig } from "next";
+const createNextIntlPlugin = require('next-intl/plugin');
 
 const withPWA = require("next-pwa")({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
   register: true,
   skipWaiting: true,
-  // Cache WASM, fonts, and static assets aggressively
+  fallbacks: {
+    document: "/offline.html",
+  },
+  // Cache WASM, fonts, static assets, and AI models aggressively
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/fonts\.(?:gstatic|googleapis)\.com\/.*/i,
@@ -72,6 +76,23 @@ const withPWA = require("next-pwa")({
       },
     },
     {
+      urlPattern: /\.(?:onnx|bin|ort)$/i,
+      handler: "CacheFirst",
+      options: {
+        cacheName: "ai-model-assets",
+        expiration: { maxEntries: 5, maxAgeSeconds: 90 * 24 * 60 * 60 },
+      },
+    },
+    {
+      urlPattern: /\/api\/.+$/i,
+      handler: "NetworkFirst",
+      options: {
+        cacheName: "api-routes",
+        expiration: { maxEntries: 32, maxAgeSeconds: 5 * 60 },
+        networkTimeoutSeconds: 5,
+      },
+    },
+    {
       urlPattern: ({ url }: { url: URL }) => {
         const isSameOrigin = self.origin === url.origin;
         if (!isSameOrigin) return false;
@@ -89,7 +110,6 @@ const withPWA = require("next-pwa")({
 });
 
 const nextConfig: NextConfig = {
-  turbopack: {},
   allowedDevOrigins: ["10.156.92.85"],
 
   // ─── Image Optimization ──────────────────────────────────────────────────
@@ -100,12 +120,19 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     dangerouslyAllowSVG: false,
     contentDispositionType: "inline",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
 
   // ─── Compiler Options ────────────────────────────────────────────────────
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+
 
   // ─── Experimental ────────────────────────────────────────────────────────
   experimental: {
@@ -134,6 +161,7 @@ const nextConfig: NextConfig = {
       { source: "/privacy/metadata", destination: "/security/metadata-cleaner", permanent: true },
       { source: "/privacy/shredder", destination: "/security/file-shredder", permanent: true },
       { source: "/privacy/password-checker", destination: "/privacy/password-generator", permanent: true },
+      { source: "/devtools/color", destination: "/image/colors", permanent: true },
     ];
   },
 
@@ -145,7 +173,7 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: [
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-          { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
+          { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
           {
             key: "X-Robots-Tag",
             value:
@@ -161,18 +189,14 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), payment=()",
           },
-        ],
-      },
-      // Immutable cache for hashed Next.js static assets (JS, CSS, fonts)
-      {
-        source: "/_next/static/(.*)",
-        headers: [
           {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            key: "Content-Security-Policy",
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' ${process.env.NODE_ENV === "development" ? "'unsafe-eval'" : ""} https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://www.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://pagead2.googlesyndication.com https://adservice.google.com https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com https://www.google-analytics.com https://stats.g.doubleclick.net https://*.projectnaptha.com https://unpkg.com https://cdn.jsdelivr.net; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com; worker-src 'self' blob: https://unpkg.com https://cdn.jsdelivr.net; child-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;`,
           },
         ],
       },
+      // Static assets cache control - disabled in development by Next.js automatically
+      // but we remove the manual override to prevent browser lock-in.
       // Cache for public static files (images, icons, manifests)
       {
         source: "/:path*\\.:ext(png|jpg|jpeg|webp|avif|gif|svg|ico|woff2|woff|ttf|otf)",
@@ -207,4 +231,9 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPWA(nextConfig);
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+export default withBundleAnalyzer(withPWA(withNextIntl(nextConfig)));

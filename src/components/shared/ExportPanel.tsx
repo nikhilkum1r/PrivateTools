@@ -6,12 +6,14 @@ import { Download, Copy, Share2, RefreshCw, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExportManager } from "@/lib/export-manager";
+import { useTranslations } from "next-intl";
 import { formatBytes, formatSavings } from "@/lib/utils/fileSize";
+import { AdUnit } from "@/components/shared/AdUnit";
 
 interface ExportPanelProps {
   blob: Blob | null;
   filename: string;
-  inputSize?: number;       // bytes — for savings display
+  inputSize?: number;       // bytes  for savings display
   onReset: () => void;
   allowCopy?: boolean;      // show Copy button (images only)
   className?: string;
@@ -27,6 +29,7 @@ export function ExportPanel({
 }: ExportPanelProps) {
   const [copied, setCopied] = React.useState(false);
   const [shared, setShared] = React.useState(false);
+  const t = useTranslations("common.export");
 
   const canShare = typeof navigator !== "undefined" && !!navigator.share;
 
@@ -55,6 +58,7 @@ export function ExportPanel({
   return (
     <AnimatePresence>
       <motion.div
+        data-google-ads-ignore="true"
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 8 }}
@@ -67,7 +71,7 @@ export function ExportPanel({
               <CheckCircle2 className="w-5 h-5" />
             </div>
             <div>
-              <p className="font-bold text-sm">Ready to download</p>
+              <p className="font-bold text-sm">{t("ready")}</p>
               <p className="text-xs text-muted-foreground font-mono">{formatBytes(blob.size)}</p>
             </div>
           </div>
@@ -85,7 +89,7 @@ export function ExportPanel({
             onClick={handleDownload}
           >
             <Download className="w-4 h-4" />
-            Download
+            {t("download")}
           </Button>
 
           {allowCopy && (
@@ -95,7 +99,7 @@ export function ExportPanel({
               onClick={handleCopy}
             >
               {copied ? <CheckCircle2 className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
-              {copied ? "Copied!" : "Copy"}
+              {copied ? t("copied") : t("copy")}
             </Button>
           )}
 
@@ -106,7 +110,7 @@ export function ExportPanel({
               onClick={handleShare}
             >
               <Share2 className="w-4 h-4" />
-              Share
+              {t("share")}
             </Button>
           )}
 
@@ -116,8 +120,13 @@ export function ExportPanel({
             onClick={onReset}
           >
             <RefreshCw className="w-4 h-4" />
-            Reset
+            {t("reset")}
           </Button>
+        </div>
+
+        {/* Success Ad */}
+        <div className="pt-4 border-t border-green-500/10">
+          <AdUnit type="content" className="my-0" />
         </div>
       </motion.div>
     </AnimatePresence>

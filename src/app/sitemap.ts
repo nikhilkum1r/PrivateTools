@@ -1,80 +1,78 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { locales } from '@/config/locales';
+import { SUPPORTED_CONVERSION_SLUGS, SUPPORTED_COMPRESSION_FORMATS } from '@/config/seo-routes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://safetools.space'
-  const lastModified = new Date()
-
+  const baseUrl = 'https://safetools.space';
   const routes = [
     '',
-    '/about',
-    '/privacy-policy',
-    '/terms',
+    '/tools',
     '/image',
-    "/image/remove-background",
     '/image/compress',
     '/image/convert',
+    '/image/remove-background',
+    '/image/ocr',
     '/image/editor',
-    '/image/to-pptx',
-    '/image/icons',
     '/image/colors',
     '/pdf',
     '/pdf/merge-pdf',
     '/pdf/split-pdf',
-    '/pdf/unlock-pdf',
-    '/pdf/protect-pdf',
     '/pdf/compress-pdf',
-    '/privacy',
-    '/security/metadata-cleaner',
-    '/security/vault',
-    '/privacy/secure-notes',
-    '/security/file-shredder',
-    '/privacy/password-generator',
-    '/security/steganography',
-    '/tools/qr-generator',
-    '/devtools',
+    '/pdf/protect-pdf',
+    '/pdf/unlock-pdf',
+    '/video',
     '/document',
     '/document/word-to-pdf',
     '/document/pdf-to-txt',
-    '/document/text-tools',
-    '/ai',
-    '/image/ocr',
-    '/devtools/data-converter',
-    '/devtools/base64',
     '/document/text-tools/case-converter',
     '/document/text-tools/word-counter',
-    '/pricing',
-    '/developers',
-    '/changelog',
+    '/audio',
+    '/privacy',
+    '/privacy/password-generator',
+    '/privacy/secure-notes',
+    '/security',
+    '/security/file-shredder',
+    '/security/metadata-cleaner',
+    '/security/steganography',
+    '/security/vault',
+    '/devtools',
+    '/devtools/base64',
+    '/devtools/icons',
+    '/devtools/data-converter',
+    '/qr',
+    '/about',
+    '/blog',
     '/faq',
-    '/contact',
-    '/feedback',
-    '/status',
-    '/cookies',
-    '/tools',
-    '/updates',
-    '/features',
-  ]
+  ];
 
-  // Add dynamic image compression routes
-  const formats = ["png", "jpeg", "webp", "avif", "heic", "svg", "tiff", "gif"];
-  formats.forEach(fmt => {
+  for (const slug of SUPPORTED_CONVERSION_SLUGS) {
+    routes.push(`/image/convert/${slug}`);
+  }
+
+  for (const fmt of SUPPORTED_COMPRESSION_FORMATS) {
     routes.push(`/image/compress/compress-${fmt}`);
-  });
+  }
 
-  // Add top image conversion pairs
-  const featured = ["png", "jpeg", "webp", "avif", "pdf", "heic"];
-  for (const from of featured) {
-    for (const to of featured) {
-      if (from !== to) {
-        routes.push(`/image/convert/${from}-to-${to}`);
-      }
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+
+  for (const route of routes) {
+    const alternatesLanguages: Record<string, string> = {};
+    for (const altLocale of locales) {
+      alternatesLanguages[altLocale] = `${baseUrl}/${altLocale}${route}`;
+    }
+
+    for (const locale of locales) {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}${route}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: route === '' ? 1.0 : 0.8,
+        alternates: {
+          languages: alternatesLanguages
+        }
+      });
     }
   }
 
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified,
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : route.split('/').length <= 2 ? 0.9 : 0.8,
-  }))
+  return sitemapEntries;
 }

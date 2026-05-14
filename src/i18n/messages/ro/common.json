@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "Bun venit la SafeTools",
+    "tagline": "Peste 150 de instrumente online pentru fișiere, axate pe confidențialitate, care rulează local",
+    "upload": "Încarcă fișier",
+    "download": "Descarcă",
+    "compress": "Comprimă",
+    "convert": "Convertește",
+    "edit": "Editează",
+    "search": "Caută în peste 150 de instrumente...",
+    "privacy": "Confidențialitate înainte de toate",
+    "speed": "Ultra rapid",
+    "security": "Nivel enterprise",
+    "systemHealth": {
+      "title": "Starea sistemului",
+      "localEngine": "Motor local",
+      "localEngineDesc": "Procesarea are loc 100% local pe dispozitivul tău.",
+      "secureSession": "Sesiune securizată",
+      "secureSessionDesc": "Mediu de browser izolat pentru confidențialitate maximă.",
+      "online": "Conectat",
+      "onlineDesc": "Online pentru cele mai recente actualizări de instrumente.",
+      "offlineReady": "Pregătit pentru offline",
+      "offlineReadyDesc": "Acest instrument funcționează perfect fără conexiune la internet.",
+      "zeroTracking": "Zero urmărire",
+      "zeroTrackingDesc": "Nicio dată nu este trimisă către serverele noastre pentru urmărire."
+    },
+    "securityTools": "Instrumente de securitate",
+    "privacyTools": "Instrumente de confidențialitate",
+    "tools": {
+      "vault": "Seif securizat",
+      "metadataCleaner": "Curățare metadate",
+      "fileShredder": "Distrugător de fișiere",
+      "secureNotes": "Note securizate",
+      "passwordGenerator": "Generator de parole",
+      "passwordChecker": "Verificator putere parolă",
+      "ocr": "Extracție OCR",
+      "steganography": "Steganografie imagine",
+      "imageEditor": "Editor de imagini",
+      "imageCompressor": "Compresor de imagini",
+      "formatConverter": "Convertor de formate",
+      "backgroundRemover": "Eliminare fundal",
+      "colorLab": "Laborator de culori",
+      "pdfToImage": "PDF în imagine"
+    },
+    "toolsLabel": "Instrumente",
+    "features": "Funcționalități",
+    "developers": "Dezvoltatori",
+    "pricing": "Prețuri",
+    "about": "Despre SafeTools",
+    "whyAds": "De ce afișăm reclame",
+    "privacyPolicy": "Polityca de confidențialitate",
+    "termsOfService": "Termeni și condiții",
+    "contact": "Contactați-ne",
+    "home": "Acasă",
+    "faqLabel": "FAQ",
+    "blog": "Blog",
+    "changelog": "Jurnal de modificări",
+    "light": "Luminos",
+    "dark": "Întunecat",
+    "system": "Sistem",
+    "startFree": "Începe gratuit",
+    "systemStatus": "Starea sistemului",
+    "updates": "Actualizări",
+    "feedback": "Feedback",
+    "contents": "Conținut",
+    "imageTools": "Instrumente imagine",
+    "openTools": "Deschide instrumente",
+    "ready": "Ești gata să preiei controlul?",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "PREGĂTIT",
+      "blocked": "BLOCAT",
+      "success": "SUCCES",
+      "error": "EROARE"
+    },
+    "getStarted": "Începe acum",
+    "forever": "pentru totdeauna",
+    "step": "Pas",
+    "dropzone": {
+      "title": "Încarcă fișier",
+      "description": "Trage și plasează fișierul aici",
+      "secure": "Procesare locală securizată",
+      "processedLocally": "Procesat local",
+      "maxSize": "Max {size}MB",
+      "noFileChosen": "Niciun fișier selectat"
+    },
+    "export": {
+      "ready": "Gata pentru descărcare",
+      "download": "Descarcă",
+      "copy": "Copiază",
+      "copied": "Copiat!",
+      "share": "Distribuie",
+      "reset": "Resetează"
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "description": "Tot ce trebuie să știi despre acest instrument și cum îți protejează confidențialitatea."
+    },
+    "related": {
+      "title": "Instrumente profesionale conexe",
+      "subtitle": "Explorează mai multe utilitare axate pe confidențialitate pentru fluxul tău de lucru."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools Desktop",
+      "build": "Build 0.4.1",
+      "app": "App"
+    },
+    "languages": {
+      "select": "Selectează limba"
+    },
+    "relatedTools": "Instrumente creative conexe",
+    "relatedToolsDesc": "Explorează mai multe utilitare axate pe confidențialitate.",
+    "all": "Toate",
+    "units": {
+      "px": "px",
+      "mb": "MB",
+      "kb": "KB",
+      "s": "s"
+    },
+    "advertisement": "Publicitate",
+    "system_health": {
+      "title": "Starea sistemului",
+      "localEngine": "Motor local",
+      "localEngineDesc": "Procesare pe hardware-ul tău",
+      "secureSession": "Sesiune securizată",
+      "secureSessionDesc": "Context de browser izolat",
+      "online": "Online",
+      "onlineDesc": "Optimizat pentru viteză",
+      "offlineReady": "Pregătit pentru offline",
+      "offlineReadyDesc": "Funcțional complet offline",
+      "zeroTracking": "Zero urmărire",
+      "zeroTrackingDesc": "Arhitectură axată pe confidențialitate"
+    },
+    "values": {
+      "yes": "Da",
+      "no": "Nu",
+      "limited": "Limitat"
+    },
+    "pro": {
+      "comingSoon": "Pro – În curând",
+      "unlockPower": "Deblochează mai multă putere",
+      "features": [
+        "Fișiere de până la 10 ori mai mari",
+        "Procesare în loturi nelimitată",
+        "Coadă de procesare prioritară pe server",
+        "Link-uri partajabile (expirare în 72h)",
+        "Istoric fișiere – ultimele 50 de joburi",
+        "Procesare pe server pentru fișiere mari"
+      ],
+      "waitlist": "Alătură-te listei de așteptare – 8$/lună la lansare",
+      "successTitle": "Ești pe listă! 🎉",
+      "successDesc": "Îți vom trimite un e-mail când se lansează Pro.",
+      "continueFree": "Continuă cu versiunea gratuită",
+      "emailPlaceholder": "emailul-tau@mail.com",
+      "join": "Alătură-te",
+      "validEmail": "Te rugăm să introduci o adresă de e-mail validă.",
+      "waitlistSuccess": "Ești pe lista de așteptare! Te vom anunța când se lansează Pro.",
+      "freeLimit": "Limită gratuită: {limit}",
+      "proLimit": "Limită Pro: {limit}",
+      "yourFile": "Fișierul tău: {size}"
+    },
+    "disclaimer": {
+      "understand": "Am înțeles – Continuă",
+      "responsibility": "Continuând, accepți responsabilitatea deplină pentru utilizarea acestui instrument."
+    },
+    "toast": {
+      "linkCopied": "Link copiat în clipboard"
+    },
+    "seo": {
+      "browserReqs": "Necesită JavaScript și WebAssembly"
+    },
+    "aria": {
+      "goHome": "Mergi la Acasă",
+      "toggleTheme": "Schimbă tema",
+      "faq": "Întrebări frecvente",
+      "changeLanguage": "Schimbă limba",
+      "close": "Închide",
+      "menu": "Meniu",
+      "openTools": "Deschide meniul instrumentelor",
+      "exploreTools": "Explorează toate instrumentele",
+      "platformFeatures": "Funcționalități platformă",
+      "privacyCommitment": "Angajament pentru confidențialitate",
+      "developerApi": "API pentru dezvoltatori și documentație",
+      "pricingPlans": "Planuri de prețuri"
+    },
+    "shareTool": {
+      "title": "Răspândește confidențialitatea",
+      "subtitle": "Susține procesarea locală",
+      "copyLink": "Copiază link",
+      "copied": "Copiat",
+      "twitter": "Vezi acest instrument privat, fără încărcare pe server, pentru {title}:",
+      "telegram": "Procesare securizată a fișierelor cu SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "Soluții PDF",
+        "image": "Studio imagini",
+        "privacy": "Instrumente confidențialitate",
+        "developer": "Instrumente dezvoltator",
+        "pdfMerge": "Combină PDF",
+        "pdfSplit": "Divide PDF",
+        "pdfUnlock": "Deblochează PDF",
+        "pdfProtect": "Protejează PDF",
+        "pdfToImage": "PDF în imagine",
+        "securityFileShredder": "Distrugător de fișiere"
+      }
+    },
+    "error": "Eroare"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "Procesare 100% locală",
+      "noUploads": "Zero încărcări pe server",
+      "noTracking": "Zero urmărire date",
+      "privacyFirst": "UX axat pe confidențialitate",
+      "worksOffline": "Funcționează offline"
+    }
+  }
+}

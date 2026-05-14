@@ -5,6 +5,22 @@ interface ExportOptions {
   onProgress?: (progress: number) => void;
   revocationDelay?: number;
   description?: string;
+  messages?: {
+    exportSuccess?: string;
+    exportDesc?: string;
+    exportFailed?: string;
+    exportFailedDesc?: string;
+    zipSuccess?: string;
+    zipSuccessDesc?: string;
+    zipFailed?: string;
+    zipFailedDesc?: string;
+    networkFailed?: string;
+    copySuccess?: string;
+    copyFailed?: string;
+    unsupported?: string;
+    shareUnsupported?: string;
+    shareFailed?: string;
+  };
 }
 
 export class ExportManager {
@@ -12,7 +28,7 @@ export class ExportManager {
    * Export a single file as a download
    */
   static async downloadFile(blob: Blob, filename: string, options: ExportOptions = {}) {
-    const { showToast = true, revocationDelay = 1000, description } = options;
+    const { showToast = true, revocationDelay = 1000, description, messages } = options;
     
     try {
       const url = URL.createObjectURL(blob);
@@ -30,14 +46,14 @@ export class ExportManager {
       }, revocationDelay);
       
       if (showToast) {
-        toast.success(`Exported: ${filename}`, {
-          description: description || `${(blob.size / 1024).toFixed(1)} KB · Sovereign Local Export`,
+        toast.success(messages?.exportSuccess || `Exported: ${filename}`, {
+          description: description || messages?.exportDesc || `${(blob.size / 1024).toFixed(1)} KB · Sovereign Local Export`,
         });
       }
     } catch (error) {
       console.error("Export failed:", error);
-      toast.error("Export Failed", {
-        description: "An error occurred while generating the download link.",
+      toast.error(messages?.exportFailed || "Export Failed", {
+        description: messages?.exportFailedDesc || "An error occurred while generating the download link.",
       });
     }
   }
@@ -50,7 +66,7 @@ export class ExportManager {
     zipName: string,
     options: ExportOptions = {}
   ) {
-    const { showToast = true, onProgress } = options;
+    const { showToast = true, onProgress, messages } = options;
     
     if (files.length === 0) return;
     
@@ -77,14 +93,14 @@ export class ExportManager {
       });
       
       if (showToast) {
-        toast.success("ZIP Bundle Prepared", {
-          description: `Packaged ${files.length} assets into ${finalZipName}`,
+        toast.success(messages?.zipSuccess || "ZIP Bundle Prepared", {
+          description: messages?.zipSuccessDesc?.replace("{count}", files.length.toString()).replace("{name}", finalZipName) || `Packaged ${files.length} assets into ${finalZipName}`,
         });
       }
     } catch (error) {
       console.error("ZIP export failed:", error);
-      toast.error("ZIP Export Failed", {
-        description: "Failed to bundle assets. Try individual exports.",
+      toast.error(messages?.zipFailed || "ZIP Export Failed", {
+        description: messages?.zipFailedDesc || "Failed to bundle assets. Try individual exports.",
       });
     }
   }
@@ -94,64 +110,92 @@ export class ExportManager {
    */
   static async downloadFromUrl(url: string, filename: string, options: ExportOptions = {}) {
     try {
+      // If it's a blob URL, we can just download it directly without fetch
+      if (url.startsWith('blob:')) {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => document.body.removeChild(a), 1000);
+        
+        if (options.showToast !== false) {
+          toast.success(options.messages?.exportSuccess || `Exported: ${filename}`);
+        }
+        return;
+      }
+
+      // For external URLs, we need to fetch to bypass CORS/download restrictions
       const response = await fetch(url);
+      if (!response.ok) throw new Error("Network response was not ok");
       const blob = await response.blob();
       await this.downloadFile(blob, filename, options);
     } catch (error) {
       console.error("URL export failed:", error);
-      toast.error("Network Export Failed");
+      
+      // Fallback: try direct link if fetch fails
+      try {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        a.target = "_blank";
+        a.click();
+      } catch (fallbackError) {
+        toast.error(options.messages?.networkFailed || "Network Export Failed");
+      }
     }
   }
 
   /**
    * Copy text to clipboard
    */
-  static async copyText(text: string) {
+  static async copyText(text: string, options: ExportOptions = {}) {
     try {
       await navigator.clipboard.writeText(text);
-      toast.success("Copied to clipboard");
+      toast.success(options.messages?.copySuccess || "Copied to clipboard");
     } catch (error) {
-      toast.error("Copy failed");
+      toast.error(options.messages?.copyFailed || "Copy failed");
     }
   }
 
   /**
    * Copy image blob to clipboard
    */
-  static async copyImage(blob: Blob) {
+  static async copyImage(blob: Blob, options: ExportOptions = {}) {
     if (!navigator.clipboard?.write) {
-      toast.error("Clipboard API not supported in this browser.");
+      toast.error(options.messages?.unsupported || "Clipboard API not supported in this browser.");
       return;
     }
     try {
       const item = new ClipboardItem({ [blob.type]: blob });
       await navigator.clipboard.write([item]);
-      toast.success("Image copied to clipboard");
+      toast.success(options.messages?.copySuccess || "Image copied to clipboard");
     } catch (error) {
       console.error("Copy failed:", error);
-      toast.error("Failed to copy image");
+      toast.error(options.messages?.copyFailed || "Failed to copy image");
     }
   }
 
   /**
    * Share asset via Web Share API
    */
-  static async shareFile(blob: Blob, filename: string, title?: string) {
+  static async shareFile(blob: Blob, filename: string, title?: string, options: ExportOptions = {}) {
     if (!navigator.share || !navigator.canShare) {
-      toast.error("Sharing not supported on this device");
+      toast.error(options.messages?.shareUnsupported || "Sharing not supported on this device");
       return false;
     }
     try {
       const file = new File([blob], filename, { type: blob.type });
       if (!navigator.canShare({ files: [file] })) {
-        toast.error("This file type cannot be shared");
+        toast.error(options.messages?.unsupported || "This file type cannot be shared");
         return false;
       }
       await navigator.share({ title: title || filename, files: [file] });
       return true;
     } catch (error) {
       if ((error as Error).name !== "AbortError") {
-        toast.error("Sharing failed");
+        toast.error(options.messages?.shareFailed || "Sharing failed");
       }
       return false;
     }

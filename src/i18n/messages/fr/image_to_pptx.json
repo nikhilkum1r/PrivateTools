@@ -1,0 +1,144 @@
+{
+  "imageToPptx": {
+    "seo": {
+      "title": "Convertisseur Image en PPTX gratuit en ligne – Convertir JPG, PNG et images en diapositives PowerPoint",
+      "description": "Convertissez JPG, PNG et WebP en présentations PowerPoint PPTX en ligne gratuitement. Convertisseur Image en PPTX rapide, sécurisé et basé sur le navigateur sans téléchargement.",
+      "keywords": "convertir image en pptx, photos en powerpoint, convertisseur image en diapositives, JPG en PPTX, PNG en PowerPoint, WEBP en PPTX, BMP en PPTX, GIF en PPTX, TIFF en PPTX",
+      "ogTitle": "Convertisseur Image en PPTX – Outil en ligne gratuit JPG, PNG & WEBP vers PowerPoint",
+      "ogDescription": "Transformez instantanément vos images en présentations PowerPoint professionnelles avec le convertisseur Image en PPTX gratuit de SafeTools. Aucun téléchargement sur serveur, 100 % privé."
+    },
+    "hero": {
+      "title": "Image vers PPTX.",
+      "description": "Transformez instantanément vos images en présentations PowerPoint professionnelles. Rapide, sécurisé et 100 % privé.",
+      "dropzone": {
+        "title": "Déposez les images ici",
+        "subtitle": "Prend en charge JPG, PNG, WEBP, SVG, TIFF et plus"
+      },
+      "badges": {
+        "privacy": "Confidentialité d'abord",
+        "noUploads": "Aucun téléchargement",
+        "instant": "Exportation instantanée",
+        "noWatermark": "Zéro filigrane"
+      }
+    },
+    "landing": {
+      "features": {
+        "title": "Caractéristiques principales",
+        "subtitle": "Pourquoi les professionnels choisissent SafeTools",
+        "items": [
+          {
+            "title": "Conversion instantanée",
+            "desc": "Créez des fichiers de présentation PPTX entièrement compatibles à partir d'une ou plusieurs images en quelques secondes."
+          },
+          {
+            "title": "Confidentialité d'abord",
+            "desc": "Vos fichiers restent sur votre appareil. Les images sont traitées localement dans votre navigateur sans être téléchargées."
+          },
+          {
+            "title": "Traitement par lots",
+            "desc": "Téléchargez plusieurs images et générez automatiquement des présentations PowerPoint à plusieurs diapositives."
+          },
+          {
+            "title": "Haute qualité",
+            "desc": "Conservez la clarté, la résolution et les couleurs de l'image pendant la génération du PPTX."
+          },
+          {
+            "title": "Multi-appareils",
+            "desc": "Fonctionne sur Windows, macOS, Linux, Android et iOS directement dans votre navigateur."
+          },
+          {
+            "title": "Pas de filigrane",
+            "desc": "Les présentations générées sont propres, professionnelles et prêtes à l'emploi."
+          }
+        ]
+      },
+      "formats": {
+        "title": "Formats pris en charge",
+        "subtitle": "Convertissez presque n'importe quel format d'image"
+      },
+      "useCases": {
+        "title": "Cas d'utilisation courants",
+        "items": [
+          {
+            "title": "Éducation",
+            "desc": "Convertissez des notes de cours, des pages numérisées et des schémas en diapositives de classe."
+          },
+          {
+            "title": "Entreprise",
+            "desc": "Créez des rapports, des présentations d'analyses et des vitrines de produits à partir de captures d'écran."
+          },
+          {
+            "title": "Designers",
+            "desc": "Transformez vos portfolios et maquettes en présentations prêtes pour les clients."
+          },
+          {
+            "title": "Marketing",
+            "desc": "Transformez les créations de campagne et les bannières en présentations de vente modifiables."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Foire aux questions",
+        "subtitle": "Tout ce que vous devez savoir",
+        "items": [
+          {
+            "q": "Le convertisseur Image vers PPTX est-il gratuit ?",
+            "a": "Oui. L'outil est totalement gratuit, sans frais cachés ni filigranes."
+          },
+          {
+            "q": "Dois-je installer un logiciel ?",
+            "a": "Non. Tout fonctionne directement dans votre navigateur Web moderne (Chrome, Firefox, Safari, Edge)."
+          },
+          {
+            "q": "Mes fichiers sont-ils téléchargés sur des serveurs ?",
+            "a": "Non. SafeTools privilégie le traitement par navigateur. Vos images ne quittent jamais votre appareil."
+          },
+          {
+            "q": "Puis-je convertir plusieurs images en un seul fichier PPTX ?",
+            "a": "Oui. Vous pouvez télécharger plusieurs images et elles seront converties en une présentation PowerPoint à plusieurs diapositives."
+          },
+          {
+            "q": "L'outil prend-il en charge les appareils mobiles ?",
+            "a": "Oui. Le convertisseur fonctionne parfaitement sur les téléphones Android, les iPhones, les tablettes et les ordinateurs de bureau."
+          },
+          {
+            "q": "La qualité de l'image sera-t-elle réduite ?",
+            "a": "Le convertisseur est optimisé pour préserver au maximum la clarté et la résolution de l'image pendant le processus de génération."
+          }
+        ]
+      }
+    },
+    "studio": {
+      "assetMatrix": "Matrice d'actifs",
+      "slidesInitialized": "{count} diapositives initialisées",
+      "generate": "GÉNÉRER LE JEU DE DIAPOSITIVES PPTX",
+      "slideIndicator": "DIAPOSITIVE {current} / {total}",
+      "reset": "Réinitialiser",
+      "secureBrowser": "THREAD DE NAVIGATEUR SÉCURISÉ",
+      "workspaceInitialized": "Espace de travail initialisé",
+      "studioConfig": "Config studio",
+      "localSynthesis": "Mode de synthèse locale",
+      "presentationName": "Nom de la présentation",
+      "placeholder": "PRESENTATION_2024",
+      "optimization": "Optimisation",
+      "layoutEngine": "Moteur de mise en page",
+      "imageFit": "Ajustement de l'image",
+      "workerStatus": "Statut du worker",
+      "privacyShield": "Bouclier de confidentialité",
+      "privacyDesc": "Toute la construction des diapositives se fait dans l'environnement sécurisé de votre navigateur. Aucune donnée n'est transmise, mise en cache ou stockée sur notre infrastructure.",
+      "systemReady": "Système prêt",
+      "noPreview": "Aucun aperçu disponible",
+      "pro": "PRO",
+      "layoutValue": "HD 16:9",
+      "fitValue": "Contenir",
+      "workerIdle": "Inactif"
+    },
+    "messages": {
+      "processing": "Traitement de {count} fichiers...",
+      "slidesAdded": "{count} diapositives ajoutées",
+      "processFailed": "Échec du traitement de certains fichiers",
+      "exportSuccess": "Présentation exportée avec succès",
+      "exportFailed": "L'exportation a échoué. Assurez-vous que toutes les images sont valides."
+    }
+  }
+}

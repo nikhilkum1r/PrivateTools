@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Ücretsiz Çevrimiçi OCR Aracı | Resimlerden ve PDF'lerden Metin Çıkarın | SafeTools",
+      "description": "Ücretsiz gizlilik odaklı OCR aracımızla resimlerden, ekran görüntülerinden ve PDF'lerden anında metin çıkarın. Yükleme gerektirmeyen hızlı AI destekli metin tanıma.",
+      "keywords": "ücretsiz çevrimiçi OCR, resimden metne dönüştürücü, resimden metin çıkarma, OCR PDF aracı, ekran görüntüsü metin çıkarıcı, el yazısı OCR, taranmış belge OCR, ücretsiz OCR yazılımı, AI OCR aracı, tarayıcı tabanlı OCR, optik karakter tanıma, resmi düzenlenebilir metne dönüştürme, çevrimiçi PDF OCR, çok dilli OCR, yüklemesiz OCR",
+      "ogTitle": "SafeTools OCR | Ücretsiz Çevrimiçi OCR Aracı - Resimlerden Anında Metin Çıkarın",
+      "ogDescription": "Gizlilik odaklı tarayıcı tabanlı OCR aracımızı kullanarak resimleri, taranmış belgeleri, ekran görüntülerini, el yazısı notları ve PDF'leri düzenlenebilir metne dönüştürün. Hızlı, doğru ve tamamen ücretsiz."
+    },
+    "hero": {
+      "badge": "Gizlilik Odaklı Yapay Zeka",
+      "title": "Ücretsiz Çevrimiçi OCR Aracı - Anında Metin Çıkarın",
+      "description": "Gizlilik odaklı tarayıcı tabanlı OCR aracımızı kullanarak resimleri, taranmış belgeleri, ekran görüntülerini, el yazısı notları ve PDF'leri düzenlenebilir metne dönüştürün. Hızlı, doğru ve tamamen ücretsiz.",
+      "extractNow": "Metni Şimdi Çıkar",
+      "uploadImage": "Resim Yükle",
+      "tryDemo": "OCR Demosunu Dene",
+      "badges": {
+        "private": "%100 Gizli",
+        "browser": "Tarayıcı Tabanlı",
+        "noUpload": "Yükleme Gerektirmez",
+        "ai": "Yapay Zeka Destekli",
+        "free": "Sonsuza Dek Ücretsiz"
+      }
+    },
+    "workspace": {
+      "source": "Kaynak Varlık",
+      "sourceSubtitle": "Resim, PDF veya Ekran Görüntüsü",
+      "clearQueue": "Kuyruğu Temizle",
+      "dropzone": {
+        "title": "Dosyayı Bırakın",
+        "subtitle": "JPEG, PNG, PDF, HEIC desteklenir"
+      },
+      "engine": "Tanıma Motoru",
+      "start": "Çıkarmayı Başlat",
+      "active": "%{progress} Aktif",
+      "history": "Son Geçmiş",
+      "clearAll": "Tümünü Temizle",
+      "copyHistory": "Geçmişten kopyalandı!",
+      "detected": "{lang} Algılandı",
+      "matrix": "Çıkarılan Matris",
+      "matrixSubtitle": "Düzenlenebilir Dijital Metin",
+      "words": "Kelime",
+      "chars": "Karakter",
+      "waiting": "Sinirsel Besleme Bekleniyor",
+      "processing": "Sinirsel Ağırlıklar İşleniyor",
+      "handwriting_active": "El Yazısı Yapay Zekası Aktif",
+      "detected_string": "Algılanan Dizi:",
+      "neural_v3": "Sinirsel Metin Çıkarma v3.0",
+      "config": "Yapılandırma",
+      "configDesc": "Dilinizi seçin ve çalıştırın",
+      "clear": "Temizle",
+      "changeFile": "Dosyayı Değiştir",
+      "extracting": "Metin Çıkarılıyor...",
+      "language": "Dil",
+      "run": "OCR'yi Çalıştır",
+      "result": "Çıkarma Sonucu",
+      "extractionComplete": "Çıkarma Tamamlandı",
+      "awaitingExtraction": "Çıkarma Bekleniyor",
+      "placeholder": "Çıkarılan metin burada görünecektir...",
+      "copy": "Metni kopyala",
+      "copied": "Kopyalandı!"
+    },
+    "messages": {
+      "analyzing": "Çoklu komut dosyası motoru aracılığıyla analiz ediliyor...",
+      "extractionSuccess": "{count} dosyadan metin başarıyla çıkarıldı!",
+      "extractionFailed": "Çıkarma başarısız oldu. Daha net bir resim deneyin.",
+      "copySuccess": "Panoya kopyalandı!",
+      "invalidFile": "Geçersiz dosya türü ({name})",
+      "svgNotSupported": "SVG dosyaları desteklenmiyor ({name})"
+    },
+    "languages": {
+      "auto": "✨ Dili Otomatik Algıla",
+      "eng": "İngilizce",
+      "hin": "Hintçe",
+      "spa": "İspanyolca",
+      "fra": "Fransızca",
+      "deu": "Almanca",
+      "ara": "Arapça",
+      "chi_sim": "Çince (Basitleştirilmiş)",
+      "jpn": "Japonca",
+      "kor": "Korece",
+      "ita": "İtalyanca",
+      "por": "Portekizce",
+      "rus": "Rusça",
+      "eng_hin": "İngilizce + Hintçe",
+      "eng_spa": "İngilizce + İspanyolca",
+      "eng_fra": "İngilizce + Fransızca"
+    },
+    "landing": {
+      "intro": {
+        "title": "Resimlerden Çevrimiçi Ücretsiz Metin Çıkarın",
+        "content": "Optik Karakter Tanıma (OCR) teknolojisi, resimlerin içindeki basılı veya el yazısı metinleri düzenlenebilir dijital metne dönüştürür. Ücretsiz çevrimiçi OCR aracımız, kullanıcıların belgeleri dijitalleştirmesine, ekran görüntülerinden metin kopyalamasına, basılı sayfaları taramasına ve el yazısı notları anında düzenlenebilir dosyalara dönüştürmesine yardımcı olur."
+      },
+      "features": {
+        "extraction": {
+          "title": "Sinirsel Çıkarma",
+          "description": "Karmaşık arka planlardaki metinleri algılamak için tasarlanmış tescilli yapay zeka modelleri."
+        },
+        "multilingual": {
+          "title": "Küresel Destek",
+          "description": "CJK ve Hint alfabeleri dahil 100'den fazla dilde metni tanıyın."
+        },
+        "secure": {
+          "title": "Kurumsal Güvenlik",
+          "description": "Sıfır sunucu etkileşimi garantisiyle askeri düzeyde gizlilik."
+        },
+        "offline": {
+          "title": "Çevrimdışı Hazır",
+          "description": "OCR motorunun tamamı internet olmadan tarayıcınızda çalışır."
+        },
+        "title": "OCR Çıkarma Gücü",
+        "title2": "Güçlü AI OCR Özellikleri",
+        "subtitle": "Her iş akışı için profesyonel düzeyde metin tanıma.",
+        "items": [
+          "Fiziksel belgeleri dijitalleştirin",
+          "YouTube/Sosyal Medyadan metin kopyalayın",
+          "El yazısı ödevleri dönüştürün",
+          "İş makbuzlarından veri çıkarın",
+          "Yasal ve tıbbi kayıtları işleyin",
+          "İçeriği Word veya Metin dosyası olarak kaydedin"
+        ]
+      },
+      "formats": {
+        "title": "Desteklenen Dosya Formatları",
+        "image": "Resim Formatları",
+        "doc": "Belge Formatları",
+        "optimized": "Şunun İçin Optimize Edildi",
+        "standard": "Standart Ofis Belgeleri",
+        "mobileReady": "Mobil Uyumlu",
+        "socialMedia": "Sosyal Medya Ekran Görüntüleri",
+        "highPrecision": "Yüksek Hassasiyet"
+      },
+      "privacy": {
+        "title": "Gizlilik Odaklı OCR İşleme",
+        "content": "Pek çok çevrimiçi OCR aracının aksine, dosyalarınız sunucularımızda kalıcı olarak saklanmaz. WebAssembly kullanarak istemci tarafı işlemeden yararlanıyoruz, yani OCR motoru doğrudan tarayıcınızın içinde çalışıyor.",
+        "execution": {
+          "title": "Yerel Yürütme",
+          "content": "İşleme bizim bulutumuzda değil, sizin RAM'inizde gerçekleşir."
+        },
+        "tracking": {
+          "title": "Takip Yok",
+          "content": "Dosyalarınızı veya çıkarma sonuçlarınızı günlüğe kaydetmiyoruz."
+        },
+        "registration": {
+          "title": "Kayıt Gerektirmez",
+          "content": "Hesap açmadan yapay zekanın tüm gücünü kullanın."
+        }
+      },
+      "ai": {
+        "title": "Yapay Zeka Destekli Tanıma",
+        "content": "Gelişmiş sinir ağları metin doğruluğunu, düzen korumasını ve çok dilli desteği artırır. Motorumuz gürültülü, bulanık veya düşük çözünürlüklü görüntülerde bile etkili bir şekilde çalışır.",
+        "items": [
+          "El yazısı tanıma ve dönüştürme",
+          "Çok sütunlu ve tablo algılama",
+          "Otomatik döndürme ve eğim düzeltme",
+          "Gürültülü resim kurtarma ve bulanıklık giderme"
+        ]
+      },
+      "whatIs": {
+        "title": "OCR Nedir?",
+        "content": "OCR, Optik Karakter Tanıma anlamına gelir. Yazılımın görüntüleri analiz etmesine ve harfleri, sayıları ve sembolleri algılayarak bunları aranabilir ve düzenlenebilir dijital içeriğe dönüştürmesine olanak tanıyan bir teknolojidir.",
+        "how": {
+          "title": "Nasıl çalışır?",
+          "content": "OCR yazılımı bir görüntünün piksel desenlerini tarar, şekilleri karakter olarak tanımlar ve cümleleri ve paragrafları yeniden oluşturmak için dil modellerini kullanır."
+        },
+        "apps": {
+          "title": "Uygulamalar",
+          "content": "İş otomasyonunda, arşivlerin dijitalleştirilmesinde ve görme engelliler için yardımcı teknolojilerde yaygın olarak kullanılır."
+        }
+      },
+      "useCases": {
+        "badge": "İş Akışı Entegrasyonu",
+        "title": "Popüler Kullanım Durumları",
+        "subtitle": "SafeTools OCR, çeşitli iş akışları ve profesyonel ihtiyaçlar için tasarlanmıştır.",
+        "items": [
+          {
+            "title": "Öğrenciler",
+            "desc": "Ders notlarını, ders kitaplarını ve araştırma ödevlerini düzenlenebilir çalışma kılavuzlarına dönüştürün."
+          },
+          {
+            "title": "İşletmeler",
+            "desc": "Daha hızlı dijital iş akışları için sözleşmeleri, faturaları ve fiziksel kayıtları dijitalleştirin."
+          },
+          {
+            "title": "Geliştiriciler",
+            "desc": "Kullanıcı arayüzü taslaklarından, kod ekran görüntülerinden ve belgelerden yapılandırılmış metinler çıkarın."
+          },
+          {
+            "title": "Araştırmacılar",
+            "desc": "Eski taranmış arşivleri, seçilebilir metin içeren aranabilir PDF belgelerine dönüştürün."
+          },
+          {
+            "title": "İçerik Üreticileri",
+            "desc": "YouTube ekran görüntülerinden, infografiklerden ve memlerden gelen metinleri hızla yeniden kullanın."
+          },
+          {
+            "title": "Hukuk Profesyonelleri",
+            "desc": "Hassas dava dosyalarını veri ifşası riski olmadan güvenli bir şekilde dijitalleştirin."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Ekran Görüntüsü Zekası",
+        "title": "Ekran Görüntülerinden Metin Çıkarın",
+        "content": "YouTube yakalamalarından, Instagram gönderilerinden veya Zoom sunumlarından anında metin kopyalayın. Artık manuel yazmaya veya içeriği sıfırdan oluşturmaya gerek yok.",
+        "tags": [
+          "Sosyal Medya",
+          "Webinarlar",
+          "UI/UX Tasarımı"
+        ]
+      },
+      "handwriting": {
+        "badge": "Kalemden Piksele",
+        "title": "El Yazısı Tanıma",
+        "content": "El yazısı notları, günlük girişlerini ve beyaz tahtaları dijital metne dönüştürün. Yapay zekamız farklı el yazısı stillerini ve bitişik yazıları anlayacak şekilde eğitilmiştir.",
+        "handwritingActive": "El Yazısı Yapay Zekası Aktif",
+        "tags": [
+          "Günlükler",
+          "Ödevler",
+          "Beyaz Tahtalar"
+        ]
+      },
+      "export": {
+        "title": "Birden Fazla Formatla Dışa Aktarın",
+        "content": "Metniniz çıkarıldıktan sonra iş akışınıza en uygun formatta kaydedin. Anında kopyalayın veya yüksek kaliteli dosyalar indirin.",
+        "items": [
+          "Düz Metin (.TXT)",
+          "Belge (.DOCX)",
+          "Yapılandırılmış (.JSON)",
+          "Tablosal (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Ultra Hızlı Sinirsel Motor",
+        "content": "Yüksek çözünürlüklü varlıklarda bile hızlı tanıma sağlamak için WebAssembly ve GPU hızlandırması kullanılarak optimize edilmiştir.",
+        "optimization": "Tarayıcı Optimizasyonu",
+        "accuracy": "Karakter Doğruluğu",
+        "wasm": "WebAssembly",
+        "gpu": "GPU Hızlandırmalı"
+      },
+      "manifesto": {
+        "title": "Önce Gizlilik Manifestosu",
+        "description": "Verilerinizin sizin mülkünüz olduğuna inanıyoruz. OCR motorumuz bunu tasarım gereği onurlandırır.",
+        "points": [
+          "Hiçbir veri makinenizden dışarı çıkmaz",
+          "Hesap gerektirmez",
+          "Takip çerezleri yok",
+          "Gizli günlük kaydı yok"
+        ],
+        "others": {
+          "title": "Diğer OCR Araçları",
+          "points": [
+            "Verilerinizi reklamverenlere satarlar",
+            "Buluta yükleme gerektirirler",
+            "Takip pikselleri enjekte ederler",
+            "Hassas belgelerinizi saklarlar"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Neden SafeTools OCR'yi Seçmelisiniz?",
+        "subtitle": "Bizi geleneksel bulut tabanlı OCR araçlarıyla karşılaştırın.",
+        "headers": [
+          "Özellik",
+          "SafeTools OCR",
+          "Geleneksel Araçlar"
+        ],
+        "rows": [
+          {
+            "f": "Tarayıcı Tabanlı",
+            "s": "Evet",
+            "t": "Sınırlı"
+          },
+          {
+            "f": "Yükleme Gerektirmez",
+            "s": "Evet",
+            "t": "Hayır"
+          },
+          {
+            "f": "AI Destekli Motor",
+            "s": "Evet",
+            "t": "Bazen"
+          },
+          {
+            "f": "El Yazısı Algılama",
+            "s": "Evet",
+            "t": "Sınırlı"
+          },
+          {
+            "f": "Mobil Uyumluluk",
+            "s": "Evet",
+            "t": "Genellikle Kötü"
+          },
+          {
+            "f": "Gizlilik Odaklı",
+            "s": "Evet",
+            "t": "Hayır"
+          },
+          {
+            "f": "Sonsuza Dek Ücretsiz",
+            "s": "Evet",
+            "t": "Genellikle Sınırlı"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Gelişmiş OCR Yardımcı Programları",
+        "subtitle": "Karmaşık belge işleme için profesyonel özellikler.",
+        "items": [
+          {
+            "title": "Tablo Algılama",
+            "desc": "Karmaşık finansal belgelerden yapılandırılmış tablolar çıkarın."
+          },
+          {
+            "title": "Çok Sütunlu Tarama",
+            "desc": "Gazeteler ve çok sütunlu dergiler için düzeni koruyun."
+          },
+          {
+            "title": "Gürültü Giderme",
+            "desc": "Daha yüksek doğruluk için grenli taramaları otomatik olarak temizleyin."
+          },
+          {
+            "title": "Otomatik Döndürme",
+            "desc": "Eğik belge taramalarını tanıma sırasında anında düzeltin."
+          },
+          {
+            "title": "Toplu OCR",
+            "desc": "Tarayıcınızda aynı anda birden fazla resim varlığını işleyin."
+          },
+          {
+            "title": "Meta Veri Temizleme",
+            "desc": "İşlenen resimlerden gizli takip meta verilerini kaldırın."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Resimleri Anında Düzenlenebilir Metne Dönüştürün",
+        "description": "Hızlı gizlilik odaklı OCR teknolojisi ile ekran görüntülerinden, taranmış belgelerden, el yazısı notlardan ve PDF'lerden doğrudan tarayıcınızda metin çıkarın.",
+        "button": "OCR'yi Şimdi Başlat",
+        "upload": "Resim Yükle"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "OCR aracı ücretsiz mi?",
+            "a": "Evet. OCR aracı, herhangi bir gizli maliyet, filigran veya abonelik gereksinimi olmaksızın tamamen ücretsizdir."
+          },
+          {
+            "q": "Dosyalarım sunuculara yükleniyor mu?",
+            "a": "Hayır. Tüm OCR işlemleri WebAssembly kullanılarak tarayıcınızda yerel olarak gerçekleşir. Resimleriniz asla cihazınızdan çıkmaz, bu da maksimum gizlilik ve güvenlik sağlar."
+          },
+          {
+            "q": "Hangi diller destekleniyor?",
+            "a": "Aracımız İngilizce, Hintçe, İspanyolca, Fransızca, Almanca, Arapça, Çince, Japonca, Korece ve daha pek çok küresel dili desteklemektedir."
+          },
+          {
+            "q": "El yazısı notlardan metin çıkarabilir miyim?",
+            "a": "Evet. Yapay zeka destekli OCR motorumuz notlar, ödevler, günlükler ve beyaz tahta içerikleri için el yazısı tanımayı desteklemektedir."
+          },
+          {
+            "q": "OCR PDF'lerde çalışıyor mu?",
+            "a": "Evet. Taranmış PDF'lerden ve görüntü tabanlı belgelerden metin çıkararak bunları dijital, düzenlenebilir metne dönüştürebilirsiniz."
+          },
+          {
+            "q": "Mobil cihazlarda OCR kullanabilir miyim?",
+            "a": "Evet. Araç tamamen duyarlıdır ve doğrudan web tarayıcınız aracılığıyla modern akıllı telefonlarda ve tabletlerde çalışır."
+          },
+          {
+            "q": "Kayıt gerekli mi?",
+            "a": "Hayır. Hesap oluşturmadan veya herhangi bir kişisel bilgi vermeden anında metin çıkarmaya başlayabilirsiniz."
+          }
+        ],
+        "title": "OCR SSS",
+        "description": "Yapay zeka destekli OCR aracımız hakkında sıkça sorulan sorular."
+      },
+      "related": {
+        "title": "Daha Fazla Aracı Keşfedin",
+        "items": [
+          {
+            "name": "Resim Düzenleyici",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Resim Sıkıştırıcı",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Resim Dönüştürücü",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF'den Metne",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Dosyayı Bırakın",
+      "description": "JPEG, PNG, PDF, HEIC desteklenir. Maks. 20MB."
+    },
+    "history": {
+      "title": "Son Geçmiş",
+      "subtitle": "Önceki çıkarmalarınıza erişin",
+      "clearAll": "Tümünü Temizle",
+      "restore": "Sonucu Geri Yükle"
+    }
+  }
+}

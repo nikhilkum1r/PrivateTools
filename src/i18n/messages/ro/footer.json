@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Instrumente de browser de nivel profesional concepute pentru confidențialitate și viteză. Peste 150 de utilitare care rulează în întregime pe dispozitivul tău.",
+    "tagline": "Datele tale îți aparțin.",
+    "localEngineActive": "Motor local activ",
+    "isolatedContextVerified": "Context izolat verificat",
+    "verifiedSupport": "Compatibilitate browser verificată",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Produs",
+    "resources": "Resurse",
+    "community": "Comunitate",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Toate sistemele locale",
+    "faq": "FAQ"
+  }
+}

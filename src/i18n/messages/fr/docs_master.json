@@ -1,0 +1,221 @@
+{
+  "hero": {
+    "title": "Docs <highlight>Master</highlight> Pro",
+    "subtitle": "Ouvrez, visualisez et modifiez n'importe quel format de document en toute confidentialité dans votre navigateur. Pas de téléchargement. Pas de compte. 100% propulsé par WebAssembly.",
+    "dropzone": "Prend en charge DOCX, XLSX, PDF, PPTX, CSV, JSON, XML, HTML, MD, TXT, RTF, ODT et plus",
+    "badges": {
+      "privacy": "Confidentialité sans Téléchargement",
+      "engine": "Moteur WASM",
+      "formats": "Plus de 20 Formats"
+    }
+  },
+  "landing": {
+    "formats": {
+      "title": "Prise en Charge Universelle des Formats",
+      "subtitle": "Tous les principaux formats de documents, rendus avec une fidélité parfaite au pixel près",
+      "groups": [
+        "Traitement de Texte",
+        "Tableurs",
+        "Présentations",
+        "Documents & Code"
+      ]
+    },
+    "features": {
+      "title": "Pourquoi Choisir Docs Master ?",
+      "subtitle": "Une intelligence documentaire de niveau professionnel sans sacrifier la confidentialité.",
+      "items": [
+        {
+          "title": "Confidentialité sans Téléchargement",
+          "desc": "Les documents sont traités à 100 % localement dans votre navigateur à l'aide de WebAssembly. Vos fichiers ne quittent jamais votre appareil."
+        },
+        {
+          "title": "Moteur WASM Ultra-Rapide",
+          "desc": "Rendu WebAssembly à accélération matérielle pour une analyse instantanée des documents, même pour les fichiers volumineux et complexes."
+        },
+        {
+          "title": "Aperçu Haute Fidélité",
+          "desc": "Rendu parfait au pixel près pour les tableaux DOCX, XLSX, les diapositives PPTX et l'intégration native de PDF avec commandes de zoom."
+        },
+        {
+          "title": "Édition de Tableur en Direct",
+          "desc": "Modifiez les cellules XLSX et CSV directement dans le navigateur et exportez le fichier mis à jour sans avoir besoin de Microsoft Office."
+        },
+        {
+          "title": "Nettoyage des Métadonnées",
+          "desc": "Supprimez l'auteur, l'historique de l'éditeur et les métadonnées personnelles des documents avant de les partager pour une confidentialité maximale."
+        },
+        {
+          "title": "Extraire & Exporter",
+          "desc": "Extrayez des pages PDF individuelles, exportez des feuilles de calcul modifiées et téléchargez les fichiers originaux — le tout hors ligne."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Comment ça Marche",
+      "subtitle": "Ouvrez n'importe quel document en trois étapes simples",
+      "steps": [
+        {
+          "title": "Déposez Votre Fichier",
+          "desc": "Glissez-déposez ou cliquez pour charger n'importe quel format de document pris en charge."
+        },
+        {
+          "title": "Analyse Instantanée",
+          "desc": "Le moteur WASM analyse et restitue votre document avec une fidélité totale."
+        },
+        {
+          "title": "Voir, Modifier & Exporter",
+          "desc": "Naviguez, recherchez, modifiez des cellules et exportez — le tout dans le navigateur, en toute confidentialité."
+        }
+      ]
+    },
+    "professional": {
+      "title": "Conçu pour Chaque Professionnel",
+      "desc": "Que vous examiniez des contrats juridiques, analysiez des feuilles de calcul financières ou fassiez des présentations à des clients, Docs Master gère tout cela sans jamais envoyer vos données sensibles vers un serveur tiers.",
+      "useCases": [
+        "Révision de documents juridiques",
+        "Analyse de feuilles de calcul financières",
+        "Lecture d'articles académiques",
+        "Préparation de présentations clients",
+        "Inspection de fichiers de code",
+        "Exportation & conversion de données",
+        "Archivage respectueux de la vie privée",
+        "Suppression sécurisée des métadonnées"
+      ],
+      "stats": [
+        {
+          "title": "Fonctionne Partout",
+          "desc": "N'importe quel navigateur moderne, n'importe quel OS, aucune installation requise."
+        },
+        {
+          "title": "Les Données Restent Locales",
+          "desc": "Le traitement WASM sans serveur conserve les fichiers sur l'appareil."
+        },
+        {
+          "title": "Chargement Instantané",
+          "desc": "Les moteurs WASM s'activent en quelques millisecondes."
+        },
+        {
+          "title": "Rendu Riche",
+          "desc": "Images, tableaux, polices — tout est fidèlement reproduit."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "subtitle": "Tout ce que vous devez savoir sur Docs Master Pro",
+      "items": [
+        {
+          "q": "Mon document est-il téléchargé sur un serveur ?",
+          "a": "Non. Docs Master Pro utilise des moteurs WebAssembly (WASM) pour tout traiter localement dans la mémoire de votre navigateur. Vos fichiers ne quittent jamais votre appareil — il n'y a aucun téléchargement sur serveur."
+        },
+        {
+          "q": "Quels formats de fichiers sont pris en charge ?",
+          "a": "L'outil prend en charge les fichiers DOCX, DOC, RTF, ODT, TXT, MD (Word), XLSX, XLS, CSV, ODS (tableurs), PPTX, PPT, ODP (présentations), PDF, JSON, XML et HTML."
+        },
+        {
+          "q": "Puis-je modifier des documents directement dans le navigateur ?",
+          "a": "Oui ! Les cellules des fichiers XLSX et CSV peuvent être modifiées une par une avec un éditeur de tableur intégré. Les documents DOCX disposent d'un mode d'édition de texte enrichi qui vous permet de modifier le contenu et d'imprimer ou d'enregistrer."
+        },
+        {
+          "q": "Comment fonctionne le nettoyage des métadonnées ?",
+          "a": "Lorsque vous activez le bouton 'Nettoyer les métadonnées', l'outil remplace les noms d'auteur, les horodatages de création, l'historique de l'éditeur et d'autres identifiants personnels du fichier exporté."
+        },
+        {
+          "q": "Puis-je extraire des pages spécifiques d'un PDF ?",
+          "a": "Oui. Utilisez l'extracteur de pages PDF dans la barre latérale pour spécifier la page souhaitée, et l'outil exportera un PDF d'une seule page à l'aide du moteur WASM pdf-lib."
+        },
+        {
+          "q": "Cela fonctionne-t-il sur les appareils mobiles ?",
+          "a": "Oui. Docs Master est entièrement réactif et fonctionne sur les navigateurs Android et iOS modernes, bien que l'éditeur de tableur soit plus confortable sur un écran plus grand."
+        }
+      ]
+    }
+  },
+  "inspector": {
+    "title": "Inspecteur de Documents",
+    "version": "Moteur Universel v2.0",
+    "engine": "MOTEUR {type}",
+    "identity": {
+      "title": "Identité du Fichier",
+      "name": "Nom",
+      "size": "Taille"
+    },
+    "controls": {
+      "title": "Contrôles Maîtres",
+      "saveSpreadsheet": "Enregistrer la Feuille de Calcul",
+      "saveText": "Enregistrer le Texte Extrait",
+      "enableEdit": "Activer le Mode Édition",
+      "disableEdit": "Désactiver le Mode Édition",
+      "print": "Imprimer / Enregistrer en PDF",
+      "exportOriginal": "Exporter l'Original",
+      "loadDifferent": "Charger un Autre"
+    }
+  },
+  "manipulation": {
+    "pdf": {
+      "title": "Manipulation PDF",
+      "target": "Page Cible",
+      "extract": "EXTRAIRE",
+      "tip": "CONSEIL PRO : Cet outil crée un nouveau PDF d'une page en utilisant uniquement le tampon sélectionné."
+    },
+    "docx": {
+      "title": "Cœur de Rendu Word",
+      "legacy": "Support Hérité",
+      "enabled": "ACTIVÉ",
+      "disabled": "DÉSACTIVÉ",
+      "tip": "Activez cette option si le document ne s'affiche pas ou contient des éléments structurels complexes."
+    }
+  },
+  "config": {
+    "title": "Configuration du Studio",
+    "scrub": {
+      "title": "Nettoyage de Confidentialité",
+      "desc": "Supprimer EXIF et Identité"
+    },
+    "dark": {
+      "title": "Studio Sombre",
+      "desc": "Changer le Thème de la Visionneuse"
+    },
+    "guard": {
+      "title": "Garde de Confidentialité",
+      "desc": "Le document est traité entièrement dans votre navigateur. Aucune donnée ne parvient à un serveur."
+    }
+  },
+  "viewer": {
+    "tabs": {
+      "preview": "Aperçu Visuel",
+      "data": "Structure Brute"
+    },
+    "processing": "Traitement 100% Local",
+    "stats": {
+      "size": "Taille du Fichier",
+      "format": "Format",
+      "stability": "Stabilité",
+      "engine": "Moteur",
+      "verified": "Vérifié",
+      "wasm": "WASM v2.0"
+    },
+    "subtitles": {
+      "sheet": "Feuille : {name}",
+      "pdf": "Vue du Document",
+      "universal": "Aperçu Universel"
+    },
+    "controls": {
+      "search": "Rechercher dans le document...",
+      "visual": "Mode Visuel",
+      "structural": "Mode Structurel"
+    },
+    "fallback": {
+      "active": "Repli Intelligent Actif : Ce document est rendu à l'aide d'un analyseur sémantique pour gérer les structures complexes.",
+      "switch": "Passage au moteur de rendu secondaire pour des raisons de compatibilité.",
+      "failure": "Défaillance Critique du Moteur : Ce document est chiffré ou fondamentalement corrompu.",
+      "totalFailure": "Tous les moteurs de rendu n'ont pas réussi à analyser ce document."
+    },
+    "pptxFailure": "Défaillance du Moteur Visuel : Impossible d'afficher les diapositives. Vérifiez l'onglet Structure Brute.",
+    "pptxTotalFailure": "Échec du rendu visuel de la présentation.",
+    "initialized": "Moteur {type} Initialisé",
+    "placeholder": "Entrez le contenu ici...",
+    "structuralHeader": "Analyse des Métadonnées Structurelles",
+    "structuralFooter": "Analyse du moteur terminée. Adresse mémoire : {address}"
+  }
+}

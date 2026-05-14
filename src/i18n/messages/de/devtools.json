@@ -1,0 +1,85 @@
+{
+  "devtools": {
+    "seo": {
+      "title": "Developer Hub | Professionelle & private DevTools | SafeTools",
+      "description": "Professionelle Entwickler-Utilities, die vollständig in Ihrem Browser laufen. JSON-Formatierer, JWT-Debugger, Base64-Codec und mehr.",
+      "ogTitle": "SafeTools Developer Hub | 100% Privat",
+      "ogDescription": "Souveränes Entwickler-Toolkit ohne Serverinteraktion.",
+      "seoName": "SafeTools Developer Hub",
+      "seoDescription": "Eine professionelle Suite von Local-First-Entwickler-Utilities."
+    },
+    "matrix": "Utility-Matrix",
+    "toolkit": "Souveränes Dev-Toolkit",
+    "local": "LOKALE AUSFÜHRUNG",
+    "wasm_optimized": "WASM-OPTIMIERT",
+    "buffered_stream": "GEPUFFERTER STREAM",
+    "input_buffer": "Eingabepuffer",
+    "source": "QUELLE",
+    "input_placeholder": "Datenstrom hier einfügen...",
+    "characters": "{count} Zeichen",
+    "processed_output": "Verarbeitete Ausgabe",
+    "copy_result": "ERGEBNIS KOPIEREN",
+    "copied": "KOPIERT",
+    "synthesizing": "Synthese...",
+    "output_placeholder": "Ausgabe erscheint hier...",
+    "clear": "LEEREN",
+    "re_execute": "ERNEUT AUSFÜHREN",
+    "bit_inspector": "Bit-Inspektor",
+    "telemetry": "Sitzungs-Telemetrie",
+    "metadata_matrix": "Metadaten-Matrix",
+    "execution_time": "Ausführungszeit",
+    "memory_pressure": "Speicherdruck",
+    "bit_entropy": "Bit-Entropie",
+    "sovereign_guard": "Souveräner Schutz",
+    "privacy_notice": "SafeTools DevUtilities basiert auf dem Prinzip der rein lokalen Verarbeitung. Ihre Daten berühren niemals unsere Server.",
+    "quick_actions": "Schnellaktionen",
+    "minify": "MINIMIEREN",
+    "beautify": "FORMATIEREN",
+    "escape": "ESCAPEN",
+    "unescape": "UNESCAPEN",
+    "secured_session": "GESICHERTE SITZUNG",
+    "tools": {
+      "json": {
+        "name": "JSON-Formatierer",
+        "desc": "JSON-Daten formatieren & validieren."
+      },
+      "base64": {
+        "name": "Base64-Codec",
+        "desc": "Text & Bilder kodieren/dekodieren."
+      },
+      "hash": {
+        "name": "Hash-Generator",
+        "desc": "SHA-256 Signaturen generieren."
+      },
+      "jwt": {
+        "name": "JWT-Debugger",
+        "desc": "JSON Web Tokens dekodieren."
+      },
+      "url": {
+        "name": "URL-Encoder",
+        "desc": "Sichere URL-Kodierung/Dekodierung."
+      },
+      "uuid": {
+        "name": "UUID-Generator",
+        "desc": "Sichere v4 UUIDs generieren."
+      },
+      "timestamp": {
+        "name": "Unix-Timestamp",
+        "desc": "Epoch in ISO-Datum konvertieren."
+      },
+      "lorem": {
+        "name": "Lorem Ipsum",
+        "desc": "Platzhalter-Text-Generator."
+      }
+    },
+    "messages": {
+      "copySuccess": "In die Zwischenablage kopiert!",
+      "invalidJson": "Fehler: Ungültiger JSON-Payload.",
+      "base64Error": "Fehler: Base64-Operation fehlgeschlagen.",
+      "invalidJwt": "Fehler: Ungültige JWT-Struktur.",
+      "urlError": "Fehler: URL-Codec-Fehler.",
+      "processingError": "Fatal: Ausführungsfehler der Engine.",
+      "loremContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

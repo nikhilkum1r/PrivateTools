@@ -16,16 +16,16 @@ const eslintConfig = defineConfig([
   ]),
   {
     rules: {
-      // Downgrade noisy TS rules to warnings — these don't affect runtime
+      // Downgrade noisy TS rules to warnings  these don't affect runtime
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-require-imports": "warn",
-      // JSX style — non-blocking
+      // JSX style  non-blocking
       "react/no-unescaped-entities": "warn",
-      // Hooks — warn only
+      // Hooks  warn only
       "react-hooks/exhaustive-deps": "warn",
       "react-hooks/set-state-in-effect": "warn",
-      // Prefer const — autofix friendly
+      // Prefer const  autofix friendly
       "prefer-const": "error",
       // Next.js specific
       "@next/next/no-html-link-for-pages": "error",

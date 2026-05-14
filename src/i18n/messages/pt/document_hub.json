@@ -1,0 +1,44 @@
+{
+  "documentHub": {
+    "seo": {
+      "title": "Hub de Documentos | Ferramentas de Texto e Doc com Foco na Privacidade | SafeTools",
+      "description": "Utilitários de documentos profissionais que correm inteiramente no seu navegador. Word para PDF, PDF para Texto e ferramentas seguras de manipulação de texto.",
+      "keywords": "ferramentas de documentos, word para pdf, pdf para texto, editor de documentos online, processamento de documentos privado, ferramentas de documentos locais",
+      "ogTitle": "SafeTools Document Studio | 100% Privado",
+      "ogDescription": "Transforme e processe os seus documentos sem uploads para servidores.",
+      "structuredName": "SafeTools Document Studio",
+      "structuredDesc": "Um conjunto profissional de utilitários de processamento de documentos local-first."
+    },
+    "hero": {
+      "title": "Estúdio de Documentos",
+      "subtitle": "Processamento de documentos de nível profissional sem interação com servidores."
+    },
+    "tools": {
+      "wordToPdf": {
+        "name": "Word para PDF",
+        "desc": "Converta DOCX em documentos PDF profissionais de forma segura."
+      },
+      "pdfToText": {
+        "name": "PDF para Texto",
+        "desc": "Extraia camadas de texto de qualquer documento PDF localmente."
+      },
+      "textTools": {
+        "name": "Estúdio de Texto",
+        "desc": "Conversão de letras, contagem de palavras e utilitários de texto avançados."
+      },
+      "compressPdf": {
+        "name": "Comprimir PDF",
+        "desc": "Reduza o tamanho de ficheiros PDF localmente sem perda de qualidade."
+      },
+      "openTool": "Abrir Ferramenta"
+    },
+    "faq": {
+      "title": "FAQ do Estúdio de Documentos",
+      "desc": "Perguntas comuns sobre o nosso conjunto de processamento de documentos privado e baseado no navegador.",
+      "q1": "Os meus dados de texto estão seguros?",
+      "a1": "Sim. O SafeTools processa todos os dados de documentos localmente. Nada é enviado para um servidor para processamento ou armazenamento.",
+      "q2": "Que formatos são suportados?",
+      "a2": "Atualmente suportamos os formatos PDF, DOCX, TXT e MD para várias tarefas de conversão e extração."
+    }
+  }
+}

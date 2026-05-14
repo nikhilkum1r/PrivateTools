@@ -1,0 +1,88 @@
+{
+  "changelog": {
+    "hero": {
+      "badge": "Evolution Protocol",
+      "title": "System <br></br> <span class=\"text-primary\">Updates.",
+      "subtitle": "Tracking the continuous improvement of the SafeTools local-first engine and studio suite."
+    },
+    "data": [
+      {
+        "date": "MAY 10, 2026",
+        "version": "v0.4.1",
+        "title": "The Modular Era",
+        "desc": "A complete architectural overhaul of the localization engine, enabling granular, feature-specific asset loading for maximum performance.",
+        "highlights": [
+          {
+            "type": "New",
+            "text": "Modular i18n framework with feature-level namespace isolation."
+          },
+          {
+            "type": "Improved",
+            "text": "Enhanced Zero-Server integrity for all cryptographic tools."
+          },
+          {
+            "type": "Security",
+            "text": "Hardened LSB mutation engine for image steganography."
+          }
+        ],
+        "color": "from-primary to-blue-600"
+      },
+      {
+        "date": "APR 28, 2026",
+        "version": "v0.4.0",
+        "title": "WASM Engine v2",
+        "desc": "Upgraded the core processing engine with multi-threaded WebAssembly support for near-native file processing speeds.",
+        "highlights": [
+          {
+            "type": "New",
+            "text": "Advanced Metadata Scrubber with batch processing support."
+          },
+          {
+            "type": "Improved",
+            "text": "Optimized FFmpeg WASM loading times by 40%."
+          },
+          {
+            "type": "Fix",
+            "text": "Resolved memory leaks in heavy image conversion jobs."
+          }
+        ],
+        "color": "from-purple-500 to-pink-600"
+      },
+      {
+        "date": "APR 12, 2026",
+        "version": "v0.3.8",
+        "title": "Security Hardening",
+        "desc": "Focusing on the absolute privacy of user data with enhanced security headers and sandboxed execution environments.",
+        "highlights": [
+          {
+            "type": "New",
+            "text": "Industrial-grade File Shredder with multi-pass overwrite."
+          },
+          {
+            "type": "Security",
+            "text": "Implementation of COOP/COEP isolation headers."
+          },
+          {
+            "type": "Improved",
+            "text": "Refined Privacy Manifesto and verification guide."
+          }
+        ],
+        "color": "from-emerald-500 to-teal-600"
+      }
+    ],
+    "timeline": {
+      "visual": "Version Signature",
+      "moreUpdates": "Continuous Evolution"
+    },
+    "cta": {
+      "title": "Shape the Future.",
+      "subtitle": "SafeTools is built for the community. Report bugs, suggest features, or contribute to our open architecture.",
+      "github": "View GitHub Repository",
+      "follow": "Follow Progress"
+    },
+    "seo": {
+      "title": "SafeTools Changelog | Latest Features & Security Updates",
+      "description": "Stay updated with the latest releases, performance improvements, and security patches for the SafeTools studio ecosystem."
+    }
+  }
+}

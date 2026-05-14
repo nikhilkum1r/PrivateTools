@@ -1,0 +1,409 @@
+{
+  "ocr": {
+    "seo": {
+      "title": "Công cụ OCR trực tuyến miễn phí | Trích xuất văn bản từ hình ảnh & PDF | SafeTools",
+      "description": "Trích xuất văn bản từ hình ảnh, ảnh chụp màn hình và PDF ngay lập tức với công cụ OCR ưu tiên quyền riêng tư miễn phí của chúng tôi. Nhận dạng văn bản nhanh chóng bằng AI mà không cần tải lên.",
+      "keywords": "OCR trực tuyến miễn phí, chuyển đổi hình ảnh thành văn bản, trích xuất văn bản từ hình ảnh, công cụ OCR PDF, trình trích xuất văn bản ảnh chụp màn hình, OCR chữ viết tay, OCR tài liệu quét, phần mềm OCR miễn phí, công cụ AI OCR, OCR dựa trên trình duyệt, nhận dạng ký tự quang học, hình ảnh thành văn bản có thể chỉnh sửa, OCR PDF trực tuyến, OCR đa ngôn ngữ, OCR không cần tải lên",
+      "ogTitle": "SafeTools OCR | Công cụ OCR trực tuyến miễn phí - Trích xuất văn bản từ hình ảnh ngay lập tức",
+      "ogDescription": "Chuyển đổi hình ảnh, tài liệu quét, ảnh chụp màn hình, ghi chú viết tay và PDF thành văn bản có thể chỉnh sửa bằng công cụ OCR dựa trên trình duyệt ưu tiên quyền riêng tư của chúng tôi. Nhanh chóng, chính xác và hoàn toàn miễn phí."
+    },
+    "hero": {
+      "badge": "Trí tuệ AI ưu tiên quyền riêng tư",
+      "title": "Công cụ OCR trực tuyến miễn phí - Trích xuất văn bản ngay lập tức",
+      "description": "Chuyển đổi hình ảnh, tài liệu quét, ảnh chụp màn hình, ghi chú viết tay và PDF thành văn bản có thể chỉnh sửa bằng công cụ OCR dựa trên trình duyệt ưu tiên quyền riêng tư của chúng tôi. Nhanh chóng, chính xác và hoàn toàn miễn phí.",
+      "extractNow": "Trích xuất văn bản ngay",
+      "uploadImage": "Tải hình ảnh lên",
+      "tryDemo": "Thử bản demo OCR",
+      "badges": {
+        "private": "100% Riêng tư",
+        "browser": "Dựa trên trình duyệt",
+        "noUpload": "Không yêu cầu tải lên",
+        "ai": "Được hỗ trợ bởi AI",
+        "free": "Miễn phí mãi mãi"
+      }
+    },
+    "workspace": {
+      "source": "Tài sản nguồn",
+      "sourceSubtitle": "Hình ảnh, PDF hoặc Ảnh chụp màn hình",
+      "clearQueue": "Xóa hàng chờ",
+      "dropzone": {
+        "title": "Thả tài sản",
+        "subtitle": "Hỗ trợ JPEG, PNG, PDF, HEIC"
+      },
+      "engine": "Công cụ nhận dạng",
+      "start": "Bắt đầu trích xuất",
+      "active": "Đang hoạt động {progress}%",
+      "history": "Lịch sử gần đây",
+      "clearAll": "Xóa tất cả",
+      "copyHistory": "Đã sao chép từ lịch sử!",
+      "detected": "Đã phát hiện {lang}",
+      "matrix": "Ma trận đã trích xuất",
+      "matrixSubtitle": "Văn bản kỹ thuật số có thể chỉnh sửa",
+      "words": "Từ",
+      "chars": "Ký tự",
+      "waiting": "Đang chờ nguồn cấp dữ liệu thần kinh",
+      "processing": "Đang xử lý trọng số thần kinh",
+      "handwriting_active": "AI chữ viết tay đang hoạt động",
+      "detected_string": "Chuỗi đã phát hiện:",
+      "neural_v3": "Trích xuất văn bản thần kinh v3.0",
+      "config": "Cấu hình",
+      "configDesc": "Chọn ngôn ngữ của bạn và thực thi",
+      "clear": "Xóa",
+      "changeFile": "Thay đổi tệp",
+      "extracting": "Đang trích xuất văn bản...",
+      "language": "Ngôn ngữ",
+      "run": "Chạy OCR",
+      "result": "Kết quả trích xuất",
+      "extractionComplete": "Trích xuất hoàn tất",
+      "awaitingExtraction": "Đang chờ trích xuất",
+      "placeholder": "Văn bản đã trích xuất sẽ xuất hiện ở đây...",
+      "copy": "Sao chép văn bản",
+      "copied": "Đã sao chép!"
+    },
+    "messages": {
+      "analyzing": "Đang phân tích qua công cụ đa kịch bản...",
+      "extractionSuccess": "Đã trích xuất văn bản từ {count} tệp!",
+      "extractionFailed": "Trích xuất thất bại. Hãy thử một hình ảnh rõ nét hơn.",
+      "copySuccess": "Đã sao chép vào khay nhớ tạm!",
+      "invalidFile": "Loại tệp không hợp lệ ({name})",
+      "svgNotSupported": "Tệp SVG không được hỗ trợ ({name})"
+    },
+    "languages": {
+      "auto": "✨ Tự động phát hiện ngôn ngữ",
+      "eng": "Tiếng Anh",
+      "hin": "Tiếng Hindi",
+      "spa": "Tiếng Tây Ban Nha",
+      "fra": "Tiếng Pháp",
+      "deu": "Tiếng Đức",
+      "ara": "Tiếng Ả Rập",
+      "chi_sim": "Tiếng Trung (Giản thể)",
+      "jpn": "Tiếng Nhật",
+      "kor": "Tiếng Hàn",
+      "ita": "Tiếng Ý",
+      "por": "Tiếng Bồ Đào Nha",
+      "rus": "Tiếng Nga",
+      "eng_hin": "Tiếng Anh + Tiếng Hindi",
+      "eng_spa": "Tiếng Anh + Tiếng Tây Ban Nha",
+      "eng_fra": "Tiếng Anh + Tiếng Pháp"
+    },
+    "landing": {
+      "intro": {
+        "title": "Trích xuất văn bản từ hình ảnh trực tuyến miễn phí",
+        "content": "Công nghệ Nhận dạng Ký tự Quang học (OCR) chuyển đổi văn bản in hoặc viết tay bên trong hình ảnh thành văn bản kỹ thuật số có thể chỉnh sửa. Công cụ OCR trực tuyến miễn phí của chúng tôi giúp người dùng số hóa tài liệu, sao chép văn bản từ ảnh chụp màn hình, quét các trang in và chuyển đổi ghi chú viết tay thành tệp có thể chỉnh sửa ngay lập tức."
+      },
+      "features": {
+        "extraction": {
+          "title": "Trích xuất thần kinh",
+          "description": "Các mô hình AI độc quyền được thiết kế để phát hiện văn bản trong các nền phức tạp."
+        },
+        "multilingual": {
+          "title": "Hỗ trợ toàn cầu",
+          "description": "Nhận dạng văn bản trong hơn 100 ngôn ngữ bao gồm chữ CJK và chữ Ấn Độ."
+        },
+        "secure": {
+          "title": "Bảo mật doanh nghiệp",
+          "description": "Quyền riêng tư cấp quân sự với cam kết không tương tác với máy chủ."
+        },
+        "offline": {
+          "title": "Sẵn sàng ngoại tuyến",
+          "description": "Toàn bộ công cụ OCR chạy trong trình duyệt của bạn mà không cần internet."
+        },
+        "title": "Sức mạnh trích xuất OCR",
+        "title2": "Các tính năng AI OCR mạnh mẽ",
+        "subtitle": "Nhận dạng văn bản cấp chuyên nghiệp cho mọi quy trình làm việc.",
+        "items": [
+          "Số hóa tài liệu vật lý",
+          "Sao chép văn bản từ YouTube/Mạng xã hội",
+          "Chuyển đổi các bài tập viết tay",
+          "Trích xuất dữ liệu từ hóa đơn kinh doanh",
+          "Xử lý hồ sơ pháp lý và y tế",
+          "Lưu nội dung dưới dạng tệp Word hoặc Văn bản"
+        ]
+      },
+      "formats": {
+        "title": "Định dạng tệp được hỗ trợ",
+        "image": "Định dạng hình ảnh",
+        "doc": "Định dạng tài liệu",
+        "optimized": "Được tối ưu hóa cho",
+        "standard": "Tài liệu văn phòng tiêu chuẩn",
+        "mobileReady": "Sẵn sàng cho di động",
+        "socialMedia": "Ảnh chụp màn hình mạng xã hội",
+        "highPrecision": "Độ chính xác cao"
+      },
+      "privacy": {
+        "title": "Xử lý OCR ưu tiên quyền riêng tư",
+        "content": "Không giống như nhiều công cụ OCR trực tuyến khác, các tệp của bạn không được lưu trữ vĩnh viễn trên máy chủ của chúng tôi. Chúng tôi tận dụng việc xử lý phía khách hàng bằng WebAssembly, nghĩa là công cụ OCR chạy trực tiếp bên trong trình duyệt của bạn.",
+        "execution": {
+          "title": "Thực thi cục bộ",
+          "content": "Việc xử lý diễn ra trên RAM của bạn, không phải đám mây của chúng tôi."
+        },
+        "tracking": {
+          "title": "Không theo dõi",
+          "content": "Chúng tôi không ghi nhật ký các tệp hoặc kết quả trích xuất của bạn."
+        },
+        "registration": {
+          "title": "Không cần đăng ký",
+          "content": "Sử dụng toàn bộ sức mạnh của AI mà không cần tài khoản."
+        }
+      },
+      "ai": {
+        "title": "Nhận dạng được hỗ trợ bởi AI",
+        "content": "Mạng lưới thần kinh tiên tiến cải thiện độ chính xác của văn bản, bảo toàn bố cục và hỗ trợ đa ngôn ngữ. Công cụ của chúng tôi hoạt động hiệu quả ngay cả trên các hình ảnh bị nhiễu, mờ hoặc độ phân giải thấp.",
+        "items": [
+          "Nhận dạng và chuyển đổi chữ viết tay",
+          "Phát hiện nhiều cột và bảng",
+          "Tự động xoay và hiệu chỉnh độ nghiêng",
+          "Khôi phục hình ảnh nhiễu và khử mờ"
+        ]
+      },
+      "whatIs": {
+        "title": "OCR là gì?",
+        "content": "OCR là viết tắt của Nhận dạng Ký tự Quang học. Đó là một công nghệ cho phép phần mềm phân tích hình ảnh và phát hiện các chữ cái, con số và ký hiệu để chuyển đổi chúng thành nội dung kỹ thuật số có thể tìm kiếm và chỉnh sửa.",
+        "how": {
+          "title": "Cách thức hoạt động",
+          "content": "Phần mềm OCR quét các mẫu pixel của một hình ảnh, xác định các hình dạng là các ký tự và sử dụng các mô hình ngôn ngữ để tái tạo lại các câu và đoạn văn."
+        },
+        "apps": {
+          "title": "Ứng dụng",
+          "content": "Được sử dụng rộng rãi trong tự động hóa kinh doanh, số hóa lưu trữ và các công nghệ hỗ trợ cho người khiếm thị."
+        }
+      },
+      "useCases": {
+        "badge": "Tích hợp quy trình làm việc",
+        "title": "Các trường hợp sử dụng phổ biến",
+        "subtitle": "SafeTools OCR được thiết kế cho các quy trình làm việc đa dạng và nhu cầu chuyên nghiệp.",
+        "items": [
+          {
+            "title": "Sinh viên",
+            "desc": "Chuyển đổi các ghi chú bài giảng, sách giáo khoa và các bài nghiên cứu thành hướng dẫn học tập có thể chỉnh sửa."
+          },
+          {
+            "title": "Doanh nghiệp",
+            "desc": "Số hóa các hợp đồng, hóa đơn và hồ sơ vật lý để quy trình làm việc kỹ thuật số nhanh hơn."
+          },
+          {
+            "title": "Nhà phát triển",
+            "desc": "Trích xuất văn bản có cấu trúc từ các bản phác thảo UI, ảnh chụp màn hình mã và tài liệu."
+          },
+          {
+            "title": "Nhà nghiên cứu",
+            "desc": "Chuyển đổi các kho lưu trữ quét cũ thành các tài liệu PDF có thể tìm kiếm với văn bản có thể chọn."
+          },
+          {
+            "title": "Người sáng tạo nội dung",
+            "desc": "Nhanh chóng tái sử dụng văn bản từ ảnh chụp màn hình YouTube, đồ họa thông tin và meme."
+          },
+          {
+            "title": "Chuyên gia pháp lý",
+            "desc": "Số hóa an toàn các hồ sơ vụ án nhạy cảm mà không có rủi ro lộ dữ liệu."
+          }
+        ]
+      },
+      "screenshot": {
+        "badge": "Trí tuệ ảnh chụp màn hình",
+        "title": "Trích xuất văn bản từ ảnh chụp màn hình",
+        "content": "Sao chép ngay lập tức văn bản từ các bản ghi YouTube, bài đăng Instagram hoặc bài thuyết trình Zoom. Không còn phải nhập thủ công hoặc tạo lại nội dung từ đầu.",
+        "tags": [
+          "Mạng xã hội",
+          "Hội thảo trực tuyến",
+          "Thiết kế UI/UX"
+        ]
+      },
+      "handwriting": {
+        "badge": "Từ Bút sang Pixel",
+        "title": "Nhận dạng chữ viết tay",
+        "content": "Chuyển đổi ghi chú viết tay, nhật ký và bảng trắng thành văn bản kỹ thuật số. AI của chúng tôi được đào tạo để hiểu các phong cách viết tay và chữ viết khác nhau.",
+        "handwritingActive": "AI chữ viết tay đang hoạt động",
+        "tags": [
+          "Nhật ký",
+          "Bài tập",
+          "Bảng trắng"
+        ]
+      },
+      "export": {
+        "title": "Xuất ở nhiều định dạng",
+        "content": "Khi văn bản của bạn đã được trích xuất, hãy lưu nó ở định dạng phù hợp nhất với quy trình làm việc của bạn. Sao chép ngay lập tức hoặc tải xuống các tệp chất lượng cao.",
+        "items": [
+          "Văn bản thuần túy (.TXT)",
+          "Tài liệu (.DOCX)",
+          "Có cấu trúc (.JSON)",
+          "Dạng bảng (.CSV)"
+        ]
+      },
+      "performance": {
+        "title": "Công cụ thần kinh cực nhanh",
+        "content": "Được tối ưu hóa bằng WebAssembly và tăng tốc GPU để đảm bảo nhận dạng nhanh ngay cả trên các tài sản có độ phân giải cao.",
+        "optimization": "Tối ưu hóa trình duyệt",
+        "accuracy": "Độ chính xác của ký tự",
+        "wasm": "WebAssembly",
+        "gpu": "Được tăng tốc GPU"
+      },
+      "manifesto": {
+        "title": "Tuyên ngôn ưu tiên quyền riêng tư",
+        "description": "Chúng tôi tin rằng dữ liệu của bạn là tài sản của bạn. Công cụ OCR của chúng tôi tôn trọng điều đó bằng thiết kế.",
+        "points": [
+          "Không có dữ liệu nào rời khỏi máy của bạn",
+          "Không yêu cầu tài khoản",
+          "Không có cookie theo dõi",
+          "Không ghi nhật ký ẩn"
+        ],
+        "others": {
+          "title": "Các công cụ OCR khác",
+          "points": [
+            "Bán dữ liệu của bạn cho các nhà quảng cáo",
+            "Yêu cầu tải lên đám mây",
+            "Chèn các pixel theo dõi",
+            "Lưu trữ các tài liệu nhạy cảm của bạn"
+          ]
+        }
+      },
+      "comparison": {
+        "title": "Tại sao chọn SafeTools OCR",
+        "subtitle": "So sánh chúng tôi với các công cụ OCR dựa trên đám mây truyền thống.",
+        "headers": [
+          "Tính năng",
+          "SafeTools OCR",
+          "Công cụ truyền thống"
+        ],
+        "rows": [
+          {
+            "f": "Dựa trên trình duyệt",
+            "s": "Có",
+            "t": "Hạn chế"
+          },
+          {
+            "f": "Không yêu cầu tải lên",
+            "s": "Có",
+            "t": "Không"
+          },
+          {
+            "f": "Công cụ hỗ trợ bởi AI",
+            "s": "Có",
+            "t": "Đôi khi"
+          },
+          {
+            "f": "Phát hiện chữ viết tay",
+            "s": "Có",
+            "t": "Hạn chế"
+          },
+          {
+            "f": "Thân thiện với di động",
+            "s": "Có",
+            "t": "Thường kém"
+          },
+          {
+            "f": "Tập trung vào quyền riêng tư",
+            "s": "Có",
+            "t": "Không"
+          },
+          {
+            "f": "Miễn phí mãi mãi",
+            "s": "Có",
+            "t": "Thường hạn chế"
+          }
+        ]
+      },
+      "utilities": {
+        "title": "Tiện ích OCR nâng cao",
+        "subtitle": "Các tính năng chuyên nghiệp để xử lý tài liệu phức tạp.",
+        "items": [
+          {
+            "title": "Phát hiện bảng",
+            "desc": "Trích xuất các bảng có cấu trúc từ các tài liệu tài chính phức tạp."
+          },
+          {
+            "title": "Quét nhiều cột",
+            "desc": "Duy trì bố cục cho báo và tạp chí nhiều cột."
+          },
+          {
+            "title": "Loại bỏ nhiễu",
+            "desc": "Tự động làm sạch các bản quét bị nhiễu để có độ chính xác cao hơn."
+          },
+          {
+            "title": "Tự động xoay",
+            "desc": "Sửa các bản quét tài liệu bị nghiêng ngay lập tức trong quá trình nhận dạng."
+          },
+          {
+            "title": "OCR hàng loạt",
+            "desc": "Xử lý đồng thời nhiều tài sản hình ảnh trong trình duyệt của bạn."
+          },
+          {
+            "title": "Làm sạch siêu dữ liệu",
+            "desc": "Xóa siêu dữ liệu theo dõi ẩn khỏi các hình ảnh đã xử lý."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Chuyển đổi hình ảnh thành văn bản có thể chỉnh sửa ngay lập tức",
+        "description": "Trích xuất văn bản từ ảnh chụp màn hình, tài liệu quét, ghi chú viết tay và PDF trực tiếp trong trình duyệt của bạn với công nghệ OCR ưu tiên quyền riêng tư nhanh chóng.",
+        "button": "Bắt đầu OCR ngay",
+        "upload": "Tải hình ảnh lên"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Công cụ OCR có miễn phí không?",
+            "a": "Có. Công cụ OCR hoàn toàn miễn phí để sử dụng mà không có bất kỳ chi phí ẩn, hình mờ hoặc yêu cầu đăng ký nào."
+          },
+          {
+            "q": "Các tệp của tôi có được tải lên máy chủ không?",
+            "a": "Không. Tất cả quá trình xử lý OCR diễn ra cục bộ trong trình duyệt của bạn bằng WebAssembly. Hình ảnh của bạn không bao giờ rời khỏi thiết bị của bạn, đảm bảo quyền riêng tư và bảo mật tối đa."
+          },
+          {
+            "q": "Những ngôn ngữ nào được hỗ trợ?",
+            "a": "Công cụ của chúng tôi hỗ trợ nhiều ngôn ngữ toàn cầu bao gồm tiếng Anh, tiếng Hindi, tiếng Tây Ban Nha, tiếng Pháp, tiếng Đức, tiếng Ả Rập, tiếng Trung, tiếng Nhật, tiếng Hàn và nhiều ngôn ngữ khác."
+          },
+          {
+            "q": "Tôi có thể trích xuất văn bản từ ghi chú viết tay không?",
+            "a": "Có. Công cụ OCR hỗ trợ AI của chúng tôi hỗ trợ nhận dạng chữ viết tay cho các ghi chú, bài tập, nhật ký và nội dung bảng trắng."
+          },
+          {
+            "q": "OCR có hoạt động trên tệp PDF không?",
+            "a": "Có. Bạn có thể trích xuất văn bản từ các tệp PDF đã quét và các tài liệu dựa trên hình ảnh bằng cách chuyển đổi chúng thành văn bản kỹ thuật số có thể chỉnh sửa."
+          },
+          {
+            "q": "Tôi có thể sử dụng OCR trên thiết bị di động không?",
+            "a": "Có. Công cụ này hoàn toàn tương thích và hoạt động trên các điện thoại thông minh và máy tính bảng hiện đại trực tiếp thông qua trình duyệt web của bạn."
+          },
+          {
+            "q": "Có yêu cầu đăng ký không?",
+            "a": "Không. Bạn có thể bắt đầu trích xuất văn bản ngay lập tức mà không cần tạo tài khoản hoặc cung cấp bất kỳ thông tin cá nhân nào."
+          }
+        ],
+        "title": "Câu hỏi thường gặp về OCR",
+        "description": "Các câu hỏi thường gặp về công cụ OCR hỗ trợ AI của chúng tôi."
+      },
+      "related": {
+        "title": "Khám phá thêm các công cụ",
+        "items": [
+          {
+            "name": "Trình chỉnh sửa hình ảnh",
+            "href": "/image/editor"
+          },
+          {
+            "name": "Trình nén hình ảnh",
+            "href": "/image/compress"
+          },
+          {
+            "name": "Trình chuyển đổi hình ảnh",
+            "href": "/image/convert"
+          },
+          {
+            "name": "PDF sang Văn bản",
+            "href": "/pdf/ocr"
+          }
+        ]
+      }
+    },
+    "dropzone": {
+      "title": "Thả tài sản",
+      "description": "Hỗ trợ JPEG, PNG, PDF, HEIC. Tối đa 20MB."
+    },
+    "history": {
+      "title": "Lịch sử gần đây",
+      "subtitle": "Truy cập các lần trích xuất trước đó của bạn",
+      "clearAll": "Xóa tất cả",
+      "restore": "Khôi phục kết quả"
+    }
+  }
+}

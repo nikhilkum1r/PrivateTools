@@ -2,9 +2,10 @@
 
 import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Upload, File, X, ShieldCheck } from "lucide-react";
+import { Upload, File, X, ShieldCheck, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 interface DropZoneProps {
   onFilesDrop: (files: File[]) => void;
@@ -12,8 +13,8 @@ interface DropZoneProps {
   maxSize?: number; // in MB
   multiple?: boolean;
   className?: string;
-  title?: string;
-  description?: string;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
   children?: React.ReactNode;
 }
 
@@ -29,6 +30,8 @@ export function DropZone({
 }: DropZoneProps) {
   const [isDragging, setIsDragging] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
+
+  const t = useTranslations("common.dropzone");
 
   const onDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -52,7 +55,25 @@ export function DropZone({
       if (droppedFiles.length > 0) {
         const validFiles = droppedFiles.filter((file) => {
           const isSizeValid = file.size <= maxSize * 1024 * 1024;
-          return isSizeValid; // Add type validation if needed
+          
+          if (!accept || accept === "*/*") return isSizeValid;
+          
+          const acceptedTypes = accept.split(",").map(t => t.trim().toLowerCase());
+          const fileType = file.type.toLowerCase();
+          const fileName = file.name.toLowerCase();
+          
+          const isTypeValid = acceptedTypes.some(type => {
+            if (type.startsWith(".")) {
+              return fileName.endsWith(type);
+            }
+            if (type.endsWith("/*")) {
+              const baseType = type.split("/")[0];
+              return fileType.startsWith(baseType + "/");
+            }
+            return fileType === type;
+          });
+          
+          return isSizeValid && isTypeValid;
         });
 
         if (multiple) {
@@ -71,80 +92,81 @@ export function DropZone({
     setFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
+  const formatFileSize = (bytes: number) => {
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / 1024 / 1024).toFixed(2)} MB`;
+  };
+
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-6">
+    <div data-google-ads-ignore="true" className="w-full max-w-4xl mx-auto space-y-4">
       <motion.div
         onDragOver={onDragOver}
         onDragLeave={onDragLeave}
         onDrop={handleDrop}
-        initial={{
-          backgroundColor: "rgba(139, 92, 246, 0)",
-          borderColor: "var(--border)",
-        }}
         animate={{
-          scale: isDragging ? 1.02 : 1,
+          scale: isDragging ? 1.01 : 1,
           borderColor: isDragging ? "var(--primary)" : "var(--border)",
-          backgroundColor: isDragging ? "rgba(139, 92, 246, 0.05)" : "rgba(139, 92, 246, 0)",
         }}
+        transition={{ duration: 0.2 }}
         className={cn(
-          "relative group cursor-pointer rounded-2xl border-2 border-dashed p-5 transition-colors duration-300 ease-in-out flex flex-col items-center justify-center overflow-hidden",
-          isDragging ? "border-primary" : "hover:border-primary/50",
+          "relative group cursor-pointer rounded-2xl border-2 border-dashed p-6 sm:p-8 transition-colors duration-200 flex flex-col items-center justify-center overflow-hidden",
+          isDragging ? "border-primary bg-primary/5" : "hover:border-primary/40 hover:bg-secondary/30",
           className
         )}
       >
         {children ? (
           children
         ) : (
-          <div className="flex flex-col items-center text-center space-y-6 pointer-events-none relative z-10">
+          <div className="flex flex-col items-center text-center space-y-4 pointer-events-none relative z-10">
             <motion.div
               animate={{
-                scale: isDragging ? [1, 1.2, 1] : 1,
-                rotate: isDragging ? [0, 5, -5, 0] : 0
+                y: isDragging ? -4 : 0,
               }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="p-6 rounded-xl bg-primary/10 text-primary border border-primary/20 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+              transition={{ duration: 0.3 }}
+              className={cn(
+                "p-5 rounded-2xl border transition-all duration-300",
+                isDragging
+                  ? "bg-primary/15 text-primary border-primary/30 shadow-lg shadow-primary/10"
+                  : "bg-secondary/50 text-muted-foreground border-border group-hover:bg-primary/10 group-hover:text-primary group-hover:border-primary/20"
+              )}
             >
-              <Upload className="w-10 h-10" />
+              <Upload className="w-8 h-8" />
             </motion.div>
             {title !== " " && (
-              <div className="space-y-1">
-                <p className="text-2xl font-black uppercase tracking-tighter italic">
-                  {title || "Upload File"}
+              <div className="space-y-2">
+                <p className="text-lg font-semibold tracking-tight">
+                  {title || t("title")}
                 </p>
-                {description && (
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="flex gap-1">
-                      {[1, 2, 3].map(i => (
-                        <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
-                      ))}
-                    </div>
-                    <p className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.2em] italic">
-                      {description}
-                    </p>
-                    <div className="flex gap-1">
-                      {[1, 2, 3].map(i => (
-                        <div key={i} className="w-1.5 h-1.5 rounded-full bg-primary/20" />
-                      ))}
-                    </div>
-                  </div>
+                {(description || t("description")) && (
+                  <p className="text-sm text-muted-foreground max-w-sm">
+                    {description || t("description")}
+                  </p>
                 )}
+                  <div className="flex items-center justify-center gap-3 pt-1">
+                    <div className="flex items-center gap-1.5 text-[10px] font-medium text-muted-foreground/60">
+                      <ShieldCheck className="w-3 h-3" />
+                      <span>{t("processedLocally")}</span>
+                    </div>
+                    <span className="text-muted-foreground/30">·</span>
+                    <span className="text-[10px] font-medium text-muted-foreground/60">
+                      {t("maxSize", { size: maxSize })}
+                    </span>
+                  </div>
               </div>
             )}
           </div>
         )}
 
-        {/* Secure Tunnel Effect */}
+        {/* Active drop overlay */}
         <AnimatePresence>
           {isDragging && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 pointer-events-none"
-            >
-              <div className="absolute inset-0 bg-primary/5 animate-pulse" />
-              <div className="absolute inset-0 border-4 border-primary/20 border-dashed animate-[spin_20s_linear_infinite] scale-150" />
-            </motion.div>
+              className="absolute inset-0 pointer-events-none bg-primary/5 rounded-2xl"
+            />
           )}
         </AnimatePresence>
 
@@ -153,46 +175,61 @@ export function DropZone({
           className="absolute inset-0 opacity-0 cursor-pointer z-10"
           onChange={(e) => {
             const selectedFiles = Array.from(e.target.files || []);
-            setFiles(selectedFiles);
-            onFilesDrop(selectedFiles);
+            const validFiles = selectedFiles.filter((file) => {
+              const isSizeValid = file.size <= maxSize * 1024 * 1024;
+              if (!accept || accept === "*/*") return isSizeValid;
+              const acceptedTypes = accept.split(",").map(t => t.trim().toLowerCase());
+              const fileType = file.type.toLowerCase();
+              const fileName = file.name.toLowerCase();
+              const isTypeValid = acceptedTypes.some(type => {
+                if (type.startsWith(".")) return fileName.endsWith(type);
+                if (type.endsWith("/*")) return fileType.startsWith(type.split("/")[0] + "/");
+                return fileType === type;
+              });
+              return isSizeValid && isTypeValid;
+            });
+            setFiles(validFiles);
+            onFilesDrop(validFiles);
           }}
           accept={accept}
           multiple={multiple}
+          aria-label={typeof title === 'string' ? title : t("title")}
         />
       </motion.div>
 
       <AnimatePresence>
         {files.length > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="grid grid-cols-1 gap-3"
+            exit={{ opacity: 0, scale: 0.98 }}
+            className="grid grid-cols-1 gap-2"
           >
             {files.map((file, index) => (
               <motion.div
                 key={`${file.name}-${index}`}
                 layout
-                className="flex items-center justify-between p-4 rounded-2xl bg-secondary/50 border border-border shadow-sm group"
+                className="flex items-center justify-between p-3.5 rounded-xl bg-secondary/30 border border-border group hover:border-primary/20 transition-colors"
               >
-                <div className="flex items-center gap-4">
-                  <div className="p-2 rounded-xl bg-primary/5 text-primary">
-                    <File className="w-5 h-5" />
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="p-2 rounded-lg bg-primary/8 text-primary shrink-0">
+                    <File className="w-4 h-4" />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-black text-[10px] uppercase tracking-widest truncate max-w-[200px]">
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-sm font-medium truncate">
                       {file.name}
                     </span>
-                    <span className="text-[9px] font-bold text-muted-foreground/40 uppercase tracking-[0.2em]">
-                      {(file.size / 1024 / 1024).toFixed(2)} MB
+                    <span className="text-xs text-muted-foreground">
+                      {formatFileSize(file.size)}
                     </span>
                   </div>
                 </div>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500/10 hover:text-red-500"
+                  className="rounded-lg h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-500/10 hover:text-red-500 shrink-0"
                   onClick={() => removeFile(index)}
+                  aria-label={`Remove ${file.name}`}
                 >
                   <X className="w-4 h-4" />
                 </Button>

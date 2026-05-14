@@ -1,0 +1,103 @@
+{
+  "pdfToTxt": {
+    "title": "PDF to",
+    "subtitle": "TXT.",
+    "description": "Extract clean plain text from PDF documents instantly with a fast and privacy-focused PDF to TXT converter. No uploads, no registration, and fully browser-based processing.",
+    "dropzoneTitle": "Drop PDF Here",
+    "dropzoneDescription": "Supports standard and text-based PDFs",
+    "toast": {
+      "errorFile": "Please upload a valid PDF file.",
+      "success": "Extracted {count} lines of text.",
+      "error": "Extraction failed: {message}"
+    },
+    "stats": {
+      "privacy": "Privacy-First",
+      "noUploads": "No Uploads",
+      "instant": "Instant Export",
+      "noWatermark": "Zero Watermark",
+      "extractedText": "Extracted Text",
+      "localProcessing": "Local Browser Processing"
+    },
+    "buttons": {
+      "extract": "EXTRACT TEXT",
+      "extracting": "EXTRACTING TEXT... {progress}%",
+      "cancel": "Cancel"
+    },
+    "content": {
+      "mainTitle": "Convert PDF Files to Plain Text Online",
+      "mainDesc1": "The PDF to TXT Converter helps you quickly extract readable plain text from PDF documents while preserving important written content. Whether you need text for editing, research, note-taking, coding, accessibility, or document processing, this tool makes PDF text extraction simple and efficient.",
+      "mainDesc2": "The converter works directly in your browser for improved speed, privacy, and security.",
+      "featuresTitle": "Why Use This PDF to TXT Converter?",
+      "featuresSubtitle": "Features of the PDF to TXT Tool",
+      "feature1Title": "Accurate Text Extraction",
+      "feature1Desc": "Extract readable text from PDFs including paragraphs, headings, lists, and document content with high accuracy.",
+      "feature2Title": "Privacy-Focused Processing",
+      "feature2Desc": "Your PDF files remain on your device during processing, helping protect confidential or sensitive documents.",
+      "feature3Title": "Fast Conversion Engine",
+      "feature3Desc": "Convert PDF files into TXT format within seconds without long waiting times.",
+      "feature4Title": "Minimal and Clean Output",
+      "feature4Desc": "Generate lightweight TXT files that are easy to edit, copy, search, archive, or import into other systems.",
+      "feature5Title": "Cross-Platform Compatibility",
+      "feature5Desc": "Use the tool on Windows, macOS, Linux, Android, iPhone, iPad, and Chromebook.",
+      "feature6Title": "Free & No Watermarks",
+      "feature6Desc": "Free online PDF text converter with no watermark added and no registration required.",
+      "useCasesTitle": "Common Use Cases & Benefits",
+      "useCasesDesc": "TXT files are lightweight, universal, and easy to process across nearly all devices and operating systems. Converting PDF to TXT helps reduce file size, simplify editing, improve compatibility, enable automation workflows, and speed up text processing.",
+      "useCasesList": [
+        "Research and data extraction",
+        "Copying content from PDFs",
+        "AI and NLP text processing",
+        "Accessibility tools",
+        "Note-taking and summaries",
+        "Ebook text extraction",
+        "Coding and scripting",
+        "Text indexing and search"
+      ],
+      "howTitle": "How to Convert PDF to TXT",
+      "step1Title": "Upload",
+      "step1Desc": "Upload or drag your PDF document",
+      "step2Title": "Process",
+      "step2Desc": "The tool extracts text automatically",
+      "step3Title": "Preview",
+      "step3Desc": "Preview the extracted content",
+      "step4Title": "Download",
+      "step4Desc": "Download the TXT file instantly"
+    },
+    "landing": {
+      "faq": {
+        "items": [
+          {
+            "q": "How do I convert PDF to TXT online for free?",
+            "a": "Upload your PDF file, allow the tool to process the document, and download the extracted TXT file instantly."
+          },
+          {
+            "q": "Is this PDF to TXT converter secure?",
+            "a": "Yes. Browser-based processing helps keep files private without requiring uploads to external servers."
+          },
+          {
+            "q": "Can I extract text from scanned PDFs?",
+            "a": "If OCR support is enabled, scanned PDFs and image-based PDFs can also be processed for text extraction."
+          },
+          {
+            "q": "Does the converter preserve formatting?",
+            "a": "TXT files store plain text only, so advanced formatting such as images, tables, and styles may not be preserved."
+          },
+          {
+            "q": "Can I use this converter on mobile devices?",
+            "a": "Yes. The converter works on Android phones, iPhones, tablets, and desktop systems."
+          },
+          {
+            "q": "Is registration required?",
+            "a": "No. You can convert PDF files to TXT without creating an account."
+          },
+          {
+            "q": "Does this tool add watermarks?",
+            "a": "No. Downloaded TXT files remain clean and watermark-free."
+          }
+        ],
+        "title": "Frequently Asked Questions",
+        "description": "Everything you need to know about our privacy-first tool."
+      }
+    }
+  }
+}

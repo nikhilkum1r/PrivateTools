@@ -1,0 +1,334 @@
+{
+  "backgroundRemover": {
+    "title": "KI-Hintergrundentferner | Lokale & private Bearbeitung",
+    "description": "Professionelle Hintergrundentfernung durch lokale KI. Keine Cloud-Uploads, kein Speicher, kein Tracking. Schnell, sicher und privat.",
+    "seo": {
+      "title": "KI-Hintergrundentferner | Lokale & private Bearbeitung",
+      "description": "Professionelle Hintergrundentfernung durch lokale KI. Keine Cloud-Uploads, kein Speicher, kein Tracking. Schnell, sicher und privat.",
+      "keywords": "hintergrund entfernen online, kostenloser hintergrundentferner, ki hintergrundentfernung, privater fotoeditor, lokale bildverarbeitung, isnet engine hintergrundentferner, transparenter hintergrund erstellen, stapelverarbeitung hintergrund entfernen, professionelle fotobearbeitung, browserbasierter hintergrundentferner"
+    },
+    "engineBadge": "ISNET-QUINT8 ENGINE AKTIV",
+    "badge": "Professionelle KI-Segmentierung — 100% Sicher",
+    "dropzone": {
+      "title": "Bild hochladen",
+      "description": "Bilder hierher ziehen oder klicken zum Durchsuchen. Unterstützt PNG, JPG, WebP, HEIC."
+    },
+    "status": {
+      "segmented": "Segmentiert",
+      "pending": "Warten auf Scan"
+    },
+    "tools": {
+      "closeMagicEraser": "Magischen Radierer schließen",
+      "magicEraser": "Magischer Radierer",
+      "eraserTool": "Radierer",
+      "restoreTool": "Wiederherstellen",
+      "brushSize": "Pinselgröße",
+      "saveEdits": "Änderungen speichern",
+      "removeBackground": "Hintergrund entfernen",
+      "allProcessed": "Alle Assets verarbeitet",
+      "errorPreparing": "Fehler beim lokalen Vorbereiten der KI-Engine.",
+      "comparison": {
+        "headers": [
+          "Funktion",
+          "Klassisch",
+          "SafeTools"
+        ]
+      },
+      "maskUpdated": "Maske erfolgreich aktualisiert.",
+      "copySuccess": "Motiv in die Zwischenablage kopiert.",
+      "copyFailed": "Zugriff auf Zwischenablage verweigert.",
+      "download": "Ergebnis herunterladen",
+      "copy": "In Zwischenablage kopieren"
+    },
+    "worker": {
+      "loading": "Lade KI-Engine...",
+      "removing": "Entferne Hintergrund...",
+      "processing": "Verarbeite...",
+      "processing_file": "Verarbeite {name}...",
+      "error_svg": "SVG-Dateien werden nicht unterstützt ({name})",
+      "error_invalid": "Ungültiger Dateityp ({name})",
+      "latency": "{time}ms Latenz",
+      "aiNode": "KI-Knoten: isnet_quint8",
+      "privacyNote": "Verarbeitung lokal auf Ihrem Gerät. Keine Daten verlassen Ihren Browser."
+    },
+    "comparison": {
+      "before": "Vorher",
+      "after": "Nachher"
+    },
+    "settings": {
+      "title": "Szenenkonfiguration",
+      "engine": "Neuraler Verarbeitungsknoten",
+      "background": "Leinwandfüllung",
+      "alpha": "Transparenzmatrix",
+      "resizer": "Social Canvas Matrix",
+      "realism": "Tiefen- & Kantenlogik",
+      "shadow": "Schlagschatten",
+      "trim": "Kanten automatisch zuschneiden",
+      "format": "Exportidentität",
+      "visualPolish": "Visueller Feinschliff",
+      "autoTrim": "Auto-Zuschneiden",
+      "autoTrimDesc": "Auf Motiv zuschneiden",
+      "dropShadow": "Schlagschatten",
+      "shadowDesc": "Tiefe hinzufügen"
+    },
+    "bgPresets": {
+      "transparent": "Transparent",
+      "white": "Weiß",
+      "black": "Schwarz",
+      "blue": "Blau",
+      "gray": "Grau",
+      "corporate": "Unternehmensgrau"
+    },
+    "aspectRatios": {
+      "original": "Orig",
+      "1:1": "1:1",
+      "4:5": "4:5",
+      "9:16": "9:16"
+    },
+    "landing": {
+      "aiDetails": {
+        "title": "KI-Architektur der nächsten Generation",
+        "subtitle": "Verarbeitung von Motiven mit hoher Genauigkeit direkt in der V8-Engine Ihres Browsers.",
+        "items": [
+          {
+            "title": "Neuronale Kantenerkennung",
+            "desc": "Pixelperfekte Segmentierung durch fortschrittliche Vision-Transformer."
+          },
+          {
+            "title": "Lokale WASM-Engine",
+            "desc": "Hardwarebeschleunigte Verarbeitung ohne Server-Latenz."
+          },
+          {
+            "title": "Null Datenabfluss",
+            "desc": "Ihre Bilder verlassen niemals den Speicher Ihres lokalen Geräts."
+          }
+        ]
+      },
+      "education": {
+        "title": "Die Evolution der Hintergrundentfernung",
+        "description": "SafeTools nutzt die neuesten Durchbrüche im Bereich Computer Vision, um komplexe Hintergrundentfernungen vollständig auf der Client-Seite durchzuführen. Indem wir die KI-Modelle aus der Cloud auf Ihre lokale Hardware verlagern, eliminieren wir Datenschutzrisiken und Wartezeiten, die mit herkömmlichen Online-Editoren einhergehen.",
+        "privacy": {
+          "title": "Absolute Datensouveränität",
+          "description": "Im Gegensatz zu herkömmlichen Tools, die Ihre privaten Fotos zur Verarbeitung auf Remote-Server hochladen, arbeitet SafeTools innerhalb einer sicheren Browser-Sandbox. Wir schützen Ihre Daten nicht nur – wir sehen sie niemals an.",
+          "tags": [
+            "Sandbox",
+            "Natives WASM",
+            "Kein Tracking"
+          ]
+        }
+      },
+      "formats": {
+        "title": "Professionelle Formatunterstützung",
+        "description": "Unsere Engine unterstützt hochauflösende Exporte und universelle Kompatibilität mit allen modernen kreativen Plattformen.",
+        "items": [
+          "PNG (Alpha)",
+          "WebP (Verlustfrei)",
+          "JPEG (Standard)"
+        ],
+        "export": {
+          "title": "Export-Logik",
+          "items": [
+            "Hochpräzise Beibehaltung des Alphakanals",
+            "Verlustfreie Komprimierung für maximale Qualität",
+            "Farbtreues Rendering für Druck und Web"
+          ]
+        }
+      },
+      "howItWorks": {
+        "title": "Der Workflow",
+        "steps": [
+          {
+            "step": "01",
+            "title": "Asset ablegen",
+            "desc": "Laden Sie Ihr Bild lokal hoch. Wir unterstützen die meisten gängigen Formate."
+          },
+          {
+            "step": "02",
+            "title": "Neuronaler Scan",
+            "desc": "Unser KI-Modell identifiziert das Motiv und berechnet die Maske."
+          },
+          {
+            "step": "03",
+            "title": "Verfeinern & Bearbeiten",
+            "desc": "Verwenden Sie den magischen Radierer, um Kanten zu perfektionieren."
+          },
+          {
+            "step": "04",
+            "title": "Sicherer Export",
+            "desc": "Laden Sie Ihr sauberes Motiv sofort auf Ihr Gerät herunter."
+          }
+        ],
+        "note": "DIE GESAMTE VERARBEITUNG FINDET AUF IHRER LOKALEN HARDWARE STATT"
+      },
+      "useCases": {
+        "title": "Kreative Anwendungsfälle",
+        "items": [
+          "E-Commerce Produktbilder",
+          "Social Media Porträts",
+          "Digitale Marketing-Assets",
+          "Immobilien-Aufwertungen",
+          "Profilbild-Säuberung",
+          "Grafikdesign-Workflows",
+          "Präsentations-Visuals",
+          "Ausweisfoto-Vorbereitung"
+        ]
+      },
+      "comparisonLong": {
+        "title": "Warum der SafeTools Hintergrundentferner?",
+        "header": [
+          "Funktion",
+          "Klassische Editoren",
+          "SafeTools"
+        ],
+        "rows": [
+          [
+            "Datenschutz-Risiko",
+            "Hoch (Cloud-Upload)",
+            "Null (Lokaler Ansatz)"
+          ],
+          [
+            "Verarbeitungsgeschwindigkeit",
+            "Netzwerkabhängig",
+            "Hardwareabhängig"
+          ],
+          [
+            "Dateispeicherung",
+            "30-90 Tage auf dem Server",
+            "Beim Schließen gelöscht"
+          ],
+          [
+            "Abo-Kosten",
+            "10-20$/Monat",
+            "Für immer kostenlos"
+          ],
+          [
+            "Datenspeicherung",
+            "Getrackt & Gespeichert",
+            "Keine Logs / Kein Speicher"
+          ]
+        ]
+      },
+      "tips": {
+        "title": "Pro-Tipps für perfekte Kanten",
+        "subtitle": "Holen Sie die besten Ergebnisse aus unserer Client-seitigen KI-Engine heraus.",
+        "items": [
+          {
+            "title": "Kontrast ist wichtig",
+            "desc": "Motive mit starkem Kontrast zum Hintergrund liefern die schärfsten Masken."
+          },
+          {
+            "title": "Komplexe Haare vermeiden",
+            "desc": "Auch wenn unsere Engine leistungsstark ist, können extrem feine Haare vor komplexen Hintergründen von manuellen Anpassungen profitieren."
+          },
+          {
+            "title": "Hochauflösende Originale nutzen",
+            "desc": "Eine höhere Eingangsauflösung ermöglicht es dem neuronalen Netzwerk, feinere Kantendetails zu erkennen."
+          },
+          {
+            "title": "Stapeloptimierung",
+            "desc": "Ziehen Sie mehrere Bilder gleichzeitig hinein, um die parallelen lokalen Verarbeitungswarteschlangen zu nutzen."
+          }
+        ]
+      },
+      "techSpecs": {
+        "title": "Technische Spezifikationen",
+        "subtitle": "Low-Level-Parameter der SafeTools Neural Engine.",
+        "engine": {
+          "title": "Modell-Architektur",
+          "items": [
+            {
+              "label": "Modellname",
+              "value": "ISNet-v2 (Quantisiert)"
+            },
+            {
+              "label": "Laufzeitumgebung",
+              "value": "ONNX / WebAssembly"
+            },
+            {
+              "label": "Präzision",
+              "value": "int8 / fp16"
+            },
+            {
+              "label": "Nebenläufigkeit",
+              "value": "Web Workers"
+            }
+          ]
+        },
+        "requirements": {
+          "title": "Lokale Anforderungen",
+          "items": [
+            {
+              "label": "Browser",
+              "value": "Modern (Chrome/Safari/Edge)"
+            },
+            {
+              "label": "Hardware",
+              "value": "WASM / SharedBuffer Support"
+            },
+            {
+              "label": "Internet",
+              "value": "Nur für initialen Ladevorgang"
+            },
+            {
+              "label": "RAM",
+              "value": "2GB+ Empfohlen"
+            }
+          ]
+        }
+      }
+    },
+    "features": {
+      "ai_engine": "Neuronale KI-Engine",
+      "ai_engine_desc": "Das hochmoderne ISNet-Modell läuft über WebAssembly vollständig in Ihrem Browser – für eine pixelgenaue Motivfreistellung.",
+      "batch": "Stapelverarbeitung",
+      "batch_desc": "Laden Sie mehrere Bilder auf einmal hoch und verarbeiten Sie sie parallel mit lokalen Web Workern – ohne Warteschlange, ohne Limits.",
+      "privacy": "Absolute Privatsphäre",
+      "privacy_desc": "Ihre Bilder verlassen niemals Ihr Gerät. Keine Uploads, keine Server-Logs, kein Tracking. Die Verarbeitung ist zu 100% lokal."
+    },
+    "manifesto": {
+      "title": "Souveräne Kreativität",
+      "quote": "Ihre Kreativität sollte nicht auf Kosten Ihrer Privatsphäre gehen. SafeTools gibt Ihnen die Möglichkeit, ohne Risiko zu bearbeiten.",
+      "pro_workflow": "Professioneller Workflow",
+      "pro_workflow_desc": "Integrieren Sie uns in Ihren kreativen Workflow mit Stapel-Exporten, benutzerdefinierten Hintergründen, Seitenverhältnis-Voreinstellungen und Schatten-Effekten – alles ohne Abos.",
+      "seo": "Für das Web optimiert",
+      "seo_desc": "Exportieren Sie transparente PNGs, verlustfreie WebPs und druckfertige JPEGs, optimiert für E-Commerce, Social Media und Präsentationen.",
+      "social": "Bereit für Social Media",
+      "social_desc": "Erstellen Sie im Handumdrehen Profilbilder, Produktfotos und Marketingmaterialien mit für Social Media optimierten Seitenverhältnissen."
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "Wie funktioniert die KI-Hintergrundentfernung, ohne dass meine Fotos hochgeladen werden?",
+          "a": "Unser Tool verwendet ein hochmodernes KI-Modell (RMBG-1.4/MODNet), das vollständig in Ihrem Webbrowser mithilfe von WebAssembly ausgeführt wird. Das Modell wird einmalig in den Arbeitsspeicher Ihres Browsers heruntergeladen und verarbeitet die Pixel lokal."
+        },
+        {
+          "q": "Ist dieser Hintergrundentferner wirklich kostenlos?",
+          "a": "Ja, er ist zu 100 % kostenlos, ohne Nutzungsbeschränkungen, ohne Wasserzeichen und ohne Registrierung. Wir glauben, dass datenschutzfreundliche Tools für jeden zugänglich sein sollten."
+        },
+        {
+          "q": "Welche Bildformate werden unterstützt?",
+          "a": "Wir unterstützen die gängigsten Bildformate, einschließlich PNG, JPG, JPEG, WebP und HEIC. Das Ergebnis ist immer ein transparentes PNG, um den entfernten Hintergrund zu erhalten."
+        },
+        {
+          "q": "Kann ich Hintergründe von hochauflösenden Bildern entfernen?",
+          "a": "Absolut. Im Gegensatz zu vielen Online-Tools, die Ihre Bilder verkleinern, verarbeitet SafeTools Ihre Bilder in der Originalauflösung (abhängig vom RAM Ihres Geräts)."
+        },
+        {
+          "q": "Ist meine Privatsphäre garantiert?",
+          "a": "Ja. Da die Verarbeitung auf Ihrem lokalen Rechner stattfindet, sehen wir Ihre Fotos niemals. Selbst wenn Sie Ihre Internetverbindung nach dem anfänglichen Laden des Modells trennen, funktioniert das Tool weiterhin perfekt."
+        },
+        {
+          "q": "Funktioniert es auf Mobilgeräten?",
+          "a": "Ja, es funktioniert in modernen mobilen Browsern. Da das KI-Modell jedoch etwas Rechenleistung und RAM benötigt, funktioniert es am besten auf Geräten mit mindestens 4 GB Speicher."
+        }
+      ],
+      "title": "Häufig gestellte Fragen",
+      "description": "Alles, was Sie über unser datenschutzfreundliches Tool wissen müssen."
+    },
+    "hero": {
+      "title": "KI-Hintergrundentferner | Lokale & private Bearbeitung",
+      "description": "Professionelle Hintergrundentfernung durch lokale KI. Keine Cloud-Uploads, kein Speicher, kein Tracking. Schnell, sicher und privat.",
+      "badge": "Professionelle KI-Segmentierung — 100% Sicher"
+    }
+  }
+}

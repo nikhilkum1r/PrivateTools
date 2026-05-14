@@ -1,0 +1,335 @@
+{
+  "steganography": {
+    "metadata": {
+      "title": "Outil de Stéganographie | Masquer des Messages Secrets dans des Images",
+      "description": "Masquez du texte secret à l'intérieur d'images en toute sécurité grâce à la stéganographie par navigateur. Traitement local privilégiant la confidentialité, sans téléchargement ni suivi.",
+      "ogTitle": "Outil de Stéganographie | Masquer des Messages Secrets dans des Images",
+      "ogDescription": "Masquez du texte secret à l'intérieur d'images en toute sécurité grâce à la stéganographie par navigateur. Traitement local privilégiant la confidentialité, sans téléchargement ni suivi.",
+      "keywords": "outil de stéganographie, stéganographie d'image, masquer du texte dans une image, message d'image secret, stéganographie par navigateur, encodeur de message caché, outil de stéganographie local, stéganographie png, stéganographie en ligne, messages cachés sécurisés"
+    },
+    "hero": {
+      "badge": "Stéganographie Respectueuse de la Vie Privée",
+      "title": "Outil de Stéganographie",
+      "description": "Masquez et extrayez des messages secrets à l'intérieur d'images en toute sécurité grâce à la stéganographie par navigateur et au traitement local.",
+      "badges": {
+        "local": "Traitement Local",
+        "zero": "Zéro Téléchargement",
+        "no_tracking": "Pas de Suivi",
+        "instant": "Encodage Instantané",
+        "browser": "Basé sur Navigateur"
+      },
+      "disclaimer": {
+        "title": "⚠️ Avis Légal : Stéganographie",
+        "body": "Cet outil masque des données à l'intérieur d'images à l'aide de l'encodage LSB. Il est destiné uniquement à la confidentialité, au marquage (watermarking) et à la recherche. L'utilisation de la stéganographie pour dissimuler du contenu ou des activités illégales est strictement interdite. En continuant, vous acceptez l'entière responsabilité de votre utilisation de cet outil."
+      }
+    },
+    "process": {
+      "carrier": {
+        "title": "Sélectionner le Support",
+        "desc": "Téléchargez une image PNG ou WebP pour servir de support secret."
+      },
+      "payload": {
+        "title": "Masquer le Contenu",
+        "desc": "Injectez votre texte secret ou identifiant dans les pixels de l'image."
+      },
+      "output": {
+        "title": "Sortie Sécurisée",
+        "desc": "Téléchargez l'image visuellement identique contenant votre secret."
+      }
+    },
+    "engine": {
+      "title": "Moteur de Mutation LSB",
+      "encode": "ENCODER",
+      "decode": "DÉCODER",
+      "dropzone": {
+        "encode": "Sélectionner l'Image Support",
+        "decode": "Charger l'Image Encodée",
+        "encodeDesc": "PNG ou WebP recommandé",
+        "decodeDesc": "Extraire les données cachées localement"
+      },
+      "payloadLabel": "Message à Masquer",
+      "placeholder": "Faites disparaître votre texte secret ici...",
+      "hideButton": "MASQUER LE MESSAGE",
+      "extractedLabel": "Intelligence Extraite",
+      "copyButton": "COPIER LE TEXTE",
+      "revealButton": "RÉVÉLER LES SECRETS",
+      "awaitingScan": "En Attente du Scan des Pixels",
+      "processing": "Traitement des Bits...",
+      "remove": "SUPPRIMER",
+      "capacityError": "Le contenu dépasse la capacité du support.",
+      "noPayloadError": "Aucun contenu caché détecté dans cette image."
+    },
+    "toast": {
+      "initialized": "Image support {name} initialisée.",
+      "vanished": "Le message s'est évanoui dans l'image !",
+      "revealed": "Message caché révélé !",
+      "copied": "Texte copié dans le presse-papiers !"
+    },
+    "status": {
+      "title": "État de la Sécurité",
+      "local": "Encodage Local",
+      "zero": "Politique Zéro Serveur",
+      "https": "Protégé par HTTPS",
+      "carrier": "Intégrité du Support",
+      "tracking": "Scripts de Suivi",
+      "active": "Actif",
+      "verified": "Vérifié",
+      "warning": "Avertissement",
+      "localDev": "Dév Local",
+      "none": "Aucun"
+    },
+    "trackers": {
+      "title": "Moteurs de Suivi Bloqués",
+      "note": "SafeTools est une zone sans traceur. Nous n'injectons aucun script tiers."
+    },
+    "landing": {
+      "educational": {
+        "whatIs": {
+          "badge": "Guide Éducatif",
+          "title": "Qu'est-ce que la Stéganographie ?",
+          "titleRich": "Qu'est-ce que la <span>Stéganographie</span> ?",
+          "description": "La stéganographie est la pratique consistant à masquer des informations à l'intérieur de supports numériques tels que des images sans modifier visiblement le fichier original. Contrairement au chiffrement, qui rend les données illisibles, la stéganographie rend les données indétectables.",
+          "items": [
+            {
+              "title": "Usage Éducatif",
+              "desc": "Apprenez comment les données sont structurées dans les canaux de pixels."
+            },
+            {
+              "title": "Protection de la Vie Privée",
+              "desc": "Masquez les identifiants sensibles aux observateurs occasionnels."
+            },
+            {
+              "title": "Notes Sécurisées",
+              "desc": "Intégrez des notes privées dans des photos d'apparence innocente."
+            },
+            {
+              "title": "Marquage Numérique",
+              "desc": "Prouvez la propriété sans artefacts visibles."
+            }
+          ]
+        },
+        "vs": {
+          "title": "Stéganographie vs Chiffrement",
+          "subtitle": "Comprendre la différence entre masquer les données et les protéger.",
+          "headers": [
+            "Caractéristique",
+            "Stéganographie",
+            "Chiffrement"
+          ],
+          "rows": [
+            [
+              "Masque l'Existence",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Lisible par des Non-autorisés",
+              "Si trouvé",
+              "Non"
+            ],
+            [
+              "Dissimulation Visuelle",
+              "Oui",
+              "Non"
+            ],
+            [
+              "Surcharge de Données",
+              "Aucune",
+              "Accrue"
+            ],
+            [
+              "Risque de Détection",
+              "Déni Plausible",
+              "Signature Évidente"
+            ]
+          ],
+          "tip": "Conseil de Sécurité Pro : Pour une sécurité maximale, chiffrez toujours votre message sensible en premier, puis utilisez la stéganographie pour masquer le texte chiffré résultant à l'intérieur d'une image. Cela offre à la fois la dissimulation et la protection des données."
+        },
+        "formats": {
+          "title": "Formats d'Image Supportés",
+          "subtitle": "Pourquoi la sélection du format est cruciale pour l'intégrité des données cachées.",
+          "items": [
+            {
+              "n": "PNG (Portable Network Graphics)",
+              "s": "Parfait",
+              "d": "La compression sans perte garantit que chaque bit caché reste exactement tel qu'il a été encodé."
+            },
+            {
+              "n": "WebP (Sans Perte)",
+              "s": "Recommandé",
+              "d": "Une haute efficacité avec support sans perte préserve l'intégrité des données."
+            },
+            {
+              "n": "JPEG / JPG",
+              "s": "Limité",
+              "d": "La compression avec perte peut corrompre les bits cachés. Non recommandé pour le LSB."
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Cas d'Usage de la Stéganographie",
+          "subtitle": "Applications pratiques et professionnelles pour les données cachées.",
+          "items": [
+            "Communication Cachée",
+            "Protection de la Vie Privée",
+            "Partage de Notes Sécurisé",
+            "Marquage Numérique",
+            "Éducation à la Cybersécurité",
+            "Démos de Recherche",
+            "Dissimulation de Métadonnées",
+            "Marqueurs d'Authentification"
+          ]
+        },
+        "forensics": {
+          "badge": "Conscience Forensique",
+          "view": "VUE FORENSIQUE",
+          "title": "Détection de Données Cachées",
+          "description": "Bien que la stéganographie LSB soit visuellement indétectable, les outils forensiques avancés peuvent détecter des motifs dans les bits les moins significatifs. Les professionnels utilisent des techniques comme l'analyse Chi-deux et les attaques visuelles pour trouver des contenus cachés.",
+          "items": [
+            {
+              "title": "Analyse Statistique",
+              "desc": "Détection des déviations dans la distribution des bits indiquant des données non naturelles."
+            },
+            {
+              "title": "Attaques Visuelles",
+              "desc": "Isolation des plans de bits pour révéler des anomalies structurelles dans le bruit."
+            },
+            {
+              "title": "Décalages d'Histogramme",
+              "desc": "Identification de décalages subtils dans les fréquences de couleurs causés par la mutation des bits."
+            }
+          ],
+          "histogram": "Analyse d'Histogramme",
+          "lsbSignature": "Signature LSB",
+          "normalized": "NORMALISÉ"
+        },
+        "specs": {
+          "title": "Spécifications Techniques Avancées",
+          "subtitle": "Paramètres de bas niveau du moteur de mutation LSB de SafeTools.",
+          "items": [
+            {
+              "l": "Profondeur de Bits",
+              "v": "8 bits par canal"
+            },
+            {
+              "l": "Taux d'Injection",
+              "v": "1 bit/canal"
+            },
+            {
+              "l": "Matrice des Canaux",
+              "v": "Ordre R-V-B"
+            },
+            {
+              "l": "Espace de Mutation",
+              "v": "TrueColor 24 bits"
+            },
+            {
+              "l": "Logique d'En-tête",
+              "v": "BigEndian 32 bits"
+            },
+            {
+              "l": "Delta Visuel",
+              "v": "E < 0.001%"
+            },
+            {
+              "l": "Cible d'Entropie",
+              "v": "Maximisée"
+            },
+            {
+              "l": "Moteur Navigateur",
+              "v": "WASM / Canvas"
+            }
+          ]
+        },
+        "tips": {
+          "items": [
+            {
+              "t": "Utilisez des Images à Haute Entropie",
+              "d": "Les images avec beaucoup de texture et de détails (comme des photos de nature) sont de meilleurs supports que les couleurs unies où les mutations de bits sont plus faciles à repérer statistiquement."
+            },
+            {
+              "t": "Pré-chiffrez les Contenus",
+              "d": "Chiffrez toujours votre texte avec AES-256 avant de le masquer. Cela garantit que même si la stéganographie est détectée, les données restent illisibles."
+            },
+            {
+              "t": "Évitez le Redimensionnement",
+              "d": "Redimensionner ou re-compresser une image encodée détruira presque certainement les données cachées. Partagez toujours le fichier de sortie original."
+            }
+          ]
+        },
+        "notice": {
+          "badge": "Avis de Sécurité Important",
+          "title": "La Stéganographie n'est pas le Chiffrement",
+          "description": "La stéganographie repose sur l'obscurité, non sur la dureté computationnelle. Bien qu'elle masque l'existence d'un message, elle ne protège pas nécessairement le contenu si la stéganographie est détectée.",
+          "points": [
+            "Combinez toujours avec un chiffrement fort (AES-256) pour les données sensibles.",
+            "Utilisez des formats sans perte (PNG) pour éviter la corruption des données.",
+            "Ne l'utilisez jamais pour une dissimulation illégale ou contraire à l'éthique.",
+            "Sachez que les outils forensiques peuvent détecter les mutations LSB."
+          ]
+        },
+        "offline": {
+          "title": "Fonctionne Partout",
+          "items": [
+            "Prêt pour le Hors-ligne",
+            "Multi-plateforme",
+            "Support PWA",
+            "Pas d'Apps Natives"
+          ]
+        }
+      },
+      "faq": {
+        "title": "FAQ Stéganographie",
+        "description": "Tout ce que vous devez savoir sur le masquage de données dans les images.",
+        "items": [
+          {
+            "q": "Les images sont-elles téléchargées sur des serveurs ?",
+            "a": "Non. Tout l'encodage et le décodage se font localement dans votre navigateur à l'aide de l'API canvas et des Web Workers."
+          },
+          {
+            "q": "Quel format d'image fonctionne le mieux ?",
+            "a": "Le format PNG est fortement recommandé car il utilise une compression sans perte, ce qui préserve parfaitement les bits cachés dans chaque pixel."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Confidentialité par Défaut",
+        "headline": "La <span>Vie Privée</span> est un Droit,<br></br>Pas une Option.",
+        "description": "La stéganographie est l'une des plus anciennes formes de protection de la vie privée. À l'ère numérique, elle reste un outil puissant pour maintenir la souveraineté sur vos informations.",
+        "zeroServer": "Zéro-Serveur",
+        "localFirst": "Local-First",
+        "noTracking": "Sans-Suivi"
+      },
+      "related": {
+        "title": "Outils de Sécurité Connexes",
+        "subtitle": "Protégez votre identité numérique avec notre suite sécurisée.",
+        "items": [
+          {
+            "n": "Coffre de Fichiers",
+            "d": "Chiffrement de fichiers de qualité militaire."
+          },
+          {
+            "n": "Nettoyeur de Métadonnées",
+            "d": "Purgez les données EXIF et GPS."
+          },
+          {
+            "n": "Notes Sécurisées",
+            "d": "Notes chiffrées par navigateur."
+          },
+          {
+            "n": "Générateur de Mots de Passe",
+            "d": "Générez des mots de passe robustes hors ligne."
+          },
+          {
+            "n": "Vérificateur de Force",
+            "d": "Auditez la sécurité de votre mot de passe."
+          },
+          {
+            "n": "Broyeur de Fichiers",
+            "d": "Supprimez définitivement les traces numériques."
+          }
+        ]
+      }
+    }
+  }
+}

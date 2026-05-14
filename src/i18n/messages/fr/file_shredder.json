@@ -1,0 +1,130 @@
+{
+  "fileShredder": {
+    "seo": {
+      "title": "Broyeur de Fichiers Sécurisé | Supprimer les Fichiers Définitivement | SafeTools",
+      "description": "Supprimez en toute sécurité les fichiers sensibles et réduisez les risques de récupération à l'aide d'outils de broyage de fichiers basés sur le navigateur. Traitement local avec zéro téléchargement vers le serveur."
+    },
+    "disclaimer": {
+      "title": "⚠️ Important : Broyeur de Fichiers",
+      "body": "Cet outil écrase les données de votre fichier avec des octets aléatoires dans la mémoire du navigateur. Il ne supprime PAS le fichier original de votre disque dur, SSD ou périphérique de stockage - cela nécessite des outils de suppression sécurisée au niveau du système d'exploitation. Téléchargez le fichier broyé comme preuve de l'écrasement en mémoire. En continuant, vous confirmez que vous comprenez cette limitation."
+    },
+    "hero": {
+      "title": "Broyeur de Fichiers",
+      "subtitle": "Supprimez en toute sécurité les fichiers sensibles et réduisez les risques de récupération grâce à des outils de broyage de fichiers axés sur la confidentialité.",
+      "badge": "Protégez les informations sensibles en supprimant les fichiers en toute sécurité avant de les partager ou de les jeter."
+    },
+    "trust": [
+      {
+        "label": "Traitement Local"
+      },
+      {
+        "label": "Zéro Téléchargement"
+      },
+      {
+        "label": "Pas de Suivi"
+      },
+      {
+        "label": "Effacement Instantané"
+      },
+      {
+        "label": "Basé sur Navigateur"
+      }
+    ],
+    "terminal": {
+      "title": "TERMINAL DE BROYAGE SÉCURISÉ",
+      "engine": "ENTROPIE AES-256",
+      "warning": "SafeTools ne peut pas empêcher l'analyse physique du disque (forensics) sur le nivellement d'usure des SSD/NVMe. Cet outil écrase le contenu logique du fichier.",
+      "limitationLabel": "Limitation du Navigateur :"
+    },
+    "protocols": {
+      "title": "Protocole d'Écrasement",
+      "options": [
+        {
+          "label": "1 Passe",
+          "desc": "Écrasement aléatoire unique",
+          "risk": "Basique"
+        },
+        {
+          "label": "3 Passes",
+          "desc": "Effacement standard recommandé",
+          "risk": "Moyen"
+        },
+        {
+          "label": "7 Passes",
+          "desc": "Style exhaustif 5220.22-M",
+          "risk": "Élevé"
+        }
+      ]
+    },
+    "status": {
+      "shredding": "Broyage... Passe {pass}/{total}",
+      "success": "BROYAGE RÉUSSI",
+      "failed": "Échec du broyage : {error}",
+      "desc": "Le contenu du fichier a été écrasé plusieurs fois avec des motifs binaires aléatoires et une entropie cryptographiquement sécurisée. Les données originales sont désormais irrécupérables."
+    },
+    "buttons": {
+      "execute": "E X É C U T E R   L E   B R O Y A G E   ({passes} PASSES)",
+      "accept": "A C C E P T E R   L ' A V I S",
+      "download": "T É L É C H A R G E R   L E   R É S I D U",
+      "another": "Broyer un autre fichier",
+      "overwriting": "É C R A S E M E N T"
+    },
+    "landing": {
+      "related": {
+        "title": "Outils de Confidentialité Connexes",
+        "tools": [
+          {
+            "name": "Nettoyeur de Métadonnées",
+            "href": "/security/metadata-cleaner"
+          },
+          {
+            "name": "Coffre de Chiffrement",
+            "href": "/security/vault"
+          },
+          {
+            "name": "Notes Sécurisées",
+            "href": "/privacy/secure-notes"
+          },
+          {
+            "name": "Stéganographie",
+            "href": "/security/steganography"
+          },
+          {
+            "name": "Générateur de Mots de Passe",
+            "href": "/privacy/password-generator"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Philosophie de Confidentialité d'Abord",
+        "content": "\"SafeTools crée des outils de confidentialité basés sur le navigateur conçus pour minimiser l'exposition numérique et maximiser le contrôle de l'utilisateur. Réduisez l'exposition numérique grâce à des outils de sécurité de navigateur axés sur la confidentialité.\""
+      },
+      "faq": {
+        "title": "FAQ sur le Broyeur de Fichiers",
+        "description": "Questions courantes sur l'effacement sécurisé des fichiers et la protection des données locales.",
+        "items": [
+          {
+            "q": "Mes fichiers sont-ils téléchargés ?",
+            "a": "Non. Tout le traitement des fichiers se fait localement dans votre navigateur."
+          },
+          {
+            "q": "Les fichiers supprimés peuvent-ils encore être récupérés ?",
+            "a": "Le risque de récupération peut varier selon le comportement du système d'exploitation, les périphériques de stockage et l'architecture matérielle."
+          },
+          {
+            "q": "Est-ce que cela fonctionne sur les SSD ?",
+            "a": "Les mécanismes de stockage SSD modernes peuvent affecter le comportement d'écrasement en raison des algorithmes de nivellement d'usure qui écrivent les données sur de nouveaux blocs."
+          },
+          {
+            "q": "Cet outil fonctionne-t-il hors ligne ?",
+            "a": "Oui. Une fois chargé, l'outil fonctionne complètement hors ligne car il n'a pas besoin de communiquer avec un serveur."
+          },
+          {
+            "q": "SafeTools peut-il accéder à mes fichiers ?",
+            "a": "Non. Les fichiers restent traités localement."
+          }
+        ]
+      }
+    }
+  }
+}

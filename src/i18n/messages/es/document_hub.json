@@ -1,0 +1,44 @@
+{
+  "documentHub": {
+    "seo": {
+      "title": "Centro de documentos | Herramientas de texto y documentos que priorizan la privacidad | SafeTools",
+      "description": "Utilidades de documentos profesionales que se ejecutan completamente en su navegador. Word a PDF, PDF a texto y herramientas seguras de manipulación de texto.",
+      "keywords": "herramientas de documentos, word a pdf, pdf a texto, editor de documentos en línea, procesamiento de documentos privado, herramientas de documentos locales",
+      "ogTitle": "SafeTools Document Studio | 100% Privado",
+      "ogDescription": "Transforme y procese sus documentos sin cargas en el servidor.",
+      "structuredName": "SafeTools Document Studio",
+      "structuredDesc": "Una suite profesional de utilidades de procesamiento de documentos locales."
+    },
+    "hero": {
+      "title": "Estudio de documentos",
+      "subtitle": "Procesamiento de documentos de grado profesional sin interacción con el servidor."
+    },
+    "tools": {
+      "wordToPdf": {
+        "name": "Word a PDF",
+        "desc": "Convierta DOCX en documentos PDF profesionales de forma segura."
+      },
+      "pdfToText": {
+        "name": "PDF a texto",
+        "desc": "Extraiga capas de texto de cualquier documento PDF localmente."
+      },
+      "textTools": {
+        "name": "Estudio de texto",
+        "desc": "Conversión de mayúsculas/minúsculas, recuento de palabras y utilidades de texto avanzadas."
+      },
+      "compressPdf": {
+        "name": "Comprimir PDF",
+        "desc": "Reduzca el tamaño del archivo PDF localmente sin pérdida de calidad."
+      },
+      "openTool": "Abrir herramienta"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes de Document Studio",
+      "desc": "Preguntas comunes sobre nuestra suite de procesamiento de documentos privada basada en el navegador.",
+      "q1": "¿Mis datos de texto están seguros?",
+      "a1": "Sí. SafeTools procesa todos los datos de los documentos localmente. Nunca se envía nada a un servidor para su procesamiento o almacenamiento.",
+      "q2": "¿Qué formatos son compatibles?",
+      "a2": "Actualmente admitimos los formatos PDF, DOCX, TXT y MD para diversas tareas de conversión y extracción."
+    }
+  }
+}

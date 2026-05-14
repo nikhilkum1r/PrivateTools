@@ -1,0 +1,58 @@
+{
+  "security": {
+    "seo": {
+      "title": "Architecture de sécurité | SafeTools",
+      "description": "SafeTools met en œuvre des protocoles de sécurité local-first de qualité militaire pour garantir que vos données ne sont jamais exposées."
+    },
+    "hero": {
+      "title": "Défense industrielle.",
+      "description": "SafeTools met en œuvre des protocoles de sécurité local-first de qualité militaire pour garantir que vos données ne sont jamais exposées."
+    },
+    "comparison": {
+      "trad": {
+        "title": "Traitement Cloud",
+        "items": [
+          "Données envoyées sur l'internet ouvert",
+          "Risque de fuites de données côté serveur",
+          "Sujet à la surveillance de tiers",
+          "Journaux persistants de vos activités"
+        ]
+      },
+      "safe": {
+        "title": "Logique souveraine",
+        "items": [
+          "Les données ne quittent jamais votre machine",
+          "Aucun risque de brèches côté serveur",
+          "Immunisé contre la surveillance du réseau",
+          "Zéro trace de données persistantes"
+        ]
+      }
+    },
+    "deepDive": [
+      {
+        "title": "Exécution WASM",
+        "desc": "Les outils haute performance s'exécutent dans des environnements WebAssembly isolés pour une vitesse et une sécurité quasi natives."
+      },
+      {
+        "title": "AES-256 GCM",
+        "desc": "Les normes de cryptage authentifié garantissent que vos données sont non seulement privées, mais aussi inviolables."
+      },
+      {
+        "title": "Isolation sécurisée",
+        "desc": "Les en-têtes d'isolation cross-origin garantissent que votre session est protégée contre les attaques par canal auxiliaire."
+      }
+    ],
+    "policy": {
+      "title": "Notre philosophie de sécurité",
+      "content": "SafeTools est fondé sur le principe de la <strong>Sécurité Souveraine</strong>. Nous pensons que la sécurité n'est pas quelque chose pour laquelle vous devriez avoir à faire confiance à un fournisseur ; c'est quelque chose que vous devriez être en mesure de vérifier vous-même.",
+      "noServers": {
+        "title": "AUCUN SERVEUR DE TRAITEMENT",
+        "desc": "Nous maintenons une infrastructure de serveurs nulle pour le traitement de vos données. Nos serveurs ne fournissent que le code statique nécessaire pour exécuter les outils dans votre navigateur."
+      },
+      "noAccounts": {
+        "title": "AUCUN COMPTE UTILISATEUR",
+        "desc": "En éliminant les comptes, nous éliminons la cible principale du vol d'identité et de la corrélation de données."
+      }
+    }
+  }
+}

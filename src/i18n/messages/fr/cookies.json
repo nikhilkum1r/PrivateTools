@@ -1,0 +1,53 @@
+{
+  "cookies": {
+    "hero": {
+      "badge": "Manifeste contre le traçage",
+      "title": "Zéro <br></br> <span class=\"text-amber-500\">Cookies.",
+      "subtitle": "Nous limitons les cookies au strict nécessaire. <br></br> SafeTools utilise uniquement des cookies publicitaires standard pour que nos outils restent gratuits pour tous."
+    },
+    "sections": [
+      {
+        "title": "1. La politique fantôme",
+        "content": "SafeTools n'utilise pas de cookies de traçage pour les analyses internes ou la collecte de données. Nous ne suivons pas votre session sur le Web à nos propres fins. Pour nous, vous êtes un fantôme, et c'est exactement ainsi que cela doit être."
+      },
+      {
+        "title": "2. Persistance locale (Stockage)",
+        "content": "Nous utilisons le LocalStorage de votre navigateur uniquement pour mémoriser vos préférences d'interface utilisateur, telles que le mode sombre ou l'historique récent de vos outils. Ces données ne quittent jamais votre appareil et ne sont jamais envoyées à nos serveurs."
+      },
+      {
+        "title": "3. Cookies publicitaires",
+        "content": "Nous utilisons Google AdSense pour diffuser des publicités. Google peut utiliser des cookies pour diffuser des annonces basées sur vos centres d'intérêt. Vous pouvez gérer vos préférences ou refuser ces cookies via la bannière de consentement qui s'affiche lors de votre première visite."
+      }
+    ],
+    "metrics": {
+      "title": "Mesures de confidentialité",
+      "items": [
+        {
+          "label": "Traqueurs actifs",
+          "val": "0"
+        },
+        {
+          "label": "Pixels marketing",
+          "val": "Aucun"
+        },
+        {
+          "label": "Revendeurs de données",
+          "val": "0%"
+        },
+        {
+          "label": "Note de confidentialité",
+          "val": "A+"
+        }
+      ]
+    },
+    "final": {
+      "title": "Sûr et <br></br> sans traqueur",
+      "subtitle": "Vous n'avez rien à 'Accepter' ici. Votre vie privée a déjà été acceptée par notre architecture avant même votre arrivée.",
+      "button": "Retour aux outils"
+    },
+    "seo": {
+      "title": "Politique de cookies | Manifeste Zéro Traçage | SafeTools",
+      "description": "Lisez notre politique en matière de cookies. Spoiler : nous n'utilisons pas de cookies de traçage. Découvrez comment SafeTools protège votre vie privée en éliminant tous les traqueurs tiers."
+    }
+  }
+}

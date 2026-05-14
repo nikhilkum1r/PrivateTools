@@ -1,0 +1,335 @@
+{
+  "steganography": {
+    "metadata": {
+      "title": "Ferramenta de Esteganografia | Esconder Mensagens Secretas em Imagens",
+      "description": "Esconda texto secreto dentro de imagens com segurança usando esteganografia baseada no navegador. Processamento local prioritário para a privacidade, sem uploads e sem rastreamento.",
+      "ogTitle": "Ferramenta de Esteganografia | Esconder Mensagens Secretas em Imagens",
+      "ogDescription": "Esconda texto secreto dentro de imagens com segurança usando esteganografia baseada no navegador. Processamento local prioritário para a privacidade, sem uploads e sem rastreamento.",
+      "keywords": "ferramenta de esteganografia, esteganografia de imagens, esconder texto em imagem, mensagem secreta em imagem, esteganografia de navegador, codificador de mensagens ocultas, ferramenta de esteganografia local, esteganografia png, esteganografia online, mensagens ocultas seguras"
+    },
+    "hero": {
+      "badge": "Esteganografia Prioritária para a Privacidade",
+      "title": "Ferramenta de Esteganografia",
+      "description": "Esconda e extraia mensagens secretas dentro de imagens com segurança usando esteganografia baseada no navegador e processamento local.",
+      "badges": {
+        "local": "Processamento Local",
+        "zero": "Zero Upload",
+        "no_tracking": "Sem Rastreamento",
+        "instant": "Codificação Instantânea",
+        "browser": "Baseado no Navegador"
+      },
+      "disclaimer": {
+        "title": "⚠️ Aviso Legal: Esteganografia",
+        "body": "Esta ferramenta esconde dados dentro de imagens usando codificação LSB. Destina-se apenas a fins de privacidade, marca d'água e pesquisa. O uso de esteganografia para ocultar conteúdo ou atividades ilegais é estritamente proibido. Ao continuar, você aceita total responsabilidade pelo uso desta ferramenta."
+      }
+    },
+    "process": {
+      "carrier": {
+        "title": "Selecionar Portador",
+        "desc": "Carregue uma imagem PNG ou WebP para atuar como seu portador secreto."
+      },
+      "payload": {
+        "title": "Esconder Conteúdo",
+        "desc": "Injete seu texto secreto ou identificador nos pixels da imagem."
+      },
+      "output": {
+        "title": "Saída Segura",
+        "desc": "Baixe a imagem visualmente idêntica contendo seu segredo."
+      }
+    },
+    "engine": {
+      "title": "Motor de Mutação LSB",
+      "encode": "CODIFICAR",
+      "decode": "DECODIFICAR",
+      "dropzone": {
+        "encode": "Selecionar Imagem Portadora",
+        "decode": "Carregar Imagem Codificada",
+        "encodeDesc": "PNG ou WebP recomendado",
+        "decodeDesc": "Extrair dados ocultos localmente"
+      },
+      "payloadLabel": "Mensagem de Conteúdo",
+      "placeholder": "Faça seu texto secreto desaparecer aqui...",
+      "hideButton": "ESCONDER MENSAGEM",
+      "extractedLabel": "Inteligência Extraída",
+      "copyButton": "COPIAR TEXTO",
+      "revealButton": "REVELAR SEGREDOS",
+      "awaitingScan": "Aguardando Verificação de Pixels",
+      "processing": "Processando Bits...",
+      "remove": "REMOVER",
+      "capacityError": "O conteúdo excede a capacidade do portador.",
+      "noPayloadError": "Nenhum conteúdo oculto detectado nesta imagem."
+    },
+    "toast": {
+      "initialized": "Imagem portadora {name} inicializada.",
+      "vanished": "A mensagem desapareceu na imagem!",
+      "revealed": "Mensagem oculta revelada!",
+      "copied": "Texto copiado para a área de transferência!"
+    },
+    "status": {
+      "title": "Status de Segurança",
+      "local": "Codificação Local",
+      "zero": "Política de Zero Servidor",
+      "https": "Protegido por HTTPS",
+      "carrier": "Integridade do Portador",
+      "tracking": "Scripts de Rastreamento",
+      "active": "Ativo",
+      "verified": "Verificado",
+      "warning": "Aviso",
+      "localDev": "Dev Local",
+      "none": "Nenhum"
+    },
+    "trackers": {
+      "title": "Motores de Rastreamento Bloqueados",
+      "note": "SafeTools é uma zona livre de rastreadores. Não injetamos nenhum script de terceiros."
+    },
+    "landing": {
+      "educational": {
+        "whatIs": {
+          "badge": "Guia Educativo",
+          "title": "O que é Esteganografia?",
+          "titleRich": "O que é <span>Esteganografia</span>?",
+          "description": "Esteganografia é a prática de esconder informações dentro de meios digitais, como imagens, sem alterar visivelmente o arquivo original. Ao contrário da criptografia, que torna os dados ilegíveis, a esteganografia torna os dados indetectáveis.",
+          "items": [
+            {
+              "title": "Uso Educativo",
+              "desc": "Aprenda como os dados são estruturados nos canais de pixels."
+            },
+            {
+              "title": "Proteção de Privacidade",
+              "desc": "Esconda identificadores sensíveis de observadores casuais."
+            },
+            {
+              "title": "Notas Seguras",
+              "desc": "Incorpore notas privadas dentro de fotos que parecem inocentes."
+            },
+            {
+              "title": "Marca d'Água Digital",
+              "desc": "Prove a propriedade sem artefatos visíveis."
+            }
+          ]
+        },
+        "vs": {
+          "title": "Esteganografia vs Criptografia",
+          "subtitle": "Entendendo a diferença entre esconder dados e protegê-los.",
+          "headers": [
+            "Recurso",
+            "Esteganografia",
+            "Criptografia"
+          ],
+          "rows": [
+            [
+              "Esconde Existência",
+              "Sim",
+              "Não"
+            ],
+            [
+              "Legível por Não Autorizados",
+              "Se encontrado",
+              "Não"
+            ],
+            [
+              "Ocultação Visual",
+              "Sim",
+              "Não"
+            ],
+            [
+              "Sobrecarga de Dados",
+              "Nenhuma",
+              "Aumentada"
+            ],
+            [
+              "Risco de Detecção",
+              "Negação Plausível",
+              "Assinatura Óbvia"
+            ]
+          ],
+          "tip": "Dica de Segurança: Para segurança máxima, sempre criptografe sua mensagem sensível primeiro e depois use a esteganografia para esconder o texto criptografado resultante dentro de uma imagem. Isso fornece tanto ocultação quanto proteção de dados."
+        },
+        "formats": {
+          "title": "Formatos de Imagem Suportados",
+          "subtitle": "Por que a seleção do formato importa para a integridade dos dados ocultos.",
+          "items": [
+            {
+              "n": "PNG (Portable Network Graphics)",
+              "s": "Perfeito",
+              "d": "A compressão sem perdas garante que cada bit oculto permaneça exatamente como codificado."
+            },
+            {
+              "n": "WebP (Sem Perdas)",
+              "s": "Recomendado",
+              "d": "Alta eficiência com suporte sem perdas mantém os conteúdos intactos."
+            },
+            {
+              "n": "JPEG / JPG",
+              "s": "Limitado",
+              "d": "A compressão com perdas pode corromper bits ocultos. Não recomendado para LSB."
+            }
+          ]
+        },
+        "useCases": {
+          "title": "Casos de Uso de Esteganografia",
+          "subtitle": "Aplicações práticas e profissionais para dados ocultos.",
+          "items": [
+            "Comunicação Oculta",
+            "Proteção de Privacidade",
+            "Compartilhamento Seguro de Notas",
+            "Marca d'Água Digital",
+            "Educação em Cibersegurança",
+            "Demos de Pesquisa",
+            "Ocultação de Metadados",
+            "Marcadores de Autenticação"
+          ]
+        },
+        "forensics": {
+          "badge": "Consciência Forense",
+          "view": "VISTA FORENSE",
+          "title": "Detecção de Dados Ocultos",
+          "description": "Embora a esteganografia LSB seja visualmente indetectável, ferramentas forenses avançadas podem detectar padrões nos bits menos significativos. Profissionais usam técnicas como análise Qui-quadrado e ataques visuais para encontrar conteúdos ocultos.",
+          "items": [
+            {
+              "title": "Análise Estatística",
+              "desc": "Detectar desvios na distribuição de bits que indicam dados não naturais."
+            },
+            {
+              "title": "Ataques Visuais",
+              "desc": "Isolar planos de bits para revelar anomalias estruturais no ruído."
+            },
+            {
+              "title": "Mudanças no Histograma",
+              "desc": "Identificar mudanças sutis nas frequências de cores causadas pela mutação de bits."
+            }
+          ],
+          "histogram": "Análise de Histograma",
+          "lsbSignature": "Assinatura LSB",
+          "normalized": "NORMALIZADO"
+        },
+        "specs": {
+          "title": "Especificações Técnicas Avançadas",
+          "subtitle": "Parâmetros de baixo nível do motor de mutação LSB da SafeTools.",
+          "items": [
+            {
+              "l": "Profundidade de Bits",
+              "v": "8 bits por canal"
+            },
+            {
+              "l": "Taxa de Injeção",
+              "v": "1 bit/canal"
+            },
+            {
+              "l": "Matriz de Canais",
+              "v": "Ordem R-G-B"
+            },
+            {
+              "l": "Espaço de Mutação",
+              "v": "TrueColor de 24 bits"
+            },
+            {
+              "l": "Lógica de Cabeçalho",
+              "v": "BigEndian de 32 bits"
+            },
+            {
+              "l": "Delta Visual",
+              "v": "E < 0.001%"
+            },
+            {
+              "l": "Alvo de Entropia",
+              "v": "Maximizado"
+            },
+            {
+              "l": "Motor do Navegador",
+              "v": "WASM / Canvas"
+            }
+          ]
+        },
+        "tips": {
+          "items": [
+            {
+              "t": "Use Imagens de Alta Entropia",
+              "d": "Imagens com muita textura e detalhes (como fotos da natureza) são portadores melhores do que cores planas e sólidas, onde as mutações de bits são mais fáceis de detectar estatisticamente."
+            },
+            {
+              "t": "Criptografe Conteúdos Previamente",
+              "d": "Sempre criptografe seu texto com AES-256 antes de escondê-lo. Isso garante que, mesmo que a esteganografia seja detectada, os dados permaneçam ilegíveis."
+            },
+            {
+              "t": "Evite Redimensionamento",
+              "d": "Redimensionar ou recomprimir uma imagem codificada quase certamente destruirá os dados ocultos. Sempre compartilhe o arquivo de saída original."
+            }
+          ]
+        },
+        "notice": {
+          "badge": "Aviso de Segurança Importante",
+          "title": "Esteganografia Não é Criptografia",
+          "description": "A esteganografia baseia-se na obscuridade, não na dureza computacional. Embora esconda a existência de uma mensagem, não protege necessariamente o conteúdo se a esteganografia for detectada.",
+          "points": [
+            "Sempre combine com criptografia forte (AES-256) para dados sensíveis.",
+            "Use formatos sem perdas (PNG) para evitar corrupção de dados.",
+            "Nunca use para ocultação ilegal ou antiética.",
+            "Esteja ciente de que ferramentas forenses podem detectar mutações LSB."
+          ]
+        },
+        "offline": {
+          "title": "Funciona em Todo Lugar",
+          "items": [
+            "Pronto para Offline",
+            "Multiplataforma",
+            "Suporte PWA",
+            "Sem Apps Nativos"
+          ]
+        }
+      },
+      "faq": {
+        "title": "FAQ de Esteganografia",
+        "description": "Tudo o que você precisa saber sobre esconder dados em imagens.",
+        "items": [
+          {
+            "q": "As imagens são carregadas nos servidores?",
+            "a": "Não. Toda a codificação e decodificação ocorrem localmente no seu navegador usando a API canvas e Web Workers."
+          },
+          {
+            "q": "Qual formato de imagem funciona melhor?",
+            "a": "O PNG é fortemente recomendado porque usa compressão sem perdas, o que preserva perfeitamente os bits ocultos em cada pixel."
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Privacidade por Padrão",
+        "headline": "Privacidade é um Direito,<br></br>Não um Recurso.",
+        "description": "A esteganografia é uma das formas mais antigas de proteção de privacidade. Na era digital, continua a ser uma ferramenta poderosa para manter a soberania sobre as suas informações.",
+        "zeroServer": "Zero-Server",
+        "localFirst": "Local-First",
+        "noTracking": "Sem Rastreamento"
+      },
+      "related": {
+        "title": "Ferramentas de Segurança Relacionadas",
+        "subtitle": "Proteja a sua identidade digital com a nossa suite segura.",
+        "items": [
+          {
+            "n": "Cofre de Arquivos",
+            "d": "Criptografia de arquivos de nível militar."
+          },
+          {
+            "n": "Limpador de Metadados",
+            "d": "Limpe dados EXIF e GPS."
+          },
+          {
+            "n": "Notas Seguras",
+            "d": "Notas criptografadas baseadas no navegador."
+          },
+          {
+            "n": "Gerador de Senhas",
+            "d": "Gere senhas fortes offline."
+          },
+          {
+            "n": "Verificador de Força",
+            "d": "Audite a segurança da sua senha."
+          },
+          {
+            "n": "Triturador de Arquivos",
+            "d": "Exclua permanentemente vestígios digitais."
+          }
+        ]
+      }
+    }
+  }
+}

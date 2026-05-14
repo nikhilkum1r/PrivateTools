@@ -1,47 +1,45 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ChevronRight, Home } from "lucide-react";
+import React from "react";
+import { Link } from "@/i18n/routing";
+import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function Breadcrumbs() {
-  const pathname = usePathname();
-  const paths = pathname.split("/").filter(Boolean);
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
 
-  if (paths.length === 0) return null;
+interface BreadcrumbsProps {
+  items: BreadcrumbItem[];
+  className?: string;
+}
 
+export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
+  if (items.length === 0) return null;
+  
   return (
-    <nav className="flex items-center space-x-2 text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/50 mb-4 relative z-20">
-      <Link 
-        href="/" 
-        className="hover:text-primary transition-colors flex items-center gap-1.5"
-      >
-        <Home className="w-3 h-3" />
-        HOME
-      </Link>
-      
-      {paths.map((path, index) => {
-        const href = `/${paths.slice(0, index + 1).join("/")}`;
-        const isLast = index === paths.length - 1;
-        const name = path.replace(/-/g, " ").toUpperCase();
-
-        return (
-          <div key={path} className="flex items-center space-x-2">
-            <ChevronRight className="w-3 h-3 opacity-20" />
-            {isLast ? (
-              <span className="text-primary italic">{name}</span>
-            ) : (
-              <Link 
-                href={href} 
-                className="hover:text-foreground transition-colors"
-              >
-                {name}
-              </Link>
-            )}
-          </div>
-        );
-      })}
+    <nav 
+      aria-label="Breadcrumb" 
+      className={cn("flex mb-6 overflow-x-auto scrollbar-hide", className)}
+    >
+      <ol className="flex items-center gap-1.5 text-xs text-muted-foreground whitespace-nowrap">
+        {items.map((item, index) => (
+          <li key={item.href} className="flex items-center gap-1.5">
+            {index > 0 && <ChevronRight className="w-3 h-3 text-muted-foreground/30 shrink-0" />}
+            <Link 
+              href={item.href}
+              className={cn(
+                "hover:text-primary transition-colors font-medium",
+                index === items.length - 1 && "text-foreground pointer-events-none"
+              )}
+              aria-current={index === items.length - 1 ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ol>
     </nav>
   );
 }

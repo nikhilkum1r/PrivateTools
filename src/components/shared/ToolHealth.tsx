@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Cpu, Shield, Wifi, Lock, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ interface ToolHealthProps {
 }
 
 export const ToolHealth = ({ status = "idle", className }: ToolHealthProps) => {
+  const t = useTranslations("common.systemHealth");
   const [isOnline, setIsOnline] = useState(true);
 
   useEffect(() => {
@@ -26,32 +28,32 @@ export const ToolHealth = ({ status = "idle", className }: ToolHealthProps) => {
 
   const indicators = [
     { 
-      label: "Local Engine", 
+      label: t("localEngine"), 
       icon: Cpu, 
       active: status === "processing", 
       color: "text-emerald-500",
-      description: "Processing on your hardware"
+      description: t("localEngineDesc")
     },
     { 
-      label: "Secure Session", 
+      label: t("secureSession"), 
       icon: Shield, 
       active: true, 
       color: "text-blue-500",
-      description: "Isolated browser context"
+      description: t("secureSessionDesc")
     },
     { 
-      label: isOnline ? "Online" : "Offline Ready", 
+      label: isOnline ? t("online") : t("offlineReady"), 
       icon: isOnline ? Zap : Wifi, 
       active: !isOnline, 
       color: isOnline ? "text-amber-500" : "text-emerald-500",
-      description: isOnline ? "Optimized for speed" : "Fully functional offline"
+      description: isOnline ? t("onlineDesc") : t("offlineReadyDesc")
     },
     { 
-      label: "Zero Tracking", 
+      label: t("zeroTracking"), 
       icon: Lock, 
       active: true, 
       color: "text-purple-500",
-      description: "Privacy-first architecture"
+      description: t("zeroTrackingDesc")
     },
   ];
 
@@ -62,8 +64,8 @@ export const ToolHealth = ({ status = "idle", className }: ToolHealthProps) => {
           "w-2 h-2 rounded-full animate-pulse",
           status === "processing" ? "bg-emerald-500" : (status === "done" || status === "complete" ? "bg-blue-500" : "bg-muted-foreground/30")
         )} />
-        <span className="text-[10px] font-black uppercase tracking-tighter text-foreground italic">
-          System Health
+        <span className="text-[10px] font-bold tracking-tight text-foreground">
+          {t("title")}
         </span>
       </div>
       
@@ -72,7 +74,7 @@ export const ToolHealth = ({ status = "idle", className }: ToolHealthProps) => {
           <div key={i} className="flex items-center gap-2 group relative">
             <indicator.icon className={cn("w-3.5 h-3.5", indicator.active ? indicator.color : "text-muted-foreground/40")} />
             <span className={cn(
-              "text-[9px] font-black uppercase tracking-widest",
+              "text-[9px] font-semibold uppercase tracking-wider",
               indicator.active ? "text-foreground" : "text-muted-foreground/60"
             )}>
               {indicator.label}

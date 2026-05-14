@@ -1,0 +1,125 @@
+{
+  "wordCounter": {
+    "title": "Contador",
+    "subtitle": "de Palabras.",
+    "description": "Analice texto al instante con un contador de palabras en línea rápido y seguro. Cuente palabras, caracteres, oraciones, párrafos, tiempo de lectura, tiempo de voz y más directamente en su navegador.",
+    "inputPlaceholder": "Escriba o pegue su texto aquí...",
+    "textInputArea": "Área de entrada de texto",
+    "toast": {
+      "copy": "¡Copiado al portapapeles!"
+    },
+    "stats": {
+      "words": "Palabras",
+      "chars": "Caracteres",
+      "noSpaces": "Sin espacios",
+      "sentences": "Oraciones",
+      "paragraphs": "Párrafos",
+      "lines": "Líneas",
+      "readTime": "Tiempo lectura",
+      "speakTime": "Tiempo voz",
+      "privacy": "Privacidad primero",
+      "instant": "Estadísticas en tiempo real",
+      "noUploads": "Sin subidas",
+      "seo": "Optimizado para SEO"
+    },
+    "content": {
+      "mainTitle": "Herramienta gratuita de contador de palabras en línea",
+      "mainDesc1": "La herramienta Contador de palabras le ayuda a analizar instantáneamente el contenido de texto para escritura, SEO, educación, codificación, redes sociales y comunicación profesional. Ya sea que esté escribiendo ensayos, entradas de blog, subtítulos, trabajos de investigación, correos electrónicos, guiones o contenido de sitios web, esta herramienta proporciona estadísticas de texto precisas en tiempo real.",
+      "mainDesc2": "Todo funciona directamente en su navegador para mejorar la velocidad, la privacidad y la seguridad.",
+      "measureTitle": "¿Qué puede medir el contador de palabras?",
+      "measureSubtitle": "Métricas completas",
+      "textStatsTitle": "Estadísticas de texto",
+      "textStatsList": [
+        "Recuento de palabras",
+        "Recuento de caracteres",
+        "Recuento de caracteres sin espacios",
+        "Recuento de oraciones",
+        "Recuento de párrafos",
+        "Recuento de líneas"
+      ],
+      "readingTitle": "Lectura y voz",
+      "readingList": [
+        "Tiempo de lectura estimado",
+        "Tiempo de voz estimado",
+        "Longitud media de palabra",
+        "Longitud media de oración"
+      ],
+      "writingTitle": "Análisis de escritura",
+      "writingList": [
+        "Densidad de palabras clave",
+        "Palabras más usadas",
+        "Información sobre legibilidad",
+        "Análisis de longitud de contenido"
+      ],
+      "featuresTitle": "Características del contador de palabras en línea",
+      "featuresSubtitle": "¿Por qué usar este contador de palabras?",
+      "feature1Title": "Recuento de palabras en tiempo real",
+      "feature1Desc": "Obtenga actualizaciones instantáneas mientras escribe o pega texto sin recargar la página.",
+      "feature2Title": "Contador de caracteres",
+      "feature2Desc": "Realice un seguimiento de los caracteres totales con y sin espacios para plataformas con límites de caracteres.",
+      "feature3Title": "Estimador de tiempo de lectura",
+      "feature3Desc": "Estime cuánto tiempo podrían tardar los lectores en leer artículos, ensayos, guiones o entradas de blog.",
+      "feature4Title": "Calculadora de tiempo de voz",
+      "feature4Desc": "Útil para la preparación de discursos, presentaciones, podcasts, guiones de YouTube y oratoria pública.",
+      "feature5Title": "Optimización de contenido SEO",
+      "feature5Desc": "Los escritores y especialistas en marketing pueden monitorear la longitud del contenido para blogs, metaetiquetas y páginas de destino.",
+      "feature6Title": "Privacidad basada en el navegador",
+      "feature6Desc": "Su texto permanece en su dispositivo durante el procesamiento sin ser subido a servidores externos.",
+      "useCasesTitle": "Casos de uso comunes y beneficios",
+      "useCasesDesc": "El uso de una herramienta de análisis de texto ayuda a mejorar la eficiencia de la escritura, cumplir con los requisitos de recuento de palabras, optimizar la legibilidad, realizar un seguimiento de la longitud del contenido, mejorar el rendimiento de SEO y reducir el tiempo de edición.",
+      "useCasesList": [
+        "Escritura de ensayos",
+        "Asignaciones académicas",
+        "Optimización de blogs SEO",
+        "Escritura de guiones de YouTube",
+        "Subtítulos de redes sociales",
+        "Límites de caracteres de Twitter",
+        "Escritura de currículums",
+        "Documentación de programación"
+      ],
+      "howTitle": "Cómo usar el contador de palabras",
+      "step1Title": "Pegar",
+      "step1Desc": "Escriba o pegue su texto",
+      "step2Title": "Analizar",
+      "step2Desc": "La herramienta analiza el contenido automáticamente",
+      "step3Title": "Revisar",
+      "step3Desc": "Ver estadísticas de palabras y caracteres en vivo",
+      "step4Title": "Optimizar",
+      "step4Desc": "Copie, edite u optimice su contenido"
+    },
+    "faq": {
+      "items": [
+        {
+          "q": "¿Qué es un contador de palabras?",
+          "a": "Un contador de palabras es una herramienta que calcula el número de palabras, caracteres, oraciones, párrafos y otras estadísticas de escritura en un texto."
+        },
+        {
+          "q": "¿Este contador de palabras es gratuito?",
+          "a": "Sí. La herramienta es completamente gratuita para usar en línea sin registro."
+        },
+        {
+          "q": "¿La herramienta cuenta caracteres?",
+          "a": "Sí. Cuenta caracteres totales, caracteres sin espacios, palabras, oraciones y párrafos."
+        },
+        {
+          "q": "¿Mi texto es seguro?",
+          "a": "Sí. El procesamiento de texto ocurre directamente en su navegador para una mejor privacidad y seguridad."
+        },
+        {
+          "q": "¿Puedo usar esta herramienta para escritura SEO?",
+          "a": "Sí. La herramienta ayuda a optimizar entradas de blog, artículos, metadatos y otro contenido SEO mediante el seguimiento de la longitud del texto y la legibilidad."
+        },
+        {
+          "q": "¿El contador de palabras funciona en dispositivos móviles?",
+          "a": "Sí. La herramienta funciona en Android, iPhone, tabletas, computadoras portátiles y sistemas de escritorio."
+        },
+        {
+          "q": "¿Puede la herramienta manejar texto grande?",
+          "a": "Sí. Puede analizar artículos largos, ensayos, guiones, informes y documentos de manera eficiente."
+        }
+      ],
+      "title": "Preguntas frecuentes",
+      "description": "Todo lo que necesita saber sobre nuestra herramienta que prioriza la privacidad."
+    }
+  }
+}

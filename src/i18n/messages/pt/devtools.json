@@ -1,0 +1,85 @@
+{
+  "devtools": {
+    "seo": {
+      "title": "Hub de Desenvolvedor | DevTools Profissionais e Privadas | SafeTools",
+      "description": "Utilitários para desenvolvedores de nível profissional que correm inteiramente no seu navegador. Formatador JSON, depurador JWT, codec Base64 e mais.",
+      "ogTitle": "SafeTools Developer Hub | 100% Privado",
+      "ogDescription": "Conjunto de ferramentas soberano para desenvolvedores com zero interação com servidores.",
+      "seoName": "SafeTools Developer Hub",
+      "seoDescription": "Um conjunto profissional de utilitários de desenvolvedor local-first."
+    },
+    "matrix": "Matriz de Utilitários",
+    "toolkit": "Kit de Ferramentas Dev Soberano",
+    "local": "EXECUÇÃO LOCAL",
+    "wasm_optimized": "WASM OTIMIZADO",
+    "buffered_stream": "STREAM EM BUFFER",
+    "input_buffer": "Buffer de Entrada",
+    "source": "FONTE",
+    "input_placeholder": "Cole o seu fluxo de dados aqui...",
+    "characters": "{count} Caracteres",
+    "processed_output": "Saída Processada",
+    "copy_result": "COPIAR RESULTADO",
+    "copied": "COPIADO",
+    "synthesizing": "Sintetizando...",
+    "output_placeholder": "A saída aparecerá aqui...",
+    "clear": "LIMPAR",
+    "re_execute": "REEXECUTAR",
+    "bit_inspector": "Inspetor de Bits",
+    "telemetry": "Telemetria de Sessão",
+    "metadata_matrix": "Matriz de Metadados",
+    "execution_time": "Tempo de Execução",
+    "memory_pressure": "Pressão de Memória",
+    "bit_entropy": "Entropia de Bits",
+    "sovereign_guard": "Guarda Soberana",
+    "privacy_notice": "O SafeTools DevUtilities baseia-se no princípio do processamento exclusivamente local. Os seus dados nunca tocam nos nossos servidores.",
+    "quick_actions": "Ações Rápidas",
+    "minify": "MINIFICAR",
+    "beautify": "EMBELEZAR",
+    "escape": "ESCAPE",
+    "unescape": "UNESCAPE",
+    "secured_session": "SESSÃO SEGURA",
+    "tools": {
+      "json": {
+        "name": "Formatador JSON",
+        "desc": "Embeleze e valide dados JSON."
+      },
+      "base64": {
+        "name": "Codec Base64",
+        "desc": "Codifique/descodifique texto e imagens."
+      },
+      "hash": {
+        "name": "Gerador de Hash",
+        "desc": "Gere assinaturas SHA-256."
+      },
+      "jwt": {
+        "name": "Depurador JWT",
+        "desc": "Descodifique JSON Web Tokens."
+      },
+      "url": {
+        "name": "Codificador URL",
+        "desc": "Codificação/descodificação de URL segura."
+      },
+      "uuid": {
+        "name": "Gerador de UUID",
+        "desc": "Gere UUIDs v4 seguros."
+      },
+      "timestamp": {
+        "name": "Timestamp Unix",
+        "desc": "Converta Epoch para data ISO."
+      },
+      "lorem": {
+        "name": "Lorem Ipsum",
+        "desc": "Gerador de texto de preenchimento."
+      }
+    },
+    "messages": {
+      "copySuccess": "Copiado para a área de transferência!",
+      "invalidJson": "Erro: Carga útil JSON inválida.",
+      "base64Error": "Erro: A operação Base64 falhou.",
+      "invalidJwt": "Erro: Estrutura JWT inválida.",
+      "urlError": "Erro: Falha no codec de URL.",
+      "processingError": "Fatal: Falha no motor de execução.",
+      "loremContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

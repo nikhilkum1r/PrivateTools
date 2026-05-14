@@ -1,0 +1,426 @@
+{
+  "feedback": {
+    "hero": {
+      "badge": "Voz de la comunidad",
+      "title": "Moldea el <br></br> <span class=\"text-emerald-500 italic\">Futuro.",
+      "subtitle": "Tus comentarios son el motor principal de nuestra hoja de ruta. Cuéntanos qué te gusta, qué no te gusta y qué quieres ver a continuación."
+    },
+    "status": {
+      "success": "¡Comentarios enviados!",
+      "successDesc": "Gracias por ayudarnos a construir un SafeTools mejor."
+    },
+    "form": {
+      "title": "Envíanos tus comentarios",
+      "subtitle": "Ayúdanos a mejorar SafeTools con tus sugerencias.",
+      "fields": {
+        "name": "Tu nombre",
+        "email": "Tu correo",
+        "type": {
+          "label": "Tipo de comentario",
+          "options": {
+            "bug": "Informe de error",
+            "feature": "Solicitud de función",
+            "improvement": "Mejora",
+            "other": "Otro",
+            "praise": "Elogio"
+          }
+        },
+        "message": "Tu mensaje"
+      },
+      "placeholders": {
+        "message": "Cuéntanos qué tienes en mente..."
+      },
+      "button": {
+        "submit": "Enviar comentarios",
+        "sending": "Enviando..."
+      },
+      "mood": {
+        "title": "¿Cómo fue tu sesión?",
+        "subtitle": "Selecciona tu impresión de nuestro motor local-primero.",
+        "poor": "Pobre",
+        "average": "Promedio",
+        "excellent": "Excelente"
+      },
+      "details": {
+        "title": "Los detalles",
+        "subtitle": "¿Qué características específicas deberíamos priorizar para v2.5?",
+        "placeholder": "Quiero más formatos de video... La interfaz podría ser más rápida... Me encanta el manifiesto de privacidad...",
+        "tags": [
+          "UI/UX",
+          "Nuevas herramientas",
+          "Rendimiento",
+          "Seguridad",
+          "Otro"
+        ]
+      },
+      "submit": "Enviar comentarios"
+    },
+    "roadmap": {
+      "badge": "Qué sigue",
+      "title": "Hoja de ruta del producto",
+      "subtitle": "Mira cómo tus comentarios se traducen en nuestros futuros ciclos de desarrollo.",
+      "button": "Ver progreso",
+      "status": {
+        "progress": "En progreso",
+        "planning": "Planificación",
+        "done": "Lanzado"
+      },
+      "items": {
+        "ai": {
+          "title": "Procesamiento impulsado por IA",
+          "desc": "Motores neuronales locales para inteligencia avanzada de imágenes y documentos."
+        },
+        "mobile": {
+          "title": "Estudio optimizado para móviles",
+          "desc": "Rendimiento de grado nativo en navegadores iOS y Android."
+        },
+        "enterprise": {
+          "title": "Funciones empresariales",
+          "desc": "Espacios de trabajo en equipo, registros de auditoría e informes de cumplimiento."
+        }
+      },
+      "openSource": {
+        "title": "Núcleo de código abierto",
+        "subtitle": "Nuestro motor de procesamiento es de código abierto y auditable.",
+        "button": "Ver en GitHub"
+      }
+    },
+    "stats": {
+      "privacy": {
+        "label": "Puntuación de privacidad",
+        "value": "100%"
+      },
+      "community": {
+        "label": "Comunidad",
+        "value": "50K+"
+      },
+      "updates": {
+        "label": "Actualizaciones",
+        "value": "Semanal"
+      }
+    }
+  },
+  "status": {
+    "hero": {
+      "badge": "Auditoría de infraestructura",
+      "title": "Integridad del <br></br> <span class=\"text-emerald-500 italic\">Sistema.",
+      "subtitle": "Dado que SafeTools se ejecuta completamente en tu hardware, este panel verifica la capacidad de tu navegador para ejecutar nuestro motor de alto rendimiento."
+    },
+    "badge": {
+      "operational": "Todos los sistemas operativos"
+    },
+    "systems": {
+      "wasm": {
+        "name": "Motor WebAssembly",
+        "desc": "Cómputo local de alto rendimiento mediante módulos WASM compilados."
+      },
+      "privacy": {
+        "name": "Sandbox de privacidad",
+        "desc": "Contexto de navegador aislado con cero transmisión de datos externos."
+      },
+      "storage": {
+        "name": "Almacenamiento efímero",
+        "desc": "Solo en memoria. Todos los datos se purgan al cerrar la pestaña."
+      },
+      "rendering": {
+        "name": "Renderizado por GPU",
+        "desc": "Canvas acelerado por hardware y tuberías WebGL."
+      }
+    },
+    "checks": {
+      "title": "Auditoría de seguridad",
+      "subtitle": "Verificación en tiempo real de la postura de seguridad de tu navegador.",
+      "refresh": "Refrescar",
+      "integrity": {
+        "label": "Integridad de datos",
+        "status": "Verificado",
+        "desc": "Todo el procesamiento se ejecuta en un entorno aislado y seguro."
+      },
+      "lastChecked": "Última comprobación: {time}",
+      "identity": {
+        "label": "Protección de identidad",
+        "status": "Verificado",
+        "desc": "No se detectaron cookies de seguimiento ni huellas digitales."
+      },
+      "encryption": {
+        "label": "Estado de cifrado",
+        "status": "AES-256 GCM",
+        "desc": "Cifrado de grado militar disponible para operaciones de bóveda."
+      }
+    },
+    "offline": {
+      "title": "Listo para usar sin conexión",
+      "subtitle": "SafeTools está diseñado para funcionar sin conexión para la mayoría de las operaciones. No se requiere internet después de la carga inicial.",
+      "button": "Probar modo sin conexión"
+    },
+    "stats": {
+      "uptime": {
+        "label": "Tiempo de actividad",
+        "value": "99.99%"
+      },
+      "latency": {
+        "label": "Latencia de API",
+        "value": "0ms"
+      },
+      "privacy": {
+        "label": "Puntuación de privacidad",
+        "value": "100%"
+      },
+      "nodes": {
+        "label": "CDN Global",
+        "value": "En línea"
+      }
+    },
+    "grid": {
+      "capability": "Comprobación de capacidad",
+      "operational": "Operativo",
+      "degraded": "Degradado",
+      "unsupported": "No compatible",
+      "labels": {
+        "wasm": "Soporte WebAssembly",
+        "workers": "Web Workers",
+        "sab": "SharedArrayBuffer (COOP/COEP)",
+        "opfs": "Origin Private File System",
+        "webgpu": "WebGPU (Aceleración)",
+        "crypto": "Web Crypto API"
+      }
+    },
+    "global": {
+      "title": "Estado del <br></br> <span class=\"text-emerald-500\">Santuario.",
+      "subtitle": "Nuestros nodos globales están operativos. No se requiere mantenimiento del lado del servidor.",
+      "uptime": "Tiempo de actividad",
+      "latency": "Latencia de API",
+      "cdn": "CDN Global: En línea",
+      "wasm": "Entrega WASM: En línea"
+    },
+    "support": {
+      "title": "¿Tienes problemas?",
+      "subtitle": "Si la comprobación del sistema falló, asegúrate de estar usando la última versión de Chrome, Edge o Firefox.",
+      "button": "Informar problema"
+    }
+  },
+  "updates": {
+    "hero": {
+      "badge": "Anuncios de productos",
+      "title": "Últimas <br></br> <span class=\"text-primary italic\">Actualizaciones.",
+      "subtitle": "Mantente informado sobre nuevas herramientas, avances arquitectónicos y nuestra misión continua de descentralizar el procesamiento de archivos."
+    },
+    "controls": {
+      "subscribe": "Suscribirse",
+      "share": "Compartir"
+    },
+    "filters": {
+      "all": "Todas las actualizaciones",
+      "feature": "Funciones",
+      "performance": "Rendimiento",
+      "security": "Seguridad"
+    },
+    "feed": {
+      "readMore": "Leer historia completa",
+      "items": {
+        "v2": {
+          "date": "8 de mayo de 2026",
+          "title": "El motor de IA sin servidor ya está activo",
+          "desc": "Hemos integrado con éxito Transformers.js v3 en nuestro núcleo de producción. Ahora puedes realizar la eliminación de fondo y el escalado de imágenes con cómputo 100% local.",
+          "category": "Arquitectura"
+        },
+        "security": {
+          "date": "5 de mayo de 2026",
+          "title": "Lanzamiento de la nueva suite de masterización de PDF",
+          "desc": "Una actualización completa de nuestro motor de documentos, que admite cifrado AES-256, combinación por lotes y compresión de grado profesional.",
+          "category": "Producto"
+        },
+        "wasm": {
+          "date": "2 de mayo de 2026",
+          "title": "Pivote arquitectónico SafeTools 2.0",
+          "desc": "Hemos eliminado oficialmente todos los puntos finales del lado del servidor. SafeTools es ahora una plataforma de borde puro, garantizando tu soberanía de datos por defecto.",
+          "category": "Seguridad"
+        }
+      }
+    },
+    "milestones": {
+      "title": "Hitos clave",
+      "subtitle": "El viaje desde la idea hasta la plataforma de procesamiento de archivos más privada del mundo.",
+      "items": {
+        "users": {
+          "label": "Usuarios activos",
+          "value": "50K+"
+        },
+        "tools": {
+          "label": "Herramientas seguras",
+          "value": "150+"
+        },
+        "privacy": {
+          "label": "Datos filtrados",
+          "value": "0 Bytes"
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Mantente <br></br> informado.",
+      "subtitle": "Únete a más de 5,000 desarrolladores y entusiastas de la privacidad que reciben las últimas actualizaciones del motor en su santuario.",
+      "placeholder": "correo@ejemplo.com",
+      "button": "Suscribirse"
+    }
+  },
+  "features": {
+    "hero": {
+      "badge": "Inmersión profunda en la arquitectura",
+      "title": "Construido para la <br></br> <span class=\"text-primary\">Era de la Privacidad",
+      "subtitle": "SafeTools es un cambio completo de las utilidades tradicionales en la nube. Explora la ingeniería que te devuelve el control."
+    },
+    "pillars": {
+      "privacy": {
+        "title": "Privacidad de conocimiento cero",
+        "desc": "Tus archivos nunca salen de tu dispositivo. Todo el procesamiento ocurre en un entorno aislado y seguro.",
+        "f1": "Sin cargas a la nube",
+        "f2": "Cero scripts de seguimiento",
+        "f3": "Sesiones efímeras"
+      },
+      "performance": {
+        "title": "Rendimiento a velocidad nativa",
+        "desc": "Los motores WebAssembly ofrecen una velocidad de procesamiento casi nativa directamente en tu navegador.",
+        "f1": "0ms de latencia de servidor",
+        "f2": "Aceleración por GPU",
+        "f3": "Workers multihilo"
+      },
+      "tech": {
+        "title": "Arquitectura moderna",
+        "desc": "Construido sobre estándares web de vanguardia para máxima compatibilidad y futuro.",
+        "f1": "Aplicación web progresiva",
+        "f2": "Diseño offline-primero",
+        "f3": "Soporte multiplataforma"
+      }
+    },
+    "comparison": {
+      "title": "La ventaja de SafeTools",
+      "subtitle": "Mira por qué el procesamiento local supera a las herramientas en la nube en cada métrica importante.",
+      "headers": {
+        "feature": "Característica",
+        "others": "Herramientas en la nube"
+      },
+      "rows": {
+        "processing": {
+          "label": "Procesamiento local"
+        },
+        "data": {
+          "label": "Cero recolección de datos"
+        },
+        "speed": {
+          "label": "Procesamiento rápido"
+        },
+        "tracking": {
+          "label": "Scripts de seguimiento"
+        },
+        "cost": {
+          "label": "Costo",
+          "valueSafe": "Gratis",
+          "valueOthers": "$10-50/mes"
+        }
+      }
+    },
+    "architecture": {
+      "title": "Dentro del <br></br> <span class=\"text-primary\">Motor Seguro",
+      "subtitle": "La mayoría de las herramientas envían tus datos a un servidor. Nosotros enviamos el código a tus datos.",
+      "items": {
+        "wasm": {
+          "title": "Núcleo WebAssembly",
+          "desc": "Ejecución a velocidad nativa compilada desde Rust y C++ para máximo rendimiento."
+        },
+        "encryption": {
+          "title": "Cifrado AES-256-GCM",
+          "desc": "Cifrado estándar de la industria que se ejecuta completamente en la memoria de tu navegador."
+        },
+        "pwa": {
+          "title": "Aplicación web progresiva",
+          "desc": "Instala una vez, úsala siempre. Soporte offline completo con cero dependencia del servidor."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para cambiar?",
+      "description": "Únete a miles de profesionales que han abandonado los riesgos de seguridad en la nube por SafeTools.",
+      "button": "Explorar todas las herramientas"
+    },
+    "grid": {
+      "badge": "Información técnica profunda",
+      "items": [
+        {
+          "title": "Arquitectura sin servidor",
+          "desc": "Tus archivos nunca tocan nuestros servidores. Todo el procesamiento ocurre localmente en el sandbox seguro de tu navegador usando WebAssembly de alto rendimiento.",
+          "detail": "Al mover el cómputo al cliente, eliminamos el mayor riesgo de seguridad: los datos en tránsito y almacenamiento."
+        },
+        {
+          "title": "Privacidad de grado militar",
+          "desc": "Sin píxeles de seguimiento, sin cookies de análisis y cero recolección de datos. SafeTools está construido para el anonimato por diseño.",
+          "detail": "No solo protegemos tus datos; nunca los vemos. Tu sesión es completamente privada y no persistente."
+        },
+        {
+          "title": "Latencia de menos de un segundo",
+          "desc": "Experimenta un procesamiento casi instantáneo. Sin necesidad de grandes cargas de archivos o viajes de ida y vuelta a la red, las herramientas se sienten como aplicaciones nativas.",
+          "detail": "Procesa archivos de varios gigabytes al instante porque los datos nunca tienen que salir de tu RAM."
+        },
+        {
+          "title": "Más de 150 herramientas especializadas",
+          "desc": "Una suite completa de utilidades para imágenes, PDF, seguridad y desarrollo, todo en un espacio de trabajo unificado y de alta velocidad.",
+          "detail": "Desde la conversión HEIC hasta la decodificación JWT, todo lo que necesitas está a un clic de distancia."
+        },
+        {
+          "title": "Paleta de comandos (Cmd+K)",
+          "desc": "Navega por toda la plataforma a la velocidad del rayo usando nuestra interfaz de comandos dirigida por teclado. Acceso instantáneo a cualquier herramienta.",
+          "detail": "Deja de hacer clic en los menús. Solo presiona Cmd+K y escribe lo que necesitas."
+        },
+        {
+          "title": "Sistema de retención local",
+          "desc": "Personaliza tu espacio de trabajo con favoritos locales y herramientas usadas recientemente. Tus preferencias permanecen en tu dispositivo.",
+          "detail": "Usamos localStorage cifrado para recordar lo que te gusta sin saber nunca quién eres."
+        }
+      ]
+    },
+    "engine": {
+      "title": "Dentro del <br></br> <span class=\"text-primary\">Motor Seguro",
+      "subtitle": "La mayoría de las herramientas envían tus datos a un servidor. Nosotros enviamos el código a tus datos.",
+      "stack": [
+        {
+          "name": "WebAssembly",
+          "desc": "Ejecución a velocidad nativa en el navegador"
+        },
+        {
+          "name": "Transformers.js",
+          "desc": "IA y aprendizaje automático local"
+        },
+        {
+          "name": "FFmpeg.wasm",
+          "desc": "Motor profesional de video/audio"
+        },
+        {
+          "name": "AES-256-GCM",
+          "desc": "Cifrado local estándar de la industria"
+        }
+      ]
+    },
+    "comparison_legacy": {
+      "title": "Mejor para ti. <br></br> <span class=\"text-primary\">Mejor para la seguridad.",
+      "cloud": {
+        "label": "Herramientas en la nube",
+        "items": [
+          "Sube archivos privados a servidores desconocidos",
+          "Vende datos de uso a anunciantes",
+          "Los datos existen en copias de seguridad para siempre",
+          "Ciclos lentos de carga/descarga",
+          "Vulnerable a brechas en el lado del servidor"
+        ]
+      },
+      "safe": {
+        "label": "SafeTools",
+        "items": [
+          "Los datos nunca salen de tu navegador",
+          "Cero seguimiento. Cero cookies.",
+          "Procesado en RAM. Borrado instantáneamente.",
+          "Rendimiento con latencia casi nula",
+          "Protección por sandbox en el lado del cliente"
+        ]
+      }
+    }
+  }
+}

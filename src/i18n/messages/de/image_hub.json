@@ -1,0 +1,65 @@
+{
+  "imageHub": {
+    "seo": {
+      "title": "Bild-Tools Hub | Professionelle & private Bildverarbeitung | SafeTools",
+      "description": "Greifen Sie auf professionelle lokale Bild-Tools zu. 100% Privatsphäre, keine Uploads, GPU-beschleunigt. Komprimieren, konvertieren, bearbeiten und Hintergründe sicher in Ihrem Browser entfernen.",
+      "keywords": "Bild-Tools, Bild komprimieren, Bild konvertieren, Hintergrund entfernen, Online-Bildbearbeitung, private Bildverarbeitung, lokale Bild-Tools",
+      "ogTitle": "SafeTools Image Studio | 100% Privat",
+      "ogDescription": "Die vollständige Suite professioneller Bild-Utilities. Alle laufen lokal auf Ihrer Hardware.",
+      "structuredName": "SafeTools Image Studio",
+      "structuredDesc": "Eine umfassende Suite von Bildverarbeitungstools, bei denen der Datenschutz an erster Stelle steht."
+    },
+    "hero": {
+      "badge": "Bildverarbeitung der nächsten Generation",
+      "title": "Bild-Powerhouse",
+      "description": "Professionelle lokale Bild-Tools. 100% Privatsphäre, keine Uploads, GPU-beschleunigt."
+    },
+    "tools": {
+      "compress": {
+        "title": "Bild komprimieren (KB/MB)",
+        "desc": "Reduzieren Sie die Dateigröße um bis zu 90% ohne sichtbaren Qualitätsverlust. Stapeloptimierung für das Web.",
+        "tags": [
+          "Beliebtestes Tool",
+          "Hohe Geschwindigkeit"
+        ]
+      },
+      "convert": {
+        "title": "Bildformat konvertieren",
+        "desc": "Konvertieren Sie zwischen 10+ Formaten, einschließlich HEIC, AVIF, WebP und PDF, im Stapelmodus.",
+        "tags": [
+          "Universell",
+          "10+ Formate"
+        ]
+      },
+      "edit": {
+        "title": "Bilder bearbeiten",
+        "desc": "Das volle Kraftpaket: Größe ändern, zuschneiden, drehen, Wasserzeichen, Filter und OCR-Extraktion.",
+        "tags": [
+          "All-in-One",
+          "Pro-Funktionen"
+        ]
+      },
+      "remove_bg": {
+        "title": "KI-Hintergrundentferner",
+        "desc": "Bildhintergründe sofort mit KI entfernen. 100% private Local-First-Segmentierung.",
+        "tags": [
+          "Neu",
+          "KI-gestützt"
+        ]
+      },
+      "cta": "Tool öffnen"
+    },
+    "privacy": {
+      "title": "Garantierte Privatsphäre",
+      "desc": "Die gesamte Verarbeitung erfolgt in Ihrem Browser mittels WASM. Ihre Bilder gelangen niemals auf unsere Server."
+    },
+    "faq": {
+      "title": "SafeTools Image Studio FAQ",
+      "desc": "Alles, was Sie über unser datenschutzorientiertes Bildverarbeitungs-Ökosystem wissen müssen.",
+      "q1": "Werden meine Bilder auf einen Server hochgeladen?",
+      "a1": "Absolut nicht. SafeTools nutzt WebAssembly (WASM) und lokale GPU-Beschleunigung, um Bilder direkt auf Ihrem Gerät zu verarbeiten. Ihre Daten verlassen niemals Ihren Browser.",
+      "q2": "Welche Formate werden unterstützt?",
+      "a2": "Unser Studio unterstützt JPEG, PNG, WebP, AVIF, SVG, GIF, HEIC, TIFF und sogar PDF-zu-Bild-Konvertierungen. Die meisten Tools unterstützen die Stapelverarbeitung."
+    }
+  }
+}

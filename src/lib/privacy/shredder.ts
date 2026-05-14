@@ -1,5 +1,5 @@
 /**
- * File Shredder — overwrites file data with random bytes in browser memory.
+ * File Shredder  overwrites file data with random bytes in browser memory.
  * Does NOT delete the original file on disk.
  */
 
@@ -20,7 +20,7 @@ export async function shredFile(
       const chunk = new Uint8Array(buffer.buffer, i, chunkSize);
       crypto.getRandomValues(chunk);
     }
-    
+
     onProgress?.(Math.round(((pass + 1) / passes) * 100));
     // Brief pause to keep UI responsive
     await new Promise((r) => setTimeout(r, 0));

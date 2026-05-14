@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Image Converter Studio | 150+ Formats Supported | SafeTools",
+      "description": "Convert images between 150+ formats locally in your browser. Support for HEIC, WebP, AVIF, RAW, PDF and more. 100% private."
+    },
+    "hero": {
+      "title": "Universal Image Converter.",
+      "titleSpecific": "Convert {from} to {to}.",
+      "description": "Convert images between 150+ formats locally in your browser. Zero server uploads.",
+      "descriptionSpecific": "Convert {from} to {to} instantly. Privacy-first local processing with zero uploads.",
+      "engine": "Local Hardware Processing",
+      "privateConverter": "Private Browser Engine"
+    },
+    "benefits": {
+      "local": "Local Engine",
+      "zero": "Zero Upload",
+      "no_tracking": "No Tracking",
+      "fast": "Ultra Fast",
+      "browser": "In-Browser"
+    },
+    "performance": {
+      "title": "High-Performance Engine",
+      "subtitle": "GPU-Accelerated Browser Processing",
+      "items": [
+        {
+          "title": "150+ Formats",
+          "description": "Support for everything from HEIC and RAW to legacy bitmap formats."
+        },
+        {
+          "title": "Batch Processing",
+          "description": "Convert hundreds of images simultaneously without hitting server limits."
+        },
+        {
+          "title": "Lossless Quality",
+          "description": "Advanced resampling algorithms preserve every pixel of your original data."
+        },
+        {
+          "title": "Local OCR",
+          "description": "Extract text layers during conversion using built-in recognition engines."
+        },
+        {
+          "title": "Metadata Control",
+          "description": "Choose to strip or preserve EXIF, GPS, and IPTC data layers."
+        },
+        {
+          "title": "Browser Privacy",
+          "description": "Your files never leave your device. 100% secure offline-ready architecture."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Conversion Workspace",
+      "assets": "{count} Assets",
+      "telemetry": "Local Hardware Processing",
+      "savings": "Current Savings",
+      "smaller": "{size} smaller",
+      "impact": "Global Impact",
+      "saved": "{size} saved",
+      "clear": "Clear Workspace",
+      "addMore": "Add Files",
+      "exportAll": "Export All (ZIP)"
+    },
+    "config": {
+      "title": "Global Settings",
+      "format": "Target Format",
+      "selectFormat": "Select Format",
+      "search": "Search 150+ formats...",
+      "quality": "Quality & Compression",
+      "resizeW": "Resize Width",
+      "resizeH": "Resize Height",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Metadata Control",
+      "strip": "Strip EXIF/GPS (Enabled)",
+      "wasm": "WASM Engine",
+      "accelerated": "Hardware Accelerated",
+      "targetSize": "Target File Size",
+      "limit": "Limit to {size}KB",
+      "optimized": "Optimized Quality"
+    },
+    "categories": {
+      "regular": "Standard Formats",
+      "web": "Web Optimized",
+      "modern": "Next-Gen Formats",
+      "print": "Professional Print",
+      "design": "Design Assets",
+      "game": "Game Textures",
+      "raw": "RAW Camera Data",
+      "scientific": "Scientific Imaging",
+      "vector": "Vector Graphics",
+      "hdr": "High Dynamic Range",
+      "document": "Office & Documents",
+      "legacy": "Legacy Formats"
+    },
+    "queue": {
+      "title": "Conversion Queue",
+      "converted": "Converted",
+      "in": "IN",
+      "out": "OUT",
+      "smaller": "{percent}% Smaller",
+      "download": "Download",
+      "convert": "Convert",
+      "convert_all": "Convert All Files"
+    },
+    "toast": {
+      "noProcessed": "No processed files to download.",
+      "copied": "Image copied to clipboard!",
+      "clipboardFailed": "Failed to copy image to clipboard."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Local Engine",
+        "zero": "Zero Upload",
+        "no_tracking": "No Tracking",
+        "fast": "Ultra Fast",
+        "browser": "In-Browser"
+      },
+      "performance": {
+        "title": "High-Performance Engine",
+        "subtitle": "GPU-Accelerated Browser Processing",
+        "items": [
+          {
+            "title": "150+ Formats",
+            "description": "Support for everything from HEIC and RAW to legacy bitmap formats."
+          },
+          {
+            "title": "Batch Processing",
+            "description": "Convert hundreds of images simultaneously without hitting server limits."
+          },
+          {
+            "title": "Lossless Quality",
+            "description": "Advanced resampling algorithms preserve every pixel of your original data."
+          },
+          {
+            "title": "Local OCR",
+            "description": "Extract text layers during conversion using built-in recognition engines."
+          },
+          {
+            "title": "Metadata Control",
+            "description": "Choose to strip or preserve EXIF, GPS, and IPTC data layers."
+          },
+          {
+            "title": "Browser Privacy",
+            "description": "Your files never leave your device. 100% secure offline-ready architecture."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Supported Formats",
+        "compatibility": "Universal Compatibility Matrix",
+        "input": "Input Formats",
+        "output": "Output Formats",
+        "freeTitle": "100% Free Forever",
+        "freeDesc": "SafeTools is a free utility suite. No subscriptions, no hidden fees, no credit cards required.",
+        "optimizedTitle": "Lossless Optimization",
+        "optimizedDesc": "Our engine uses advanced resampling to ensure your images stay sharp even after conversion.",
+        "precisionTitle": "Browser Precision",
+        "precisionDesc": "By running locally, we eliminate the artifacts caused by network-based image processing.",
+        "popularTitle": "Popular Conversions",
+        "popularSubtitle": "Instant local processing for common web tasks",
+        "moreFormats": "150+ Other Formats",
+        "moreDesc": "Looking for something else? SafeTools supports almost every image format in existence.",
+        "start": "Back to Top"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "How many formats can I convert between?",
+            "a": "You can convert between 150+ image formats, including modern ones like WebP, AVIF, and HEIC, as well as professional formats like PSD, TIFF, and RAW files."
+          },
+          {
+            "q": "Will I lose image quality during conversion?",
+            "a": "We use high-quality encoding engines. You can manually adjust the quality/compression settings to ensure your output looks exactly how you want it, whether you're optimizing for web or print."
+          },
+          {
+            "q": "Can I convert HEIC photos from my iPhone to JPG?",
+            "a": "Yes! Our converter is perfect for transforming HEIC files into widely compatible JPG or PNG formats directly in your browser without uploading them to a server."
+          },
+          {
+            "q": "Is there a limit to the number of files I can convert?",
+            "a": "No. You can convert as many files as you want, one by one or in batches (depending on the tool module), completely for free."
+          }
+        ],
+        "title": "Frequently Asked Questions",
+        "description": "Everything you need to know about our privacy-first tool."
+      }
+    }
+  }
+}

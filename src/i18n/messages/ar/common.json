@@ -1,0 +1,221 @@
+{
+  "common": {
+    "welcome": "مرحباً بكم في SafeTools",
+    "tagline": "أكثر من 150 أداة ملفات عبر الإنترنت تركز على الخصوصية وتعمل محلياً",
+    "upload": "تحميل ملف",
+    "download": "تنزيل",
+    "compress": "ضغط",
+    "convert": "تحويل",
+    "edit": "تعديل",
+    "search": "ابحث في أكثر من 150 أداة...",
+    "privacy": "الخصوصية أولاً",
+    "speed": "سرعة فائقة",
+    "security": "جودة المؤسسات",
+    "systemHealth": {
+      "title": "صحة النظام",
+      "localEngine": "محرك محلي",
+      "localEngineDesc": "تتم المعالجة محلياً بنسبة 100% على جهازك.",
+      "secureSession": "جلسة آمنة",
+      "secureSessionDesc": "بيئة متصفح معزولة لأقصى قدر من الخصوصية.",
+      "online": "متصل",
+      "onlineDesc": "متصل بالإنترنت للحصول على أحدث تحديثات الأدوات.",
+      "offlineReady": "جاهز للعمل دون اتصال",
+      "offlineReadyDesc": "تعمل هذه الأداة بشكل مثالي بدون اتصال بالإنترنت.",
+      "zeroTracking": "بدون تتبع",
+      "zeroTrackingDesc": "لا يتم إرسال أي بيانات إلى خوادمنا للتتبع."
+    },
+    "securityTools": "أدوات الأمان",
+    "privacyTools": "أدوات الخصوصية",
+    "tools": {
+      "vault": "الخزنة الآمنة",
+      "metadataCleaner": "منظف البيانات الوصفية",
+      "fileShredder": "تمزيق الملفات",
+      "secureNotes": "ملاحظات آمنة",
+      "passwordGenerator": "مولد كلمات المرور",
+      "passwordChecker": "فحص قوة كلمة المرور",
+      "ocr": "استخراج OCR",
+      "steganography": "إخفاء المعلومات في الصور",
+      "imageEditor": "محرر الصور",
+      "imageCompressor": "ضاغط الصور",
+      "formatConverter": "محول التنسيقات",
+      "backgroundRemover": "مزيل الخلفية",
+      "colorLab": "مختبر الألوان",
+      "pdfToImage": "تحويل PDF إلى صورة"
+    },
+    "toolsLabel": "الأدوات",
+    "features": "الميزات",
+    "developers": "المطورون",
+    "pricing": "الأسعار",
+    "about": "حول SafeTools",
+    "whyAds": "لماذا نعرض الإعلانات",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "contact": "اتصل بنا",
+    "home": "الرئيسية",
+    "faqLabel": "الأسئلة الشائعة",
+    "blog": "المدونة",
+    "changelog": "سجل التغييرات",
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام",
+    "startFree": "ابدأ مجاناً",
+    "systemStatus": "حالة النظام",
+    "updates": "التحديثات",
+    "feedback": "التعليقات",
+    "contents": "المحتويات",
+    "imageTools": "أدوات الصور",
+    "openTools": "فتح الأدوات",
+    "ready": "جاهز للسيطرة؟",
+    "keyboardShortcut": "K",
+    "status": {
+      "ready": "جاهز",
+      "blocked": "محظور",
+      "success": "نجاح",
+      "error": "خطأ"
+    },
+    "getStarted": "ابدأ الآن",
+    "forever": "للأبد",
+    "step": "خطوة",
+    "dropzone": {
+      "title": "تحميل ملف",
+      "description": "قم بسحب وإفلات ملفك هنا",
+      "secure": "معالجة محلية آمنة",
+      "processedLocally": "تمت المعالجة محلياً",
+      "maxSize": "الحد الأقصى {size} ميجابايت",
+      "noFileChosen": "لم يتم اختيار ملف"
+    },
+    "export": {
+      "ready": "جاهز للتنزيل",
+      "download": "تنزيل",
+      "copy": "نسخ",
+      "copied": "تم النسخ!",
+      "share": "مشاركة",
+      "reset": "إعادة تعيين"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة",
+      "description": "كل ما تحتاج لمعرفته حول هذه الأداة وكيف تحمي خصوصيتك."
+    },
+    "related": {
+      "title": "أدوات احترافية ذات صلة",
+      "subtitle": "استكشف المزيد من الأدوات التي تركز على الخصوصية لسير عملك."
+    },
+    "brand": {
+      "name": "SafeTools",
+      "suffix": "Studio",
+      "desktop": "SafeTools لسطح المكتب",
+      "build": "نسخة 0.4.1",
+      "app": "تطبيق"
+    },
+    "languages": {
+      "select": "اختر اللغة"
+    },
+    "relatedTools": "أدوات إبداعية ذات صلة",
+    "relatedToolsDesc": "استكشف المزيد من الأدوات التي تركز على الخصوصية.",
+    "all": "الكل",
+    "units": {
+      "px": "بكسل",
+      "mb": "ميجابايت",
+      "kb": "كيلوبايت",
+      "s": "ثانية"
+    },
+    "advertisement": "إعلان",
+    "system_health": {
+      "title": "صحة النظام",
+      "localEngine": "محرك محلي",
+      "localEngineDesc": "المعالجة على جهازك",
+      "secureSession": "جلسة آمنة",
+      "secureSessionDesc": "سياق متصفح معزول",
+      "online": "متصل",
+      "onlineDesc": "محسن للسرعة",
+      "offlineReady": "جاهز للعمل دون اتصال",
+      "offlineReadyDesc": "يعمل بكامل طاقته دون اتصال",
+      "zeroTracking": "بدون تتبع",
+      "zeroTrackingDesc": "بنية تركز على الخصوصية"
+    },
+    "values": {
+      "yes": "نعم",
+      "no": "لا",
+      "limited": "محدود"
+    },
+    "pro": {
+      "comingSoon": "نسخة Pro - قريباً",
+      "unlockPower": "افتح المزيد من القوى",
+      "features": [
+        "ملفات أكبر حتى 10 مرات",
+        "معالجة مجمعة غير محدودة",
+        "أولوية في طابور معالجة الخادم",
+        "روابط قابلة للمشاركة (تنتهي بعد 72 ساعة)",
+        "سجل الملفات - آخر 50 عملية",
+        "معالجة من جانب الخادم للملفات الثقيلة"
+      ],
+      "waitlist": "انضم لقائمة الانتظار - 8 دولار/شهر عند الإطلاق",
+      "successTitle": "لقد انضممت للقائمة! 🎉",
+      "successDesc": "سنرسل لك بريداً إلكترونياً عند إطلاق نسخة Pro.",
+      "continueFree": "الاستمرار في النسخة المجانية",
+      "emailPlaceholder": "your@email.com",
+      "join": "انضمام",
+      "validEmail": "يرجى إدخال بريد إلكتروني صحيح.",
+      "waitlistSuccess": "أنت الآن في قائمة الانتظار! سنقوم بإخطارك عند إطلاق نسخة Pro.",
+      "freeLimit": "الحد المجاني: {limit}",
+      "proLimit": "حد نسخة Pro: {limit}",
+      "yourFile": "ملفك: {size}"
+    },
+    "disclaimer": {
+      "understand": "أفهم - استمرار",
+      "responsibility": "من خلال الاستمرار، فإنك تقبل المسؤولية الكاملة عن استخدامك لهذه الأداة."
+    },
+    "toast": {
+      "linkCopied": "تم نسخ الرابط إلى الحافظة"
+    },
+    "seo": {
+      "browserReqs": "يتطلب JavaScript و WebAssembly"
+    },
+    "aria": {
+      "goHome": "الذهاب إلى الرئيسية",
+      "toggleTheme": "تبديل المظهر",
+      "faq": "الأسئلة الشائعة",
+      "changeLanguage": "تغيير اللغة",
+      "close": "إغلاق",
+      "menu": "القائمة",
+      "openTools": "فتح قائمة الأدوات",
+      "exploreTools": "استكشاف جميع الأدوات",
+      "platformFeatures": "ميزات المنصة",
+      "privacyCommitment": "الالتزام بالخصوصية",
+      "developerApi": "واجهة برمجة المطورين والوثائق",
+      "pricingPlans": "خطط الأسعار"
+    },
+    "shareTool": {
+      "title": "انشر الخصوصية",
+      "subtitle": "دعم الحوسبة المحلية أولاً",
+      "copyLink": "نسخ الرابط",
+      "copied": "تم النسخ",
+      "twitter": "اطلع على هذه الأداة الخاصة وبدون رفع لـ {title}:",
+      "telegram": "معالجة ملفات آمنة مع SafeTools: {title}"
+    },
+    "Navbar": {
+      "categories": {
+        "pdf": "حلول PDF",
+        "image": "استوديو الصور",
+        "privacy": "أدوات الخصوصية",
+        "developer": "أدوات المطورين",
+        "pdfMerge": "دمج PDF",
+        "pdfSplit": "تقسيم PDF",
+        "pdfUnlock": "فك قفل PDF",
+        "pdfProtect": "حماية PDF",
+        "pdfToImage": "تحويل PDF إلى صورة",
+        "securityFileShredder": "تمزيق الملفات"
+      }
+    },
+    "error": "خطأ"
+  },
+  "trust": {
+    "points": {
+      "processedLocally": "معالجة محلية 100%",
+      "noUploads": "بدون رفع ملفات للخادم",
+      "noTracking": "بدون تتبع للبيانات",
+      "privacyFirst": "تجربة مستخدم تركز على الخصوصية",
+      "worksOffline": "يعمل دون اتصال"
+    }
+  }
+}

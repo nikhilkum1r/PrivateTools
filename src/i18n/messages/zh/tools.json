@@ -1,0 +1,186 @@
+{
+  "tools": {
+    "seo": {
+      "title": "所有私密工具 | SafeTools - 安全与本地处理",
+      "description": "访问我们完整的隐私优先本地工具套件。包括图片编辑、PDF 处理、文件加密和开发者工具。100% 私密，基于浏览器。",
+      "keywords": "私密工具, 本地处理工具, 安全在线工具, 图片工具, PDF 工具, 开发者工具",
+      "ogTitle": "SafeTools | 所有工具中心",
+      "ogDescription": "探索我们全系列的 100% 私密浏览器端工具。"
+    },
+    "categories": {
+      "All": "全部",
+      "Creative": "创意",
+      "Documents": "文档",
+      "Media": "媒体",
+      "Security": "安全",
+      "Dev": "开发"
+    },
+    "data": {
+      "/image/editor": {
+        "title": "编辑图片",
+        "desc": "包含 OCR、滤镜、裁剪和批量导出的专业编辑器。"
+      },
+      "/image/remove-background": {
+        "title": "AI 背景移除",
+        "desc": "利用本地神经引擎在浏览器中即时移除图片背景。"
+      },
+      "/image/ocr": {
+        "title": "从图片提取文本 (OCR)",
+        "desc": "使用神经识别技术从图片中提取文本。"
+      },
+      "/image/convert": {
+        "title": "转换图片格式",
+        "desc": "转换 150 多种格式：HEIC、WebP、AVIF、RAW、PDF。"
+      },
+      "/image/compress": {
+        "title": "压缩图片 (KB/MB)",
+        "desc": "通过目标大小控制将任何图片缩小高达 90%。"
+      },
+      "/image/colors": {
+        "title": "提取图片颜色",
+        "desc": "从任何图片提取调色板、HEX、RGB 和 HSL。"
+      },
+      "/image/to-pptx": {
+        "title": "图片转 PPTX",
+        "desc": "将图片转换为专业的 PowerPoint 演示文稿。"
+      },
+      "/devtools/icons": {
+        "title": "应用图标工作室",
+        "desc": "即时生成 iOS、Android 和 PWA 图标包。"
+      },
+      "/pdf/merge-pdf": {
+        "title": "PDF 合并",
+        "desc": "将多个 PDF 和图片合并为一个文档。"
+      },
+      "/pdf/split-pdf": {
+        "title": "PDF 拆分",
+        "desc": "提取特定页面或拆分为单独文件。"
+      },
+      "/pdf/compress-pdf": {
+        "title": "压缩 PDF",
+        "desc": "在本地缩小 PDF 文件且不损失质量。"
+      },
+      "/pdf/unlock-pdf": {
+        "title": "解锁 PDF",
+        "desc": "移除 PDF 的密码保护。"
+      },
+      "/pdf/protect-pdf": {
+        "title": "保护 PDF",
+        "desc": "在本地为 PDF 添加强密码保护。"
+      },
+      "/document/word-to-pdf": {
+        "title": "Word 转 PDF",
+        "desc": "将 DOCX 转换为专业的 PDF 文档。"
+      },
+      "/document/pdf-to-txt": {
+        "title": "PDF 转文本",
+        "desc": "从任何 PDF 提取文本层。"
+      },
+      "/pdf/to-image": {
+        "title": "PDF 转图片",
+        "desc": "将 PDF 文档转换为高质量图片。"
+      },
+      "/document/text-tools/case-converter": {
+        "title": "大小写转换",
+        "desc": "即时转换文本大小写。"
+      },
+      "/document/text-tools/word-counter": {
+        "title": "字数统计",
+        "desc": "实时字符和单词分析。"
+      },
+      "/security/metadata-cleaner": {
+        "title": "元数据清理",
+        "desc": "在本地删除隐藏数据、EXIF 和 GPS 追踪。"
+      },
+      "/image/metadata-cleaner": {
+        "title": "元数据清理",
+        "desc": "在本地删除隐藏数据、EXIF 和 GPS 追踪。"
+      },
+      "/security/vault": {
+        "title": "安全保险箱",
+        "desc": "AES-256 GCM 客户端文件加密。"
+      },
+      "/privacy/password-generator": {
+        "title": "密码生成器",
+        "desc": "生成高熵安全密码。"
+      },
+      "/privacy/password-checker": {
+        "title": "密码检查器",
+        "desc": "在本地分析密码强度。"
+      },
+      "/privacy/privacy-scanner": {
+        "title": "隐私扫描器",
+        "desc": "审计您的浏览器安全性和匿名性。"
+      },
+      "/privacy/secure-notes": {
+        "title": "安全笔记",
+        "desc": "在本地创建加密的自毁笔记。"
+      },
+      "/security/file-shredder": {
+        "title": "文件粉碎机",
+        "desc": "从内存中永久擦除敏感文件。"
+      },
+      "/security/steganography": {
+        "title": "隐写术",
+        "desc": "在图片中隐形地隐藏秘密信息。"
+      },
+      "/tools/qr-generator": {
+        "title": "二维码生成器",
+        "desc": "生成并扫描具有自定义样式的二维码。"
+      },
+      "/privacy/qr-generator": {
+        "title": "二维码生成器",
+        "desc": "生成并扫描具有自定义样式的二维码。"
+      },
+      "/devtools": {
+        "title": "开发工具",
+        "desc": "JSON 格式化、Base64 等。"
+      },
+      "/devtools/data-converter": {
+        "title": "数据转换器",
+        "desc": "安全地将 JSON 转换为 CSV 及其反向转换。"
+      },
+      "/devtools/base64": {
+        "title": "Base64 工作室",
+        "desc": "安全地对文本和图片进行编码和解码。"
+      },
+      "/devtools/json": {
+        "title": "JSON 格式化和验证器",
+        "desc": "在本地美化、压缩和验证 JSON 数据。"
+      },
+      "/devtools/hash": {
+        "title": "哈希生成器",
+        "desc": "在本地生成 SHA-256、SHA-512 和 MD5 哈希。"
+      },
+      "/devtools/jwt": {
+        "title": "JWT 调试器",
+        "desc": "安全地解码和检查 JWT 令牌。"
+      },
+      "/devtools/url": {
+        "title": "URL 编码和解码器",
+        "desc": "安全地对 URL 和 URI 组件进行编码和解码。"
+      },
+      "/devtools/uuid": {
+        "title": "UUID v4 工厂",
+        "desc": "生成加密安全的第 4 版 UUID。"
+      },
+      "/devtools/timestamp": {
+        "title": "Unix 时间戳转换器",
+        "desc": "在 Unix 时间戳和日期之间进行转换。"
+      },
+      "/devtools/lorem": {
+        "title": "Lorem Ipsum 生成器",
+        "desc": "为设计生成占位文本。"
+      },
+      "/ai": {
+        "title": "AI 实验室",
+        "desc": "本地优先 AI 模型的实验游乐场。"
+      },
+      "/document/master": {
+        "title": "文档大师",
+        "desc": "适用于 Office 文件的通用文档查看器和编辑器。"
+      }
+    },
+    "openTool": "打开工具"
+  }
+}

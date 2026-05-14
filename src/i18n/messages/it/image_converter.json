@@ -1,0 +1,190 @@
+{
+  "imageConverter": {
+    "seo": {
+      "title": "Studio di Conversione Immagini | 150+ Formati Supportati | SafeTools",
+      "description": "Converti immagini tra oltre 150 formati localmente nel tuo browser. Supporto per HEIC, WebP, AVIF, RAW, PDF e altro. 100% privato."
+    },
+    "hero": {
+      "title": "Convertitore di Immagini Universale.",
+      "titleSpecific": "Converti {from} in {to}.",
+      "description": "Converti immagini tra oltre 150 formati localmente nel tuo browser. Zero caricamenti sul server.",
+      "descriptionSpecific": "Converti {from} in {to} istantaneamente. Elaborazione locale con priorità alla privacy senza caricamenti.",
+      "engine": "Elaborazione Hardware Locale",
+      "privateConverter": "Motore Browser Privato"
+    },
+    "benefits": {
+      "local": "Motore Locale",
+      "zero": "Zero Caricamenti",
+      "no_tracking": "Nessun Tracciamento",
+      "fast": "Ultra Veloce",
+      "browser": "Nel Browser"
+    },
+    "performance": {
+      "title": "Motore ad Alte Prestazioni",
+      "subtitle": "Elaborazione Browser Accelerata da GPU",
+      "items": [
+        {
+          "title": "150+ Formati",
+          "description": "Supporto per tutto, da HEIC e RAW ai vecchi formati bitmap."
+        },
+        {
+          "title": "Elaborazione batch",
+          "description": "Converti centinaia di immagini contemporaneamente senza raggiungere i limiti del server."
+        },
+        {
+          "title": "Qualità senza perdite",
+          "description": "Gli algoritmi di ricampionamento avanzati preservano ogni pixel dei tuoi dati originali."
+        },
+        {
+          "title": "OCR locale",
+          "description": "Estrai livelli di testo durante la conversione utilizzando motori di riconoscimento integrati."
+        },
+        {
+          "title": "Controllo dei metadati",
+          "description": "Scegli se rimuovere o preservare i livelli di dati EXIF, GPS e IPTC."
+        },
+        {
+          "title": "Privacy del browser",
+          "description": "I tuoi file non lasciano mai il tuo dispositivo. Architettura 100% sicura pronta per l'uso offline."
+        }
+      ]
+    },
+    "workspace": {
+      "title": "Area di lavoro di conversione",
+      "assets": "{count} Asset",
+      "telemetry": "Elaborazione Hardware Locale",
+      "savings": "Risparmio attuale",
+      "smaller": "{size} più piccolo",
+      "impact": "Impatto globale",
+      "saved": "{size} risparmiati",
+      "clear": "Pulisci area di lavoro",
+      "addMore": "Aggiungi file",
+      "exportAll": "Esporta tutto (ZIP)"
+    },
+    "config": {
+      "title": "Impostazioni globali",
+      "format": "Formato di destinazione",
+      "selectFormat": "Seleziona formato",
+      "search": "Cerca oltre 150 formati...",
+      "quality": "Qualità e compressione",
+      "resizeW": "Ridimensiona larghezza",
+      "resizeH": "Ridimensiona altezza",
+      "auto": "Auto",
+      "px": "PX",
+      "metadata": "Controllo dei metadati",
+      "strip": "Rimuovi EXIF/GPS (Abilitato)",
+      "wasm": "Motore WASM",
+      "accelerated": "Hardware accelerato",
+      "targetSize": "Dimensione file target",
+      "limit": "Limita a {size}KB",
+      "optimized": "Qualità ottimizzata"
+    },
+    "categories": {
+      "regular": "Formati standard",
+      "web": "Ottimizzato per il Web",
+      "modern": "Formati di nuova generazione",
+      "print": "Stampa professionale",
+      "design": "Asset di design",
+      "game": "Texture di gioco",
+      "raw": "Dati fotocamera RAW",
+      "scientific": "Imaging scientifico",
+      "vector": "Grafica vettoriale",
+      "hdr": "High Dynamic Range",
+      "document": "Ufficio e documenti",
+      "legacy": "Formati obsoleti"
+    },
+    "queue": {
+      "title": "Coda di conversione",
+      "converted": "Convertito",
+      "in": "ENTRATA",
+      "out": "USCITA",
+      "smaller": "{percent}% più piccolo",
+      "download": "Scarica",
+      "convert": "Converti",
+      "convert_all": "Converti tutti i file"
+    },
+    "toast": {
+      "noProcessed": "Nessun file elaborato da scaricare.",
+      "copied": "Immagine copiata negli appunti!",
+      "clipboardFailed": "Impossibile copiare l'immagine negli appunti."
+    },
+    "landing": {
+      "benefits": {
+        "local": "Motore Locale",
+        "zero": "Zero Caricamenti",
+        "no_tracking": "Nessun Tracciamento",
+        "fast": "Ultra Veloce",
+        "browser": "Nel Browser"
+      },
+      "performance": {
+        "title": "Motore ad Alte Prestazioni",
+        "subtitle": "Elaborazione Browser Accelerata da GPU",
+        "items": [
+          {
+            "title": "150+ Formati",
+            "description": "Supporto per tutto, da HEIC e RAW ai vecchi formati bitmap."
+          },
+          {
+            "title": "Elaborazione batch",
+            "description": "Converti centinaia di immagini contemporaneamente senza raggiungere i limiti del server."
+          },
+          {
+            "title": "Qualità senza perdite",
+            "description": "Gli algoritmi di ricampionamento avanzati preservano ogni pixel dei tuoi dati originali."
+          },
+          {
+            "title": "OCR locale",
+            "description": "Estrai livelli di testo durante la conversione utilizzando motori di riconoscimento integrati."
+          },
+          {
+            "title": "Controllo dei metadati",
+            "description": "Scegli se rimuovere o preservare i livelli di dati EXIF, GPS e IPTC."
+          },
+          {
+            "title": "Privacy del browser",
+            "description": "I tuoi file non lasciano mai il tuo dispositivo. Architettura 100% sicura pronta per l'uso offline."
+          }
+        ]
+      },
+      "footer": {
+        "formats": "Formati supportati",
+        "compatibility": "Matrice di compatibilità universale",
+        "input": "Formati di input",
+        "output": "Formati di output",
+        "freeTitle": "100% gratuito per sempre",
+        "freeDesc": "SafeTools è una suite di utility gratuita. Nessun abbonamento, nessun costo nascosto, nessuna carta di credito richiesta.",
+        "optimizedTitle": "Ottimizzazione senza perdite",
+        "optimizedDesc": "Il nostro motore utilizza un ricampionamento avanzato per garantire che le tue immagini rimangano nitide anche dopo la conversione.",
+        "precisionTitle": "Precisione del browser",
+        "precisionDesc": "Eseguendo l'elaborazione localmente, eliminiamo gli artefatti causati dall'elaborazione delle immagini basata sulla rete.",
+        "popularTitle": "Conversioni popolari",
+        "popularSubtitle": "Elaborazione locale istantanea per le attività web comuni",
+        "moreFormats": "150+ altri formati",
+        "moreDesc": "Cerchi qualcos'altro? SafeTools supporta quasi tutti i formati di immagine esistenti.",
+        "start": "Torna su"
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Tra quanti formati posso convertire?",
+            "a": "Puoi convertire tra oltre 150 formati di immagine, inclusi quelli moderni come WebP, AVIF e HEIC, oltre a formati professionali come PSD, TIFF e file RAW."
+          },
+          {
+            "q": "Perderò la qualità dell'immagine durante la conversione?",
+            "a": "Utilizziamo motori di codifica di alta qualità. Puoi regolare manualmente le impostazioni di qualità/compressione per assicurarti che l'output sia esattamente come lo desideri, che tu stia ottimizzando per il web o per la stampa."
+          },
+          {
+            "q": "Posso convertire le foto HEIC dal mio iPhone in JPG?",
+            "a": "Sì! Il nostro convertitore è perfetto per trasformare i file HEIC in formati JPG o PNG ampiamente compatibili direttamente nel tuo browser senza caricarli su un server."
+          },
+          {
+            "q": "C'è un limite al numero di file che posso convertire?",
+            "a": "No. Puoi convertire tutti i file che desideri, uno per uno o in batch, in modo completamente gratuito."
+          }
+        ],
+        "title": "Domande frequenti",
+        "description": "Tutto quello che c'è da sapere sul nostro strumento che privilegia la privacy."
+      }
+    }
+  }
+}

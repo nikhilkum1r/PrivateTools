@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Webbläsarverktyg av professionell kvalitet designade för integritet och hastighet. Över 150 verktyg som körs helt på din enhet.",
+    "tagline": "Dina data tillhör dig.",
+    "localEngineActive": "Lokal motor aktiv",
+    "isolatedContextVerified": "Isolerad kontext verifierad",
+    "verifiedSupport": "Verifierad webbläsarkompatibilitet",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Produkt",
+    "resources": "Resurser",
+    "community": "Community",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Alla system lokala",
+    "faq": "FAQ"
+  }
+}

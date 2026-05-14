@@ -1,0 +1,85 @@
+{
+  "devtools": {
+    "seo": {
+      "title": "مركز المطورين | أدوات مطورين احترافية وخاصة | SafeTools",
+      "description": "أدوات مطورين بمستوى احترافي تعمل بالكامل في متصفحك. منسق JSON، ومصحح JWT، وترميز Base64، والمزيد.",
+      "ogTitle": "SafeTools Developer Hub | خاص بنسبة 100%",
+      "ogDescription": "مجموعة أدوات المطورين السيادية مع صفر تفاعل مع الخادم.",
+      "seoName": "SafeTools Developer Hub",
+      "seoDescription": "مجموعة احترافية من أدوات المطورين (محلي أولاً)."
+    },
+    "matrix": "مصفوفة الأدوات",
+    "toolkit": "مجموعة أدوات التطوير السيادية",
+    "local": "تنفيذ محلي",
+    "wasm_optimized": "محسن لـ WASM",
+    "buffered_stream": "تدفق مخزن مؤقتاً",
+    "input_buffer": "مخزن الإدخال",
+    "source": "المصدر",
+    "input_placeholder": "الصق تدفق البيانات هنا...",
+    "characters": "{count} حرف",
+    "processed_output": "المخرجات المعالجة",
+    "copy_result": "نسخ النتيجة",
+    "copied": "تم النسخ",
+    "synthesizing": "جاري التوليف...",
+    "output_placeholder": "ستظهر المخرجات هنا...",
+    "clear": "مسح",
+    "re_execute": "إعادة التنفيذ",
+    "bit_inspector": "مفتش البتات",
+    "telemetry": "قياس الجلسة عن بعد",
+    "metadata_matrix": "مصفوفة البيانات الوصفية",
+    "execution_time": "وقت التنفيذ",
+    "memory_pressure": "ضغط الذاكرة",
+    "bit_entropy": "عشوائية البتات",
+    "sovereign_guard": "الحارس السيادي",
+    "privacy_notice": "تم بناء أدوات المطورين في SafeTools على مبدأ المعالجة المحلية فقط. بياناتك لا تلمس خوادمنا أبداً.",
+    "quick_actions": "إجراءات سريعة",
+    "minify": "تصغير (Minify)",
+    "beautify": "تنسيق (Beautify)",
+    "escape": "تخطي (Escape)",
+    "unescape": "إلغاء التخطي (Unescape)",
+    "secured_session": "جلسة مؤمنة",
+    "tools": {
+      "json": {
+        "name": "منسق JSON",
+        "desc": "تنسيق والتحقق من صحة بيانات JSON."
+      },
+      "base64": {
+        "name": "ترميز Base64",
+        "desc": "تشفير وفك تشفير النصوص والصور."
+      },
+      "hash": {
+        "name": "مولد الهاش",
+        "desc": "توليد تواقيع SHA-256."
+      },
+      "jwt": {
+        "name": "مصحح JWT",
+        "desc": "فك تشفير رموز JSON Web Tokens."
+      },
+      "url": {
+        "name": "مشفر URL",
+        "desc": "تشفير وفك تشفير روابط URL بأمان."
+      },
+      "uuid": {
+        "name": "مولد UUID",
+        "desc": "توليد معرفات UUID v4 آمنة."
+      },
+      "timestamp": {
+        "name": "طابع وقت يونكس",
+        "desc": "تحويل Epoch إلى تاريخ ISO."
+      },
+      "lorem": {
+        "name": "نص لوريم",
+        "desc": "مولد نصوص حجز المكان."
+      }
+    },
+    "messages": {
+      "copySuccess": "تم النسخ إلى الحافظة!",
+      "invalidJson": "خطأ: حمولة JSON غير صالحة.",
+      "base64Error": "خطأ: فشلت عملية Base64.",
+      "invalidJwt": "خطأ: هيكل JWT غير صالح.",
+      "urlError": "خطأ: فشل ترميز URL.",
+      "processingError": "خطأ فادح: خلل في محرك التنفيذ.",
+      "loremContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

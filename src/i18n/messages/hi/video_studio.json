@@ -1,0 +1,157 @@
+{
+  "videoStudio": {
+    "seo": {
+      "title": "Video Studio Pro | Private & Fast Video Processing | SafeTools",
+      "description": "The ultimate local video processing studio. 100% private, zero server uploads, professional-grade output.",
+      "keywords": "video tools, local video processing, webassembly video",
+      "ogTitle": "Video Studio | SafeTools",
+      "ogDescription": "Process videos entirely locally using WebAssembly. High performance, zero uploads."
+    },
+    "hero": {
+      "title": "Universal Video Studio",
+      "subtitle": "Professional-grade video processing with zero server interaction.",
+      "button": "Import Media"
+    },
+    "settings": {
+      "title": "Studio Matrix",
+      "execution": "WASM Thread Execution",
+      "version": "v2.0 Pro",
+      "format": "Target Pipeline",
+      "quality": "Output Quality",
+      "resolution": "Resolution",
+      "formats": {
+        "mp4": "MP4 (H.264 Engine)",
+        "webm": "WebM (VP9 Engine)",
+        "mkv": "MKV (Matroska Suite)",
+        "gif": "GIF (Animated Studio)"
+      },
+      "resolutions": {
+        "original": "Keep Original",
+        "1080p": "1080p Full HD",
+        "720p": "720p HD",
+        "480p": "480p SD"
+      }
+    },
+    "sidebar": {
+      "inspector": "Inspector",
+      "engine": "WASM V2.0 ENGINE",
+      "tabs": {
+        "pipeline": "Pipeline",
+        "filters": "Filters",
+        "timeline": "Timeline"
+      },
+      "quality": "Encoding Quality",
+      "qualityRange": {
+        "high": "High Quality (0)",
+        "low": "Max Compression (51)"
+      },
+      "preset": "Processing Speed",
+      "presetHint": "Faster presets use less CPU but may result in slightly larger files.",
+      "protocol": "Transport Protocol",
+      "resolution": "Output Resolution",
+      "resolutions": {
+        "original": "Native Matrix",
+        "1080p": "HD 1080p",
+        "720p": "HD 720p",
+        "480p": "SD 480p",
+        "360p": "Mobile 360p"
+      },
+      "mute": "Mute Audio",
+      "muteHint": "Strip all audio tracks from the output.",
+      "blur": "Privacy Blur",
+      "blurHint": "Apply Gaussian blur to sensitive regions.",
+      "zones": "Blur Zones",
+      "regions": "Regions",
+      "region_area": "Area",
+      "region_offset": "Offset",
+      "dragHint": "Drag on preview to add blur zone",
+      "resetZones": "Reset Zones",
+      "rotation": "Rotation",
+      "velocity": "Playback Velocity",
+      "velocities": {
+        "v0_5": "0.5x (Slow Motion)",
+        "v1_0": "1.0x (Standard)",
+        "v1_5": "1.5x (Accelerated)",
+        "v2_0": "2.0x (Hyperlapse)"
+      },
+      "trim": "Precision Trim",
+      "segmentStart": "Segment Start",
+      "segmentEnd": "Segment End",
+      "runtime": "Total Runtime",
+      "rendering": "Rendering...",
+      "export": "Export Asset"
+    },
+    "workspace": {
+      "mounted": "Engine Mounted",
+      "capture": "Capture Snapshot",
+      "engineFeed": "Engine Feed",
+      "history": "Asset History",
+      "historyDesc": "Previous versions in this session",
+      "success": "Success",
+      "exportAsset": "Export Final Asset",
+      "precisionFrames": "Precision Frames",
+      "units": "UNITS",
+      "sessionIdle": "Studio Session Idle",
+      "guard": "Privacy Guard Active"
+    },
+    "queue": {
+      "master_ready": "Master Ready",
+      "success": "Success",
+      "target": "Target",
+      "download": "Export Master Asset",
+      "active_asset": "Active Studio Asset",
+      "processing_frame": "Processing Local Frame"
+    },
+    "landing": {
+      "faq": {
+        "title": "Video Studio FAQ",
+        "description": "Commonly asked questions about our private, browser-based video processing tool.",
+        "items": [
+          {
+            "q": "Can I compress large video files in my browser?",
+            "a": "Yes! Our Video Studio uses a high-performance FFmpeg WASM engine that runs locally. You can compress MP4, MOV, and WebM files directly in your browser without uploading them to a server, ensuring 100% privacy for your personal videos."
+          },
+          {
+            "q": "Is there a file size limit for video conversion?",
+            "a": "Since the processing happens locally, the limit depends on your device's RAM and browser capabilities. Most modern browsers can handle files up to 500MB-1GB smoothly."
+          },
+          {
+            "q": "What video formats can I convert between?",
+            "a": "We support major formats like MP4, WebM, MOV, and GIF. You can also extract audio from videos and convert it to MP3 or WAV formats."
+          }
+        ]
+      }
+    },
+    "messages": {
+      "engineReady": "Engine ready for {name}",
+      "engineMounted": "Engine Ready. Asset Mounted: {name}",
+      "engineLoadFailed": "WASM Engine failed to boot. Check browser logs.",
+      "successExport": "Asset rendered successfully.",
+      "renderingComplete": "Export complete!",
+      "rendering": "Rendering",
+      "errorExport": "Rendering failed: {error}",
+      "renderingFailed": "Export failed: {error}",
+      "pipelineFailed": "Pipeline failed.",
+      "checkLogs": "Check engine logs.",
+      "snapshotSuccess": "Frame Captured",
+      "snapshotFailed": "Capture Failed",
+      "trimUpdated": "Trim points updated"
+    },
+    "title": "वीडियो स्टूडियो",
+    "description": "प्रोफेशनल वीडियो प्रोसेसिंग - ट्रिम करें, म्यूट करें और फॉर्मेट बदलें। 100% प्राइवेट।",
+    "controls": {
+      "import": "वीडियो लाएँ",
+      "trim": "ट्रिम (Trim)",
+      "mute": "म्यूट (Mute)",
+      "export": "वीडियो एक्सपोर्ट करें",
+      "quality": "क्वालिटी",
+      "speed": "प्लेबैक स्पीड"
+    },
+    "status": {
+      "loading": "वीडियो इंजन लोड हो रहा है...",
+      "rendering": "वीडियो तैयार हो रहा है...",
+      "success": "वीडियो सफलतापूर्वक तैयार!",
+      "error": "वीडियो प्रोसेसिंग फेल"
+    }
+  }
+}

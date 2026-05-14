@@ -1,0 +1,186 @@
+{
+  "tools": {
+    "seo": {
+      "title": "Alle privaten Tools | SafeTools - Sichere & lokale Verarbeitung",
+      "description": "Greifen Sie auf unsere vollständige Suite von Privacy-First-Tools zu. Bildbearbeitung, PDF-Manipulation, Dateiverschlüsselung und Entwickler-Utilities. 100 % privat, browserbasiert.",
+      "keywords": "private Tools, lokale Verarbeitungstools, sichere Online-Tools, Bildtools, PDF-Tools, Entwickler-Utilities",
+      "ogTitle": "SafeTools | Alle Tools Hub",
+      "ogDescription": "Entdecken Sie unser gesamtes Sortiment an 100 % privaten, browserbasierten Tools."
+    },
+    "categories": {
+      "All": "Alle",
+      "Creative": "Kreativ",
+      "Documents": "Dokumente",
+      "Media": "Medien",
+      "Security": "Sicherheit",
+      "Dev": "Dev"
+    },
+    "data": {
+      "/image/editor": {
+        "title": "Bilder bearbeiten",
+        "desc": "Pro-Editor mit OCR, Filtern, Zuschneiden und Batchexport."
+      },
+      "/image/remove-background": {
+        "title": "KI-Hintergrundentferner",
+        "desc": "Entfernen Sie Hintergründe sofort im Browser mit lokalen neuronalen Engines."
+      },
+      "/image/ocr": {
+        "title": "Text aus Bild extrahieren (OCR)",
+        "desc": "Extrahieren Sie Text aus Bildern mittels neuronaler Erkennung."
+      },
+      "/image/convert": {
+        "title": "Bildformat konvertieren",
+        "desc": "Konvertieren Sie 150+ Formate: HEIC, WebP, AVIF, RAW, PDF."
+      },
+      "/image/compress": {
+        "title": "Bild komprimieren (KB/MB)",
+        "desc": "Verkleinern Sie jedes Bild um bis zu 90 % mit Zielgrößensteuerung."
+      },
+      "/image/colors": {
+        "title": "Farben aus Bild extrahieren",
+        "desc": "Paletten, HEX, RGB und HSL aus jedem Bild."
+      },
+      "/image/to-pptx": {
+        "title": "Bild zu PPTX",
+        "desc": "Verwandeln Sie Bilder in professionelle PowerPoint-Präsentationen."
+      },
+      "/devtools/icons": {
+        "title": "App Icon Studio",
+        "desc": "Erstellen Sie sofort iOS-, Android- und PWA-Icon-Bundles."
+      },
+      "/pdf/merge-pdf": {
+        "title": "PDF-Zusammenführung",
+        "desc": "Kombinieren Sie mehrere PDFs und Bilder in einem Dokument."
+      },
+      "/pdf/split-pdf": {
+        "title": "PDF-Teiler",
+        "desc": "Extrahieren Sie bestimmte Seiten oder teilen Sie sie in separate Dateien auf."
+      },
+      "/pdf/compress-pdf": {
+        "title": "PDF komprimieren",
+        "desc": "Verkleinern Sie PDF-Dateien lokal ohne Qualitätsverlust."
+      },
+      "/pdf/unlock-pdf": {
+        "title": "PDF entsperren",
+        "desc": "Entfernen Sie den Passwortschutz von PDFs."
+      },
+      "/pdf/protect-pdf": {
+        "title": "PDF schützen",
+        "desc": "Fügen Sie PDFs lokal einen starken Passwortschutz hinzu."
+      },
+      "/document/word-to-pdf": {
+        "title": "Word zu PDF",
+        "desc": "Konvertieren Sie DOCX in professionelle PDF-Dokumente."
+      },
+      "/document/pdf-to-txt": {
+        "title": "PDF zu Text",
+        "desc": "Extrahieren Sie Textebenen aus jedem PDF."
+      },
+      "/pdf/to-image": {
+        "title": "PDF zu Bild",
+        "desc": "Konvertieren Sie PDF-Dokumente in hochwertige Bilder."
+      },
+      "/document/text-tools/case-converter": {
+        "title": "Groß-/Kleinschreibung-Konverter",
+        "desc": "Ändern Sie die Textschreibweise sofort."
+      },
+      "/document/text-tools/word-counter": {
+        "title": "Wortzähler",
+        "desc": "Echtzeit-Analyse von Zeichen und Wörtern."
+      },
+      "/security/metadata-cleaner": {
+        "title": "Metadaten-Reiniger",
+        "desc": "Entfernen Sie versteckte Daten, EXIF und GPS-Tracking lokal."
+      },
+      "/image/metadata-cleaner": {
+        "title": "Metadaten-Reiniger",
+        "desc": "Entfernen Sie versteckte Daten, EXIF und GPS-Tracking lokal."
+      },
+      "/security/vault": {
+        "title": "Sicherer Tresor",
+        "desc": "Clientseitige AES-256 GCM Dateiverschlüsselung."
+      },
+      "/privacy/password-generator": {
+        "title": "Passwort-Generator",
+        "desc": "Erzeugen Sie sichere Passwörter mit hoher Entropie."
+      },
+      "/privacy/password-checker": {
+        "title": "Passwort-Prüfer",
+        "desc": "Analysieren Sie die Passwortstärke lokal."
+      },
+      "/privacy/privacy-scanner": {
+        "title": "Privacy-Scanner",
+        "desc": "Überprüfen Sie Ihre Browser-Sicherheit und Anonymität."
+      },
+      "/privacy/secure-notes": {
+        "title": "Sichere Notizen",
+        "desc": "Erstellen Sie verschlüsselte, selbstzerstörende Notizen lokal."
+      },
+      "/security/file-shredder": {
+        "title": "Aktenvernichter",
+        "desc": "Löschen Sie sensible Dateien dauerhaft aus dem Speicher."
+      },
+      "/security/steganography": {
+        "title": "Steganographie",
+        "desc": "Verstecken Sie geheime Botschaften unsichtbar in Bildern."
+      },
+      "/tools/qr-generator": {
+        "title": "QR-Generator",
+        "desc": "Erstellen und scannen Sie QR-Codes mit eigenem Styling."
+      },
+      "/privacy/qr-generator": {
+        "title": "QR-Generator",
+        "desc": "Erstellen und scannen Sie QR-Codes mit eigenem Styling."
+      },
+      "/devtools": {
+        "title": "Entwickler-Utilities",
+        "desc": "JSON-Formatierer, Base64 und mehr."
+      },
+      "/devtools/data-converter": {
+        "title": "Daten-Konverter",
+        "desc": "Konvertieren Sie JSON sicher in CSV und zurück."
+      },
+      "/devtools/base64": {
+        "title": "Base64 Studio",
+        "desc": "Kodieren und dekodieren Sie Text und Bilder sicher."
+      },
+      "/devtools/json": {
+        "title": "JSON Formatter & Validator",
+        "desc": "JSON-Daten lokal verschönern, minimieren und validieren."
+      },
+      "/devtools/hash": {
+        "title": "Hash-Generator",
+        "desc": "SHA-256, SHA-512 und MD5 Hashes lokal generieren."
+      },
+      "/devtools/jwt": {
+        "title": "JWT Debugger",
+        "desc": "JWT-Tokens sicher dekodieren und inspizieren."
+      },
+      "/devtools/url": {
+        "title": "URL Encoder & Decoder",
+        "desc": "URLs und URI-Komponenten sicher kodieren und dekodieren."
+      },
+      "/devtools/uuid": {
+        "title": "UUID v4 Factory",
+        "desc": "Kryptografisch sichere Version 4 UUIDs generieren."
+      },
+      "/devtools/timestamp": {
+        "title": "Unix Timestamp Converter",
+        "desc": "Konvertieren zwischen Unix-Epochenzeit und Daten."
+      },
+      "/devtools/lorem": {
+        "title": "Lorem Ipsum Generator",
+        "desc": "Platzhaltertext für Designs generieren."
+      },
+      "/ai": {
+        "title": "KI-Labor",
+        "desc": "Experimentelles Feld für lokale KI-Modelle."
+      },
+      "/document/master": {
+        "title": "Docs Master",
+        "desc": "Universeller Dokumentbetrachter & -editor für Office-Dateien."
+      }
+    },
+    "openTool": "Tool öffnen"
+  }
+}

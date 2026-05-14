@@ -1,0 +1,23 @@
+{
+  "footer": {
+    "brand": "Herramientas de navegador de grado profesional diseñadas para la privacidad y la velocidad. Más de 150 utilidades que se ejecutan completamente en su dispositivo.",
+    "tagline": "Sus datos le pertenecen.",
+    "localEngineActive": "Motor local activo",
+    "isolatedContextVerified": "Contexto aislado verificado",
+    "verifiedSupport": "Compatibilidad de navegador verificada",
+    "browsers": {
+      "chrome": "Chrome",
+      "firefox": "Firefox",
+      "edge": "Edge",
+      "safari": "Safari",
+      "android": "Android",
+      "iphone": "iPhone"
+    },
+    "product": "Producto",
+    "resources": "Recursos",
+    "community": "Comunidad",
+    "copyright": "© 2026 SafeTools. Space.",
+    "systemsLocal": "Todos los sistemas locales",
+    "faq": "Preguntas frecuentes"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "fileShredder": {
+    "seo": {
+      "title": "Trituradora de Archivos Segura | Eliminar Archivos Permanentemente | SafeTools",
+      "description": "Elimine de forma segura archivos sensibles y reduzca los riesgos de recuperación utilizando herramientas de trituración de archivos basadas en el navegador. Procesamiento local con cero cargas al servidor."
+    },
+    "disclaimer": {
+      "title": "⚠️ Importante: Trituradora de Archivos",
+      "body": "Esta herramienta sobrescribe los datos de su archivo con bytes aleatorios en la memoria del navegador. NO elimina el archivo original de su disco duro, SSD o dispositivo de almacenamiento; eso requiere herramientas de eliminación segura a nivel de sistema operativo. Descargue el archivo triturado como prueba de la sobrescritura en memoria. Al continuar, confirma que comprende esta limitación."
+    },
+    "hero": {
+      "title": "Trituradora de Archivos",
+      "subtitle": "Elimine de forma segura archivos sensibles y reduzca los riesgos de recuperación con herramientas de trituración de archivos centradas en la privacidad.",
+      "badge": "Proteja la información sensible eliminando archivos de forma segura antes de compartirlos o desecharlos."
+    },
+    "trust": [
+      {
+        "label": "Procesamiento Local"
+      },
+      {
+        "label": "Cero Cargas"
+      },
+      {
+        "label": "Sin Rastreo"
+      },
+      {
+        "label": "Borrado Instantáneo"
+      },
+      {
+        "label": "Basado en Navegador"
+      }
+    ],
+    "terminal": {
+      "title": "TERMINAL DE TRITURACIÓN SEGURA",
+      "engine": "ENTROPÍA AES-256",
+      "warning": "SafeTools no puede evitar el análisis físico de la unidad (forense) en la nivelación de desgaste de SSD/NVMe. Esta herramienta sobrescribe el contenido lógico del archivo.",
+      "limitationLabel": "Limitación del Navegador:"
+    },
+    "protocols": {
+      "title": "Protocolo de Sobrescritura",
+      "options": [
+        {
+          "label": "1 Pase",
+          "desc": "Sobrescritura aleatoria única",
+          "risk": "Básico"
+        },
+        {
+          "label": "3 Pases",
+          "desc": "Borrado estándar recomendado",
+          "risk": "Medio"
+        },
+        {
+          "label": "7 Pases",
+          "desc": "Estilo exhaustivo 5220.22-M",
+          "risk": "Alto"
+        }
+      ]
+    },
+    "status": {
+      "shredding": "Triturando... Pase {pass}/{total}",
+      "success": "TRITURACIÓN EXITOSA",
+      "failed": "Fallo en la trituración: {error}",
+      "desc": "El contenido del archivo ha sido sobrescrito varias veces con patrones de bits aleatorios y entropía criptográficamente segura. Los datos originales son ahora irrecuperables."
+    },
+    "buttons": {
+      "execute": "E J E C U T A R   T R I T U R A D O   ({passes} PASES)",
+      "accept": "A C E P T A R   A V I S O",
+      "download": "D E S C A R G A R   R E S I D U O",
+      "another": "Triturar otro archivo",
+      "overwriting": "S O B R E S C R I B I E N D O"
+    },
+    "landing": {
+      "related": {
+        "title": "Herramientas de Privacidad Relacionadas",
+        "tools": [
+          {
+            "name": "Limpiador de Metadatos",
+            "href": "/security/metadata-cleaner"
+          },
+          {
+            "name": "Bóveda de Cifrado",
+            "href": "/security/vault"
+          },
+          {
+            "name": "Notas Seguras",
+            "href": "/privacy/secure-notes"
+          },
+          {
+            "name": "Esteganografía",
+            "href": "/security/steganography"
+          },
+          {
+            "name": "Generador de Contraseñas",
+            "href": "/privacy/password-generator"
+          }
+        ]
+      },
+      "manifesto": {
+        "title": "Filosofía de Privacidad Primero",
+        "content": "\"SafeTools crea herramientas de privacidad basadas en el navegador diseñadas para minimizar la exposición digital y maximizar el control del usuario. Reduzca la exposición digital con herramientas de seguridad de navegador centradas en la privacidad.\""
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes sobre la Trituradora",
+        "description": "Preguntas comunes sobre el borrado seguro de archivos y la protección de datos locales.",
+        "items": [
+          {
+            "q": "¿Se cargan mis archivos?",
+            "a": "No. Todo el procesamiento de archivos ocurre localmente dentro de su navegador."
+          },
+          {
+            "q": "¿Se pueden recuperar los archivos eliminados?",
+            "a": "El riesgo de recuperación puede variar según el comportamiento del sistema operativo, los dispositivos de almacenamiento y la arquitectura del hardware."
+          },
+          {
+            "q": "¿Funciona esto en SSD?",
+            "a": "Los mecanismos modernos de almacenamiento SSD pueden afectar el comportamiento de sobrescritura debido a los algoritmos de nivelación de desgaste que escriben datos en nuevos bloques."
+          },
+          {
+            "q": "¿Esta herramienta funciona sin conexión?",
+            "a": "Sí. Una vez cargada, la herramienta funciona completamente sin conexión ya que no necesita comunicarse con ningún servidor."
+          },
+          {
+            "q": "¿Puede SafeTools acceder a mi archivos?",
+            "a": "No. Los archivos se procesan localmente."
+          }
+        ]
+      }
+    }
+  }
+}
