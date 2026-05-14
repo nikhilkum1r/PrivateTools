@@ -173,7 +173,7 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: [
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-          { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
+          { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
           {
             key: "X-Robots-Tag",
             value:
@@ -191,7 +191,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' ${process.env.NODE_ENV === "development" ? "'unsafe-eval'" : ""} https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://www.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://pagead2.googlesyndication.com https://adservice.google.com https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com https://www.google-analytics.com https://stats.g.doubleclick.net https://*.projectnaptha.com https://unpkg.com https://cdn.jsdelivr.net; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com; worker-src 'self' blob: https://unpkg.com https://cdn.jsdelivr.net; child-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;`,
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' ${process.env.NODE_ENV === "development" ? "'unsafe-eval'" : ""} https://pagead2.googlesyndication.com https://adservice.google.com https://www.googletagservices.com https://www.googleadservices.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://stats.g.doubleclick.net https://*.projectnaptha.com https://unpkg.com https://cdn.jsdelivr.net; frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com https://tpc.googlesyndication.com; worker-src 'self' blob: https://unpkg.com https://cdn.jsdelivr.net; child-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;`,
           },
         ],
       },

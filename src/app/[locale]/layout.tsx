@@ -10,7 +10,6 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Toaster } from "sonner";
 import CommandPalette from "@/components/shared/CommandPalette";
 import { RetentionProvider } from "@/components/shared/RetentionProvider";
-import AdSenseLoader from "@/components/shared/AdSenseLoader";
 import PWAPrompt from "@/components/shared/PWAPrompt";
 
 const inter = Inter({
@@ -185,7 +184,13 @@ export default async function LocaleLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <AdSenseLoader />
+        <Script
+          id="adsense-init"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+          async
+        />
         <PWAPrompt />
       </body>
     </html>
