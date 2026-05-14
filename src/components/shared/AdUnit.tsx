@@ -88,21 +88,22 @@ export function AdUnit({
     const container = containerRef.current;
     if (!container) return;
 
-    const adsbygoogle = (window as any).adsbygoogle || [];
-
     const initAd = () => {
-      if (adRef.current) return;
+      if (adRef.current) return true;
 
-      const ins = container.querySelector("ins");
-      if (!ins) return;
+      const ins = container.querySelector("ins.adsbygoogle");
+      if (!ins) return false;
+
+      // Check if the AdSense script has loaded and defined adsbygoogle
+      if (typeof (window as any).adsbygoogle === "undefined") return false;
 
       const isVisible = () => {
-        const style = window.getComputedStyle(container);
+        const computedStyle = window.getComputedStyle(container);
         const rect = container.getBoundingClientRect();
         return (
-          style.display !== "none" &&
-          style.visibility !== "hidden" &&
-          style.opacity !== "0" &&
+          computedStyle.display !== "none" &&
+          computedStyle.visibility !== "hidden" &&
+          computedStyle.opacity !== "0" &&
           rect.width > 0 &&
           rect.height > 0
         );
@@ -110,36 +111,33 @@ export function AdUnit({
 
       if (isVisible() && container.offsetWidth >= 32) {
         try {
-          // Double check adRef again inside the try block
-          if (adRef.current) return;
-          adsbygoogle.push({});
+          if (adRef.current) return true;
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
           adRef.current = true;
           return true;
         } catch (e) {
-          console.warn("AdSense push failed:", e);
+          // AdSense push failed — will retry
         }
       }
       return false;
     };
 
-    // Use ResizeObserver to detect when the container actually has dimensions
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.contentRect.width >= 32 && !adRef.current) {
-          initAd();
-        }
+    // Retry logic: wait for AdSense script to be ready
+    let retryCount = 0;
+    const maxRetries = 20;
+    const retryInterval = setInterval(() => {
+      retryCount++;
+      if (initAd() || retryCount >= maxRetries) {
+        clearInterval(retryInterval);
       }
-    });
+    }, 500);
 
-    // Use IntersectionObserver for lazy loading
+    // Also use IntersectionObserver for lazy loading
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !adRef.current) {
-            // Check immediately, then rely on ResizeObserver if not ready
-            if (!initAd()) {
-              resizeObserver.observe(container);
-            }
+            initAd();
           }
         });
       },
@@ -149,8 +147,8 @@ export function AdUnit({
     intersectionObserver.observe(container);
 
     return () => {
+      clearInterval(retryInterval);
       intersectionObserver.disconnect();
-      resizeObserver.disconnect();
     };
   }, [mounted]);
 
@@ -179,12 +177,10 @@ export function AdUnit({
         <ins
           className="adsbygoogle"
           style={{ 
-            display: "inline-block", 
+            display: "block", 
             width: "100%",
-            minWidth: type === "sidebar" ? "300px" : "250px",
-            minHeight: type === "sidebar" ? "600px" : "280px",
-            textAlign: "center",
-            ...style 
+            minHeight: type === "sidebar" ? "600px" : "250px",
+            textAlign: "center" as const,
           }}
           data-ad-client="ca-pub-4227099386151379"
           data-ad-slot={finalSlot}

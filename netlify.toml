@@ -19,8 +19,8 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     # Permissions policy
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    # Content Security Policy
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' blob: https:; worker-src 'self' blob:; frame-ancestors 'none';"
+    # Content Security Policy — must include ALL Google AdSense domains
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.googleadservices.com https://*.googletagservices.com https://*.googletagmanager.com https://*.google-analytics.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' blob:; connect-src 'self' blob: https:; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self' https://*.doubleclick.net https://*.google.com https://*.googlesyndication.com; frame-ancestors 'none';"
 
 # ─── Immutable cache for Next.js hashed bundles ──────────────────────────────
 [[headers]]
