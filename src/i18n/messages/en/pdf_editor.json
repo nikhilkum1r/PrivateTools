@@ -1,0 +1,206 @@
+{
+  "pdfEditor": {
+    "seo": {
+      "title": "Edit PDF | Annotate & Modify PDFs Locally | SafeTools",
+      "description": "Edit PDF documents securely in your browser. Add text, draw annotations, highlight, insert images, rotate pages — all processed locally with zero uploads.",
+      "keywords": "edit pdf, annotate pdf, pdf editor, add text to pdf, draw on pdf, highlight pdf, local pdf editor, secure pdf editing"
+    },
+    "hero": {
+      "title": "Edit PDF Files",
+      "description": "Annotate, add text, draw, highlight and modify your PDFs entirely in your browser with privacy-first local processing.",
+      "disclaimer": "Edit PDFs securely without uploading files to any server.",
+      "badges": {
+        "local": "Local Processing",
+        "zero": "Zero Upload",
+        "no_tracking": "No Tracking",
+        "fast": "Real-Time Editing",
+        "browser": "Browser-Based"
+      }
+    },
+    "studio": {
+      "title": "PDF Editor Studio",
+      "badge": "LIVE EDITOR",
+      "tools": {
+        "text": "Text",
+        "draw": "Draw",
+        "highlight": "Highlight",
+        "image": "Image",
+        "erase": "Erase"
+      },
+      "pageControls": {
+        "rotateLeft": "Rotate Left",
+        "rotateRight": "Rotate Right",
+        "deletePage": "Delete Page",
+        "zoomIn": "Zoom In",
+        "zoomOut": "Zoom Out",
+        "fitToWidth": "Fit to Width"
+      },
+      "textControls": {
+        "placeholder": "Type your text here...",
+        "fontSize": "Font Size",
+        "fontColor": "Font Color",
+        "addText": "Place Text on Page"
+      },
+      "drawControls": {
+        "strokeWidth": "Stroke Width",
+        "strokeColor": "Color",
+        "clear": "Clear Drawing"
+      },
+      "highlightControls": {
+        "color": "Highlight Color",
+        "opacity": "Opacity"
+      },
+      "imageControls": {
+        "select": "Select Image",
+        "resize": "Resize",
+        "place": "Place Image on Page"
+      },
+      "pages": "Page {current} of {total}",
+      "thumbnails": "Pages",
+      "annotations": "{count} annotations",
+      "noAnnotations": "No annotations yet",
+      "undoAll": "Undo All",
+      "processing": "Processing PDF...",
+      "rendering": "Rendering page...",
+      "saving": "Saving PDF...",
+      "complete": "Complete!",
+      "save_button": "SAVE EDITED PDF",
+      "saving_button": "S A V I N G . . ."
+    },
+    "messages": {
+      "fileLoaded": "PDF loaded — {pages} pages",
+      "pageSaved": "Annotations saved to page {page}",
+      "pdfSaved": "Edited PDF saved successfully",
+      "saveFailed": "Failed to save PDF. Please try again.",
+      "invalidFile": "Please select a valid PDF file.",
+      "pageDeleted": "Page {page} deleted",
+      "pageRotated": "Page {page} rotated",
+      "annotationAdded": "Annotation added to page {page}",
+      "imageAdded": "Image added to page {page}",
+      "drawingCleared": "Drawing cleared"
+    },
+    "landing": {
+      "features": {
+        "title": "PDF Editing Features",
+        "subtitle": "Professional-grade PDF annotation and editing in your browser.",
+        "items": [
+          "Add Text Annotations",
+          "Freehand Drawing",
+          "Highlight Text",
+          "Insert Images",
+          "Rotate Pages",
+          "Delete Pages",
+          "Real-Time Preview",
+          "Multi-Page Editing",
+          "Undo Support",
+          "Mobile Friendly"
+        ]
+      },
+      "what_is": {
+        "title": "What Is PDF Editing?",
+        "description": "PDF editing allows you to annotate, modify, and enhance existing PDF documents. SafeTools provides a comprehensive editor that runs entirely in your browser, ensuring your documents remain private and secure."
+      },
+      "privacy": {
+        "title": "Privacy-First PDF Editing",
+        "items": [
+          "All editing happens locally",
+          "No cloud uploads required",
+          "No documents stored on servers",
+          "Secure memory handling",
+          "Zero tracking or analytics"
+        ]
+      },
+      "how_it_works": {
+        "title": "How PDF Editing Works",
+        "steps": [
+          "Upload your PDF file locally",
+          "Select your editing tool (text, draw, highlight, image)",
+          "Make your edits on any page",
+          "Download the edited PDF instantly"
+        ],
+        "note": "All edits are applied locally using WebAssembly-powered processing."
+      },
+      "tools_overview": {
+        "title": "Available Editing Tools",
+        "subtitle": "Everything you need to annotate and modify PDFs:",
+        "items": [
+          "Text tool with font size and color controls",
+          "Freehand drawing with adjustable stroke",
+          "Highlight tool with custom colors",
+          "Image insertion with positioning"
+        ]
+      },
+      "use_cases": {
+        "title": "Common Use Cases",
+        "items": [
+          "Annotating contracts",
+          "Marking up reports",
+          "Adding signatures",
+          "Highlighting key passages",
+          "Adding watermarks",
+          "Correcting documents",
+          "Academic reviews",
+          "Design feedback"
+        ]
+      },
+      "performance": {
+        "title": "Fast Browser Processing",
+        "items": [
+          "WebAssembly acceleration",
+          "No upload waiting",
+          "Real-time rendering",
+          "Optimized canvas performance",
+          "Mobile compatibility"
+        ]
+      },
+      "secure": {
+        "title": "Secure PDF Handling",
+        "description": "We strictly enforce local memory processing. Your documents never leave your device. All editing operations happen in your browser using secure, sandboxed rendering — ensuring absolute privacy for sensitive documents."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "SafeTools PDF Editor works fully offline via PWA support. Edit your PDFs without an internet connection — no data exposure, no dependencies on cloud services."
+      },
+      "comparison": {
+        "title": "Why Use SafeTools PDF Editor?",
+        "headers": [
+          "Feature",
+          "Traditional PDF Editors",
+          "SafeTools"
+        ],
+        "rows": [
+          ["Upload Required", "Usually", "No"],
+          ["Local Processing", "Rare", "Yes"],
+          ["Tracking Scripts", "Often", "No"],
+          ["Free to Use", "Limited", "Yes"],
+          ["Privacy Focused", "Limited", "Yes"]
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "q": "Can I edit text that's already in the PDF?",
+            "a": "SafeTools PDF Editor allows you to add new text annotations on top of existing content. For full text reflow editing, we recommend using a dedicated word processor."
+          },
+          {
+            "q": "Are my PDFs uploaded to any server?",
+            "a": "Absolutely not. All editing happens locally in your browser. Your documents never leave your device — ensuring complete privacy for sensitive files."
+          },
+          {
+            "q": "What types of edits can I make?",
+            "a": "You can add text annotations, freehand drawings, highlights, and images to any page. You can also rotate and delete pages to reorganize your document."
+          }
+        ],
+        "title": "Frequently Asked Questions",
+        "description": "Everything you need to know about our privacy-first PDF editor."
+      },
+      "related": {
+        "title": "Related PDF Tools"
+      },
+      "manifesto": {
+        "title": "Privacy-First Document Editing",
+        "description": "SafeTools builds browser-based document tools designed to maximize privacy, speed, and user control. Edit PDFs without compromising your data security."
+      }
+    }
+  }
+}

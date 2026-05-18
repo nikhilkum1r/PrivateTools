@@ -13,7 +13,8 @@ import {
   FileSearch,
   Lock,
   Unlock,
-  Zap
+  Zap,
+  Edit3
 } from "lucide-react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
@@ -75,6 +76,14 @@ export default function PDFHubClient() {
       href: "/security/metadata-cleaner",
       color: "from-green-500 to-emerald-500",
       tags: t.raw("tools.scrubber.tags") as string[]
+    },
+    {
+      title: t("tools.editor.title"),
+      desc: t("tools.editor.desc"),
+      icon: Edit3,
+      href: "/pdf/edit-pdf",
+      color: "from-indigo-500 to-violet-500",
+      tags: t.raw("tools.editor.tags") as string[]
     }
   ];
 

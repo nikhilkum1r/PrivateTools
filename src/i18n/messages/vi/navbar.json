@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Xử lý & Chuyển đổi Âm thanh",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Nén & Chuyển đổi Video"
+      "videoStudioDesc": "Nén & Chuyển đổi Video",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

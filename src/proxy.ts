@@ -10,9 +10,9 @@ export const config = {
     '/',
 
     // Set a cookie to remember the last locale for all requests
-    '/((?!api|_next|.*\\..*).*)',
+    '/((?!api|_next|lib|assets|favicon|.*\\..*).*)',
 
     // However, match all pathnames within `/[locale]`
-    '/(en|hi|es|ar|fr|zh|ru|pt|de|ja)/:path*'
+    '/(en|hi|es|ar|fr|zh|ru|pt|de|ja|id|tr|it|pl|vi|ko|th|nl|fa|uk|ms|cs|da|el|fi|ro|sv)/:path*'
   ]
 };

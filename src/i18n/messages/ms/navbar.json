@@ -85,7 +85,9 @@
       "audioStudio": "Studio Audio",
       "audioStudioDesc": "Proses & Tukar Audio",
       "videoStudio": "Studio Video",
-      "videoStudioDesc": "Mampat & Tukar Video"
+      "videoStudioDesc": "Mampat & Tukar Video",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

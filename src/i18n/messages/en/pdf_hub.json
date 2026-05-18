@@ -45,6 +45,11 @@
         "desc": "Remove hidden data and tracking from PDF documents.",
         "tags": ["Security", "Privacy"]
       },
+      "editor": {
+        "title": "PDF Editor",
+        "desc": "Annotate, add text, draw, and highlight your PDFs locally.",
+        "tags": ["New", "Interactive"]
+      },
       "cta": "Open Tool"
     },
     "features": {

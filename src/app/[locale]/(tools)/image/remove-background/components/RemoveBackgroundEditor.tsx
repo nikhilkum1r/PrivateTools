@@ -54,6 +54,7 @@ interface RemoveBackgroundEditorProps {
   aspectRatio: string;
   progressLabel: string;
   processTime: number | null;
+  engine: "onnx" | "tfjs";
 }
 
 export function RemoveBackgroundEditor({
@@ -82,7 +83,8 @@ export function RemoveBackgroundEditor({
   customBgPreview,
   aspectRatio,
   progressLabel,
-  processTime
+  processTime,
+  engine
 }: RemoveBackgroundEditorProps) {
   const activeItem = batch[activeIndex];
 
@@ -287,7 +289,9 @@ export function RemoveBackgroundEditor({
           <div className="text-[9px] font-black uppercase text-muted-foreground/60 tracking-widest flex items-center gap-4">
              <span>{processTime ? t("worker.latency", { time: processTime }) : "--- ms"}</span>
              <span className="opacity-40">|</span>
-             <span>{t("worker.aiNode")}</span>
+             <span className={cn("px-2 py-0.5 rounded-full border border-white/5", engine === "onnx" ? "text-emerald-400" : "text-amber-400")}>
+               {engine === "onnx" ? "ONNX: ISNET_FP16" : "TF.JS: BODYPIX_LITE"}
+             </span>
           </div>
         </footer>
       </section>

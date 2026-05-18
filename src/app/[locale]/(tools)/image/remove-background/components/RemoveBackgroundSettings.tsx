@@ -32,6 +32,8 @@ interface RemoveBackgroundSettingsProps {
   handleExport: () => void;
   handleCopy: () => void;
   status?: string;
+  engine: "onnx" | "tfjs";
+  setEngine: (engine: "onnx" | "tfjs") => void;
 }
 
 export function RemoveBackgroundSettings({
@@ -53,7 +55,9 @@ export function RemoveBackgroundSettings({
   isWorking,
   handleExport,
   handleCopy,
-  status
+  status,
+  engine,
+  setEngine
 }: RemoveBackgroundSettingsProps) {
   return (
     <aside className="w-full lg:w-[360px] flex flex-col shrink-0 bg-black/10 relative z-10 border-l border-border">
@@ -67,6 +71,37 @@ export function RemoveBackgroundSettings({
       </div>
 
       <div className="flex-grow overflow-y-auto p-6 space-y-8 custom-scrollbar">
+        {/* Engine Selection */}
+        <div className="space-y-4">
+          <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center justify-between">
+            {t("settings.aiEngine") || "AI Engine"} <Zap className={cn("w-3 h-3 transition-colors", engine === "tfjs" ? "text-amber-500" : "text-emerald-500")} />
+          </p>
+          <div className="grid grid-cols-2 gap-2 p-1.5 glass-card bg-black/40 rounded-2xl border border-white/5">
+            <button
+              onClick={() => setEngine("onnx")}
+              className={cn(
+                "flex flex-col items-center justify-center py-4 rounded-xl transition-all relative overflow-hidden group",
+                engine === "onnx" ? "bg-emerald-500/20 border border-emerald-500/30 text-emerald-400" : "text-muted-foreground hover:bg-white/5 border border-transparent"
+              )}
+            >
+              <span className="text-[10px] font-black uppercase italic tracking-widest">ONNX PRO</span>
+              <span className="text-[8px] font-black opacity-40 uppercase tracking-tighter mt-1">{t("engines.onnxDesc") || "High Quality"}</span>
+              {engine === "onnx" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-500" />}
+            </button>
+            <button
+              onClick={() => setEngine("tfjs")}
+              className={cn(
+                "flex flex-col items-center justify-center py-4 rounded-xl transition-all relative overflow-hidden group",
+                engine === "tfjs" ? "bg-amber-500/20 border border-amber-500/30 text-amber-400" : "text-muted-foreground hover:bg-white/5 border border-transparent"
+              )}
+            >
+              <span className="text-[10px] font-black uppercase italic tracking-widest">TF.JS LITE</span>
+              <span className="text-[8px] font-black opacity-40 uppercase tracking-tighter mt-1">{t("engines.tfjsDesc") || "Fast / Selfie"}</span>
+              {engine === "tfjs" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500" />}
+            </button>
+          </div>
+        </div>
+
         {/* Background Presets */}
         <div className="space-y-4">
           <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground flex items-center justify-between">
@@ -178,6 +213,7 @@ export function RemoveBackgroundSettings({
            </div>
         </div>
       </div>
+
 
       <div className="p-6 bg-black/40 border-t border-border space-y-3 shrink-0">
          <Button 

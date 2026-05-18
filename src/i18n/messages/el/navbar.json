@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Επεξεργασία και μετατροπή ήχου",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Συμπίεση και μετατροπή βίντεο"
+      "videoStudioDesc": "Συμπίεση και μετατροπή βίντεο",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

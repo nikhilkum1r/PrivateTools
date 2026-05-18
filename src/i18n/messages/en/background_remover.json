@@ -58,6 +58,7 @@
     "settings": {
       "title": "Scene Configuration",
       "engine": "Neural Processing Node",
+      "aiEngine": "AI Engine Architecture",
       "background": "Canvas Fill",
       "alpha": "Transparency Matrix",
       "resizer": "Social Canvas Matrix",
@@ -70,6 +71,10 @@
       "autoTrimDesc": "Crop to subject",
       "dropShadow": "Drop Shadow",
       "shadowDesc": "Add depth"
+    },
+    "engines": {
+      "onnxDesc": "High Fidelity (ONNX)",
+      "tfjsDesc": "Fast / Selfie (TF.js)"
     },
     "bgPresets": {
       "transparent": "Transparent",
@@ -324,11 +329,6 @@
       ],
       "title": "Frequently Asked Questions",
       "description": "Everything you need to know about our privacy-first tool."
-    },
-    "hero": {
-      "title": "AI Background Remover | Privacy-First Local Editing",
-      "description": "Professional-grade background removal powered by local AI. No cloud uploads, no storage, no tracking. Fast, secure, and private.",
-      "badge": "Professional AI Segmentation — 100% Secure"
     }
   }
 }

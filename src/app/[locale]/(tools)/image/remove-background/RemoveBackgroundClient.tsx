@@ -4,7 +4,6 @@ import React, { useState, useCallback, useRef, useEffect } from "react";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer";
 import { toast } from "sonner";
-import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ExportManager } from "@/lib/export-manager";
@@ -41,7 +40,6 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
   const [batch, setBatch] = useState<ProcessedResult[]>([]);
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [status, setStatus] = useState<Status>("idle");
-  const [globalProgress, setGlobalProgress] = useState(0);
   const [progressLabel, setProgressLabel] = useState("");
   const [bgColor, setBgColor] = useState("transparent");
   const [customBgPreview, setCustomBgPreview] = useState<string | null>(null);
@@ -60,6 +58,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
   const brushCanvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState(false);
 
+  const [engine, setEngine] = usePersistedState<"onnx" | "tfjs">("bg:engine", "onnx");
   const workerRef = useRef<Worker | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -93,7 +92,6 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
             break;
           case "progress":
             next[currentIdx].progress = pct ?? 0;
-            setGlobalProgress(pct ?? 0);
             break;
           case "result":
             const blob = new Blob([buffer], { type: mimeType ?? "image/png" });
@@ -147,7 +145,8 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
         type: "process", 
         imageDataURL: item.preview,
         loadingLabel: t("worker.loading"),
-        removingLabel: t("worker.removing")
+        removingLabel: t("worker.removing"),
+        engine: engine
       });
     } catch (err: any) {
       toast.error(t("tools.errorPreparing"));
@@ -180,7 +179,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
       progress: 0,
     }));
 
-    setBatch(prev => [...prev, ...newItems]);
+    setBatch((prev: ProcessedResult[]) => [...prev, ...newItems]);
     if (activeIndex === -1) setActiveIndex(0);
   }, [activeIndex, t]);
 
@@ -200,7 +199,6 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
     setBatch([]);
     setActiveIndex(-1);
     setStatus("idle");
-    setGlobalProgress(0);
     setBgColor("transparent");
     setCustomBgPreview(null);
     setSliderPos(50);
@@ -399,7 +397,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
 
   const saveMask = async () => {
     if (!brushCanvasRef.current || activeIndex === -1) return;
-    const blob = await new Promise<Blob>((res) => brushCanvasRef.current!.toBlob((b) => res(b!), "image/png"));
+    const blob = await new Promise<Blob>((res) => brushCanvasRef.current!.toBlob((b: Blob | null) => res(b!), "image/png"));
     setBatch(prev => {
       const next = [...prev];
       next[activeIndex].maskBlob = blob;
@@ -464,6 +462,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
                       aspectRatio={aspectRatio}
                       progressLabel={progressLabel}
                       processTime={processTime}
+                      engine={engine}
                     />
                     <RemoveBackgroundSettings 
                       t={t}
@@ -485,6 +484,8 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
                       handleExport={() => handleExport()}
                       handleCopy={handleCopy}
                       status={batch[activeIndex]?.status}
+                      engine={engine}
+                      setEngine={setEngine}
                     />
                   </>
                 )}

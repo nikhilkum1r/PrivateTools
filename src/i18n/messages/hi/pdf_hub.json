@@ -63,7 +63,15 @@
           "गोपनीयता"
         ]
       },
-      "cta": "टूल खोलें"
+      "cta": "टूल खोलें",
+      "editor": {
+        "title": "PDF Editor",
+        "desc": "Annotate, add text, draw, and highlight your PDFs locally.",
+        "tags": [
+          "New",
+          "Interactive"
+        ]
+      }
     },
     "features": {
       "zk": {

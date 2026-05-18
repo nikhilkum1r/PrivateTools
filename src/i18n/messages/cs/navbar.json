@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Zpracování a převod zvuku",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Komprese a převod videa"
+      "videoStudioDesc": "Komprese a převod videa",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

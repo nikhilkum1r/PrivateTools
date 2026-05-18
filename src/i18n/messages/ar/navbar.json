@@ -85,7 +85,9 @@
       "audioStudio": "استوديو الصوت",
       "audioStudioDesc": "معالجة وتحويل الصوت",
       "videoStudio": "استوديو الفيديو",
-      "videoStudioDesc": "ضغط وتحويل الفيديو"
+      "videoStudioDesc": "ضغط وتحويل الفيديو",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

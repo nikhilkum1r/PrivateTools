@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Przetwarzaj i konwertuj dźwięk",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Kompresuj i konwertuj wideo"
+      "videoStudioDesc": "Kompresuj i konwertuj wideo",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

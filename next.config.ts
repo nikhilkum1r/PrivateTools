@@ -146,6 +146,15 @@ const nextConfig: NextConfig = {
       "tailwind-merge"
     ],
   },
+  transpilePackages: ["@imgly/background-removal", "onnxruntime-web"],
+
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'onnxruntime-web': require.resolve('onnxruntime-web'),
+    };
+    return config;
+  },
 
   // ─── Redirects ──────────────────────────────────────────────────────────
   async redirects() {

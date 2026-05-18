@@ -85,7 +85,9 @@
       "audioStudio": "오디오 스튜디오",
       "audioStudioDesc": "오디오 처리 및 변환",
       "videoStudio": "비디오 스튜디오",
-      "videoStudioDesc": "비디오 압축 및 변환"
+      "videoStudioDesc": "비디오 압축 및 변환",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

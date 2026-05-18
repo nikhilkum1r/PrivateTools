@@ -85,7 +85,9 @@
       "audioStudio": "オーディオスタジオ",
       "audioStudioDesc": "オーディオの処理と変換",
       "videoStudio": "ビデオスタジオ",
-      "videoStudioDesc": "ビデオの圧縮と変換"
+      "videoStudioDesc": "ビデオの圧縮と変換",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

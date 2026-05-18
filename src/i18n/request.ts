@@ -20,7 +20,7 @@ export default getRequestConfig(async ({requestLocale}) => {
     'security', 'devtools', 'ocr', 'imageToPptx', 'pdfMerge', 'iconStudio',
     'splitPdf', 'dataConverter', 'wordToPdf', 'pdfToTxt', 'caseConverter',
     'wordCounter', 'passwordChecker', 'privacyScanner', 'site', 'textTools', 'toolsHub',
-    'pdfUnlock', 'pdfProtect', 'base64', 'commandPalette', 'docsMaster',
+    'pdfUnlock', 'pdfProtect', 'pdfEditor', 'base64', 'commandPalette', 'docsMaster',
     'marketing', 'studio', 'philosophy', 'ads'
   ];
 

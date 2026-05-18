@@ -28,7 +28,7 @@ import { useTranslations } from "next-intl";
 // ─── Core Logic ─────────────────────────────────────────────────────────────
 async function extractPdfText(file: File, onProgress?: (pct: number) => void): Promise<string> {
   const pdfjsLib = await import("pdfjs-dist");
-  pdfjsLib.GlobalWorkerOptions.workerSrc = `/lib/pdfjs/pdf.worker.min.mjs`;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = window.location.origin + `/lib/pdfjs/pdf.worker.min.mjs`;
 
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;

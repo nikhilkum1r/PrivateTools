@@ -63,7 +63,15 @@
           "Confidentialité"
         ]
       },
-      "cta": "Ouvrir l'outil"
+      "cta": "Ouvrir l'outil",
+      "editor": {
+        "title": "PDF Editor",
+        "desc": "Annotate, add text, draw, and highlight your PDFs locally.",
+        "tags": [
+          "New",
+          "Interactive"
+        ]
+      }
     },
     "features": {
       "zk": {

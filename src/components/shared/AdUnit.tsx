@@ -1,201 +1,187 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 interface AdUnitProps {
-  /**
-   * The AdSense Slot ID
-   */
+  /** AdSense Slot ID */
   slot?: string;
-  /**
-   * Ad format: 'auto', 'fluid', 'rectangle', 'autorelaxed', etc.
-   */
+  /** Ad format */
   format?: "auto" | "fluid" | "rectangle" | "horizontal" | "vertical" | "autorelaxed";
-  /**
-   * Ad Layout (for in-article)
-   */
+  /** Ad Layout (for in-article) */
   layout?: "in-article" | string;
-  /**
-   * Ad Layout Key (for in-feed)
-   */
+  /** Ad Layout Key (for in-feed) */
   layoutKey?: string;
-  /**
-   * Whether the ad is responsive
-   */
+  /** Whether the ad is responsive */
   responsive?: "true" | "false";
-  /**
-   * Optional className for the wrapper
-   */
+  /** Optional className for the wrapper */
   className?: string;
-  /**
-   * Optional style for the wrapper
-   */
+  /** Optional style for the wrapper */
   style?: React.CSSProperties;
-  /**
-   * Type of ad unit for labelling/analytics
-   */
-  type?: "content" | "sidebar" | "banner" | "faq" | "in-article" | "in-feed" | "multiplex";
+  /** Type of ad unit for preset slot selection */
+  type?: "content" | "sidebar" | "banner" | "faq" | "in-article" | "in-feed" | "multiplex" | "safe" | "horizontal" | "vertical";
 }
 
+// Slot IDs by type
+const SLOT_MAP: Record<string, string> = {
+  content:      "9267827998",
+  sidebar:      "9129290255",
+  banner:       "7808469727",
+  faq:          "9267827998",
+  safe:         "9267827998",
+  horizontal:   "7808469727",
+  vertical:     "9129290255",
+  "in-article": "2752890109",
+  "in-feed":    "6033659568",
+  multiplex:    "1439808433",
+};
+
 /**
- * AdUnit component for manual Google AdSense placement.
- * Optimized for Core Web Vitals (CLS) by providing a minimum height.
- * Compliant with the "Allow ads only in specific sections" policy.
+ * AdUnit — Google AdSense ad placement component.
+ *
+ * Key design decisions:
+ * - Uses `data-adsbygoogle-status` attribute to guard against double-push.
+ * - Waits for the container to have a non-zero width before calling push().
+ * - Uses ResizeObserver to detect when the container becomes visible/sized.
+ * - Only pushes once per mount (adPushed ref).
+ * - In dev, sets data-adtest="on" so live quota isn't consumed.
  */
 export function AdUnit({
-  slot = "1351344373", // Default Display Ad Slot
+  slot,
   format = "auto",
   layout,
   layoutKey,
   responsive = "true",
   className,
   style,
-  type = "content"
+  type = "content",
 }: AdUnitProps) {
-  const [mounted, setMounted] = React.useState(false);
-  const adRef = useRef<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("common");
+  const [mounted, setMounted] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const insRef = useRef<HTMLElement | null>(null);
+  const adPushed = useRef(false);
+
+  // Resolve slot/format/layout from type presets
+  const finalSlot   = slot ?? SLOT_MAP[type] ?? SLOT_MAP.content;
+  const finalFormat = type === "in-article" ? "fluid"
+                    : type === "in-feed"    ? "fluid"
+                    : type === "multiplex"  ? "autorelaxed"
+                    : format;
+  const finalLayout    = layout    ?? (type === "in-article" ? "in-article" : undefined);
+  const finalLayoutKey = layoutKey ?? (type === "in-feed"    ? "-fb+5w+4e-db+86" : undefined);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Automatically set attributes based on type if not explicitly provided
-  let finalSlot = slot;
-  let finalFormat = format;
-  let finalLayout = layout;
-  let finalLayoutKey = layoutKey;
-
-  if (type === "in-article") {
-    finalSlot = "2752890109";
-    finalFormat = "fluid";
-    finalLayout = "in-article";
-  } else if (type === "in-feed") {
-    finalSlot = "6033659568";
-    finalFormat = "fluid";
-    finalLayoutKey = "-fb+5w+4e-db+86";
-  } else if (type === "multiplex") {
-    finalSlot = "1439808433";
-    finalFormat = "autorelaxed";
-  }
-
   useEffect(() => {
-    if (!mounted || typeof window === "undefined") return;
+    if (!mounted) return;
 
     const container = containerRef.current;
     if (!container) return;
 
-    const initAd = () => {
-      if (adRef.current) return true;
+    const tryPushAd = () => {
+      // Guard: only push once
+      if (adPushed.current) return;
 
-      const ins = container.querySelector("ins.adsbygoogle");
-      if (!ins) return false;
+      const ins = container.querySelector<HTMLElement>("ins.adsbygoogle");
+      if (!ins) return;
 
-      // Check if ad is already initialized by AdSense
-      if (ins.getAttribute("data-adsbygoogle-status") === "done") {
-        adRef.current = true;
-        return true;
+      // Guard: AdSense already processed this slot
+      if (ins.getAttribute("data-adsbygoogle-status")) {
+        adPushed.current = true;
+        return;
       }
 
-      // Ensure adsbygoogle is available
-      if (typeof (window as any).adsbygoogle === "undefined") {
-        (window as any).adsbygoogle = [];
-      }
+      // Guard: container must have real width (prevents "no slot size" error)
+      const w = container.getBoundingClientRect().width || container.offsetWidth;
+      if (w < 50) return;
 
-      const isVisible = () => {
-        const computedStyle = window.getComputedStyle(container);
-        const rect = container.getBoundingClientRect();
-        return (
-          computedStyle.display !== "none" &&
-          computedStyle.visibility !== "hidden" &&
-          computedStyle.opacity !== "0" &&
-          rect.width > 0 &&
-          rect.height > 0
-        );
-      };
-
-      if (isVisible() && container.offsetWidth >= 32) {
-        try {
-          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-          adRef.current = true;
-          return true;
-        } catch (e) {
-          console.error("AdSense push error:", e);
+      try {
+        // Ensure the adsbygoogle array exists so we can push to it (standard AdSense async queueing)
+        (window as any).adsbygoogle = (window as any).adsbygoogle || [];
+        (window as any).adsbygoogle.push({});
+        adPushed.current = true;
+      } catch (err: any) {
+        // Only log non-"No slot size" errors — that one is dev-only noise
+        if (!err?.message?.includes("No slot size")) {
+          console.error("[AdUnit] push error:", err);
         }
       }
-      return false;
     };
 
-    // Retry logic: wait for AdSense script to be ready
-    let retryCount = 0;
-    const maxRetries = 15;
-    const retryInterval = setInterval(() => {
-      retryCount++;
-      if (initAd() || retryCount >= maxRetries) {
-        clearInterval(retryInterval);
-      }
-    }, 1000);
+    // ResizeObserver fires when container gets a real width (handles lazy reveal, SSR hydration)
+    let ro: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined") {
+      ro = new ResizeObserver(() => tryPushAd());
+      ro.observe(container);
+    }
 
-    // Also use IntersectionObserver for lazy loading
-    const intersectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !adRef.current) {
-            initAd();
-          }
-        });
-      },
-      { rootMargin: "200px" }
-    );
+    // IntersectionObserver fires when scrolled into view
+    let io: IntersectionObserver | null = null;
+    if (typeof IntersectionObserver !== "undefined") {
+      io = new IntersectionObserver(
+        (entries) => { if (entries[0]?.isIntersecting) tryPushAd(); },
+        { rootMargin: "300px" }
+      );
+      io.observe(container);
+    }
 
-    intersectionObserver.observe(container);
+    // Also try immediately (for already-visible ads above the fold)
+    // Small delay to let the AdSense script finish loading
+    const timer = setTimeout(tryPushAd, 500);
 
     return () => {
-      clearInterval(retryInterval);
-      intersectionObserver.disconnect();
+      clearTimeout(timer);
+      ro?.disconnect();
+      io?.disconnect();
     };
   }, [mounted]);
 
+  // Determine minimum height for CLS prevention
+  const minH = finalFormat === "fluid" || type === "in-article" || type === "in-feed"
+    ? "auto"
+    : type === "sidebar" ? "600px" : "280px";
+
   return (
-    <div 
+    <div
       ref={containerRef}
       className={cn(
         "ad-container my-6 w-full flex flex-col items-center justify-center overflow-hidden",
         "rounded-xl border border-border/20",
         className
       )}
-      style={{ 
-        minHeight: finalFormat === "fluid" ? "auto" : "280px", 
-        ...style 
-      }}
-      aria-label={`Advertisement ${finalSlot}`}
+      style={{ minHeight: minH, ...style }}
+      aria-label="Advertisement"
       role="complementary"
     >
+      {/* Label */}
       <div className="w-full text-[9px] font-medium uppercase tracking-wider text-muted-foreground/25 py-1.5 px-4 flex items-center gap-2">
         <div className="h-px flex-grow bg-border/15" />
         <span>{t("advertisement")}</span>
         <div className="h-px flex-grow bg-border/15" />
       </div>
-      
+
+      {/* Ad slot — only rendered client-side */}
       {mounted && (
         <ins
+          ref={insRef as any}
           className="adsbygoogle"
-          style={{ 
-            display: "block", 
+          style={{
+            display: "block",
             width: "100%",
             minHeight: type === "sidebar" ? "600px" : "250px",
-            textAlign: "center" as const,
+            textAlign: "center",
           }}
           data-ad-client="ca-pub-4227099386151379"
           data-ad-slot={finalSlot}
           data-ad-format={finalFormat}
-          data-ad-layout={finalLayout}
-          data-ad-layout-key={finalLayoutKey}
+          {...(finalLayout    ? { "data-ad-layout": finalLayout }       : {})}
+          {...(finalLayoutKey ? { "data-ad-layout-key": finalLayoutKey } : {})}
           data-full-width-responsive={responsive}
-          data-adtest={process.env.NODE_ENV === "development" ? "on" : undefined}
+          {...(process.env.NODE_ENV === "development" ? { "data-adtest": "on" } : {})}
           suppressHydrationWarning
         />
       )}

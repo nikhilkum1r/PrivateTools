@@ -63,7 +63,15 @@
           "隐私"
         ]
       },
-      "cta": "打开工具"
+      "cta": "打开工具",
+      "editor": {
+        "title": "PDF Editor",
+        "desc": "Annotate, add text, draw, and highlight your PDFs locally.",
+        "tags": [
+          "New",
+          "Interactive"
+        ]
+      }
     },
     "features": {
       "zk": {

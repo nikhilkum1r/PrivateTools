@@ -85,7 +85,9 @@
       "audioStudio": "ऑडियो स्टूडियो",
       "audioStudioDesc": "ऑडियो प्रोसेस और कनवर्ट करें",
       "videoStudio": "वीडियो स्टूडियो",
-      "videoStudioDesc": "वीडियो कंप्रेस और कनवर्ट करें"
+      "videoStudioDesc": "वीडियो कंप्रेस और कनवर्ट करें",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

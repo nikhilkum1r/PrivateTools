@@ -35,3 +35,18 @@ export const SUPPORTED_CONVERSION_SLUGS = [
   "gif-to-jpg", "gif-to-webp", "bmp-to-jpg", "bmp-to-png",
   "svg-to-jpg", "png-to-svg", "jpg-to-svg"
 ];
+
+/**
+ * Supported video processing slugs for SEO landing pages.
+ */
+export const SUPPORTED_VIDEO_SLUGS = [
+  "compress-mp4", "compress-video", "convert-video-to-webm", "convert-video-to-mp4",
+  "extract-frames-from-video", "mute-video-online", "resize-video-720p"
+];
+
+/**
+ * Supported developer tools slugs for SEO landing pages.
+ */
+export const SUPPORTED_DEVTOOLS_SLUGS = [
+  "json", "base64", "hash", "jwt", "url", "uuid", "timestamp", "lorem"
+];

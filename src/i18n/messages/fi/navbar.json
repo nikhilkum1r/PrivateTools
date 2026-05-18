@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Käsittele ja muunna ääntä",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Pakkaa ja muunna videota"
+      "videoStudioDesc": "Pakkaa ja muunna videota",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

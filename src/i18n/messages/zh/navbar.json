@@ -85,7 +85,9 @@
       "audioStudio": "音频工作室",
       "audioStudioDesc": "处理和转换音频",
       "videoStudio": "视频工作室",
-      "videoStudioDesc": "压缩和转换视频"
+      "videoStudioDesc": "压缩和转换视频",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

@@ -85,7 +85,9 @@
       "audioStudio": "Аудіо-студія",
       "audioStudioDesc": "Обробка та конвертація аудіо",
       "videoStudio": "Відео-студія",
-      "videoStudioDesc": "Стиснення та конвертація відео"
+      "videoStudioDesc": "Стиснення та конвертація відео",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

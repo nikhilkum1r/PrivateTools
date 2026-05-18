@@ -55,7 +55,7 @@ export async function decodeFile(
   if (ext === "pdf") {
     onProgress?.(10);
     const pdfjs = await import("pdfjs-dist");
-    pdfjs.GlobalWorkerOptions.workerSrc = `/lib/pdfjs/pdf.worker.min.mjs`;
+    pdfjs.GlobalWorkerOptions.workerSrc = window.location.origin + `/lib/pdfjs/pdf.worker.min.mjs`;
     const buffer = await file.arrayBuffer();
     const pdf = await pdfjs.getDocument({ data: buffer }).promise;
     const page = await pdf.getPage(1);

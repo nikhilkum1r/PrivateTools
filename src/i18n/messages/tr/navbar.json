@@ -85,7 +85,9 @@
       "audioStudio": "Ses Stüdyosu",
       "audioStudioDesc": "Ses İşle ve Dönüştür",
       "videoStudio": "Video Stüdyosu",
-      "videoStudioDesc": "Video Sıkıştır ve Dönüştür"
+      "videoStudioDesc": "Video Sıkıştır ve Dönüştür",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

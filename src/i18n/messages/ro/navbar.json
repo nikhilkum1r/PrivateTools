@@ -85,7 +85,9 @@
       "audioStudio": "Audio Studio",
       "audioStudioDesc": "Procesați și convertiți audio",
       "videoStudio": "Video Studio",
-      "videoStudioDesc": "Comprimați și convertiți video"
+      "videoStudioDesc": "Comprimați și convertiți video",
+      "editPdf": "Edit PDF",
+      "editPdfDesc": "Annotate & modify PDF documents."
     }
   }
 }

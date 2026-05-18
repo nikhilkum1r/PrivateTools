@@ -39,7 +39,8 @@ import {
   Code,
   CaseSensitive,
   AlignLeft,
-  Layout
+  Layout,
+  Edit3
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "@/components/shared/ThemeProvider";
@@ -178,6 +179,9 @@ export function Navbar() {
                     </NavListItem>
                     <NavListItem href="/pdf/unlock-pdf" icon={Unlock} title={t("items.unlockPdf")}>
                       {t("items.unlockPdfDesc")}
+                    </NavListItem>
+                    <NavListItem href="/pdf/edit-pdf" icon={Edit3} title={t("items.editPdf")}>
+                      {t("items.editPdfDesc")}
                     </NavListItem>
                     <NavListItem href="/document/pdf-to-txt" icon={Type} title={t("items.pdfToText")}>
                       {t("items.pdfToTextDesc")}
@@ -351,6 +355,7 @@ export function Navbar() {
                     <NavListItem href="/pdf/split-pdf" icon={Scissors} title={t("items.splitPdf")}>{t("items.splitPdfDesc")}</NavListItem>
                     <NavListItem href="/pdf/protect-pdf" icon={Lock} title={t("items.protectPdf")}>{t("items.protectPdfDesc")}</NavListItem>
                     <NavListItem href="/pdf/unlock-pdf" icon={Unlock} title={t("items.unlockPdf")}>{t("items.unlockPdfDesc")}</NavListItem>
+                    <NavListItem href="/pdf/edit-pdf" icon={Edit3} title={t("items.editPdf")}>{t("items.editPdfDesc")}</NavListItem>
                     <NavListItem href="/document/pdf-to-txt" icon={Type} title={t("items.pdfToText")}>{t("items.pdfToTextDesc")}</NavListItem>
                     <NavListItem href="/document/word-to-pdf" icon={FileText} title={t("items.wordToPdf")}>{t("items.wordToPdfDesc")}</NavListItem>
                     <NavListItem href="/document/master" icon={Layout} title={t("items.docsMaster")}>{t("items.docsMasterDesc")}</NavListItem>
@@ -471,6 +476,7 @@ export function Navbar() {
                     <MobileLink href="/pdf/split-pdf" sub>{t("items.splitPdf")}</MobileLink>
                     <MobileLink href="/pdf/protect-pdf" sub>{t("items.protectPdf")}</MobileLink>
                     <MobileLink href="/pdf/unlock-pdf" sub>{t("items.unlockPdf")}</MobileLink>
+                    <MobileLink href="/pdf/edit-pdf" sub>{t("items.editPdf")}</MobileLink>
                     <MobileLink href="/document/pdf-to-txt" sub>{t("items.pdfToText")}</MobileLink>
                     <MobileLink href="/document/word-to-pdf" sub>{t("items.wordToPdf")}</MobileLink>
                     <MobileLink href="/document/master" sub>{t("items.docsMaster")}</MobileLink>

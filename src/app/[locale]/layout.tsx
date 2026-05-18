@@ -154,17 +154,20 @@ export default async function LocaleLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
-          crossOrigin="anonymous"
-        ></script>
       </head>
       <body className="min-h-full flex flex-col font-sans bg-transparent" suppressHydrationWarning>
         <div className="noise-overlay" aria-hidden="true" />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg">
           Skip to content
         </a>
+        {/* AdSense script — loaded after interactive to avoid blocking render */}
+        <Script
+          id="adsense-script"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          async
+        />
         <ThemeProvider defaultTheme="dark">
           <NextIntlClientProvider messages={messages} locale={locale}>
             <GlobalVideoBackground />
