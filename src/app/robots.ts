@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/', '/status/'],
     },
-    sitemap: 'https://safetools.space/sitemap.xml',
+    sitemap: 'https://www.safetools.space/sitemap.xml',
   };
 }

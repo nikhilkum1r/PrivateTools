@@ -26,6 +26,7 @@ import { useTranslations } from "next-intl";
 
 export default function FileShredderClient() {
   const t = useTranslations("fileShredder");
+  const common = useTranslations("common");
   const { shown, accepted, showDisclaimer, accept } = useDisclaimer();
   const [file, setFile] = useState<File | null>(null);
   const [passes, setPasses] = useState<ShredPasses>(3);
@@ -263,11 +264,11 @@ export default function FileShredderClient() {
             <div className="flex flex-wrap justify-center gap-3">
               {(Array.isArray(t.raw("landing.related.tools")) ? (t.raw("landing.related.tools") as any[]) : []).map(tool => {
                 const localizedNames: any = {
-                  "Metadata Cleaner": useTranslations("common")("tools.metadataCleaner"),
-                  "Encryption Vault": useTranslations("common")("tools.vault"),
-                  "Secure Notes": useTranslations("common")("tools.secureNotes"),
-                  "Steganography": useTranslations("common")("tools.steganography"),
-                  "Password Generator": useTranslations("common")("tools.passwordGenerator")
+                  "Metadata Cleaner": common("tools.metadataCleaner"),
+                  "Encryption Vault": common("tools.vault"),
+                  "Secure Notes": common("tools.secureNotes"),
+                  "Steganography": common("tools.steganography"),
+                  "Password Generator": common("tools.passwordGenerator")
                 };
                 return (
                   <Link key={tool.href} href={tool.href} className="px-5 py-2.5 rounded-full bg-secondary hover:bg-red-500 hover:text-white border border-border hover:border-red-500 transition-colors font-bold text-sm">

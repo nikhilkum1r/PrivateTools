@@ -8,7 +8,7 @@ export async function GET() {
     const blogData = JSON.parse(await fs.readFile(blogJsonPath, 'utf-8'));
     const posts = blogData.blog.posts;
 
-    const baseUrl = 'https://safetools.space';
+    const baseUrl = 'https://www.safetools.space';
     
     let rss = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">

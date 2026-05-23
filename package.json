@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint .",
     "i18n:validate": "node scripts/validate-translations.js",
     "i18n:generate": "node scripts/generate-locales.js",
     "i18n:fix-pages": "node scripts/fix-page-locales.js",

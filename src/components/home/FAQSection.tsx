@@ -24,10 +24,10 @@ export function FAQSection() {
                <div className="grid grid-cols-1 gap-6">
                   {Array.isArray(hp.raw("faq.items")) && (hp.raw("faq.items") as Array<{ q: string; a: string }>).map((faq, i) => (
                      <div key={i} className="p-10 glass-card backdrop-blur-xl border border-border/50 rounded-3xl space-y-4 hover:border-primary/20 transition-all group">
-                        <h4 className="text-2xl font-bold tracking-tight flex items-center gap-6 font-heading">
+                        <h3 className="text-2xl font-bold tracking-tight flex items-center gap-6 font-heading">
                            <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary text-sm shrink-0 shadow-lg group-hover:scale-110 transition-transform">Q</div>
                            {faq.q}
-                        </h4>
+                        </h3>
                         <p className="text-muted-foreground font-medium leading-relaxed text-lg pl-18 opacity-80 group-hover:opacity-100 transition-opacity">
                            {faq.a}
                         </p>

@@ -74,7 +74,7 @@ export function Footer() {
             {/* Browser Compatibility */}
             <div className="pt-3 space-y-2">
               <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground/40">{t("verifiedSupport")}</p>
-              <div className="flex flex-wrap gap-3 text-muted-foreground/30 hover:text-muted-foreground/60 transition-colors">
+              <div className="flex flex-wrap gap-3 text-muted-foreground hover:text-muted-foreground/80 transition-colors">
                 {["chrome", "firefox", "edge", "safari", "android", "iphone"].map(b => (
                    <span key={b} className="text-[10px] font-semibold tracking-wide uppercase">{t(`browsers.${b}`)}</span>
                 ))}
@@ -84,7 +84,7 @@ export function Footer() {
 
           {/* Links Sections */}
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-5">{t("product")}</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-5">{t("product")}</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-5">{t("resources")}</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-5">{t("resources")}</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -110,7 +110,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground mb-5">{t("community")}</h4>
+            <h3 className="text-sm font-semibold text-foreground mb-5">{t("community")}</h3>
             <ul className="space-y-3">
               {footerLinks.community.map((link) => (
                 <li key={link.name}>
@@ -125,18 +125,18 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-4 text-xs text-muted-foreground/50">
+          <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <span>{t("copyright")}</span>
             <span className="hidden md:inline">·</span>
-            <Link href="/privacy" className="hover:text-foreground transition-colors">{common("privacyPolicy")}</Link>
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">{common("privacyPolicy")}</Link>
             <span className="hidden md:inline">·</span>
             <Link href="/terms" className="hover:text-foreground transition-colors">{common("termsOfService")}</Link>
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/8 border border-emerald-500/12">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
               <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">{t("systemsLocal")}</span>
+              <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">{t("systemsLocal")}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Link href="https://github.com/nikhilkum1r" className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/10 hover:text-primary transition-all" aria-label="GitHub">

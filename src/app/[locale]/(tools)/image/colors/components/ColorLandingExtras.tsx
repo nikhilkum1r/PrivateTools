@@ -178,7 +178,7 @@ export function ColorLandingExtras({ t, common, copyToClipboard }: ColorLandingE
                      </ul>
                   </div>
                   <div className="p-8 rounded-3xl glass-card border border-border/40 font-mono text-[10px] space-y-1">
-                     <p className="text-muted-foreground/40">// tailwind.config.js</p>
+                     <p className="text-muted-foreground/40">{"// tailwind.config.js"}</p>
                      <p className="text-blue-400">colors: {'{'}</p>
                      <p className="pl-4 text-emerald-400">primary: <span className="text-primary">"#2563EB"</span>,</p>
                      <p className="pl-4 text-emerald-400">secondary: <span className="text-blue-600">"#7C3AED"</span></p>

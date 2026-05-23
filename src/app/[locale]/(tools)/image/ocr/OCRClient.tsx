@@ -323,7 +323,7 @@ export default function OCRClient({ isEmbed }: OCRClientProps = {}) {
   const downloadFile = async (format: 'txt' | 'docx' | 'json' | 'csv') => {
     let content: string | Blob = result;
     let mimeType = "text/plain";
-    let extension = format;
+    const extension = format;
 
     if (format === 'json') {
       content = JSON.stringify({

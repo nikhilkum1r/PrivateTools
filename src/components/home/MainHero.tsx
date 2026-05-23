@@ -39,9 +39,12 @@ export function MainHero({
 
    React.useEffect(() => {
       if (mounted) {
-         // Prefetch critical WASM modules for better experience
-         prefetchWasm('ffmpeg');
-         prefetchWasm('pdf');
+         // Delay WASM prefetch to avoid competing with LCP resources
+         const t = setTimeout(() => {
+            prefetchWasm('ffmpeg');
+            prefetchWasm('pdf');
+         }, 3000);
+         return () => clearTimeout(t);
       }
    }, [mounted]);
 
@@ -50,9 +53,8 @@ export function MainHero({
          <div className="container mx-auto px-6 relative z-10">
             <div className="flex flex-col items-center text-center max-w-[900px] mx-auto gap-12 md:gap-24">
                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
                   className="space-y-8 md:space-y-12 flex flex-col items-center"
                >
 

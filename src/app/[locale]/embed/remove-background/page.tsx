@@ -5,7 +5,7 @@ import RemoveBackgroundClient from "../../(tools)/image/remove-background/Remove
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "backgroundRemover.hero" });
+  const t = await getTranslations({ locale, namespace: "backgroundRemover.seo" });
 
   return {
     title: `${t("title")} | Embed by SafeTools`,

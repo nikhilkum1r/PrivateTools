@@ -138,7 +138,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label={common("aria.goHome")}>
+        <Link href="/" className="flex items-center gap-2.5 group" aria-label={`${common("brand.name")} – ${common("aria.goHome")}`}>
           <div className="relative w-9 h-9 flex items-center justify-center">
             <div
               className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-blue-500/10 group-hover:from-primary/30 group-hover:to-blue-500/20 transition-all duration-300"

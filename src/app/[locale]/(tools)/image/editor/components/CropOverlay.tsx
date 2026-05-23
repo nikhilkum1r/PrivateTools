@@ -62,8 +62,8 @@ export const CropOverlay = ({
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDraggingBox) return;
 
-      let dx_screen = (e.clientX - dragStart.x) / scale;
-      let dy_screen = (e.clientY - dragStart.y) / scale;
+      const dx_screen = (e.clientX - dragStart.x) / scale;
+      const dy_screen = (e.clientY - dragStart.y) / scale;
 
       const rad = -(settings.rotate * Math.PI) / 180;
       const dx = dx_screen * Math.cos(rad) - dy_screen * Math.sin(rad);
@@ -111,8 +111,8 @@ export const CropOverlay = ({
     const onMove = (moveEvent: MouseEvent) => {
       if (!displayMetrics) return;
       const { scale } = displayMetrics;
-      let dx_screen = (moveEvent.clientX - startX) / scale;
-      let dy_screen = (moveEvent.clientY - startY) / scale;
+      const dx_screen = (moveEvent.clientX - startX) / scale;
+      const dy_screen = (moveEvent.clientY - startY) / scale;
 
       const rad = -(settings.rotate * Math.PI) / 180;
       const dx = dx_screen * Math.cos(rad) - dy_screen * Math.sin(rad);

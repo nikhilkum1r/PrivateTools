@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
+
 import { Inter, Sora, JetBrains_Mono } from "next/font/google";
 import "../globals.css";
 import { locales, rtlLocales } from "@/config/locales";
@@ -10,7 +10,6 @@ import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { Toaster } from "sonner";
 import CommandPalette from "@/components/shared/CommandPalette";
 import { RetentionProvider } from "@/components/shared/RetentionProvider";
-import PWAPrompt from "@/components/shared/PWAPrompt";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +46,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
 
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://www.safetools.space";
+
   return {
     title: {
       default: t('seo.title') || "SafeTools  Privacy-First Online File Tools",
@@ -54,10 +55,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     description: t('seo.description') || "Convert, compress, edit, encrypt, and manage files securely in your browser. No uploads, no tracking, no server storage.",
     manifest: "/manifest.json",
-    metadataBase: new URL("https://safetools.space"),
+    metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(locales.map(l => [l, `/${l}`])),
+      canonical: `${baseUrl}/${locale}`,
+      languages: Object.fromEntries(locales.map(l => [l, `${baseUrl}/${l}`])),
       types: {
         'application/rss+xml': [{ url: '/rss.xml', title: 'SafeTools Journal' }],
       },
@@ -115,10 +116,10 @@ export default async function LocaleLayout({
       {
         "@type": "Organization",
         "name": "SafeTools",
-        "url": "https://safetools.space",
+        "url": "https://www.safetools.space",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://safetools.space/android-chrome-512x512.webp",
+          "url": "https://www.safetools.space/android-chrome-512x512.webp",
           "width": 512,
           "height": 512
         },
@@ -128,12 +129,12 @@ export default async function LocaleLayout({
       {
         "@type": "WebSite",
         "name": "SafeTools",
-        "url": `https://safetools.space/${locale}`,
+        "url": `https://www.safetools.space/${locale}`,
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": `https://safetools.space/${locale}/tools?q={search_term_string}`
+            "urlTemplate": `https://www.safetools.space/${locale}/tools?q={search_term_string}`
           },
           "query-input": "required name=search_term_string"
         }
@@ -152,21 +153,35 @@ export default async function LocaleLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-transparent" suppressHydrationWarning>
         <div className="noise-overlay" aria-hidden="true" />
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg">
           Skip to content
         </a>
-        {/* AdSense script — loaded after interactive to avoid blocking render */}
-        <Script
-          id="adsense-script"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-          async
+        {/* AdSense script — deferred until first user interaction to avoid third-party cookie penalties */}
+        <script
+          id="adsense-loader"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  var loaded=false;
+  function loadAds(){
+    if(loaded)return;loaded=true;
+    var s=document.createElement('script');
+    s.id='adsense-script';
+    s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379';
+    s.crossOrigin='anonymous';
+    s.async=true;
+    document.head.appendChild(s);
+    ['scroll','click','touchstart','keydown'].forEach(function(e){
+      window.removeEventListener(e,loadAds,{passive:true});
+    });
+  }
+  ['scroll','click','touchstart','keydown'].forEach(function(e){
+    window.addEventListener(e,loadAds,{passive:true});
+  });
+})();`
+          }}
         />
         <ThemeProvider defaultTheme="dark">
           <NextIntlClientProvider messages={messages} locale={locale}>
@@ -186,13 +201,11 @@ export default async function LocaleLayout({
             />
           </NextIntlClientProvider>
         </ThemeProvider>
-        <Script
+        <script
           id="org-schema"
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <PWAPrompt />
       </body>
     </html>
   );

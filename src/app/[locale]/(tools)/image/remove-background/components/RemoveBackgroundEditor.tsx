@@ -249,13 +249,13 @@ export function RemoveBackgroundEditor({
                 <div className="absolute top-4 right-4 z-10 glass-card bg-emerald-500/50 px-3 py-1 rounded-full text-[10px] font-black uppercase text-white tracking-widest border border-emerald-500/20 pointer-events-none transition-opacity duration-300" style={{ opacity: sliderPos < 80 ? 1 : 0 }}>{t("comparison.after")}</div>
 
                 <img 
-                  src={activeItem?.resultPreview!} 
+                  src={activeItem?.resultPreview || ""} 
                   className={cn("absolute max-w-full max-h-full object-contain pointer-events-none select-none", hasShadow && "drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]")} 
                   alt="Processed image with background removed"
                 />
                 
                 <img 
-                  src={activeItem?.preview!} 
+                  src={activeItem?.preview || ""} 
                   className="absolute max-w-full max-h-full object-contain pointer-events-none select-none" 
                   style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
                   alt="Original image for comparison"

@@ -66,6 +66,24 @@ interface VideoEditorProps {
   videoRef: React.RefObject<HTMLVideoElement | null>;
 }
 
+const CircularProgress = ({ value, label }: { value: number, label: string }) => {
+  const radius = 70;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (value / 100) * circumference;
+  return (
+    <div className="relative flex items-center justify-center">
+      <svg className="w-48 h-48 transform -rotate-90">
+        <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" className="text-foreground/5" />
+        <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" className="text-primary transition-all duration-500 ease-out shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)]" />
+      </svg>
+      <div className="absolute flex flex-col items-center">
+        <span className="text-2xl font-bold tabular-nums tracking-tight">{value}%</span>
+        <span className="text-[10px] font-bold tracking-wider text-muted-foreground/50">{label}</span>
+      </div>
+    </div>
+  );
+};
+
 export function VideoEditor({
   t, videoFile, previewUrl, outputUrl, isLoaded, isProcessing, progress, logs,
   crf, setCrf, preset, setPreset, outputFormat, setOutputFormat, mute, setMute,
@@ -75,24 +93,6 @@ export function VideoEditor({
   processVideo, takeSnapshot, resetTool, isDrawing, setIsDrawing, startPos,
   setStartPos, currentPos, setCurrentPos, videoRef
 }: VideoEditorProps) {
-
-  const CircularProgress = ({ value }: { value: number }) => {
-    const radius = 70;
-    const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (value / 100) * circumference;
-    return (
-      <div className="relative flex items-center justify-center">
-        <svg className="w-48 h-48 transform -rotate-90">
-          <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" className="text-foreground/5" />
-          <circle cx="96" cy="96" r={radius} stroke="currentColor" strokeWidth="12" fill="transparent" strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" className="text-primary transition-all duration-500 ease-out shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)]" />
-        </svg>
-        <div className="absolute flex flex-col items-center">
-          <span className="text-2xl font-bold tabular-nums tracking-tight">{value}%</span>
-          <span className="text-[10px] font-bold tracking-wider text-muted-foreground/50">{t("messages.rendering")}</span>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <>
@@ -343,7 +343,7 @@ export function VideoEditor({
           <AnimatePresence mode="wait">
             {isProcessing ? (
               <motion.div key="processing" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} className="z-10">
-                <CircularProgress value={progress} />
+                <CircularProgress value={progress} label={t("messages.rendering")} />
               </motion.div>
             ) : (
               <motion.div key="preview" initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} className="relative group max-w-full lg:max-w-6xl mx-auto">

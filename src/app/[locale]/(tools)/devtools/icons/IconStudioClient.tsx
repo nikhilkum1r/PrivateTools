@@ -74,14 +74,7 @@ export default function IconStudioClient({ defaultTitle, hideNavbar }: IconStudi
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Auto-extract palette when image changes
-  useEffect(() => {
-    if (preview) {
-      extractPalette(preview);
-    }
-  }, [preview]);
-
-  const extractPalette = (imgUrl: string) => {
+  function extractPalette(imgUrl: string) {
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.onload = () => {
@@ -102,7 +95,14 @@ export default function IconStudioClient({ defaultTitle, hideNavbar }: IconStudi
       setPalette(Array.from(colors));
     };
     img.src = imgUrl;
-  };
+  }
+
+  // Auto-extract palette when image changes
+  useEffect(() => {
+    if (preview) {
+      extractPalette(preview);
+    }
+  }, [preview]);
 
   const handleFileDrop = (files: File[]) => {
     if (files.length === 0) return;
@@ -124,31 +124,35 @@ export default function IconStudioClient({ defaultTitle, hideNavbar }: IconStudi
       await new Promise((resolve) => (img.onload = resolve));
 
       const sizes: ({ s: number; n: string; p: GeneratedIcon['platform']; scale?: string } | { w: number; h: number; n: string; p: GeneratedIcon['platform'] })[] = [
-        { s: 16, n: 'favicon-16x16.webp', p: 'web' },
-        { s: 32, n: 'favicon-32x32.webp', p: 'web' },
-        { s: 48, n: 'favicon-48x48.png', p: 'web' },
-        { s: 180, n: 'apple-touch-icon.webp', p: 'ios' },
-        { s: 192, n: 'android-chrome-192x192.webp', p: 'android' },
-        { s: 512, n: 'android-chrome-512x512.webp', p: 'android' },
-        { s: 48, n: 'ic_launcher.png', p: 'android', scale: 'mdpi' },
-        { s: 72, n: 'ic_launcher.png', p: 'android', scale: 'hdpi' },
-        { s: 96, n: 'ic_launcher.png', p: 'android', scale: 'xhdpi' },
-        { s: 144, n: 'ic_launcher.png', p: 'android', scale: 'xxhdpi' },
-        { s: 192, n: 'ic_launcher.png', p: 'android', scale: 'xxxhdpi' },
-        { s: 40, n: 'icon-20@2x.png', p: 'ios', scale: '20pt@2x' },
-        { s: 60, n: 'icon-20@3x.png', p: 'ios', scale: '20pt@3x' },
-        { s: 58, n: 'icon-29@2x.png', p: 'ios', scale: '29pt@2x' },
-        { s: 87, n: 'icon-29@3x.png', p: 'ios', scale: '29pt@3x' },
-        { s: 80, n: 'icon-40@2x.png', p: 'ios', scale: '40pt@2x' },
-        { s: 120, n: 'icon-40@3x.png', p: 'ios', scale: '40pt@3x' },
-        { s: 120, n: 'icon-60@2x.png', p: 'ios', scale: '60pt@2x' },
-        { s: 180, n: 'icon-60@3x.png', p: 'ios', scale: '60pt@3x' },
-        { s: 1024, n: 'icon-1024.png', p: 'ios', scale: '1024pt' },
-        { s: 512, n: 'pwa-icon-512x512.png', p: 'pwa' },
-        { w: 1200, h: 630, n: 'og-image.webp', p: 'social' },
-        { w: 1200, h: 600, n: 'twitter-preview.png', p: 'social' },
-        { w: 1080, h: 1080, n: 'instagram-post.png', p: 'social' },
-        { w: 1080, h: 1350, n: 'instagram-portrait.png', p: 'social' },
+        { s: 16, n: 'favicon-16x16.png', p: 'web' },
+        { s: 32, n: 'favicon-32x32.png', p: 'web' },
+        { s: 48, n: 'favicon.ico', p: 'web' },
+        { s: 192, n: 'android-chrome-192x192.png', p: 'web' },
+        { s: 512, n: 'android-chrome-512x512.png', p: 'web' },
+        { s: 150, n: 'mstile-150x150.png', p: 'web' },
+        { s: 310, n: 'mstile-310x310.png', p: 'web' },
+        { s: 180, n: 'apple-touch-icon.png', p: 'ios' },
+        { s: 48, n: 'mipmap-mdpi/ic_launcher.png', p: 'android', scale: 'mdpi' },
+        { s: 72, n: 'mipmap-hdpi/ic_launcher.png', p: 'android', scale: 'hdpi' },
+        { s: 96, n: 'mipmap-xhdpi/ic_launcher.png', p: 'android', scale: 'xhdpi' },
+        { s: 144, n: 'mipmap-xxhdpi/ic_launcher.png', p: 'android', scale: 'xxhdpi' },
+        { s: 192, n: 'mipmap-xxxhdpi/ic_launcher.png', p: 'android', scale: 'xxxhdpi' },
+        { s: 512, n: 'playstore-icon.png', p: 'android' },
+        { s: 40, n: 'AppIcon.appiconset/icon-20@2x.png', p: 'ios', scale: '20pt@2x' },
+        { s: 60, n: 'AppIcon.appiconset/icon-20@3x.png', p: 'ios', scale: '20pt@3x' },
+        { s: 58, n: 'AppIcon.appiconset/icon-29@2x.png', p: 'ios', scale: '29pt@2x' },
+        { s: 87, n: 'AppIcon.appiconset/icon-29@3x.png', p: 'ios', scale: '29pt@3x' },
+        { s: 80, n: 'AppIcon.appiconset/icon-40@2x.png', p: 'ios', scale: '40pt@2x' },
+        { s: 120, n: 'AppIcon.appiconset/icon-40@3x.png', p: 'ios', scale: '40pt@3x' },
+        { s: 120, n: 'AppIcon.appiconset/icon-60@2x.png', p: 'ios', scale: '60pt@2x' },
+        { s: 180, n: 'AppIcon.appiconset/icon-60@3x.png', p: 'ios', scale: '60pt@3x' },
+        { s: 1024, n: 'AppIcon.appiconset/icon-1024.png', p: 'ios', scale: '1024pt' },
+        { s: 192, n: 'pwa-192x192.png', p: 'pwa' },
+        { s: 512, n: 'pwa-512x512.png', p: 'pwa' },
+        { w: 1200, h: 630, n: 'og-image.jpg', p: 'social' },
+        { w: 1200, h: 600, n: 'twitter-preview.jpg', p: 'social' },
+        { w: 1080, h: 1080, n: 'instagram-post.jpg', p: 'social' },
+        { w: 1080, h: 1350, n: 'instagram-portrait.jpg', p: 'social' },
         { w: 2048, h: 2732, n: 'splash-ios.png', p: 'ios' },
         { w: 1080, h: 1920, n: 'splash-android.png', p: 'android' },
       ];
@@ -214,20 +218,31 @@ export default function IconStudioClient({ defaultTitle, hideNavbar }: IconStudi
         ctx.shadowBlur = 0;
         ctx.shadowOffsetY = 0;
 
-        const getExportConfig = (platform: string) => {
+        const getExportConfig = (itemName: string) => {
           if (exportFormat === 'auto') {
-            if (platform === 'social') return { mime: 'image/jpeg', ext: '.jpg' };
-            if (platform === 'android') return { mime: 'image/webp', ext: '.webp' };
-            if (platform === 'web' && item.n.includes('favicon')) return { mime: 'image/x-icon', ext: '.ico' };
+            if (itemName.endsWith('.jpg') || itemName.endsWith('.jpeg')) return { mime: 'image/jpeg', ext: '.jpg' };
+            if (itemName.endsWith('.ico')) return { mime: 'image/x-icon', ext: '.ico' };
+            if (itemName.endsWith('.webp')) return { mime: 'image/webp', ext: '.webp' };
             return { mime: 'image/png', ext: '.png' };
           }
-          return { mime: exportFormat, ext: '.png' }; // Simplified mapping
+          
+          const formatExtMap: Record<string, string> = {
+            'image/png': '.png',
+            'image/jpeg': '.jpg',
+            'image/webp': '.webp',
+            'image/x-icon': '.ico'
+          };
+          return { mime: exportFormat, ext: formatExtMap[exportFormat] || '.png' };
         };
 
-        const config = getExportConfig(item.p);
+        const config = getExportConfig(item.n);
+        let finalName = item.n;
+        if (exportFormat !== 'auto') {
+           finalName = finalName.replace(/\.[^/.]+$/, config.ext);
+        }
         
         generated.push({
-          name: item.n.replace('.png', config.ext),
+          name: finalName,
           url: canvas.toDataURL(config.mime.startsWith('image/') ? config.mime : 'image/png', 0.9),
           size: size,
           width: w,
@@ -320,6 +335,88 @@ export default function IconStudioClient({ defaultTitle, hideNavbar }: IconStudi
                      icon.platform === 'pwa' ? pwaFolder : socialFolder;
       folder?.file(icon.name, base64, { base64: true });
     });
+
+    const iosAppIcons = items.filter(i => i.platform === 'ios' && i.name.includes('AppIcon.appiconset'));
+    if (iosAppIcons.length > 0) {
+      const contentsJson = {
+        images: iosAppIcons.map(icon => {
+          const filename = icon.name.split('/').pop();
+          let size = "1024x1024";
+          let scale = "1x";
+          let idiom = "universal";
+          if (icon.scale && icon.scale !== '1024pt') {
+             const [s, scl] = icon.scale.split('@');
+             const pt = s.replace('pt', '');
+             size = `${pt}x${pt}`;
+             scale = scl || "1x";
+             idiom = "universal";
+          } else if (icon.scale === '1024pt') {
+             idiom = "ios-marketing";
+          }
+          return { size, idiom, filename, scale };
+        }),
+        info: { version: 1, author: "xcode" }
+      };
+      iosFolder?.file("AppIcon.appiconset/Contents.json", JSON.stringify(contentsJson, null, 2));
+    }
+
+    const pwaItems = items.filter(i => i.platform === 'pwa' || (i.platform === 'web' && i.name.includes('android-chrome')));
+    if (pwaItems.length > 0) {
+      const manifest = {
+        name: "My App",
+        short_name: "App",
+        icons: pwaItems.map(icon => ({
+          src: icon.name.split('/').pop(),
+          sizes: `${icon.size}x${icon.size}`,
+          type: icon.name.endsWith('.png') ? "image/png" : "image/webp",
+          purpose: "any maskable"
+        })),
+        theme_color: "#ffffff",
+        background_color: "#ffffff",
+        display: "standalone"
+      };
+      pwaFolder?.file("site.webmanifest", JSON.stringify(manifest, null, 2));
+    }
+
+    // Generate HTML Head Snippets
+    const htmlTags = `<!-- Place these tags in your <head> -->
+<!-- Standard Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Android / PWA Manifest -->
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+<!-- Open Graph / Social -->
+<meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yourdomain.com/twitter-preview.jpg">`;
+    zip.file("html-head-tags.html", htmlTags);
+
+    const browserconfigXml = `<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square150x150logo src="/mstile-150x150.png"/>
+      <square310x310logo src="/mstile-310x310.png"/>
+      <TileColor>#ffffff</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>`;
+    faviconFolder?.file("browserconfig.xml", browserconfigXml);
 
     const content = await zip.generateAsync({ type: "blob" });
     const link = document.createElement("a");

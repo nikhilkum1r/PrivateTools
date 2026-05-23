@@ -125,7 +125,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
     };
   }, [t, common]);
 
-  const processItem = async (index: number, currentBatch: ProcessedResult[]) => {
+  async function processItem(index: number, currentBatch: ProcessedResult[]) {
     const item = currentBatch[index];
     if (!item || !workerRef.current) return;
     
@@ -151,7 +151,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
     } catch (err: any) {
       toast.error(t("tools.errorPreparing"));
     }
-  };
+  }
 
   const handleDrop = useCallback((files: File[]) => {
     const validFiles = files.filter(f => {

@@ -68,13 +68,13 @@ export default getRequestConfig(async ({requestLocale}) => {
   // Alias homePage to home for backward compatibility
   if (messages.home) {
     messages.homePage = messages.home;
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[i18n] Aliased "homePage" to "home"');
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //   console.log('[i18n] Aliased "homePage" to "home"');
+    // }
   }
 
   if (process.env.NODE_ENV === 'development') {
-    console.log(`[i18n] Loaded ${Object.keys(messages).length} namespaces for locale: ${locale}`);
+    // console.log(`[i18n] Loaded ${Object.keys(messages).length} namespaces for locale: ${locale}`);
     if (!messages.home) console.error('[i18n] CRITICAL: "home" is MISSING');
   }
 

@@ -112,7 +112,7 @@ export function PdfEditorCanvas({
     return () => { cancelled = true; };
   }, [pdfBytes, currentPage, scale, pages, annotations]);
 
-  const drawAnnotationsOverlay = useCallback(() => {
+  function drawAnnotationsOverlay() {
     const overlay = overlayRef.current;
     if (!overlay) return;
     const ctx = overlay.getContext("2d");
@@ -162,7 +162,7 @@ export function PdfEditorCanvas({
           break;
       }
     }
-  }, [annotations, currentPage, scale]);
+  }
 
   const getCanvasCoords = (e: React.MouseEvent) => {
     const overlay = overlayRef.current;

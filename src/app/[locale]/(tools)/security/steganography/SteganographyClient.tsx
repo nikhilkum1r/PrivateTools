@@ -703,12 +703,12 @@ export default function SteganographyClient() {
                const Icon = toolIcons[i % toolIcons.length];
                const hrefs = ["/security/vault", "/security/metadata-cleaner", "/privacy/secure-notes", "/privacy/password-generator", "/privacy/password-checker", "/security/file-shredder"];
                const localizedNames: any = {
-                 "File Vault": useTranslations("common")("tools.vault"),
-                 "Metadata Cleaner": useTranslations("common")("tools.metadataCleaner"),
-                 "Secure Notes": useTranslations("common")("tools.secureNotes"),
-                 "Password Generator": useTranslations("common")("tools.passwordGenerator"),
-                 "Strength Checker": useTranslations("common")("tools.passwordChecker"),
-                 "File Shredder": useTranslations("common")("tools.fileShredder")
+                 "File Vault": common("tools.vault"),
+                 "Metadata Cleaner": common("tools.metadataCleaner"),
+                 "Secure Notes": common("tools.secureNotes"),
+                 "Password Generator": common("tools.passwordGenerator"),
+                 "Strength Checker": common("tools.passwordChecker"),
+                 "File Shredder": common("tools.fileShredder")
                };
                return (
                  <Link key={i} href={hrefs[i]} className="group p-6 rounded-3xl bg-card border border-border hover:border-primary/50 transition-all">

@@ -122,12 +122,7 @@ export function ToolsSection({
                   ))}
                </div>
 
-               <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12"
-               >
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-12 animate-fade-in">
                   {filteredTools.map((tool, i) => (
                      <ToolCard 
                         key={tool.href}
@@ -139,7 +134,7 @@ export function ToolsSection({
                         t_tools={t_tools}
                      />
                   ))}
-               </motion.div>
+               </div>
             </div>
          </div>
       </section>
@@ -155,11 +150,9 @@ function ToolCard({ tool, i, favorites, toggleFavorite, trackUsage, t_tools }: {
    t_tools: any;
 }) {
    return (
-      <motion.div
-         initial={{ opacity: 0, y: 20 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         viewport={{ once: true }}
-         transition={{ delay: i * 0.05 }}
+      <div
+         className="animate-fade-up"
+         style={{ animationDelay: `${i * 0.05}s`, animationFillMode: 'both' }}
       >
          <Card className="group h-full p-8 rounded-2xl glass-card border-border hover:border-primary/40 transition-all hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(var(--primary-rgb),0.1)] relative overflow-hidden text-left">
             <button
@@ -168,6 +161,7 @@ function ToolCard({ tool, i, favorites, toggleFavorite, trackUsage, t_tools }: {
                   e.stopPropagation();
                   toggleFavorite(tool.href);
                }}
+               aria-label="Toggle favorite"
                className="absolute top-8 right-8 z-20 w-10 h-10 rounded-xl bg-secondary/50 dark:bg-secondary/30 backdrop-blur-sm flex items-center justify-center hover:bg-pink-500/10 hover:text-pink-500 transition-all"
             >
                <Heart className={cn("w-5 h-5 transition-all", favorites.includes(tool.href) ? "fill-pink-500 text-pink-500" : "text-muted-foreground")} />
@@ -196,6 +190,6 @@ function ToolCard({ tool, i, favorites, toggleFavorite, trackUsage, t_tools }: {
                </div>
             </Link>
          </Card>
-      </motion.div>
+      </div>
    );
 }
