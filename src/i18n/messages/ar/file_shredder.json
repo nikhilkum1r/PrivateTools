@@ -124,6 +124,16 @@
             "a": "لا. تظل الملفات معالجة محلياً."
           }
         ]
+      },
+      "educational": {
+        "how_it_works": {
+          "steps": [
+            "Upload your file securely.",
+            "Select your desired operation.",
+            "Process the file locally.",
+            "Download the processed result."
+          ]
+        }
       }
     }
   }

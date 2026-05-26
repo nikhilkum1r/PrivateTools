@@ -169,11 +169,31 @@
           "SafeTools"
         ],
         "rows": [
-          ["Upload Required", "Usually", "No"],
-          ["Local Processing", "Rare", "Yes"],
-          ["Tracking Scripts", "Often", "No"],
-          ["Free to Use", "Limited", "Yes"],
-          ["Privacy Focused", "Limited", "Yes"]
+          [
+            "Upload Required",
+            "Usually",
+            "No"
+          ],
+          [
+            "Local Processing",
+            "Rare",
+            "Yes"
+          ],
+          [
+            "Tracking Scripts",
+            "Often",
+            "No"
+          ],
+          [
+            "Free to Use",
+            "Limited",
+            "Yes"
+          ],
+          [
+            "Privacy Focused",
+            "Limited",
+            "Yes"
+          ]
         ]
       },
       "faq": {
@@ -200,6 +220,16 @@
       "manifesto": {
         "title": "Privacy-First Document Editing",
         "description": "SafeTools builds browser-based document tools designed to maximize privacy, speed, and user control. Edit PDFs without compromising your data security."
+      },
+      "educational": {
+        "how_it_works": {
+          "steps": [
+            "Upload your file securely.",
+            "Select your desired operation.",
+            "Process the file locally.",
+            "Download the processed result."
+          ]
+        }
       }
     }
   }

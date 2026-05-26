@@ -54,5 +54,21 @@
         "a": "البصمة هي تقنية تجمع فيها المواقع بيانات صغيرة عن متصفحك (الخطوط، الدقة، العتاد) لإنشاء معرف فريد لك. يتيح لهم ذلك تتبعك حتى بدون ملفات تعريف الارتباط."
       }
     ]
+  },
+  "seo": {
+    "title": "فاحص الخصوصية",
+    "description": "تدقيق شامل لأمان المتصفح وإخفاء الهوية. حدد التسريبات، وبصمات الأصابع القابلة للتتبع، والثغرات الأمنية محلياً."
+  },
+  "landing": {
+    "educational": {
+      "how_it_works": {
+        "steps": [
+          "Upload your file securely.",
+          "Select your desired operation.",
+          "Process the file locally.",
+          "Download the processed result."
+        ]
+      }
+    }
   }
 }

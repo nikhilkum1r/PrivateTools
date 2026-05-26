@@ -338,6 +338,10 @@
         "description": "\"SafeTools crée des outils de confidentialité basés sur le navigateur conçus pour minimiser l'exposition des données et maximiser le contrôle des utilisateurs.\""
       },
       "cta": "Supprimez les données cachées. Protégez votre vie privée. Gardez le contrôle de votre empreinte numérique."
+    },
+    "seo": {
+      "title": "Nettoyeur de Métadonnées",
+      "description": "Supprimez les métadonnées cachées des images, documents et fichiers en toute sécurité grâce à un traitement axé sur la confidentialité depuis le navigateur."
     }
   }
 }

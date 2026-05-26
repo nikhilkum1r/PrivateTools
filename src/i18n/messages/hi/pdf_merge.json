@@ -117,6 +117,14 @@
       "educational": {
         "privacy": {
           "description": "आपकी फाइलें कभी भी आपके डिवाइस को नहीं छोड़ती हैं। सभी मर्जिंग और प्रोसेसिंग पूरी तरह से आपके ब्राउज़र में होती है।"
+        },
+        "how_it_works": {
+          "steps": [
+            "Upload your file securely.",
+            "Select your desired operation.",
+            "Process the file locally.",
+            "Download the processed result."
+          ]
         }
       },
       "offline": {

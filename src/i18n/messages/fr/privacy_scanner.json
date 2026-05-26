@@ -54,5 +54,21 @@
         "a": "Le fingerprinting est une technique par laquelle les sites web collectent de petites informations sur votre navigateur (polices, résolution, matériel) pour créer un identifiant unique. Cela leur permet de vous suivre même sans cookies."
       }
     ]
+  },
+  "seo": {
+    "title": "Scanner de Confidentialité",
+    "description": "Audit complet de la sécurité et de l'anonymat du navigateur. Identifiez les fuites, les empreintes traçables et les vulnérabilités de sécurité localement."
+  },
+  "landing": {
+    "educational": {
+      "how_it_works": {
+        "steps": [
+          "Upload your file securely.",
+          "Select your desired operation.",
+          "Process the file locally.",
+          "Download the processed result."
+        ]
+      }
+    }
   }
 }

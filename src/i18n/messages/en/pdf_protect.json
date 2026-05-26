@@ -168,6 +168,16 @@
             "a": "No. There is no backdoor. Keep your passwords safe."
           }
         ]
+      },
+      "educational": {
+        "how_it_works": {
+          "steps": [
+            "Upload your file securely.",
+            "Select your desired operation.",
+            "Process the file locally.",
+            "Download the processed result."
+          ]
+        }
       }
     },
     "messages": {

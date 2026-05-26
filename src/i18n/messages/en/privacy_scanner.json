@@ -54,5 +54,21 @@
         "a": "Fingerprinting is a technique where websites collect small bits of data about your browser (fonts, resolution, hardware) to create a unique ID for you. This allows them to track you even without cookies."
       }
     ]
+  },
+  "seo": {
+    "title": "Privacy Scanner",
+    "description": "Comprehensive browser security and anonymity audit. Identify leaks, trackable fingerprints, and security vulnerabilities locally."
+  },
+  "landing": {
+    "educational": {
+      "how_it_works": {
+        "steps": [
+          "Upload your file securely.",
+          "Select your desired operation.",
+          "Process the file locally.",
+          "Download the processed result."
+        ]
+      }
+    }
   }
 }

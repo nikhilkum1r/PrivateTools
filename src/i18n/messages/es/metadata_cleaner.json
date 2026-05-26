@@ -338,6 +338,10 @@
         "description": "\"SafeTools crea herramientas de privacidad basadas en el navegador diseñadas para minimizar la exposición de datos y maximizar el control del usuario.\""
       },
       "cta": "Elimine datos ocultos. Proteja su privacidad. Mantenga el control de su huella digital."
+    },
+    "seo": {
+      "title": "Limpiador de Metadatos",
+      "description": "Elimine metadatos ocultos de imágenes, documentos y archivos de forma segura mediante un procesamiento centrado en la privacidad desde el navegador."
     }
   }
 }

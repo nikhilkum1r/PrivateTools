@@ -338,6 +338,10 @@
         "description": "\"SafeTools creates browser-based privacy tools designed to minimize data exposure and maximize user control.\""
       },
       "cta": "Remove hidden data. Protect your privacy. Stay in control of your digital footprint."
+    },
+    "seo": {
+      "title": "Metadata Cleaner",
+      "description": "Remove hidden metadata from images, documents, and files securely using browser-based privacy-first processing."
     }
   }
 }
