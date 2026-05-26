@@ -20,15 +20,11 @@ interface SEOStructuredDataProps {
   image?: string;
   faqItems?: FAQItem[];
   breadcrumbs?: { name: string; item: string }[];
-  howTo?: {
-    name: string;
-    description: string;
-    step: HowToStep[];
-  };
+  howToSteps?: HowToStep[];
   browserRequirements?: string;
 }
 
-export default function SEOStructuredData({ name, description, url, image, faqItems, breadcrumbs, howTo, browserRequirements }: SEOStructuredDataProps) {
+export default function SEOStructuredData({ name, description, url, image, faqItems, breadcrumbs, howToSteps, browserRequirements }: SEOStructuredDataProps) {
   const schemas: any[] = [
     {
       "@context": "https://schema.org",
@@ -87,13 +83,13 @@ export default function SEOStructuredData({ name, description, url, image, faqIt
     });
   }
 
-  if (howTo && Array.isArray(howTo.step) && howTo.step.length > 0) {
+  if (howToSteps && Array.isArray(howToSteps) && howToSteps.length > 0) {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "HowTo",
-      "name": howTo.name,
-      "description": howTo.description,
-      "step": howTo.step.map((step, index) => ({
+      "name": `How to use ${name}`,
+      "description": description,
+      "step": howToSteps.map((step, index) => ({
         "@type": "HowToStep",
         "position": index + 1,
         "name": step.name,

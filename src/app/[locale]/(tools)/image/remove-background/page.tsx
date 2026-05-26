@@ -74,7 +74,7 @@ export default async function RemoveBackgroundPage({ params }: { params: Promise
         name={t("seo.title")}
         description={t("seo.description")}
         url={`https://safetools.space/${locale}/image/remove-background`}
-        howTo={howToData}
+        howToSteps={howToData?.step}
       />
       <Suspense fallback={<StudioSkeleton />}>
         <RemoveBackgroundClient />

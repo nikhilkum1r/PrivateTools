@@ -91,7 +91,7 @@ export default async function SpecificConverterPage({ params }: Props) {
         name={title}
         description={description}
         url={`https://safetools.space/image/convert/${slug}`}
-        howTo={howToData}
+        howToSteps={howToData?.step}
       />
       <ConversionStudioClient fromFormat={from} toFormat={to} />
     </>

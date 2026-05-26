@@ -52,14 +52,12 @@ export default async function SteganographyPage({ params }: { params: Promise<{ 
           { name: t("hero.title"), item: `https://safetools.space/${locale}/security/steganography` }
         ]}
 
-        howTo={{
-          name: t("seo.title"),
-          description: t("seo.description"),
-          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
-            name: step.split('.')[0] || "Step",
-            text: step
-          }))
-        }}
+        howToSteps={(t.has("landing.educational.how_it_works.steps") && Array.isArray(t.raw("landing.educational.how_it_works.steps")) 
+          ? t.raw("landing.educational.how_it_works.steps") as any[] 
+          : []).map((step: any) => ({
+          name: typeof step === "string" ? (step.split('.')[0] || "Step") : (step.t || step.title || "Step"),
+          text: typeof step === "string" ? step : (step.d || step.desc || step.description || "Description")
+        }))}
       />
       <SteganographyClient />
     </>

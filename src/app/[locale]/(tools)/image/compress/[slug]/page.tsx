@@ -87,7 +87,7 @@ export default async function CompressionSEOPage({ params }: PageProps) {
         name={`Compress ${format.toUpperCase()}`}
         description={`Professional-grade ${format.toUpperCase()} compressor. Reduce file size of your ${format.toUpperCase()} images without losing quality.`}
         url={`https://safetools.space/image/compress/${slug}`}
-        howTo={howToData}
+        howToSteps={howToData?.step}
       />
       <CompressorStudioClient 
         defaultFormat={format === "jpeg" ? "jpeg" : (format === "original" ? undefined : format)} 
