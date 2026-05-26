@@ -61,7 +61,7 @@ export function MergePdfEditor({
           {files.length === 0 ? (
             <div className="space-y-6">
               <div className="ad-wrapper">
-                <AdUnit type="banner" className="my-0 mb-6" />
+                <></>
               </div>
               <DropZone 
                 onFilesDrop={addFiles} 
@@ -139,7 +139,7 @@ export function MergePdfEditor({
 
                   {/* Contextual Ad below merge button */}
                   <div className="pt-4">
-                    <AdUnit type="content" className="my-0" />
+                    <></>
                   </div>
                 </div>
               )}

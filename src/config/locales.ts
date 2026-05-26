@@ -3,29 +3,7 @@ export const locales = [
   "hi",
   "es",
   "ar",
-  "fr",
-  "zh",
-  "ru",
-  "pt",
-  "de",
-  "ja",
-  "id",
-  "tr",
-  "it",
-  "pl",
-  "vi",
-  "ko",
-  "th",
-  "nl",
-  "fa",
-  "uk",
-  "ms",
-  "cs",
-  "da",
-  "el",
-  "fi",
-  "ro",
-  "sv"
+  "fr"
 ] as const;
 
 export type Locale = typeof locales[number];
@@ -33,10 +11,7 @@ export type Locale = typeof locales[number];
 export const defaultLocale = "en";
 
 export const rtlLocales = [
-  "ar",
-  "ur",
-  "fa",
-  "he"
+  "ar"
 ];
 
 export const languageNames: Record<Locale, string> = {
@@ -44,27 +19,5 @@ export const languageNames: Record<Locale, string> = {
   hi: "हिन्दी",
   es: "Español",
   ar: "العربية",
-  fr: "Français",
-  zh: "中文",
-  ru: "Русский",
-  pt: "Português",
-  de: "Deutsch",
-  ja: "日本語",
-  id: "Bahasa Indonesia",
-  tr: "Türkçe",
-  it: "Italiano",
-  pl: "Polski",
-  vi: "Tiếng Việt",
-  ko: "한국어",
-  th: "ไทย",
-  nl: "Nederlands",
-  fa: "فارسی",
-  uk: "Українська",
-  ms: "Bahasa Melayu",
-  cs: "Čeština",
-  da: "Dansk",
-  el: "Ελληνικά",
-  fi: "Suomi",
-  ro: "Română",
-  sv: "Svenska"
+  fr: "Français"
 };

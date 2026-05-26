@@ -347,7 +347,7 @@ export function PdfEditorCanvas({
           {!pdfFile ? (
             <div className="space-y-6">
               <div className="ad-wrapper">
-                <AdUnit type="banner" className="my-0 mb-6" />
+                <></>
               </div>
               <DropZone
                 onFilesDrop={loadPdf}
@@ -554,7 +554,7 @@ export function PdfEditorCanvas({
               </button>
 
               <div className="pt-4">
-                <AdUnit type="content" className="my-0" />
+                <></>
               </div>
             </motion.div>
           )}

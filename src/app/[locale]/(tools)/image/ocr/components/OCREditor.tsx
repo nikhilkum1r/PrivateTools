@@ -196,7 +196,7 @@ export function OCREditor({
         </div>
 
         <div className="pt-6">
-          <AdUnit type="sidebar" />
+          <></>
         </div>
       </div>
 
@@ -297,7 +297,7 @@ export function OCREditor({
         </div>
 
         <div className="pt-10 mt-auto">
-          <AdUnit type="sidebar" />
+          <></>
         </div>
       </div>
     </div>

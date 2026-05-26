@@ -159,30 +159,12 @@ export default async function LocaleLayout({
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg">
           Skip to content
         </a>
-        {/* AdSense script — deferred until first user interaction to avoid third-party cookie penalties */}
+        {/* AdSense script — MUST NOT be deferred during review process so Googlebot can verify it */}
         <script
-          id="adsense-loader"
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  var loaded=false;
-  function loadAds(){
-    if(loaded)return;loaded=true;
-    var s=document.createElement('script');
-    s.id='adsense-script';
-    s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379';
-    s.crossOrigin='anonymous';
-    s.async=true;
-    document.head.appendChild(s);
-    ['scroll','click','touchstart','keydown'].forEach(function(e){
-      window.removeEventListener(e,loadAds,{passive:true});
-    });
-  }
-  ['scroll','click','touchstart','keydown'].forEach(function(e){
-    window.addEventListener(e,loadAds,{passive:true});
-  });
-})();`
-          }}
-        />
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4227099386151379"
+          crossOrigin="anonymous"
+        ></script>
         <ThemeProvider defaultTheme="dark">
           <NextIntlClientProvider messages={messages} locale={locale}>
             <GlobalVideoBackground />

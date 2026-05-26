@@ -255,6 +255,33 @@ export default function AboutClient() {
           </div>
         </section>
 
+        {/* Consolidations: Ads, Open Source, Team */}
+        <section id="values" className="py-20 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="p-8 bg-secondary/30 border-border rounded-3xl space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500">
+                <ShieldAlert className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold uppercase">{t("whyAds.title")}</h3>
+              <p className="text-muted-foreground font-medium leading-relaxed">{t("whyAds.description")}</p>
+            </Card>
+            <Card className="p-8 bg-secondary/30 border-border rounded-3xl space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                <Globe className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold uppercase">{t("openSource.title")}</h3>
+              <p className="text-muted-foreground font-medium leading-relaxed">{t("openSource.description")}</p>
+            </Card>
+            <Card className="p-8 bg-secondary/30 border-border rounded-3xl space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500">
+                <UserCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold uppercase">{t("team.title")}</h3>
+              <p className="text-muted-foreground font-medium leading-relaxed">{t("team.description")}</p>
+            </Card>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-40 px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-6 bg-gradient-to-br from-blue-600 to-blue-800 p-16 rounded-3xl shadow-2xl shadow-blue-500/20 relative overflow-hidden">

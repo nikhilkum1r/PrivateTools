@@ -55,7 +55,7 @@ export function ColorLandingExtras({ t, common, copyToClipboard }: ColorLandingE
       </section>
 
       <div className="max-w-7xl mx-auto px-6">
-         <AdUnit type="multiplex" />
+         <></>
       </div>
 
       {/* LONG-FORM SEO CONTENT */}
@@ -234,7 +234,7 @@ export function ColorLandingExtras({ t, common, copyToClipboard }: ColorLandingE
 
       <div className="px-6 pb-24">
         <div className="max-w-5xl mx-auto pb-24">
-          <AdUnit type="banner" />
+          <></>
         </div>
 
         <FAQ

@@ -39,6 +39,15 @@ export default async function PrivacyScannerPage({ params }: { params: Promise<{
           { name: common("privacyTools"), item: `https://safetools.space/${locale}/privacy` },
           { name: t("title"), item: `https://safetools.space/${locale}/privacy/privacy-scanner` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <PrivacyScannerClient />
     </>

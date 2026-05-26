@@ -57,7 +57,7 @@ export function SplitPdfEditor({
         
         <div className="max-w-2xl w-full space-y-8 relative z-10">
           <div className="glass-card bg-black/20 border-border/50 rounded-[2.5rem] p-8 shadow-2xl backdrop-blur-xl">
-            <AdUnit type="banner" className="mb-6 opacity-80" />
+            <></>
             <DropZone 
               onFilesDrop={handleFileDrop} 
               accept=".pdf" 
@@ -93,7 +93,7 @@ export function SplitPdfEditor({
           <div className="p-4 space-y-5">
             {/* Top Sidebar Ad - Premium Placement */}
             <div className="glass-card bg-white/[0.02] border border-white/5 p-2 rounded-xl shadow-inner overflow-hidden group mb-2">
-              <AdUnit type="sidebar" className="my-0 scale-90 opacity-60 hover:opacity-100 transition-opacity" />
+              <></>
             </div>
 
             {/* Mode Toggle */}
@@ -251,7 +251,7 @@ export function SplitPdfEditor({
           <div className="pt-2">
             <div className="glass-card bg-white/[0.02] border border-white/5 p-3 rounded-xl shadow-inner relative overflow-hidden group">
               <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <AdUnit type="content" className="my-0 scale-90 opacity-60 hover:opacity-100 transition-opacity" />
+              <></>
               <p className="text-[7px] font-bold text-muted-foreground/30 text-center uppercase tracking-widest mt-2 px-2 leading-tight">
                 Privacy-friendly ads help us keep SafeTools free without selling data.
               </p>
@@ -266,7 +266,7 @@ export function SplitPdfEditor({
         <div className="px-6 pt-4 shrink-0">
           <div className="glass-card bg-white/[0.01] border border-white/5 px-4 py-2 rounded-2xl flex items-center justify-center relative overflow-hidden">
              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.02] to-transparent animate-pulse" />
-             <AdUnit type="banner" className="my-0 h-10 scale-[0.6] opacity-40 hover:opacity-100 transition-opacity" />
+             <></>
           </div>
         </div>
 
@@ -360,7 +360,7 @@ export function SplitPdfEditor({
                             >
                               <div className="glass-card bg-white/[0.01] border border-white/5 p-4 rounded-[2rem] h-full flex flex-col items-center justify-center relative overflow-hidden group">
                                 <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                <AdUnit type="in-feed" className="my-0 scale-90 opacity-60 hover:opacity-100 transition-opacity" />
+                                <></>
                                 <p className="text-[7px] font-black text-muted-foreground/20 uppercase tracking-[0.4em] mt-4">SafeTools Sponsor</p>
                               </div>
                             </motion.div>
@@ -372,7 +372,7 @@ export function SplitPdfEditor({
 
                   <div className="pt-16 pb-8 text-center">
                     <div className="glass-card bg-white/[0.01] border border-white/5 p-12 rounded-[3rem] inline-block max-w-2xl mx-auto w-full relative group">
-                      <AdUnit type="multiplex" className="my-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <></>
                       <p className="text-[9px] font-bold text-muted-foreground/20 uppercase tracking-[0.4em] mt-8">
                         End of fragments • Verified Secure Matrix
                       </p>

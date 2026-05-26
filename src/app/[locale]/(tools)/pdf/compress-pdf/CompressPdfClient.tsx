@@ -119,7 +119,7 @@ export default function CompressPdfClient() {
               </div>
             </section>
 
-            <AdUnit type="in-article" />
+            <></>
 
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
@@ -168,7 +168,7 @@ export default function CompressPdfClient() {
             <FAQ items={t.raw("landing.faq.items") as any} />
           </div>
           <div className="container mx-auto px-4 max-w-5xl pb-12">
-            <AdUnit type="multiplex" />
+            <></>
           </div>
         </>
       }
@@ -186,7 +186,7 @@ export default function CompressPdfClient() {
         <div className="p-6 md:p-8 space-y-6">
           {!file ? (
             <div className="space-y-6">
-              <AdUnit type="banner" className="mb-6" />
+              <></>
               <DropZone 
                 onFilesDrop={handleDrop} 
                 accept=".pdf"
@@ -240,7 +240,7 @@ export default function CompressPdfClient() {
                     {status === "processing" ? <Loader2 className="w-5 h-5 animate-spin" /> : <Zap className="w-5 h-5" />}
                     {status === "processing" ? t("settings.processing").toUpperCase() : t("settings.button").toUpperCase()}
                   </button>
-                  <AdUnit type="content" className="mt-6" />
+                  <></>
                 </div>
               )}
 

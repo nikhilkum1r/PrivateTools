@@ -61,7 +61,7 @@ export function ConversionLandingExtras({ t, common }: ConversionLandingExtrasPr
         </div>
       </div>
 
-      <AdUnit type="in-article" className="mt-20" />
+      <></>
 
       {/* SEO Conversion Matrix / Sitemap */}
       <div className="pt-24 border-t border-border/40">

@@ -330,7 +330,7 @@ export function IconSidebar({
           )}
           
           <div className="pt-10">
-            <AdUnit slot="1234567890" className="w-full" />
+            <></>
           </div>
         </div>
       </ScrollArea>

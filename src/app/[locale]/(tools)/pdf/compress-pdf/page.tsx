@@ -56,6 +56,14 @@ export default async function CompressPdfPage({ params }: Props) {
           { name: common("Navbar.categories.pdf"), item: `https://safetools.space/${locale}/pdf` },
           { name: t("title"), item: `https://safetools.space/${locale}/pdf/compress-pdf` }
         ]}
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (t.raw("landing.educational.how_it_works.steps") as string[]).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <CompressPdfClient />
     </>

@@ -234,7 +234,7 @@ export function DocsMasterEditor({
 
             {/* Sidebar AdUnit */}
             <div className="pt-2">
-              <AdUnit type="banner" format="vertical" className="rounded-xl border border-border bg-secondary/5" />
+              <></>
             </div>
           </div>
         </ScrollArea>

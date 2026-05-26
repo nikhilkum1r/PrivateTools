@@ -257,7 +257,7 @@ export default function MetadataCleanerClient() {
             </p>
 
             <div className="pt-8 opacity-60 hover:opacity-100 transition-opacity">
-              <AdUnit type="banner" className="mx-auto" />
+              <></>
             </div>
           </motion.div>
         </div>
@@ -277,7 +277,7 @@ export default function MetadataCleanerClient() {
                    <p className="text-muted-foreground">{t("engine.init.desc")}</p>
                  </div>
                   <div className="glass-card bg-white/[0.02] border border-white/5 p-2 rounded-2xl shadow-inner overflow-hidden mb-4 scale-90 opacity-60">
-                    <AdUnit type="banner" className="my-0" />
+                    <></>
                   </div>
                  <DropZone
                     onFilesDrop={handleFilesDrop}
@@ -289,7 +289,7 @@ export default function MetadataCleanerClient() {
                   />
 
                   <div className="pt-4 flex flex-col items-center gap-2">
-                    <AdUnit type="content" className="scale-90 opacity-60 hover:opacity-100 transition-all" />
+                    <></>
                     <p className="text-[10px] font-bold text-muted-foreground/30 uppercase tracking-[0.2em]">Privacy-First Sponsored Protocol</p>
                   </div>
                </div>
@@ -309,7 +309,7 @@ export default function MetadataCleanerClient() {
                   </div>
 
                   <div className="px-4 py-3 bg-indigo-500/5 border-b border-border/50 overflow-hidden">
-                    <AdUnit type="sidebar" className="my-0 scale-75 -mx-8 opacity-40 hover:opacity-100 transition-all" />
+                    <></>
                   </div>
                  <ScrollArea className="flex-grow p-4">
                    <div className="space-y-2">
@@ -342,7 +342,7 @@ export default function MetadataCleanerClient() {
 
                   <div className="p-3 border-t border-border/40 bg-indigo-500/[0.02]">
                     <div className="glass-card bg-white/[0.01] border border-white/5 p-2 rounded-xl overflow-hidden group">
-                      <AdUnit type="sidebar" className="my-0 scale-90 opacity-50 group-hover:opacity-100 transition-all" />
+                      <></>
                     </div>
                   </div>
 
@@ -373,7 +373,7 @@ export default function MetadataCleanerClient() {
 
                     <div className="hidden md:block flex-grow px-8">
                        <div className="glass-card bg-white/[0.01] border border-white/5 px-4 py-1.5 rounded-xl flex items-center justify-center opacity-40 hover:opacity-100 transition-all">
-                         <AdUnit type="banner" className="my-0 h-8 scale-[0.6]" />
+                         <></>
                        </div>
                     </div>
                    {activeFile?.status === "completed" && (
@@ -484,7 +484,7 @@ export default function MetadataCleanerClient() {
           <div className="pt-16 flex flex-col items-center gap-4">
              <div className="w-full max-w-4xl glass-card bg-indigo-500/[0.02] border border-indigo-500/10 p-8 rounded-[2.5rem] relative overflow-hidden group text-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500/5 to-transparent animate-pulse" />
-                <AdUnit type="multiplex" className="my-0 opacity-60 group-hover:opacity-100 transition-all" />
+                <></>
                 <p className="text-[9px] font-black text-indigo-400/30 uppercase tracking-[0.4em] mt-8">Sovereign Data Protection Matrix</p>
              </div>
           </div>
@@ -682,7 +682,7 @@ export default function MetadataCleanerClient() {
                   <p className="text-[10px] font-bold text-muted-foreground/40 uppercase tracking-wider leading-tight">Privacy-friendly ads keep this tool free.</p>
                </div>
                <div className="flex-grow flex justify-center scale-90 md:scale-100 opacity-60 group-hover:opacity-100 transition-all">
-                  <AdUnit type="banner" className="my-0" />
+                  <></>
                </div>
             </div>
           </div>

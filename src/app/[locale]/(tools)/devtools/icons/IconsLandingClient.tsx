@@ -81,7 +81,7 @@ export default function IconsLandingClient({ pageSchema }: IconsLandingClientPro
               })}
             </p>
             <div className="pt-8">
-              <AdUnit slot="7890123456" className="max-w-2xl mx-auto" />
+              <></>
             </div>
           </motion.div>
         </section>
@@ -107,7 +107,7 @@ export default function IconsLandingClient({ pageSchema }: IconsLandingClientPro
                 {t("landing.intro.security")}
               </p>
             </motion.div>
-            <AdUnit slot="8901234567" className="mt-12" />
+            <></>
           </div>
         </section>
 
@@ -352,7 +352,7 @@ export default function IconsLandingClient({ pageSchema }: IconsLandingClientPro
         />
 
         {/* FINAL CTA */}
-        <AdUnit slot="9012345678" className="container mx-auto py-12" />
+        <></>
         <section className="py-40 px-4 text-center bg-gradient-to-b from-transparent to-primary/5">
            <div className="max-w-3xl mx-auto space-y-10">
               <h2 className="text-4xl md:text-6xl font-bold tracking-tight">{t("landing.cta.title")}</h2>

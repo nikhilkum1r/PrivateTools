@@ -49,6 +49,15 @@ export default async function ImageCompressorPage({ params }: { params: Promise<
           { name: t("seo.breadcrumbs.parent"), item: `https://safetools.space/${locale}/image` },
           { name: t("seo.breadcrumbs.current"), item: `https://safetools.space/${locale}/image/compress` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <CompressorStudioClient />
     </>

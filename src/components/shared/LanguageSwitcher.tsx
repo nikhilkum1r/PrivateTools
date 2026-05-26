@@ -49,7 +49,7 @@ export function LanguageSwitcher() {
               locale === loc && "bg-primary/5 text-primary"
             )}
           >
-            <span className={cn(loc === 'hi' || loc === 'ar' || loc === 'zh' || loc === 'ja' ? 'font-sans' : 'font-heading')}>
+            <span className={cn(loc === 'hi' || loc === 'ar' ? 'font-sans' : 'font-heading')}>
               {languageNames[loc as keyof typeof languageNames]}
             </span>
             {locale === loc && <Check className="w-3.5 h-3.5" />}

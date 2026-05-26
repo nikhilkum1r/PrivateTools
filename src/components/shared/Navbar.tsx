@@ -330,12 +330,6 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              {/* Philosophy */}
-              <NavigationMenuItem>
-                <Link href="/philosophy" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-3.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                  {t("categories.philosophy")}
-                </Link>
-              </NavigationMenuItem>
 
             </NavigationMenuList>
           </NavigationMenu>
@@ -538,11 +532,10 @@ export function Navbar() {
 
                   <div className="h-px bg-border my-2" />
 
-
-                  <MobileLink href="/philosophy">{t("categories.philosophy")}</MobileLink>
                   <MobileLink href="/blog">{common("blog")}</MobileLink>
                   <MobileLink href="/changelog">{common("changelog")}</MobileLink>
                   <MobileLink href="/faq">{common("faqLabel")}</MobileLink>
+                  <MobileLink href="/about">{common("about")}</MobileLink>
                   <MobileLink href="/contact">{common("contact")}</MobileLink>
 
 

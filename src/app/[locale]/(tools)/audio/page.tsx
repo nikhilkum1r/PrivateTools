@@ -50,6 +50,15 @@ export default async function AudioPage({ params }: { params: Promise<{ locale: 
           { name: common("home"), item: `https://safetools.space/${locale}` },
           { name: t("hero.title").replace(/<[^>]*>?/gm, ''), item: `https://safetools.space/${locale}/audio` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <ClientOnly>
         <AudioStudioClient />

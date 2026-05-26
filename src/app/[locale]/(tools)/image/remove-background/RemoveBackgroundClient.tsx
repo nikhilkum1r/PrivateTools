@@ -423,7 +423,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
             
             {!isEmbed && (
               <div className="container mx-auto px-4 mb-8">
-                 <AdUnit type="banner" />
+                 <></>
               </div>
             )}
 
@@ -495,7 +495,7 @@ export default function RemoveBackgroundClient({ isEmbed }: RemoveBackgroundClie
             {!isEmbed && (
               <>
                 <div className="container mx-auto px-4 py-20">
-                   <AdUnit type="multiplex" />
+                   <></>
                 </div>
                 <RemoveBackgroundLandingExtras t={t} common={common} />
               </>

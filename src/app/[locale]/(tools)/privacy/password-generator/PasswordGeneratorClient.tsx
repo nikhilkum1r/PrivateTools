@@ -158,7 +158,7 @@ export default function PasswordGeneratorClient() {
 
               {/* Tool Card Area with Ads */}
               <div className="max-w-2xl mx-auto space-y-8">
-                <AdUnit type="banner" className="mb-8" />
+                <></>
                 
                 <div className="p-10 rounded-3xl glass-card shadow-2xl space-y-10 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
@@ -269,7 +269,7 @@ export default function PasswordGeneratorClient() {
                   </Button>
                 </div>
 
-                <AdUnit type="content" className="mt-8" />
+                <></>
               </div>
             </motion.div>
           </div>
@@ -326,7 +326,7 @@ for (let i = 0; i < length; i++) {
         </section>
 
         <div className="container mx-auto px-6 py-8">
-          <AdUnit type="banner" className="mx-auto" />
+          <></>
         </div>
 
         {/* PRIVACY COMMITMENT */}
@@ -514,7 +514,7 @@ for (let i = 0; i < length; i++) {
         </section>
 
         <div className="container mx-auto px-6 py-8">
-          <AdUnit type="banner" className="mx-auto" />
+          <></>
         </div>
 
         {/* FAQ SECTION */}

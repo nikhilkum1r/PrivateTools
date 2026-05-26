@@ -51,6 +51,15 @@ export default async function MergePdfPage({ params }: { params: Promise<{ local
           { name: t_common("Navbar.categories.pdf"), item: `https://safetools.space/${locale}/pdf` },
           { name: t("seo.title"), item: `https://safetools.space/${locale}/pdf/merge-pdf` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <MergePdfClient />
     </>

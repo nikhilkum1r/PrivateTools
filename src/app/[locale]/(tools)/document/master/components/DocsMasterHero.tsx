@@ -141,7 +141,7 @@ export function DocsMasterHero({ t, handleFileDrop }: DocsMasterHeroProps) {
     <div className="flex-grow flex flex-col overflow-y-auto">
       {/* Top Banner Ad */}
       <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-8">
-        <AdUnit type="banner" format="horizontal" className="rounded-2xl border-none bg-transparent" />
+        <></>
       </div>
 
       {/* ─── Hero ─────────────────────────────────────────────────────── */}
@@ -244,7 +244,7 @@ export function DocsMasterHero({ t, handleFileDrop }: DocsMasterHeroProps) {
 
       {/* ─── In-article Ad ─────────────────────────────────────────────── */}
       <div className="max-w-6xl mx-auto w-full px-6 pb-16">
-        <AdUnit type="in-article" format="horizontal" className="rounded-3xl border border-border bg-secondary/10" />
+        <></>
       </div>
 
       {/* ─── Features Grid ─────────────────────────────────────────────── */}
@@ -377,7 +377,7 @@ export function DocsMasterHero({ t, handleFileDrop }: DocsMasterHeroProps) {
 
       {/* ─── Footer Multiplex Ad ───────────────────────────────────────── */}
       <div className="max-w-6xl mx-auto w-full px-6 pb-16">
-        <AdUnit type="multiplex" format="autorelaxed" className="rounded-3xl border border-border bg-secondary/5 shadow-2xl" />
+        <></>
       </div>
     </div>
   );

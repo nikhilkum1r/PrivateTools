@@ -225,7 +225,7 @@ export default function ColorLabClient() {
         />
 
         <div className="max-w-7xl mx-auto px-6">
-          <AdUnit type="banner" />
+          <></>
         </div>
 
         <ColorEditor 

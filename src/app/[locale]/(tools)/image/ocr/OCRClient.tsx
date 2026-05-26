@@ -353,7 +353,7 @@ export default function OCRClient({ isEmbed }: OCRClientProps = {}) {
         
         {!isEmbed && (
           <div className="container mx-auto px-4 mb-20">
-            <AdUnit type="banner" />
+            <></>
           </div>
         )}
 
@@ -392,7 +392,7 @@ export default function OCRClient({ isEmbed }: OCRClientProps = {}) {
             />
 
             <div className="container mx-auto px-4 pb-20">
-              <AdUnit type="multiplex" />
+              <></>
             </div>
 
             <OCRLandingExtras t={t} hp={hp} t_tools={t_tools} />

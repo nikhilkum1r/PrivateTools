@@ -254,7 +254,7 @@ export default function ImageToPptxClient() {
                 </div>
               </motion.div>
 
-              <AdUnit type="banner" className="max-w-4xl mx-auto" />
+              <></>
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -326,7 +326,7 @@ export default function ImageToPptxClient() {
                   </div>
                 </section>
 
-                <AdUnit type="content" />
+                <></>
 
                 {/* Supported Formats */}
                 <section className="p-12 rounded-[3rem] bg-gradient-to-br from-orange-500/5 to-transparent border border-orange-500/10 space-y-12">
@@ -374,7 +374,7 @@ export default function ImageToPptxClient() {
                   </div>
                 </section>
 
-                <AdUnit type="multiplex" />
+                <></>
 
                 {/* FAQ Section */}
                 <section className="space-y-12 max-w-3xl mx-auto">
@@ -467,7 +467,7 @@ export default function ImageToPptxClient() {
                   </AnimatePresence>
                   
                   <div className="px-4 pb-4">
-                    <AdUnit type="sidebar" className="my-0" />
+                    <></>
                   </div>
                 </div>
               </ScrollArea>
@@ -615,7 +615,7 @@ export default function ImageToPptxClient() {
                     </p>
                   </Card>
 
-                  <AdUnit type="sidebar" className="my-0" />
+                  <></>
                 </div>
               </ScrollArea>
               

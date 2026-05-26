@@ -218,7 +218,7 @@ export default function PrivacyScannerClient() {
 
               {!isScanning && result && (
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
-                   <AdUnit type="banner" className="mx-auto" />
+                   <></>
                    
                    <div className="grid lg:grid-cols-2 gap-8">
                      {/* Hardening Guide */}
@@ -288,7 +288,7 @@ export default function PrivacyScannerClient() {
         />
       </section>
 
-      <AdUnit type="banner" className="mb-12" />
+      <></>
       <FAQ items={Array.isArray(t.raw("faq.items")) ? t.raw("faq.items") : []} />
       <Footer />
     </div>

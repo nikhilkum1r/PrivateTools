@@ -50,6 +50,15 @@ export default async function FileShredderPage({ params }: { params: Promise<{ l
           { name: common("securityTools"), item: `https://safetools.space/${locale}/security` },
           { name: t("hero.title"), item: `https://safetools.space/${locale}/security/file-shredder` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <FileShredderClient />
     </>

@@ -101,7 +101,7 @@ export default function VaultClient() {
         <VaultHero t={t} />
         
         <div className="container mx-auto px-4 -mt-8 mb-12 max-w-6xl">
-          <AdUnit slot="7890123456" type="banner" />
+          <></>
         </div>
 
         <main id="main-content" className="container mx-auto px-4 py-12 space-y-24 max-w-6xl">
@@ -129,11 +129,11 @@ export default function VaultClient() {
             resetSession={resetSession}
           />
 
-          <AdUnit slot="8901234567" type="in-article" />
+          <></>
 
           <VaultLandingExtras t={t} />
 
-          <AdUnit slot="9012345678" type="in-feed" />
+          <></>
 
           {/* Related Tools */}
           <section className="space-y-12 pt-12 border-t border-border">
@@ -162,7 +162,7 @@ export default function VaultClient() {
             </div>
           </section>
 
-          <AdUnit slot="0123456789" type="multiplex" />
+          <></>
         </main>
 
         <footer className="mt-auto py-12 px-4 border-t border-border bg-background">

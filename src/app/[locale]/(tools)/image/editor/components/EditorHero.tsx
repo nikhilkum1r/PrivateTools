@@ -131,10 +131,7 @@ export function EditorHero({ onUpload }: EditorHeroProps) {
                   Upload Image
                 </button>
               </div>
-              <AdUnit 
-                className="mt-6 border-none bg-transparent shadow-none" 
-                style={{ minHeight: '100px' }} 
-              />
+              <></>
             </div>
           </motion.div>
         </div>

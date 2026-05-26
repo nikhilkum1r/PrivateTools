@@ -51,6 +51,15 @@ export default async function VaultPage({ params }: { params: Promise<{ locale: 
           { name: common("securityTools"), item: `https://safetools.space/${locale}/security` },
           { name: t("hero.title").replace(/<[^>]*>?/gm, ''), item: `https://safetools.space/${locale}/security/vault` }
         ]}
+
+        howTo={{
+          name: t("seo.title"),
+          description: t("seo.description"),
+          step: (Array.isArray(t.raw("landing.educational.how_it_works.steps")) ? t.raw("landing.educational.how_it_works.steps") as string[] : []).map((step: string) => ({
+            name: step.split('.')[0] || "Step",
+            text: step
+          }))
+        }}
       />
       <VaultClient />
     </>

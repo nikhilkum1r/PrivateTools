@@ -88,6 +88,18 @@
         }
       ]
     },
+    "whyAds": {
+      "title": "Why We Show Ads",
+      "description": "SafeTools is 100% free to use. To keep our servers running and continue developing new tools, we rely on non-intrusive advertising. We strictly curate our ads to ensure they don't interfere with your workflow, and we never place them inside the actual tool interfaces. This allows us to offer premium-grade privacy tools without locking features behind expensive subscription paywalls."
+    },
+    "openSource": {
+      "title": "Open Source Commitment",
+      "description": "We stand on the shoulders of giants. SafeTools relies heavily on open-source libraries like FFmpeg, PDF-lib, and ONNX Runtime. In return, we are committed to open standards. Our privacy architecture and implementation methodologies are publicly documented to help other developers build secure, local-first applications."
+    },
+    "team": {
+      "title": "The Team behind SafeTools",
+      "description": "SafeTools is maintained by a dedicated group of security engineers and privacy advocates who believe that powerful digital utilities shouldn't come at the cost of your personal data."
+    },
     "cta": {
       "title": "Ready to take control?",
       "description": "Explore our full suite of professional utilities and experience the power of private, localized file processing."

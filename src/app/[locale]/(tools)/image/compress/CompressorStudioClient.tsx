@@ -327,7 +327,7 @@ export default function CompressorStudioClient({ defaultFormat, isEmbed }: Compr
                         />
                         {!isEmbed && (
                           <div className="max-w-7xl mx-auto px-6 mt-12">
-                            <AdUnit type="banner" />
+                            <></>
                           </div>
                         )}
                       </>
@@ -415,7 +415,7 @@ export default function CompressorStudioClient({ defaultFormat, isEmbed }: Compr
                         
                         {!isEmbed && (
                           <div className="py-8">
-                            <AdUnit type="banner" />
+                            <></>
                           </div>
                         )}
                         

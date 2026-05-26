@@ -268,7 +268,7 @@ export default function ConversionStudioClient({ fromFormat, toFormat, isEmbed }
 
             {!isEmbed && (
               <>
-                <AdUnit type="multiplex" className="mt-12 max-w-[1600px] px-6 md:px-16" />
+                <></>
                 <ConversionLandingExtras t={t} common={common} />
               </>
             )}

@@ -262,7 +262,7 @@ export default function SteganographyClient() {
       </section>
 
       <div className="container mx-auto px-4 max-w-5xl py-4">
-        <AdUnit type="banner" />
+        <></>
       </div>
 
       {/* Visual Process Section */}
@@ -285,7 +285,7 @@ export default function SteganographyClient() {
       </section>
 
       <div className="container mx-auto px-4 max-w-5xl py-8">
-        <AdUnit type="in-article" />
+        <></>
       </div>
 
       <main id="main-content" className="container mx-auto px-4 py-12 space-y-24 max-w-6xl">
@@ -537,7 +537,7 @@ export default function SteganographyClient() {
           </div>
 
           <div className="max-w-4xl mx-auto py-12">
-            <AdUnit type="in-feed" />
+            <></>
           </div>
         </section>
 
@@ -724,7 +724,7 @@ export default function SteganographyClient() {
         </section>
 
         <div className="max-w-6xl mx-auto py-16">
-          <AdUnit type="multiplex" />
+          <></>
         </div>
 
         {/* Privacy Manifesto */}

@@ -88,7 +88,7 @@ export function OCRLandingExtras({ t, hp, t_tools }: OCRLandingExtrasProps) {
       </section>
 
       <div className="container mx-auto px-4 max-w-6xl">
-        <AdUnit type="content" />
+        <></>
       </div>
 
       {/* Trust & Local Processing Manifesto */}

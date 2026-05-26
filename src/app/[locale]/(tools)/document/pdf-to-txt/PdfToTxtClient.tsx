@@ -119,7 +119,7 @@ export default function PdfToTxtClient() {
           <div className="flex-grow flex flex-col items-center justify-center relative z-10">
             {/* Top Banner Ad */}
             <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-10 -mb-10">
-              <AdUnit type="banner" format="horizontal" className="rounded-2xl border-none bg-transparent" />
+              <></>
             </div>
 
             {/* Hero Section */}
@@ -217,7 +217,7 @@ export default function PdfToTxtClient() {
                 </section>
 
                 {/* Middle Section Ad */}
-                <AdUnit type="in-article" className="max-w-4xl mx-auto rounded-3xl" />
+                <></>
 
                 {/* Supported Formats */}
                 <section className="p-12 rounded-[3rem] bg-gradient-to-br from-orange-500/5 to-transparent border border-orange-500/10 space-y-12">
@@ -292,7 +292,7 @@ export default function PdfToTxtClient() {
 
                 {/* Footer Area Multiplex Ad */}
                 <div className="max-w-5xl mx-auto w-full py-12 border-t border-border/50">
-                  <AdUnit type="multiplex" className="rounded-3xl" />
+                  <></>
                 </div>
 
                 {/* FAQ Section */}

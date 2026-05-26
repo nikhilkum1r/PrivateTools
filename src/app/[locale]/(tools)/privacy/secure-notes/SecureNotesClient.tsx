@@ -151,7 +151,7 @@ export default function SecureNotesClient() {
       </section>
 
       <div className="container mx-auto px-4 max-w-5xl">
-        <AdUnit type="banner" />
+        <></>
       </div>
 
       <main id="main-content" className="container mx-auto px-4 py-12 space-y-24 max-w-5xl">
@@ -380,7 +380,7 @@ export default function SecureNotesClient() {
           </div>
         </section>
 
-        <AdUnit type="in-feed" />
+        <></>
 
         {/* Features Grid */}
         <section className="space-y-12">
@@ -541,7 +541,7 @@ export default function SecureNotesClient() {
           </div>
         </section>
 
-        <AdUnit type="in-article" />
+        <></>
 
         {/* FAQ Section */}
         <section className="space-y-12">
@@ -703,7 +703,7 @@ export default function SecureNotesClient() {
           </div>
         </section>
 
-        <AdUnit type="multiplex" />
+        <></>
 
       </main>
 

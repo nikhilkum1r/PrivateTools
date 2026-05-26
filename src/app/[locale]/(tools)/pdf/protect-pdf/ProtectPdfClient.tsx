@@ -133,7 +133,7 @@ export default function ProtectPdfClient() {
         <div className="p-6 md:p-8 space-y-6">
           {!file ? (
             <div className="space-y-6">
-              <AdUnit type="banner" className="mb-6" />
+              <></>
               <DropZone 
                 onFilesDrop={handleDrop} 
                 accept=".pdf"
@@ -188,7 +188,7 @@ export default function ProtectPdfClient() {
                   </button>
 
                   <div className="pt-4">
-                    <AdUnit type="content" className="my-0" />
+                    <></>
                   </div>
                 </div>
               )}

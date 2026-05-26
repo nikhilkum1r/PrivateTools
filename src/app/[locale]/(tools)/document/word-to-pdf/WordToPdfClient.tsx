@@ -261,7 +261,7 @@ export default function WordToPdfClient() {
           <div className="flex-grow flex flex-col items-center justify-center relative z-10">
             {/* Top Banner Ad */}
             <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 pt-10 -mb-10">
-              <AdUnit type="banner" format="horizontal" className="rounded-2xl border-none bg-transparent" />
+              <></>
             </div>
 
             {/* Hero Section */}
@@ -383,7 +383,7 @@ export default function WordToPdfClient() {
 
                 {/* In-Article Ad */}
                 <div className="w-full">
-                  <AdUnit type="in-article" format="horizontal" className="rounded-3xl border border-border bg-secondary/10" />
+                  <></>
                 </div>
 
                 {/* Common Use Cases & Benefits */}
@@ -453,7 +453,7 @@ export default function WordToPdfClient() {
 
                 {/* Footer Multiplex Ad */}
                 <div className="w-full pt-12">
-                  <AdUnit type="multiplex" format="autorelaxed" className="rounded-3xl border border-border bg-secondary/5 shadow-2xl" />
+                  <></>
                 </div>
 
               </div>

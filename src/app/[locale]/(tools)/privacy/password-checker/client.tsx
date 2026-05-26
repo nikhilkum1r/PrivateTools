@@ -212,7 +212,7 @@ export default function PasswordCheckerClient() {
               </div>
             </Card>
 
-            <AdUnit type="banner" className="mx-auto" />
+            <></>
 
             <div className="grid md:grid-cols-2 gap-4">
               <Card className="p-6 glass-card bg-emerald-500/[0.02] border-emerald-500/10">
@@ -340,7 +340,7 @@ export default function PasswordCheckerClient() {
                 </div>
 
                 <div className="pt-6 border-t border-border/50">
-                  <AdUnit type="sidebar" className="my-0 scale-90 -mx-4" />
+                  <></>
                 </div>
               </div>
             </Card>
@@ -388,7 +388,7 @@ export default function PasswordCheckerClient() {
         </div>
       </section>
 
-      <AdUnit type="banner" className="mb-12" />
+      <></>
       <FAQ items={Array.isArray(t.raw("faq.items")) ? t.raw("faq.items") : []} />
       <Footer />
     </div>

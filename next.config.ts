@@ -171,6 +171,13 @@ const nextConfig: NextConfig = {
       { source: "/privacy/shredder", destination: "/security/file-shredder", permanent: true },
       { source: "/privacy/password-checker", destination: "/privacy/password-generator", permanent: true },
       { source: "/devtools/color", destination: "/image/colors", permanent: true },
+      // Deleted marketing pages → consolidated destinations
+      { source: "/:locale/ads", destination: "/:locale/about", permanent: true },
+      { source: "/:locale/philosophy", destination: "/:locale/about", permanent: true },
+      { source: "/:locale/developers", destination: "/:locale/about", permanent: true },
+      { source: "/:locale/features", destination: "/:locale/tools", permanent: true },
+      { source: "/:locale/feedback", destination: "/:locale/contact", permanent: true },
+      { source: "/:locale/updates", destination: "/:locale/changelog", permanent: true },
     ];
   },
 

@@ -46,7 +46,6 @@ export async function GET() {
       '/image/convert',
       '/image/remove-background',
       '/image/ocr',
-      '/image/editor',
       '/image/colors',
       '/image/to-pptx',
       '/pdf',
@@ -81,6 +80,9 @@ export async function GET() {
       '/about',
       '/blog',
       '/faq',
+      '/pricing',
+      '/changelog',
+      '/contact',
     ];
 
     // 2. Add dynamic SEO routes

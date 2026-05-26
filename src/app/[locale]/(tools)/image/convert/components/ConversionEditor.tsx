@@ -270,7 +270,7 @@ export function ConversionEditor({
         </div>
       </div>
 
-      <AdUnit type="in-feed" className="my-12" />
+      <></>
 
       {/* Files Display */}
       <div className="space-y-6">

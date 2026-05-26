@@ -9,15 +9,11 @@ export function Footer() {
   const footerLinks = {
     product: [
       { name: common("toolsLabel"), href: "/tools" },
-      { name: common("features"), href: "/features" },
       { name: common("pricing"), href: "/pricing" },
-      { name: common("developers"), href: "/developers" },
       { name: common("changelog"), href: "/changelog" },
     ],
     resources: [
       { name: common("about"), href: "/about" },
-      { name: common("whyAds"), href: "/ads" },
-      { name: "Philosophy", href: "/philosophy" },
       { name: common("privacyPolicy"), href: "/privacy-policy" },
       { name: common("termsOfService"), href: "/terms" },
       { name: common("contact"), href: "/contact" },
@@ -26,8 +22,6 @@ export function Footer() {
     ],
     community: [
       { name: common("blog"), href: "/blog" },
-      { name: common("updates"), href: "/updates" },
-      { name: common("feedback"), href: "/feedback" },
     ],
   };
 

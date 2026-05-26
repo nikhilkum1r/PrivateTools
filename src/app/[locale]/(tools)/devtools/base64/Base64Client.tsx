@@ -224,7 +224,7 @@ export default function Base64Client() {
           </div>
 
           <div className="pt-12">
-            <AdUnit type="in-article" />
+            <></>
           </div>
 
           {t.raw("faq") && (

@@ -57,8 +57,8 @@
           "desc": "We don't just 'encrypt' your files; we never see them. Our servers only serve static code. Your data stays in your RAM, exactly where it belongs."
         },
         {
-          "title": "No Surveillance Capitalism",
-          "desc": "We use no analytics, no cookies, and no trackers. We don't want to know who you are, where you are, or what you're processing."
+          "title": "Advertising & Cookies",
+          "desc": "To keep SafeTools free, we use third-party vendors like Google AdSense. These vendors use cookies to serve ads based on your prior visits. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this and other sites. You can opt out of personalized advertising by visiting Google's Ads Settings."
         },
         {
           "title": "Ephemeral by Default",

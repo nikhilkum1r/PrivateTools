@@ -130,7 +130,7 @@ export function IconResultGrid({
         </div>
       </div>
 
-      <AdUnit slot="2345678901" className="w-full" />
+      <></>
 
       <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-6">
         <AnimatePresence mode="popLayout">
